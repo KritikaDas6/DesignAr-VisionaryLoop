@@ -1,0 +1,30 @@
+- !<AssetCache>
+  AssetFiles:
+    1d82fa7f-14bb-4352-a3fd-045b561e37bf: d3ea2e85-819a-4ab7-999a-2d8a3be8d42e/e0b7e5b1177cd416829db35d075b1206/Data/ghost 2.t3d
+    e4bf6570-d6dd-4dba-9ad9-d1476e5e6874: d3ea2e85-819a-4ab7-999a-2d8a3be8d42e/e0b7e5b1177cd416829db35d075b1206/Data/ghost 2_0.png
+  Assets:
+    - !<AnimatedTexture/1d82fa7f-14bb-4352-a3fd-045b561e37bf>
+      PackagePath: ""
+      keyFrames:
+        default:
+          - time: 0.000000
+            value: 0
+          - time: 0.400000
+            value: 2
+      ReverseSupported: true
+      FrameSize: {x: 1024, y: 1024}
+      AnimationSequences:
+        default: 2
+      AutoPlay: true
+      Reversed: false
+      PingPong: false
+      CurrentSequence: default
+    - !<FileTexture/e4bf6570-d6dd-4dba-9ad9-d1476e5e6874>
+      PackagePath: ghost 2_0.png
+      FileInfo: !<FileTextureInfo>
+        Width: 2048
+        Height: 1024
+  SourceHash: e0b7e5b1177cd416829db35d075b1206
+  FileHash: bc0958ca7c9ec775b9c8eedc9b9c9a78
+  NativePackageItems:
+    []

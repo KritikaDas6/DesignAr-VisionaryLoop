@@ -1,0 +1,30 @@
+- !<AssetCache>
+  AssetFiles:
+    b2bb6578-f0a9-4899-885c-2b9f55c47c8a: 735459c8-5088-4da7-95f4-24e4d9908e78/8db778b7939eb332febea09045b679e4/Data/spider 2.t3d
+    df3f7e0c-6284-4a20-a8ab-a8a4f22b7b47: 735459c8-5088-4da7-95f4-24e4d9908e78/8db778b7939eb332febea09045b679e4/Data/spider 2_0.png
+  Assets:
+    - !<AnimatedTexture/b2bb6578-f0a9-4899-885c-2b9f55c47c8a>
+      PackagePath: ""
+      keyFrames:
+        default:
+          - time: 0.000000
+            value: 0
+          - time: 4.019997
+            value: 67
+      ReverseSupported: true
+      FrameSize: {x: 341, y: 147}
+      AnimationSequences:
+        default: 67
+      AutoPlay: true
+      Reversed: false
+      PingPong: false
+      CurrentSequence: default
+    - !<FileTexture/df3f7e0c-6284-4a20-a8ab-a8a4f22b7b47>
+      PackagePath: spider 2_0.png
+      FileInfo: !<FileTextureInfo>
+        Width: 2046
+        Height: 1764
+  SourceHash: 8db778b7939eb332febea09045b679e4
+  FileHash: e63d7c039e2c5916f76acf3db7761171
+  NativePackageItems:
+    []

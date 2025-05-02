@@ -1,0 +1,30 @@
+- !<AssetCache>
+  AssetFiles:
+    540decf0-dd96-493f-bd02-87c393daadcb: 0813019c-386f-4b6e-8e59-f5a4ca0180c5/7fc7c3cd0981cf2585b6c20607cf96d6/Data/pumpkin.t3d
+    e3c074e5-525d-47bd-90fd-19da99692665: 0813019c-386f-4b6e-8e59-f5a4ca0180c5/7fc7c3cd0981cf2585b6c20607cf96d6/Data/pumpkin_0.png
+  Assets:
+    - !<AnimatedTexture/540decf0-dd96-493f-bd02-87c393daadcb>
+      PackagePath: ""
+      keyFrames:
+        default:
+          - time: 0.000000
+            value: 0
+          - time: 2.100000
+            value: 15
+      ReverseSupported: true
+      FrameSize: {x: 512, y: 451}
+      AnimationSequences:
+        default: 15
+      AutoPlay: true
+      Reversed: false
+      PingPong: false
+      CurrentSequence: default
+    - !<FileTexture/e3c074e5-525d-47bd-90fd-19da99692665>
+      PackagePath: pumpkin_0.png
+      FileInfo: !<FileTextureInfo>
+        Width: 2048
+        Height: 1804
+  SourceHash: 7fc7c3cd0981cf2585b6c20607cf96d6
+  FileHash: d2668b6a061abfc0b3ee67ee5eaaa809
+  NativePackageItems:
+    []

@@ -1,0 +1,24 @@
+- !<AssetCache>
+  AssetFiles:
+    9a8b4da0-8cf0-4d7b-a5d0-ee9b0037d3cb: 64bbf3cf-c355-42fe-8be2-325e5b4a41bf/9e2fdd13986adaac41dd7b4cb139fc6e/Data/converted_webp.webp
+  Assets:
+    - !<AnimatedTexture/9a8b4da0-8cf0-4d7b-a5d0-ee9b0037d3cb>
+      PackagePath: ""
+      keyFrames:
+        default:
+          - time: 0.000000
+            value: 0
+          - time: 5.239996
+            value: 66
+      ReverseSupported: false
+      FrameSize: {x: 1270, y: 794}
+      AnimationSequences:
+        default: 66
+      AutoPlay: true
+      Reversed: false
+      PingPong: false
+      CurrentSequence: default
+  SourceHash: 9e2fdd13986adaac41dd7b4cb139fc6e
+  FileHash: 8081373c11f102108816fc39c175b302
+  NativePackageItems:
+    []

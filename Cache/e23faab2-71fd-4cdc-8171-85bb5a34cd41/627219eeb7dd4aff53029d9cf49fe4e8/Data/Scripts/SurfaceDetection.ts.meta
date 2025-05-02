@@ -1,0 +1,49 @@
+- !<AssetImportMetadata/38fbf92e-277a-4a54-86e4-bab6d27479b4>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 63d78a44-746c-45e2-b280-79c0d5b82f07
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 63d78a44-746c-45e2-b280-79c0d5b82f07
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    TypeScriptAsset: !<own> 46aec9d4-566f-4f27-9508-818e36194751
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
+- !<TypeScriptAssetData/46aec9d4-566f-4f27-9508-818e36194751>
+  SvgIcon: ""
+  Description: |-
+    Allows do detect surface using WorldQueryModule
+    
+    API: 
+    startGroundCalibration(callback: (pos: vec3, rot: quat) => void)
+  InternalVersion: 1
+  VersionMajor: 1
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: f466d1ee-d4f6-45e1-a679-486f6f4d430e
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    animation: false
+    camObj: false
+    visualObj: false
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    - camObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      visualObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      animation: !<MappingBased.CircleAnimation> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input SceneObject camObj
+    - // @input SceneObject visualObj
+    - // @input CircleAnimation animation
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
