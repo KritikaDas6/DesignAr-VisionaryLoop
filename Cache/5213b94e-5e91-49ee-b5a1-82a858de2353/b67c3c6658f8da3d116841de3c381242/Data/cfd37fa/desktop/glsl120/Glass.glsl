@@ -2175,6 +2175,7 @@ if (l9_1&&(0==PreviewNodeID))
 {
 PreviewInfo.Saved=true;
 PreviewInfo.Color=Value;
+PreviewInfo.Color.w=1.0;
 }
 }
 void Node55_If_else(float Bool1,vec4 Value1,vec4 Default,out vec4 Result,ssGlobals Globals)

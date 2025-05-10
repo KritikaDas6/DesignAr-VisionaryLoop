@@ -7,9 +7,13 @@
   PackagePolicy: CannotBeUnpacked
   AssetDataMap:
     TypeScriptAsset: !<own> fe64a7c7-66d3-4565-81fd-8971c7e9196a
-  DependentFiles: []
-  ImporterSettings: !<AssetImporterSettings/32f12c39-9e97-4644-9369-8628f3a75444> {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
 - !<TypeScriptAssetData/fe64a7c7-66d3-4565-81fd-8971c7e9196a>
   SvgIcon: ""
   Description: ""
@@ -17,19 +21,22 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: b411a8dc-20b3-45c3-989d-631e961848f0
+  ComponentUid: 3d965d8e-55a7-4c1a-9fba-63f79df63e03
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
     objectVisuals: false
     surfaceDetection: false
-  ScriptTypesHidden: {}
+  ScriptTypesHidden:
+    {}
   DefaultScriptInputs:
     - objectVisuals: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       surfaceDetection: !<MappingBased.SurfaceDetection> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
-    - {}
+    -
+      {}
   InputLines:
     - // @input SceneObject objectVisuals
     - // @input SurfaceDetection surfaceDetection
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

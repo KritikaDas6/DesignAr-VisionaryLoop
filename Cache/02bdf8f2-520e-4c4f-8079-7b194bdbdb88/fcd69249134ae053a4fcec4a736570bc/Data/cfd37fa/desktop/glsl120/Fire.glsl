@@ -3177,7 +3177,9 @@ bool l9_10;
 vec4 l9_11;
 if (l9_9&&(10==PreviewNodeID))
 {
-l9_11=l9_7;
+vec4 l9_12=l9_7;
+l9_12.w=1.0;
+l9_11=l9_12;
 l9_10=true;
 }
 else
@@ -3191,219 +3193,225 @@ l9_3=l9_7;
 }
 else
 {
-vec4 l9_12;
-bool l9_13;
-vec4 l9_14;
+vec4 l9_13;
+bool l9_14;
+vec4 l9_15;
 if (l9_2==1.0)
 {
-float l9_15=clamp(Interpolator_UVCoord3.y,0.0,1.0);
-vec4 l9_16;
-if (l9_15<Port_Position1_N043)
+float l9_16=clamp(Interpolator_UVCoord3.y,0.0,1.0);
+vec4 l9_17;
+if (l9_16<Port_Position1_N043)
 {
-l9_16=mix(Port_Value0_N043,Port_Value1_N043,vec4(clamp(l9_15/Port_Position1_N043,0.0,1.0)));
+l9_17=mix(Port_Value0_N043,Port_Value1_N043,vec4(clamp(l9_16/Port_Position1_N043,0.0,1.0)));
 }
 else
 {
-l9_16=mix(Port_Value1_N043,Port_Value2_N043,vec4(clamp((l9_15-Port_Position1_N043)/(1.0-Port_Position1_N043),0.0,1.0)));
+l9_17=mix(Port_Value1_N043,Port_Value2_N043,vec4(clamp((l9_16-Port_Position1_N043)/(1.0-Port_Position1_N043),0.0,1.0)));
 }
-bool l9_17=PreviewEnabled==1;
-bool l9_18;
-if (l9_17)
-{
-l9_18=!l9_0;
-}
-else
-{
-l9_18=l9_17;
-}
+bool l9_18=PreviewEnabled==1;
 bool l9_19;
-vec4 l9_20;
-if (l9_18&&(43==PreviewNodeID))
+if (l9_18)
 {
-l9_20=l9_16;
-l9_19=true;
+l9_19=!l9_0;
 }
 else
 {
-l9_20=PreviewVertexColor;
-l9_19=l9_0;
+l9_19=l9_18;
 }
-l9_14=l9_20;
-l9_13=l9_19;
-l9_12=l9_16;
-}
-else
-{
+bool l9_20;
 vec4 l9_21;
-bool l9_22;
+if (l9_19&&(43==PreviewNodeID))
+{
+vec4 l9_22=l9_17;
+l9_22.w=1.0;
+l9_21=l9_22;
+l9_20=true;
+}
+else
+{
+l9_21=PreviewVertexColor;
+l9_20=l9_0;
+}
+l9_15=l9_21;
+l9_14=l9_20;
+l9_13=l9_17;
+}
+else
+{
 vec4 l9_23;
+bool l9_24;
+vec4 l9_25;
 if (l9_2==2.0)
 {
-float l9_24=clamp(Interpolator_UVCoord3.y,0.0,1.0);
-vec4 l9_25;
-if (l9_24<Port_Position1_N044)
+float l9_26=clamp(Interpolator_UVCoord3.y,0.0,1.0);
+vec4 l9_27;
+if (l9_26<Port_Position1_N044)
 {
-l9_25=mix(Port_Value0_N044,Port_Value1_N044,vec4(clamp(l9_24/Port_Position1_N044,0.0,1.0)));
+l9_27=mix(Port_Value0_N044,Port_Value1_N044,vec4(clamp(l9_26/Port_Position1_N044,0.0,1.0)));
 }
 else
 {
-l9_25=mix(Port_Value1_N044,Port_Value2_N044,vec4(clamp((l9_24-Port_Position1_N044)/(1.0-Port_Position1_N044),0.0,1.0)));
+l9_27=mix(Port_Value1_N044,Port_Value2_N044,vec4(clamp((l9_26-Port_Position1_N044)/(1.0-Port_Position1_N044),0.0,1.0)));
 }
-bool l9_26=PreviewEnabled==1;
-bool l9_27;
-if (l9_26)
+bool l9_28=PreviewEnabled==1;
+bool l9_29;
+if (l9_28)
 {
-l9_27=!l9_0;
+l9_29=!l9_0;
 }
 else
 {
-l9_27=l9_26;
+l9_29=l9_28;
 }
-bool l9_28;
-vec4 l9_29;
-if (l9_27&&(44==PreviewNodeID))
+bool l9_30;
+vec4 l9_31;
+if (l9_29&&(44==PreviewNodeID))
 {
-l9_29=l9_25;
-l9_28=true;
+vec4 l9_32=l9_27;
+l9_32.w=1.0;
+l9_31=l9_32;
+l9_30=true;
 }
 else
 {
-l9_29=PreviewVertexColor;
-l9_28=l9_0;
+l9_31=PreviewVertexColor;
+l9_30=l9_0;
 }
-l9_23=l9_29;
-l9_22=l9_28;
-l9_21=l9_25;
-}
-else
-{
-l9_23=PreviewVertexColor;
-l9_22=l9_0;
-l9_21=Port_Default_N042;
-}
-l9_14=l9_23;
-l9_13=l9_22;
-l9_12=l9_21;
-}
-l9_5=l9_14;
-l9_4=l9_13;
-l9_3=l9_12;
-}
-float l9_30=radians(Port_Rotation_N012);
-float l9_31=clamp((vec2(dot(vec2(cos(l9_30),sin(l9_30)),Interpolator_UVCoord3-Port_Center_N012),0.0)+Port_Center_N012).x,0.0,1.0);
-vec4 l9_32;
-if (l9_31<Port_Position1_N049)
-{
-l9_32=mix(Port_Value0_N049,Port_Value1_N049,vec4(clamp(l9_31/Port_Position1_N049,0.0,1.0)));
+l9_25=l9_31;
+l9_24=l9_30;
+l9_23=l9_27;
 }
 else
 {
-l9_32=mix(Port_Value1_N049,Port_Value2_N049,vec4(clamp((l9_31-Port_Position1_N049)/(1.0-Port_Position1_N049),0.0,1.0)));
+l9_25=PreviewVertexColor;
+l9_24=l9_0;
+l9_23=Port_Default_N042;
 }
-bool l9_33=PreviewEnabled==1;
-bool l9_34;
-if (l9_33)
+l9_15=l9_25;
+l9_14=l9_24;
+l9_13=l9_23;
+}
+l9_5=l9_15;
+l9_4=l9_14;
+l9_3=l9_13;
+}
+float l9_33=radians(Port_Rotation_N012);
+float l9_34=clamp((vec2(dot(vec2(cos(l9_33),sin(l9_33)),Interpolator_UVCoord3-Port_Center_N012),0.0)+Port_Center_N012).x,0.0,1.0);
+vec4 l9_35;
+if (l9_34<Port_Position1_N049)
 {
-l9_34=!l9_4;
+l9_35=mix(Port_Value0_N049,Port_Value1_N049,vec4(clamp(l9_34/Port_Position1_N049,0.0,1.0)));
 }
 else
 {
-l9_34=l9_33;
+l9_35=mix(Port_Value1_N049,Port_Value2_N049,vec4(clamp((l9_34-Port_Position1_N049)/(1.0-Port_Position1_N049),0.0,1.0)));
 }
-bool l9_35;
-vec4 l9_36;
-if (l9_34&&(49==PreviewNodeID))
+bool l9_36=PreviewEnabled==1;
+bool l9_37;
+if (l9_36)
 {
-l9_36=l9_32;
-l9_35=true;
+l9_37=!l9_4;
 }
 else
 {
-l9_36=l9_5;
-l9_35=l9_4;
+l9_37=l9_36;
 }
-float l9_37=l9_1*Port_Speed_N013;
-vec2 l9_38=Interpolator_UVCoord3+(Port_Direction_N013*l9_37);
-int l9_39;
+bool l9_38;
+vec4 l9_39;
+if (l9_37&&(49==PreviewNodeID))
+{
+vec4 l9_40=l9_35;
+l9_40.w=1.0;
+l9_39=l9_40;
+l9_38=true;
+}
+else
+{
+l9_39=l9_5;
+l9_38=l9_4;
+}
+float l9_41=l9_1*Port_Speed_N013;
+vec2 l9_42=Interpolator_UVCoord3+(Port_Direction_N013*l9_41);
+int l9_43;
 #if (Tweak_N14HasSwappedViews)
 {
-l9_39=1-sc_GetStereoViewIndex();
+l9_43=1-sc_GetStereoViewIndex();
 }
 #else
 {
-l9_39=sc_GetStereoViewIndex();
+l9_43=sc_GetStereoViewIndex();
 }
 #endif
-float l9_40=l9_38.x;
-sc_SoftwareWrapEarly(l9_40,ivec2(SC_SOFTWARE_WRAP_MODE_U_Tweak_N14,SC_SOFTWARE_WRAP_MODE_V_Tweak_N14).x);
-float l9_41=l9_40;
-float l9_42=l9_38.y;
-sc_SoftwareWrapEarly(l9_42,ivec2(SC_SOFTWARE_WRAP_MODE_U_Tweak_N14,SC_SOFTWARE_WRAP_MODE_V_Tweak_N14).y);
-float l9_43=l9_42;
-vec2 l9_44;
-float l9_45;
+float l9_44=l9_42.x;
+sc_SoftwareWrapEarly(l9_44,ivec2(SC_SOFTWARE_WRAP_MODE_U_Tweak_N14,SC_SOFTWARE_WRAP_MODE_V_Tweak_N14).x);
+float l9_45=l9_44;
+float l9_46=l9_42.y;
+sc_SoftwareWrapEarly(l9_46,ivec2(SC_SOFTWARE_WRAP_MODE_U_Tweak_N14,SC_SOFTWARE_WRAP_MODE_V_Tweak_N14).y);
+float l9_47=l9_46;
+vec2 l9_48;
+float l9_49;
 #if (SC_USE_UV_MIN_MAX_Tweak_N14)
 {
-bool l9_46;
+bool l9_50;
 #if (SC_USE_CLAMP_TO_BORDER_Tweak_N14)
 {
-l9_46=ivec2(SC_SOFTWARE_WRAP_MODE_U_Tweak_N14,SC_SOFTWARE_WRAP_MODE_V_Tweak_N14).x==3;
+l9_50=ivec2(SC_SOFTWARE_WRAP_MODE_U_Tweak_N14,SC_SOFTWARE_WRAP_MODE_V_Tweak_N14).x==3;
 }
 #else
 {
-l9_46=(int(SC_USE_CLAMP_TO_BORDER_Tweak_N14)!=0);
+l9_50=(int(SC_USE_CLAMP_TO_BORDER_Tweak_N14)!=0);
 }
 #endif
-float l9_47=l9_41;
-float l9_48=1.0;
-sc_ClampUV(l9_47,Tweak_N14UvMinMax.x,Tweak_N14UvMinMax.z,l9_46,l9_48);
-float l9_49=l9_47;
-float l9_50=l9_48;
-bool l9_51;
+float l9_51=l9_45;
+float l9_52=1.0;
+sc_ClampUV(l9_51,Tweak_N14UvMinMax.x,Tweak_N14UvMinMax.z,l9_50,l9_52);
+float l9_53=l9_51;
+float l9_54=l9_52;
+bool l9_55;
 #if (SC_USE_CLAMP_TO_BORDER_Tweak_N14)
 {
-l9_51=ivec2(SC_SOFTWARE_WRAP_MODE_U_Tweak_N14,SC_SOFTWARE_WRAP_MODE_V_Tweak_N14).y==3;
+l9_55=ivec2(SC_SOFTWARE_WRAP_MODE_U_Tweak_N14,SC_SOFTWARE_WRAP_MODE_V_Tweak_N14).y==3;
 }
 #else
 {
-l9_51=(int(SC_USE_CLAMP_TO_BORDER_Tweak_N14)!=0);
+l9_55=(int(SC_USE_CLAMP_TO_BORDER_Tweak_N14)!=0);
 }
 #endif
-float l9_52=l9_43;
-float l9_53=l9_50;
-sc_ClampUV(l9_52,Tweak_N14UvMinMax.y,Tweak_N14UvMinMax.w,l9_51,l9_53);
-l9_45=l9_53;
-l9_44=vec2(l9_49,l9_52);
+float l9_56=l9_47;
+float l9_57=l9_54;
+sc_ClampUV(l9_56,Tweak_N14UvMinMax.y,Tweak_N14UvMinMax.w,l9_55,l9_57);
+l9_49=l9_57;
+l9_48=vec2(l9_53,l9_56);
 }
 #else
 {
-l9_45=1.0;
-l9_44=vec2(l9_41,l9_43);
+l9_49=1.0;
+l9_48=vec2(l9_45,l9_47);
 }
 #endif
-vec2 l9_54=sc_TransformUV(l9_44,(int(SC_USE_UV_TRANSFORM_Tweak_N14)!=0),Tweak_N14Transform);
-float l9_55=l9_54.x;
-float l9_56=l9_45;
-sc_SoftwareWrapLate(l9_55,ivec2(SC_SOFTWARE_WRAP_MODE_U_Tweak_N14,SC_SOFTWARE_WRAP_MODE_V_Tweak_N14).x,(int(SC_USE_CLAMP_TO_BORDER_Tweak_N14)!=0)&&(!(int(SC_USE_UV_MIN_MAX_Tweak_N14)!=0)),l9_56);
-float l9_57=l9_54.y;
-float l9_58=l9_56;
-sc_SoftwareWrapLate(l9_57,ivec2(SC_SOFTWARE_WRAP_MODE_U_Tweak_N14,SC_SOFTWARE_WRAP_MODE_V_Tweak_N14).y,(int(SC_USE_CLAMP_TO_BORDER_Tweak_N14)!=0)&&(!(int(SC_USE_UV_MIN_MAX_Tweak_N14)!=0)),l9_58);
-float l9_59=l9_58;
-vec3 l9_60=sc_SamplingCoordsViewToGlobal(vec2(l9_55,l9_57),Tweak_N14Layout,l9_39);
-vec4 l9_61=texture2D(Tweak_N14,l9_60.xy,0.0);
-vec4 l9_62;
+vec2 l9_58=sc_TransformUV(l9_48,(int(SC_USE_UV_TRANSFORM_Tweak_N14)!=0),Tweak_N14Transform);
+float l9_59=l9_58.x;
+float l9_60=l9_49;
+sc_SoftwareWrapLate(l9_59,ivec2(SC_SOFTWARE_WRAP_MODE_U_Tweak_N14,SC_SOFTWARE_WRAP_MODE_V_Tweak_N14).x,(int(SC_USE_CLAMP_TO_BORDER_Tweak_N14)!=0)&&(!(int(SC_USE_UV_MIN_MAX_Tweak_N14)!=0)),l9_60);
+float l9_61=l9_58.y;
+float l9_62=l9_60;
+sc_SoftwareWrapLate(l9_61,ivec2(SC_SOFTWARE_WRAP_MODE_U_Tweak_N14,SC_SOFTWARE_WRAP_MODE_V_Tweak_N14).y,(int(SC_USE_CLAMP_TO_BORDER_Tweak_N14)!=0)&&(!(int(SC_USE_UV_MIN_MAX_Tweak_N14)!=0)),l9_62);
+float l9_63=l9_62;
+vec3 l9_64=sc_SamplingCoordsViewToGlobal(vec2(l9_59,l9_61),Tweak_N14Layout,l9_43);
+vec4 l9_65=texture2D(Tweak_N14,l9_64.xy,0.0);
+vec4 l9_66;
 #if (SC_USE_CLAMP_TO_BORDER_Tweak_N14)
 {
-l9_62=mix(Tweak_N14BorderColor,l9_61,vec4(l9_59));
+l9_66=mix(Tweak_N14BorderColor,l9_65,vec4(l9_63));
 }
 #else
 {
-l9_62=l9_61;
+l9_66=l9_65;
 }
 #endif
-vec3 l9_63=mix(l9_3.xyz,l9_32.xyz,vec3(1.0-l9_62.x));
-vec4 l9_64=vec4(l9_63.x,l9_63.y,l9_63.z,vec4(0.0).w);
-l9_64.w=Port_Value2_N001;
+vec3 l9_67=mix(l9_3.xyz,l9_35.xyz,vec3(1.0-l9_66.x));
+vec4 l9_68=vec4(l9_67.x,l9_67.y,l9_67.z,vec4(0.0).w);
+l9_68.w=Port_Value2_N001;
 #if (sc_BlendMode_AlphaTest)
 {
 if (Port_Value2_N001<alphaTestThreshold)
@@ -3420,94 +3428,106 @@ discard;
 }
 }
 #endif
-vec4 l9_65;
+vec4 l9_69;
 #if (sc_ProjectiveShadowsCaster)
 {
-float l9_66;
+float l9_70;
 #if (((sc_BlendMode_Normal||sc_BlendMode_AlphaToCoverage)||sc_BlendMode_PremultipliedAlphaHardware)||sc_BlendMode_PremultipliedAlphaAuto)
 {
-l9_66=Port_Value2_N001;
-}
-#else
-{
-float l9_67;
-#if (sc_BlendMode_PremultipliedAlpha)
-{
-l9_67=clamp(Port_Value2_N001*2.0,0.0,1.0);
-}
-#else
-{
-float l9_68;
-#if (sc_BlendMode_AddWithAlphaFactor)
-{
-l9_68=clamp(dot(l9_64.xyz,vec3(Port_Value2_N001)),0.0,1.0);
-}
-#else
-{
-float l9_69;
-#if (sc_BlendMode_AlphaTest)
-{
-l9_69=1.0;
-}
-#else
-{
-float l9_70;
-#if (sc_BlendMode_Multiply)
-{
-l9_70=(1.0-dot(l9_64.xyz,vec3(0.33333001)))*Port_Value2_N001;
+l9_70=Port_Value2_N001;
 }
 #else
 {
 float l9_71;
-#if (sc_BlendMode_MultiplyOriginal)
+#if (sc_BlendMode_PremultipliedAlpha)
 {
-l9_71=(1.0-clamp(dot(l9_64.xyz,vec3(1.0)),0.0,1.0))*Port_Value2_N001;
+l9_71=clamp(Port_Value2_N001*2.0,0.0,1.0);
 }
 #else
 {
 float l9_72;
-#if (sc_BlendMode_ColoredGlass)
+#if (sc_BlendMode_AddWithAlphaFactor)
 {
-l9_72=clamp(dot(l9_64.xyz,vec3(1.0)),0.0,1.0)*Port_Value2_N001;
+l9_72=clamp(dot(l9_68.xyz,vec3(Port_Value2_N001)),0.0,1.0);
 }
 #else
 {
 float l9_73;
-#if (sc_BlendMode_Add)
+#if (sc_BlendMode_AlphaTest)
 {
-l9_73=clamp(dot(l9_64.xyz,vec3(1.0)),0.0,1.0);
+l9_73=1.0;
 }
 #else
 {
 float l9_74;
-#if (sc_BlendMode_AddWithAlphaFactor)
+#if (sc_BlendMode_Multiply)
 {
-l9_74=clamp(dot(l9_64.xyz,vec3(1.0)),0.0,1.0)*Port_Value2_N001;
+l9_74=(1.0-dot(l9_68.xyz,vec3(0.33333001)))*Port_Value2_N001;
 }
 #else
 {
 float l9_75;
-#if (sc_BlendMode_Screen)
+#if (sc_BlendMode_MultiplyOriginal)
 {
-l9_75=dot(l9_64.xyz,vec3(0.33333001))*Port_Value2_N001;
+l9_75=(1.0-clamp(dot(l9_68.xyz,vec3(1.0)),0.0,1.0))*Port_Value2_N001;
 }
 #else
 {
 float l9_76;
-#if (sc_BlendMode_Min)
+#if (sc_BlendMode_ColoredGlass)
 {
-l9_76=1.0-clamp(dot(l9_64.xyz,vec3(1.0)),0.0,1.0);
+l9_76=clamp(dot(l9_68.xyz,vec3(1.0)),0.0,1.0)*Port_Value2_N001;
 }
 #else
 {
 float l9_77;
-#if (sc_BlendMode_Max)
+#if (sc_BlendMode_Add)
 {
-l9_77=clamp(dot(l9_64.xyz,vec3(1.0)),0.0,1.0);
+l9_77=clamp(dot(l9_68.xyz,vec3(1.0)),0.0,1.0);
 }
 #else
 {
-l9_77=1.0;
+float l9_78;
+#if (sc_BlendMode_AddWithAlphaFactor)
+{
+l9_78=clamp(dot(l9_68.xyz,vec3(1.0)),0.0,1.0)*Port_Value2_N001;
+}
+#else
+{
+float l9_79;
+#if (sc_BlendMode_Screen)
+{
+l9_79=dot(l9_68.xyz,vec3(0.33333001))*Port_Value2_N001;
+}
+#else
+{
+float l9_80;
+#if (sc_BlendMode_Min)
+{
+l9_80=1.0-clamp(dot(l9_68.xyz,vec3(1.0)),0.0,1.0);
+}
+#else
+{
+float l9_81;
+#if (sc_BlendMode_Max)
+{
+l9_81=clamp(dot(l9_68.xyz,vec3(1.0)),0.0,1.0);
+}
+#else
+{
+l9_81=1.0;
+}
+#endif
+l9_80=l9_81;
+}
+#endif
+l9_79=l9_80;
+}
+#endif
+l9_78=l9_79;
+}
+#endif
+l9_77=l9_78;
 }
 #endif
 l9_76=l9_77;
@@ -3531,169 +3551,157 @@ l9_71=l9_72;
 l9_70=l9_71;
 }
 #endif
-l9_69=l9_70;
-}
-#endif
-l9_68=l9_69;
-}
-#endif
-l9_67=l9_68;
-}
-#endif
-l9_66=l9_67;
-}
-#endif
-l9_65=vec4(mix(sc_ShadowColor.xyz,sc_ShadowColor.xyz*l9_64.xyz,vec3(sc_ShadowColor.w)),sc_ShadowDensity*l9_66);
+l9_69=vec4(mix(sc_ShadowColor.xyz,sc_ShadowColor.xyz*l9_68.xyz,vec3(sc_ShadowColor.w)),sc_ShadowDensity*l9_70);
 }
 #else
 {
-vec4 l9_78;
+vec4 l9_82;
 #if (sc_RenderAlphaToColor)
 {
-l9_78=vec4(Port_Value2_N001);
+l9_82=vec4(Port_Value2_N001);
 }
 #else
 {
-vec4 l9_79;
+vec4 l9_83;
 #if (sc_BlendMode_Custom)
 {
-vec4 l9_80;
+vec4 l9_84;
 #if (sc_FramebufferFetch)
 {
-vec4 l9_81=sc_readFragData0_Platform();
-vec4 l9_82;
+vec4 l9_85=sc_readFragData0_Platform();
+vec4 l9_86;
 #if (sc_UseFramebufferFetchMarker)
 {
-vec4 l9_83=l9_81;
-l9_83.x=l9_81.x+_sc_framebufferFetchMarker;
-l9_82=l9_83;
-}
-#else
-{
-l9_82=l9_81;
-}
-#endif
-l9_80=l9_82;
-}
-#else
-{
-vec2 l9_84=sc_ScreenCoordsGlobalToView(gl_FragCoord.xy*sc_CurrentRenderTargetDims.zw);
-int l9_85;
-#if (sc_ScreenTextureHasSwappedViews)
-{
-l9_85=1-sc_GetStereoViewIndex();
-}
-#else
-{
-l9_85=sc_GetStereoViewIndex();
-}
-#endif
-l9_80=texture2D(sc_ScreenTexture,sc_SamplingCoordsViewToGlobal(l9_84,sc_ScreenTextureLayout,l9_85).xy,0.0);
-}
-#endif
-vec4 l9_86;
-#if (((sc_IsEditor&&sc_GetFramebufferColorInvalidUsageMarker)&&(!sc_BlendMode_Software))&&(!sc_BlendMode_ColoredGlass))
-{
-vec4 l9_87=l9_80;
-l9_87.x=l9_80.x+_sc_GetFramebufferColorInvalidUsageMarker;
+vec4 l9_87=l9_85;
+l9_87.x=l9_85.x+_sc_framebufferFetchMarker;
 l9_86=l9_87;
 }
 #else
 {
-l9_86=l9_80;
+l9_86=l9_85;
 }
 #endif
-vec3 l9_88=mix(l9_86.xyz,definedBlend(l9_86.xyz,l9_64.xyz).xyz,vec3(Port_Value2_N001));
-vec4 l9_89=vec4(l9_88.x,l9_88.y,l9_88.z,vec4(0.0).w);
-l9_89.w=1.0;
-l9_79=l9_89;
+l9_84=l9_86;
 }
 #else
 {
+vec2 l9_88=sc_ScreenCoordsGlobalToView(gl_FragCoord.xy*sc_CurrentRenderTargetDims.zw);
+int l9_89;
+#if (sc_ScreenTextureHasSwappedViews)
+{
+l9_89=1-sc_GetStereoViewIndex();
+}
+#else
+{
+l9_89=sc_GetStereoViewIndex();
+}
+#endif
+l9_84=texture2D(sc_ScreenTexture,sc_SamplingCoordsViewToGlobal(l9_88,sc_ScreenTextureLayout,l9_89).xy,0.0);
+}
+#endif
 vec4 l9_90;
-#if (sc_BlendMode_MultiplyOriginal)
+#if (((sc_IsEditor&&sc_GetFramebufferColorInvalidUsageMarker)&&(!sc_BlendMode_Software))&&(!sc_BlendMode_ColoredGlass))
 {
-l9_90=vec4(mix(vec3(1.0),l9_64.xyz,vec3(Port_Value2_N001)),Port_Value2_N001);
-}
-#else
-{
-vec4 l9_91;
-#if (sc_BlendMode_Screen||sc_BlendMode_PremultipliedAlphaAuto)
-{
-float l9_92;
-#if (sc_BlendMode_PremultipliedAlphaAuto)
-{
-l9_92=clamp(Port_Value2_N001,0.0,1.0);
-}
-#else
-{
-l9_92=Port_Value2_N001;
-}
-#endif
-l9_91=vec4(l9_64.xyz*l9_92,l9_92);
-}
-#else
-{
-l9_91=l9_64;
-}
-#endif
+vec4 l9_91=l9_84;
+l9_91.x=l9_84.x+_sc_GetFramebufferColorInvalidUsageMarker;
 l9_90=l9_91;
 }
-#endif
-l9_79=l9_90;
-}
-#endif
-l9_78=l9_79;
+#else
+{
+l9_90=l9_84;
 }
 #endif
-l9_65=l9_78;
-}
-#endif
-vec4 l9_93;
-if (l9_33)
-{
-vec4 l9_94;
-if (l9_35)
-{
-l9_94=l9_36;
-}
-else
-{
-l9_94=vec4(0.0);
-}
-l9_93=l9_94;
-}
-else
-{
-l9_93=l9_65;
-}
-vec4 l9_95;
-#if (sc_ShaderComplexityAnalyzer)
-{
-l9_95=vec4(shaderComplexityValue/255.0,0.0,0.0,1.0);
+vec3 l9_92=mix(l9_90.xyz,definedBlend(l9_90.xyz,l9_68.xyz).xyz,vec3(Port_Value2_N001));
+vec4 l9_93=vec4(l9_92.x,l9_92.y,l9_92.z,vec4(0.0).w);
+l9_93.w=1.0;
+l9_83=l9_93;
 }
 #else
 {
-l9_95=vec4(0.0);
+vec4 l9_94;
+#if (sc_BlendMode_MultiplyOriginal)
+{
+l9_94=vec4(mix(vec3(1.0),l9_68.xyz,vec3(Port_Value2_N001)),Port_Value2_N001);
+}
+#else
+{
+vec4 l9_95;
+#if (sc_BlendMode_Screen||sc_BlendMode_PremultipliedAlphaAuto)
+{
+float l9_96;
+#if (sc_BlendMode_PremultipliedAlphaAuto)
+{
+l9_96=clamp(Port_Value2_N001,0.0,1.0);
+}
+#else
+{
+l9_96=Port_Value2_N001;
 }
 #endif
-vec4 l9_96;
-if (l9_95.w>0.0)
+l9_95=vec4(l9_68.xyz*l9_96,l9_96);
+}
+#else
 {
-l9_96=l9_95;
+l9_95=l9_68;
+}
+#endif
+l9_94=l9_95;
+}
+#endif
+l9_83=l9_94;
+}
+#endif
+l9_82=l9_83;
+}
+#endif
+l9_69=l9_82;
+}
+#endif
+vec4 l9_97;
+if (l9_36)
+{
+vec4 l9_98;
+if (l9_38)
+{
+l9_98=l9_39;
 }
 else
 {
-l9_96=l9_93;
+l9_98=vec4(0.0);
 }
-vec4 l9_97=outputMotionVectorsIfNeeded(varPos,max(l9_96,vec4(0.0)));
-vec4 l9_98=clamp(l9_97,vec4(0.0),vec4(1.0));
+l9_97=l9_98;
+}
+else
+{
+l9_97=l9_69;
+}
+vec4 l9_99;
+#if (sc_ShaderComplexityAnalyzer)
+{
+l9_99=vec4(shaderComplexityValue/255.0,0.0,0.0,1.0);
+}
+#else
+{
+l9_99=vec4(0.0);
+}
+#endif
+vec4 l9_100;
+if (l9_99.w>0.0)
+{
+l9_100=l9_99;
+}
+else
+{
+l9_100=l9_97;
+}
+vec4 l9_101=outputMotionVectorsIfNeeded(varPos,max(l9_100,vec4(0.0)));
+vec4 l9_102=clamp(l9_101,vec4(0.0),vec4(1.0));
 #if (sc_OITDepthBoundsPass)
 {
 #if (sc_OITDepthBoundsPass)
 {
-float l9_99=clamp(viewSpaceDepth()/1000.0,0.0,1.0);
-sc_writeFragData0(vec4(max(0.0,1.0-(l9_99-0.0039215689)),min(1.0,l9_99+0.0039215689),0.0,0.0));
+float l9_103=clamp(viewSpaceDepth()/1000.0,0.0,1.0);
+sc_writeFragData0(vec4(max(0.0,1.0-(l9_103-0.0039215689)),min(1.0,l9_103+0.0039215689),0.0,0.0));
 }
 #endif
 }
@@ -3709,22 +3717,22 @@ sc_writeFragData0(vec4(1.0));
 {
 #if (sc_OITDepthGatherPass)
 {
-vec2 l9_100=sc_ScreenCoordsGlobalToView(gl_FragCoord.xy*sc_CurrentRenderTargetDims.zw);
+vec2 l9_104=sc_ScreenCoordsGlobalToView(gl_FragCoord.xy*sc_CurrentRenderTargetDims.zw);
 #if (sc_OITMaxLayers4Plus1)
 {
-if ((gl_FragCoord.z-texture2D(sc_OITFrontDepthTexture,l9_100).x)<=getFrontLayerZTestEpsilon())
+if ((gl_FragCoord.z-texture2D(sc_OITFrontDepthTexture,l9_104).x)<=getFrontLayerZTestEpsilon())
 {
 discard;
 }
 }
 #endif
-int l9_101=encodeDepth(viewSpaceDepth(),texture2D(sc_OITFilteredDepthBoundsTexture,l9_100).xy);
-float l9_102=packValue(l9_101);
-int l9_109=int(l9_98.w*255.0);
-float l9_110=packValue(l9_109);
-sc_writeFragData0(vec4(packValue(l9_101),packValue(l9_101),packValue(l9_101),packValue(l9_101)));
-sc_writeFragData1(vec4(l9_102,packValue(l9_101),packValue(l9_101),packValue(l9_101)));
-sc_writeFragData2(vec4(l9_110,packValue(l9_109),packValue(l9_109),packValue(l9_109)));
+int l9_105=encodeDepth(viewSpaceDepth(),texture2D(sc_OITFilteredDepthBoundsTexture,l9_104).xy);
+float l9_106=packValue(l9_105);
+int l9_113=int(l9_102.w*255.0);
+float l9_114=packValue(l9_113);
+sc_writeFragData0(vec4(packValue(l9_105),packValue(l9_105),packValue(l9_105),packValue(l9_105)));
+sc_writeFragData1(vec4(l9_106,packValue(l9_105),packValue(l9_105),packValue(l9_105)));
+sc_writeFragData2(vec4(l9_114,packValue(l9_113),packValue(l9_113),packValue(l9_113)));
 #if (sc_OITMaxLayersVisualizeLayerCount)
 {
 sc_writeFragData2(vec4(0.0039215689,0.0,0.0,0.0));
@@ -3739,25 +3747,25 @@ sc_writeFragData2(vec4(0.0039215689,0.0,0.0,0.0));
 {
 #if (sc_OITCompositingPass)
 {
-vec2 l9_113=sc_ScreenCoordsGlobalToView(gl_FragCoord.xy*sc_CurrentRenderTargetDims.zw);
+vec2 l9_117=sc_ScreenCoordsGlobalToView(gl_FragCoord.xy*sc_CurrentRenderTargetDims.zw);
 #if (sc_OITMaxLayers4Plus1)
 {
-if ((gl_FragCoord.z-texture2D(sc_OITFrontDepthTexture,l9_113).x)<=getFrontLayerZTestEpsilon())
+if ((gl_FragCoord.z-texture2D(sc_OITFrontDepthTexture,l9_117).x)<=getFrontLayerZTestEpsilon())
 {
 discard;
 }
 }
 #endif
-int l9_114[8];
-int l9_115[8];
-int l9_116=0;
+int l9_118[8];
+int l9_119[8];
+int l9_120=0;
 for (int snapLoopIndex=0; snapLoopIndex==0; snapLoopIndex+=0)
 {
-if (l9_116<8)
+if (l9_120<8)
 {
-l9_114[l9_116]=0;
-l9_115[l9_116]=0;
-l9_116++;
+l9_118[l9_120]=0;
+l9_119[l9_120]=0;
+l9_120++;
 continue;
 }
 else
@@ -3765,69 +3773,69 @@ else
 break;
 }
 }
-int l9_117;
+int l9_121;
 #if (sc_OITMaxLayers8)
 {
-l9_117=2;
+l9_121=2;
 }
 #else
 {
-l9_117=1;
+l9_121=1;
 }
 #endif
-int l9_118=0;
+int l9_122=0;
 for (int snapLoopIndex=0; snapLoopIndex==0; snapLoopIndex+=0)
 {
-if (l9_118<l9_117)
+if (l9_122<l9_121)
 {
-vec4 l9_119;
-vec4 l9_120;
-vec4 l9_121;
-if (l9_118==0)
-{
-l9_121=texture2D(sc_OITAlpha0,l9_113);
-l9_120=texture2D(sc_OITDepthLow0,l9_113);
-l9_119=texture2D(sc_OITDepthHigh0,l9_113);
-}
-else
-{
-l9_121=vec4(0.0);
-l9_120=vec4(0.0);
-l9_119=vec4(0.0);
-}
-vec4 l9_122;
 vec4 l9_123;
 vec4 l9_124;
-if (l9_118==1)
+vec4 l9_125;
+if (l9_122==0)
 {
-l9_124=texture2D(sc_OITAlpha1,l9_113);
-l9_123=texture2D(sc_OITDepthLow1,l9_113);
-l9_122=texture2D(sc_OITDepthHigh1,l9_113);
+l9_125=texture2D(sc_OITAlpha0,l9_117);
+l9_124=texture2D(sc_OITDepthLow0,l9_117);
+l9_123=texture2D(sc_OITDepthHigh0,l9_117);
 }
 else
 {
-l9_124=l9_121;
-l9_123=l9_120;
-l9_122=l9_119;
+l9_125=vec4(0.0);
+l9_124=vec4(0.0);
+l9_123=vec4(0.0);
 }
-if (any(notEqual(l9_122,vec4(0.0)))||any(notEqual(l9_123,vec4(0.0))))
+vec4 l9_126;
+vec4 l9_127;
+vec4 l9_128;
+if (l9_122==1)
 {
-int l9_125[8]=l9_114;
-unpackValues(l9_122.w,l9_118,l9_125);
-unpackValues(l9_122.z,l9_118,l9_125);
-unpackValues(l9_122.y,l9_118,l9_125);
-unpackValues(l9_122.x,l9_118,l9_125);
-unpackValues(l9_123.w,l9_118,l9_125);
-unpackValues(l9_123.z,l9_118,l9_125);
-unpackValues(l9_123.y,l9_118,l9_125);
-unpackValues(l9_123.x,l9_118,l9_125);
-int l9_134[8]=l9_115;
-unpackValues(l9_124.w,l9_118,l9_134);
-unpackValues(l9_124.z,l9_118,l9_134);
-unpackValues(l9_124.y,l9_118,l9_134);
-unpackValues(l9_124.x,l9_118,l9_134);
+l9_128=texture2D(sc_OITAlpha1,l9_117);
+l9_127=texture2D(sc_OITDepthLow1,l9_117);
+l9_126=texture2D(sc_OITDepthHigh1,l9_117);
 }
-l9_118++;
+else
+{
+l9_128=l9_125;
+l9_127=l9_124;
+l9_126=l9_123;
+}
+if (any(notEqual(l9_126,vec4(0.0)))||any(notEqual(l9_127,vec4(0.0))))
+{
+int l9_129[8]=l9_118;
+unpackValues(l9_126.w,l9_122,l9_129);
+unpackValues(l9_126.z,l9_122,l9_129);
+unpackValues(l9_126.y,l9_122,l9_129);
+unpackValues(l9_126.x,l9_122,l9_129);
+unpackValues(l9_127.w,l9_122,l9_129);
+unpackValues(l9_127.z,l9_122,l9_129);
+unpackValues(l9_127.y,l9_122,l9_129);
+unpackValues(l9_127.x,l9_122,l9_129);
+int l9_138[8]=l9_119;
+unpackValues(l9_128.w,l9_122,l9_138);
+unpackValues(l9_128.z,l9_122,l9_138);
+unpackValues(l9_128.y,l9_122,l9_138);
+unpackValues(l9_128.x,l9_122,l9_138);
+}
+l9_122++;
 continue;
 }
 else
@@ -3835,50 +3843,50 @@ else
 break;
 }
 }
-vec4 l9_139=texture2D(sc_OITFilteredDepthBoundsTexture,l9_113);
-vec2 l9_140=l9_139.xy;
-int l9_141;
+vec4 l9_143=texture2D(sc_OITFilteredDepthBoundsTexture,l9_117);
+vec2 l9_144=l9_143.xy;
+int l9_145;
 #if (sc_SkinBonesCount>0)
 {
-l9_141=encodeDepth(((1.0-l9_139.x)*1000.0)+getDepthOrderingEpsilon(),l9_140);
+l9_145=encodeDepth(((1.0-l9_143.x)*1000.0)+getDepthOrderingEpsilon(),l9_144);
 }
 #else
 {
-l9_141=0;
+l9_145=0;
 }
 #endif
-int l9_142=encodeDepth(viewSpaceDepth(),l9_140);
-vec4 l9_143;
-l9_143=l9_98*l9_98.w;
-vec4 l9_144;
-int l9_145=0;
+int l9_146=encodeDepth(viewSpaceDepth(),l9_144);
+vec4 l9_147;
+l9_147=l9_102*l9_102.w;
+vec4 l9_148;
+int l9_149=0;
 for (int snapLoopIndex=0; snapLoopIndex==0; snapLoopIndex+=0)
 {
-if (l9_145<8)
+if (l9_149<8)
 {
-int l9_146=l9_114[l9_145];
-int l9_147=l9_142-l9_141;
-bool l9_148=l9_146<l9_147;
-bool l9_149;
-if (l9_148)
+int l9_150=l9_118[l9_149];
+int l9_151=l9_146-l9_145;
+bool l9_152=l9_150<l9_151;
+bool l9_153;
+if (l9_152)
 {
-l9_149=l9_114[l9_145]>0;
+l9_153=l9_118[l9_149]>0;
 }
 else
 {
-l9_149=l9_148;
+l9_153=l9_152;
 }
-if (l9_149)
+if (l9_153)
 {
-vec3 l9_150=l9_143.xyz*(1.0-(float(l9_115[l9_145])/255.0));
-l9_144=vec4(l9_150.x,l9_150.y,l9_150.z,l9_143.w);
+vec3 l9_154=l9_147.xyz*(1.0-(float(l9_119[l9_149])/255.0));
+l9_148=vec4(l9_154.x,l9_154.y,l9_154.z,l9_147.w);
 }
 else
 {
-l9_144=l9_143;
+l9_148=l9_147;
 }
-l9_143=l9_144;
-l9_145++;
+l9_147=l9_148;
+l9_149++;
 continue;
 }
 else
@@ -3886,7 +3894,7 @@ else
 break;
 }
 }
-sc_writeFragData0(l9_143);
+sc_writeFragData0(l9_147);
 #if (sc_OITMaxLayersVisualizeLayerCount)
 {
 discard;
@@ -3905,13 +3913,13 @@ if (abs(gl_FragCoord.z-texture2D(sc_OITFrontDepthTexture,sc_ScreenCoordsGlobalTo
 {
 discard;
 }
-sc_writeFragData0(l9_98);
+sc_writeFragData0(l9_102);
 }
 #endif
 }
 #else
 {
-sc_writeFragData0(l9_97);
+sc_writeFragData0(l9_101);
 }
 #endif
 }

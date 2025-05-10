@@ -2474,6 +2474,7 @@ if (l9_1&&(78==PreviewNodeID))
 {
 PreviewInfo.Saved=true;
 PreviewInfo.Color=Value;
+PreviewInfo.Color.w=1.0;
 }
 }
 void Node17_Switch(float Switch,vec2 Value0,vec2 Value1,vec2 Value2,vec2 Default,out vec2 Result,ssGlobals Globals)

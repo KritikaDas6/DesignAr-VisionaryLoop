@@ -2119,6 +2119,7 @@ if (l9_1&&(70==PreviewNodeID))
 {
 PreviewInfo.Saved=true;
 PreviewInfo.Color=Value;
+PreviewInfo.Color.w=1.0;
 }
 }
 void Node37_Switch(float Switch,vec4 Value0,vec4 Value1,vec4 Value2,vec4 Value3,vec4 Value4,vec4 Default,out vec4 Result,ssGlobals Globals)
@@ -2176,6 +2177,7 @@ if (l9_10&&(73==PreviewNodeID))
 {
 PreviewInfo.Saved=true;
 PreviewInfo.Color=l9_7;
+PreviewInfo.Color.w=1.0;
 }
 Value1=l9_7;
 Result=Value1;
@@ -2229,6 +2231,7 @@ if (l9_22&&(66==PreviewNodeID))
 {
 PreviewInfo.Saved=true;
 PreviewInfo.Color=l9_20;
+PreviewInfo.Color.w=1.0;
 }
 Value3=l9_20;
 Result=Value3;
@@ -2264,6 +2267,7 @@ if (l9_28&&(77==PreviewNodeID))
 {
 PreviewInfo.Saved=true;
 PreviewInfo.Color=l9_26;
+PreviewInfo.Color.w=1.0;
 }
 Value4=l9_26;
 Result=Value4;

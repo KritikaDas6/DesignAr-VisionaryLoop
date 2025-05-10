@@ -6,7 +6,18 @@
     patch: 0
     build: 25021204
     type: Unset
-  Description: "Release\n\nDocumentation:\nhttps://docs.snap.com/spectacles/spectacles-frameworks/spectacles-interaction-kit/get-started\n\nhttps://docs.snap.com/lens-studio/api/interfaces/Lens_Scripting.Packages_SpectaclesInteractionKit_SIK.SIKAPI.html\n\nPreliminary Setup:\n- Ensure the main camera has a Device Tracking component (w/ tracking mode set to World).\n- Ensure the device type override is set to Spectacles (cogwheel at the top-right of the preview panel > Device Type Override > Spectacles).\n- Ensure that this package is unpacked in your scene (right-click the package in Asset Browser and unpack if given the option)."
+  Description: |-
+    Release
+    
+    Documentation:
+    https://docs.snap.com/spectacles/spectacles-frameworks/spectacles-interaction-kit/get-started
+    
+    https://docs.snap.com/lens-studio/api/interfaces/Lens_Scripting.Packages_SpectaclesInteractionKit_SIK.SIKAPI.html
+    
+    Preliminary Setup:
+    - Ensure the main camera has a Device Tracking component (w/ tracking mode set to World).
+    - Ensure the device type override is set to Spectacles (cogwheel at the top-right of the preview panel > Device Type Override > Spectacles).
+    - Ensure that this package is unpacked in your scene (right-click the package in Asset Browser and unpack if given the option).
   SvgIcon: ""
   InternalVersion: 3
   VersionMajor: 0

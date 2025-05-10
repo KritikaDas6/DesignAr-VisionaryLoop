@@ -7,17 +7,25 @@
   PackagePolicy: CannotBeUnpacked
   AssetDataMap:
     TypeScriptAsset: !<own> 78cd0c3c-7a8d-413f-922b-9ba93be0f5e1
-  DependentFiles: []
-  ImporterSettings: !<AssetImporterSettings/011554c2-1c66-4a56-9064-cbdc50557cbb> {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
 - !<TypeScriptAssetData/78cd0c3c-7a8d-413f-922b-9ba93be0f5e1>
   SvgIcon: ""
-  Description: "Allows do detect surface using WorldQueryModule\n\nAPI: \nstartGroundCalibration(callback: (pos: vec3, rot: quat) => void)"
+  Description: |-
+    Allows do detect surface using WorldQueryModule
+    
+    API: 
+    startGroundCalibration(callback: (pos: vec3, rot: quat) => void)
   InternalVersion: 1
   VersionMajor: 1
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: e6a02e95-3ad1-4a55-9384-c7816299564f
+  ComponentUid: bce99e67-a9fb-492a-b889-16df49ed6d2b
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
@@ -25,14 +33,17 @@
     animation: false
     camObj: false
     visualObj: false
-  ScriptTypesHidden: {}
+  ScriptTypesHidden:
+    {}
   DefaultScriptInputs:
     - camObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       visualObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       animation: !<MappingBased.CircleAnimation> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
-    - {}
+    -
+      {}
   InputLines:
     - // @input SceneObject camObj
     - // @input SceneObject visualObj
     - // @input CircleAnimation animation
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

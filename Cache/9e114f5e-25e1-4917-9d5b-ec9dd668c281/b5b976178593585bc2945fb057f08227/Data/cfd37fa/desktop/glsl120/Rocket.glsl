@@ -2182,6 +2182,7 @@ if (l9_1&&(0==PreviewNodeID))
 {
 PreviewInfo.Saved=true;
 PreviewInfo.Color=Value;
+PreviewInfo.Color.w=1.0;
 }
 }
 vec2 sc_SamplingCoordsGlobalToView(vec3 uvi,int renderingLayout,int viewIndex)

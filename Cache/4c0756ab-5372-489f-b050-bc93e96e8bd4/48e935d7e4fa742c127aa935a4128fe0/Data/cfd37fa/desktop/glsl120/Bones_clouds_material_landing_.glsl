@@ -2060,6 +2060,7 @@ if (l9_1&&(77==PreviewNodeID))
 {
 PreviewInfo.Saved=true;
 PreviewInfo.Color=Value;
+PreviewInfo.Color.w=1.0;
 }
 }
 void Node80_Saturation(vec4 Input,float Amount,out vec4 Output,ssGlobals Globals)
@@ -2132,6 +2133,7 @@ if (l9_8&&(68==PreviewNodeID))
 {
 PreviewInfo.Saved=true;
 PreviewInfo.Color=l9_6;
+PreviewInfo.Color.w=1.0;
 }
 Value1=((vec4(clamp((1.0-((l9_0*Port_Input1_N017)+l9_1))+0.001,Port_Input1_N069+0.001,Port_Input2_N069+0.001)-0.001)*l9_2)*(l9_6*vec4(Port_Input1_N072))).xyz;
 Result=Value1;
