@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 1251
+    size: 1253
     values:
       - Base 2.png
       - Base.png
@@ -10,6 +10,7 @@ CollapsedEntities:
       - Echopark.hdr
       - Echopark.hdr/Diffuse
       - Echopark.hdr/Specular
+      - Image.mat
       - ImageMaterial 2.mat
       - ImageMaterial 3.mat
       - ImageMaterial 4.mat
@@ -1250,6 +1251,7 @@ CollapsedEntities:
       - World Query Hit - Spawn On Surface/Textures/statue_params.png
       - World Query Hit - Spawn On Surface/World Query Hit Example.prefab
       - World Query Hit - Spawn On Surface/WorldQueryHitExample.ts
+      - flat.ss_graph
       - image.png.png
       - image_unlit.ss_graph
       - pbr.ss_graph

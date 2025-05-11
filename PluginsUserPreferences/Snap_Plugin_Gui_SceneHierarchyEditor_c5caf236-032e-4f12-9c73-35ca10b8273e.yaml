@@ -1,9 +1,11 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 131
+    size: 142
     values:
       - 00093749-5b3f-4589-8647-741e0f4af6c9
+      - 00aabf0d-8321-4d11-9903-e27bd8c33d0f
+      - 00ba32bb-2476-4305-bdea-02b32b2e9d47
       - 06a59f80-547b-4f8c-b5d4-89026a221a69
       - 06be08e6-1fb8-4af7-83ff-4e03e2ba62a3
       - 07a9eca3-aa2f-466c-8844-b8136a56bdf0
@@ -37,6 +39,7 @@ CollapsedEntities:
       - 2b45b001-bd97-422a-912d-7ef7ea9f32ba
       - 2d5ff134-7193-479f-926e-8696a052dae9
       - 2de7b1ec-b578-4097-9349-a74195805881
+      - 2f2f25d5-7946-4af5-be7b-296285285f30
       - 3198105a-b2d9-4ecd-b392-696d8ee0c28d
       - 31db4adc-aadd-4056-97ac-78c33702fee6
       - 355c4a5d-aa19-4ed5-aa70-2b17863ff6d7
@@ -61,9 +64,11 @@ CollapsedEntities:
       - 520f3b7d-fe6d-4c39-b9f6-f0664698b88b
       - 536dd55c-0f41-47c5-9e6f-ac5c6880bdbd
       - 588c5f7d-36ff-4afc-925f-fc62876bcaa0
+      - 61d82af1-bde0-4f22-95db-98836554fb5f
       - 63d515b4-230b-448f-a7d0-8dd4bd3ff5f9
       - 63d5b0fb-137e-484c-a205-813c295bb23b
       - 646364ab-a0c4-42de-834d-4d4291d8f9f8
+      - 672c88f5-daa5-4632-aa76-37ae40c25467
       - 6848c0b4-b551-4524-8912-42c810a0a89e
       - 690d3d6a-2515-4659-866b-b6824eae0ee3
       - 6d5e5898-0f67-41c8-96f7-4e13d7be339e
@@ -94,7 +99,6 @@ CollapsedEntities:
       - 8dad07b4-468f-4468-9868-9570dee38241
       - 9122860e-2596-478a-a25c-3abab1ce2364
       - 91f4bbc1-043d-42d3-8f7f-80be45a59de7
-      - 93997f9f-856e-4899-b892-43026e8d8dce
       - 9767a44a-867c-448c-a021-8dad367945ce
       - 997a19bd-613d-443b-8d99-6a18b46848d6
       - 9ad70744-b5f3-4aca-a6f8-f6ed0c85e7bd
@@ -105,7 +109,11 @@ CollapsedEntities:
       - a6a9ad16-dc75-4b11-a700-74bb816f5ea2
       - ac6e95ea-9f80-41bf-81c2-60071c475fd3
       - b48049c2-2ada-4cb6-843b-10c08471349e
+      - b48718d0-81e0-4214-bee9-ce5c643dd6f8
+      - b5d5f681-29f9-476f-944c-8b5a8ac1e909
+      - b6c2e65b-346b-4462-b288-d47a9b573d53
       - b6d77a44-e10b-4421-a59e-09e6d71849f7
+      - b8935ebc-ed14-41fa-9501-739623cc0d93
       - bb84f7eb-8338-48b1-b676-c1ce2ae17355
       - bc07bd62-429c-475d-b8b1-d802bff12485
       - ca9ad875-7cdb-4d9b-a9d9-59f37f65856a
@@ -114,13 +122,16 @@ CollapsedEntities:
       - d07ae385-2ee0-4c5a-8e29-2f4e0ceb77ef
       - d2b06be3-0b90-4efc-bf90-faa681fe51bb
       - d338a365-9f8a-4522-96fc-3a7078eebf1c
+      - d3c2843a-f894-4b4d-b4aa-91e4d0a5fb46
       - d45a569f-8a22-44dd-b8e5-90e29ab5cbd5
       - d47f8841-90de-4779-bdfc-cd742ae5d7c8
       - e06ad8e7-6c81-449c-9032-1668b6517f47
       - e21db2cb-3a2f-42f9-9734-d18f10432a6d
       - e4824d54-e6d7-4bc0-8156-45c2c4c6ffe4
       - e5832477-dd75-4485-9797-9e4c6afc0503
+      - e5d48367-4b96-4816-ab32-11ad0de37e18
       - e5f0990a-7509-43a9-9dd7-cc12def39be8
+      - e6deef4c-1b1c-46ce-9f84-d132f4a620c8
       - e9fa58f0-6376-47d5-9e0d-6c92d6363db4
       - ea2cb79d-4efa-4444-93e3-bac1f7dedaf5
       - f03bf67e-689e-424e-8a65-1c6ad8051ddd

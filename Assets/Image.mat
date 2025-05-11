@@ -1,16 +1,10 @@
-- !<Material/4dba5a9c-9f15-4e70-9815-b70f62dfc6a6>
+- !<Material/9e175e13-4f24-4e88-ae8f-d1b605df3e5f>
   PackagePath: ""
   PassesInfo:
-    - !<own> efce2fbb-db97-4c49-a654-418546010be9
-- !<PassInfo/efce2fbb-db97-4c49-a654-418546010be9>
+    - !<own> 717265c4-0369-4728-b563-a6b570eb2892
+- !<PassInfo/717265c4-0369-4728-b563-a6b570eb2892>
   CachedProperties:
-    - baseTexBorderColor:
-        typeIdx: 5
-        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-    - baseTexDims:
-        typeIdx: 5
-        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-    - baseTexUvMinMax:
+    - Port_Default_N369:
         typeIdx: 5
         value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   DepthWrite: false
@@ -24,32 +18,32 @@
   FrustumCullPad: 0.000000
   InstanceCount: 1
   Defines:
-    - ENABLE_BASE_TEX
     - NODE_13_DROPLIST_ITEM 0
     - NODE_27_DROPLIST_ITEM 0
     - NODE_49_DROPLIST_ITEM 0
     - NODE_69_DROPLIST_ITEM 0
+    - ENABLE_BASE_TEX
   BlendMode: PremultipliedAlphaAuto
   Properties:
     Port_Default_N204:
       typeIdx: 1
-      value: 1.000000
+      value: 0.000000
     PreviewEnabled:
       typeIdx: 0
       value: 0
     baseColor:
       typeIdx: 5
-      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      value: {x: 1.000000, y: 0.518929, z: 0.485145, w: 1.000000}
     baseTex:
       typeIdx: 9
       value:
-        id: 1b45fde4-8bf3-46f3-a0b4-831effafcd35
+        id: 31b9bf8d-f134-4d6b-a0b0-c45d227b8d9b
         sampler:
-          filteringMode: Bilinear
+          filteringMode: Trilinear
           wrapModeU: ClampToEdge
           wrapModeV: ClampToEdge
           wrapModeW: ClampToEdge
-          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+          borderColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
           mipmaps: false
         type: Texture2D
     baseTexTransform:
@@ -67,6 +61,4 @@
     overrideTimeEnabled:
       typeIdx: 0
       value: 0
-  Pass: !<reference> ff93f1bb-0f0b-4e34-8e24-07af75f33935
-  RTCaster: false
-  RTReceiver: false
+  Pass: !<reference> ac64da6c-f218-4ded-9f27-25cfe1888f9b
