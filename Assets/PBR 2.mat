@@ -4,7 +4,186 @@
     - !<own> 954d26dc-f097-4c43-8fbb-06a5fe6e6f12
 - !<PassInfo/954d26dc-f097-4c43-8fbb-06a5fe6e6f12>
   CachedProperties:
-    []
+    - Level:
+        typeIdx: 1
+        value: 1.000000
+    - Pinch:
+        typeIdx: 1
+        value: 1.000000
+    - Port_AO_N006:
+        typeIdx: 4
+        value: {x: 1.000000, y: 1.000000, z: 1.000000}
+    - Port_Albedo_N006:
+        typeIdx: 4
+        value: {x: 1.000000, y: 1.000000, z: 1.000000}
+    - Port_CoordsIn_N008:
+        typeIdx: 3
+        value: {x: 0.000000, y: 0.000000}
+    - Port_Depth_N004:
+        typeIdx: 1
+        value: 1.000000
+    - Port_FinalColor1_N004:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_FinalColor2_N004:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_FinalColor3_N004:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_FinalColor_N004:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_GSplatPointSize_N004:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Input0_N002:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_Input0_N005:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_Input0_N006:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_Input1_N002:
+        typeIdx: 1
+        value: 0.010000
+    - Port_Input1_N005:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_Input1_N006:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Input2_N006:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_Input_N007:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    - Port_LODValue_N001:
+        typeIdx: 1
+        value: 0.000000
+    - Port_LODValue_N002:
+        typeIdx: 1
+        value: 0.000000
+    - Port_LODValue_N009:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Metallic_N006:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Normal_N006:
+        typeIdx: 4
+        value: {x: 0.000000, y: 1.000000, z: 0.000000}
+    - Port_Offset_N008:
+        typeIdx: 3
+        value: {x: 0.020000, y: 0.000000}
+    - Port_Opacity_N006:
+        typeIdx: 1
+        value: 1.000000
+    - Port_Output_N007:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_Position0_N001:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Position0_N010:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Position1_N001:
+        typeIdx: 1
+        value: 0.250000
+    - Port_Position1_N010:
+        typeIdx: 1
+        value: 0.250000
+    - Port_Position2_N001:
+        typeIdx: 1
+        value: 1.000000
+    - Port_Position2_N010:
+        typeIdx: 1
+        value: 0.500000
+    - Port_Position3_N001:
+        typeIdx: 1
+        value: 0.750000
+    - Port_Position3_N010:
+        typeIdx: 1
+        value: 1.000000
+    - Port_Position4_N001:
+        typeIdx: 1
+        value: 1.000000
+    - Port_Position4_N010:
+        typeIdx: 1
+        value: 1.000000
+    - Port_Ratio_N001:
+        typeIdx: 1
+        value: 0.500000
+    - Port_Ratio_N010:
+        typeIdx: 1
+        value: 0.500000
+    - Port_RayDirection_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 1.000000, z: 0.000000}
+    - Port_RayOrigin_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_Roughness_N006:
+        typeIdx: 1
+        value: 0.000000
+    - Port_UVCoord_N001:
+        typeIdx: 3
+        value: {x: 0.000000, y: 0.000000}
+    - Port_UVCoord_N002:
+        typeIdx: 3
+        value: {x: 0.000000, y: 0.000000}
+    - Port_UVCoord_N009:
+        typeIdx: 3
+        value: {x: 0.000000, y: 0.000000}
+    - Port_Value0_N001:
+        typeIdx: 5
+        value: {x: 1.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+    - Port_Value0_N010:
+        typeIdx: 5
+        value: {x: 0.701961, y: 0.701961, z: 0.701961, w: 1.000000}
+    - Port_Value1_N001:
+        typeIdx: 5
+        value: {x: 0.000000, y: 1.000000, z: 0.000000, w: 1.000000}
+    - Port_Value1_N010:
+        typeIdx: 5
+        value: {x: 0.549020, y: 0.549020, z: 0.549020, w: 1.000000}
+    - Port_Value2_N001:
+        typeIdx: 5
+        value: {x: 1.000000, y: 0.000000, z: 1.000000, w: 1.000000}
+    - Port_Value2_N010:
+        typeIdx: 5
+        value: {x: 1.000000, y: 0.901961, z: 0.501961, w: 1.000000}
+    - Port_Value3_N001:
+        typeIdx: 5
+        value: {x: 0.000000, y: 0.000000, z: 1.000000, w: 1.000000}
+    - Port_Value3_N010:
+        typeIdx: 5
+        value: {x: 0.768627, y: 0.596078, z: 0.078431, w: 1.000000}
+    - Port_Value4_N001:
+        typeIdx: 5
+        value: {x: 1.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+    - Port_Value4_N010:
+        typeIdx: 5
+        value: {x: 1.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+    - Port_Value_N003:
+        typeIdx: 5
+        value: {x: 0.549020, y: 0.549020, z: 0.549020, w: 1.000000}
+    - Port_WorldNormal_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 1.000000, z: 0.000000}
+    - Port_WorldPosition_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_WorldTangent_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - PreviewNodeID:
+        typeIdx: 0
+        value: 0
   DepthWrite: true
   DepthTest: true
   DepthFunction: LessEqual
@@ -23,10 +202,10 @@
   Properties:
     Port_Center_N016:
       typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
+      value: {x: 0.000000, y: 0.000000}
     Port_Emissive_N006:
       typeIdx: 4
-      value: {x: 1.000000, y: 1.000000, z: 1.000000}
+      value: {x: 0.000000, y: 0.000000, z: 0.000000}
     Port_SpecularAO_N006:
       typeIdx: 4
       value: {x: 1.000000, y: 1.000000, z: 1.000000}

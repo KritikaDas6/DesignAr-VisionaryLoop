@@ -1,12 +1,12 @@
-- !<AssetImportMetadata/149a026a-34ed-4bb5-9743-3be6d05f8771>
+- !<AssetImportMetadata/bef84888-8a6a-4a4f-bc1a-8d048908aa9b>
   ImportedAssetIds:
-    ObjectPrefab: !<reference> c8ce89d2-0194-47e9-be14-34f061d69200
+    ObjectPrefab: !<reference> 0ffb10ff-fe7b-44e8-b03b-ddaa0a0584e5
   ImporterName: ObjectPrefabImporter
-  PrimaryAsset: !<reference> c8ce89d2-0194-47e9-be14-34f061d69200
+  PrimaryAsset: !<reference> 0ffb10ff-fe7b-44e8-b03b-ddaa0a0584e5
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
   AssetDataMap:
-    ObjectPrefab: !<own> d3f4706d-e82a-4057-b7fc-a936c2db43cb
+    ObjectPrefab: !<own> 1ee442d1-e834-4f45-adb9-8f070dd89c9a
   DependentFiles:
     []
   ImporterSettings: !<AssetImporterSettings>
@@ -14,7 +14,18 @@
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
     {}
-- !<SceneObject/723daa80-26ae-4125-b7a1-8135d58f53cb>
+- !<ObjectPrefabAssetData/1ee442d1-e834-4f45-adb9-8f070dd89c9a>
+  SourceRemaps:
+    - 4f8b4f71-f715-447c-8f84-8870f8f578f1: df5f8235-ef56-4491-aa2e-71477d501dfe
+    - 5047dc33-1520-4710-bb29-a8a27f523d97: a66413ec-bdda-419e-9ea4-f4ecb622782d
+  SourceState: !<own> 22cd16d0-b36b-4f9e-ab50-70569fe98bce
+- !<ObjectPrefab/22cd16d0-b36b-4f9e-ab50-70569fe98bce>
+  PackagePath: ""
+  objects:
+    - !<own> a66413ec-bdda-419e-9ea4-f4ecb622782d
+  LazyLoading: false
+  RetainAssets: true
+- !<SceneObject/a66413ec-bdda-419e-9ea4-f4ecb622782d>
   PrefabRemaps:
     []
   Name: Modern Body Tube
@@ -28,19 +39,8 @@
   Children:
     []
   Components:
-    - !<own> ef8027cf-ce47-4d65-b3b9-1e230538c3c1
-- !<ObjectPrefab/93833062-ab68-4592-a783-d99b4cabad60>
-  PackagePath: ""
-  objects:
-    - !<own> 723daa80-26ae-4125-b7a1-8135d58f53cb
-  LazyLoading: false
-  RetainAssets: true
-- !<ObjectPrefabAssetData/d3f4706d-e82a-4057-b7fc-a936c2db43cb>
-  SourceRemaps:
-    - 9688fe8f-ee79-4c75-8d6e-ef9192a1e23e: 723daa80-26ae-4125-b7a1-8135d58f53cb
-    - a8e195b7-bdc9-4f77-8725-59c2aa65bc3a: ef8027cf-ce47-4d65-b3b9-1e230538c3c1
-  SourceState: !<own> 93833062-ab68-4592-a783-d99b4cabad60
-- !<RenderMeshVisual/ef8027cf-ce47-4d65-b3b9-1e230538c3c1>
+    - !<own> df5f8235-ef56-4491-aa2e-71477d501dfe
+- !<RenderMeshVisual/df5f8235-ef56-4491-aa2e-71477d501dfe>
   PrefabRemaps:
     []
   Name: component_0
@@ -53,8 +53,8 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> 9036a40c-dfbb-42bd-8074-8e15ef7371cc
-  Mesh: !<reference> f86c0bfc-1d93-4386-bd81-a4afc6af094a
+    - !<reference> 67e5be38-9fc5-438e-9ef2-1d9f32c50b1c
+  Mesh: !<reference> 3d194b84-78c6-4d2f-bc80-4ca5255161bf
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
   BlendNormals: false

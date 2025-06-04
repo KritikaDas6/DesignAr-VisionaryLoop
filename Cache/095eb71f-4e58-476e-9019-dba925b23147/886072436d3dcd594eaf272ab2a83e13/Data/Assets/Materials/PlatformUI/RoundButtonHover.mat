@@ -1,8 +1,8 @@
-- !<Material/25e37d11-6fae-4bfd-89c1-980939b2e1cd>
+- !<Material/4d062d0c-7bcc-4194-925c-9531988b47c8>
   PackagePath: ""
   PassesInfo:
-    - !<own> b0b2f8b0-50bf-4b87-85b1-f17ed5a0f7e7
-- !<PassInfo/b0b2f8b0-50bf-4b87-85b1-f17ed5a0f7e7>
+    - !<own> b9fc4456-eb3b-4752-a6ff-85593bf074dd
+- !<PassInfo/b9fc4456-eb3b-4752-a6ff-85593bf074dd>
   CachedProperties:
     - simple_round_buttonBorderColor:
         typeIdx: 5
@@ -90,7 +90,7 @@
     simple_round_button:
       typeIdx: 9
       value:
-        id: 548c3f1d-f429-4dc1-bdda-0b76b4b02175
+        id: 9498b2c0-7d62-457a-b72d-ad4920d2e5e7
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -105,6 +105,6 @@
         0: {x: 1.000000, y: 0.000000, z: 0.000000}
         1: {x: 0.000000, y: 1.000000, z: 0.000000}
         2: {x: 0.000000, y: 0.000000, z: 1.000000}
-  Pass: !<reference> d590fd4d-d182-47d0-9f79-50b1d4053836
+  Pass: !<reference> 9f6195cb-705e-4e59-b39d-f499d1312121
   RTCaster: false
   RTReceiver: false

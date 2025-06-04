@@ -1,8 +1,8 @@
-- !<Material/1985f5f7-2ec5-42f9-927f-092280b8d663>
+- !<Material/4805e84f-a14e-4415-9325-94b1a9833a26>
   PackagePath: ""
   PassesInfo:
-    - !<own> 15a2c886-564a-497e-aa3e-127ac8eb434f
-- !<PassInfo/15a2c886-564a-497e-aa3e-127ac8eb434f>
+    - !<own> b809bd65-3039-4ef6-919e-3aaf08afc0cb
+- !<PassInfo/b809bd65-3039-4ef6-919e-3aaf08afc0cb>
   CachedProperties:
     - glow_mapBorderColor:
         typeIdx: 5
@@ -60,7 +60,7 @@
     glow_map:
       typeIdx: 9
       value:
-        id: 31c347df-f318-40dc-be3b-3920890ca232
+        id: 1d578da1-49e4-41b4-86a2-836e799bc62e
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -75,6 +75,6 @@
         0: {x: 1.000000, y: 0.000000, z: 0.000000}
         1: {x: 0.000000, y: 1.000000, z: 0.000000}
         2: {x: 0.000000, y: 0.000000, z: 1.000000}
-  Pass: !<reference> e9d616de-bcd9-4fae-b8cd-f33c5f04264a
+  Pass: !<reference> f4e6971a-bcc9-4131-900f-39c36e773e70
   RTCaster: false
   RTReceiver: false

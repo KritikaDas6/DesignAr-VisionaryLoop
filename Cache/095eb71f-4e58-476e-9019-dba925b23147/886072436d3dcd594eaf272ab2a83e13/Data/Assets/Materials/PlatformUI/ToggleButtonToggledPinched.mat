@@ -1,8 +1,8 @@
-- !<Material/8faab4bc-66d5-4d8c-a8db-34fa12e2e9fd>
+- !<Material/d7305e1b-3df2-40fb-a02c-fdd7deab86bf>
   PackagePath: ""
   PassesInfo:
-    - !<own> 934cc2d0-8740-4155-826b-7934584b2858
-- !<PassInfo/934cc2d0-8740-4155-826b-7934584b2858>
+    - !<own> 40d22374-88fe-4588-9549-20100bfac63b
+- !<PassInfo/40d22374-88fe-4588-9549-20100bfac63b>
   CachedProperties:
     - additional_settings_btn_refl_texBorderColor:
         typeIdx: 5
@@ -87,7 +87,7 @@
     additional_settings_btn_refl_tex:
       typeIdx: 9
       value:
-        id: 7c90b08f-3ada-4ad1-9b4c-d83a32a73ec9
+        id: 13f9ada2-28c4-4a7e-8a1f-7c3f2dc74ffa
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -105,7 +105,7 @@
     icon:
       typeIdx: 9
       value:
-        id: f131280d-b7ec-461a-82c9-e0e91db19cfb
+        id: 07564d95-4c64-4974-bfaf-9f62c831b83f
         sampler:
           filteringMode: Trilinear
           wrapModeU: ClampToBorderColor
@@ -123,6 +123,6 @@
         0: {x: 1.000000, y: 0.000000, z: 0.000000}
         1: {x: 0.000000, y: 1.000000, z: 0.000000}
         2: {x: 0.000000, y: 0.000000, z: 1.000000}
-  Pass: !<reference> 24dc8c95-9180-47b7-85fe-5a238f5f5af4
+  Pass: !<reference> 36f2adbf-1e4c-4db7-aaa8-dcdfc7324a88
   RTCaster: false
   RTReceiver: false

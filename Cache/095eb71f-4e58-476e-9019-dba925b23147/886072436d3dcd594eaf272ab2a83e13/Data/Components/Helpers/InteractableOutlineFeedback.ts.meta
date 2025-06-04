@@ -1,20 +1,20 @@
-- !<AssetImportMetadata/fe50bd08-5d67-4bcb-934a-45afc193ebeb>
+- !<AssetImportMetadata/9e03622e-5f15-44b2-82b5-95d1353467e1>
   ImporterSettings: !<AssetImporterSettings>
     {}
   ImportedAssetIds:
-    TypeScriptAsset: !<reference> 657cbbe5-2a9c-4889-93fb-fd72ba8a1d52
+    TypeScriptAsset: !<reference> 7114055d-6222-4069-881c-d0fb592a7149
   ImporterName: TypeScriptAssetImporter
-  PrimaryAsset: !<reference> 657cbbe5-2a9c-4889-93fb-fd72ba8a1d52
+  PrimaryAsset: !<reference> 7114055d-6222-4069-881c-d0fb592a7149
   PackageType: NotAPackage
   AssetDataMap:
-    TypeScriptAsset: !<own> 50ffe207-9397-4bb8-9bb8-1a522c28a187
+    TypeScriptAsset: !<own> 185ddeff-cbae-43cc-9b91-005f19d3492e
   PackagePolicy: CannotBeUnpacked
   DependentFiles:
     []
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
     {}
-- !<TypeScriptAssetData/50ffe207-9397-4bb8-9bb8-1a522c28a187>
+- !<TypeScriptAssetData/185ddeff-cbae-43cc-9b91-005f19d3492e>
   Icon: ""
   Description: ""
   InternalVersion: 0
@@ -34,7 +34,7 @@
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
-    - targetOutlineMaterial: !<reference.Material> 7ac80b6c-979a-4a00-a694-099f296be161
+    - targetOutlineMaterial: !<reference.Material> dd8f26ed-1017-4822-96da-9cd763a67a86
       outlineWeight: -0.250000
       meshVisuals: !<reference.RenderMeshVisual[]>
         []

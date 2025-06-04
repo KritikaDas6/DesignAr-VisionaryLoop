@@ -1,8 +1,8 @@
-- !<Material/d44061c5-5283-4be5-8967-10f911bf047c>
+- !<Material/4e8499b6-62ed-4221-8e1f-41bd4cf14e02>
   PackagePath: ""
   PassesInfo:
-    - !<own> 6bdcab4b-24f8-4734-9966-1e89c819b56c
-- !<PassInfo/6bdcab4b-24f8-4734-9966-1e89c819b56c>
+    - !<own> eabc2ff6-01d8-4e2c-8a23-7a502f34394f
+- !<PassInfo/eabc2ff6-01d8-4e2c-8a23-7a502f34394f>
   CachedProperties:
     []
   DepthWrite: true
@@ -238,6 +238,6 @@
     PreviewNodeID:
       typeIdx: 0
       value: 0
-  Pass: !<reference> 8d922936-b982-480a-ac82-76176e2b7308
+  Pass: !<reference> b472e614-e3a8-4beb-837a-c15f6e7243d6
   RTCaster: false
   RTReceiver: false

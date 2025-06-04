@@ -1,12 +1,12 @@
-- !<AssetImportMetadata/5830691d-46dd-4493-8254-c5bb46b48e86>
+- !<AssetImportMetadata/21da681a-d076-4745-8c64-57aa673b8299>
   ImportedAssetIds:
-    VFXGraph: !<reference> c403bf42-b482-4aef-8906-13532712a354
+    VFXGraph: !<reference> 3ac3b467-0124-40ab-8197-744023d25969
   ImporterName: VFXAssetImporter
-  PrimaryAsset: !<reference> c403bf42-b482-4aef-8906-13532712a354
+  PrimaryAsset: !<reference> 3ac3b467-0124-40ab-8197-744023d25969
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
   AssetDataMap:
-    VFXGraph: !<own> b8e30032-c9c1-45e3-b95d-b9426f6be8cd
+    VFXGraph: !<own> 321384f7-badf-4c3d-88df-e47e1f1888d3
   DependentFiles:
     []
   ImporterSettings: !<AssetImporterSettings>
@@ -14,10 +14,10 @@
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
     {}
-- !<VFXAssetData/b8e30032-c9c1-45e3-b95d-b9426f6be8cd>
-  Mesh: !<reference> 1de4b89b-6f1f-4991-9839-5c4eac4b578a
+- !<VFXAssetData/321384f7-badf-4c3d-88df-e47e1f1888d3>
+  Mesh: !<reference> 42e1b6ef-3c3f-4a34-a774-1611df0bc6a4
   SystemPassProperties:
-    39: !<VFXSystemPassProperties/17f7154c-dae9-40ad-afd6-f24ff8a7643e>
+    39: !<VFXSystemPassProperties/239c30f7-8c0f-4df0-a698-dd83d781a057>
       FeedbackProperties:
         {}
       SimulateProperties:

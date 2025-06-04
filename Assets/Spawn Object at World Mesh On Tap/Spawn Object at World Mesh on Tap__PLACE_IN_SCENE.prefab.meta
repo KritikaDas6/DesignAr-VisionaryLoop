@@ -1,0 +1,119 @@
+- !<AssetImportMetadata/bbb51328-eff3-4cd0-93a9-ddda53ce0867>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 20dcda61-bf39-421d-bfa4-9923d3b9cbf8
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 20dcda61-bf39-421d-bfa4-9923d3b9cbf8
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    AssetLibraryId: 7KdKQ3loPSY1Di6Bvq1bg0
+  AssetDataMap:
+    ObjectPrefab: !<own> e8082ff7-a48c-43a8-846e-34f91aedd9fd
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/37230fa3-f909-4880-af18-e44950adbc18>
+  PrefabRemaps:
+    []
+  Name: Spawn Object at World Mesh on Tap
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> dab26743-61c4-48fd-ad7a-146f6afadc9b
+    - !<own> edceb2f6-ab6b-4219-93c6-032b421ef112
+  Components:
+    - !<own> cada5bdf-d1f2-4d1e-bc41-9fa78bf3db1a
+- !<RenderMeshVisual/8d8182e7-6a29-4b8b-955a-73fc99cb9936>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> babf98bd-171e-44e8-92a1-8dd1332d1141
+    - !<reference> e871e682-7ef4-4134-949e-0e63e2c120ef
+  Mesh: !<reference> d6ef8085-e435-4acb-809c-a4a538c01f5b
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ObjectPrefab/a80bfd92-3c24-4e63-8a55-d6af2e3c30d4>
+  PackagePath: Spawn Object at World Mesh on Tap
+  objects:
+    - !<own> 37230fa3-f909-4880-af18-e44950adbc18
+  LazyLoading: false
+  RetainAssets: true
+- !<ScriptComponent/cada5bdf-d1f2-4d1e-bc41-9fa78bf3db1a>
+  PrefabRemaps:
+    []
+  Name: Spawn Object at World Mesh On Tap
+  Enabled: true
+  ScriptAsset: !<reference> ef1e7132-b1b8-419b-9410-4959bb1e19a4
+  ScriptInputsDefault:
+    deviceTracking: true
+    behaviorCallback: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      deviceTracking: !<reference.DeviceTracking> 00000000-0000-0000-0000-000000000000
+      prefab: !<reference.ObjectPrefab> 3d4db0f0-0445-4edc-8ea1-0096f3cc9dd6
+      parent: !<reference.SceneObject> dab26743-61c4-48fd-ad7a-146f6afadc9b
+      behaviorCallback: !<reference.ScriptComponent[]>
+        []
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/dab26743-61c4-48fd-ad7a-146f6afadc9b>
+  PrefabRemaps:
+    []
+  Name: Parent to add to
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<ObjectPrefabAssetData/e8082ff7-a48c-43a8-846e-34f91aedd9fd>
+  SourceRemaps:
+    - 07152bb9-66fa-467b-8b1d-c3aae55f8709: dab26743-61c4-48fd-ad7a-146f6afadc9b
+    - 17fef9f3-9848-40a9-b577-147468b5b327: edceb2f6-ab6b-4219-93c6-032b421ef112
+    - 20dcda61-bf39-421d-bfa4-9923d3b9cbf8: a80bfd92-3c24-4e63-8a55-d6af2e3c30d4
+    - 511b273f-018c-414e-abca-b1c116b3d7dc: cada5bdf-d1f2-4d1e-bc41-9fa78bf3db1a
+    - 9b1025e8-5191-4ae1-a16a-1cc11040dcd3: 37230fa3-f909-4880-af18-e44950adbc18
+    - c27e9c5f-6026-4d01-8d05-a3ad0e02ca23: 8d8182e7-6a29-4b8b-955a-73fc99cb9936
+  SourceState: !<own> a80bfd92-3c24-4e63-8a55-d6af2e3c30d4
+- !<SceneObject/edceb2f6-ab6b-4219-93c6-032b421ef112>
+  PrefabRemaps:
+    []
+  Name: World Mesh Visualization
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 8d8182e7-6a29-4b8b-955a-73fc99cb9936

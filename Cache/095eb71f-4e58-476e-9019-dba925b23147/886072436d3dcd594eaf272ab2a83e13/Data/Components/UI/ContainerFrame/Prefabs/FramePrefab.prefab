@@ -1,10 +1,10 @@
-- !<ObjectPrefab/f1c6a4dc-f29d-42a6-ab05-4b134af253ec>
+- !<ObjectPrefab/ad968a24-47d6-4b5a-a9cd-cadac49c30de>
   PackagePath: ""
   objects:
-    - !<own> ca8385c0-af3d-4c30-9d45-ce2163043b01
+    - !<own> 65698d28-1f01-48ff-9bac-4eeb4ed7784c
   LazyLoading: false
   RetainAssets: true
-- !<ColliderComponent/c2324897-2d50-4a2e-a63f-8d22e44f377a>
+- !<ColliderComponent/4ca7194a-8c96-41d6-a828-de4d1eb3bdca>
   PrefabRemaps:
     []
   Name: Physics Collider
@@ -22,27 +22,7 @@
   ForceCompound: false
   Intangible: false
   ShowCollider: false
-- !<RenderMeshVisual/c87b1bf2-f05c-467e-bf62-9128d3f65bf2>
-  PrefabRemaps:
-    []
-  Name: Render Mesh Visual
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> 71bc5902-3ec0-411b-92e1-b5c465bd4457
-  Mesh: !<reference> c012bf11-8266-4d99-b510-d32e964b7614
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
-- !<SceneObject/ca8385c0-af3d-4c30-9d45-ce2163043b01>
+- !<SceneObject/65698d28-1f01-48ff-9bac-4eeb4ed7784c>
   PrefabRemaps:
     []
   Name: FramePrefab
@@ -56,5 +36,25 @@
   Children:
     []
   Components:
-    - !<own> c2324897-2d50-4a2e-a63f-8d22e44f377a
-    - !<own> c87b1bf2-f05c-467e-bf62-9128d3f65bf2
+    - !<own> 4ca7194a-8c96-41d6-a828-de4d1eb3bdca
+    - !<own> 669c8493-c2e8-4194-a69a-bd2014471990
+- !<RenderMeshVisual/669c8493-c2e8-4194-a69a-bd2014471990>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 64072cd4-1c47-4a4e-b93b-f0c1f322e09f
+  Mesh: !<reference> f1757187-815c-4074-a36c-413d54c01653
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}

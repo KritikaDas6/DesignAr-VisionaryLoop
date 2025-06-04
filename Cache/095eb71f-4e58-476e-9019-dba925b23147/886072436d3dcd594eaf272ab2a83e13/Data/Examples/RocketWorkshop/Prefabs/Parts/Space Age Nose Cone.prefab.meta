@@ -1,12 +1,12 @@
-- !<AssetImportMetadata/85e87fc9-f22c-449a-8d96-8d4b0b803502>
+- !<AssetImportMetadata/9921c986-c90d-436d-8e61-2c72e585307f>
   ImportedAssetIds:
-    ObjectPrefab: !<reference> 81321da1-c586-4a96-a85c-ecc276b9513f
+    ObjectPrefab: !<reference> 7c245fdf-5d2c-48ec-8fe1-a9566d57461c
   ImporterName: ObjectPrefabImporter
-  PrimaryAsset: !<reference> 81321da1-c586-4a96-a85c-ecc276b9513f
+  PrimaryAsset: !<reference> 7c245fdf-5d2c-48ec-8fe1-a9566d57461c
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
   AssetDataMap:
-    ObjectPrefab: !<own> 77f48936-4455-46c4-859b-0a57ee082e36
+    ObjectPrefab: !<own> 8dea695f-976c-4c67-a344-023b15d8889b
   DependentFiles:
     []
   ImporterSettings: !<AssetImporterSettings>
@@ -14,7 +14,39 @@
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
     {}
-- !<SceneObject/33de337f-55be-434a-835f-d771996ea7ac>
+- !<ObjectPrefabAssetData/8dea695f-976c-4c67-a344-023b15d8889b>
+  SourceRemaps:
+    - 175a413e-f1b9-4427-ae5d-bda0313b1eaa: d65be430-2086-41bc-95cd-4cb2e6bbadd8
+    - 3ab28f78-e597-4782-9287-f74ac61c5601: cee6f26f-3530-41dd-bdda-6e3b6db6ae74
+    - de97f682-43ce-4d49-8d7e-d521bc29798e: accff74e-39a0-4911-975c-539bcf0be80e
+  SourceState: !<own> b9894b05-e293-4d22-8a8e-6e91c609cd46
+- !<RenderMeshVisual/accff74e-39a0-4911-975c-539bcf0be80e>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 8fbac438-b371-4841-9c46-0b2fe1079242
+  Mesh: !<reference> 53ff8e32-16d2-4001-bc59-6cc8a12b38d3
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ObjectPrefab/b9894b05-e293-4d22-8a8e-6e91c609cd46>
+  PackagePath: ""
+  objects:
+    - !<own> cee6f26f-3530-41dd-bdda-6e3b6db6ae74
+  LazyLoading: false
+  RetainAssets: true
+- !<SceneObject/cee6f26f-3530-41dd-bdda-6e3b6db6ae74>
   PrefabRemaps:
     []
   Name: Space Age Nose Cone
@@ -28,9 +60,9 @@
   Children:
     []
   Components:
-    - !<own> 6ca8ecd5-8c55-475f-886d-c89241dfaad6
-    - !<own> e6560927-3c1d-4ae9-bf64-be87129488cd
-- !<RenderMeshVisual/6ca8ecd5-8c55-475f-886d-c89241dfaad6>
+    - !<own> d65be430-2086-41bc-95cd-4cb2e6bbadd8
+    - !<own> accff74e-39a0-4911-975c-539bcf0be80e
+- !<RenderMeshVisual/d65be430-2086-41bc-95cd-4cb2e6bbadd8>
   PrefabRemaps:
     []
   Name: component_0
@@ -43,40 +75,8 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> 85f713a7-57e9-434c-bfb5-129354c77d9b
-  Mesh: !<reference> 95b0c950-4c43-499b-ad87-23dd97ed6350
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
-- !<ObjectPrefabAssetData/77f48936-4455-46c4-859b-0a57ee082e36>
-  SourceRemaps:
-    - 57482350-8b6a-4842-9577-573d4315ce82: e6560927-3c1d-4ae9-bf64-be87129488cd
-    - 727acf08-d451-4a7d-979f-44206d0151e1: 6ca8ecd5-8c55-475f-886d-c89241dfaad6
-    - ee0c47ff-7f52-4c88-81e2-dcdfed17649e: 33de337f-55be-434a-835f-d771996ea7ac
-  SourceState: !<own> 8ad0d0f8-caef-4f9c-96bd-707b1c143748
-- !<ObjectPrefab/8ad0d0f8-caef-4f9c-96bd-707b1c143748>
-  PackagePath: ""
-  objects:
-    - !<own> 33de337f-55be-434a-835f-d771996ea7ac
-  LazyLoading: false
-  RetainAssets: true
-- !<RenderMeshVisual/e6560927-3c1d-4ae9-bf64-be87129488cd>
-  PrefabRemaps:
-    []
-  Name: component_0
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> a1127952-2b90-417a-a08b-b9aa6d8709b1
-  Mesh: !<reference> 8e00dacb-982a-4586-b353-7ef67ca33de7
+    - !<reference> e83f28cb-048f-441f-be98-ecae66bd9af8
+  Mesh: !<reference> 9102c449-6f02-4577-9d1d-5ccc59717831
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
   BlendNormals: false

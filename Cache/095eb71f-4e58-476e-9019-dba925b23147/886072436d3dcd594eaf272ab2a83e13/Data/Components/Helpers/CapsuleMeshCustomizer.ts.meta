@@ -1,20 +1,20 @@
-- !<AssetImportMetadata/782f0aec-5dd6-47f5-a81a-6604c4c2d6f0>
+- !<AssetImportMetadata/cf05dd2f-97c5-40a1-bd0e-dd29a0c8e6cd>
   ImportedAssetIds:
-    TypeScriptAsset: !<reference> 2a71057d-f45b-4755-a592-fdd0e06065fc
+    TypeScriptAsset: !<reference> dfc6136d-1cf4-4795-9598-1ff78aa29528
   ImporterName: TypeScriptAssetImporter
-  PrimaryAsset: !<reference> 2a71057d-f45b-4755-a592-fdd0e06065fc
+  PrimaryAsset: !<reference> dfc6136d-1cf4-4795-9598-1ff78aa29528
   PackageType: NotAPackage
   ImporterSettings: !<AssetImporterSettings>
     {}
   AssetDataMap:
-    TypeScriptAsset: !<own> fdb10dcc-3568-4528-bd38-aedf49b34c32
+    TypeScriptAsset: !<own> 477c4a79-78ce-44fe-aad8-50d9a5ab8bbd
   PackagePolicy: CannotBeUnpacked
   DependentFiles:
     []
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
     {}
-- !<TypeScriptAssetData/fdb10dcc-3568-4528-bd38-aedf49b34c32>
+- !<TypeScriptAssetData/477c4a79-78ce-44fe-aad8-50d9a5ab8bbd>
   InputLines:
     - '// @input Component.RenderMeshVisual meshVisual {"hint":"The mesh visual to modify into an extendable capsule."}'
     - '// @input float capsuleLength = 10 {"hint":"The length of the cylindric section of the capsule (not including the end caps)."}'

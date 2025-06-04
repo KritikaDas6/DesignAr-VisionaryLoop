@@ -1,8 +1,8 @@
-- !<Material/85116ad6-0e81-4092-b426-d3f69dcf9233>
+- !<Material/e68ed7f2-204d-4c1d-a8a6-272ad1b46365>
   PackagePath: ""
   PassesInfo:
-    - !<own> 66446a81-99cf-4ea0-93a8-f1a986e28db9
-- !<PassInfo/66446a81-99cf-4ea0-93a8-f1a986e28db9>
+    - !<own> 9a408c10-e2ff-4e0b-b78e-4de704df7219
+- !<PassInfo/9a408c10-e2ff-4e0b-b78e-4de704df7219>
   CachedProperties:
     - baseTexBorderColor:
         typeIdx: 5
@@ -43,7 +43,7 @@
     baseTex:
       typeIdx: 9
       value:
-        id: ad264d79-9e5f-4f90-b099-ddca5e8b7d91
+        id: ad0229eb-8b36-441b-a569-09bcfdf34be8
         sampler:
           filteringMode: Bilinear
           wrapModeU: ClampToEdge
@@ -67,6 +67,6 @@
     overrideTimeEnabled:
       typeIdx: 0
       value: 0
-  Pass: !<reference> ff93f1bb-0f0b-4e34-8e24-07af75f33935
+  Pass: !<reference> 6d046c69-eac1-4a3c-ad20-870158eb1aa6
   RTCaster: false
   RTReceiver: false

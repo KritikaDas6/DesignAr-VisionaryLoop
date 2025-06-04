@@ -1,10 +1,10 @@
-- !<ObjectPrefab/7e3b4e2c-e3e5-40f1-b890-2a6e7d861039>
+- !<ObjectPrefab/031bc591-e7c3-4810-80d9-80f5d60bd448>
   PackagePath: ""
   objects:
-    - !<own> 061d9000-11d5-47dd-a3a5-780a11c6f638
+    - !<own> 13e776f2-5508-4ace-a1dd-e108115b1275
   LazyLoading: false
   RetainAssets: true
-- !<SceneObject/061d9000-11d5-47dd-a3a5-780a11c6f638>
+- !<SceneObject/13e776f2-5508-4ace-a1dd-e108115b1275>
   PrefabRemaps:
     []
   Name: ScrollViewListItem
@@ -16,10 +16,10 @@
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
-    - !<own> 8ec129b8-b41b-43db-a2e2-309dc677f94e
+    - !<own> 81c89c67-d7ee-4c32-9274-f17595b64926
   Components:
-    - !<own> dd50f5a2-5486-4f2a-bc97-7b95ccf75231
-- !<SceneObject/8ec129b8-b41b-43db-a2e2-309dc677f94e>
+    - !<own> c8204261-1602-48ff-aa77-626936a6c0c4
+- !<SceneObject/81c89c67-d7ee-4c32-9274-f17595b64926>
   PrefabRemaps:
     []
   Name: ContactName
@@ -33,9 +33,9 @@
   Children:
     []
   Components:
-    - !<own> a3c28685-071f-455c-aa69-4ea54dbd3266
-    - !<own> a19ecc15-f241-4055-964c-9cfca8583470
-- !<Text/a19ecc15-f241-4055-964c-9cfca8583470>
+    - !<own> c3a63bd5-53b1-478f-a965-c67b620fa996
+    - !<own> af0a35aa-25ee-465a-ab11-a878b1b4ce96
+- !<Text/af0a35aa-25ee-465a-ab11-a878b1b4ce96>
   PrefabRemaps:
     []
   Name: Text 2
@@ -112,7 +112,7 @@
     CapitilizationOverride: None
   DepthTest: false
   TwoSided: false
-- !<ScreenTransform/a3c28685-071f-455c-aa69-4ea54dbd3266>
+- !<ScreenTransform/c3a63bd5-53b1-478f-a965-c67b620fa996>
   PrefabRemaps:
     []
   Name: Screen Transform
@@ -145,7 +145,7 @@
     bottom: -1.000000
     right: 0.000000
     top: 1.000000
-- !<ScreenTransform/dd50f5a2-5486-4f2a-bc97-7b95ccf75231>
+- !<ScreenTransform/c8204261-1602-48ff-aa77-626936a6c0c4>
   PrefabRemaps:
     []
   Name: Screen Transform

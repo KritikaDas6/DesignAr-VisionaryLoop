@@ -1,8 +1,8 @@
-- !<Material/89ea7e27-1284-48c2-8891-ba3d9587b77a>
+- !<Material/594279ab-4062-4eee-a076-6dc7b675b7a5>
   PackagePath: ""
   PassesInfo:
-    - !<own> 9f017078-63a0-42b0-8ac2-9a5140956adc
-- !<PassInfo/9f017078-63a0-42b0-8ac2-9a5140956adc>
+    - !<own> 433000f2-4db8-48c3-ba61-4dfd03796ef7
+- !<PassInfo/433000f2-4db8-48c3-ba61-4dfd03796ef7>
   CachedProperties:
     - Tweak_N6BorderColor:
         typeIdx: 5
@@ -60,7 +60,7 @@
     Tweak_N6:
       typeIdx: 9
       value:
-        id: c37b3628-c954-4ccc-b28f-152de08cd0eb
+        id: a84801f5-7f06-4181-9ca3-f57addf24d3b
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -96,7 +96,7 @@
     planet_refl_map:
       typeIdx: 9
       value:
-        id: 548c3f1d-f429-4dc1-bdda-0b76b4b02175
+        id: 9498b2c0-7d62-457a-b72d-ad4920d2e5e7
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -114,6 +114,6 @@
     reflIntensity:
       typeIdx: 1
       value: 0.490000
-  Pass: !<reference> 302e5076-eb37-4c4e-9ef2-085f9de2ea37
+  Pass: !<reference> 45a473c2-c0ab-44f4-8957-715a72272281
   RTCaster: false
   RTReceiver: false

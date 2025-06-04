@@ -1,8 +1,8 @@
-- !<Material/82391403-9747-4988-b9dc-7562cd643d32>
+- !<Material/56bdf33a-09c4-4e6e-b7c2-d34099f7043f>
   PackagePath: ""
   PassesInfo:
-    - !<own> 137f46a5-b5df-4bd4-83ad-45b8fbfbd95a
-- !<PassInfo/137f46a5-b5df-4bd4-83ad-45b8fbfbd95a>
+    - !<own> 8bbf185e-95e0-4980-8b01-2ec3506ed896
+- !<PassInfo/8bbf185e-95e0-4980-8b01-2ec3506ed896>
   CachedProperties:
     - baseColorTextureBorderColor:
         typeIdx: 5
@@ -493,6 +493,6 @@
     transmissionTexture_scale:
       typeIdx: 3
       value: {x: 1.000000, y: 1.000000}
-  Pass: !<reference> d00e8fa2-85cf-4b48-9d0b-960c6f56621e
+  Pass: !<reference> e16e5cfa-6b03-4ce0-a227-27f50c709c06
   RTCaster: false
   RTReceiver: false

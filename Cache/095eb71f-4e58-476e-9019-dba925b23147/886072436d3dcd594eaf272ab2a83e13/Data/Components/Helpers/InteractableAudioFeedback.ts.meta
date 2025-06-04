@@ -1,20 +1,20 @@
-- !<AssetImportMetadata/0e373853-59e9-4680-a977-5927a58d685b>
+- !<AssetImportMetadata/d85eef00-b015-4f38-8b83-30c3eb711120>
   ImporterSettings: !<AssetImporterSettings>
     {}
   ImportedAssetIds:
-    TypeScriptAsset: !<reference> 1ad7da86-2c32-418c-bdf1-b7150c07c912
+    TypeScriptAsset: !<reference> 810749c5-6def-430c-8c23-1c9abdf6c25f
   ImporterName: TypeScriptAssetImporter
-  PrimaryAsset: !<reference> 1ad7da86-2c32-418c-bdf1-b7150c07c912
+  PrimaryAsset: !<reference> 810749c5-6def-430c-8c23-1c9abdf6c25f
   PackageType: NotAPackage
   AssetDataMap:
-    TypeScriptAsset: !<own> 3de3c68c-52ee-41d9-a220-5f02e6d2b739
+    TypeScriptAsset: !<own> 7226b60b-0f0e-45d5-ac60-96d6e0017e93
   PackagePolicy: CannotBeUnpacked
   DependentFiles:
     []
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
     {}
-- !<TypeScriptAssetData/3de3c68c-52ee-41d9-a220-5f02e6d2b739>
+- !<TypeScriptAssetData/7226b60b-0f0e-45d5-ac60-96d6e0017e93>
   Icon: ""
   Description: ""
   InternalVersion: 0
@@ -38,9 +38,9 @@
     - _playAudioOnHover: false
       _playAudioOnTriggerStart: true
       _playAudioOnTriggerEnd: true
-      _hoverAudioTrack: !<reference.AudioTrackAsset> 97bf97ae-b2da-47d7-bde6-003f597fe888
-      _triggerStartAudioTrack: !<reference.AudioTrackAsset> edad7d53-55da-40b1-9025-fad0e7207862
-      _triggerEndAudioTrack: !<reference.AudioTrackAsset> 82028831-1631-4d7b-b548-ff6be4e0a2ba
+      _hoverAudioTrack: !<reference.AudioTrackAsset> 27130825-2966-4994-ac7d-c30453f82e2a
+      _triggerStartAudioTrack: !<reference.AudioTrackAsset> b8bf9a52-8233-4f96-913d-880fc607ac39
+      _triggerEndAudioTrack: !<reference.AudioTrackAsset> 24a0a694-2df7-4585-a34a-2e208dfcba0e
   ScriptTypes:
     -
       {}

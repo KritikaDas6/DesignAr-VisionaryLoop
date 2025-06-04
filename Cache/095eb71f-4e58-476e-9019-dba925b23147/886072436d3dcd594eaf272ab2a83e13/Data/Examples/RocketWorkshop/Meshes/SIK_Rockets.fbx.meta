@@ -1,81 +1,81 @@
-- !<AssetImportMetadata/8b2dd5c8-524e-4c1a-8846-5e430f90a3e8>
+- !<AssetImportMetadata/8753d19f-4a3c-47c6-9c27-63d1af3556a8>
   ImportedAssetIds:
-    Meshes/Meteor: !<reference> 937d4f7c-aa08-4e4a-8e3f-032b648c329a
-    Meshes/Planet: !<reference> 936335df-322b-4ee6-ba4c-712957d9360b
-    Meshes/Planet1: !<reference> e509d358-0da3-4277-8810-8d1b1b733f46
-    Meshes/Rocket_01_bottom: !<reference> f7c3180d-6c6c-4220-a0ca-88887a4b310f
-    Meshes/Rocket_01_bottom1: !<reference> 93fdc31a-616c-4c0b-a590-fc9db59ccfe0
-    Meshes/Rocket_01_bottom2: !<reference> 8f940c82-e893-4a0b-9aa9-c3423708fa11
-    Meshes/Rocket_01_bottom3: !<reference> de178014-8bf1-447e-be5c-a1803f5eaeb2
-    Meshes/Rocket_01_middle: !<reference> 9f3f87d3-ce71-486e-98fe-232f2b9b3ca3
-    Meshes/Rocket_01_middle1: !<reference> 1bd18163-56b6-4d4e-a5d7-0b47a1fc25af
-    Meshes/Rocket_01_middle2: !<reference> e90a9324-daec-4d22-8d9b-c7544e21f716
-    Meshes/Rocket_01_top: !<reference> 95b0c950-4c43-499b-ad87-23dd97ed6350
-    Meshes/Rocket_01_top1: !<reference> 8e00dacb-982a-4586-b353-7ef67ca33de7
-    Meshes/Rocket_02_bottom: !<reference> c2dd7bea-b772-4c3f-9248-0bd44702f76f
-    Meshes/Rocket_02_middle: !<reference> bd56aa76-661e-428e-96fc-090331b2a39c
-    Meshes/Rocket_02_top: !<reference> f45a792d-850b-43f1-8a6e-e12d3430ee85
-    Meshes/Rocket_03_bottom: !<reference> 27e55ef6-4b65-488d-b205-84128fb3bfca
-    Meshes/Rocket_03_bottom1: !<reference> 0478550b-3438-486c-b915-86135234f156
-    Meshes/Rocket_03_bottom2: !<reference> 631651e2-8095-44d4-8dbd-362047fd5e66
-    Meshes/Rocket_03_bottom3: !<reference> a7738ae3-e7c6-4c95-8c15-8cfe0030a207
-    Meshes/Rocket_03_bottom4: !<reference> 0e8f6312-0ca6-4308-9029-85f5f6e9ef9e
-    Meshes/Rocket_03_middle: !<reference> f86c0bfc-1d93-4386-bd81-a4afc6af094a
-    Meshes/Rocket_03_top: !<reference> fc564c88-f677-4c3c-8035-be070477f2dd
-    Meshes/Rocket_03_top1: !<reference> b876b982-b6f1-441a-ac4b-4b76c2404767
-    Meshes/Rocket_03_top2: !<reference> ee5fe3a4-386b-4204-889d-dbf6bf835c8a
-    Meshes/Satellite: !<reference> 6ee86312-dfaf-46d5-8ae7-efa7471576f3
-    Meshes/Satellite1: !<reference> 83b162df-a43c-41e7-a1ac-bfd55bfa4377
-    Meshes/Satellite2: !<reference> 619d4727-9b6e-4c14-a5da-33016e6250ed
-    Meshes/Satellite3: !<reference> ec66e7c5-d4b0-4d4d-ada7-c54b82cb78b8
-    Scene: !<reference> 4f5845ce-0bd7-4b9a-bd6a-706f72844459
-    _3DSceneImportRoot_0|: !<reference> 72539a66-b8bd-484a-add5-babb11c7536f
-    _3DSceneImportRoot_0|_Meteor_0|: !<reference> b76c282c-c891-467d-8229-e3c4c2d444c1
-    _3DSceneImportRoot_0|_Meteor_0|_RenderMeshVisual_0|: !<reference> df80aae5-d99a-4ddc-953d-a29504b09265
-    _3DSceneImportRoot_0|_Planet_11|: !<reference> ce7148e2-134b-442a-89e7-371a79af2811
-    _3DSceneImportRoot_0|_Planet_11|_RenderMeshVisual_0|: !<reference> c4d7823d-1e11-485f-8fd4-8949273fc5e7
-    _3DSceneImportRoot_0|_Planet_11|_RenderMeshVisual_1|: !<reference> d0a5e0cb-209b-4d96-b1c0-14b3278893c6
-    _3DSceneImportRoot_0|_Rocket_01_bottom_8|: !<reference> 5ea46405-c918-4155-ab4b-764142e7bce0
-    _3DSceneImportRoot_0|_Rocket_01_bottom_8|_RenderMeshVisual_0|: !<reference> ffdd8f03-239d-4ffb-a273-aef30606d41b
-    _3DSceneImportRoot_0|_Rocket_01_bottom_8|_RenderMeshVisual_1|: !<reference> d0722063-13a0-41bd-b926-b3a86d6a3f28
-    _3DSceneImportRoot_0|_Rocket_01_bottom_8|_RenderMeshVisual_2|: !<reference> 6fd3b6b3-6fd8-4fa4-ba6f-3d82dbb4a7f5
-    _3DSceneImportRoot_0|_Rocket_01_bottom_8|_RenderMeshVisual_3|: !<reference> 9d6e3911-76bd-47d6-b610-4f2f8e015cb5
-    _3DSceneImportRoot_0|_Rocket_01_middle_7|: !<reference> ed871ac1-395d-48fb-84a6-5bc32968d54c
-    _3DSceneImportRoot_0|_Rocket_01_middle_7|_RenderMeshVisual_0|: !<reference> f16ae167-bd9d-4db6-8ecd-2f29659af007
-    _3DSceneImportRoot_0|_Rocket_01_middle_7|_RenderMeshVisual_1|: !<reference> 7c0ca130-2660-4993-bdfd-38a5d1c3c948
-    _3DSceneImportRoot_0|_Rocket_01_middle_7|_RenderMeshVisual_2|: !<reference> 48660cc7-c6de-4d34-9d76-4dd22f1b3fd0
-    _3DSceneImportRoot_0|_Rocket_01_top_9|: !<reference> 04368b9c-d109-442c-b669-e632303c7234
-    _3DSceneImportRoot_0|_Rocket_01_top_9|_RenderMeshVisual_0|: !<reference> 4c3eb172-aee6-4516-9eef-c0711447fb37
-    _3DSceneImportRoot_0|_Rocket_01_top_9|_RenderMeshVisual_1|: !<reference> 38267422-92f4-4a14-a01b-9176b08f6d82
-    _3DSceneImportRoot_0|_Rocket_02_bottom_4|: !<reference> fd3216fe-b78b-4fb6-95f1-2223da7f3bd7
-    _3DSceneImportRoot_0|_Rocket_02_bottom_4|_RenderMeshVisual_0|: !<reference> 0340aa8f-02df-4fac-884f-d7f43b3b0379
-    _3DSceneImportRoot_0|_Rocket_02_middle_5|: !<reference> b1e10ff6-78e5-434a-92fb-bd47efff9795
-    _3DSceneImportRoot_0|_Rocket_02_middle_5|_RenderMeshVisual_0|: !<reference> 701eca00-5217-4daa-a78d-4e168bf5c13d
-    _3DSceneImportRoot_0|_Rocket_02_top_6|: !<reference> 504277cd-ab7f-491d-a101-f82ddc350c78
-    _3DSceneImportRoot_0|_Rocket_02_top_6|_RenderMeshVisual_0|: !<reference> dad35bf4-67eb-4851-856b-0b0f8dc6bd00
-    _3DSceneImportRoot_0|_Rocket_03_bottom_2|: !<reference> fc81ccfd-03ff-421e-9ebb-462eeecf5aad
-    _3DSceneImportRoot_0|_Rocket_03_bottom_2|_RenderMeshVisual_0|: !<reference> 270930cf-1f0d-4587-8d7d-a05ae18f2b46
-    _3DSceneImportRoot_0|_Rocket_03_bottom_2|_RenderMeshVisual_1|: !<reference> 1f23291f-7c34-4c1e-9992-31dc439aebb7
-    _3DSceneImportRoot_0|_Rocket_03_bottom_2|_RenderMeshVisual_2|: !<reference> 6e79d99f-bc42-4ffe-bd21-080fa6a6b629
-    _3DSceneImportRoot_0|_Rocket_03_bottom_2|_RenderMeshVisual_3|: !<reference> 7a7cfc4e-c8ce-40c4-ae30-036537dcda07
-    _3DSceneImportRoot_0|_Rocket_03_bottom_2|_RenderMeshVisual_4|: !<reference> 8fe92eac-5e4f-4095-b551-7fc07368dab7
-    _3DSceneImportRoot_0|_Rocket_03_middle_3|: !<reference> e5721a32-435a-452b-9e59-1fc8e8dd7a75
-    _3DSceneImportRoot_0|_Rocket_03_middle_3|_RenderMeshVisual_0|: !<reference> dc623971-cadb-451a-9c2e-ff4b7b446e20
-    _3DSceneImportRoot_0|_Rocket_03_top_1|: !<reference> b1a4dc4f-cc77-45e2-b14c-c503180e7896
-    _3DSceneImportRoot_0|_Rocket_03_top_1|_RenderMeshVisual_0|: !<reference> 1071a077-dad7-4e19-a042-80a42ee95e57
-    _3DSceneImportRoot_0|_Rocket_03_top_1|_RenderMeshVisual_1|: !<reference> c65ef359-dba3-4b9e-95b9-73b49de74396
-    _3DSceneImportRoot_0|_Rocket_03_top_1|_RenderMeshVisual_2|: !<reference> 9fdfe599-9261-42d0-bd43-b734dd23892a
-    _3DSceneImportRoot_0|_Satellite_10|: !<reference> adb60be9-4640-4813-8c0f-2f38e53741c0
-    _3DSceneImportRoot_0|_Satellite_10|_RenderMeshVisual_0|: !<reference> 08246456-1f7a-4536-8dd6-0cd3aa3f050d
-    _3DSceneImportRoot_0|_Satellite_10|_RenderMeshVisual_1|: !<reference> 00b2630e-a195-438f-b5d3-b8dea7d23a21
-    _3DSceneImportRoot_0|_Satellite_10|_RenderMeshVisual_2|: !<reference> b3652075-9eab-4587-8875-c527f4b2fb50
-    _3DSceneImportRoot_0|_Satellite_10|_RenderMeshVisual_3|: !<reference> b367ab22-a6cc-4429-95f8-2c0e8eb00e38
+    Meshes/Meteor: !<reference> cae8a3bf-e869-48e4-a718-122fe6a959f2
+    Meshes/Planet: !<reference> 7002e540-70a0-4c27-8cc5-e80d652c4037
+    Meshes/Planet1: !<reference> 4c598dab-6872-4aef-aac0-3f5766df497f
+    Meshes/Rocket_01_bottom: !<reference> 88c15c7e-76ed-4df3-ac57-e2c86da247c0
+    Meshes/Rocket_01_bottom1: !<reference> ef9f24b3-8a6d-4c08-a85c-a30866cbcec0
+    Meshes/Rocket_01_bottom2: !<reference> 0b7db25f-d714-403f-b9f6-b75f40704b13
+    Meshes/Rocket_01_bottom3: !<reference> 950e72c1-6b84-4729-ad00-7d20dbac76be
+    Meshes/Rocket_01_middle: !<reference> 979eebde-d380-4e75-b200-6abd87febdb6
+    Meshes/Rocket_01_middle1: !<reference> a17af9f7-1a3b-46af-b8ff-232b69e4d050
+    Meshes/Rocket_01_middle2: !<reference> 6204aac8-0842-4a0f-8264-d9fdae089be7
+    Meshes/Rocket_01_top: !<reference> 9102c449-6f02-4577-9d1d-5ccc59717831
+    Meshes/Rocket_01_top1: !<reference> 53ff8e32-16d2-4001-bc59-6cc8a12b38d3
+    Meshes/Rocket_02_bottom: !<reference> bbf5bb31-9357-4eb5-9c80-b716e734c453
+    Meshes/Rocket_02_middle: !<reference> 8c6f33b8-0fda-4f18-8ad5-f6273a9037b3
+    Meshes/Rocket_02_top: !<reference> e53324e3-006b-4c3b-84f6-8ae404e75c27
+    Meshes/Rocket_03_bottom: !<reference> 2ca41378-4b1a-4f3d-83f6-48419db09a23
+    Meshes/Rocket_03_bottom1: !<reference> b187a4d2-4373-4468-bba6-aa6ad50a31a7
+    Meshes/Rocket_03_bottom2: !<reference> fad2e1e7-9a06-4247-be88-71ff21fd86a6
+    Meshes/Rocket_03_bottom3: !<reference> 6545af80-6954-41fb-b855-fbbc3bdf4fe0
+    Meshes/Rocket_03_bottom4: !<reference> 23dc81f8-e585-46b4-aa9a-67aff1b66811
+    Meshes/Rocket_03_middle: !<reference> 3d194b84-78c6-4d2f-bc80-4ca5255161bf
+    Meshes/Rocket_03_top: !<reference> e82ed00c-82e8-4a4f-9378-8b53a2952a8c
+    Meshes/Rocket_03_top1: !<reference> 81d0d7ae-e9c4-4e8e-97e7-f96822534b65
+    Meshes/Rocket_03_top2: !<reference> 42ca630b-f8ca-4045-8993-cdedb73e258a
+    Meshes/Satellite: !<reference> 02744706-70f0-42f6-a049-eb1fefe54b2f
+    Meshes/Satellite1: !<reference> dbee383a-918b-443a-bdf7-953b51378fbf
+    Meshes/Satellite2: !<reference> e77589a7-5871-429b-a5f4-25b4c1bd0c33
+    Meshes/Satellite3: !<reference> 726d8c27-0b80-4049-a995-577796194151
+    Scene: !<reference> 58d4eacc-3e90-4425-8163-48a311754ab1
+    _3DSceneImportRoot_0|: !<reference> 0e80c3bb-af04-4de3-b985-25fa56c51dfe
+    _3DSceneImportRoot_0|_Meteor_0|: !<reference> cd4dc725-a150-4123-86a9-f75f1c19e55c
+    _3DSceneImportRoot_0|_Meteor_0|_RenderMeshVisual_0|: !<reference> 376e6485-bf59-4941-879d-0d07a8f53e3b
+    _3DSceneImportRoot_0|_Planet_11|: !<reference> 16e32866-91ab-4770-a805-d08e445fe7f8
+    _3DSceneImportRoot_0|_Planet_11|_RenderMeshVisual_0|: !<reference> ce867548-5d36-4fd2-83a6-500033b35195
+    _3DSceneImportRoot_0|_Planet_11|_RenderMeshVisual_1|: !<reference> a6a7e0c0-bc21-4eda-bdef-eb03a6906640
+    _3DSceneImportRoot_0|_Rocket_01_bottom_8|: !<reference> 171975bd-9e4d-4b74-b373-853cb94fec4f
+    _3DSceneImportRoot_0|_Rocket_01_bottom_8|_RenderMeshVisual_0|: !<reference> c9acf6d8-7587-400b-a0c0-7647ea9b863d
+    _3DSceneImportRoot_0|_Rocket_01_bottom_8|_RenderMeshVisual_1|: !<reference> 3e0c8c87-ba9c-4fc6-ad15-445092316a36
+    _3DSceneImportRoot_0|_Rocket_01_bottom_8|_RenderMeshVisual_2|: !<reference> c848841a-bcd5-48d4-8579-4721384a6c60
+    _3DSceneImportRoot_0|_Rocket_01_bottom_8|_RenderMeshVisual_3|: !<reference> e62bde81-357a-4cb3-8b0d-1f4682de797a
+    _3DSceneImportRoot_0|_Rocket_01_middle_7|: !<reference> 3610ad71-f70d-466c-8442-a1e036414162
+    _3DSceneImportRoot_0|_Rocket_01_middle_7|_RenderMeshVisual_0|: !<reference> afb8c1c6-43de-415b-820c-4567bd395d5d
+    _3DSceneImportRoot_0|_Rocket_01_middle_7|_RenderMeshVisual_1|: !<reference> 3abd5f88-6e9e-4c38-a07d-a27b22336d4e
+    _3DSceneImportRoot_0|_Rocket_01_middle_7|_RenderMeshVisual_2|: !<reference> d7aaad03-cf21-4d22-9310-bebdff20f8b2
+    _3DSceneImportRoot_0|_Rocket_01_top_9|: !<reference> a05bca73-d9ff-490d-8276-69912c0d0127
+    _3DSceneImportRoot_0|_Rocket_01_top_9|_RenderMeshVisual_0|: !<reference> f945430e-35f6-47dc-bd08-8fdf8ab865a1
+    _3DSceneImportRoot_0|_Rocket_01_top_9|_RenderMeshVisual_1|: !<reference> 90ac3c9d-3bcf-427a-8348-33a9f239e6f5
+    _3DSceneImportRoot_0|_Rocket_02_bottom_4|: !<reference> 73674dad-c7d0-4df3-9435-ca01cb73823a
+    _3DSceneImportRoot_0|_Rocket_02_bottom_4|_RenderMeshVisual_0|: !<reference> aef554cc-9781-4e36-b6f1-0c1c31538c2e
+    _3DSceneImportRoot_0|_Rocket_02_middle_5|: !<reference> 081ab335-3397-4101-a7c5-e98e2d98b837
+    _3DSceneImportRoot_0|_Rocket_02_middle_5|_RenderMeshVisual_0|: !<reference> 16ae4e28-5b84-4ee7-bee5-5e635d1da199
+    _3DSceneImportRoot_0|_Rocket_02_top_6|: !<reference> cc2a3955-b1fe-4fa6-b8ad-bc844a1cbda7
+    _3DSceneImportRoot_0|_Rocket_02_top_6|_RenderMeshVisual_0|: !<reference> 95e28a1d-8677-4a20-9ca3-ed26ff6dfa54
+    _3DSceneImportRoot_0|_Rocket_03_bottom_2|: !<reference> 1053deb7-18d2-41c4-92ec-b84a2ec0c238
+    _3DSceneImportRoot_0|_Rocket_03_bottom_2|_RenderMeshVisual_0|: !<reference> bd504480-0379-4efd-ba35-00be83f0119b
+    _3DSceneImportRoot_0|_Rocket_03_bottom_2|_RenderMeshVisual_1|: !<reference> d5fff356-1955-4746-9af2-db06fb5fda2e
+    _3DSceneImportRoot_0|_Rocket_03_bottom_2|_RenderMeshVisual_2|: !<reference> 6b14f91c-f94e-446e-a186-bf03a072a9ec
+    _3DSceneImportRoot_0|_Rocket_03_bottom_2|_RenderMeshVisual_3|: !<reference> 134b46ef-2751-4afd-8fc0-4e0f7f2521a2
+    _3DSceneImportRoot_0|_Rocket_03_bottom_2|_RenderMeshVisual_4|: !<reference> c76550b6-826a-4469-bbb4-3bd2615bddb8
+    _3DSceneImportRoot_0|_Rocket_03_middle_3|: !<reference> 283c09a8-67f3-4c41-ad3a-a4cfc55b6481
+    _3DSceneImportRoot_0|_Rocket_03_middle_3|_RenderMeshVisual_0|: !<reference> 16efe0a3-15db-4c0e-8588-f21c75e8db7d
+    _3DSceneImportRoot_0|_Rocket_03_top_1|: !<reference> 409cf9ac-ae0e-44f9-9116-3e58ed117fa6
+    _3DSceneImportRoot_0|_Rocket_03_top_1|_RenderMeshVisual_0|: !<reference> c1496858-2835-4adc-a3d2-df85a93d6dc5
+    _3DSceneImportRoot_0|_Rocket_03_top_1|_RenderMeshVisual_1|: !<reference> f1cc559f-4dda-40d3-a0b2-18736cb69be9
+    _3DSceneImportRoot_0|_Rocket_03_top_1|_RenderMeshVisual_2|: !<reference> 73ec7ab5-53d0-4b82-90ea-fe252114595b
+    _3DSceneImportRoot_0|_Satellite_10|: !<reference> d914f2f4-bf1a-4023-93ba-80278bcd5070
+    _3DSceneImportRoot_0|_Satellite_10|_RenderMeshVisual_0|: !<reference> 57b6bf26-1c61-4f2a-bcda-7ce0dd78621b
+    _3DSceneImportRoot_0|_Satellite_10|_RenderMeshVisual_1|: !<reference> b0ff9119-45c5-431b-b3fa-8370fac55a67
+    _3DSceneImportRoot_0|_Satellite_10|_RenderMeshVisual_2|: !<reference> a0c60a7d-2691-4eb3-9f6f-80d3793e9cd7
+    _3DSceneImportRoot_0|_Satellite_10|_RenderMeshVisual_3|: !<reference> c0aefe41-235e-4ed6-a7a7-1c62ec4e119b
   ImporterName: FbxImporter
-  PrimaryAsset: !<reference> 4f5845ce-0bd7-4b9a-bd6a-706f72844459
+  PrimaryAsset: !<reference> 58d4eacc-3e90-4425-8163-48a311754ab1
   PackageType: LegacyPackage
   PackagePolicy: CanBeUnpacked
   AssetDataMap:
-    Scene: !<own> 412a279d-a52b-413b-b0e2-8969201d86f0
+    Scene: !<own> ba61ad05-4af2-4346-af5f-d06299929dda
   DependentFiles:
     []
   ImporterSettings: !<FbxImporterSettings>
@@ -110,479 +110,7 @@
       {}
   ExtraData:
     {}
-- !<RenderMeshVisual/035410e6-003a-40d7-a99c-1fe5b1d29f5b>
-  PrefabRemaps:
-    []
-  Name: component_8
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> f170a514-5db3-4b97-9124-d338f81259fc
-  Mesh: !<reference> 0e8f6312-0ca6-4308-9029-85f5f6e9ef9e
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
-- !<SceneObject/07c779b9-1c6b-4edc-827f-2f3363a4b799>
-  PrefabRemaps:
-    []
-  Name: Rocket_02_middle
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: -90.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 100.000000, y: 100.000000, z: 100.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> a1e1a803-6a7a-4007-8279-427b69cf436a
-- !<RenderMeshVisual/0f0b6409-932f-4cab-8753-9177b3bd8b89>
-  PrefabRemaps:
-    []
-  Name: component_26
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> 51884309-d234-4f1d-bee3-d9bfee58509c
-  Mesh: !<reference> 936335df-322b-4ee6-ba4c-712957d9360b
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
-- !<RenderMeshVisual/11e2ee5e-5481-4d6a-8b36-797145568ae0>
-  PrefabRemaps:
-    []
-  Name: component_24
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> d3359299-a4db-4c03-a7bc-a64d4136a9f3
-  Mesh: !<reference> 619d4727-9b6e-4c14-a5da-33016e6250ed
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
-- !<RenderMeshVisual/19fa001d-f5e1-4bf7-aabf-40e1fde1f84f>
-  PrefabRemaps:
-    []
-  Name: component_5
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> 0ca86bc0-7069-4166-a0e3-37223fd77d23
-  Mesh: !<reference> 0478550b-3438-486c-b915-86135234f156
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
-- !<RenderMeshVisual/1a5d6b51-2a19-4c43-9667-c534eb0470ee>
-  PrefabRemaps:
-    []
-  Name: component_13
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> 6eff5bc7-5581-4a49-b7c0-75132215b602
-  Mesh: !<reference> 9f3f87d3-ce71-486e-98fe-232f2b9b3ca3
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
-- !<RenderMeshVisual/2034f113-3821-4722-9aa2-123510a93ecb>
-  PrefabRemaps:
-    []
-  Name: component_20
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> 6eff5bc7-5581-4a49-b7c0-75132215b602
-  Mesh: !<reference> 95b0c950-4c43-499b-ad87-23dd97ed6350
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
-- !<RenderMeshVisual/20c0eb8f-5826-4bcf-84c5-8f12ca2b185a>
-  PrefabRemaps:
-    []
-  Name: component_15
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> 23e54b3f-d19f-460b-a175-04aeaaf6a8fd
-  Mesh: !<reference> e90a9324-daec-4d22-8d9b-c7544e21f716
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
-- !<RenderMeshVisual/2b48eb7b-e2e5-46e1-819c-a222b9d9d4fb>
-  PrefabRemaps:
-    []
-  Name: component_19
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> bffee791-e07f-4cfc-b7df-0c862f647ed8
-  Mesh: !<reference> de178014-8bf1-447e-be5c-a1803f5eaeb2
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
-- !<RenderMeshVisual/2e8ba2ac-3a24-47bb-8d45-c1c6b173c834>
-  PrefabRemaps:
-    []
-  Name: component_3
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> f0d53907-2cf0-42a3-bac1-15a502ea5cd2
-  Mesh: !<reference> ee5fe3a4-386b-4204-889d-dbf6bf835c8a
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
-- !<RenderMeshVisual/2e8e2255-b8d4-4710-a31b-1bf921f8877f>
-  PrefabRemaps:
-    []
-  Name: component_12
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    []
-  Mesh: !<reference> f45a792d-850b-43f1-8a6e-e12d3430ee85
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
-- !<RenderMeshVisual/2ff930a0-08d8-4073-b97e-211cda7f92d9>
-  PrefabRemaps:
-    []
-  Name: component_25
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> 6a1b6163-f95b-45d0-bf18-4d6ae89adcbf
-  Mesh: !<reference> ec66e7c5-d4b0-4d4d-ada7-c54b82cb78b8
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
-- !<RenderMeshVisual/391da282-fb39-4982-9053-0d1eed91a00a>
-  PrefabRemaps:
-    []
-  Name: component_18
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> 79c4f925-18d3-41be-a07a-a6fdd8c4997c
-  Mesh: !<reference> 8f940c82-e893-4a0b-9aa9-c3423708fa11
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
-- !<RenderMeshVisual/3929523e-0eb6-4d91-90ba-b54e302a2570>
-  PrefabRemaps:
-    []
-  Name: component_10
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    []
-  Mesh: !<reference> c2dd7bea-b772-4c3f-9248-0bd44702f76f
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
-- !<ObjectPrefabAssetData/412a279d-a52b-413b-b0e2-8969201d86f0>
-  SourceRemaps:
-    - 00b2630e-a195-438f-b5d3-b8dea7d23a21: 83a22d7b-31d9-4adb-812e-cf8c8334aede
-    - 0340aa8f-02df-4fac-884f-d7f43b3b0379: 3929523e-0eb6-4d91-90ba-b54e302a2570
-    - 04368b9c-d109-442c-b669-e632303c7234: c9cf91db-805f-4671-954c-49d2353cfe68
-    - 08246456-1f7a-4536-8dd6-0cd3aa3f050d: efcd7d15-c110-4f93-964d-c7b905fe30b6
-    - 1071a077-dad7-4e19-a042-80a42ee95e57: a156a312-48a0-47cc-86d1-7ba3abd34689
-    - 1f23291f-7c34-4c1e-9992-31dc439aebb7: 19fa001d-f5e1-4bf7-aabf-40e1fde1f84f
-    - 270930cf-1f0d-4587-8d7d-a05ae18f2b46: fd0c754d-8211-44ac-bdee-5c8c4ecd485c
-    - 38267422-92f4-4a14-a01b-9176b08f6d82: d6a511d7-1230-4fc4-81e2-75e321bb939f
-    - 48660cc7-c6de-4d34-9d76-4dd22f1b3fd0: 20c0eb8f-5826-4bcf-84c5-8f12ca2b185a
-    - 4c3eb172-aee6-4516-9eef-c0711447fb37: 2034f113-3821-4722-9aa2-123510a93ecb
-    - 4f5845ce-0bd7-4b9a-bd6a-706f72844459: caa91032-773c-442f-93fa-23f8f251ac8b
-    - 504277cd-ab7f-491d-a101-f82ddc350c78: 9accf177-56bc-415a-b789-9732e59dc0f7
-    - 5ea46405-c918-4155-ab4b-764142e7bce0: e60ded0b-c26d-4429-ba5e-f24cec0964e4
-    - 6e79d99f-bc42-4ffe-bd21-080fa6a6b629: 7826b5e0-7281-4bcc-9e29-cb4ca53fe939
-    - 6fd3b6b3-6fd8-4fa4-ba6f-3d82dbb4a7f5: 391da282-fb39-4982-9053-0d1eed91a00a
-    - 701eca00-5217-4daa-a78d-4e168bf5c13d: a1e1a803-6a7a-4007-8279-427b69cf436a
-    - 72539a66-b8bd-484a-add5-babb11c7536f: dae1d8b1-2cd9-48c3-a279-ff9a6b1bfd5a
-    - 7a7cfc4e-c8ce-40c4-ae30-036537dcda07: b88b535c-aebd-4fd6-b315-599a7c8951e4
-    - 7c0ca130-2660-4993-bdfd-38a5d1c3c948: 89963a84-035b-4750-9335-b276595a9bfa
-    - 8fe92eac-5e4f-4095-b551-7fc07368dab7: 035410e6-003a-40d7-a99c-1fe5b1d29f5b
-    - 9d6e3911-76bd-47d6-b610-4f2f8e015cb5: 2b48eb7b-e2e5-46e1-819c-a222b9d9d4fb
-    - 9fdfe599-9261-42d0-bd43-b734dd23892a: 2e8ba2ac-3a24-47bb-8d45-c1c6b173c834
-    - adb60be9-4640-4813-8c0f-2f38e53741c0: 6294c39c-912b-4a14-8001-ec129ebae62d
-    - b1a4dc4f-cc77-45e2-b14c-c503180e7896: e7b08b55-ba2b-49e6-a134-436171aad018
-    - b1e10ff6-78e5-434a-92fb-bd47efff9795: 07c779b9-1c6b-4edc-827f-2f3363a4b799
-    - b3652075-9eab-4587-8875-c527f4b2fb50: 11e2ee5e-5481-4d6a-8b36-797145568ae0
-    - b367ab22-a6cc-4429-95f8-2c0e8eb00e38: 2ff930a0-08d8-4073-b97e-211cda7f92d9
-    - b76c282c-c891-467d-8229-e3c4c2d444c1: dd672333-18d0-4bf5-b402-1f3811b56b75
-    - c4d7823d-1e11-485f-8fd4-8949273fc5e7: 0f0b6409-932f-4cab-8753-9177b3bd8b89
-    - c65ef359-dba3-4b9e-95b9-73b49de74396: 81fcaa23-2e79-4aa4-adf7-74d15a6c60d2
-    - ce7148e2-134b-442a-89e7-371a79af2811: c5327472-99be-41c5-a4a0-0a8a3490930b
-    - d0722063-13a0-41bd-b926-b3a86d6a3f28: a2ba0e7f-3047-4d9d-b430-ecf0bb0fdf62
-    - d0a5e0cb-209b-4d96-b1c0-14b3278893c6: 5147669e-4861-4048-a15f-5e8f6a938586
-    - dad35bf4-67eb-4851-856b-0b0f8dc6bd00: 2e8e2255-b8d4-4710-a31b-1bf921f8877f
-    - dc623971-cadb-451a-9c2e-ff4b7b446e20: be5adf85-686a-4ab2-a56d-223f294e28dc
-    - df80aae5-d99a-4ddc-953d-a29504b09265: f1c1b303-7d64-4ecf-b725-3f33b7be43c6
-    - e5721a32-435a-452b-9e59-1fc8e8dd7a75: b04b80bd-fd7a-4ee9-80d5-b308f6bd0474
-    - ed871ac1-395d-48fb-84a6-5bc32968d54c: b5939904-fe96-44ba-ae59-2ceb19b28f1b
-    - f16ae167-bd9d-4db6-8ecd-2f29659af007: 1a5d6b51-2a19-4c43-9667-c534eb0470ee
-    - fc81ccfd-03ff-421e-9ebb-462eeecf5aad: 507cdedb-6f62-4dbd-b405-287c6150146b
-    - fd3216fe-b78b-4fb6-95f1-2223da7f3bd7: 7fa498e6-6cdb-46b0-aa7a-fbff640ce2a1
-    - ffdd8f03-239d-4ffb-a273-aef30606d41b: 93535a96-7451-421a-9fa8-1afa3e7ddb0f
-  SourceState: !<own> caa91032-773c-442f-93fa-23f8f251ac8b
-- !<SceneObject/507cdedb-6f62-4dbd-b405-287c6150146b>
-  PrefabRemaps:
-    []
-  Name: Rocket_03_bottom
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: -90.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 100.000000, y: 100.000000, z: 100.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> fd0c754d-8211-44ac-bdee-5c8c4ecd485c
-    - !<own> 19fa001d-f5e1-4bf7-aabf-40e1fde1f84f
-    - !<own> 7826b5e0-7281-4bcc-9e29-cb4ca53fe939
-    - !<own> b88b535c-aebd-4fd6-b315-599a7c8951e4
-    - !<own> 035410e6-003a-40d7-a99c-1fe5b1d29f5b
-- !<RenderMeshVisual/5147669e-4861-4048-a15f-5e8f6a938586>
-  PrefabRemaps:
-    []
-  Name: component_27
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> a915bbfd-085c-4e00-873b-fdc526aa9d6d
-  Mesh: !<reference> e509d358-0da3-4277-8810-8d1b1b733f46
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
-- !<SceneObject/6294c39c-912b-4a14-8001-ec129ebae62d>
-  PrefabRemaps:
-    []
-  Name: Satellite
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: -0.276116, y: -39.832081, z: 27.427725}
-    rotation: {x: -90.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 100.000000, y: 100.000000, z: 100.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> efcd7d15-c110-4f93-964d-c7b905fe30b6
-    - !<own> 83a22d7b-31d9-4adb-812e-cf8c8334aede
-    - !<own> 11e2ee5e-5481-4d6a-8b36-797145568ae0
-    - !<own> 2ff930a0-08d8-4073-b97e-211cda7f92d9
-- !<RenderMeshVisual/7826b5e0-7281-4bcc-9e29-cb4ca53fe939>
-  PrefabRemaps:
-    []
-  Name: component_6
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> 45d0e8c4-c422-48f3-b15e-fcd8f6eba7c8
-  Mesh: !<reference> 631651e2-8095-44d4-8dbd-362047fd5e66
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
-- !<SceneObject/7fa498e6-6cdb-46b0-aa7a-fbff640ce2a1>
-  PrefabRemaps:
-    []
-  Name: Rocket_02_bottom
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: -90.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 100.000000, y: 100.000000, z: 100.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 3929523e-0eb6-4d91-90ba-b54e302a2570
-- !<RenderMeshVisual/81fcaa23-2e79-4aa4-adf7-74d15a6c60d2>
-  PrefabRemaps:
-    []
-  Name: component_2
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> 2232ee72-5e28-48e9-8b1c-6786afc3b55e
-  Mesh: !<reference> b876b982-b6f1-441a-ac4b-4b76c2404767
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
-- !<RenderMeshVisual/83a22d7b-31d9-4adb-812e-cf8c8334aede>
-  PrefabRemaps:
-    []
-  Name: component_23
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> 6eff5bc7-5581-4a49-b7c0-75132215b602
-  Mesh: !<reference> 83b162df-a43c-41e7-a1ac-bfd55bfa4377
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
-- !<RenderMeshVisual/89963a84-035b-4750-9335-b276595a9bfa>
-  PrefabRemaps:
-    []
-  Name: component_14
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> 05e0dba6-c028-4097-8b6c-57a2cbfb9cc4
-  Mesh: !<reference> 1bd18163-56b6-4d4e-a5d7-0b47a1fc25af
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
-- !<RenderMeshVisual/93535a96-7451-421a-9fa8-1afa3e7ddb0f>
+- !<RenderMeshVisual/06dbd151-09a6-4bb9-8d9b-1f9a79295ab8>
   PrefabRemaps:
     []
   Name: component_16
@@ -596,16 +124,16 @@
   ShadowDensity: 1.000000
   Materials:
     - !<reference> 6eff5bc7-5581-4a49-b7c0-75132215b602
-  Mesh: !<reference> f7c3180d-6c6c-4220-a0ca-88887a4b310f
+  Mesh: !<reference> 88c15c7e-76ed-4df3-ac57-e2c86da247c0
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
   BlendNormals: false
   BlendShapes:
     {}
-- !<SceneObject/9accf177-56bc-415a-b789-9732e59dc0f7>
+- !<SceneObject/08359ac6-5b03-43d8-be1b-7933e416530c>
   PrefabRemaps:
     []
-  Name: Rocket_02_top
+  Name: Rocket_02_bottom
   Enabled: true
   Layers: 1
   LocalTransform:
@@ -616,120 +144,8 @@
   Children:
     []
   Components:
-    - !<own> 2e8e2255-b8d4-4710-a31b-1bf921f8877f
-- !<RenderMeshVisual/a156a312-48a0-47cc-86d1-7ba3abd34689>
-  PrefabRemaps:
-    []
-  Name: component_1
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> 93707c6b-a2a2-4e53-b029-d45186d5afa9
-  Mesh: !<reference> fc564c88-f677-4c3c-8035-be070477f2dd
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
-- !<RenderMeshVisual/a1e1a803-6a7a-4007-8279-427b69cf436a>
-  PrefabRemaps:
-    []
-  Name: component_11
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    []
-  Mesh: !<reference> bd56aa76-661e-428e-96fc-090331b2a39c
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
-- !<RenderMeshVisual/a2ba0e7f-3047-4d9d-b430-ecf0bb0fdf62>
-  PrefabRemaps:
-    []
-  Name: component_17
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> 05e0dba6-c028-4097-8b6c-57a2cbfb9cc4
-  Mesh: !<reference> 93fdc31a-616c-4c0b-a590-fc9db59ccfe0
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
-- !<SceneObject/b04b80bd-fd7a-4ee9-80d5-b308f6bd0474>
-  PrefabRemaps:
-    []
-  Name: Rocket_03_middle
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: -90.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 100.000000, y: 100.000000, z: 100.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> be5adf85-686a-4ab2-a56d-223f294e28dc
-- !<SceneObject/b5939904-fe96-44ba-ae59-2ceb19b28f1b>
-  PrefabRemaps:
-    []
-  Name: Rocket_01_middle
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: -90.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 100.000000, y: 100.000000, z: 100.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 1a5d6b51-2a19-4c43-9667-c534eb0470ee
-    - !<own> 89963a84-035b-4750-9335-b276595a9bfa
-    - !<own> 20c0eb8f-5826-4bcf-84c5-8f12ca2b185a
-- !<RenderMeshVisual/b88b535c-aebd-4fd6-b315-599a7c8951e4>
-  PrefabRemaps:
-    []
-  Name: component_7
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> f85cf635-c156-46d6-83f6-d6404fd2368d
-  Mesh: !<reference> a7738ae3-e7c6-4c95-8c15-8cfe0030a207
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
-- !<RenderMeshVisual/be5adf85-686a-4ab2-a56d-223f294e28dc>
+    - !<own> d4256902-d49f-4418-9e01-f064da6fe499
+- !<RenderMeshVisual/0bb43ea9-eeed-4c33-8658-39bf3f61cbf7>
   PrefabRemaps:
     []
   Name: component_9
@@ -743,54 +159,16 @@
   ShadowDensity: 1.000000
   Materials:
     - !<reference> 93707c6b-a2a2-4e53-b029-d45186d5afa9
-  Mesh: !<reference> f86c0bfc-1d93-4386-bd81-a4afc6af094a
+  Mesh: !<reference> 3d194b84-78c6-4d2f-bc80-4ca5255161bf
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
   BlendNormals: false
   BlendShapes:
     {}
-- !<SceneObject/c5327472-99be-41c5-a4a0-0a8a3490930b>
+- !<RenderMeshVisual/0cf18191-a938-42c1-af7a-9f28398b0618>
   PrefabRemaps:
     []
-  Name: Planet
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: -0.276116, y: -39.832081, z: 27.427725}
-    rotation: {x: -90.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 100.000000, y: 100.000000, z: 100.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 0f0b6409-932f-4cab-8753-9177b3bd8b89
-    - !<own> 5147669e-4861-4048-a15f-5e8f6a938586
-- !<SceneObject/c9cf91db-805f-4671-954c-49d2353cfe68>
-  PrefabRemaps:
-    []
-  Name: Rocket_01_top
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: -90.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 100.000000, y: 100.000000, z: 100.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 2034f113-3821-4722-9aa2-123510a93ecb
-    - !<own> d6a511d7-1230-4fc4-81e2-75e321bb939f
-- !<ObjectPrefab/caa91032-773c-442f-93fa-23f8f251ac8b>
-  PackagePath: ""
-  objects:
-    - !<own> dae1d8b1-2cd9-48c3-a279-ff9a6b1bfd5a
-  LazyLoading: false
-  RetainAssets: true
-- !<RenderMeshVisual/d6a511d7-1230-4fc4-81e2-75e321bb939f>
-  PrefabRemaps:
-    []
-  Name: component_21
+  Name: component_25
   Enabled: true
   RenderOrder: 0
   StretchMode: Stretch
@@ -800,55 +178,51 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> 15d19f91-9149-4cd6-9915-290c73dbb461
-  Mesh: !<reference> 8e00dacb-982a-4586-b353-7ef67ca33de7
+    - !<reference> 6a1b6163-f95b-45d0-bf18-4d6ae89adcbf
+  Mesh: !<reference> 726d8c27-0b80-4049-a995-577796194151
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
   BlendNormals: false
   BlendShapes:
     {}
-- !<SceneObject/dae1d8b1-2cd9-48c3-a279-ff9a6b1bfd5a>
+- !<SceneObject/1244d759-45a1-4177-9f29-415906b34c1d>
   PrefabRemaps:
     []
-  Name: SIK_Rockets
+  Name: Rocket_01_middle
   Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    - !<own> dd672333-18d0-4bf5-b402-1f3811b56b75
-    - !<own> e7b08b55-ba2b-49e6-a134-436171aad018
-    - !<own> 507cdedb-6f62-4dbd-b405-287c6150146b
-    - !<own> b04b80bd-fd7a-4ee9-80d5-b308f6bd0474
-    - !<own> 7fa498e6-6cdb-46b0-aa7a-fbff640ce2a1
-    - !<own> 07c779b9-1c6b-4edc-827f-2f3363a4b799
-    - !<own> 9accf177-56bc-415a-b789-9732e59dc0f7
-    - !<own> b5939904-fe96-44ba-ae59-2ceb19b28f1b
-    - !<own> e60ded0b-c26d-4429-ba5e-f24cec0964e4
-    - !<own> c9cf91db-805f-4671-954c-49d2353cfe68
-    - !<own> 6294c39c-912b-4a14-8001-ec129ebae62d
-    - !<own> c5327472-99be-41c5-a4a0-0a8a3490930b
-  Components:
-    []
-- !<SceneObject/dd672333-18d0-4bf5-b402-1f3811b56b75>
-  PrefabRemaps:
-    []
-  Name: Meteor
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: -0.276116, y: -39.832081, z: 27.427725}
     rotation: {x: -90.000000, y: -0.000000, z: 0.000000}
     scale: {x: 100.000000, y: 100.000000, z: 100.000000}
     hasSegmentScaleCompensation: false
   Children:
     []
   Components:
-    - !<own> f1c1b303-7d64-4ecf-b725-3f33b7be43c6
-- !<SceneObject/e60ded0b-c26d-4429-ba5e-f24cec0964e4>
+    - !<own> 8d32bcec-bd64-4bd3-a9ac-7bf8dbb0012e
+    - !<own> f8ecdeb8-ea40-48fb-976b-fedd7dce26d7
+    - !<own> b6379ec2-3188-4409-b999-69265af24afe
+- !<RenderMeshVisual/17153c70-e030-4010-96d3-8bf759451368>
+  PrefabRemaps:
+    []
+  Name: component_11
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    []
+  Mesh: !<reference> 8c6f33b8-0fda-4f18-8ad5-f6273a9037b3
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/19aaf1d7-5c74-4bd4-848f-48d7a115a6b7>
   PrefabRemaps:
     []
   Name: Rocket_01_bottom
@@ -862,11 +236,199 @@
   Children:
     []
   Components:
-    - !<own> 93535a96-7451-421a-9fa8-1afa3e7ddb0f
-    - !<own> a2ba0e7f-3047-4d9d-b430-ecf0bb0fdf62
-    - !<own> 391da282-fb39-4982-9053-0d1eed91a00a
-    - !<own> 2b48eb7b-e2e5-46e1-819c-a222b9d9d4fb
-- !<SceneObject/e7b08b55-ba2b-49e6-a134-436171aad018>
+    - !<own> 06dbd151-09a6-4bb9-8d9b-1f9a79295ab8
+    - !<own> 268fc256-730d-41fa-97ba-e97e91f54e5b
+    - !<own> e381f105-bc31-4e3d-b245-650ff6a4fa8b
+    - !<own> bbc09653-8cbe-457e-a2f6-b6cdb3a36b70
+- !<RenderMeshVisual/1f3ef3ac-bf71-4768-9bd3-6cd94f731580>
+  PrefabRemaps:
+    []
+  Name: component_3
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> f0d53907-2cf0-42a3-bac1-15a502ea5cd2
+  Mesh: !<reference> 42ca630b-f8ca-4045-8993-cdedb73e258a
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<RenderMeshVisual/224e13b4-cf7d-436a-ac48-a3575e3e28ad>
+  PrefabRemaps:
+    []
+  Name: component_6
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 45d0e8c4-c422-48f3-b15e-fcd8f6eba7c8
+  Mesh: !<reference> fad2e1e7-9a06-4247-be88-71ff21fd86a6
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/25e0b79e-7c67-4dc5-937b-d496f060ee6d>
+  PrefabRemaps:
+    []
+  Name: Rocket_01_top
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: -90.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> cd26dc65-cbb4-4413-b1ca-1d23789cacf6
+    - !<own> f88d4e12-6700-4f07-8f1f-6e11dd2535bc
+- !<RenderMeshVisual/268fc256-730d-41fa-97ba-e97e91f54e5b>
+  PrefabRemaps:
+    []
+  Name: component_17
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 05e0dba6-c028-4097-8b6c-57a2cbfb9cc4
+  Mesh: !<reference> ef9f24b3-8a6d-4c08-a85c-a30866cbcec0
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<RenderMeshVisual/2e29ca42-217c-4d4a-b8db-c9ba651b716a>
+  PrefabRemaps:
+    []
+  Name: component_8
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> f170a514-5db3-4b97-9124-d338f81259fc
+  Mesh: !<reference> 23dc81f8-e585-46b4-aa9a-67aff1b66811
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/30a4c27f-6f09-40d5-8b60-a818d03603aa>
+  PrefabRemaps:
+    []
+  Name: Satellite
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: -0.276116, y: -39.832081, z: 27.427725}
+    rotation: {x: -90.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 5c18cdaa-aa43-4e40-a3da-e9ac6060912d
+    - !<own> 33cc5268-9cb2-4aae-a139-eb52b45f9b02
+    - !<own> 88fc31af-eada-4ae6-90b7-c602fbe9e1f2
+    - !<own> 0cf18191-a938-42c1-af7a-9f28398b0618
+- !<RenderMeshVisual/33cc5268-9cb2-4aae-a139-eb52b45f9b02>
+  PrefabRemaps:
+    []
+  Name: component_23
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 6eff5bc7-5581-4a49-b7c0-75132215b602
+  Mesh: !<reference> dbee383a-918b-443a-bdf7-953b51378fbf
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<RenderMeshVisual/38287b12-3603-4031-ab96-135977ab79f9>
+  PrefabRemaps:
+    []
+  Name: component_12
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    []
+  Mesh: !<reference> e53324e3-006b-4c3b-84f6-8ae404e75c27
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/42d92c8e-fe45-4e94-8555-1858efbe0088>
+  PrefabRemaps:
+    []
+  Name: Rocket_02_top
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: -90.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 38287b12-3603-4031-ab96-135977ab79f9
+- !<SceneObject/4a50d575-f97d-4c3f-ba2a-b8e753eacdb7>
+  PrefabRemaps:
+    []
+  Name: Rocket_03_bottom
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: -90.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> b807de0d-75e7-4188-9b39-2b849a019223
+    - !<own> 78ccfa2a-54a1-49f3-a1e2-a4934cb7c309
+    - !<own> 224e13b4-cf7d-436a-ac48-a3575e3e28ad
+    - !<own> c4eb10df-5fe1-4095-93e8-9dba75564fdf
+    - !<own> 2e29ca42-217c-4d4a-b8db-c9ba651b716a
+- !<SceneObject/4c7f3678-c8c0-48d2-8025-769bde835f8f>
   PrefabRemaps:
     []
   Name: Rocket_03_top
@@ -880,10 +442,50 @@
   Children:
     []
   Components:
-    - !<own> a156a312-48a0-47cc-86d1-7ba3abd34689
-    - !<own> 81fcaa23-2e79-4aa4-adf7-74d15a6c60d2
-    - !<own> 2e8ba2ac-3a24-47bb-8d45-c1c6b173c834
-- !<RenderMeshVisual/efcd7d15-c110-4f93-964d-c7b905fe30b6>
+    - !<own> 5582cb74-43f7-4c03-a416-7c43c8d1a6c6
+    - !<own> dec1f6cf-0324-4d56-a15b-2b279c329216
+    - !<own> 1f3ef3ac-bf71-4768-9bd3-6cd94f731580
+- !<RenderMeshVisual/55272650-69ca-4562-b613-344ae9b57ad2>
+  PrefabRemaps:
+    []
+  Name: component_27
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> a915bbfd-085c-4e00-873b-fdc526aa9d6d
+  Mesh: !<reference> 4c598dab-6872-4aef-aac0-3f5766df497f
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<RenderMeshVisual/5582cb74-43f7-4c03-a416-7c43c8d1a6c6>
+  PrefabRemaps:
+    []
+  Name: component_1
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 93707c6b-a2a2-4e53-b029-d45186d5afa9
+  Mesh: !<reference> e82ed00c-82e8-4a4f-9378-8b53a2952a8c
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<RenderMeshVisual/5c18cdaa-aa43-4e40-a3da-e9ac6060912d>
   PrefabRemaps:
     []
   Name: component_22
@@ -897,16 +499,42 @@
   ShadowDensity: 1.000000
   Materials:
     - !<reference> 93707c6b-a2a2-4e53-b029-d45186d5afa9
-  Mesh: !<reference> 6ee86312-dfaf-46d5-8ae7-efa7471576f3
+  Mesh: !<reference> 02744706-70f0-42f6-a049-eb1fefe54b2f
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
   BlendNormals: false
   BlendShapes:
     {}
-- !<RenderMeshVisual/f1c1b303-7d64-4ecf-b725-3f33b7be43c6>
+- !<SceneObject/61cebfce-526f-4545-b2a8-7685836ab961>
   PrefabRemaps:
     []
-  Name: component_0
+  Name: SIK_Rockets
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> dd5d4085-1d33-40ea-8eb2-bc4c91c93490
+    - !<own> 4c7f3678-c8c0-48d2-8025-769bde835f8f
+    - !<own> 4a50d575-f97d-4c3f-ba2a-b8e753eacdb7
+    - !<own> e87e0757-7b9b-4e3a-add6-4000a6aa155c
+    - !<own> 08359ac6-5b03-43d8-be1b-7933e416530c
+    - !<own> cde183c1-6352-4c67-addc-68f96d781bee
+    - !<own> 42d92c8e-fe45-4e94-8555-1858efbe0088
+    - !<own> 1244d759-45a1-4177-9f29-415906b34c1d
+    - !<own> 19aaf1d7-5c74-4bd4-848f-48d7a115a6b7
+    - !<own> 25e0b79e-7c67-4dc5-937b-d496f060ee6d
+    - !<own> 30a4c27f-6f09-40d5-8b60-a818d03603aa
+    - !<own> e84ac519-03a2-438c-9083-8b62f46db0a9
+  Components:
+    []
+- !<RenderMeshVisual/78ccfa2a-54a1-49f3-a1e2-a4934cb7c309>
+  PrefabRemaps:
+    []
+  Name: component_5
   Enabled: true
   RenderOrder: 0
   StretchMode: Stretch
@@ -916,14 +544,100 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> 0a997bdd-20c6-419a-aaeb-b04c8dce4392
-  Mesh: !<reference> 937d4f7c-aa08-4e4a-8e3f-032b648c329a
+    - !<reference> 0ca86bc0-7069-4166-a0e3-37223fd77d23
+  Mesh: !<reference> b187a4d2-4373-4468-bba6-aa6ad50a31a7
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
   BlendNormals: false
   BlendShapes:
     {}
-- !<RenderMeshVisual/fd0c754d-8211-44ac-bdee-5c8c4ecd485c>
+- !<RenderMeshVisual/88fc31af-eada-4ae6-90b7-c602fbe9e1f2>
+  PrefabRemaps:
+    []
+  Name: component_24
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> d3359299-a4db-4c03-a7bc-a64d4136a9f3
+  Mesh: !<reference> e77589a7-5871-429b-a5f4-25b4c1bd0c33
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<RenderMeshVisual/8d32bcec-bd64-4bd3-a9ac-7bf8dbb0012e>
+  PrefabRemaps:
+    []
+  Name: component_13
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 6eff5bc7-5581-4a49-b7c0-75132215b602
+  Mesh: !<reference> 979eebde-d380-4e75-b200-6abd87febdb6
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ObjectPrefab/902dc937-dbfa-471b-a938-6e2d57d47a9d>
+  PackagePath: ""
+  objects:
+    - !<own> 61cebfce-526f-4545-b2a8-7685836ab961
+  LazyLoading: false
+  RetainAssets: true
+- !<RenderMeshVisual/b605e5de-19cd-43ad-a1a7-8f6829e7733c>
+  PrefabRemaps:
+    []
+  Name: component_26
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 51884309-d234-4f1d-bee3-d9bfee58509c
+  Mesh: !<reference> 7002e540-70a0-4c27-8cc5-e80d652c4037
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<RenderMeshVisual/b6379ec2-3188-4409-b999-69265af24afe>
+  PrefabRemaps:
+    []
+  Name: component_15
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 23e54b3f-d19f-460b-a175-04aeaaf6a8fd
+  Mesh: !<reference> 6204aac8-0842-4a0f-8264-d9fdae089be7
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<RenderMeshVisual/b807de0d-75e7-4188-9b39-2b849a019223>
   PrefabRemaps:
     []
   Name: component_4
@@ -937,7 +651,293 @@
   ShadowDensity: 1.000000
   Materials:
     - !<reference> 93707c6b-a2a2-4e53-b029-d45186d5afa9
-  Mesh: !<reference> 27e55ef6-4b65-488d-b205-84128fb3bfca
+  Mesh: !<reference> 2ca41378-4b1a-4f3d-83f6-48419db09a23
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ObjectPrefabAssetData/ba61ad05-4af2-4346-af5f-d06299929dda>
+  SourceRemaps:
+    - 081ab335-3397-4101-a7c5-e98e2d98b837: cde183c1-6352-4c67-addc-68f96d781bee
+    - 0e80c3bb-af04-4de3-b985-25fa56c51dfe: 61cebfce-526f-4545-b2a8-7685836ab961
+    - 1053deb7-18d2-41c4-92ec-b84a2ec0c238: 4a50d575-f97d-4c3f-ba2a-b8e753eacdb7
+    - 134b46ef-2751-4afd-8fc0-4e0f7f2521a2: c4eb10df-5fe1-4095-93e8-9dba75564fdf
+    - 16ae4e28-5b84-4ee7-bee5-5e635d1da199: 17153c70-e030-4010-96d3-8bf759451368
+    - 16e32866-91ab-4770-a805-d08e445fe7f8: e84ac519-03a2-438c-9083-8b62f46db0a9
+    - 16efe0a3-15db-4c0e-8588-f21c75e8db7d: 0bb43ea9-eeed-4c33-8658-39bf3f61cbf7
+    - 171975bd-9e4d-4b74-b373-853cb94fec4f: 19aaf1d7-5c74-4bd4-848f-48d7a115a6b7
+    - 283c09a8-67f3-4c41-ad3a-a4cfc55b6481: e87e0757-7b9b-4e3a-add6-4000a6aa155c
+    - 3610ad71-f70d-466c-8442-a1e036414162: 1244d759-45a1-4177-9f29-415906b34c1d
+    - 376e6485-bf59-4941-879d-0d07a8f53e3b: ccc2b1e0-278b-4beb-a563-289007b3f082
+    - 3abd5f88-6e9e-4c38-a07d-a27b22336d4e: f8ecdeb8-ea40-48fb-976b-fedd7dce26d7
+    - 3e0c8c87-ba9c-4fc6-ad15-445092316a36: 268fc256-730d-41fa-97ba-e97e91f54e5b
+    - 409cf9ac-ae0e-44f9-9116-3e58ed117fa6: 4c7f3678-c8c0-48d2-8025-769bde835f8f
+    - 57b6bf26-1c61-4f2a-bcda-7ce0dd78621b: 5c18cdaa-aa43-4e40-a3da-e9ac6060912d
+    - 58d4eacc-3e90-4425-8163-48a311754ab1: 902dc937-dbfa-471b-a938-6e2d57d47a9d
+    - 6b14f91c-f94e-446e-a186-bf03a072a9ec: 224e13b4-cf7d-436a-ac48-a3575e3e28ad
+    - 73674dad-c7d0-4df3-9435-ca01cb73823a: 08359ac6-5b03-43d8-be1b-7933e416530c
+    - 73ec7ab5-53d0-4b82-90ea-fe252114595b: 1f3ef3ac-bf71-4768-9bd3-6cd94f731580
+    - 90ac3c9d-3bcf-427a-8348-33a9f239e6f5: f88d4e12-6700-4f07-8f1f-6e11dd2535bc
+    - 95e28a1d-8677-4a20-9ca3-ed26ff6dfa54: 38287b12-3603-4031-ab96-135977ab79f9
+    - a05bca73-d9ff-490d-8276-69912c0d0127: 25e0b79e-7c67-4dc5-937b-d496f060ee6d
+    - a0c60a7d-2691-4eb3-9f6f-80d3793e9cd7: 88fc31af-eada-4ae6-90b7-c602fbe9e1f2
+    - a6a7e0c0-bc21-4eda-bdef-eb03a6906640: 55272650-69ca-4562-b613-344ae9b57ad2
+    - aef554cc-9781-4e36-b6f1-0c1c31538c2e: d4256902-d49f-4418-9e01-f064da6fe499
+    - afb8c1c6-43de-415b-820c-4567bd395d5d: 8d32bcec-bd64-4bd3-a9ac-7bf8dbb0012e
+    - b0ff9119-45c5-431b-b3fa-8370fac55a67: 33cc5268-9cb2-4aae-a139-eb52b45f9b02
+    - bd504480-0379-4efd-ba35-00be83f0119b: b807de0d-75e7-4188-9b39-2b849a019223
+    - c0aefe41-235e-4ed6-a7a7-1c62ec4e119b: 0cf18191-a938-42c1-af7a-9f28398b0618
+    - c1496858-2835-4adc-a3d2-df85a93d6dc5: 5582cb74-43f7-4c03-a416-7c43c8d1a6c6
+    - c76550b6-826a-4469-bbb4-3bd2615bddb8: 2e29ca42-217c-4d4a-b8db-c9ba651b716a
+    - c848841a-bcd5-48d4-8579-4721384a6c60: e381f105-bc31-4e3d-b245-650ff6a4fa8b
+    - c9acf6d8-7587-400b-a0c0-7647ea9b863d: 06dbd151-09a6-4bb9-8d9b-1f9a79295ab8
+    - cc2a3955-b1fe-4fa6-b8ad-bc844a1cbda7: 42d92c8e-fe45-4e94-8555-1858efbe0088
+    - cd4dc725-a150-4123-86a9-f75f1c19e55c: dd5d4085-1d33-40ea-8eb2-bc4c91c93490
+    - ce867548-5d36-4fd2-83a6-500033b35195: b605e5de-19cd-43ad-a1a7-8f6829e7733c
+    - d5fff356-1955-4746-9af2-db06fb5fda2e: 78ccfa2a-54a1-49f3-a1e2-a4934cb7c309
+    - d7aaad03-cf21-4d22-9310-bebdff20f8b2: b6379ec2-3188-4409-b999-69265af24afe
+    - d914f2f4-bf1a-4023-93ba-80278bcd5070: 30a4c27f-6f09-40d5-8b60-a818d03603aa
+    - e62bde81-357a-4cb3-8b0d-1f4682de797a: bbc09653-8cbe-457e-a2f6-b6cdb3a36b70
+    - f1cc559f-4dda-40d3-a0b2-18736cb69be9: dec1f6cf-0324-4d56-a15b-2b279c329216
+    - f945430e-35f6-47dc-bd08-8fdf8ab865a1: cd26dc65-cbb4-4413-b1ca-1d23789cacf6
+  SourceState: !<own> 902dc937-dbfa-471b-a938-6e2d57d47a9d
+- !<RenderMeshVisual/bbc09653-8cbe-457e-a2f6-b6cdb3a36b70>
+  PrefabRemaps:
+    []
+  Name: component_19
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> bffee791-e07f-4cfc-b7df-0c862f647ed8
+  Mesh: !<reference> 950e72c1-6b84-4729-ad00-7d20dbac76be
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<RenderMeshVisual/c4eb10df-5fe1-4095-93e8-9dba75564fdf>
+  PrefabRemaps:
+    []
+  Name: component_7
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> f85cf635-c156-46d6-83f6-d6404fd2368d
+  Mesh: !<reference> 6545af80-6954-41fb-b855-fbbc3bdf4fe0
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<RenderMeshVisual/ccc2b1e0-278b-4beb-a563-289007b3f082>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 0a997bdd-20c6-419a-aaeb-b04c8dce4392
+  Mesh: !<reference> cae8a3bf-e869-48e4-a718-122fe6a959f2
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<RenderMeshVisual/cd26dc65-cbb4-4413-b1ca-1d23789cacf6>
+  PrefabRemaps:
+    []
+  Name: component_20
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 6eff5bc7-5581-4a49-b7c0-75132215b602
+  Mesh: !<reference> 9102c449-6f02-4577-9d1d-5ccc59717831
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/cde183c1-6352-4c67-addc-68f96d781bee>
+  PrefabRemaps:
+    []
+  Name: Rocket_02_middle
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: -90.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 17153c70-e030-4010-96d3-8bf759451368
+- !<RenderMeshVisual/d4256902-d49f-4418-9e01-f064da6fe499>
+  PrefabRemaps:
+    []
+  Name: component_10
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    []
+  Mesh: !<reference> bbf5bb31-9357-4eb5-9c80-b716e734c453
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/dd5d4085-1d33-40ea-8eb2-bc4c91c93490>
+  PrefabRemaps:
+    []
+  Name: Meteor
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: -0.276116, y: -39.832081, z: 27.427725}
+    rotation: {x: -90.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> ccc2b1e0-278b-4beb-a563-289007b3f082
+- !<RenderMeshVisual/dec1f6cf-0324-4d56-a15b-2b279c329216>
+  PrefabRemaps:
+    []
+  Name: component_2
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 2232ee72-5e28-48e9-8b1c-6786afc3b55e
+  Mesh: !<reference> 81d0d7ae-e9c4-4e8e-97e7-f96822534b65
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<RenderMeshVisual/e381f105-bc31-4e3d-b245-650ff6a4fa8b>
+  PrefabRemaps:
+    []
+  Name: component_18
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 79c4f925-18d3-41be-a07a-a6fdd8c4997c
+  Mesh: !<reference> 0b7db25f-d714-403f-b9f6-b75f40704b13
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/e84ac519-03a2-438c-9083-8b62f46db0a9>
+  PrefabRemaps:
+    []
+  Name: Planet
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: -0.276116, y: -39.832081, z: 27.427725}
+    rotation: {x: -90.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> b605e5de-19cd-43ad-a1a7-8f6829e7733c
+    - !<own> 55272650-69ca-4562-b613-344ae9b57ad2
+- !<SceneObject/e87e0757-7b9b-4e3a-add6-4000a6aa155c>
+  PrefabRemaps:
+    []
+  Name: Rocket_03_middle
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: -90.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 0bb43ea9-eeed-4c33-8658-39bf3f61cbf7
+- !<RenderMeshVisual/f88d4e12-6700-4f07-8f1f-6e11dd2535bc>
+  PrefabRemaps:
+    []
+  Name: component_21
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 15d19f91-9149-4cd6-9915-290c73dbb461
+  Mesh: !<reference> 53ff8e32-16d2-4001-bc59-6cc8a12b38d3
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<RenderMeshVisual/f8ecdeb8-ea40-48fb-976b-fedd7dce26d7>
+  PrefabRemaps:
+    []
+  Name: component_14
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 05e0dba6-c028-4097-8b6c-57a2cbfb9cc4
+  Mesh: !<reference> a17af9f7-1a3b-46af-b8ff-232b69e4d050
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
   BlendNormals: false

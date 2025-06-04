@@ -1,8 +1,8 @@
-- !<Material/71bc5902-3ec0-411b-92e1-b5c465bd4457>
+- !<Material/64072cd4-1c47-4a4e-b93b-f0c1f322e09f>
   PackagePath: ""
   PassesInfo:
-    - !<own> d77003ce-7af7-42d6-92ac-c0f365b9f803
-- !<PassInfo/d77003ce-7af7-42d6-92ac-c0f365b9f803>
+    - !<own> 931675b8-24e2-46e5-add8-c8849ffc538e
+- !<PassInfo/931675b8-24e2-46e5-add8-c8849ffc538e>
   CachedProperties:
     - matcapTextureBorderColor:
         typeIdx: 5
@@ -243,7 +243,7 @@
     matcapTexture:
       typeIdx: 9
       value:
-        id: 95c0742a-22a2-46c6-ba27-08ab064279f5
+        id: 71745a11-7836-452e-a43c-a04e3eb7c386
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -282,6 +282,6 @@
     touchPosition:
       typeIdx: 4
       value: {x: 1.000000, y: 1.000000, z: 1.000000}
-  Pass: !<reference> ebc52b9a-9186-44d5-bb94-002b00902e40
+  Pass: !<reference> 0e214108-fa47-4fa8-ae56-9776f418eb5e
   RTCaster: false
   RTReceiver: false

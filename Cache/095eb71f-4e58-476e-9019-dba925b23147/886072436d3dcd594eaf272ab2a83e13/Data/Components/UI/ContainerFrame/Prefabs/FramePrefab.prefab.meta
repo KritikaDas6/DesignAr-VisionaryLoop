@@ -1,12 +1,12 @@
-- !<AssetImportMetadata/9867764c-7e03-49d2-8050-56f58fafdb10>
+- !<AssetImportMetadata/6453bd7e-1df3-450e-9d65-247b189feb21>
   ImportedAssetIds:
-    ObjectPrefab: !<reference> f1c6a4dc-f29d-42a6-ab05-4b134af253ec
+    ObjectPrefab: !<reference> ad968a24-47d6-4b5a-a9cd-cadac49c30de
   ImporterName: ObjectPrefabImporter
-  PrimaryAsset: !<reference> f1c6a4dc-f29d-42a6-ab05-4b134af253ec
+  PrimaryAsset: !<reference> ad968a24-47d6-4b5a-a9cd-cadac49c30de
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
   AssetDataMap:
-    ObjectPrefab: !<own> 85ce9d99-2b7d-4c45-acf8-0ae9642cfcee
+    ObjectPrefab: !<own> 24291a14-2f1b-42e4-a1fb-9746b8b5f491
   DependentFiles:
     []
   ImporterSettings: !<AssetImporterSettings>
@@ -14,7 +14,35 @@
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
     {}
-- !<ColliderComponent/0f9de0f4-fc36-4784-b745-887751900367>
+- !<ObjectPrefabAssetData/24291a14-2f1b-42e4-a1fb-9746b8b5f491>
+  SourceRemaps:
+    - 4ca7194a-8c96-41d6-a828-de4d1eb3bdca: 7524e297-8e5e-4e5f-9ab8-c615245cebff
+    - 65698d28-1f01-48ff-9bac-4eeb4ed7784c: 630cbb50-cde3-4887-9dfc-fb62268bf500
+    - 669c8493-c2e8-4194-a69a-bd2014471990: d916b72d-67e4-4303-9be3-8b7c4b2fb7ed
+  SourceState: !<own> 5830bbf5-536c-4f51-90a6-63c818caebb8
+- !<ObjectPrefab/5830bbf5-536c-4f51-90a6-63c818caebb8>
+  PackagePath: ""
+  objects:
+    - !<own> 630cbb50-cde3-4887-9dfc-fb62268bf500
+  LazyLoading: false
+  RetainAssets: true
+- !<SceneObject/630cbb50-cde3-4887-9dfc-fb62268bf500>
+  PrefabRemaps:
+    []
+  Name: FramePrefab
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 7524e297-8e5e-4e5f-9ab8-c615245cebff
+    - !<own> d916b72d-67e4-4303-9be3-8b7c4b2fb7ed
+- !<ColliderComponent/7524e297-8e5e-4e5f-9ab8-c615245cebff>
   PrefabRemaps:
     []
   Name: Physics Collider
@@ -32,23 +60,7 @@
   PositionTension: 30.000000
   RotationTension: 30.000000
   OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
-- !<SceneObject/4ab56ee6-752c-4075-a759-db527bdf5709>
-  PrefabRemaps:
-    []
-  Name: FramePrefab
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 0f9de0f4-fc36-4784-b745-887751900367
-    - !<own> 540bdbfa-c00a-48db-bf29-5bc27b893add
-- !<RenderMeshVisual/540bdbfa-c00a-48db-bf29-5bc27b893add>
+- !<RenderMeshVisual/d916b72d-67e4-4303-9be3-8b7c4b2fb7ed>
   PrefabRemaps:
     []
   Name: Render Mesh Visual
@@ -61,22 +73,10 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> 71bc5902-3ec0-411b-92e1-b5c465bd4457
-  Mesh: !<reference> c012bf11-8266-4d99-b510-d32e964b7614
+    - !<reference> 64072cd4-1c47-4a4e-b93b-f0c1f322e09f
+  Mesh: !<reference> f1757187-815c-4074-a36c-413d54c01653
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
   BlendNormals: false
   BlendShapes:
     {}
-- !<ObjectPrefab/6cc6e2b5-357c-46ff-808b-728cdd43d178>
-  PackagePath: ""
-  objects:
-    - !<own> 4ab56ee6-752c-4075-a759-db527bdf5709
-  LazyLoading: false
-  RetainAssets: true
-- !<ObjectPrefabAssetData/85ce9d99-2b7d-4c45-acf8-0ae9642cfcee>
-  SourceRemaps:
-    - c2324897-2d50-4a2e-a63f-8d22e44f377a: 0f9de0f4-fc36-4784-b745-887751900367
-    - c87b1bf2-f05c-467e-bf62-9128d3f65bf2: 540bdbfa-c00a-48db-bf29-5bc27b893add
-    - ca8385c0-af3d-4c30-9d45-ce2163043b01: 4ab56ee6-752c-4075-a759-db527bdf5709
-  SourceState: !<own> 6cc6e2b5-357c-46ff-808b-728cdd43d178

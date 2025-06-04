@@ -1,8 +1,8 @@
-- !<Material/d847673e-59e3-489d-9c87-292a4046be7f>
+- !<Material/9c5f67d3-9170-4466-b44a-a7763e3055c6>
   PackagePath: ""
   PassesInfo:
-    - !<own> c9bf5606-06ff-4d10-bc8d-cabc2c155b68
-- !<PassInfo/c9bf5606-06ff-4d10-bc8d-cabc2c155b68>
+    - !<own> 77b7418c-072e-427d-a077-76627eab7dfe
+- !<PassInfo/77b7418c-072e-427d-a077-76627eab7dfe>
   CachedProperties:
     - capsule_btn_refl_tex_1BorderColor:
         typeIdx: 5
@@ -111,7 +111,7 @@
     capsule_btn_refl_tex_1:
       typeIdx: 9
       value:
-        id: ed14d9ea-ff0c-408c-890c-ccff3d4811d3
+        id: 05dc3a25-f097-4f67-a067-8756f926f6b3
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -129,7 +129,7 @@
     capsule_btn_refl_tex_2:
       typeIdx: 9
       value:
-        id: 521dcc60-5234-4c85-af12-86d944be2e41
+        id: f1618079-704c-4134-8ff8-2054348713a5
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -147,7 +147,7 @@
     capsule_btn_refl_tex_3:
       typeIdx: 9
       value:
-        id: ed6ed974-8884-4970-872f-fbdf4a8b2687
+        id: 602058e5-2dfa-4584-8b4e-fa39b8682c1c
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -162,6 +162,6 @@
         0: {x: 1.000000, y: 0.000000, z: 0.000000}
         1: {x: 0.000000, y: 1.000000, z: 0.000000}
         2: {x: 0.000000, y: 0.000000, z: 1.000000}
-  Pass: !<reference> b531075c-384a-4002-b087-918b7d2f4b6f
+  Pass: !<reference> 26033898-9ef6-4d0f-a3e2-ccd9125b8009
   RTCaster: false
   RTReceiver: false

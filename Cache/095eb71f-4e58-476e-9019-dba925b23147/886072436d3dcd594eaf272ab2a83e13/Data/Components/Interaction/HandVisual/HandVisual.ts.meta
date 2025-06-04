@@ -1,20 +1,20 @@
-- !<AssetImportMetadata/314797fd-198b-4b13-a6f0-58c173aba027>
+- !<AssetImportMetadata/17359589-d0a7-4e47-984e-3896f7d3a196>
   ImportedAssetIds:
-    TypeScriptAsset: !<reference> f9b29b39-ec8c-41bd-8b53-769ae9b818b8
+    TypeScriptAsset: !<reference> 680a8fa0-b90e-4f08-847c-c131403012c0
   ImporterName: TypeScriptAssetImporter
-  PrimaryAsset: !<reference> f9b29b39-ec8c-41bd-8b53-769ae9b818b8
+  PrimaryAsset: !<reference> 680a8fa0-b90e-4f08-847c-c131403012c0
   PackageType: NotAPackage
   ImporterSettings: !<AssetImporterSettings>
     {}
   AssetDataMap:
-    TypeScriptAsset: !<own> 719f3e6e-2bab-40f7-8e7b-670074986fae
+    TypeScriptAsset: !<own> 9b4b6f35-04d5-4356-bb90-b7125978a763
   PackagePolicy: CannotBeUnpacked
   DependentFiles:
     []
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
     {}
-- !<TypeScriptAssetData/719f3e6e-2bab-40f7-8e7b-670074986fae>
+- !<TypeScriptAssetData/9b4b6f35-04d5-4356-bb90-b7125978a763>
   InputLines:
     - '// @ui {"widget":"group_start", "label":"Hand Visual"}'
     - '// @input string handType {"widget":"combobox", "values":[{"label":"Left", "value":"left"}, {"label":"Right", "value":"right"}]}'

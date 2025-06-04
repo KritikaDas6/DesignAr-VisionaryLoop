@@ -1,10 +1,10 @@
-- !<ObjectPrefab/058c0039-cac9-4e1d-bc67-215013dd0b90>
+- !<ObjectPrefab/308f04a8-31d4-4e81-b875-c9005e180274>
   PackagePath: ""
   objects:
-    - !<own> 21110558-d920-448c-b9d4-cf8824f15945
+    - !<own> 843beb48-f97e-4a29-a273-1bb8d09d8a2c
   LazyLoading: false
   RetainAssets: true
-- !<RenderMeshVisual/11403b4f-4c66-4036-a5da-ed396691bcdd>
+- !<RenderMeshVisual/068e2c6c-1099-4180-b32e-56d747049404>
   PrefabRemaps:
     []
   Name: component_0
@@ -17,14 +17,14 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> 0c748c8a-3234-41d8-9f9c-952180de31f3
-  Mesh: !<reference> b876b982-b6f1-441a-ac4b-4b76c2404767
+    - !<reference> ec8e4619-00fe-4fe0-b561-1cecf7146336
+  Mesh: !<reference> e82ed00c-82e8-4a4f-9378-8b53a2952a8c
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
   BlendNormals: false
   BlendShapes:
     {}
-- !<RenderMeshVisual/171e5912-ea12-4180-b993-b64716c6f319>
+- !<RenderMeshVisual/4568d393-f75e-4efc-9075-246e66ae3e6d>
   PrefabRemaps:
     []
   Name: component_0
@@ -37,14 +37,34 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> a1127952-2b90-417a-a08b-b9aa6d8709b1
-  Mesh: !<reference> ee5fe3a4-386b-4204-889d-dbf6bf835c8a
+    - !<reference> 8fbac438-b371-4841-9c46-0b2fe1079242
+  Mesh: !<reference> 42ca630b-f8ca-4045-8993-cdedb73e258a
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
   BlendNormals: false
   BlendShapes:
     {}
-- !<SceneObject/21110558-d920-448c-b9d4-cf8824f15945>
+- !<RenderMeshVisual/6e04d315-7221-4c4f-b4ed-ff7d9883f0df>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> ff21b388-faea-434b-b4ac-c6ecbc9e3345
+  Mesh: !<reference> 81d0d7ae-e9c4-4e8e-97e7-f96822534b65
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/843beb48-f97e-4a29-a273-1bb8d09d8a2c>
   PrefabRemaps:
     []
   Name: Modern Nose Cone
@@ -58,26 +78,6 @@
   Children:
     []
   Components:
-    - !<own> bd83d706-31e8-45e7-b8ab-6426ccb4ae4a
-    - !<own> 11403b4f-4c66-4036-a5da-ed396691bcdd
-    - !<own> 171e5912-ea12-4180-b993-b64716c6f319
-- !<RenderMeshVisual/bd83d706-31e8-45e7-b8ab-6426ccb4ae4a>
-  PrefabRemaps:
-    []
-  Name: component_0
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> cb298395-289e-4775-9b74-0ccc31353677
-  Mesh: !<reference> fc564c88-f677-4c3c-8035-be070477f2dd
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
+    - !<own> 068e2c6c-1099-4180-b32e-56d747049404
+    - !<own> 6e04d315-7221-4c4f-b4ed-ff7d9883f0df
+    - !<own> 4568d393-f75e-4efc-9075-246e66ae3e6d

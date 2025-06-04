@@ -1,8 +1,8 @@
-- !<Material/a847025b-b9a4-4352-9baa-6e00cc5a1088>
+- !<Material/7474e9bd-752e-43ac-8b84-2fdec8df00d3>
   PackagePath: ""
   PassesInfo:
-    - !<own> dc885603-f547-4918-a5d8-6704edc5460c
-- !<PassInfo/dc885603-f547-4918-a5d8-6704edc5460c>
+    - !<own> 36daf49c-53ed-41a5-8a23-365e9f2868d5
+- !<PassInfo/36daf49c-53ed-41a5-8a23-365e9f2868d5>
   CachedProperties:
     - texture_mapBorderColor:
         typeIdx: 5
@@ -114,7 +114,7 @@
     texture_map:
       typeIdx: 9
       value:
-        id: b1093421-42e0-4fa7-b5a4-39bdffb15872
+        id: 7d25fced-f1c0-42f6-9ea6-01e3ba0b68e7
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -129,4 +129,4 @@
         0: {x: 1.000000, y: 0.000000, z: 0.000000}
         1: {x: 0.000000, y: 1.000000, z: 0.000000}
         2: {x: 0.000000, y: 0.000000, z: 1.000000}
-  Pass: !<reference> 03c03b27-d861-4afa-a9b4-19dced68a348
+  Pass: !<reference> d4457f8e-c317-4b11-976e-998813063078

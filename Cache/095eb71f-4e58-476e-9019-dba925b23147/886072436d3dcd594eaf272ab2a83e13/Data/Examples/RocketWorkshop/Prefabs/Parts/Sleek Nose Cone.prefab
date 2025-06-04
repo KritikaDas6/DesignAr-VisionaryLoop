@@ -1,10 +1,10 @@
-- !<ObjectPrefab/f478b42a-c9e8-418a-9ba9-4920bc01f402>
+- !<ObjectPrefab/87e3f344-0f1b-4b6d-9e6f-235602cec657>
   PackagePath: ""
   objects:
-    - !<own> bbf1121c-d325-42b6-8c71-7a5a953abc4e
+    - !<own> 679e5a44-b2f4-4501-8dfa-b7e0a3e0d153
   LazyLoading: false
   RetainAssets: true
-- !<RenderMeshVisual/28e73ab9-450a-47c0-82a1-110faeb5a677>
+- !<RenderMeshVisual/19baefd5-43c1-462c-b273-a57c418d3f1c>
   PrefabRemaps:
     []
   Name: component_0
@@ -17,14 +17,14 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> f02f7211-3e17-4e72-8171-8ee7ebabff93
-  Mesh: !<reference> f45a792d-850b-43f1-8a6e-e12d3430ee85
+    - !<reference> 91ca6e4c-ea65-487f-8b76-4ab983fb8546
+  Mesh: !<reference> e53324e3-006b-4c3b-84f6-8ae404e75c27
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
   BlendNormals: false
   BlendShapes:
     {}
-- !<SceneObject/bbf1121c-d325-42b6-8c71-7a5a953abc4e>
+- !<SceneObject/679e5a44-b2f4-4501-8dfa-b7e0a3e0d153>
   PrefabRemaps:
     []
   Name: Sleek Nose Cone
@@ -38,4 +38,4 @@
   Children:
     []
   Components:
-    - !<own> 28e73ab9-450a-47c0-82a1-110faeb5a677
+    - !<own> 19baefd5-43c1-462c-b273-a57c418d3f1c

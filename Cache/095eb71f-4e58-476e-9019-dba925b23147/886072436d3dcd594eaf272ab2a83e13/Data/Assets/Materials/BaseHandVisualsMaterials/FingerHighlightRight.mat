@@ -1,8 +1,8 @@
-- !<Material/43c2bfcb-b31e-47f0-9c8e-c21a6aecb314>
+- !<Material/4472c610-3df3-46ea-bbaa-271285e75717>
   PackagePath: ""
   PassesInfo:
-    - !<own> 72246358-8b6e-4b8f-8724-2ed441ebd772
-- !<PassInfo/72246358-8b6e-4b8f-8724-2ed441ebd772>
+    - !<own> cf5b788a-65a9-479a-8c7d-7eb72f298e34
+- !<PassInfo/cf5b788a-65a9-479a-8c7d-7eb72f298e34>
   CachedProperties:
     - Port_Base_N014:
         typeIdx: 5
@@ -108,7 +108,7 @@
     fingertip:
       typeIdx: 9
       value:
-        id: 760ab780-4c42-46f2-8f73-795b2e1c2a24
+        id: 71a4474b-ad9c-42fc-9792-59efd331a871
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -126,7 +126,7 @@
     handGlowTex:
       typeIdx: 9
       value:
-        id: ff942fe3-4788-4411-9268-3bee40209fbe
+        id: 116f775c-3a0d-498c-ba66-61b1b07960c7
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -153,6 +153,6 @@
     thumbGlowColor:
       typeIdx: 5
       value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  Pass: !<reference> aa340f8a-cb96-46be-bc04-5c0996c08e85
+  Pass: !<reference> eef03853-9182-481b-872f-a2affa5ef057
   RTCaster: false
   RTReceiver: false

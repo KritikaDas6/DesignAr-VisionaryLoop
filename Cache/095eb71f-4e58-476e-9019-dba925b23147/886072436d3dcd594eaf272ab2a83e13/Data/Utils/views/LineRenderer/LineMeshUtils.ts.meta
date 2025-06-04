@@ -1,20 +1,20 @@
-- !<AssetImportMetadata/15d7482d-2863-4d5f-a12f-150b75d902d7>
+- !<AssetImportMetadata/36aec0c2-7203-455d-b4cb-6affbbda6706>
   ImporterSettings: !<AssetImporterSettings>
     {}
   ImportedAssetIds:
-    TypeScriptAsset: !<reference> 6bdb8f51-4258-4c9a-87dd-c6e5959fcc4a
+    TypeScriptAsset: !<reference> b28cb35c-966a-4609-8e27-424a23941c44
   ImporterName: TypeScriptAssetImporter
-  PrimaryAsset: !<reference> 6bdb8f51-4258-4c9a-87dd-c6e5959fcc4a
+  PrimaryAsset: !<reference> b28cb35c-966a-4609-8e27-424a23941c44
   PackageType: NotAPackage
   AssetDataMap:
-    TypeScriptAsset: !<own> fb70541b-0fb4-43cd-9503-bdc6fcb7d4d0
+    TypeScriptAsset: !<own> 500fbb06-3a5a-42a1-ae2d-bb81af13b5eb
   PackagePolicy: CannotBeUnpacked
   DependentFiles:
     []
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
     {}
-- !<TypeScriptAssetData/fb70541b-0fb4-43cd-9503-bdc6fcb7d4d0>
+- !<TypeScriptAssetData/500fbb06-3a5a-42a1-ae2d-bb81af13b5eb>
   Icon: ""
   Description: ""
   InternalVersion: 0

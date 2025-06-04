@@ -1,11 +1,11 @@
-- !<AssetImportMetadata/3b0680a5-e826-4d85-ac61-9027abbe3075>
+- !<AssetImportMetadata/0473a82c-fa67-40c6-809b-85b4b87d9745>
   ImportedAssetIds:
-    TypeScriptAsset: !<reference> 94ea82ba-1d42-4617-b71f-c92262f5960b
+    TypeScriptAsset: !<reference> 2a3a068b-71ec-4a0f-8382-d5b70815a41c
   ImporterName: TypeScriptAssetImporter
-  PrimaryAsset: !<reference> 94ea82ba-1d42-4617-b71f-c92262f5960b
+  PrimaryAsset: !<reference> 2a3a068b-71ec-4a0f-8382-d5b70815a41c
   PackageType: NotAPackage
   AssetDataMap:
-    TypeScriptAsset: !<own> 543073b2-90b4-4ebc-8af1-8808852fd4c3
+    TypeScriptAsset: !<own> a8947f6d-88d9-45d6-a777-468ba60f8aaa
   ImporterSettings: !<AssetImporterSettings>
     {}
   PackagePolicy: CannotBeUnpacked
@@ -14,7 +14,7 @@
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
     {}
-- !<TypeScriptAssetData/543073b2-90b4-4ebc-8af1-8808852fd4c3>
+- !<TypeScriptAssetData/a8947f6d-88d9-45d6-a777-468ba60f8aaa>
   InputLines:
     - '// @ui {"widget":"group_start", "label":"Frame Settings"}'
     - // @input bool autoShowHide = true

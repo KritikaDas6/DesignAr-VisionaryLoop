@@ -1,8 +1,8 @@
-- !<Material/066c512a-7c65-41d2-9a57-3be3fd7766f3>
+- !<Material/f5d81fac-b8ea-47c3-84a3-b2c37e7d8830>
   PackagePath: ""
   PassesInfo:
-    - !<own> 8e81bd73-745d-4185-91b9-4589667a579d
-- !<PassInfo/8e81bd73-745d-4185-91b9-4589667a579d>
+    - !<own> 1630b56f-41da-4b8e-8aff-7cb3c1a587a4
+- !<PassInfo/1630b56f-41da-4b8e-8aff-7cb3c1a587a4>
   CachedProperties:
     - additional_settings_btn_refl_texBorderColor:
         typeIdx: 5
@@ -111,7 +111,7 @@
     additional_settings_btn_refl_tex:
       typeIdx: 9
       value:
-        id: 331a7fc7-7877-4a7c-8689-b6b35d26d3b9
+        id: 89ba5744-7589-4646-ad92-7dc62b8b5073
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -165,6 +165,6 @@
     triggered:
       typeIdx: 1
       value: 1.000000
-  Pass: !<reference> c6f4f6ec-42b6-4a9e-ae3a-9b1069385555
+  Pass: !<reference> 1a0a21da-c23d-4d3d-90c0-3f206f71c68a
   RTCaster: false
   RTReceiver: false

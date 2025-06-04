@@ -1,10 +1,10 @@
-- !<ObjectPrefab/a9f5baf8-1c9a-4304-a456-33d2590c3fc6>
+- !<ObjectPrefab/7101093e-3fba-4d7d-a039-85d354a7800a>
   PackagePath: ""
   objects:
-    - !<own> 315f513f-3522-482b-900a-40414b06ce36
+    - !<own> bba2c001-a973-44f0-8cc7-4487092d21b2
   LazyLoading: false
   RetainAssets: true
-- !<RenderMeshVisual/2ee0e86b-dbc4-487a-a609-ad8de51ebcba>
+- !<RenderMeshVisual/4cf6ae22-bf66-4df5-a5e6-7d0620b3867e>
   PrefabRemaps:
     []
   Name: component_6
@@ -17,36 +17,20 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> 066c512a-7c65-41d2-9a57-3be3fd7766f3
-  Mesh: !<reference> 1fb1e634-eb2b-4cc4-ba8b-18416bbcb455
+    - !<reference> f5d81fac-b8ea-47c3-84a3-b2c37e7d8830
+  Mesh: !<reference> 4c5b09fd-91f9-42fc-9bab-7a340b9a0252
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
   BlendNormals: true
   BlendShapes:
     Pinch: 0.000000
     Z depth: 1.000000
-- !<SceneObject/315f513f-3522-482b-900a-40414b06ce36>
-  PrefabRemaps:
-    []
-  Name: container-button
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: -1.935684, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 2ee0e86b-dbc4-487a-a609-ad8de51ebcba
-    - !<own> 353478e5-0c7a-4db7-813e-c433bb342409
-- !<ScriptComponent/353478e5-0c7a-4db7-813e-c433bb342409>
+- !<ScriptComponent/808c76b1-655e-4103-8e26-1aab639f911f>
   PrefabRemaps:
     []
   Name: Interactable
   Enabled: true
-  ScriptAsset: !<reference> 652e631a-22d0-4941-9f74-2943df59f34c
+  ScriptAsset: !<reference> ecc36e60-cb6d-47f6-97ad-af44a0eb7639
   ScriptInputsDefault:
     targetingMode: true
     enableInstantDrag: true
@@ -69,3 +53,19 @@
   ScriptTypes:
     "":
       {}
+- !<SceneObject/bba2c001-a973-44f0-8cc7-4487092d21b2>
+  PrefabRemaps:
+    []
+  Name: container-button
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: -1.935684, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 4cf6ae22-bf66-4df5-a5e6-7d0620b3867e
+    - !<own> 808c76b1-655e-4103-8e26-1aab639f911f

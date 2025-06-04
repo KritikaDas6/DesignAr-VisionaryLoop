@@ -1,8 +1,8 @@
-- !<Material/c71dde88-df6c-46a6-8426-d07b956a747e>
+- !<Material/0b717a9b-40a8-4c38-b85b-5f2c6ec37edb>
   PackagePath: ""
   PassesInfo:
-    - !<own> 0c5fb432-1c6d-4367-9e0c-edbd2daee193
-- !<PassInfo/0c5fb432-1c6d-4367-9e0c-edbd2daee193>
+    - !<own> 7ab747f4-c6cf-4a6f-84d2-6437cdabca3c
+- !<PassInfo/7ab747f4-c6cf-4a6f-84d2-6437cdabca3c>
   CachedProperties:
     - baseTexBorderColor:
         typeIdx: 5
@@ -45,7 +45,7 @@
     baseTex:
       typeIdx: 9
       value:
-        id: 3c882f48-8c51-4a0c-8eff-1716f970ebd4
+        id: e726db7c-be45-4833-8b6e-1e04cd869362
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -66,6 +66,6 @@
     roughness:
       typeIdx: 1
       value: 0.000000
-  Pass: !<reference> 3e070e53-73de-461d-ab38-b008ff2686ea
+  Pass: !<reference> 03d4f65d-e091-4d49-a875-5a325c31d32f
   RTCaster: false
   RTReceiver: false

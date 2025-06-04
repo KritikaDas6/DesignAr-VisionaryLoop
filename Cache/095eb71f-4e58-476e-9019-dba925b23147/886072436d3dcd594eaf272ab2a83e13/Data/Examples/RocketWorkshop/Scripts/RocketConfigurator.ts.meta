@@ -1,12 +1,12 @@
-- !<AssetImportMetadata/8829d96f-ac4b-4c80-9b0f-9523e3692a06>
+- !<AssetImportMetadata/6a1b63ae-429a-441a-966a-06b4a10fb233>
   ImportedAssetIds:
-    TypeScriptAsset: !<reference> 0c674fdf-92c0-4ac0-8c06-1b204c00351b
+    TypeScriptAsset: !<reference> 506d9e71-0c91-453d-aef4-3c2b72ba8632
   ImporterName: TypeScriptAssetImporter
-  PrimaryAsset: !<reference> 0c674fdf-92c0-4ac0-8c06-1b204c00351b
+  PrimaryAsset: !<reference> 506d9e71-0c91-453d-aef4-3c2b72ba8632
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
   AssetDataMap:
-    TypeScriptAsset: !<own> c9ec2a81-39ef-4b0c-a719-27dab18d9b4c
+    TypeScriptAsset: !<own> 3820d6c6-2383-4eab-a3dc-f6f1293bfdee
   DependentFiles:
     []
   ImporterSettings: !<AssetImporterSettings>
@@ -14,7 +14,7 @@
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
     {}
-- !<TypeScriptAssetData/c9ec2a81-39ef-4b0c-a719-27dab18d9b4c>
+- !<TypeScriptAssetData/3820d6c6-2383-4eab-a3dc-f6f1293bfdee>
   SvgIcon: ""
   Description: ""
   InternalVersion: 0

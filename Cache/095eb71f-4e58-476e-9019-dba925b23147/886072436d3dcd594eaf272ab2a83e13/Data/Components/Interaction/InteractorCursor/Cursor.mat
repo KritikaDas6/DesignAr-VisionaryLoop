@@ -1,8 +1,8 @@
-- !<Material/b4b0995b-4610-4ac3-a1e8-7e1ddb6262e7>
+- !<Material/fab72854-5317-4762-8b10-41ce265c2d74>
   PackagePath: ""
   PassesInfo:
-    - !<own> 21ae815b-9d5e-43bb-bb89-5fda822d5b78
-- !<PassInfo/21ae815b-9d5e-43bb-bb89-5fda822d5b78>
+    - !<own> 2a154bcd-5ea0-44ea-88c3-91de030b8b7f
+- !<PassInfo/2a154bcd-5ea0-44ea-88c3-91de030b8b7f>
   CachedProperties:
     - cursorTextureBorderColor:
         typeIdx: 5
@@ -273,6 +273,6 @@
     useTexture:
       typeIdx: 2
       value: false
-  Pass: !<reference> 0ce9b909-58aa-4313-a431-c78e1e4c63f8
+  Pass: !<reference> 6be77d0d-b014-4989-a554-f768ffe7d616
   RTCaster: false
   RTReceiver: false

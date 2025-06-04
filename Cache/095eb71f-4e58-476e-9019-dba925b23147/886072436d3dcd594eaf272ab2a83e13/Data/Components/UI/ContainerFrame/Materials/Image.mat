@@ -1,8 +1,8 @@
-- !<Material/47f43a92-c48b-436a-9cdf-658f97f46d31>
+- !<Material/1391639c-f537-42b1-bd14-e95bf2caa360>
   PackagePath: ""
   PassesInfo:
-    - !<own> afdad5b8-f066-4072-9c25-36d373616a73
-- !<PassInfo/afdad5b8-f066-4072-9c25-36d373616a73>
+    - !<own> 82d36c6f-4bef-491d-840e-9aa8fb86f139
+- !<PassInfo/82d36c6f-4bef-491d-840e-9aa8fb86f139>
   CachedProperties:
     - baseTexBorderColor:
         typeIdx: 5
@@ -67,6 +67,6 @@
     overrideTimeEnabled:
       typeIdx: 0
       value: 0
-  Pass: !<reference> d39da541-f726-43a0-b6e9-67f90662d631
+  Pass: !<reference> aaca055b-1287-4ff6-9e61-4edacce3f480
   RTCaster: false
   RTReceiver: false
