@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 819
+    size: 803
     values:
       - Base 2.png
       - Base.png
@@ -103,6 +103,8 @@ CollapsedEntities:
       - Scene.scene
       - Script 2.js
       - Script 3.js
+      - Script 4.js
+      - Script 5.js
       - Script.js
       - Sketch 2.png
       - Spawn Object at World Mesh On Tap
@@ -132,7 +134,6 @@ CollapsedEntities:
       - "Spawn Object at World Mesh On Tap/[Mesh Builder Example] Pipe Between Objects/Textures/MaterialParams.png"
       - "Spawn Object at World Mesh On Tap/[Mesh Builder Example] Pipe Between Objects/Textures/Normal.png"
       - Spawn Object at World Mesh On Tap/package.native
-      - SpectaclesInteractionKit
       - SpectaclesInteractionKit/Assets
       - SpectaclesInteractionKit/Assets/Audio
       - SpectaclesInteractionKit/Assets/Audio/HoverAudioTrack.wav
@@ -630,7 +631,6 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Prefabs
       - SpectaclesInteractionKit/Prefabs/ScrollViewListItem.prefab
       - SpectaclesInteractionKit/Prefabs/SpectaclesInteractionKit.prefab
-      - SpectaclesInteractionKit/Providers
       - SpectaclesInteractionKit/Providers/CameraProvider
       - SpectaclesInteractionKit/Providers/CameraProvider/ARCameraFinderProvider.ts
       - SpectaclesInteractionKit/Providers/CameraProvider/BaseCameraFinderProvider.ts
@@ -639,23 +639,10 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Providers/CameraProvider/WorldCameraFinderProvider.ts
       - SpectaclesInteractionKit/Providers/CursorControllerProvider
       - SpectaclesInteractionKit/Providers/CursorControllerProvider/CursorControllerProvider.ts
-      - SpectaclesInteractionKit/Providers/HandInputData
       - SpectaclesInteractionKit/Providers/HandInputData/BaseHand.ts
       - SpectaclesInteractionKit/Providers/HandInputData/DefaultHandTrackingAssetProvider.ts
-      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider
       - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/GestureModuleProvider.ts
-      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PalmTapDetection
-      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PalmTapDetection/PalmTapDetector.ts
-      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PalmTapDetection/PalmTapDetectorStateMachine.ts
-      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PalmTapDetectionEvent.ts
       - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PalmTapEvent.ts
-      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection
-      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/DetectionStrategies
-      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/DetectionStrategies/HciPinchDetectionStrategy.ts
-      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/DetectionStrategies/HeuristicPinchDetectionStrategy.ts
-      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/DetectionStrategies/PinchDetectionStrategy.ts
-      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/PinchDetector.ts
-      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/PinchDetectorStateMachine.ts
       - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchEventType.ts
       - SpectaclesInteractionKit/Providers/HandInputData/HandInputData.ts
       - SpectaclesInteractionKit/Providers/HandInputData/HandTrackingAssetProvider.ts
@@ -734,12 +721,9 @@ CollapsedEntities:
       - Surface Detection.lspkg/Materials/CalibrationMat.mat
       - Surface Detection.lspkg/Meshes
       - Surface Detection.lspkg/Meshes/Unit Plane.mesh
-      - Surface Detection.lspkg/Scripts
       - Surface Detection.lspkg/Scripts/CircleAnimation.ts
-      - Surface Detection.lspkg/Scripts/SurfaceDetection.ts
       - Surface Detection.lspkg/Shaders
       - Surface Detection.lspkg/Shaders/CalibrationShader.ss_graph
-      - Surface Detection.lspkg/SurfaceDetection__ADD_TO_SCENE.prefab
       - Surface Detection.lspkg/Textures
       - Surface Detection.lspkg/Textures/groundIcon.png
       - Surface Detection.lspkg/package.native
