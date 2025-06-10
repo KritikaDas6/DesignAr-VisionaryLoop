@@ -2,6 +2,7 @@
   AssetFiles:
     c403bf42-b482-4aef-8906-13532712a354: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/Rocket_clouds_emit.vfxgraph
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     25c29872-b956-4695-a954-57203ac7cbd7: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/c852756/System_39/script_39.js
     4f077fcb-f6e2-43be-bead-cac95711c3b2: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/c852756/System_39/feedback_39.mat
     c7ed2c46-b907-4964-be72-faa511811e05: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/c852756/System_39/feedback_39.glsl
@@ -18,11 +19,21 @@
     288b0031-71b8-4e64-95d2-4ed28528b17f: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/c852756/System_39/simulate_39.mat
     c72a2a82-1b01-40c2-9b09-25444933bdf8: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/c852756/System_39/simulate_39.glsl
 >>>>>>> Stashed changes
+=======
+    2f979560-2e8c-4f98-9ccc-41e9c0eed571: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/c852756/System_39/script_39.js
+    acadcb01-5698-4700-82c8-1afc869ac766: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/c852756/System_39/feedback_39.mat
+    f2786d0c-a75f-4605-b379-6810daac4a7f: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/c852756/System_39/feedback_39.glsl
+    758f501e-2a4b-4970-90f8-7fe4f5a3ba62: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/c852756/System_39/render_39.mat
+    89936de5-12a1-41a5-a826-f60cb3792a63: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/c852756/System_39/render_39.glsl
+    0945ce38-d230-49da-82a6-465649cfa911: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/c852756/System_39/simulate_39.mat
+    f05aa812-08b2-4941-ab3a-6d151083b99a: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/c852756/System_39/simulate_39.glsl
+>>>>>>> Stashed changes
   Assets:
     - !<VFXAsset/c403bf42-b482-4aef-8906-13532712a354>
       PackagePath: ""
       GraphPath: ""
       Systems:
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
         39: !<VFXSystem/def337f8-ffdc-4c70-b8b6-86e6aab42c14>
           FeedbackMaterial: !<Material/4f077fcb-f6e2-43be-bead-cac95711c3b2>
@@ -59,6 +70,25 @@
               - !<own> ab22ccb9-c16a-41da-958c-14b03358a836
             Name: Material_Render
           FeedbackPass: !<Pass/3015b128-7fe1-4ccc-86ef-55eafaac6f3f>
+>>>>>>> Stashed changes
+=======
+        39: !<VFXSystem/2903bd8c-6cc2-4250-80ec-b85ac2fdfc63>
+          FeedbackMaterial: !<Material/acadcb01-5698-4700-82c8-1afc869ac766>
+            PackagePath: ""
+            PassesInfo:
+              - !<own> 5e80836f-4205-4acc-8391-8dbcde07dc12
+            Name: Material_Feedback
+          SimulateMaterial: !<Material/0945ce38-d230-49da-82a6-465649cfa911>
+            PackagePath: ""
+            PassesInfo:
+              - !<own> b1c01211-2bd1-4504-b6e2-4bb47a89884e
+            Name: Material_Simulate
+          RenderMaterial: !<Material/758f501e-2a4b-4970-90f8-7fe4f5a3ba62>
+            PackagePath: ""
+            PassesInfo:
+              - !<own> b0a00e5b-264b-4dc1-966f-890847d7ec1a
+            Name: Material_Render
+          FeedbackPass: !<Pass/f2786d0c-a75f-4605-b379-6810daac4a7f>
 >>>>>>> Stashed changes
             PackagePath: ""
             DefaultDefines:
@@ -583,9 +613,13 @@
               PassBindings:
                 []
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
           SimulatePass: !<Pass/015acbde-040f-4d88-b3c4-efa4628775fb>
 =======
           SimulatePass: !<Pass/c72a2a82-1b01-40c2-9b09-25444933bdf8>
+>>>>>>> Stashed changes
+=======
+          SimulatePass: !<Pass/f05aa812-08b2-4941-ab3a-6d151083b99a>
 >>>>>>> Stashed changes
             PackagePath: ""
             DefaultDefines:
@@ -1189,9 +1223,13 @@
                   mValues:
                     []
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
           RenderPass: !<Pass/b3e9dabe-88f2-4652-8f98-b6f8910f5ec7>
 =======
           RenderPass: !<Pass/b668c64d-0625-4991-92cd-19cba9cf5dd0>
+>>>>>>> Stashed changes
+=======
+          RenderPass: !<Pass/89936de5-12a1-41a5-a826-f60cb3792a63>
 >>>>>>> Stashed changes
             PackagePath: ""
             DefaultDefines:
@@ -1729,9 +1767,13 @@
                   mValues:
                     []
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
           Script: !<JavaScriptAsset/25c29872-b956-4695-a954-57203ac7cbd7>
 =======
           Script: !<JavaScriptAsset/a574ae0e-47e6-4d56-88a8-5d306f71a189>
+>>>>>>> Stashed changes
+=======
+          Script: !<JavaScriptAsset/2f979560-2e8c-4f98-9ccc-41e9c0eed571>
 >>>>>>> Stashed changes
             PackagePath: Manager_Script
             Description: ""
@@ -1788,9 +1830,13 @@
   NativePackageItems:
     []
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 - !<PassInfo/bd2658a5-ebd1-4153-bde3-2b1ad657cbe0>
 =======
 - !<PassInfo/5ab568ff-5958-4023-903b-c26c8de65b5f>
+>>>>>>> Stashed changes
+=======
+- !<PassInfo/5e80836f-4205-4acc-8391-8dbcde07dc12>
 >>>>>>> Stashed changes
   CachedProperties:
     []
@@ -1857,11 +1903,16 @@
           mipmaps: false
         type: Texture2D
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   Pass: !<reference> c7ed2c46-b907-4964-be72-faa511811e05
 - !<PassInfo/c2390d3c-4761-4dee-ae84-dc1102580092>
 =======
   Pass: !<reference> 3015b128-7fe1-4ccc-86ef-55eafaac6f3f
 - !<PassInfo/ab22ccb9-c16a-41da-958c-14b03358a836>
+=======
+  Pass: !<reference> f2786d0c-a75f-4605-b379-6810daac4a7f
+- !<PassInfo/b0a00e5b-264b-4dc1-966f-890847d7ec1a>
+>>>>>>> Stashed changes
   CachedProperties:
     []
   DepthWrite: true
@@ -2109,8 +2160,13 @@
     vfxTargetWidth:
       typeIdx: 0
       value: 0
+<<<<<<< Updated upstream
   Pass: !<reference> b668c64d-0625-4991-92cd-19cba9cf5dd0
 - !<PassInfo/ef044c92-23dc-423b-91c3-056308a53b64>
+>>>>>>> Stashed changes
+=======
+  Pass: !<reference> 89936de5-12a1-41a5-a826-f60cb3792a63
+- !<PassInfo/b1c01211-2bd1-4504-b6e2-4bb47a89884e>
 >>>>>>> Stashed changes
   CachedProperties:
     - uReset:
@@ -2694,6 +2750,7 @@
       typeIdx: 0
       value: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   Pass: !<reference> 015acbde-040f-4d88-b3c4-efa4628775fb
 - !<PassInfo/e02631c4-3706-4503-88cb-0e3062290329>
   CachedProperties:
@@ -2946,4 +3003,7 @@
   Pass: !<reference> b3e9dabe-88f2-4652-8f98-b6f8910f5ec7
 =======
   Pass: !<reference> c72a2a82-1b01-40c2-9b09-25444933bdf8
+>>>>>>> Stashed changes
+=======
+  Pass: !<reference> f05aa812-08b2-4941-ab3a-6d151083b99a
 >>>>>>> Stashed changes
