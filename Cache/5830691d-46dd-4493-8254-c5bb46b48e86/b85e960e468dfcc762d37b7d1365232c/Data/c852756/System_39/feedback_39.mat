@@ -1,9 +1,18 @@
+<<<<<<< Updated upstream
 - !<Material/4f077fcb-f6e2-43be-bead-cac95711c3b2>
   PackagePath: ""
   PassesInfo:
     - !<own> bd2658a5-ebd1-4153-bde3-2b1ad657cbe0
   Name: Material_Feedback
 - !<PassInfo/bd2658a5-ebd1-4153-bde3-2b1ad657cbe0>
+=======
+- !<Material/06cf2b43-167b-4712-91aa-dd522ab3ea95>
+  PackagePath: ""
+  PassesInfo:
+    - !<own> 5ab568ff-5958-4023-903b-c26c8de65b5f
+  Name: Material_Feedback
+- !<PassInfo/5ab568ff-5958-4023-903b-c26c8de65b5f>
+>>>>>>> Stashed changes
   CachedProperties:
     []
   DepthWrite: false

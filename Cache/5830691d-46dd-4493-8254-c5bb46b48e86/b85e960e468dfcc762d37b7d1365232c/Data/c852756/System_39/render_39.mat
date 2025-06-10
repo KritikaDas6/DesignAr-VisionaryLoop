@@ -1,9 +1,18 @@
+<<<<<<< Updated upstream
 - !<Material/490f6e98-1c3e-44f2-a93a-196b9d795992>
   PackagePath: ""
   PassesInfo:
     - !<own> e02631c4-3706-4503-88cb-0e3062290329
   Name: Material_Render
 - !<PassInfo/e02631c4-3706-4503-88cb-0e3062290329>
+=======
+- !<Material/77314713-ed34-4ad8-82a1-3d670ea963bd>
+  PackagePath: ""
+  PassesInfo:
+    - !<own> ab22ccb9-c16a-41da-958c-14b03358a836
+  Name: Material_Render
+- !<PassInfo/ab22ccb9-c16a-41da-958c-14b03358a836>
+>>>>>>> Stashed changes
   CachedProperties:
     - renderTarget0:
         typeIdx: 9
