@@ -1998,6 +1998,25 @@
     []
   Components:
     []
+- !<Image/28df1080-6cae-4c77-8066-2b19a7d4f5f8>
+  PrefabRemaps:
+    []
+  Name: Image
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Fit
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 9f3765cb-a62b-4746-a441-8d88d0af2f9c
+  FlipX: false
+  FlipY: false
+  RotationAngle: 0
+  Pivot: {x: 0.000000, y: 0.000000}
+  ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
 - !<SceneObject/2a98429a-2826-4b6f-aac8-3c746622be27>
   PrefabRemaps:
     []
@@ -3477,14 +3496,14 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: |+
-    CTA to Onboarding
+    Let's get started!
     
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 34
-  Font: !<reference> 709203b6-8b83-40d7-8dda-e5adc4fd2875
+  FontSize: 25
+  Font: !<reference> 642727e4-0ca5-4667-8a47-08d026610157
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
@@ -3494,7 +3513,7 @@
   OverflowHorizontal: Overflow
   Fill: !<TextFill>
     Mode: Solid
-    Color: {x: 1.000000, y: 0.984314, z: 0.000000, w: 1.000000}
+    Color: {x: 0.000000, y: 0.752941, z: 0.180392, w: 1.000000}
     Texture: !<reference> 00000000-0000-0000-0000-000000000000
     TileCount: 5.000000
     TileZone: Rect
@@ -3524,17 +3543,17 @@
     Enabled: false
     Fill: !<TextFill>
       Mode: Solid
-      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Color: {x: 0.886275, y: 0.996078, z: 0.000000, w: 1.000000}
       Texture: !<reference> 00000000-0000-0000-0000-000000000000
       TileCount: 5.000000
       TileZone: Rect
       TextureStretch: FitWidth
     Margins:
-      left: 0.000000
-      bottom: 0.000000
-      right: 0.000000
-      top: 0.000000
-    CornerRadius: 0.000000
+      left: 1.000000
+      bottom: 0.500000
+      right: 1.000000
+      top: 0.500000
+    CornerRadius: 30.000000
   AdvancedLayout: !<TextAdvancedLayout>
     ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
     LetterSpacing: 0.000000
@@ -3761,7 +3780,7 @@
   PrefabRemaps:
     []
   Name: 04_Setup 02
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -3817,10 +3836,10 @@
   UnitType: World
   SortingType: Hierarchy
   WorldSpaceRect:
-    left: -3.750000
-    bottom: -1.050000
-    right: 3.750000
-    top: 1.050000
+    left: -3.200000
+    bottom: -0.800000
+    right: 3.200000
+    top: 0.800000
 - !<ScriptComponent/5a926818-2389-46b2-b016-7514dada9be7>
   PrefabRemaps:
     []
@@ -4170,82 +4189,6 @@
   BlendNormals: false
   BlendShapes:
     {}
-- !<Text/6bd33795-941b-4dc1-a5cd-07266c67ae63>
-  PrefabRemaps:
-    []
-  Name: Text
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Text: Welcome to *ScaleAR*
-  Editable: false
-  ShowEditingPreview: true
-  TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
-  SizeToFit: false
-  FontSize: 96
-  Font: !<reference> 00000000-0000-0000-0000-000000000000
-  LayoutRect:
-    left: -11.000000
-    bottom: 0.000000
-    right: 11.000000
-    top: 0.000000
-  OverflowVertical: Overflow
-  OverflowHorizontal: Wrap
-  Fill: !<TextFill>
-    Mode: Solid
-    Color: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-    Texture: !<reference> 00000000-0000-0000-0000-000000000000
-    TileCount: 5.000000
-    TileZone: Rect
-    TextureStretch: FitWidth
-  Outline: !<OutlineSettings>
-    Enabled: false
-    Fill: !<TextFill>
-      Mode: Solid
-      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
-      Texture: !<reference> 00000000-0000-0000-0000-000000000000
-      TileCount: 5.000000
-      TileZone: Rect
-      TextureStretch: FitWidth
-    Size: 0.250000
-  Dropshadow: !<DropshadowSettings>
-    Enabled: false
-    Fill: !<TextFill>
-      Mode: Solid
-      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
-      Texture: !<reference> 00000000-0000-0000-0000-000000000000
-      TileCount: 5.000000
-      TileZone: Rect
-      TextureStretch: FitWidth
-    OffsetX: 0.250000
-    OffsetY: 0.250000
-  Background: !<BackgroundSettings>
-    Enabled: false
-    Fill: !<TextFill>
-      Mode: Solid
-      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
-      Texture: !<reference> 00000000-0000-0000-0000-000000000000
-      TileCount: 5.000000
-      TileZone: Rect
-      TextureStretch: FitWidth
-    Margins:
-      left: 0.000000
-      bottom: 0.000000
-      right: 0.000000
-      top: 0.000000
-    CornerRadius: 0.000000
-  AdvancedLayout: !<TextAdvancedLayout>
-    ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
-    LetterSpacing: 0.000000
-    LineSpacing: 1.000000
-    CapitalizationOverride: None
-  DepthTest: false
-  TwoSided: false
 - !<SceneObject/6c1b98dc-b832-4e40-8752-24e2c60052df>
   PrefabRemaps:
     []
@@ -4450,6 +4393,25 @@
   ForceCompound: false
   Intangible: false
   ShowCollider: false
+- !<Image/7207cf14-7d9c-4283-8d6e-a8e73190283b>
+  PrefabRemaps:
+    []
+  Name: Image
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Fit
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 88522dc5-7f2b-4617-adb7-e76fb5c82ce5
+  FlipX: false
+  FlipY: false
+  RotationAngle: 0
+  Pivot: {x: 0.000000, y: 0.000000}
+  ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
 - !<ScreenTransform/726f93e4-ce0e-4f49-bef4-b94296f7c746>
   PrefabRemaps:
     []
@@ -4693,7 +4655,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: -12.011662, z: 4.000000}
+    position: {x: 0.000000, y: -11.000000, z: 4.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 2.000000, y: 2.000000, z: 2.000000}
     hasSegmentScaleCompensation: false
@@ -4804,6 +4766,21 @@
     - !<own> 1193591b-32fd-41a0-928e-7833b2f386b2
   Components:
     []
+- !<SceneObject/774ff417-75d9-4bbd-8cd8-a826b76da3d4>
+  PrefabRemaps:
+    []
+  Name: Texture
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 4.000000, z: 3.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 22.000000, y: 22.000000, z: 22.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 28df1080-6cae-4c77-8066-2b19a7d4f5f8
 - !<SceneObject/778d89c6-9af9-46aa-ab1b-dbd75e01d63f>
   PrefabRemaps:
     []
@@ -4819,21 +4796,6 @@
     []
   Components:
     []
-- !<SceneObject/77fbdab4-1706-40b7-9832-2ee3961c0f7b>
-  PrefabRemaps:
-    []
-  Name: Title_Text
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: -1.994118, z: 2.500000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 6bd33795-941b-4dc1-a5cd-07266c67ae63
 - !<ScreenTransform/78bb0d65-ad31-4251-b98a-5e19d9edb4d0>
   PrefabRemaps:
     []
@@ -4915,21 +4877,6 @@
     bottom: 0.000000
     right: 0.000000
     top: 0.000000
-- !<SceneObject/7bb70192-57cd-4143-9c01-edda0e3cc34b>
-  PrefabRemaps:
-    []
-  Name: Image
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 7.419941, z: 0.800549}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 15.000000, y: 11.250000, z: 0.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> ee006683-17b3-47f6-b2e1-0cf5786ea44f
 - !<SceneObject/7d2aeab7-75d6-4cdb-867d-9572220112fc>
   PrefabRemaps:
     []
@@ -7033,7 +6980,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: -6.869434, z: 2.500000}
+    position: {x: 0.000000, y: -6.869434, z: 1.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -8284,16 +8231,14 @@
   Enabled: true
   ScriptAsset: !<reference> 657cbbe5-2a9c-4889-93fb-fd72ba8a1d52
   ScriptInputsDefault:
-    hoveringColor: true
-    activatingColor: true
     outlineWeight: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       targetOutlineMaterial: !<reference.Material> 7231c7bc-6c14-4331-ad23-9ab928107707
-      hoveringColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 0.040000, w: 1.000000}
-      activatingColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      hoveringColor: !<Vec4> {x: 0.000000, y: 0.752941, z: 0.180392, w: 1.000000}
+      activatingColor: !<Vec4> {x: 0.886275, y: 0.996078, z: 0.000000, w: 1.000000}
       outlineWeight: -0.250000
       meshVisuals: !<reference.RenderMeshVisual[]>
         - !<reference> b0434145-69e4-4707-9bd3-30a9275b20e1
@@ -8735,6 +8680,21 @@
   ScriptTypes:
     "":
       {}
+- !<SceneObject/dc085f4b-f188-41e8-8a2e-e74a72e673fc>
+  PrefabRemaps:
+    []
+  Name: Illust
+  Enabled: false
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 7.000000, z: 3.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 17.000000, y: 17.000000, z: 17.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 7207cf14-7d9c-4283-8d6e-a8e73190283b
 - !<SceneObject/dc6dad0e-f2ba-4ba4-ba79-e6e31d10625e>
   PrefabRemaps:
     []
@@ -9018,15 +8978,13 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: |-
-    Brief info about what *Name* is.
-    Benefits of use
+  Text: Turn small sketches into full-scale creations—trace and refine in AR.
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
   FontSize: 50
-  Font: !<reference> 00000000-0000-0000-0000-000000000000
+  Font: !<reference> 742030c4-491a-4efb-a147-8bea2586b68f
   LayoutRect:
     left: -10.000000
     bottom: 0.000000
@@ -9036,7 +8994,7 @@
   OverflowHorizontal: Wrap
   Fill: !<TextFill>
     Mode: Solid
-    Color: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    Color: {x: 0.886275, y: 0.996078, z: 0.000000, w: 1.000000}
     Texture: !<reference> 00000000-0000-0000-0000-000000000000
     TileCount: 5.000000
     TileZone: Rect
@@ -9080,7 +9038,7 @@
   AdvancedLayout: !<TextAdvancedLayout>
     ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
     LetterSpacing: 0.000000
-    LineSpacing: 1.000000
+    LineSpacing: 0.800000
     CapitalizationOverride: None
   DepthTest: false
   TwoSided: false
@@ -9411,25 +9369,6 @@
   ScriptTypes:
     "":
       {}
-- !<Image/ee006683-17b3-47f6-b2e1-0cf5786ea44f>
-  PrefabRemaps:
-    []
-  Name: Image
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> c37b2748-7311-4997-8056-5b895fd5edd9
-  FlipX: false
-  FlipY: false
-  RotationAngle: 0
-  Pivot: {x: 0.000000, y: 0.000000}
-  ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
 - !<ScreenTransform/eee301e5-46cd-4255-ac3c-f81823a85c04>
   PrefabRemaps:
     []
@@ -9967,7 +9906,7 @@
   PrefabRemaps:
     []
   Name: 01_Welcome screen
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -9975,8 +9914,8 @@
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
-    - !<own> 7bb70192-57cd-4143-9c01-edda0e3cc34b
-    - !<own> 77fbdab4-1706-40b7-9832-2ee3961c0f7b
+    - !<own> 774ff417-75d9-4bbd-8cd8-a826b76da3d4
+    - !<own> dc085f4b-f188-41e8-8a2e-e74a72e673fc
     - !<own> b01d3c4f-6915-488d-b1fa-f02513105ead
     - !<own> 75727871-40f3-4892-b91a-07dca73ac77a
   Components:

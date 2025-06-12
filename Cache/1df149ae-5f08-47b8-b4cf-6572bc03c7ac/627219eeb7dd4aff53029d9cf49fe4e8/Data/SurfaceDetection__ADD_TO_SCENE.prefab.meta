@@ -9,9 +9,11 @@
     ObjectPrefab: !<own> 21f2fc37-9e37-40b8-bb6b-c343bb84e2a4
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/ed001b88-6e5b-4fc1-8cfc-78791c481b13>
+  ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
 - !<ObjectPrefabAssetData/21f2fc37-9e37-40b8-bb6b-c343bb84e2a4>
   SourceRemaps:
     - 1310f45e-97d3-4c31-9463-82a46060a0b2: fd74ffe4-ef38-4f73-87a3-ee45cb0590ce
@@ -281,7 +283,7 @@
   UseEnvMapFromCamera: false
   EnvMapFromCameraMode: Auto
   UseEstimation: false
-  EstimationIntensity: 1.000000
+  EstimationIntensity: !<float> 1.000000
   EstimationSharpness: 1.000000
   EnvMapExposure: 1.000000
   EnvMapRotation: 0.000000

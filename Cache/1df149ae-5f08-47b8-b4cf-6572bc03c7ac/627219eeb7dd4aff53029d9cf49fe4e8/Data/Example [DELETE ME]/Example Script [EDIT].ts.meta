@@ -7,9 +7,13 @@
   PackagePolicy: CannotBeUnpacked
   AssetDataMap:
     TypeScriptAsset: !<own> fe64a7c7-66d3-4565-81fd-8971c7e9196a
-  DependentFiles: []
-  ImporterSettings: !<AssetImporterSettings/32f12c39-9e97-4644-9369-8628f3a75444> {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
 - !<TypeScriptAssetData/fe64a7c7-66d3-4565-81fd-8971c7e9196a>
   SvgIcon: ""
   Description: ""
@@ -17,27 +21,22 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-  ComponentUid: f92b3ea7-5853-4a27-9050-52870b37c3e0
-=======
-  ComponentUid: a6168829-27cd-44c4-ba5b-24f9e96b3775
->>>>>>> Stashed changes
-=======
   ComponentUid: 2105f2d9-6279-4609-b036-770f3d5da47d
->>>>>>> Stashed changes
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
     objectVisuals: false
     surfaceDetection: false
-  ScriptTypesHidden: {}
+  ScriptTypesHidden:
+    {}
   DefaultScriptInputs:
     - objectVisuals: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       surfaceDetection: !<MappingBased.SurfaceDetection> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
-    - {}
+    -
+      {}
   InputLines:
     - // @input SceneObject objectVisuals
     - // @input SurfaceDetection surfaceDetection
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
