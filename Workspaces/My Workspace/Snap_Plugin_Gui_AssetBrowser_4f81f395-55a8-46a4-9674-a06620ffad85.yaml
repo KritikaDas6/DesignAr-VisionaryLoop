@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 821
+    size: 830
     values:
       - Base 2.png
       - Base.png
@@ -36,6 +36,7 @@ CollapsedEntities:
       - ImageMaterial 8.mat
       - ImageMaterial 9.mat
       - ImageMaterial.mat
+      - Manrope-Bold.ttf
       - Manrope-Medium.ttf
       - Manrope-Regular.ttf
       - Manrope-VariableFont_wght.ttf
@@ -164,6 +165,12 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Materials/ContainerImageMaterial.mat
       - SpectaclesInteractionKit/Assets/Materials/LogoMaterial.mat
       - SpectaclesInteractionKit/Assets/Materials/NormalBasedTargetOutline.mat
+      - SpectaclesInteractionKit/Assets/Materials/PinchButtonDarkInactive.mat
+      - SpectaclesInteractionKit/Assets/Materials/PinchButtonDarkRadial.mat
+      - SpectaclesInteractionKit/Assets/Materials/PinchButtonToggleOffIcon.mat
+      - SpectaclesInteractionKit/Assets/Materials/PinchButtonToggleOnDefault.mat
+      - SpectaclesInteractionKit/Assets/Materials/PinchButtonToggleOnIcon.mat
+      - SpectaclesInteractionKit/Assets/Materials/PinchButtonToggleOnSelect.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/ButtonHover.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/ButtonIdle.mat
@@ -192,6 +199,8 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Materials/ScrollBarButton.mat
       - SpectaclesInteractionKit/Assets/Materials/ScrollBarSlider.mat
       - SpectaclesInteractionKit/Assets/Materials/SimplePBRMaterial.mat
+      - SpectaclesInteractionKit/Assets/Materials/SliderMat/PinchButtonDarkDefault.mat
+      - SpectaclesInteractionKit/Assets/Materials/SliderMat/PinchButtonOnSelect.mat
       - SpectaclesInteractionKit/Assets/Materials/SliderMat/SliderMat.mat
       - SpectaclesInteractionKit/Assets/Materials/SliderMat/TargetOutlineMaterial.mat
       - SpectaclesInteractionKit/Assets/Materials/SpritePreset.mat
