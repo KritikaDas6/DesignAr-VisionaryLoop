@@ -1,53 +1,13 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 838
+    size: 782
     values:
-      - Base 2.png
-      - Base.png
-      - Box.mesh
-      - Customizable Progress Bar.lsc
-      - Device Camera Texture.deviceCameraTexture
-      - DynaPuff-Bold.ttf
-      - DynaPuff-Medium.ttf
-      - "DynaPuff-VariableFont_wdth,wght.ttf"
-      - Echopark.hdr
-      - Echopark.hdr/Diffuse
-      - Echopark.hdr/Specular
-      - Eye Color.mat
-      - Group 1.png
-      - Hint - Scan Room
-      - Image 2.mat
-      - Image 3.mat
-      - Image 4.mat
-      - Image 5.mat
-      - Image 6.mat
-      - Image.mat
-      - ImageMaterial 10.mat
-      - ImageMaterial 11.mat
-      - ImageMaterial 12.mat
-      - ImageMaterial 13.mat
-      - ImageMaterial 14.mat
-      - ImageMaterial 15.mat
-      - ImageMaterial 2.mat
-      - ImageMaterial 3.mat
-      - ImageMaterial 4.mat
-      - ImageMaterial 5.mat
-      - ImageMaterial 6.mat
-      - ImageMaterial 7.mat
-      - ImageMaterial 8.mat
-      - ImageMaterial 9.mat
-      - ImageMaterial.mat
-      - Manrope-Bold.ttf
-      - Manrope-Medium.ttf
-      - Manrope-Regular.ttf
-      - Manrope-VariableFont_wght.ttf
-      - MaterialParams.png
-      - Normal.png
-      - PBR 2.mat
-      - PBR 3.mat
-      - Precise Object Toggle.lsc
-      - Render Target.renderTarget
+      - AddedAsset
+      - Font
+      - ImageTexture
+      - ImageTexture/Bird.mat
+      - Prefab
       - Resource Bar Pack
       - Resource Bar Pack/.hidden
       - "Resource Bar Pack/.hidden/Bar Mat 1 [EDIT ME].ss_graph"
@@ -120,11 +80,9 @@ CollapsedEntities:
       - Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Segmented Bar/Design 1/Life bars 1.png
       - Scene.scene
       - Script 2.js
-      - Script 3.js
-      - Script 4.js
-      - Script 5.js
       - Script.js
-      - Sketch 2.png
+      - Script_ContainerImage
+      - Script_HandFollower
       - Spawn Object at World Mesh On Tap
       - Spawn Object at World Mesh On Tap/Point of Interest.prefab
       - Spawn Object at World Mesh On Tap/Spawn Object at World Mesh On Tap.js
@@ -152,6 +110,7 @@ CollapsedEntities:
       - "Spawn Object at World Mesh On Tap/[Mesh Builder Example] Pipe Between Objects/Textures/MaterialParams.png"
       - "Spawn Object at World Mesh On Tap/[Mesh Builder Example] Pipe Between Objects/Textures/Normal.png"
       - Spawn Object at World Mesh On Tap/package.native
+      - SpectaclesInteractionKit
       - SpectaclesInteractionKit/Assets
       - SpectaclesInteractionKit/Assets/Audio
       - SpectaclesInteractionKit/Assets/Audio/HoverAudioTrack.wav
@@ -645,7 +604,6 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Prefabs
       - SpectaclesInteractionKit/Prefabs/ScrollViewListItem.prefab
       - SpectaclesInteractionKit/Prefabs/SpectaclesInteractionKit.prefab
-      - SpectaclesInteractionKit/Providers
       - SpectaclesInteractionKit/Providers/CameraProvider
       - SpectaclesInteractionKit/Providers/CameraProvider/ARCameraFinderProvider.ts
       - SpectaclesInteractionKit/Providers/CameraProvider/BaseCameraFinderProvider.ts
@@ -654,7 +612,6 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Providers/CameraProvider/WorldCameraFinderProvider.ts
       - SpectaclesInteractionKit/Providers/CursorControllerProvider
       - SpectaclesInteractionKit/Providers/CursorControllerProvider/CursorControllerProvider.ts
-      - SpectaclesInteractionKit/Providers/HandInputData
       - SpectaclesInteractionKit/Providers/HandInputData/BaseHand.ts
       - SpectaclesInteractionKit/Providers/HandInputData/DefaultHandTrackingAssetProvider.ts
       - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider
@@ -758,14 +715,7 @@ CollapsedEntities:
       - Surface Detection.lspkg/Textures
       - Surface Detection.lspkg/Textures/groundIcon.png
       - Surface Detection.lspkg/package.native
-      - Text2 2.png
-      - Text2 3.png
-      - Text2.png
-      - Untitled JavaScript 2.js
-      - Untitled JavaScript 3.js
       - Untitled JavaScript.js
-      - Untitled TypeScript 2.ts
-      - Untitled TypeScript 3.ts
       - Untitled TypeScript.ts
       - World Mesh - Spawn On Surfaces.lspkg
       - World Mesh - Spawn On Surfaces.lspkg/Materials
@@ -835,10 +785,4 @@ CollapsedEntities:
       - World Query Hit - Spawn On Surface/Textures/statue_params.png
       - World Query Hit - Spawn On Surface/World Query Hit Example.prefab
       - World Query Hit - Spawn On Surface/WorldQueryHitExample.ts
-      - flat.ss_graph
-      - image.png.png
-      - image_unlit 2.ss_graph
-      - image_unlit.ss_graph
-      - pbr.ss_graph
-      - simple_pbr.ss_graph
   options: 4
