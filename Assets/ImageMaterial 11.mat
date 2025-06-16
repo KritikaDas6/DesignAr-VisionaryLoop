@@ -4,45 +4,9 @@
     - !<own> 0a72702d-b3d2-4903-9d70-981cc3ba25db
 - !<PassInfo/0a72702d-b3d2-4903-9d70-981cc3ba25db>
   CachedProperties:
-    - Port_Default_N204:
-        typeIdx: 1
-        value: 0.000000
     - Port_Default_N369:
         typeIdx: 5
         value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-    - PreviewEnabled:
-        typeIdx: 0
-        value: 0
-    - baseColor:
-        typeIdx: 5
-        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-    - baseTex:
-        typeIdx: 9
-        value:
-          id: 6ab70b2b-b1d4-4c0b-8f1f-0b7aac5b5e7f
-          sampler:
-            filteringMode: Trilinear
-            wrapModeU: Repeat
-            wrapModeV: Repeat
-            wrapModeW: Repeat
-            borderColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-            mipmaps: false
-          type: Texture2D
-    - baseTexTransform:
-        typeIdx: 7
-        value:
-          0: {x: 1.000000, y: 0.000000, z: 0.000000}
-          1: {x: 0.000000, y: 1.000000, z: 0.000000}
-          2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    - overrideTimeDelta:
-        typeIdx: 1
-        value: 0.000000
-    - overrideTimeElapsed:
-        typeIdx: 1
-        value: 0.000000
-    - overrideTimeEnabled:
-        typeIdx: 0
-        value: 0
   DepthWrite: true
   DepthTest: true
   DepthFunction: LessEqual
@@ -61,5 +25,40 @@
     - NODE_69_DROPLIST_ITEM 0
   BlendMode: PremultipliedAlphaAuto
   Properties:
-    {}
+    Port_Default_N204:
+      typeIdx: 1
+      value: 0.000000
+    PreviewEnabled:
+      typeIdx: 0
+      value: 0
+    baseColor:
+      typeIdx: 5
+      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    baseTex:
+      typeIdx: 9
+      value:
+        id: 6ab70b2b-b1d4-4c0b-8f1f-0b7aac5b5e7f
+        sampler:
+          filteringMode: Trilinear
+          wrapModeU: Repeat
+          wrapModeV: Repeat
+          wrapModeW: Repeat
+          borderColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+          mipmaps: false
+        type: Texture2D
+    baseTexTransform:
+      typeIdx: 7
+      value:
+        0: {x: 1.000000, y: 0.000000, z: 0.000000}
+        1: {x: 0.000000, y: 1.000000, z: 0.000000}
+        2: {x: 0.000000, y: 0.000000, z: 1.000000}
+    overrideTimeDelta:
+      typeIdx: 1
+      value: 0.000000
+    overrideTimeElapsed:
+      typeIdx: 1
+      value: 0.000000
+    overrideTimeEnabled:
+      typeIdx: 0
+      value: 0
   Pass: !<reference> 0379243d-7298-421b-b2e6-e1b3db2d6102
