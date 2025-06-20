@@ -28,7 +28,10 @@
   ScriptInputsHidden:
     customFunctionForOnButtonPinched: false
     editEventCallbacks: false
+    isToggleButton: false
     onButtonPinchedFunctionNames: false
+    targetObjectToDisable: false
+    targetObjectToEnable: false
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
@@ -36,10 +39,16 @@
       customFunctionForOnButtonPinched: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
       onButtonPinchedFunctionNames: !<string[]>
         []
+      targetObjectToDisable: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      targetObjectToEnable: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      isToggleButton: false
   ScriptTypes:
     -
       {}
   InputLines:
+    - '// @input SceneObject targetObjectToDisable {"hint":"The object to disable when the pinch is triggered"}'
+    - '// @input SceneObject targetObjectToEnable {"hint":"The object to enable when the pinch is triggered"}'
+    - '// @input bool isToggleButton {"hint":"Is toggle on or off"}'
     - "// @input bool editEventCallbacks {\"hint\":\"Enable this to add functions from another script to this component's callback events\"}"
     - '// @ui {"widget":"group_start", "label":"On Button Pinched Callbacks", "showIf":"editEventCallbacks"}'
     - '// @input Component.ScriptComponent customFunctionForOnButtonPinched {"hint":"The script containing functions to be called when button is pinched"}'

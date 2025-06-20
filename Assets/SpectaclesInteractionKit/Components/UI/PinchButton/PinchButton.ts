@@ -11,6 +11,21 @@ const TAG = "PinchButton"
  */
 @component
 export class PinchButton extends BaseScriptComponent {
+  @input("SceneObject")
+  @allowUndefined
+  @hint("The object to disable when the pinch is triggered")
+  private targetObjectToDisable: SceneObject
+    
+  @input("SceneObject")
+  @allowUndefined
+  @hint("The object to enable when the pinch is triggered")
+  private targetObjectToEnable: SceneObject
+  
+  @input
+  @allowUndefined
+  @hint("Is toggle on or off")
+  private isToggleButton: boolean = false
+    
   @input
   @hint(
     "Enable this to add functions from another script to this component's callback events",
@@ -51,6 +66,31 @@ export class PinchButton extends BaseScriptComponent {
       this.interactable.onTriggerEnd.add((interactorEvent: InteractorEvent) => {
         if (this.enabled) {
           this.onButtonPinchedEvent.invoke(interactorEvent)
+          if (!this.isToggleButton) {
+              // Enable the target object if assigned
+              if (this.targetObjectToEnable) {
+                this.targetObjectToEnable.enabled = true;
+              }
+                        
+              // Disable the target object if assigned
+              if (this.targetObjectToDisable) {
+                this.targetObjectToDisable.enabled = false;
+              }        
+          }
+          else {
+              if (this.targetObjectToDisable) {
+                if (this.targetObjectToDisable.enabled) {
+                    this.targetObjectToDisable.enabled = false;
+                }
+                else {
+                    this.targetObjectToDisable.enabled = true;    
+                }
+              }
+          }
+          
+          
+                    
+                
         }
       })
     })
@@ -61,6 +101,11 @@ export class PinchButton extends BaseScriptComponent {
           this.onButtonPinchedFunctionNames,
         ),
       )
+//      if (this.sceneObject) {
+//            print("hi")
+//            this.sceneObject.enabled = false;
+//            
+//        }
     }
   }
 }

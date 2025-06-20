@@ -1,0 +1,42 @@
+- !<AssetImportMetadata/ce8f8dd4-fba2-4a15-9a37-694f203a1b9d>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 61884db1-f4df-4003-8ccb-682235f731e5
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 61884db1-f4df-4003-8ccb-682235f731e5
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> c8faf658-ab58-47a1-830c-7c91b296e9c7
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/c8faf658-ab58-47a1-830c-7c91b296e9c7>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 18fe7c90-0eb8-4c52-9879-cde248afc260
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    image: false
+    slider: false
+  ScriptTypesHidden:
+    {}
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - image: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      slider: !<MappingBased.Slider> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input Component.Image image
+    - // @input Slider slider
