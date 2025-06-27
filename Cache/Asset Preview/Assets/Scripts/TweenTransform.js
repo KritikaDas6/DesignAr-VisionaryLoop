@@ -34,28 +34,28 @@ if (!script.sceneObject) {
 }
 
 // Setup the external API
-script.api.tweenObject = script.getSceneObject();
-script.api.tweenType = 'transform';
-script.api.tweenName = script.tweenName;
-script.api.time = script.time;
-script.api.startTween = startTween;
-script.api.resetObject = resetObject;
-script.api.tween = null;
-script.api.type = script.type;
-script.api.movementType = script.movementType;
-script.api.setupTween = setupTween;
-script.api.setupTweenBackwards = setupTweenBackwards;
-script.api.sceneObject = script.sceneObject;
-script.api.updateToStart = updateToStart;
-script.api.updateToEnd = updateToEnd;
-script.api.loopType = script.loopType;
-script.api.start = null;
-script.api.end = null;
-script.api.setStart = setStart;
-script.api.setEnd = setEnd;
-script.api.manualStart = false;
-script.api.manualEnd = false;
-script.api.playAutomatically = script.playAutomatically;
+script.tweenObject = script.getSceneObject();
+script.tweenType = 'transform';
+script.tweenName = script.tweenName;
+script.time = script.time;
+script.startTween = startTween;
+script.resetObject = resetObject;
+script.tween = null;
+script.type = script.type;
+script.movementType = script.movementType;
+script.setupTween = setupTween;
+script.setupTweenBackwards = setupTweenBackwards;
+script.sceneObject = script.sceneObject;
+script.updateToStart = updateToStart;
+script.updateToEnd = updateToEnd;
+script.loopType = script.loopType;
+script.start = null;
+script.end = null;
+script.setStart = setStart;
+script.setEnd = setEnd;
+script.manualStart = false;
+script.manualEnd = false;
+script.playAutomatically = script.playAutomatically;
 script.createEvent('OnDestroyEvent').bind(stopTween);
 
 if (global.tweenManager && global.tweenManager.addToRegistry) {
@@ -64,27 +64,27 @@ if (global.tweenManager && global.tweenManager.addToRegistry) {
 
 // Manually set start value
 function setStart(start) {
-    script.api.manualStart = true;
-    script.api.start = start;
+    script.manualStart = true;
+    script.start = start;
 }
 
 // Manually set end value
 function setEnd(end) {
-    script.api.manualEnd = true;
-    script.api.end = end;
+    script.manualEnd = true;
+    script.end = end;
 }
 
 // Update the tween to its start
 function updateToStart() {
-    updateValue(script.api.start);
+    updateValue(script.start);
 }
 
 // Update the tween to its end
 function updateToEnd() {
     if (script.loopType == 3) {
-        updateValue(script.api.start);
+        updateValue(script.start);
     } else {
-        updateValue(script.api.end);
+        updateValue(script.end);
     }
 }
 
@@ -101,19 +101,19 @@ function startTween() {
         return;
     }
 
-    script.api.tween = setupTween();
+    script.tween = setupTween();
 
-    if (script.api.tween) {
+    if (script.tween) {
         // Start the tween
-        script.api.tween.start();
+        script.tween.start();
     }
 }
 
 // Stops active tween
 function stopTween() {
-    if (script.api.tween) {
-        script.api.tween.stop();
-        script.api.tween = null;
+    if (script.tween) {
+        script.tween.stop();
+        script.tween = null;
     }
 }
 
@@ -121,7 +121,7 @@ function stopTween() {
 function setupTween() {
     const DEG_TO_RAD = 0.0174533;
 
-    const transform = script.api.sceneObject.getTransform();
+    const transform = script.sceneObject.getTransform();
 
     let transformParameter = null;
 
@@ -147,36 +147,36 @@ function setupTween() {
     }
 
     // Set the start and end of the script based on the movementType selected
-    if (!script.api.manualStart) {
+    if (!script.manualStart) {
         switch (script.movementType) {
             case 0:
-                script.api.start = (script.type == 2) ? quat.fromEulerAngles(script.start.x * DEG_TO_RAD, script.start.y * DEG_TO_RAD, script.start.z * DEG_TO_RAD) : script.start;
+                script.start = (script.type == 2) ? quat.fromEulerAngles(script.start.x * DEG_TO_RAD, script.start.y * DEG_TO_RAD, script.start.z * DEG_TO_RAD) : script.start;
                 break;
             case 1:
-                script.api.start = (script.type == 2) ? transformParameter : new vec3(transformParameter.x, transformParameter.y, transformParameter.z);
+                script.start = (script.type == 2) ? transformParameter : new vec3(transformParameter.x, transformParameter.y, transformParameter.z);
                 break;
             case 2:
-                script.api.start = (script.type == 2) ? quat.fromEulerVec(script.from.uniformScale(DEG_TO_RAD)) : new vec3(script.from.x, script.from.y, script.from.z);
+                script.start = (script.type == 2) ? quat.fromEulerVec(script.from.uniformScale(DEG_TO_RAD)) : new vec3(script.from.x, script.from.y, script.from.z);
                 break;
             case 3:
-                script.api.start = (script.type == 2) ? transformParameter : new vec3(transformParameter.x, transformParameter.y, transformParameter.z);
+                script.start = (script.type == 2) ? transformParameter : new vec3(transformParameter.x, transformParameter.y, transformParameter.z);
                 break;
         }
     }
 
-    if (!script.api.manualEnd) {
+    if (!script.manualEnd) {
         switch (script.movementType) {
             case 0:
-                script.api.end = (script.type == 2) ? quat.fromEulerAngles(script.end.x * DEG_TO_RAD, script.end.y * DEG_TO_RAD, script.end.z * DEG_TO_RAD) : script.end;
+                script.end = (script.type == 2) ? quat.fromEulerAngles(script.end.x * DEG_TO_RAD, script.end.y * DEG_TO_RAD, script.end.z * DEG_TO_RAD) : script.end;
                 break;
             case 1:
-                script.api.end = (script.type == 2) ? quat.fromEulerVec(script.to.uniformScale(DEG_TO_RAD)) : new vec3(script.to.x, script.to.y, script.to.z);
+                script.end = (script.type == 2) ? quat.fromEulerVec(script.to.uniformScale(DEG_TO_RAD)) : new vec3(script.to.x, script.to.y, script.to.z);
                 break;
             case 2:
-                script.api.end = (script.type == 2) ? transformParameter : new vec3(transformParameter.x, transformParameter.y, transformParameter.z);
+                script.end = (script.type == 2) ? transformParameter : new vec3(transformParameter.x, transformParameter.y, transformParameter.z);
                 break;
             case 3:
-                script.api.end = (script.type == 2) ? transformParameter.multiply(quat.angleAxis(script.offset.x * DEG_TO_RAD, vec3.right())).multiply(quat.angleAxis(script.offset.y * DEG_TO_RAD, vec3.up()))
+                script.end = (script.type == 2) ? transformParameter.multiply(quat.angleAxis(script.offset.x * DEG_TO_RAD, vec3.right())).multiply(quat.angleAxis(script.offset.y * DEG_TO_RAD, vec3.up()))
                     .multiply(quat.angleAxis(script.offset.z * DEG_TO_RAD, vec3.forward())) : new vec3(transformParameter.x + script.offset.x, transformParameter.y + script.offset.y, transformParameter.z + script.offset.z);
                 break;
         }
@@ -185,17 +185,17 @@ function setupTween() {
     startValue = (script.type == 2) ? {
         x: 0
     } : {
-        x: script.api.start.x,
-        y: script.api.start.y,
-        z: script.api.start.z
+        x: script.start.x,
+        y: script.start.y,
+        z: script.start.z
     };
 
     endValue = (script.type == 2) ? {
         x: 1
     } : {
-        x: script.api.end.x,
-        y: script.api.end.y,
-        z: script.api.end.z
+        x: script.end.x,
+        y: script.end.y,
+        z: script.end.z
     };
 
     // Reset object to start
@@ -203,7 +203,7 @@ function setupTween() {
 
     // Create the tween
     tween = new global.TWEEN.Tween(startValue)
-        .to(endValue, script.api.time * 1000.0)
+        .to(endValue, script.time * 1000.0)
         .delay(script.delay * 1000.0)
         .easing(global.tweenManager.getTweenEasingType(script.easingFunction, script.easingType))
         .onUpdate(updateValue)
@@ -214,11 +214,11 @@ function setupTween() {
         if (script.movementType == 3 && script.additive && script.loopType == 1) {
             global.tweenManager.setTweenLoopType(tween, 0);
         } else {
-            global.tweenManager.setTweenLoopType(tween, script.api.loopType);
+            global.tweenManager.setTweenLoopType(tween, script.loopType);
         }
 
         // Save reference to tween
-        script.api.tween = tween;
+        script.tween = tween;
 
         return tween;
     }
@@ -226,16 +226,16 @@ function setupTween() {
 
 // Resets the object to its start
 function resetObject() {
-    if (script.api.start == null) {
+    if (script.start == null) {
         setupTween();
     }
 
     const startValue = (script.type == 2) ? {
         x: 0
     } : {
-        x: script.api.start.x,
-        y: script.api.start.y,
-        z: script.api.start.z
+        x: script.start.x,
+        y: script.start.y,
+        z: script.start.z
     };
 
     // Initialize transform to start value
@@ -248,18 +248,18 @@ function setupTweenBackwards() {
     const startValue = (script.type == 2) ? {
         x: (script.loopType == 3) ? 0 : 1
     } : {
-        x: (script.loopType == 3) ? script.api.start.x : script.api.end.x,
-        y: (script.loopType == 3) ? script.api.start.y : script.api.end.y,
-        z: (script.loopType == 3) ? script.api.start.z : script.api.end.z
+        x: (script.loopType == 3) ? script.start.x : script.end.x,
+        y: (script.loopType == 3) ? script.start.y : script.end.y,
+        z: (script.loopType == 3) ? script.start.z : script.end.z
     };
 
     const endValue = (script.type == 2) ? {
         x: (script.loopType == 3) ? 1 : 0
 
     } : {
-        x: (script.loopType == 3) ? script.api.end.x : script.api.start.x,
-        y: (script.loopType == 3) ? script.api.end.y : script.api.start.y,
-        z: (script.loopType == 3) ? script.api.end.z : script.api.start.z
+        x: (script.loopType == 3) ? script.end.x : script.start.x,
+        y: (script.loopType == 3) ? script.end.y : script.start.y,
+        z: (script.loopType == 3) ? script.end.z : script.start.z
     };
 
     let tween = null;
@@ -269,14 +269,14 @@ function setupTweenBackwards() {
 
     // Create the tween
     tween = new global.TWEEN.Tween(startValue)
-        .to(endValue, script.api.time * 1000.0)
+        .to(endValue, script.time * 1000.0)
         .delay(script.delay * 1000.0)
         .easing(global.tweenManager.getTweenEasingType(script.easingFunction, easingType))
         .onUpdate(updateValue);
 
     if (tween) {
         // Configure the type of looping based on the inputted parameters
-        global.tweenManager.setTweenLoopType(tween, script.api.loopType);
+        global.tweenManager.setTweenLoopType(tween, script.loopType);
 
         return tween;
     }
@@ -285,7 +285,7 @@ function setupTweenBackwards() {
 // Here's were the values returned by the tween are used
 // to drive the transform of the SceneObject
 function updateValue(value) {
-    const transform = script.api.sceneObject.getTransform();
+    const transform = script.sceneObject.getTransform();
     const local = script.isLocal ? 'Local' : 'World';
     let type = null;
     let newValue = null;
@@ -297,7 +297,7 @@ function updateValue(value) {
         newValue = new vec3(value.x, value.y, value.z);
     } else if (script.type == 2) {
         type = 'Rotation';
-        newValue = quat.slerp(script.api.start, script.api.end, value.x);
+        newValue = quat.slerp(script.start, script.end, value.x);
         newValue.normalize();
     }
     transform['set' + local + type](newValue);

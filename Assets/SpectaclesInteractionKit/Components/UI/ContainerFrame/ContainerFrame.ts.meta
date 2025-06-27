@@ -4,17 +4,87 @@
   ImporterName: TypeScriptAssetImporter
   PrimaryAsset: !<reference> 94ea82ba-1d42-4617-b71f-c92262f5960b
   PackageType: NotAPackage
-  AssetDataMap:
-    TypeScriptAsset: !<own> 543073b2-90b4-4ebc-8af1-8808852fd4c3
-  ImporterSettings: !<AssetImporterSettings>
-    {}
   PackagePolicy: CannotBeUnpacked
-  DependentFiles:
-    []
-  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
     {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 543073b2-90b4-4ebc-8af1-8808852fd4c3
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<TypeScriptAssetData/543073b2-90b4-4ebc-8af1-8808852fd4c3>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 7770857d-cabb-451a-82dc-80e8e17bcd3a
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    _enableInteractionPlane: false
+    allowScaling: false
+    allowTranslation: false
+    autoScaleContent: false
+    autoShowHide: false
+    border: false
+    constantPadding: false
+    cutOut: false
+    innerSize: false
+    isContentInteractable: false
+    isFollowing: false
+    itemSnapping: false
+    maximumSize: false
+    minimumSize: false
+    relativeZ: false
+    showCloseButton: false
+    showFollowButton: false
+    useBillboarding: false
+    useFOVFollow: false
+    useSnapping: false
+    worldSnapping: false
+    xAlways: false
+    xOnTranslate: false
+    yAlways: false
+    yOnTranslate: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - autoShowHide: true
+      innerSize: !<Vec2> {x: 32.000000, y: 32.000000}
+      border: !<float> 4.000000
+      constantPadding: !<Vec2> {x: 0.000000, y: 0.000000}
+      allowScaling: true
+      autoScaleContent: true
+      relativeZ: false
+      isContentInteractable: false
+      allowTranslation: true
+      cutOut: false
+      minimumSize: !<Vec2> {x: 10.000000, y: 10.000000}
+      maximumSize: !<Vec2> {x: 300.000000, y: 300.000000}
+      useBillboarding: false
+      xOnTranslate: false
+      xAlways: false
+      yOnTranslate: false
+      yAlways: false
+      useSnapping: false
+      itemSnapping: false
+      worldSnapping: false
+      showFollowButton: false
+      useFOVFollow: false
+      isFollowing: false
+      showCloseButton: true
+      _enableInteractionPlane: false
+  ScriptTypes:
+    -
+      {}
   InputLines:
     - '// @ui {"widget":"group_start", "label":"Frame Settings"}'
     - // @input bool autoShowHide = true
@@ -61,71 +131,3 @@
     - // @input bool _enableInteractionPlane
     - '// @ui {"widget":"group_end"}'
     - '// @ui {"widget":"separator"}'
-  SvgIcon: ""
-  Description: ""
-  InternalVersion: 0
-  VersionMajor: 0
-  VersionMinor: 0
-  VersionPatch: 0
-  ComponentUid: 7770857d-cabb-451a-82dc-80e8e17bcd3a
-  ExportUid: 00000000-0000-0000-0000-000000000000
-  CurrentVisibility: Editable
-  MaxVisibility: Editable
-  ScriptInputsHidden:
-    _enableInteractionPlane: false
-    allowScaling: false
-    allowTranslation: false
-    autoScaleContent: false
-    autoShowHide: false
-    border: false
-    constantPadding: false
-    cutOut: false
-    innerSize: false
-    isContentInteractable: false
-    isFollowing: false
-    itemSnapping: false
-    maximumSize: false
-    minimumSize: false
-    relativeZ: false
-    showCloseButton: false
-    showFollowButton: false
-    useBillboarding: false
-    useFOVFollow: false
-    useSnapping: false
-    worldSnapping: false
-    xAlways: false
-    xOnTranslate: false
-    yAlways: false
-    yOnTranslate: false
-  ScriptTypesHidden:
-    {}
-  DefaultScriptInputs:
-    - allowScaling: true
-      useBillboarding: false
-      useSnapping: false
-      showFollowButton: false
-      useFOVFollow: false
-      isFollowing: false
-      showCloseButton: true
-      border: !<float> 4.000000
-      autoScaleContent: true
-      isContentInteractable: false
-      autoShowHide: true
-      minimumSize: !<Vec2> {x: 10.000000, y: 10.000000}
-      maximumSize: !<Vec2> {x: 300.000000, y: 300.000000}
-      yOnTranslate: false
-      xOnTranslate: false
-      xAlways: false
-      yAlways: false
-      innerSize: !<Vec2> {x: 32.000000, y: 32.000000}
-      constantPadding: !<Vec2> {x: 0.000000, y: 0.000000}
-      allowTranslation: true
-      worldSnapping: false
-      itemSnapping: false
-      cutOut: false
-      relativeZ: false
-      _enableInteractionPlane: false
-  ScriptTypes:
-    -
-      {}
-  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

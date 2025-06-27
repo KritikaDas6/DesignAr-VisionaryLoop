@@ -5,6 +5,8 @@
   PrimaryAsset: !<reference> e8516b93-6204-475e-8a67-dabd3ff55fd5
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
   AssetDataMap:
     JavaScriptAsset: !<own> 34b15795-09c8-44ff-bdb0-4777a6b0ef8f
   DependentFiles:
@@ -12,10 +14,10 @@
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-  ExtraData:
-    {}
 - !<ScriptAssetData/34b15795-09c8-44ff-bdb0-4777a6b0ef8f>
   SvgIcon: ""
+  SetupScript:
+    code: ""
   Description: ""
   InternalVersion: 0
   VersionMajor: 0
@@ -39,39 +41,25 @@
     parent: false
   ScriptTypesHidden:
     {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
-    - light: !<reference.SceneObject[]>
-        []
-      environmentLight: !<reference.SceneObject[]>
-        []
-      lightButtons: !<RequiredType.Image[]>
-        []
-      ligthIconBackgrounds: !<RequiredType.Image[]>
-        []
-      environmentLightBackgrounds: !<reference.SceneObject[]>
-        []
-      environmentIcon: !<reference.Image> 00000000-0000-0000-0000-000000000000
-      iconBackgrounds: !<RequiredType.Image[]>
-        []
-      environmentIconBackgrounds: !<RequiredType.Image[]>
-        []
-      parent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+    - parent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       leftSection: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      environmentLightParent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      envLighSource: !<reference.LightSource> 00000000-0000-0000-0000-000000000000
-      envMapObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      iconBackgroundObjs: !<reference.Image[]>
-        []
       environmentIconObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       chevronIconObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      environmentCheckIcon: !<reference.SceneObject[]>
+      light: !<reference.SceneObject[]>
         []
-      environmentCheckObject: !<reference.SceneObject[]>
+      iconBackgroundObjs: !<reference.SceneObject[]>
+        []
+      environmentIconBackgrounds: !<reference.Image[]>
         []
       environmentCheckObjects: !<reference.SceneObject[]>
         []
-      environmentButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      environmentLightParent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      envMapObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      environmentLight:
+        []
   ScriptTypes:
     -
       {}
-  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

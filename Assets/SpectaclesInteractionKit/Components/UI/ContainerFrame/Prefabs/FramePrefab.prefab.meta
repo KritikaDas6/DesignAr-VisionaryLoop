@@ -5,6 +5,8 @@
   PrimaryAsset: !<reference> f1c6a4dc-f29d-42a6-ab05-4b134af253ec
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
   AssetDataMap:
     ObjectPrefab: !<own> 85ce9d99-2b7d-4c45-acf8-0ae9642cfcee
   DependentFiles:
@@ -12,37 +14,35 @@
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-  ExtraData:
-    {}
 - !<ColliderComponent/0f9de0f4-fc36-4784-b745-887751900367>
   PrefabRemaps:
     []
   Name: Physics Collider
   Enabled: true
   Shape: !<Box>
-    Size: {x: 1.000000, y: 1.000000, z: 0.050000}
     FitVisual: false
-  ForceCompound: false
+    Size: {x: 1.000000, y: 1.000000, z: 0.050000}
   Matter: !<reference> 00000000-0000-0000-0000-000000000000
   Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
   WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
-  ShowCollider: false
-  Intangible: false
   EnableSmoothing: false
   PositionTension: 30.000000
   RotationTension: 30.000000
-  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  ForceCompound: false
+  Intangible: false
+  ShowCollider: false
 - !<SceneObject/4ab56ee6-752c-4075-a759-db527bdf5709>
   PrefabRemaps:
     []
   Name: FramePrefab
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:

@@ -5,6 +5,8 @@
   PrimaryAsset: !<reference> c403bf42-b482-4aef-8906-13532712a354
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
   AssetDataMap:
     VFXGraph: !<own> b8e30032-c9c1-45e3-b95d-b9426f6be8cd
   DependentFiles:
@@ -12,8 +14,6 @@
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-  ExtraData:
-    {}
 - !<VFXAssetData/b8e30032-c9c1-45e3-b95d-b9426f6be8cd>
   Mesh: !<reference> 1de4b89b-6f1f-4991-9839-5c4eac4b578a
   SystemPassProperties:

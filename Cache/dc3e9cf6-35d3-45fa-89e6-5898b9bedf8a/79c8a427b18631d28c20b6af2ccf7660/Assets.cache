@@ -22,6 +22,12 @@
         Port_GSplatPointSize_N004:
           typeIdx: 1
           value: 0.000000
+        Port_GSplatRotation_N004:
+          typeIdx: 5
+          value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        Port_GSplatScale_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
         Port_LODValue_N000:
           typeIdx: 1
           value: 0.000000
@@ -141,7 +147,8 @@
             mDefaultVal: 0.500000
             mValues:
               []
-      ShaderPath: dc3e9cf6-35d3-45fa-89e6-5898b9bedf8a/79c8a427b18631d28c20b6af2ccf7660/Data/cfd37fa/FingerTipGlow.glsl
+        ShaderType: Mesh3d
+      ShaderPath: dc3e9cf6-35d3-45fa-89e6-5898b9bedf8a/79c8a427b18631d28c20b6af2ccf7660/Data/247970f/FingerTipGlow.glsl
       Defines:
         []
       Properties:

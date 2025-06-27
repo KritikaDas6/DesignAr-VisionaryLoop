@@ -2,24 +2,29 @@
   PackagePath: ""
   StudioVersion:
     major: 5
-    minor: 6
-    patch: 2
-    build: 25021502
+    minor: 11
+    patch: 0
+    build: 25062600
     type: Unset
+    buildFlavor: ""
+    timestamp: 0
+    commit: ""
   Description: |-
     This asset allows you to spawn any prefab in the world. You can simply tap on the screen and see your prefab spawns in the world.
     
     Set a device tracking to the script.
   SvgIcon: ""
-  InternalVersion: 3
+  SetupScript:
+    code: ""
   VersionMajor: 1
   VersionMinor: 0
   VersionPatch: 0
-  UpdateCheckpoint: 55
+  UpdateCheckpoint: 64
   ExportUid: 88c35cee-da81-4ec2-9acf-4a84ac3432f8
   ComponentUid: 5c311d24-47c3-4b24-83a3-f2e715fca771
   CurrentVisibility: Editable
   MaxVisibility: Editable
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   Instantiable: !<reference> 00000000-0000-0000-0000-000000000000
   AssetLibraryDependencyStructure: !<AssetLibraryDependencyStructure>
     Name: ""

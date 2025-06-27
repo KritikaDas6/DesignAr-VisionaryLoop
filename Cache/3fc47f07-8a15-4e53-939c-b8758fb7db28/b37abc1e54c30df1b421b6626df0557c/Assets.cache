@@ -28,6 +28,12 @@
         Port_GSplatPointSize_N004:
           typeIdx: 1
           value: 0.000000
+        Port_GSplatRotation_N004:
+          typeIdx: 5
+          value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        Port_GSplatScale_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
         Port_Import_N006:
           typeIdx: 1
           value: 0.500000
@@ -215,7 +221,8 @@
             mDefaultVal: 0.500000
             mValues:
               []
-      ShaderPath: 3fc47f07-8a15-4e53-939c-b8758fb7db28/b37abc1e54c30df1b421b6626df0557c/Data/cfd37fa/ButtonIdle.glsl
+        ShaderType: Mesh3d
+      ShaderPath: 3fc47f07-8a15-4e53-939c-b8758fb7db28/b37abc1e54c30df1b421b6626df0557c/Data/247970f/ButtonIdle.glsl
       Defines:
         []
       Properties:

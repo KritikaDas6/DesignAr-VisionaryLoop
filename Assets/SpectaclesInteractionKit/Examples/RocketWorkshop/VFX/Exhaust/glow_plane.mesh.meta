@@ -5,6 +5,8 @@
   PrimaryAsset: !<reference> a811791a-01e1-46e8-9602-c9c445b82518
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
   AssetDataMap:
     {}
   DependentFiles:
@@ -18,5 +20,3 @@
   CompressionSettings: !<SingleCompressionSettings>
     CompressorName: None
     CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-  ExtraData:
-    {}

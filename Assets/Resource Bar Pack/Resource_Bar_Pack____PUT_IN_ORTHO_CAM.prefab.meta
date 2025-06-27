@@ -412,11 +412,11 @@
   Name: "Resource Bar [The Script Edit Me]"
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -428,11 +428,11 @@
   Name: "Resource Bar Space 2 [PUT ME IN SCRIPT]"
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -3.380371, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -3.380371, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 92c81ebc-2df1-4aa9-aa01-2a2ea4dbd569
     - !<own> 1414808e-1b5e-42ec-8b8e-3b478e12e89a
@@ -477,11 +477,11 @@
   Name: Bar Frame Outline
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -0.592189, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.592189, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -512,11 +512,11 @@
   Name: "Resource Bar [The Script Edit Me]"
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -547,11 +547,11 @@
   Name: "Resource Bar [The Script Edit Me]"
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.000000, y: -0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: -0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -648,11 +648,11 @@
   Name: Icon
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.000000, y: 16.847677, z: 0.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 16.847677, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -718,11 +718,11 @@
   Name: Resource Bar Space
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 1.148872, y: -3.746561, z: 0.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 1.148872, y: -3.746561, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> fcddbfe2-f362-43ec-b40c-34e8cb30a5ed
     - !<own> 969ec738-b27c-4447-8fe7-8032f04d392c
@@ -812,11 +812,11 @@
   Name: Resource Bar Space
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -0.061959, y: 0.058873, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.061959, y: 0.058873, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> f47112ac-7957-4a7b-9cf9-ae84df5d7647
     - !<own> 7784c1db-2785-413e-8fdf-3bfd0302da2a
@@ -847,11 +847,11 @@
   Name: "Resource Bar Space 7 [PUT ME IN SCRIPT]"
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -3.380371, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -3.380371, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 71600780-6a58-4c83-9da1-3bf7188a79fd
     - !<own> 33b0ec38-dd37-4e86-afda-e8e9c5a33f4a
@@ -948,11 +948,11 @@
   Name: Segmented Bar Display 1
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -0.402161, y: -3.242172, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.402161, y: -3.242172, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 4d87b681-8a6a-4193-a5f5-10687f2a6845
     - !<own> 120dcbc3-00cc-42cd-b7db-6262630fcc49
@@ -1339,11 +1339,11 @@
   Name: Bar Frame Outline
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -0.592189, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.592189, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -1355,11 +1355,11 @@
   Name: Bar Frame Outline
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -0.592189, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.592189, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -1423,11 +1423,11 @@
   Name: "Resource Bar [The Script Edit Me]"
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -1472,11 +1472,11 @@
   Name: Label Name
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -0.747078, y: 0.765250, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.747078, y: 0.765250, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -1658,11 +1658,11 @@
   Name: Bar Frame Outline
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -0.592189, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.592189, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -1674,11 +1674,11 @@
   Name: Continuous Bar Display 5
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 6.758822, y: 2.443246, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 6.758822, y: 2.443246, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 8032f5dc-03cd-4e91-b98b-ee9fb31337bf
     - !<own> 9ff7a799-cbba-4815-8c89-d156aa56d9b4
@@ -1790,11 +1790,11 @@
   Name: Continuous Bar Display 1
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -2.832706, y: 4.728282, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -2.832706, y: 4.728282, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 3b0f9b12-2f87-4ce5-a316-e6652547da02
     - !<own> 1ab796c8-413a-42da-86db-95035eb1e639
@@ -1807,11 +1807,11 @@
   Name: "Behavior Test Script [DELETE_ME]"
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 120.000000, y: 0.000000, z: -38.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 120.000000, y: 0.000000, z: -38.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> b2bfa0dc-eb2c-40a8-9d25-4de97daa38ea
   Components:
@@ -1822,11 +1822,11 @@
   Name: "Resource Bar Space [PUT ME IN SCRIPT]"
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -3.380371, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -3.380371, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> e6a8e186-b031-4e73-88f6-1ed3e0459beb
     - !<own> 628213d1-0fd2-444c-b6ba-6a56c0f7b955
@@ -1904,11 +1904,11 @@
   Name: Resource Bar Space
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -0.140241, y: 0.069224, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.140241, y: 0.069224, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 5003fe6b-587e-470c-a746-809e9316a8b6
     - !<own> a95a390b-90f6-4415-87e8-ffc72e9f1c13
@@ -1939,11 +1939,11 @@
   Name: "Resource Bar [The Script Edit Me]"
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.000000, y: -0.003742, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: -0.003742, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -1955,11 +1955,11 @@
   Name: "Resource Bar [The Script Edit Me]"
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -2151,11 +2151,11 @@
   Name: Continuous Bar Display 3
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -2.869223, y: 3.186011, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -2.869223, y: 3.186011, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> a137e128-b388-40cf-8927-e1bccec7244b
     - !<own> 62230394-8679-4042-bdbf-ebf017e7bb0a
@@ -2168,11 +2168,11 @@
   Name: Bar Frame Outline
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -0.592189, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.592189, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -2217,11 +2217,11 @@
   Name: Continuous Bar Display 4
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -2.821322, y: 0.661246, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -2.821322, y: 0.661246, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 2220444b-b12f-40b5-9845-ecff9f6bdd5d
     - !<own> 6bc31f31-78a2-4b77-a887-83066f8ced30
@@ -2357,11 +2357,11 @@
   Name: Resource Bar Amount Text
   Enabled: false
   Layers: 1048576
-  LocalTransform:
-    position: {x: -0.023720, y: 2.100489, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.023720, y: 2.100489, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -2373,11 +2373,11 @@
   Name: Background
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.000000, y: -2.329674, z: 0.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: -2.329674, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -3112,11 +3112,11 @@
   Name: "Resource Bar Space 4 [PUT ME IN SCRIPT]"
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -3.380371, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -3.380371, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 67f68a88-7981-4241-be8a-401d1d5d4448
     - !<own> ad18e863-a4fa-431c-9433-62e1f98ee859
@@ -3167,11 +3167,11 @@
   Name: Bar Frame Outline
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -1.391839, y: 0.139314, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -1.391839, y: 0.139314, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -3183,11 +3183,11 @@
   Name: "Resource Bar [The Script Edit Me]"
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -3199,11 +3199,11 @@
   Name: Bar Frame Outline
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -0.592189, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.592189, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -3248,11 +3248,11 @@
   Name: "Resource Bar [The Script Edit Me]"
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -3283,11 +3283,11 @@
   Name: "Resource Bar [The Script Edit Me]"
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -3299,11 +3299,11 @@
   Name: Bar Frame Outline
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -1.391839, y: 0.139314, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -1.391839, y: 0.139314, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -3334,11 +3334,11 @@
   Name: Segmented Bar Display 2
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -0.402161, y: -3.242172, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.402161, y: -3.242172, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> acf76a49-0085-42f7-9868-2a1da293eabc
     - !<own> 872f8cf5-d950-4da4-b858-09ef139fa0d7
@@ -3380,11 +3380,11 @@
   Name: Bar Frame Outline
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -1.391839, y: 0.139314, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -1.391839, y: 0.139314, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -3396,11 +3396,11 @@
   Name: Segmented Bars
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 25a41553-71cb-4481-8c92-d8511dd32d81
     - !<own> 6afb97e2-dd94-421c-91a6-f54170d03309
@@ -3464,11 +3464,11 @@
   Name: "Resource Bar [The Script Edit Me]"
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -3572,11 +3572,11 @@
   Name: "Resource Bar Space 4 [PUT ME IN SCRIPT]"
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -3.380371, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -3.380371, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 11a5bb53-df67-4d8c-a29d-042b0d092396
     - !<own> c49df41b-db6a-4a49-b222-5dc1c531b961
@@ -3588,11 +3588,11 @@
   Name: Bar Frame Outline
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -0.592189, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.592189, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -3637,11 +3637,11 @@
   Name: Resource Bar Amount Text
   Enabled: false
   Layers: 1048576
-  LocalTransform:
-    position: {x: -0.023720, y: 2.100489, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.023720, y: 2.100489, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -3833,11 +3833,11 @@
   Name: Resource Bar Space
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.005079, y: 1.041491, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 90.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.005079, y: 1.041491, z: -1.000000}
+    Rotation: {x: 0.000000, y: -0.000000, z: 90.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 17a264ae-63a1-497c-8d8b-b157e8a998b8
     - !<own> d0379366-760d-463d-a97f-a897a62af567
@@ -3944,11 +3944,11 @@
   Name: "Resource Bar [The Script Edit Me]"
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -4012,11 +4012,11 @@
   Name: "Resource Bar [The Script Edit Me]"
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -4028,11 +4028,11 @@
   Name: "Resource Bar Space 5 [PUT ME IN SCRIPT]"
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -3.380371, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -3.380371, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 85f4757b-adf8-45e5-80b1-2eb6ec27605f
     - !<own> bec9438a-4b44-4041-ac3f-402369b881c7
@@ -4044,11 +4044,11 @@
   Name: "Resource Bar [The Script Edit Me]"
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -4060,11 +4060,11 @@
   Name: "Resource Bar Space 2 [PUT ME IN SCRIPT]"
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -3.380371, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -3.380371, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 8565149c-1225-4676-9764-fdc24cc8bea6
     - !<own> 52a34f12-c319-4860-b26b-3bfca3b8ca2a
@@ -4109,11 +4109,11 @@
   Name: Bar Frame Outline
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -0.592189, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.592189, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -4286,11 +4286,11 @@
   Name: "Resource Bar Space 8 [PUT ME IN SCRIPT]"
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -3.380371, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -3.380371, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> da8e6988-3b50-4547-a894-6fd764c6a6f7
     - !<own> 33e8a2fc-204b-4d4e-9da8-838a2496904a
@@ -4302,11 +4302,11 @@
   Name: "Resource Bar Space 3 [PUT ME IN SCRIPT]"
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -3.380371, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -3.380371, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 62640e15-2b00-4180-89a5-279fbcd2316b
     - !<own> 88487543-8b32-4633-80c7-1aef0015914f
@@ -4370,11 +4370,11 @@
   Name: "Resource Bar [The Script Edit Me]"
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -4386,11 +4386,11 @@
   Name: "Info Card [DELETE_ME]"
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.000000, y: 0.787600, z: 0.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 0.429245, y: 0.429245, z: 0.429245}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.787600, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.429245, y: 0.429245, z: 0.429245}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 5ab23c15-975f-49b6-820d-6fc6e2bc27af
     - !<own> 1a2238a7-4932-494a-835e-c0178fdd1aac
@@ -4406,11 +4406,11 @@
   Name: Title
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.000000, y: 11.731351, z: 0.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 11.731351, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -4422,11 +4422,11 @@
   Name: Resource Bar Amount Text
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -4457,11 +4457,11 @@
   Name: Bar Frame Outline
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -0.592189, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.592189, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -4539,11 +4539,11 @@
   Name: "Resource Bar Space 3 [PUT ME IN SCRIPT]"
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -3.380371, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -3.380371, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 83f2eab1-951d-4a86-a9e8-d7a50d4d8fae
     - !<own> 97ca81f0-6eb7-40bc-888b-faf9e8dcf43b
@@ -4850,11 +4850,11 @@
   Name: Bar Frame Outline
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 1.535370, y: 0.895561, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 1.535370, y: 0.895561, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -4932,11 +4932,11 @@
   Name: Resource Bar Space
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -0.179913, y: 0.078259, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.179913, y: 0.078259, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> a25adea5-88c5-4859-9d6d-24e4d865835d
     - !<own> 5a61311d-a08b-4afc-866d-bbaf1017df81
@@ -4948,11 +4948,11 @@
   Name: "Resource Bar [The Script Edit Me]"
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.000000, y: -0.003742, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: -0.003742, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -5016,11 +5016,11 @@
   Name: Resource Bar Amount Text
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -5084,11 +5084,11 @@
   Name: "Resource Bar Space  1 [PUT ME IN SCRIPT]"
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -3.380371, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -3.380371, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 50ac052f-ce7b-4970-89e9-b06694c4f927
     - !<own> e4b58c8f-b014-4fa5-89e8-ef71b75004b2
@@ -5100,11 +5100,11 @@
   Name: Bar Frame Outline
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -0.592189, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.592189, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -5116,11 +5116,11 @@
   Name: "Resource Bar Space 6 [PUT ME IN SCRIPT]"
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -3.380371, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -3.380371, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> d86d7222-b8fa-436d-8eb7-abdd877e5ac8
     - !<own> e889aa56-a428-4c76-b62d-8b80012442ab
@@ -5860,11 +5860,11 @@
   Name: script to test the bar
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -6084,11 +6084,11 @@
   Name: Continuous Bars Group
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 4811ccb1-7a12-45e3-95eb-f38a2b92bb9c
     - !<own> ee25ac09-257f-4aef-842f-7969ea3ffbd7
@@ -6169,11 +6169,11 @@
   Name: "Desctiption [EDIT]"
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -0.185547, y: -3.683315, z: 0.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 0.750000, y: 0.750000, z: 0.750000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.185547, y: -3.683315, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.750000, y: 0.750000, z: 0.750000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -6185,11 +6185,11 @@
   Name: Bar Frame Outline
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -0.592189, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.592189, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -6253,11 +6253,11 @@
   Name: Bar Frame Outline
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -0.592189, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.592189, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -6269,11 +6269,11 @@
   Name: Bar Frame Outline
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -0.592189, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.592189, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -6285,11 +6285,11 @@
   Name: "Resource Bar Space 9 [PUT ME IN SCRIPT]"
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -3.380371, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -3.380371, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 37da5602-9c36-4726-8867-1f34f932b9a4
     - !<own> 769a2eea-ddee-4877-8e94-8de25fcf22ab
@@ -6301,11 +6301,11 @@
   Name: "Resource Bar Space 10 [PUT ME IN SCRIPT]"
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -3.380371, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -3.380371, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 1514635c-68f3-4b67-9be0-698355db3945
     - !<own> 44592fbf-11d3-4101-b92d-f2f38f621675
@@ -6393,11 +6393,11 @@
   Name: Resource Bar Amount Text
   Enabled: false
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -6546,11 +6546,11 @@
   Name: "Resource Bar Space 5 [PUT ME IN SCRIPT]"
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -3.380371, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -3.380371, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 636beb0b-3c92-40d8-829d-b29c34459304
     - !<own> c6c409f7-7e90-4cc9-9e80-1c3ff7e4df70
@@ -6595,11 +6595,11 @@
   Name: "Resource Bar [The Script Edit Me]"
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -6644,11 +6644,11 @@
   Name: "Resource Bar [The Script Edit Me]"
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -6830,11 +6830,11 @@
   Name: Bar Frame Outline
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -0.592189, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.592189, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -6846,11 +6846,11 @@
   Name: "Resource Bar [The Script Edit Me]"
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -6895,11 +6895,11 @@
   Name: Bar Frame Outline
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -0.592189, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.592189, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -7036,11 +7036,11 @@
   Name: Continuous Bar Display 2
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: -2.939026, y: 4.205704, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -2.939026, y: 4.205704, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 4e1a99f3-265a-4d4e-bb31-0bc5a8b2af71
     - !<own> 69b67055-6f31-4d94-a075-c59c127646a8
@@ -7086,11 +7086,11 @@
   Name: "Resource Bar [The Script Edit Me]"
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.000000, y: -0.003742, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: -0.003742, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -7102,11 +7102,11 @@
   Name: Resource_Bar_Pack____PUT_IN_ORTHO_CAM
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 4a499e5d-3252-4255-a13f-d69634373aa0
     - !<own> bdf0d608-2595-4b20-acae-17fa96639506
@@ -7121,11 +7121,11 @@
   Name: Delete Description
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.057251, y: -21.649061, z: 0.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.057251, y: -21.649061, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -7137,11 +7137,11 @@
   Name: "Resource Bar [The Script Edit Me]"
   Enabled: true
   Layers: 1048576
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:

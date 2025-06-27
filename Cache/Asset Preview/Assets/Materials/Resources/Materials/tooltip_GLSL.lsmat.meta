@@ -8,6 +8,8 @@
   PrimaryAsset: !<reference> e4822831-ebff-47ad-b1d2-cfa34237d7fd
   PackageType: LegacyPackage
   PackagePolicy: ShouldBeUnpacked
+  ExtraData:
+    {}
   AssetDataMap:
     {}
   DependentFiles:
@@ -28,5 +30,3 @@
       png: Performance Compression
     Overrides:
       {}
-  ExtraData:
-    {}

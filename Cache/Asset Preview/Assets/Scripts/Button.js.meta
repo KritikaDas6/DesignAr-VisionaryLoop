@@ -5,6 +5,8 @@
   PrimaryAsset: !<reference> e5e94a03-1b59-4813-a994-0e281676df64
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
   AssetDataMap:
     JavaScriptAsset: !<own> 4fe1dd19-3b86-4a8d-a985-4d7a0d2048cf
   DependentFiles:
@@ -12,10 +14,10 @@
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-  ExtraData:
-    {}
 - !<ScriptAssetData/4fe1dd19-3b86-4a8d-a985-4d7a0d2048cf>
   SvgIcon: ""
+  SetupScript:
+    code: ""
   Description: ""
   InternalVersion: 0
   VersionMajor: 0
@@ -32,13 +34,13 @@
     id: false
   ScriptTypesHidden:
     {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
     - controller: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
       functionName: ""
-      id: 0
-      tapFunctionName: ""
       hoverFunctionName: ""
+      id: 0
   ScriptTypes:
     -
       {}
-  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

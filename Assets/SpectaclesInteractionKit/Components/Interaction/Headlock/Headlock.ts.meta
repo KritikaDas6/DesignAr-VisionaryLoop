@@ -1,23 +1,24 @@
 - !<AssetImportMetadata/c9e56019-dbf7-4e31-a307-48bbcc30de5f>
-  ImporterSettings: !<AssetImporterSettings>
-    {}
   ImportedAssetIds:
     TypeScriptAsset: !<reference> 2a92f85a-a814-4f5d-bd73-4a2710147d01
   ImporterName: TypeScriptAssetImporter
   PrimaryAsset: !<reference> 2a92f85a-a814-4f5d-bd73-4a2710147d01
   PackageType: NotAPackage
-  AssetDataMap:
-    TypeScriptAsset: !<own> e497ffb3-0001-4bd8-ab08-a8426634f33e
   PackagePolicy: CannotBeUnpacked
-  DependentFiles:
-    []
-  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
     {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> e497ffb3-0001-4bd8-ab08-a8426634f33e
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<TypeScriptAssetData/e497ffb3-0001-4bd8-ab08-a8426634f33e>
-  Icon: ""
+  SvgIcon: ""
+  SetupScript:
+    code: ""
   Description: ""
-  InternalVersion: 0
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
@@ -42,6 +43,8 @@
     _yawOffsetDegrees: false
   ScriptTypesHidden:
     {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
     - _distance: !<float> 50.000000
       _xzEnabled: true
@@ -81,5 +84,3 @@
     - '// @input float _yawBufferDegrees {"hint":"How many degrees of leeway along each direction (left/right) before change starts to occur"}'
     - '// @ui {"widget":"group_end"}'
     - '// @ui {"widget":"group_end"}'
-  SvgIcon: ""
-  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

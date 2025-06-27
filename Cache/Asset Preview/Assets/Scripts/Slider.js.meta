@@ -5,6 +5,8 @@
   PrimaryAsset: !<reference> 209b8c76-e430-432a-ba89-7c10472a650a
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
   AssetDataMap:
     JavaScriptAsset: !<own> cca517d8-c9f9-4a68-afc0-4dc355f079fe
   DependentFiles:
@@ -12,8 +14,6 @@
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-  ExtraData:
-    {}
 - !<ScriptAssetData/cca517d8-c9f9-4a68-afc0-4dc355f079fe>
   SvgIcon: |
     <svg width="214" height="140" viewBox="0 0 214 140" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -25,6 +25,8 @@
     <path d="M56.7568 95.2252H156.396V110.991H56.7568V95.2252Z" fill="white"/>
     </svg>
 
+  SetupScript:
+    code: ""
   Description: |-
     Slider logic that allows to do it vertical/horizontal, white/colored, static/pull-out. 
     Add Slider Helper to adjust the logic on slider moving (change shaders, blendshapes or FaceStetches).
@@ -59,6 +61,8 @@
     white: true
   ScriptTypesHidden:
     {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
     - pointScreenTransform: !<reference.ScreenTransform> 00000000-0000-0000-0000-000000000000
       touchZone: !<reference.BaseMeshVisual> 00000000-0000-0000-0000-000000000000
@@ -78,9 +82,8 @@
       spritePresetMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
       spritePreset1Image: !<reference.Image> 00000000-0000-0000-0000-000000000000
       spritePreset2Image: !<reference.Image> 00000000-0000-0000-0000-000000000000
-      spritePreset1Texture: !<reference.Image> 00000000-0000-0000-0000-000000000000
-      spritePreset2Texture: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      spritePreset1Texture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      spritePreset2Texture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
-  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

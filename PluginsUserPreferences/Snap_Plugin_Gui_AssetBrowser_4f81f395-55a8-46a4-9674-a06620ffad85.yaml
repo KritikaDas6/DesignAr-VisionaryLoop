@@ -1,13 +1,48 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 782
+    size: 1128
     values:
       - AddedAsset
+      - AddedAsset/Customizable Progress Bar.lsc
+      - AddedAsset/Device Camera Texture.deviceCameraTexture
+      - AddedAsset/Echopark.hdr
+      - AddedAsset/Echopark.hdr/Diffuse
+      - AddedAsset/Echopark.hdr/Specular
+      - AddedAsset/Precise Object Toggle.lsc
+      - AddedAsset/Render Target.renderTarget
+      - Base.png
+      - ButtonToggleFunctions.ts
       - Font
+      - Font/DynaPuff
+      - Font/DynaPuff/DynaPuff-Bold.ttf
+      - Font/DynaPuff/DynaPuff-Medium.ttf
+      - "Font/DynaPuff/DynaPuff-VariableFont_wdth,wght.ttf"
+      - Font/Manrope
+      - Font/Manrope/Manrope-Bold.ttf
+      - Font/Manrope/Manrope-Medium.ttf
+      - Font/Manrope/Manrope-Regular.ttf
+      - Font/Manrope/Manrope-VariableFont_wght.ttf
       - ImageTexture
       - ImageTexture/Bird.mat
+      - ImageTexture/Bird.png
+      - ImageTexture/BirdTrace.mat
+      - ImageTexture/BirdTrace.png
+      - ImageTexture/ImageMaterial 14.mat
+      - ImageTexture/SketchRider.mat
+      - ImageTexture/SketchRider.png
+      - ImageTexture/SketchRiderTrace.mat
+      - ImageTexture/SketchRiderTrace.png
+      - ImageTexture/Test4.mat
+      - ImageTexture/Test4.png
+      - ImageTexture/Test5.mat
+      - ImageTexture/Test5.png
+      - ImageTexture/flat.ss_graph
+      - ImageTexture/image_unlit 2.ss_graph
+      - ImageTexture/image_unlit.ss_graph
+      - ImageTexture/simple_pbr.ss_graph
       - Prefab
+      - Prefab/Menu.prefab
       - Resource Bar Pack
       - Resource Bar Pack/.hidden
       - "Resource Bar Pack/.hidden/Bar Mat 1 [EDIT ME].ss_graph"
@@ -80,9 +115,14 @@ CollapsedEntities:
       - Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Segmented Bar/Design 1/Life bars 1.png
       - Scene.scene
       - Script 2.js
+      - Script 3.js
       - Script.js
       - Script_ContainerImage
+      - Script_ContainerImage/ImageContainerScaler.ts
       - Script_HandFollower
+      - Script_HandFollower/DisplayMenuOnOff.ts
+      - Script_HandFollower/HandFollower.ts
+      - Script_HandFollower/VectorUtils.ts
       - Spawn Object at World Mesh On Tap
       - Spawn Object at World Mesh On Tap/Point of Interest.prefab
       - Spawn Object at World Mesh On Tap/Spawn Object at World Mesh On Tap.js
@@ -178,6 +218,7 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Meshes/LeftHandMesh.mesh
       - SpectaclesInteractionKit/Assets/Meshes/PlaneMesh.mesh
       - SpectaclesInteractionKit/Assets/Meshes/PlatformUI
+      - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/ImageMaterial.mat
       - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/PlatformCapsuleButton.mesh
       - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/PlatformSphereButton.mesh
       - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/RoundButton.mesh
@@ -270,6 +311,7 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Textures/SIKContainerExampleImage.jpg
       - SpectaclesInteractionKit/Assets/Textures/SIKLogo.png
       - SpectaclesInteractionKit/Assets/Textures/ScrollBarRectangle.png
+      - SpectaclesInteractionKit/Components
       - SpectaclesInteractionKit/Components/Helpers
       - SpectaclesInteractionKit/Components/Helpers/ButtonFeedback.ts
       - SpectaclesInteractionKit/Components/Helpers/CapsuleMeshCustomizer.ts
@@ -280,6 +322,8 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Components/Helpers/ScreenTransformAdapter.ts
       - SpectaclesInteractionKit/Components/Helpers/ScrollBarFeedback.ts
       - SpectaclesInteractionKit/Components/Helpers/SliderFeedback.ts
+      - SpectaclesInteractionKit/Components/Helpers/SliderMonotoneEditor.ts
+      - SpectaclesInteractionKit/Components/Helpers/SliderTransparentEditor.ts
       - SpectaclesInteractionKit/Components/Helpers/ToggleFeedback.ts
       - SpectaclesInteractionKit/Components/Interaction
       - SpectaclesInteractionKit/Components/Interaction/Billboard
@@ -321,13 +365,17 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Components/Interaction/InteractorLineVisual/InteractorLineMaterial.mat
       - SpectaclesInteractionKit/Components/Interaction/InteractorLineVisual/InteractorLineRenderer.ts
       - SpectaclesInteractionKit/Components/Interaction/InteractorLineVisual/InteractorLineVisual.ts
+      - SpectaclesInteractionKit/Components/UI
+      - SpectaclesInteractionKit/Components/UI/ContainerFrame
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/ContainerFrame.ts
+      - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/FrameMaterial.mat
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/FrameMaterial.ss_graph
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/Ghost Material.mat
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/Ghost Material.ss_graph
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/Image.mat
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/Label.mat
+      - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/Test4.png
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/container-button.mat
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/container-button.ss_graph
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/flat.ss_graph
@@ -382,7 +430,6 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Components/UI/Slider/Slider.ts
       - SpectaclesInteractionKit/Components/UI/ToggleButton
       - SpectaclesInteractionKit/Components/UI/ToggleButton/ToggleButton.ts
-      - SpectaclesInteractionKit/Core
       - SpectaclesInteractionKit/Core/ConfigurationValidator
       - SpectaclesInteractionKit/Core/ConfigurationValidator/ConfigurationValidator.ts
       - SpectaclesInteractionKit/Core/HandInteractor
@@ -390,7 +437,6 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Core/InteractionManager
       - SpectaclesInteractionKit/Core/InteractionManager/EventDispatcher.ts
       - SpectaclesInteractionKit/Core/InteractionManager/InteractionManager.ts
-      - SpectaclesInteractionKit/Core/Interactor
       - SpectaclesInteractionKit/Core/Interactor/BaseInteractor.ts
       - SpectaclesInteractionKit/Core/Interactor/ColliderTargetProvider.ts
       - SpectaclesInteractionKit/Core/Interactor/DirectTargetProvider.ts
@@ -404,7 +450,6 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Core/Interactor/PokeTargetProvider.ts
       - SpectaclesInteractionKit/Core/Interactor/RayProvider.ts
       - SpectaclesInteractionKit/Core/Interactor/TouchRayProvider.ts
-      - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms
       - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/AxisAngle.ts
       - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/ContinousIrInteractionTransition.ts
       - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/IrInteractionTransition.ts
@@ -412,7 +457,6 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/RaycastAnchorHead.ts
       - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/RaycastAnchorVariableShoulder.ts
       - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/RaycastBase.ts
-      - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/RaycastLegacySingleCamera.ts
       - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/RaycastProxy.ts
       - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/RgbIrTransitionJumpSuppressor.ts
       - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/SwitchIrInteractionTransition.ts
@@ -427,8 +471,6 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Core/MobileInteractor/MobileInteractor.ts
       - SpectaclesInteractionKit/Core/MouseInteractor
       - SpectaclesInteractionKit/Core/MouseInteractor/MouseInteractor.ts
-      - SpectaclesInteractionKit/Decorators
-      - SpectaclesInteractionKit/Decorators/Singleton.ts
       - SpectaclesInteractionKit/Examples
       - SpectaclesInteractionKit/Examples/RocketWorkshop
       - SpectaclesInteractionKit/Examples/RocketWorkshop/Materials
@@ -604,6 +646,7 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Prefabs
       - SpectaclesInteractionKit/Prefabs/ScrollViewListItem.prefab
       - SpectaclesInteractionKit/Prefabs/SpectaclesInteractionKit.prefab
+      - SpectaclesInteractionKit/Providers
       - SpectaclesInteractionKit/Providers/CameraProvider
       - SpectaclesInteractionKit/Providers/CameraProvider/ARCameraFinderProvider.ts
       - SpectaclesInteractionKit/Providers/CameraProvider/BaseCameraFinderProvider.ts
@@ -612,6 +655,7 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Providers/CameraProvider/WorldCameraFinderProvider.ts
       - SpectaclesInteractionKit/Providers/CursorControllerProvider
       - SpectaclesInteractionKit/Providers/CursorControllerProvider/CursorControllerProvider.ts
+      - SpectaclesInteractionKit/Providers/HandInputData
       - SpectaclesInteractionKit/Providers/HandInputData/BaseHand.ts
       - SpectaclesInteractionKit/Providers/HandInputData/DefaultHandTrackingAssetProvider.ts
       - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider
@@ -688,6 +732,308 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Utils/views/MeshView.ts
       - SpectaclesInteractionKit/Utils/views/View.ts
       - SpectaclesInteractionKit/package.native
+      - SpectaclesSyncKit.lspkg
+      - SpectaclesSyncKit.lspkg/Components
+      - SpectaclesSyncKit.lspkg/Components/Instantiator.ts
+      - SpectaclesSyncKit.lspkg/Components/SyncHelpers
+      - SpectaclesSyncKit.lspkg/Components/SyncHelpers/DisplayStorageProperty.ts
+      - SpectaclesSyncKit.lspkg/Components/SyncHelpers/SetEnabledIfOwner.ts
+      - SpectaclesSyncKit.lspkg/Components/SyncHelpers/SetEnabledOnReady.ts
+      - SpectaclesSyncKit.lspkg/Components/SyncHelpers/SyncEntityDebug.ts
+      - SpectaclesSyncKit.lspkg/Components/SyncInteractionManager.ts
+      - SpectaclesSyncKit.lspkg/Components/SyncInteractor.ts
+      - SpectaclesSyncKit.lspkg/Components/SyncMaterials.ts
+      - SpectaclesSyncKit.lspkg/Components/SyncRealtimeStore.ts
+      - SpectaclesSyncKit.lspkg/Components/SyncTransform.ts
+      - SpectaclesSyncKit.lspkg/Connected Lens Module.connectedLensModule
+      - SpectaclesSyncKit.lspkg/Core
+      - SpectaclesSyncKit.lspkg/Core/EventWrapper.ts
+      - SpectaclesSyncKit.lspkg/Core/KeyedEventWrapper.ts
+      - SpectaclesSyncKit.lspkg/Core/MockMultiplayerSession.ts
+      - SpectaclesSyncKit.lspkg/Core/MockMultiplayerSessionConfig.ts
+      - SpectaclesSyncKit.lspkg/Core/NetworkIdTools.ts
+      - SpectaclesSyncKit.lspkg/Core/NetworkIdType.ts
+      - SpectaclesSyncKit.lspkg/Core/NetworkMessage.ts
+      - SpectaclesSyncKit.lspkg/Core/NetworkMessageWrapper.ts
+      - SpectaclesSyncKit.lspkg/Core/NetworkRootInfo.ts
+      - SpectaclesSyncKit.lspkg/Core/NetworkUtils.ts
+      - SpectaclesSyncKit.lspkg/Core/NetworkedSceneObject.ts
+      - SpectaclesSyncKit.lspkg/Core/NetworkedScriptComponent.ts
+      - SpectaclesSyncKit.lspkg/Core/OwnershipType.ts
+      - SpectaclesSyncKit.lspkg/Core/PersistenceType.ts
+      - SpectaclesSyncKit.lspkg/Core/PropertyType.ts
+      - SpectaclesSyncKit.lspkg/Core/SessionController.ts
+      - SpectaclesSyncKit.lspkg/Core/SessionControllerComponent.ts
+      - SpectaclesSyncKit.lspkg/Core/StoragePropLookup.ts
+      - SpectaclesSyncKit.lspkg/Core/StorageProperty.ts
+      - SpectaclesSyncKit.lspkg/Core/StoragePropertySet.ts
+      - SpectaclesSyncKit.lspkg/Core/StorageType.ts
+      - SpectaclesSyncKit.lspkg/Core/StorageTypes.ts
+      - SpectaclesSyncKit.lspkg/Core/StoreEventWrapper.ts
+      - SpectaclesSyncKit.lspkg/Core/SyncEntity.ts
+      - SpectaclesSyncKit.lspkg/Core/SyncSnapshot.ts
+      - SpectaclesSyncKit.lspkg/Examples
+      - SpectaclesSyncKit.lspkg/Examples/CyclingMaterialExample.ts
+      - SpectaclesSyncKit.lspkg/Examples/DisplayStorageProperty
+      - SpectaclesSyncKit.lspkg/Examples/DisplayStorageProperty/CurrentTimeObject.ts
+      - SpectaclesSyncKit.lspkg/Examples/InstantiateOnceExample.ts
+      - SpectaclesSyncKit.lspkg/Examples/InstantiatorExample.ts
+      - SpectaclesSyncKit.lspkg/Examples/InstantiatorExampleJavascript.js
+      - SpectaclesSyncKit.lspkg/Examples/ManipulateExamplePrefab.prefab
+      - SpectaclesSyncKit.lspkg/Examples/Materials
+      - SpectaclesSyncKit.lspkg/Examples/Materials/ExampleMaterial.mat
+      - SpectaclesSyncKit.lspkg/Examples/Materials/ExampleMaterial.ss_graph
+      - SpectaclesSyncKit.lspkg/Examples/SessionControllerExample.ts
+      - SpectaclesSyncKit.lspkg/Examples/SessionControllerExampleJavascript.js
+      - SpectaclesSyncKit.lspkg/Examples/StorageProperty
+      - SpectaclesSyncKit.lspkg/Examples/StorageProperty/AutoStoragePropertyExample.ts
+      - SpectaclesSyncKit.lspkg/Examples/StorageProperty/AutoStoragePropertyExampleJavascript.js
+      - SpectaclesSyncKit.lspkg/Examples/StorageProperty/ManualStoragePropertyExample.ts
+      - SpectaclesSyncKit.lspkg/Examples/StorageProperty/ManualStoragePropertyExampleJavascript.js
+      - SpectaclesSyncKit.lspkg/Examples/StorageProperty/PositionRotationScaleStoragePropertyExample.ts
+      - SpectaclesSyncKit.lspkg/Examples/StorageProperty/PositionRotationScaleStoragePropertyExampleJavascript.js
+      - SpectaclesSyncKit.lspkg/Examples/StorageProperty/RmvColorStoragePropertyExample.ts
+      - SpectaclesSyncKit.lspkg/Examples/StorageProperty/RmvColorStoragePropertyExampleJavascript.js
+      - SpectaclesSyncKit.lspkg/Examples/StorageProperty/RmvPropertyStoragePropertyExample.ts
+      - SpectaclesSyncKit.lspkg/Examples/StorageProperty/RmvPropertyStoragePropertyExampleJavascript.js
+      - SpectaclesSyncKit.lspkg/Examples/StorageProperty/TextStoragePropertyExample.ts
+      - SpectaclesSyncKit.lspkg/Examples/StorageProperty/TextStoragePropertyExampleJavascript.js
+      - SpectaclesSyncKit.lspkg/Examples/StorageProperty/TransformStoragePropertyExample.ts
+      - SpectaclesSyncKit.lspkg/Examples/StorageProperty/TransformStoragePropertyExampleJavascript.js
+      - SpectaclesSyncKit.lspkg/Examples/SyncEntityDebug
+      - SpectaclesSyncKit.lspkg/Examples/SyncEntityDebug/InstantiatedSyncEntityDebugExample.prefab
+      - SpectaclesSyncKit.lspkg/Examples/SyncEntityExample.ts
+      - SpectaclesSyncKit.lspkg/Examples/SyncEntityExampleJavascript.js
+      - SpectaclesSyncKit.lspkg/Location Cloud Storage Module.locationCloudStorageModule
+      - SpectaclesSyncKit.lspkg/Mapping
+      - SpectaclesSyncKit.lspkg/Mapping/Assets
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/AnimationMixers
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/AnimationMixers/MappingSuccessCheckmark.animationLayer
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/AnimationMixers/MappingTutorial.animationMixerLayer
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Audio
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Audio/MappingSuccess.wav
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/Frustim.fbx
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/Frustim.fbx/.hidden
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/Frustim.fbx/.hidden/Material
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/Frustim.fbx/.hidden/white
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/Frustim.fbx/Frustim
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/Frustim.fbx/Materials
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/Frustim.fbx/Materials/Material
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/Frustim.fbx/Materials/phong1
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/Frustim.fbx/Meshes
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/Frustim.fbx/Meshes/glasses_frames
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/Frustim.fbx/Meshes/screen
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/Frustim.fbx/Meshes/screen.001
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/Frustim.fbx/Meshes/screen.002
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/TutorialCharacters.fbx
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/TutorialCharacters.fbx/.hidden
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/TutorialCharacters.fbx/.hidden/Material.007
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/TutorialCharacters.fbx/.hidden/white
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/TutorialCharacters.fbx/BaseLayer
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/TutorialCharacters.fbx/Materials
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/TutorialCharacters.fbx/Materials/Material.007
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/TutorialCharacters.fbx/Materials/lambert1
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/TutorialCharacters.fbx/Materials/lambert130
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/TutorialCharacters.fbx/Materials/lambert153
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/TutorialCharacters.fbx/Materials/lambert98
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/TutorialCharacters.fbx/Materials/lambert99
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/TutorialCharacters.fbx/Materials/pasted__lambert94
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/TutorialCharacters.fbx/Materials/pasted__lambert98
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/TutorialCharacters.fbx/Meshes
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/TutorialCharacters.fbx/Meshes/GUY_OPT
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/TutorialCharacters.fbx/Meshes/P1_Arrow
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/TutorialCharacters.fbx/Meshes/P2_Arrow
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/TutorialCharacters.fbx/Meshes/POINT_CLOUD
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/TutorialCharacters.fbx/Meshes/POINT_CLOUD_SYNC_p2
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/TutorialCharacters.fbx/Meshes/girl_character
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/TutorialCharacters.fbx/Meshes/head_GEO_GRP
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/TutorialCharacters.fbx/Meshes/mapping_Checkmark_KEY_1
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/TutorialCharacters.fbx/Meshes/mapping_GreyBar
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/TutorialCharacters.fbx/Meshes/mapping_YellowBar
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/TutorialCharacters.fbx/Meshes/mapping_point_cloud
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/TutorialCharacters.fbx/TutorialCharacters
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/TutorialRoom.fbx
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/TutorialRoom.fbx/.hidden
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/TutorialRoom.fbx/.hidden/lambert36
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/TutorialRoom.fbx/.hidden/white
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/TutorialRoom.fbx/BaseLayer
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/TutorialRoom.fbx/Materials
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/TutorialRoom.fbx/Materials/lambert36
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/TutorialRoom.fbx/Meshes
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/TutorialRoom.fbx/Meshes/room_all
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/TutorialRoom.fbx/TutorialRoom
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/WindowOccluderBox.fbx
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/WindowOccluderBox.fbx/Meshes
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/WindowOccluderBox.fbx/Meshes/Cube
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/FBX/WindowOccluderBox.fbx/WindowOccluderBox
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Materials
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Materials/AlignUnsuccessNotificationTile.mat
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Materials/Arrow.mat
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Materials/BoyTutorialUnlit.mat
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Materials/FrustumOutlineTeachingMode.mat
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Materials/FrustumOutlineTutorial.mat
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Materials/FrustumTeachingMode.mat
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Materials/FrustumTutorial.mat
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Materials/GirlTutorialUnlit.mat
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Materials/GlassesInnerGhostTeachingMode.mat
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Materials/GlassesInnerGhostTutorial.mat
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Materials/GlassesInnerON.mat
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Materials/GlassesOccluder.mat
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Materials/GlassesScreenGradientTeachingMode.mat
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Materials/GlassesScreenGradientTutorial.mat
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Materials/KeepLookingButton.mat
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Materials/Landmarks3D.mat
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Materials/Landmarks3D.ss_graph
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Materials/LoadingBarGreyTutorisl.mat
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Materials/LoadingBarTutorial.mat
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Materials/MappingHintBg.mat
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Materials/MappingSuccessCheckmark.mat
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Materials/MappingUnsuccessNotificationTile.mat
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Materials/OutlineInsideRoomHeadTeachingMode.mat
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Materials/OutlineInsideRoomHeadTutorial.mat
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Materials/ProgressBar.mat
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Materials/ProgressBarGrey.mat
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Materials/Spinner.mat
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Materials/TutorialCheckmark.mat
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Materials/TutorialHeadCharacter.mat
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Materials/TutorialRoom.mat
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Materials/TutorialRoomOccluder.mat
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Materials/TutorialTile.mat
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Materials/UnlitActivePoints.mat
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Materials/UnlitNonActivePoints.mat
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Materials/YellowArrowTutorial.mat
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Meshes
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Meshes/Arrow.mesh
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Meshes/CapsuleButton.mesh
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Meshes/Colocated Landmarks 3D Mesh.colocatedLandmarks3DMesh
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Meshes/TutorialTile.mesh
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Meshes/UnsuccessNotificationTile.mesh
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Shaders
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Shaders/Arrow.ss_graph
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Shaders/CapsuleButton.ss_graph
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Shaders/Checkmark.ss_graph
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Shaders/FrustumOutline.ss_graph
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Shaders/FrustumTeachingMode.ss_graph
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Shaders/FrustumTutorial.ss_graph
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Shaders/GlassesInner 1.ss_graph
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Shaders/GlassesInner.ss_graph
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Shaders/GlassesOccluder.ss_graph
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Shaders/GlassesOutline.ss_graph
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Shaders/LoadingBar.ss_graph
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Shaders/LoadingBarGrey.ss_graph
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Shaders/MappingHintBg.ss_graph
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Shaders/Spinner.ss_graph
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Shaders/TutorialCharacterUnlit.ss_graph
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Shaders/TutorialHeadCharacter.ss_graph
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Shaders/TutorialRoom.ss_graph
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Shaders/TutorialRoomOccluder.ss_graph
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Shaders/TutorialTile.ss_graph
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Shaders/UnlitPoints.ss_graph
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Shaders/UnsuccessNotificationTile.ss_graph
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Shaders/YellowArrowTutorial.ss_graph
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Textures
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Textures/BoyTutorial.webp
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Textures/FrustumAlbedo.webp
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Textures/FrustumAlpha.webp
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Textures/FrustumEmissive.webp
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Textures/GirlTutorial.webp
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Textures/GlassesScreenGradient.png
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Textures/Glow.jpg
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Textures/KeepLookingButton.jpg
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Textures/KeepLookingButtonText.png
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Textures/LoadingBar.png
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Textures/LoadingBarGrey.png
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Textures/MappingHintBg.png
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Textures/SpinnerLoader.t3d
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Textures/SpinnerLoader.t3d/SpinnerLoader
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Textures/SpinnerLoader.t3d/spinner_loader_0.png
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Textures/TutorialRoom.webp
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Textures/TutorialTileMask.jpg
+      - SpectaclesSyncKit.lspkg/Mapping/Assets/Textures/UnsuccessNotificationTile.jpg
+      - SpectaclesSyncKit.lspkg/Mapping/src
+      - SpectaclesSyncKit.lspkg/Mapping/src/EntryPointComponents
+      - SpectaclesSyncKit.lspkg/Mapping/src/EntryPointComponents/EntryPointMain.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/MappingFlowStates
+      - SpectaclesSyncKit.lspkg/Mapping/src/MappingFlowStates/BufferState
+      - SpectaclesSyncKit.lspkg/Mapping/src/MappingFlowStates/BufferState/BufferState.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/MappingFlowStates/JoiningState
+      - SpectaclesSyncKit.lspkg/Mapping/src/MappingFlowStates/JoiningState/JoiningState.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/MappingFlowStates/JoiningState/JoiningStateInput.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/MappingFlowStates/MappingCanceledState
+      - SpectaclesSyncKit.lspkg/Mapping/src/MappingFlowStates/MappingCanceledState/MappingCanceledState.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/MappingFlowStates/MappingState
+      - SpectaclesSyncKit.lspkg/Mapping/src/MappingFlowStates/MappingState/MappingState.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/MappingFlowStates/MappingState/MappingStateInput.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/MappingFlowStates/MappingSuccessfulState
+      - SpectaclesSyncKit.lspkg/Mapping/src/MappingFlowStates/MappingSuccessfulState/MappingSuccessfulState.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/MappingFlowStates/MappingSuccessfulState/MappingSuccessfulStateInput.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/MappingFlowStates/MappingUnsuccessfulState
+      - SpectaclesSyncKit.lspkg/Mapping/src/MappingFlowStates/MappingUnsuccessfulState/MappingUnsuccessfulState.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/MappingFlowStates/MappingUnsuccessfulState/MappingUnsuccessfulStateInput.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/MappingFlowStates/MappingUnsuccessfulState/MappingUnsuccessfulTypeEnum.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/MappingFlowStates/TeachingJoinedUserState
+      - SpectaclesSyncKit.lspkg/Mapping/src/MappingFlowStates/TeachingJoinedUserState/TeachingJoinedUserState.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/MappingFlowStates/TeachingJoinedUserState/TeachingJoinedUserStateInput.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/MappingFlowStates/WaitingForMappingState
+      - SpectaclesSyncKit.lspkg/Mapping/src/MappingFlowStates/WaitingForMappingState/WaitingForMappingState.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/MappingFlowStates/WaitingForMappingState/WaitingForMappingStateInput.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/Texts
+      - SpectaclesSyncKit.lspkg/Mapping/src/Texts/ITitledText.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/Texts/MessageTextsEnum.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/Texts/TextValues.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/UI
+      - SpectaclesSyncKit.lspkg/Mapping/src/UI/MappingFlow
+      - SpectaclesSyncKit.lspkg/Mapping/src/UI/MappingFlow/ProgressBar
+      - SpectaclesSyncKit.lspkg/Mapping/src/UI/MappingFlow/ProgressBar/ProgressBar.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/UI/MappingFlow/ProgressBar/ProgressBarInput.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/UI/MappingFlow/ProgressBar/ProgressBarParametersInput.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/UI/MappingFlow/TextMappingHint
+      - SpectaclesSyncKit.lspkg/Mapping/src/UI/MappingFlow/TextMappingHint/TextMappingHint.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/UI/MappingFlow/TextMappingHint/TextMappingHintInput.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/UI/MappingFlow/TextMappingHint/TextMappingHintParametersInput.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/UI/MappingFlow/Tutorial
+      - SpectaclesSyncKit.lspkg/Mapping/src/UI/MappingFlow/Tutorial/Tutorial.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/UI/MappingFlow/Tutorial/TutorialInput.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/UI/MappingFlow/Tutorial/TutorialParametersInput.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/UI/MappingFlow/Tutorial/TutorialTypeEnum.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/UI/MappingUnsuccessful
+      - SpectaclesSyncKit.lspkg/Mapping/src/UI/MappingUnsuccessful/MappingUnsuccessfulNotification.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/UI/MappingUnsuccessful/MappingUnsuccessfulNotificationInput.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/UI/ObjectLocator
+      - SpectaclesSyncKit.lspkg/Mapping/src/UI/ObjectLocator/ObjectLocator.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/UI/ObjectLocator/ObjectLocatorInput.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/UI/ObjectLocator/StartPointAlphaAnimation.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/UI/ObjectLocator/animations
+      - SpectaclesSyncKit.lspkg/Mapping/src/UI/ObjectLocator/animations/TweenFactory.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/UI/ObjectLocator/animations/Update.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/UI/ObjectLocator/animations/tween.d.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/UI/ObjectLocator/animations/tween.js
+      - SpectaclesSyncKit.lspkg/Mapping/src/Utils
+      - SpectaclesSyncKit.lspkg/Mapping/src/Utils/HeadLockBehavior
+      - SpectaclesSyncKit.lspkg/Mapping/src/Utils/HeadLockBehavior/HeadLockBehavior.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/Utils/HeadLockBehavior/HeadLockBehaviorInput.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/Utils/HeadLockBehavior/IHeadLockBehavior.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/Utils/HeadLockBehavior/SecondOrderDynamics.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/Utils/JoiningController.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/Utils/ProjectContainer.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/Utils/SharedFunctions.ts
+      - SpectaclesSyncKit.lspkg/Readme.md
+      - SpectaclesSyncKit.lspkg/SpectaclesSyncKit.prefab
+      - SpectaclesSyncKit.lspkg/Utils
+      - SpectaclesSyncKit.lspkg/Utils/EnableObjectsOnAwake.ts
+      - SpectaclesSyncKit.lspkg/Utils/Helpers.ts
+      - SpectaclesSyncKit.lspkg/Utils/Observable.ts
+      - SpectaclesSyncKit.lspkg/Utils/PositionInitializer.ts
+      - SpectaclesSyncKit.lspkg/Utils/StartMenu.ts
+      - SpectaclesSyncKit.lspkg/Utils/SyncKitLogLevelConfiguration.ts
+      - SpectaclesSyncKit.lspkg/Utils/SyncKitLogLevelProvider.ts
+      - SpectaclesSyncKit.lspkg/Utils/SyncKitLogger.ts
+      - SpectaclesSyncKit.lspkg/Utils/Timers.ts
+      - SpectaclesSyncKit.lspkg/Utils/UUID.ts
+      - SpectaclesSyncKit.lspkg/Utils/Unsubscribe.ts
+      - SpectaclesSyncKit.lspkg/VersionNumber.ts
+      - SpectaclesSyncKit.lspkg/package.native
       - Surface Detection.lspkg
       - Surface Detection.lspkg/Audio
       - Surface Detection.lspkg/Audio/CalibrationComplete.mp3

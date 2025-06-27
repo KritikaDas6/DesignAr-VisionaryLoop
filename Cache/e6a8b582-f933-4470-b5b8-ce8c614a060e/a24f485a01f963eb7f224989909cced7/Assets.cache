@@ -34,6 +34,12 @@
         Port_GSplatPointSize_N004:
           typeIdx: 1
           value: 0.000000
+        Port_GSplatRotation_N004:
+          typeIdx: 5
+          value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        Port_GSplatScale_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
         Port_Import_N006:
           typeIdx: 1
           value: 0.500000
@@ -227,7 +233,8 @@
             mDefaultVal: 0.500000
             mValues:
               []
-      ShaderPath: e6a8b582-f933-4470-b5b8-ce8c614a060e/a24f485a01f963eb7f224989909cced7/Data/cfd37fa/StateButtonToggledHover.glsl
+        ShaderType: Mesh3d
+      ShaderPath: e6a8b582-f933-4470-b5b8-ce8c614a060e/a24f485a01f963eb7f224989909cced7/Data/247970f/StateButtonToggledHover.glsl
       Defines:
         []
       Properties:

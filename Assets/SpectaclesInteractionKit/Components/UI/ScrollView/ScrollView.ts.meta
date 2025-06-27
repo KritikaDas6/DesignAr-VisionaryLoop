@@ -1,23 +1,24 @@
 - !<AssetImportMetadata/14a0e732-86b0-427f-b1fe-3699a5bc0b6b>
-  ImporterSettings: !<AssetImporterSettings>
-    {}
   ImportedAssetIds:
     TypeScriptAsset: !<reference> 8ba7b68a-4b25-4d72-a4a4-a57730a77680
   ImporterName: TypeScriptAssetImporter
   PrimaryAsset: !<reference> 8ba7b68a-4b25-4d72-a4a4-a57730a77680
   PackageType: NotAPackage
-  AssetDataMap:
-    TypeScriptAsset: !<own> e98fd325-103d-4b36-835b-64373a02227c
   PackagePolicy: CannotBeUnpacked
-  DependentFiles:
-    []
-  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
     {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> e98fd325-103d-4b36-835b-64373a02227c
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<TypeScriptAssetData/e98fd325-103d-4b36-835b-64373a02227c>
-  Icon: ""
+  SvgIcon: ""
+  SetupScript:
+    code: ""
   Description: ""
-  InternalVersion: 0
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
@@ -35,12 +36,14 @@
     scrollAreaBounds: false
   ScriptTypesHidden:
     {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
-    - enableHorizontalScroll: false
+    - _debugDrawEnabled: false
+      enableHorizontalScroll: false
       enableVerticalScroll: true
-      enableScrollLimit: true
-      _debugDrawEnabled: false
       _enableScrollInertia: true
+      enableScrollLimit: true
       _scrollLimit: 0.300000
       scrollAreaBounds: !<Vec2> {x: 1.000000, y: 1.000000}
   ScriptTypes:
@@ -54,5 +57,3 @@
     - // @input bool enableScrollLimit = true
     - '// @input float _scrollLimit = 0.3 {"widget":"slider", "min":0, "max":1, "step":0.01}'
     - '// @input vec2 scrollAreaBounds = "{1, 1}"'
-  SvgIcon: ""
-  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

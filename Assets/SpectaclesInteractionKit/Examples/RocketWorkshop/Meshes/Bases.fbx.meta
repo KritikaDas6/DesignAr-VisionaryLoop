@@ -19,6 +19,8 @@
   PrimaryAsset: !<reference> 73fddc48-d18b-4a1c-a7cb-5b00514f02f9
   PackageType: LegacyPackage
   PackagePolicy: CanBeUnpacked
+  ExtraData:
+    {}
   AssetDataMap:
     Scene: !<own> 30c6608f-a3df-40bd-a62a-21a9afb96dd0
   DependentFiles:
@@ -27,6 +29,7 @@
     UseLegacyImporter: false
     WithMaterials: true
     NamingConvention: ByCategory
+    PersistentIdGenerationAlgorithm: Legacy
     AnimationCurveOptimization: true
     CustomAnimationSamplingRate: 30.000000
     ImportVertexColor: true
@@ -38,7 +41,6 @@
     GeneratePivots: true
     TriangulateNURBS: true
     UseLegacyFbxLoader: false
-    PersistentIdGenerationAlgorithm: Legacy
   CompressionSettings: !<ComplexCompressionSettings>
     Presets:
       None Compression: !<SingleCompressionSettings>
@@ -48,8 +50,6 @@
       mesh: None Compression
     Overrides:
       {}
-  ExtraData:
-    {}
 - !<RenderMeshVisual/17a6832d-efd5-41bc-a1aa-7a80832fd5cb>
   PrefabRemaps:
     []
@@ -86,11 +86,11 @@
   Name: Bases
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> ff5af3c9-887c-4216-adc1-6e42a5c1d42e
     - !<own> e0ea0f62-de71-4e1d-bfcd-336de71ab18a
@@ -149,11 +149,11 @@
   Name: Circular
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: -90.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 100.000000, y: 100.000000, z: 100.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: -90.000000, y: -0.000000, z: 0.000000}
+    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -164,11 +164,11 @@
   Name: Cubic_01
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: -90.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 100.000000, y: 100.000000, z: 100.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: -90.000000, y: -0.000000, z: 0.000000}
+    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -179,11 +179,11 @@
   Name: Hexagon_01
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: -90.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 100.000000, y: 100.000000, z: 100.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: -90.000000, y: -0.000000, z: 0.000000}
+    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:

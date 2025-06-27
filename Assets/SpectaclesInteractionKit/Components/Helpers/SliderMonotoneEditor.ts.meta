@@ -16,8 +16,9 @@
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<TypeScriptAssetData/53e20e35-b673-406d-8ec7-31995a6f038f>
   SvgIcon: ""
+  SetupScript:
+    code: ""
   Description: ""
-  InternalVersion: 0
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
@@ -30,13 +31,14 @@
     slider: false
   ScriptTypesHidden:
     {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
     - image: !<reference.Image> 00000000-0000-0000-0000-000000000000
-      slider: !<MappingBased.Slider> 00000000-0000-0000-0000-000000000000
+      slider: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
     - // @input Component.Image image
-    - // @input Slider slider
+    - // @input AssignableType slider

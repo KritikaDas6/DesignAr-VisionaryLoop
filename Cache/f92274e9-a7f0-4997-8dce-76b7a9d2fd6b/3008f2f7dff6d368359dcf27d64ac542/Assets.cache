@@ -34,6 +34,12 @@
         Port_GSplatPointSize_N004:
           typeIdx: 1
           value: 0.000000
+        Port_GSplatRotation_N004:
+          typeIdx: 5
+          value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        Port_GSplatScale_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
         Port_Import_N006:
           typeIdx: 1
           value: 0.500000
@@ -257,7 +263,8 @@
             mDefaultVal: 0.500000
             mValues:
               []
-      ShaderPath: f92274e9-a7f0-4997-8dce-76b7a9d2fd6b/3008f2f7dff6d368359dcf27d64ac542/Data/cfd37fa/ButtonHover.glsl
+        ShaderType: Mesh3d
+      ShaderPath: f92274e9-a7f0-4997-8dce-76b7a9d2fd6b/3008f2f7dff6d368359dcf27d64ac542/Data/247970f/ButtonHover.glsl
       Defines:
         []
       Properties:

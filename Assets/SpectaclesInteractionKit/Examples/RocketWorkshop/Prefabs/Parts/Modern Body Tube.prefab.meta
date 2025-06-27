@@ -5,6 +5,8 @@
   PrimaryAsset: !<reference> c8ce89d2-0194-47e9-be14-34f061d69200
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
   AssetDataMap:
     ObjectPrefab: !<own> d3f4706d-e82a-4057-b7fc-a936c2db43cb
   DependentFiles:
@@ -12,19 +14,17 @@
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-  ExtraData:
-    {}
 - !<SceneObject/723daa80-26ae-4125-b7a1-8135d58f53cb>
   PrefabRemaps:
     []
   Name: Modern Body Tube
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 13.478287, z: 0.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 13.478287, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:

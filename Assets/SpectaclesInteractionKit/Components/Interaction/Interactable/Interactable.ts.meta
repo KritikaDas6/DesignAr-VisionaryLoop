@@ -1,23 +1,24 @@
 - !<AssetImportMetadata/b4f5f936-5d22-4d9e-a415-a82f2554f021>
-  ImporterSettings: !<AssetImporterSettings>
-    {}
   ImportedAssetIds:
     TypeScriptAsset: !<reference> 652e631a-22d0-4941-9f74-2943df59f34c
   ImporterName: TypeScriptAssetImporter
   PrimaryAsset: !<reference> 652e631a-22d0-4941-9f74-2943df59f34c
   PackageType: NotAPackage
-  AssetDataMap:
-    TypeScriptAsset: !<own> 4dbaada5-89aa-44bf-9ce8-f707888c5484
   PackagePolicy: CannotBeUnpacked
-  DependentFiles:
-    []
-  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
     {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 4dbaada5-89aa-44bf-9ce8-f707888c5484
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<TypeScriptAssetData/4dbaada5-89aa-44bf-9ce8-f707888c5484>
-  Icon: ""
+  SvgIcon: ""
+  SetupScript:
+    code: ""
   Description: ""
-  InternalVersion: 0
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
@@ -36,10 +37,12 @@
     targetingMode: false
   ScriptTypesHidden:
     {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
     - targetingMode: !<float> 3.000000
-      isScrollable: false
       enableInstantDrag: false
+      isScrollable: false
       allowMultipleInteractors: true
       enablePokeDirectionality: false
       acceptableXDirections: !<float> 3.000000
@@ -58,5 +61,3 @@
     - '// @input float acceptableXDirections = 3 {"label":"X", "widget":"combobox", "values":[{"label":"None", "value":0}, {"label":"Right", "value":1}, {"label":"Left", "value":2}, {"label":"All", "value":3}], "showIf":"enablePokeDirectionality"}'
     - '// @input float acceptableYDirections = 3 {"label":"Y", "widget":"combobox", "values":[{"label":"None", "value":0}, {"label":"Up", "value":1}, {"label":"Down", "value":2}, {"label":"All", "value":3}], "showIf":"enablePokeDirectionality"}'
     - '// @input float acceptableZDirections = 3 {"label":"Z", "widget":"combobox", "values":[{"label":"None", "value":0}, {"label":"Forward", "value":1}, {"label":"Back", "value":2}, {"label":"All", "value":3}], "showIf":"enablePokeDirectionality"}'
-  SvgIcon: ""
-  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

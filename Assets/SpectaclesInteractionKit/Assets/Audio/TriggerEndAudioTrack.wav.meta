@@ -4,13 +4,13 @@
   ImporterName: FileAudioTrackImporter
   PrimaryAsset: !<reference> 82028831-1631-4d7b-b548-ff6be4e0a2ba
   PackageType: NotAPackage
-  ImporterSettings: !<AssetImporterSettings>
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
     {}
   AssetDataMap:
     FileAudioTrack: !<own> 00000000-0000-0000-0000-000000000000
-  PackagePolicy: CannotBeUnpacked
   DependentFiles:
     []
-  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-  ExtraData:
+  ImporterSettings: !<AssetImporterSettings>
     {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000

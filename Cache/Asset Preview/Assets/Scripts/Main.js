@@ -24,20 +24,21 @@ function update() {
 
         newObject = root;
     }
-    
+
     script.gridController.show();
 
     newObject.enabled = true;
-    var hasChild = (newObject.getChildrenCount() != 0);
+    const hasChild = (newObject.getChildrenCount() != 0);
 
-    if (!hasChild && (newObject.name == "Texture" || newObject.name == "Video Texture")){
-        var image = newObject.getComponent("Component.Image");
+    const image = newObject.getComponent('Component.Image');
+
+    if (!hasChild && image) {
         if (image) {
-            var mainPass = image.mainPass;
-            if (mainPass){
+            const mainPass = image.mainPass;
+            if (mainPass) {
                 hide();
-                var texture = mainPass.baseTex;
-                script.texturePreviewController.show(texture)
+                const texture = mainPass.baseTex;
+                script.texturePreviewController.show(texture);
                 newObject.destroy();
             }
 
@@ -45,9 +46,10 @@ function update() {
         }
     }
 
-    if (!hasChild && newObject.name == 'Material') {
-        var renderMeshVisual = newObject.getComponent("Component.RenderMeshVisual");
-        if (renderMeshVisual){
+    var renderMeshVisual = newObject.getComponent('Component.RenderMeshVisual');
+
+    if (!hasChild && renderMeshVisual && (newObject.name.includes('Mesh using') || newObject.name.includes('Post Effect:'))) {
+        if (renderMeshVisual) {
             hide();
             script.placementScript.reparentNew();
             script.materialPreviewController.show(newObject);
@@ -55,9 +57,9 @@ function update() {
         }
     }
 
-    if (!hasChild && newObject.name == 'Mesh') {
-        var renderMeshVisual = newObject.getComponent("Component.RenderMeshVisual");
-        if (renderMeshVisual){        
+    if (!hasChild && renderMeshVisual) {
+        var renderMeshVisual = newObject.getComponent('Component.RenderMeshVisual');
+        if (renderMeshVisual) {
             hide();
             script.placementScript.reparentNew();
             script.meshPreviewController.show(newObject);
@@ -65,7 +67,9 @@ function update() {
         }
     }
 
-    if (newObject.name == 'VFX Graph') {
+    const vfxComponent = newObject.getComponent('Component.VFXComponent');
+
+    if (vfxComponent) {
         hide();
         script.vfxPreviewController.show(newObject);
         return;

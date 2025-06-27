@@ -1,23 +1,24 @@
 - !<AssetImportMetadata/fe50bd08-5d67-4bcb-934a-45afc193ebeb>
-  ImporterSettings: !<AssetImporterSettings>
-    {}
   ImportedAssetIds:
     TypeScriptAsset: !<reference> 657cbbe5-2a9c-4889-93fb-fd72ba8a1d52
   ImporterName: TypeScriptAssetImporter
   PrimaryAsset: !<reference> 657cbbe5-2a9c-4889-93fb-fd72ba8a1d52
   PackageType: NotAPackage
-  AssetDataMap:
-    TypeScriptAsset: !<own> 50ffe207-9397-4bb8-9bb8-1a522c28a187
   PackagePolicy: CannotBeUnpacked
-  DependentFiles:
-    []
-  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
     {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 50ffe207-9397-4bb8-9bb8-1a522c28a187
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<TypeScriptAssetData/50ffe207-9397-4bb8-9bb8-1a522c28a187>
-  Icon: ""
+  SvgIcon: ""
+  SetupScript:
+    code: ""
   Description: ""
-  InternalVersion: 0
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
@@ -33,13 +34,15 @@
     targetOutlineMaterial: false
   ScriptTypesHidden:
     {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
     - targetOutlineMaterial: !<reference.Material> 7ac80b6c-979a-4a00-a694-099f296be161
+      hoveringColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 0.040000, w: 1.000000}
+      activatingColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
       outlineWeight: -0.250000
       meshVisuals: !<reference.RenderMeshVisual[]>
         []
-      hoveringColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 0.040000, w: 1.000000}
-      activatingColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ScriptTypes:
     -
       {}
@@ -49,5 +52,3 @@
     - '// @input vec4 activatingColor = "{1, 1, 1, 1}" {"hint":"This is the colour of the outline when pinched", "widget":"color"}'
     - '// @input float outlineWeight = 0.25 {"hint":"This is the thickness of the outline"}'
     - '// @input Component.RenderMeshVisual[] meshVisuals = {} {"hint":"These are the meshes that will be outlined on pinch/hover"}'
-  SvgIcon: ""
-  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

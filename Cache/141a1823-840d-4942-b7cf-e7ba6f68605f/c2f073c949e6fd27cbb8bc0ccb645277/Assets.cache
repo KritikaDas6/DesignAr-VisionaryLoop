@@ -31,6 +31,12 @@
         Port_GSplatPointSize_N004:
           typeIdx: 1
           value: 0.000000
+        Port_GSplatRotation_N004:
+          typeIdx: 5
+          value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        Port_GSplatScale_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
         Port_Import_N006:
           typeIdx: 1
           value: 0.500000
@@ -215,7 +221,8 @@
             mDefaultVal: 0.500000
             mValues:
               []
-      ShaderPath: 141a1823-840d-4942-b7cf-e7ba6f68605f/c2f073c949e6fd27cbb8bc0ccb645277/Data/cfd37fa/StateButtonToggledPinched.glsl
+        ShaderType: Mesh3d
+      ShaderPath: 141a1823-840d-4942-b7cf-e7ba6f68605f/c2f073c949e6fd27cbb8bc0ccb645277/Data/247970f/StateButtonToggledPinched.glsl
       Defines:
         []
       Properties:

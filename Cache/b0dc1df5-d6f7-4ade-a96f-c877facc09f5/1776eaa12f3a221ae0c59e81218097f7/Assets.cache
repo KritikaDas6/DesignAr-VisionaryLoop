@@ -22,6 +22,12 @@
         Port_GSplatPointSize_N004:
           typeIdx: 1
           value: 0.000000
+        Port_GSplatRotation_N004:
+          typeIdx: 5
+          value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        Port_GSplatScale_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
         Port_RayDirection_N004:
           typeIdx: 4
           value: {x: 0.000000, y: 1.000000, z: 0.000000}
@@ -85,7 +91,8 @@
             mDefaultVal: 0.500000
             mValues:
               []
-      ShaderPath: b0dc1df5-d6f7-4ade-a96f-c877facc09f5/1776eaa12f3a221ae0c59e81218097f7/Data/cfd37fa/HandOccluder.glsl
+        ShaderType: Mesh3d
+      ShaderPath: b0dc1df5-d6f7-4ade-a96f-c877facc09f5/1776eaa12f3a221ae0c59e81218097f7/Data/247970f/HandOccluder.glsl
       Defines:
         []
       Properties:

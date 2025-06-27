@@ -22,6 +22,12 @@
     - overrideTimeDelta:
         typeIdx: 1
         value: 0.000000
+    - overrideTimeElapsed:
+        typeIdx: 1
+        value: 0.000000
+    - overrideTimeEnabled:
+        typeIdx: 0
+        value: 0
   DepthWrite: true
   DepthTest: true
   DepthFunction: LessEqual
@@ -195,12 +201,6 @@
     noise_freq:
       typeIdx: 1
       value: 27.939999
-    overrideTimeElapsed:
-      typeIdx: 1
-      value: 0.000000
-    overrideTimeEnabled:
-      typeIdx: 0
-      value: 0
     range:
       typeIdx: 1
       value: 0.750000

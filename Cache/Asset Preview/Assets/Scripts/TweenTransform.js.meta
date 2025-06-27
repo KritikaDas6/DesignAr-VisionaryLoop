@@ -5,6 +5,8 @@
   PrimaryAsset: !<reference> 80252341-94b4-4b6d-86b5-3fe8ed5ac1e8
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
   AssetDataMap:
     JavaScriptAsset: !<own> 82fafdf4-f5fb-451d-afce-4d6366cdb4b1
   DependentFiles:
@@ -12,10 +14,10 @@
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-  ExtraData:
-    {}
 - !<ScriptAssetData/82fafdf4-f5fb-451d-afce-4d6366cdb4b1>
   SvgIcon: ""
+  SetupScript:
+    code: ""
   Description: ""
   InternalVersion: 0
   VersionMajor: 0
@@ -45,6 +47,8 @@
     type: false
   ScriptTypesHidden:
     {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
     - sceneObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       tweenName: ""
@@ -66,4 +70,3 @@
   ScriptTypes:
     -
       {}
-  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

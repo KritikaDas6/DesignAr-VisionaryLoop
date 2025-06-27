@@ -46,6 +46,12 @@
         Port_GSplatPointSize_N004:
           typeIdx: 1
           value: 0.000000
+        Port_GSplatRotation_N004:
+          typeIdx: 5
+          value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        Port_GSplatScale_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
         Port_Input1_N002:
           typeIdx: 1
           value: 1.000000
@@ -907,7 +913,8 @@
             mDefaultVal: 0.500000
             mValues:
               []
-      ShaderPath: 637b4fdd-6d1f-4f4b-abc1-3608f3040217/648d5eb70c5735f16cebaf1fdfa67332/Data/cfd37fa/PinchButton-ActiveOrInActive.glsl
+        ShaderType: Mesh3d
+      ShaderPath: 637b4fdd-6d1f-4f4b-abc1-3608f3040217/648d5eb70c5735f16cebaf1fdfa67332/Data/247970f/PinchButton-ActiveOrInActive.glsl
       Defines:
         []
       Properties:

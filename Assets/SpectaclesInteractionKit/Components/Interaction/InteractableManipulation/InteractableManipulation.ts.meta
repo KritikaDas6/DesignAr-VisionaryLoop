@@ -1,23 +1,24 @@
 - !<AssetImportMetadata/1080c118-12f8-477f-b35a-2c5a3ceaa416>
-  ImporterSettings: !<AssetImporterSettings>
-    {}
   ImportedAssetIds:
     TypeScriptAsset: !<reference> 664b556b-1946-4c2c-866a-e675b4e86006
   ImporterName: TypeScriptAssetImporter
   PrimaryAsset: !<reference> 664b556b-1946-4c2c-866a-e675b4e86006
   PackageType: NotAPackage
-  AssetDataMap:
-    TypeScriptAsset: !<own> 7663e845-55f5-41f0-b9ac-0743935809d6
   PackagePolicy: CannotBeUnpacked
-  DependentFiles:
-    []
-  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
     {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 7663e845-55f5-41f0-b9ac-0743935809d6
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<TypeScriptAssetData/7663e845-55f5-41f0-b9ac-0743935809d6>
-  Icon: ""
+  SvgIcon: ""
+  SetupScript:
+    code: ""
   Description: ""
-  InternalVersion: 0
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
@@ -49,6 +50,8 @@
     zStretchFactorMin: false
   ScriptTypesHidden:
     {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
     - manipulateRootSceneObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       minimumScaleFactor: 0.250000
@@ -60,11 +63,11 @@
       showStretchZProperties: false
       zStretchFactorMin: !<float> 1.000000
       zStretchFactorMax: !<float> 12.000000
+      useFilter: true
       showFilterProperties: false
       minCutoff: !<float> 2.000000
       beta: 0.015000
       dcutoff: !<float> 1.000000
-      useFilter: true
       showTranslationProperties: false
       _enableXTranslation: true
       _enableYTranslation: true
@@ -98,5 +101,3 @@
     - // @input bool showRotationProperties
     - '// @input string _rotationAxis = "All" {"hint":"Enable rotation about all axes or a single world axis (x,y,z) when using to two hands.", "widget":"combobox", "values":[{"label":"All", "value":"All"}, {"label":"X", "value":"X"}, {"label":"Y", "value":"Y"}, {"label":"Z", "value":"Z"}], "showIf":"showRotationProperties", "showIfValue":true}'
     - '// @ui {"widget":"group_end"}'
-  SvgIcon: ""
-  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

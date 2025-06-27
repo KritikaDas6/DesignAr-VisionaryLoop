@@ -31,6 +31,12 @@
         Port_GSplatPointSize_N004:
           typeIdx: 1
           value: 0.000000
+        Port_GSplatRotation_N004:
+          typeIdx: 5
+          value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        Port_GSplatScale_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
         Port_LODValue_N157:
           typeIdx: 1
           value: 0.000000
@@ -536,7 +542,8 @@
             mDefaultVal: 0.500000
             mValues:
               []
-      ShaderPath: afacdf55-5a38-450c-8e23-15f30f41b81f/fe2af1457971ee3dc6b5fee698adef6c/Data/cfd37fa/RadialGradientOcclusion.glsl
+        ShaderType: Mesh3d
+      ShaderPath: afacdf55-5a38-450c-8e23-15f30f41b81f/fe2af1457971ee3dc6b5fee698adef6c/Data/247970f/RadialGradientOcclusion.glsl
       Defines:
         []
       Properties:
