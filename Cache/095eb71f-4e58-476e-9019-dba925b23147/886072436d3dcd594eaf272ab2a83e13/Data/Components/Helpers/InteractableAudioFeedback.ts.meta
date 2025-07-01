@@ -1,0 +1,55 @@
+- !<AssetImportMetadata/d85eef00-b015-4f38-8b83-30c3eb711120>
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 810749c5-6def-430c-8c23-1c9abdf6c25f
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 810749c5-6def-430c-8c23-1c9abdf6c25f
+  PackageType: NotAPackage
+  AssetDataMap:
+    TypeScriptAsset: !<own> 7226b60b-0f0e-45d5-ac60-96d6e0017e93
+  PackagePolicy: CannotBeUnpacked
+  DependentFiles:
+    []
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
+- !<TypeScriptAssetData/7226b60b-0f0e-45d5-ac60-96d6e0017e93>
+  Icon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 9a2ce527-1fec-40b9-b48c-5b2ca1e669fa
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    _hoverAudioTrack: false
+    _playAudioOnHover: false
+    _playAudioOnTriggerEnd: false
+    _playAudioOnTriggerStart: false
+    _triggerEndAudioTrack: false
+    _triggerStartAudioTrack: false
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    - _playAudioOnHover: false
+      _playAudioOnTriggerStart: true
+      _playAudioOnTriggerEnd: true
+      _hoverAudioTrack: !<reference.AudioTrackAsset> 27130825-2966-4994-ac7d-c30453f82e2a
+      _triggerStartAudioTrack: !<reference.AudioTrackAsset> b8bf9a52-8233-4f96-913d-880fc607ac39
+      _triggerEndAudioTrack: !<reference.AudioTrackAsset> 24a0a694-2df7-4585-a34a-2e208dfcba0e
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input bool _playAudioOnHover = true
+    - '// @input Asset.AudioTrackAsset _hoverAudioTrack {"hint":"This sound will play when the Interactable is hovered", "showIf":"_playAudioOnHover", "showIfValue":true}'
+    - // @input bool _playAudioOnTriggerStart = true
+    - '// @input Asset.AudioTrackAsset _triggerStartAudioTrack {"hint":"This sound will play when starting the trigger the Interactable", "showIf":"_playAudioOnTriggerStart", "showIfValue":true}'
+    - // @input bool _playAudioOnTriggerEnd = true
+    - '// @input Asset.AudioTrackAsset _triggerEndAudioTrack {"hint":"This sound will play when ending the trigger of the Interactable", "showIf":"_playAudioOnTriggerEnd", "showIfValue":true}'
+  SvgIcon: ""
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

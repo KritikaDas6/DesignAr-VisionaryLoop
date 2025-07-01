@@ -1,0 +1,42 @@
+- !<AssetImportMetadata/0a8b059e-2545-4be2-b3fa-b79ec9a63594>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> bc4c6a43-17a8-4ec4-bae1-05925de64976
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> bc4c6a43-17a8-4ec4-bae1-05925de64976
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    TypeScriptAsset: !<own> 05ffbf05-4a02-42ea-b3ef-137109237721
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
+- !<TypeScriptAssetData/05ffbf05-4a02-42ea-b3ef-137109237721>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 1
+  VersionMajor: 1
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 6bce0e99-bfcc-4373-80de-7d7c6a91fccd
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    audio: false
+    calRenderer: false
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    - calRenderer: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
+      audio: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input Component.RenderMeshVisual calRenderer
+    - // @input Component.AudioComponent audio
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

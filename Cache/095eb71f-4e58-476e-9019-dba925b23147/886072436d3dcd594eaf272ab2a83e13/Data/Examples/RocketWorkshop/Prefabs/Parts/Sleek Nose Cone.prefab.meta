@@ -1,0 +1,62 @@
+- !<AssetImportMetadata/e457052d-9d92-4089-98af-d45d905f7c99>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 87e3f344-0f1b-4b6d-9e6f-235602cec657
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 87e3f344-0f1b-4b6d-9e6f-235602cec657
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    ObjectPrefab: !<own> 0fdf3e07-3aa1-4a80-bacb-3d855a2333cf
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
+- !<ObjectPrefabAssetData/0fdf3e07-3aa1-4a80-bacb-3d855a2333cf>
+  SourceRemaps:
+    - 19baefd5-43c1-462c-b273-a57c418d3f1c: d51fa1fa-c01d-486f-8854-ad6c5b62b745
+    - 679e5a44-b2f4-4501-8dfa-b7e0a3e0d153: ac31cfc2-2610-46b3-a411-32a8e10c899d
+  SourceState: !<own> 13f50d7f-0cc4-4a2f-a207-0cd9a55b0f7a
+- !<ObjectPrefab/13f50d7f-0cc4-4a2f-a207-0cd9a55b0f7a>
+  PackagePath: ""
+  objects:
+    - !<own> ac31cfc2-2610-46b3-a411-32a8e10c899d
+  LazyLoading: false
+  RetainAssets: true
+- !<SceneObject/ac31cfc2-2610-46b3-a411-32a8e10c899d>
+  PrefabRemaps:
+    []
+  Name: Sleek Nose Cone
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 21.029972, z: 0.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> d51fa1fa-c01d-486f-8854-ad6c5b62b745
+- !<RenderMeshVisual/d51fa1fa-c01d-486f-8854-ad6c5b62b745>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 91ca6e4c-ea65-487f-8b76-4ab983fb8546
+  Mesh: !<reference> e53324e3-006b-4c3b-84f6-8ae404e75c27
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}

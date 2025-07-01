@@ -1,0 +1,167 @@
+- !<Material/9c5f67d3-9170-4466-b44a-a7763e3055c6>
+  PackagePath: ""
+  PassesInfo:
+    - !<own> 77b7418c-072e-427d-a077-76627eab7dfe
+- !<PassInfo/77b7418c-072e-427d-a077-76627eab7dfe>
+  CachedProperties:
+    - capsule_btn_refl_tex_1BorderColor:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - capsule_btn_refl_tex_1Dims:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - capsule_btn_refl_tex_1UvMinMax:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - capsule_btn_refl_tex_2BorderColor:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - capsule_btn_refl_tex_2Dims:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - capsule_btn_refl_tex_2UvMinMax:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - capsule_btn_refl_tex_3BorderColor:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - capsule_btn_refl_tex_3Dims:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - capsule_btn_refl_tex_3UvMinMax:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  DepthWrite: true
+  DepthTest: true
+  DepthFunction: LessEqual
+  TwoSided: false
+  ColorMask: {x: true, y: true, z: true, w: true}
+  CullMode: Back
+  PolygonOffset: {x: 0.000000, y: 0.000000}
+  FrustumCulling: Auto
+  FrustumCullPad: 0.000000
+  InstanceCount: 1
+  Defines:
+    []
+  BlendMode: PremultipliedAlphaAuto
+  Properties:
+    Port_Exponent_N023:
+      typeIdx: 1
+      value: 1.000000
+    Port_Import_N027:
+      typeIdx: 1
+      value: 0.700000
+    Port_Import_N041:
+      typeIdx: 4
+      value: {x: 0.000000, y: 0.000000, z: 1.000000}
+    Port_Import_N101:
+      typeIdx: 1
+      value: 0.600000
+    Port_Import_N111:
+      typeIdx: 4
+      value: {x: 0.000000, y: 0.000000, z: 1.000000}
+    Port_Input1_N034:
+      typeIdx: 5
+      value: {x: 1.000000, y: 0.890196, z: 0.349020, w: 1.000000}
+    Port_Input1_N045:
+      typeIdx: 1
+      value: 0.500000
+    Port_Input1_N115:
+      typeIdx: 1
+      value: 0.500000
+    Port_Input2_N045:
+      typeIdx: 1
+      value: 0.500000
+    Port_Input2_N115:
+      typeIdx: 1
+      value: 0.500000
+    Port_Intensity_N023:
+      typeIdx: 1
+      value: 1.000000
+    Port_Normal_N023:
+      typeIdx: 4
+      value: {x: 0.000000, y: 0.000000, z: 1.000000}
+    Port_Position1_N067:
+      typeIdx: 1
+      value: 0.180000
+    Port_Position2_N067:
+      typeIdx: 1
+      value: 0.340000
+    Port_Position3_N067:
+      typeIdx: 1
+      value: 0.580000
+    Port_Value0_N067:
+      typeIdx: 5
+      value: {x: 1.000000, y: 0.866148, z: 0.196918, w: 1.000000}
+    Port_Value1_N067:
+      typeIdx: 5
+      value: {x: 0.200000, y: 0.133333, z: 0.039994, w: 1.000000}
+    Port_Value2_N067:
+      typeIdx: 5
+      value: {x: 0.533684, y: 0.444739, z: 0.177905, w: 1.000000}
+    Port_Value3_N067:
+      typeIdx: 5
+      value: {x: 0.976471, y: 0.893019, z: 0.475761, w: 1.000000}
+    Port_Value4_N067:
+      typeIdx: 5
+      value: {x: 1.000000, y: 0.916335, z: 0.498039, w: 1.000000}
+    PreviewEnabled:
+      typeIdx: 0
+      value: 0
+    capsule_btn_refl_tex_1:
+      typeIdx: 9
+      value:
+        id: 05dc3a25-f097-4f67-a067-8756f926f6b3
+        sampler:
+          filteringMode: Trilinear
+          wrapModeU: Repeat
+          wrapModeV: Repeat
+          wrapModeW: Repeat
+          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+          mipmaps: false
+        type: Texture2D
+    capsule_btn_refl_tex_1Transform:
+      typeIdx: 7
+      value:
+        0: {x: 1.000000, y: 0.000000, z: 0.000000}
+        1: {x: 0.000000, y: 1.000000, z: 0.000000}
+        2: {x: 0.000000, y: 0.000000, z: 1.000000}
+    capsule_btn_refl_tex_2:
+      typeIdx: 9
+      value:
+        id: f1618079-704c-4134-8ff8-2054348713a5
+        sampler:
+          filteringMode: Trilinear
+          wrapModeU: Repeat
+          wrapModeV: Repeat
+          wrapModeW: Repeat
+          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+          mipmaps: false
+        type: Texture2D
+    capsule_btn_refl_tex_2Transform:
+      typeIdx: 7
+      value:
+        0: {x: 1.000000, y: 0.000000, z: 0.000000}
+        1: {x: 0.000000, y: 1.000000, z: 0.000000}
+        2: {x: 0.000000, y: 0.000000, z: 1.000000}
+    capsule_btn_refl_tex_3:
+      typeIdx: 9
+      value:
+        id: 602058e5-2dfa-4584-8b4e-fa39b8682c1c
+        sampler:
+          filteringMode: Trilinear
+          wrapModeU: Repeat
+          wrapModeV: Repeat
+          wrapModeW: Repeat
+          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+          mipmaps: false
+        type: Texture2D
+    capsule_btn_refl_tex_3Transform:
+      typeIdx: 7
+      value:
+        0: {x: 1.000000, y: 0.000000, z: 0.000000}
+        1: {x: 0.000000, y: 1.000000, z: 0.000000}
+        2: {x: 0.000000, y: 0.000000, z: 1.000000}
+  Pass: !<reference> 26033898-9ef6-4d0f-a3e2-ccd9125b8009
+  RTCaster: false
+  RTReceiver: false

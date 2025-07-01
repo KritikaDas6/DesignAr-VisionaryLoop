@@ -1,0 +1,127 @@
+- !<AssetImportMetadata/c1e08ec5-55ca-46f4-905d-f60ba5c88dd2>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 3440313a-7fe0-45a9-a5e4-6a72c5cb85c0
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 3440313a-7fe0-45a9-a5e4-6a72c5cb85c0
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    ObjectPrefab: !<own> b3613760-de48-40d7-97d1-46d5104009fe
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
+- !<SceneObject/33a2802d-eceb-4ee5-9b78-2789a0df383b>
+  PrefabRemaps:
+    []
+  Name: engine_exhaust
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: -0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 4.000000, y: 4.000000, z: 4.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> b54636d2-de74-4b98-ae39-4ad358c2577d
+  Components:
+    []
+- !<LookAtComponent/796b3027-7ba5-46cb-90b7-86e992c35a39>
+  PrefabRemaps:
+    []
+  Name: Look At
+  Enabled: true
+  LookAtMode: LookAtPoint
+  AimVectors: NegativeZAimYUp
+  WorldUpVector: ObjectY
+  Target: !<reference> b49fd017-c3f4-45da-b6f3-ea6a4119aa87
+  OffsetRotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+- !<SceneObject/89190e59-5cfa-4ea7-99dd-9b634c846d35>
+  PrefabRemaps:
+    []
+  Name: glow_plane
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: -0.043960, z: -0.100000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 2.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> a9b20765-8876-42e3-8b67-462090ff382a
+- !<RenderMeshVisual/a9b20765-8876-42e3-8b67-462090ff382a>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 100
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 038b836f-bf1d-404b-bb7d-e62ba0154304
+  Mesh: !<reference> 9e3001b9-f7da-47c0-ab7d-abdd063d614f
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ObjectPrefabAssetData/b3613760-de48-40d7-97d1-46d5104009fe>
+  SourceRemaps:
+    - 068bb1b5-d8f5-49ef-845c-1a155ca0946e: 33a2802d-eceb-4ee5-9b78-2789a0df383b
+    - 1700efc8-06c7-472c-9446-6ec6482b896f: b7278961-243f-4a6d-9937-f3c3b4f80b58
+    - 250b79fc-c169-458f-b1e2-91df04a409b7: 89190e59-5cfa-4ea7-99dd-9b634c846d35
+    - 286fa81d-de10-4f5a-965a-47d8e91975ec: 796b3027-7ba5-46cb-90b7-86e992c35a39
+    - 643bd2dc-6c23-4f08-acd2-3dabccb15b5b: b54636d2-de74-4b98-ae39-4ad358c2577d
+    - 6e3102ae-97f7-4dc2-81d9-40c7a1c91514: a9b20765-8876-42e3-8b67-462090ff382a
+  SourceState: !<own> e4f4ae79-e70c-4097-b359-2529c44f4aa8
+- !<SceneObject/b54636d2-de74-4b98-ae39-4ad358c2577d>
+  PrefabRemaps:
+    []
+  Name: blendshapes1
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.727880, z: 0.000000}
+    rotation: {x: -180.000000, y: 0.000000, z: 180.000000}
+    scale: {x: 0.900000, y: 0.900000, z: 0.900000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 89190e59-5cfa-4ea7-99dd-9b634c846d35
+  Components:
+    - !<own> b7278961-243f-4a6d-9937-f3c3b4f80b58
+    - !<own> 796b3027-7ba5-46cb-90b7-86e992c35a39
+- !<RenderMeshVisual/b7278961-243f-4a6d-9937-f3c3b4f80b58>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 2c069d83-ecd6-4279-b809-7fa60401fb2b
+  Mesh: !<reference> 6e6cdec8-d64c-4026-bfff-120251ad1fe1
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    edit34: 1.000000
+- !<ObjectPrefab/e4f4ae79-e70c-4097-b359-2529c44f4aa8>
+  PackagePath: ""
+  objects:
+    - !<own> 33a2802d-eceb-4ee5-9b78-2789a0df383b
+  LazyLoading: false
+  RetainAssets: true
