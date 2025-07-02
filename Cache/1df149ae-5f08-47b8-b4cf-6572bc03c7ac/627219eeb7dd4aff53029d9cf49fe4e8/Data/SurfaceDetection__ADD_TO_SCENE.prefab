@@ -105,8 +105,6 @@
   ShadowFrustumFarClipPlane: 1000.000000
   UseEnvMapFromCamera: false
   EnvMapFromCameraMode: Auto
-  UseEstimation: false
-  EstimationIntensity: 1.000000
   EstimationSharpness: 1.000000
   EnvMapExposure: 1.000000
   EnvMapRotation: 0.000000
@@ -120,6 +118,8 @@
   DecayType: None
   DecayLimit: false
   DecayRange: 40.000000
+  UseEstimation: false
+  EstimationIntensity: !<float> 1.000000
 - !<RenderMeshVisual/60cb0da5-b114-4ef8-b051-d066dccf098c>
   PrefabRemaps:
     []

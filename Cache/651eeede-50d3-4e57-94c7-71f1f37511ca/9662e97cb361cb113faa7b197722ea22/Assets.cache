@@ -22,6 +22,12 @@
         Port_GSplatPointSize_N004:
           typeIdx: 1
           value: 0.000000
+        Port_GSplatRotation_N004:
+          typeIdx: 5
+          value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        Port_GSplatScale_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
         Port_Input1_N013:
           typeIdx: 1
           value: 0.000000
@@ -133,7 +139,8 @@
             mDefaultVal: 0.500000
             mValues:
               []
-      ShaderPath: 651eeede-50d3-4e57-94c7-71f1f37511ca/9662e97cb361cb113faa7b197722ea22/Data/cfd37fa/NormalBasedTargetOutline.glsl
+        ShaderType: Mesh3d
+      ShaderPath: 651eeede-50d3-4e57-94c7-71f1f37511ca/9662e97cb361cb113faa7b197722ea22/Data/49d8c4c/NormalBasedTargetOutline.glsl
       Defines:
         []
       Properties:

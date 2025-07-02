@@ -8,6 +8,7 @@
 //@input SceneObject[] mappingObjs
 //@input Asset.Material[] texturePreviewMats
 
+// channel value is changed to float because there's no int uniform in graph, all int will be cast to float.
 let channelIdx = 0;
 let mappingObjIdx = 0;
 const channelBackgroundPass = [];

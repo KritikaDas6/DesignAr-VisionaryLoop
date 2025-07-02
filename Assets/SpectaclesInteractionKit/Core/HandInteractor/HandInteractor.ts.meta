@@ -1,21 +1,23 @@
 - !<AssetImportMetadata/3f73f4ab-4c5a-4451-ac39-f111185608de>
-  ImporterSettings: !<AssetImporterSettings>
-    {}
   ImportedAssetIds:
     TypeScriptAsset: !<reference> 4d0b0ec7-e669-4c4e-b2f7-32b9c59f24cc
   ImporterName: TypeScriptAssetImporter
   PrimaryAsset: !<reference> 4d0b0ec7-e669-4c4e-b2f7-32b9c59f24cc
   PackageType: NotAPackage
-  AssetDataMap:
-    TypeScriptAsset: !<own> a029768b-59d0-48c2-a71a-20c5c304030b
   PackagePolicy: CannotBeUnpacked
-  DependentFiles:
-    []
-  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
     {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> a029768b-59d0-48c2-a71a-20c5c304030b
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<TypeScriptAssetData/a029768b-59d0-48c2-a71a-20c5c304030b>
-  Icon: ""
+  SvgIcon: ""
+  SetupScript:
+    code: ""
   Description: ""
   InternalVersion: 0
   VersionMajor: 0
@@ -41,11 +43,11 @@
     spherecastRadii: false
   ScriptTypesHidden:
     {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
-    - handType: right
-      raycastAlgorithm: Proxy
+    - _drawDebug: false
       sphereCastEnabled: false
-      indirectTargetingVolumeMultiplier: !<float> 1.000000
       spherecastRadii: !<float[]>
         - 0.500000
         - 2.000000
@@ -55,12 +57,14 @@
         - 12.000000
         - 30.000000
       _maxRaycastDistance: !<float> 500.000000
+      indirectTargetingVolumeMultiplier: !<float> 1.000000
       indirectDragThreshold: !<float> 40.000000
-      directDragThreshold: !<float> 3.000000
+      handType: right
+      raycastAlgorithm: Proxy
       forcePokeOnNonDominantPalmProximity: false
       directColliderEnterRadius: !<float> 1.000000
       directColliderExitRadius: 1.500000
-      _drawDebug: false
+      directDragThreshold: !<float> 3.000000
   ScriptTypes:
     -
       {}
@@ -88,5 +92,3 @@
     - '// @input float directColliderExitRadius = 1.5 {"hint":"The radius around the midpoint of the index/thumb to de-target Interactables (for bistable thresholding)."}'
     - // @input float directDragThreshold = 3
     - '// @ui {"widget":"group_end"}'
-  SvgIcon: ""
-  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

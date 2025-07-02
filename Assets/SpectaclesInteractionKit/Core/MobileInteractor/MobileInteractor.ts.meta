@@ -1,21 +1,23 @@
 - !<AssetImportMetadata/e5bec3c9-8172-4b55-b3d3-c3c32c32dcd6>
-  ImporterSettings: !<AssetImporterSettings>
-    {}
   ImportedAssetIds:
     TypeScriptAsset: !<reference> 7876e94e-1942-4993-ab2d-d35e572dbe74
   ImporterName: TypeScriptAssetImporter
   PrimaryAsset: !<reference> 7876e94e-1942-4993-ab2d-d35e572dbe74
   PackageType: NotAPackage
-  AssetDataMap:
-    TypeScriptAsset: !<own> 059eae64-6c0c-45cd-95e0-1adb996d46a5
   PackagePolicy: CannotBeUnpacked
-  DependentFiles:
-    []
-  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
     {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 059eae64-6c0c-45cd-95e0-1adb996d46a5
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<TypeScriptAssetData/059eae64-6c0c-45cd-95e0-1adb996d46a5>
-  Icon: ""
+  SvgIcon: ""
+  SetupScript:
+    code: ""
   Description: ""
   InternalVersion: 0
   VersionMajor: 0
@@ -38,9 +40,11 @@
     touchpadDragThreshold: false
   ScriptTypesHidden:
     {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
-    - sphereCastEnabled: false
-      indirectTargetingVolumeMultiplier: !<float> 1.000000
+    - _drawDebug: false
+      sphereCastEnabled: false
       spherecastRadii: !<float[]>
         - 0.500000
         - 2.000000
@@ -50,11 +54,11 @@
         - 12.000000
         - 30.000000
       _maxRaycastDistance: !<float> 500.000000
+      indirectTargetingVolumeMultiplier: !<float> 1.000000
       indirectDragThreshold: !<float> 3.000000
-      touchpadDragThreshold: 0.050000
-      _touchpadScrollSpeed: !<float> 250.000000
       initializePositionAndRotationFilter: true
-      _drawDebug: false
+      _touchpadScrollSpeed: !<float> 250.000000
+      touchpadDragThreshold: 0.050000
   ScriptTypes:
     -
       {}
@@ -79,5 +83,3 @@
     - // @input float _touchpadScrollSpeed = 250
     - // @input float touchpadDragThreshold = 0.05
     - '// @ui {"widget":"group_end"}'
-  SvgIcon: ""
-  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

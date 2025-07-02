@@ -16,6 +16,8 @@
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<TypeScriptAssetData/1a48d36e-c35e-4ee5-8cf6-85fbc42f0697>
   SvgIcon: ""
+  SetupScript:
+    code: ""
   Description: ""
   InternalVersion: 0
   VersionMajor: 0
@@ -31,15 +33,16 @@
     imageTexture: false
   ScriptTypesHidden:
     {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
-    - container: !<MappingBased.ContainerFrame> 00000000-0000-0000-0000-000000000000
+    - container: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
       imageObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       imageTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
-    - // @input ContainerFrame container
+    - // @input AssignableType container
     - // @input SceneObject imageObject
     - // @input Asset.Texture imageTexture

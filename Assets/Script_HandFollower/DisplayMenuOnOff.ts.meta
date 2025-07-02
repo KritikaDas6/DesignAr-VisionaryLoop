@@ -16,6 +16,8 @@
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<TypeScriptAssetData/95f74969-a62c-4b71-a49f-eb1244a95dbf>
   SvgIcon: ""
+  SetupScript:
+    code: ""
   Description: ""
   InternalVersion: 0
   VersionMajor: 0
@@ -30,13 +32,14 @@
     targetMenu: false
   ScriptTypesHidden:
     {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
     - targetMenu: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      interactable: !<MappingBased.Interactable> 00000000-0000-0000-0000-000000000000
+      interactable: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
     - // @input SceneObject targetMenu
-    - // @input Interactable interactable
+    - // @input AssignableType interactable

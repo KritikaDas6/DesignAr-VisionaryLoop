@@ -1,19 +1,19 @@
 - !<AssetImportMetadata/dd231157-75cc-405e-abe0-2d1c294f80ac>
-  ImporterSettings: !<AssetImporterSettings>
-    {}
   ImportedAssetIds:
     ObjectPrefab: !<reference> 82cb7cfe-44b6-4db0-b2db-80a078816081
   ImporterName: ObjectPrefabImporter
   PrimaryAsset: !<reference> 82cb7cfe-44b6-4db0-b2db-80a078816081
   PackageType: NotAPackage
-  AssetDataMap:
-    ObjectPrefab: !<own> 9643033c-59da-4ab3-975b-0b1de3fbac76
   PackagePolicy: CannotBeUnpacked
-  DependentFiles:
-    []
-  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
     {}
+  AssetDataMap:
+    ObjectPrefab: !<own> 9643033c-59da-4ab3-975b-0b1de3fbac76
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<Image/01a32bbe-2aac-42c1-91f5-ec1f9307a417>
   PrefabRemaps:
     []
@@ -30,12 +30,9 @@
     - !<reference> 0361729f-03c1-4f94-a6df-855bc6b0ba99
   FlipX: false
   FlipY: false
-  Pivot: {x: 0.000000, y: 0.000000}
-  Size:
-    x: !<float> 1.000000
-    y: !<float> 1.000000
-  ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
   RotationAngle: 0
+  Pivot: {x: 0.000000, y: 0.000000}
+  ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
 - !<ScreenTransform/073351b8-43ea-4658-9132-0a1c5c9d1b8c>
   PrefabRemaps:
     []
@@ -299,7 +296,6 @@
     LetterSpacing: 0.000000
     LineSpacing: 1.000000
     CapitalizationOverride: None
-    CapitilizationOverride: None
   DepthTest: false
   TwoSided: false
 - !<ScreenTransform/46f51e5e-0e92-4ae4-8386-f0b79044650a>
@@ -569,6 +565,7 @@
   ScriptInputsDefault:
     targetingMode: true
     enableInstantDrag: true
+    isScrollable: true
     allowMultipleInteractors: true
     enablePokeDirectionality: true
     acceptableXDirections: true
@@ -580,6 +577,7 @@
     "":
       targetingMode: !<float> 3.000000
       enableInstantDrag: false
+      isScrollable: false
       allowMultipleInteractors: true
       enablePokeDirectionality: false
       acceptableXDirections: !<float> 3.000000
@@ -662,7 +660,6 @@
     LetterSpacing: 0.000000
     LineSpacing: 1.000000
     CapitalizationOverride: None
-    CapitilizationOverride: None
   DepthTest: false
   TwoSided: false
 - !<SceneObject/c5cdc897-034c-4782-8cc4-48a373d9b37c>
@@ -694,6 +691,7 @@
   ScriptInputsDefault:
     targetingMode: true
     enableInstantDrag: true
+    isScrollable: true
     allowMultipleInteractors: true
     enablePokeDirectionality: true
     acceptableXDirections: true
@@ -705,6 +703,7 @@
     "":
       targetingMode: !<float> 3.000000
       enableInstantDrag: false
+      isScrollable: false
       allowMultipleInteractors: true
       enablePokeDirectionality: false
       acceptableXDirections: !<float> 3.000000
@@ -792,6 +791,9 @@
   Enabled: true
   ScriptAsset: !<reference> a54c5722-d3fb-4aa5-97ff-f7425978bc59
   ScriptInputsDefault:
+    targetObjectToDisable: true
+    targetObjectToEnable: true
+    isToggleButton: true
     editEventCallbacks: true
     customFunctionForOnButtonPinched: true
     onButtonPinchedFunctionNames: true
@@ -799,6 +801,9 @@
     {}
   ScriptInputs:
     "":
+      targetObjectToDisable: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      targetObjectToEnable: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      isToggleButton: false
       editEventCallbacks: false
       customFunctionForOnButtonPinched: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
       onButtonPinchedFunctionNames: !<string[]>
@@ -841,12 +846,9 @@
     - !<reference> 85116ad6-0e81-4092-b426-d3f69dcf9233
   FlipX: false
   FlipY: false
-  Pivot: {x: 0.000000, y: 0.000000}
-  Size:
-    x: !<float> 1.000000
-    y: !<float> 1.000000
-  ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
   RotationAngle: 0
+  Pivot: {x: 0.000000, y: 0.000000}
+  ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
 - !<ColliderComponent/f93317e5-8e67-40ec-a23e-9d52732c1cbc>
   PrefabRemaps:
     []

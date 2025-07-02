@@ -1,21 +1,23 @@
 - !<AssetImportMetadata/c84908d8-313b-408e-a841-946e366eb9a1>
-  ImporterSettings: !<AssetImporterSettings>
-    {}
   ImportedAssetIds:
     TypeScriptAsset: !<reference> a54c5722-d3fb-4aa5-97ff-f7425978bc59
   ImporterName: TypeScriptAssetImporter
   PrimaryAsset: !<reference> a54c5722-d3fb-4aa5-97ff-f7425978bc59
   PackageType: NotAPackage
-  AssetDataMap:
-    TypeScriptAsset: !<own> 010fdb4e-b2b7-46b3-bdde-2008b06e15ba
   PackagePolicy: CannotBeUnpacked
-  DependentFiles:
-    []
-  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
     {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 010fdb4e-b2b7-46b3-bdde-2008b06e15ba
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<TypeScriptAssetData/010fdb4e-b2b7-46b3-bdde-2008b06e15ba>
-  Icon: ""
+  SvgIcon: ""
+  SetupScript:
+    code: ""
   Description: ""
   InternalVersion: 0
   VersionMajor: 0
@@ -34,14 +36,16 @@
     targetObjectToEnable: false
   ScriptTypesHidden:
     {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
-    - editEventCallbacks: false
+    - targetObjectToDisable: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      targetObjectToEnable: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      isToggleButton: false
+      editEventCallbacks: false
       customFunctionForOnButtonPinched: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
       onButtonPinchedFunctionNames: !<string[]>
         []
-      targetObjectToDisable: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      targetObjectToEnable: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      isToggleButton: false
   ScriptTypes:
     -
       {}
@@ -54,5 +58,3 @@
     - '// @input Component.ScriptComponent customFunctionForOnButtonPinched {"hint":"The script containing functions to be called when button is pinched"}'
     - '// @input string[] onButtonPinchedFunctionNames = {} {"hint":"The names for the functions on the provided script, to be called on button pinch"}'
     - '// @ui {"widget":"group_end"}'
-  SvgIcon: ""
-  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

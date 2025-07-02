@@ -16,6 +16,8 @@
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<ScriptAssetData/e7bed104-b50d-4478-a1cb-8e366e6b923a>
   SvgIcon: ""
+  SetupScript:
+    code: ""
   Description: Tap to spawn prefab on the world mesh
   InternalVersion: 1
   VersionMajor: 1
@@ -32,6 +34,8 @@
     prefab: false
   ScriptTypesHidden:
     {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
     - deviceTracking: !<reference.DeviceTracking> 00000000-0000-0000-0000-000000000000
       prefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
@@ -41,4 +45,3 @@
   ScriptTypes:
     -
       {}
-  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

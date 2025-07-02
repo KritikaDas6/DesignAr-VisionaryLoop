@@ -22,6 +22,12 @@
         Port_GSplatPointSize_N004:
           typeIdx: 1
           value: 0.000000
+        Port_GSplatRotation_N004:
+          typeIdx: 5
+          value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        Port_GSplatScale_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
         Port_Input0_N003:
           typeIdx: 1
           value: 0.000000
@@ -169,7 +175,8 @@
             mDefaultVal: 0.500000
             mValues:
               []
-      ShaderPath: 4028103e-a19d-4954-8f33-39828fc1d2e0/657b3168b71b89aa8b07e633c6e2fffa/Data/cfd37fa/FingerHighlight.glsl
+        ShaderType: Mesh3d
+      ShaderPath: 4028103e-a19d-4954-8f33-39828fc1d2e0/657b3168b71b89aa8b07e633c6e2fffa/Data/49d8c4c/FingerHighlight.glsl
       Defines:
         []
       Properties:

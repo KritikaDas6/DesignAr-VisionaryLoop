@@ -245,39 +245,39 @@ const Slider = /** @class */ (function() {
     return Slider;
 }());
 const slider = new Slider(script.touchZone, script.pointScreenTransform, script.camera, script.minValue, script.maxValue, script.white, script.color, script.sliderType, script.hide, script.usedStep, script.hideScreenTransform, script.mainScreenTransform, script.returnTime, script.returnSpeed, script.step);
-script.api.setOnValueChangedCallbacks = function(callbacks) {
+script.setOnValueChangedCallbacks = function(callbacks) {
     return slider.setOnValueChangedCallbacks(callbacks);
 };
-script.api.addOnValueChangedCallbacks = function(callback) {
+script.addOnValueChangedCallbacks = function(callback) {
     return slider.addOnValueChangedCallbacks(callback);
 };
-script.api.setMinValue = function(min) {
+script.setMinValue = function(min) {
     return slider.minValue = min;
 };
-script.api.setMaxValue = function(max) {
+script.setMaxValue = function(max) {
     return slider.maxValue = max;
 };
-script.api.getMinValue = function() {
+script.getMinValue = function() {
     return slider.minValue;
 };
-script.api.getMaxValue = function() {
+script.getMaxValue = function() {
     return slider.maxValue;
 };
-script.api.setStepValue = function(step) {
+script.setStepValue = function(step) {
     return slider.step = step;
 };
-script.api.setHide = function(hide) {
+script.setHide = function(hide) {
     return slider.hide = hide;
 };
-script.api.setSliderTexture = function(sliderType) {
+script.setSliderTexture = function(sliderType) {
     return slider.setSliderTexture(sliderType);
 };
-script.api.setReturnTime = function(time) {
+script.setReturnTime = function(time) {
     return slider.returnTime = time;
 };
-script.api.setReturnSpeed = function(speed) {
+script.setReturnSpeed = function(speed) {
     return slider.returnSpeed = speed;
 };
-script.api.setSliderValue = function(value) {
+script.setSliderValue = function(value) {
     return slider.onSliderChangedCallback(value);
 };

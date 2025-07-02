@@ -1,7 +1,7 @@
 /**
  * @module Built-In
- * @version 5.7.0
- * For Snapchat Version: 13.30
+ * @version 5.10.0
+ * For Snapchat Version: 13.42
 */
 interface ComponentNameMap {
     "AnimationPlayer": AnimationPlayer;
@@ -36,7 +36,6 @@ interface ComponentNameMap {
     "Component.ColliderComponent": ColliderComponent;
     "Component.ColocatedTrackingComponent": ColocatedTrackingComponent;
     "Component.CustomLocationGroupComponent": CustomLocationGroupComponent;
-    "Component.DepthSetter": DepthSetter;
     "Component.DeviceLocationTrackingComponent": DeviceLocationTrackingComponent;
     "Component.DeviceTracking": DeviceTracking;
     "Component.EyeColorVisual": EyeColorVisual;
@@ -88,7 +87,6 @@ interface ComponentNameMap {
     "Component.Visual": Visual;
     "Component.WorldTracking": DeviceTracking;
     "CustomLocationGroupComponent": CustomLocationGroupComponent;
-    "DepthSetter": DepthSetter;
     "DeviceLocationTrackingComponent": DeviceLocationTrackingComponent;
     "DeviceTracking": DeviceTracking;
     "EyeColorVisual": EyeColorVisual;
@@ -208,6 +206,11 @@ interface EventNameMap {
 declare function failAsync(error: any): void
 
 /**
+* The start time of the Lens since UNIX Epoch.
+*/
+declare function getAbsoluteStartTime(): number
+
+/**
 * Returns the time difference in seconds between the current frame and previous frame.
 */
 declare function getDeltaTime(): number
@@ -255,6 +258,11 @@ declare function requireAsset(name: string): Asset
 declare function requireType(name: string): string
 
 declare namespace global {
+    /**
+    * Returns the {@link DebugRender}, which provides methods to draw primitive visuals for debugging.
+    */
+    let debugRenderSystem: DebugRender
+    
     /**
     * Returns the global DeviceInfoSystem, which provides information about the device running the Lens.
     */
@@ -340,11 +348,6 @@ declare class AnimatedTextureFileProvider extends TextureProvider {
     * Returns the index of the frame that is currently playing.
     */
     getCurrentPlayingFrame(): number
-    
-    /**
-    * Returns how long the animation is in seconds.
-    */
-    getDuration(): number
     
     /**
     * Returns the number of frames in the animation.
@@ -498,7 +501,7 @@ declare class AnimationClip extends ScriptObject {
     animation: AnimationAsset
     
     /**
-    * Returns begin time of clip.
+    * Returns begin time of clip (in seconds).
     */
     begin: number
     
@@ -513,14 +516,14 @@ declare class AnimationClip extends ScriptObject {
     disabled: boolean
     
     /**
-    * Returns the duration of the clip which is calculated based on the begin and end times.
+    * Returns the duration of the clip which is calculated based on the begin and end times (in seconds).
     
     * @readonly
     */
     duration: number
     
     /**
-    * Returns end time of clip.
+    * Returns end time of clip (in seconds).
     */
     end: number
     
@@ -530,6 +533,11 @@ declare class AnimationClip extends ScriptObject {
     * @readonly
     */
     name: string
+    
+    /**
+    * The offset (in seconds) which is the starting point for an animation. After the first iteration, it starts back at the beginning of the clip. 
+    */
+    offset: number
     
     /**
     * Choose whether to play animation clip once, loop the clip, or ping pong it.
@@ -806,6 +814,11 @@ declare class AnimationPlayer extends Component {
     playAll(): void
     
     /**
+    * Plays the named clip on the Animation Player.
+    */
+    playClip(name: string): void
+    
+    /**
     * Plays clip with the given name and starting from the given time.
     */
     playClipAt(name: string, time: number): void
@@ -900,6 +913,209 @@ declare class AnimationTrack extends Asset {
 }
 
 /**
+* Allows the Lens to incorporate voice transcription with higher quality than the {@link VoiceMlModule} and supports a vast number of different languages.
+
+*/
+declare class AsrModule extends Asset {
+    
+    protected constructor()
+    
+    /**
+    * Starts a new ASR session. While active the Lens will transcribe speech to text. 
+    * `asrTranscriptionOptions` provides the options for the session
+    
+    * The event `onTranscriptionUpdateEvent` is triggered when the transcription is updated.
+    * The event `onTranscriptionErrorEvent` is triggered when there is an error in the transcription process.
+    
+    * If `startTranscribing` is called again while a session is active, the current session is cancelled and a new one started.
+    
+    
+    * @wearableOnly
+    */
+    startTranscribing(transcriptionOptions: AsrModule.AsrTranscriptionOptions): void
+    
+    /**
+    * Stops an active ASR Session before transcription is finished and discards the current session.
+    
+    
+    * @wearableOnly
+    */
+    stopTranscribing(): Promise<void>
+    
+}
+
+declare namespace AsrModule {
+    /**
+    * The mode of the transcription to prioritise, between speed and accuracy.
+    
+    
+    * @wearableOnly
+    */
+    enum AsrMode {
+        /**
+        * Focus on higher accuracy at the cost of speed.
+        
+        
+        * @wearableOnly
+        */
+        HighAccuracy,
+        /**
+        * A balance between accuracy and speed.
+        
+        
+        * @wearableOnly
+        */
+        Balanced,
+        /**
+        * Faster transcription time but at the cost of accuracy.
+        
+        
+        * @wearableOnly
+        */
+        HighSpeed
+    }
+
+}
+
+declare namespace AsrModule {
+    /**
+    * An enum stating the status of the transcription.
+    
+    
+    * @wearableOnly
+    */
+    enum AsrStatusCode {
+        /**
+        * Asr operation was successfully executed.
+        
+        
+        * @wearableOnly
+        */
+        Success,
+        /**
+        * An unknown internal error occurred.
+        
+        
+        * @wearableOnly
+        */
+        InternalError,
+        /**
+        * User is not authenticated.
+        
+        
+        * @wearableOnly
+        */
+        Unauthenticated,
+        /**
+        * Device is not connected to the internet.
+        
+        
+        * @wearableOnly
+        */
+        NoInternet
+    }
+
+}
+
+declare namespace AsrModule {
+    /**
+    * Provides the options for the session.
+    
+    
+    * @wearableOnly
+    */
+    class AsrTranscriptionOptions extends ScriptObject {
+        
+        protected constructor()
+        
+        /**
+        * The operation mode of the ASR session. 
+        
+        
+        * @wearableOnly
+        */
+        mode: AsrModule.AsrMode
+        
+        /**
+        * An event triggered by transcription errors.
+        
+        
+        * @readonly
+        
+        * @wearableOnly
+        */
+        onTranscriptionErrorEvent: event1<AsrModule.AsrStatusCode, void>
+        
+        /**
+        * An event triggered by transcription updates.
+        
+        
+        * @readonly
+        
+        * @wearableOnly
+        */
+        onTranscriptionUpdateEvent: event1<AsrModule.TranscriptionUpdateEvent, void>
+        
+        /**
+        * Silence duration in milliseconds to detect the end of the speech.
+        
+        
+        * @wearableOnly
+        */
+        silenceUntilTerminationMs: number
+        
+        /**
+        * Creates a new instance.
+        
+        
+        * @wearableOnly
+        */
+        static create(): AsrModule.AsrTranscriptionOptions
+        
+    }
+
+}
+
+declare namespace AsrModule {
+    /**
+    * Argument passed for a transcription update event.
+    
+    
+    * @wearableOnly
+    */
+    class TranscriptionUpdateEvent extends ScriptObject {
+        
+        protected constructor()
+        
+        /**
+        * Specifies whether the transcription returned is final, or partial (interim) which can be updated later as the sentence continues.
+        
+        
+        * @wearableOnly
+        */
+        isFinal: boolean
+        
+        /**
+        * Transcribed text.
+        
+        
+        * @wearableOnly
+        */
+        text: string
+        
+        /**
+        * Creates a new instance.
+        
+        
+        * @wearableOnly
+        */
+        static create(): AsrModule.TranscriptionUpdateEvent
+        
+    }
+
+}
+
+/**
 * Base class for all assets used in the engine. Assets can be unique to Lens Studio, such as {@link VFXAsset}, or a representation of an imported asset, such as {@link Texture} for jpg, png, and other image formats. In most cases, assets are added to the scene via a {@link Component}.  
 
 * @remarks
@@ -971,10 +1187,14 @@ declare namespace Audio {
     enum PlaybackMode {
         /**
         * Reduces power usage for the Spectacles device. but introduces latency in audio playback. Suitable for ambient sounds or background music where slight delays are acceptable.
+        
+        * @wearableOnly
         */
         LowPower,
         /**
         * Minimizes audio playback latency but increases power usage for the Spectacles device. Recommended for audio requiring immediate auditory reaction, such as button press feedback.
+        
+        * @wearableOnly
         */
         LowLatency
     }
@@ -1422,6 +1642,18 @@ declare class BasePlaceholder extends ScriptObject {
     protected constructor()
     
     /**
+    * The data layout of the current BasePlaceholder, which defines the order in which multidimensional data is accessed in memory. The default layout is {@link MachineLearning.DataLayout.NHWC}.
+    */
+    dataLayout: MachineLearning.DataLayout
+    
+    /**
+    * The internal data layout of the current BasePlaceholder. This layout is used by ML backend. If `dataLayout` is not the same as `internalDataLayout`, a layout conversion will happen when process models input/output.
+    
+    * @readonly
+    */
+    internalDataLayout: MachineLearning.DataLayout
+    
+    /**
     * The name of the Placeholder.
     
     * @readonly
@@ -1529,6 +1761,21 @@ declare class Bitmoji3DOptions extends ScriptObject {
     protected constructor()
     
     /**
+    * Used to set the animation params for the request type.
+    */
+    animationParams: Bitmoji3DOptions.AnimationParams
+    
+    /**
+    * Used to set the custom params for the request type. You shouldn't need to modify these values directly. Instead you can use this API via the [Bitmoji Suite](https://developers.snap.com/lens-studio/features/bitmoji-suite/overview).
+    */
+    customParams: Bitmoji3DOptions.CustomParams
+    
+    /**
+    * Options used with {@link requestBitmoji3DResourceWithOptions}
+    */
+    requestType: Bitmoji3DOptions.RequestType
+    
+    /**
     * The user which the Bitmoji should represent.
     */
     user: SnapchatUser
@@ -1538,6 +1785,238 @@ declare class Bitmoji3DOptions extends ScriptObject {
     */
     static create(): Bitmoji3DOptions
     
+}
+
+declare namespace Bitmoji3DOptions {
+    /**
+    * Used to set the animation params for the request type.
+    */
+    class AnimationParams extends ScriptObject {
+        
+        protected constructor()
+        
+        /**
+        * Creates the animation params.
+        */
+        static create(): Bitmoji3DOptions.AnimationParams
+        
+    }
+
+}
+
+declare namespace Bitmoji3DOptions {
+    /**
+    * Enum representing avatar scope used in custom params of bitmoji3d options.
+    */
+    enum AvatarScope {
+        /**
+        * Unset scope.
+        */
+        Unset,
+        /**
+        * Full scope.
+        */
+        Full,
+        /**
+        * Head scope.
+        */
+        Head,
+        /**
+        * Body scope.
+        */
+        Body,
+        /**
+        * Hair scope.
+        */
+        Hair,
+        /**
+        * Glasses scope.
+        */
+        Glasses,
+        /**
+        * Hat hair scope.
+        */
+        Hathair,
+        /**
+        * Piercing scope.
+        */
+        Piercing,
+        /**
+        * Clothes scope.
+        */
+        Clothes,
+        /**
+        * Mannequin Head scope.
+        */
+        MannequinHead,
+        /**
+        * MannequinHeadFeatureless scope.
+        */
+        MannequinHeadFeatureless,
+        /**
+        * MannequinEarLeft scope.
+        */
+        MannequinEarLeft,
+        /**
+        * MannequinEarRight scope.
+        */
+        MannequinEarRight,
+        /**
+        * MannequinHeadFeaturelessWithBody scope.
+        */
+        MannequinHeadFeaturelessWithBody,
+        /**
+        * .GlassesWithSkeleton scope.
+        */
+        GlassesWithSkeleton
+    }
+
+}
+
+declare namespace Bitmoji3DOptions {
+    /**
+    * Enum representing different types of clothing
+    */
+    enum ClothingType {
+        /**
+        * Unset clothing type.
+        */
+        Unset,
+        /**
+        * Split clothing type.
+        */
+        SplitClothes,
+        /**
+        * Granular clothing type.
+        */
+        GranularClothes,
+        /**
+        * Full outfit type.
+        */
+        FullOutfit,
+        /**
+        * Detailed full outfit type.
+        */
+        DetailedFullOutfit
+    }
+
+}
+
+declare namespace Bitmoji3DOptions {
+    /**
+    * The custom params can be used for requesting bitmoji assets like garments. These can be set as custom params of Bitmoji3D options. 
+    */
+    class CustomParams extends ScriptObject {
+        
+        protected constructor()
+        
+        /**
+        * The {@link Bitmoji3DOptions.AvatarScope} to use for the request.
+        */
+        avatarScope: Bitmoji3DOptions.AvatarScope
+        
+        /**
+        * Parameter set to customize the bag of the avatar.
+        */
+        bag?: Bitmoji3DOptions.ParamSet
+        
+        /**
+        * Parameter set to customize the bottom wear of the avatar.
+        */
+        bottomWear?: Bitmoji3DOptions.ParamSet
+        
+        /**
+        * Parameter set to customize the clothing tyoe of the avatar.
+        */
+        clothingType: Bitmoji3DOptions.ClothingType
+        
+        /**
+        * Parameter set to customize the cranium of the avatar.
+        */
+        cranium?: string
+        
+        /**
+        * Parameter set to customize the foot wear of the avatar.
+        */
+        footWear?: Bitmoji3DOptions.ParamSet
+        
+        /**
+        * Parameter set to customize the glasses of the avatar.
+        */
+        glasses?: string
+        
+        /**
+        * Parameter set to customize the hat of the avatar.
+        */
+        hat?: Bitmoji3DOptions.ParamSet
+        
+        /**
+        * Parameter set to customize the outerwear of the avatar.
+        */
+        outerWear?: Bitmoji3DOptions.ParamSet
+        
+        /**
+        * Parameter set to customize the sock of the avatar.
+        */
+        sock?: Bitmoji3DOptions.ParamSet
+        
+        /**
+        * Parameter set to customize the top of the avatar.
+        */
+        top?: Bitmoji3DOptions.ParamSet
+        
+        /**
+        * The rendering options can be used for customizing bitmoj3D avatars. These can be set as overridden options of Bitmoji3D options.
+        */
+        static create(): Bitmoji3DOptions.CustomParams
+        
+    }
+
+}
+
+declare namespace Bitmoji3DOptions {
+    /**
+    * Set of parameters used to customize specific parts of avatar such as garment, outerwear etc.
+    */
+    class ParamSet extends ScriptObject {
+        
+        protected constructor()
+        
+        /**
+        * Unique identifier of the category defined using this ParamSet.
+        */
+        optionId: string
+        
+        /**
+        * Used to set the parameters.
+        */
+        params: {[key:string]:(string|number|vec4)}
+        
+        /**
+        * Used to create the parameter set for customizing specific parts of avatar such as garment, outerwear etc.
+        */
+        static create(): Bitmoji3DOptions.ParamSet
+        
+    }
+
+}
+
+declare namespace Bitmoji3DOptions {
+    /**
+    * Enum representing different request types.
+    */
+    enum RequestType {
+        /**
+        * Used to request avatar.
+        */
+        Avatar,
+        Animation,
+        /**
+        * Used to request custom asset of avatar
+        */
+        Custom
+    }
+
 }
 
 /**
@@ -1597,30 +2076,962 @@ declare enum BlendMode {
 * Represents a blob, which is a file-like object of immutable, raw data. Can be read as text or binary data. Currently the binary data is only supported as `Uint8Array`.
 
 * @wearableOnly
+
+* @CameraKit
 */
 declare class Blob extends ScriptObject {
     /**
     * Construct a new Blob. Currently unused.
+    
+    * @wearableOnly
+    
+    * @CameraKit
     */
     constructor()
     
     /**
     * Returns a Promise that resolves with a `Uint8Array` containing the contents of the blob as an array of bytes.
+    
+    * @wearableOnly
+    
+    * @CameraKit
     */
-    bytes(): any
+    bytes(): Promise<Uint8Array>
     
     /**
     * Returns a Promise that resolves with a string containing the contents of the blob, interpreted as UTF-8.
+    
+    * @wearableOnly
+    
+    * @CameraKit
     */
-    text(): any
+    text(): Promise<string>
     
     /**
     * The size of the blob's data in bytes.
     
     * @readonly
+    
+    * @wearableOnly
+    
+    * @CameraKit
     */
     size: number
     
+}
+
+declare namespace Bluetooth {
+    /**
+    * Provides access to Bluetooth GATT devices. APIs include scanning for and connecting to these devices, and reading and writing to their descriptors and characteristics.
+    */
+    class BluetoothCentralModule extends Asset {
+        
+        protected constructor()
+        
+        /**
+        * Connect to a GATT server on a given device address. 
+        
+        * `deviceAddress` Address to which to connect. Received in {@link Bluetooth.ScanResult.deviceAddress}
+        
+        * __Returns:__ Promise resolving to a {Bluetooth.BluetoothGatt} object if successful. The Promise is rejected if the connection cannot be made. 
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        connectGatt(deviceAddress: Uint8Array): Promise<Bluetooth.BluetoothGatt>
+        
+        /**
+        * Start a scan for Bluetooth GATT devices. The first device which passes the predicate will be returned, at which point the scan will stop.
+        
+        * `filters` Filters to apply to the scan. If a device passes any filter then the predicate will be invoked for that device. If no filters are passed then the predicate will be invoked for all devices.
+        
+        * `settings` {@link Bluetooth.ScanSettings} to configure the scan.
+        
+        * `predicate` Predicate to select a device. Returning true will stop the scan and return the device. 
+        
+        * __Returns:__ Promise resolving to the first device which passes the predicate. The promise is rejected if the scan times out.
+        
+        * ```javascript
+        * var scanFilter = new Bluetooth.ScanFilter();
+        * var scanSettings = new Bluetooth.ScanSettings();
+        * scanSettings.timeoutSeconds = 30;
+        * scanSettings.scanMode = Bluetooth.ScanMode.LowPower;
+        
+        * var scanResult = await script.bluetoothModule.startScan([scanFilter], scanSettings, 
+        *     function(result) {
+        *         print("Running predicate on " + result.deviceName);
+        *         return result.deviceName == "[DEVICE NAME]";
+        *     }
+        * );
+        
+        * print("Found GATT device " + scanResult.deviceName);
+        * ```
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        startScan(filters: Bluetooth.ScanFilter[], settings: Bluetooth.ScanSettings, predicate: (result: Bluetooth.ScanResult) => any): Promise<Bluetooth.ScanResult>
+        
+        /**
+        * Stop a scan for Bluetooth devices, if one is running.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        stopScan(): Promise<void>
+        
+        /**
+        * Event for Bluetooth status changes. _Currently unused_.
+        
+        * @readonly
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        onBluetoothStatusChangedEvent: event1<Bluetooth.BluetoothStatusChangedEvent, void>
+        
+        /**
+        * Get the current status of the Bluetooth adapter.
+        
+        * @readonly
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        status: Bluetooth.BluetoothStatus
+        
+    }
+
+}
+
+declare namespace Bluetooth {
+    /**
+    * Provides access to the Bluetooth connection.
+    */
+    class BluetoothGatt extends ScriptObject {
+        
+        protected constructor()
+        
+        /**
+        * Terminate the Bluetooth client connection, disconnection included if applicable.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        close(): void
+        
+        /**
+        * Re-establish connection to the device. Asynchronous call: to detect when the device is connected listen on the {@link Bluetooth.BluetoothGatt.onConnectionStateChangedEvent}.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        connect(): void
+        
+        /**
+        * Unpair or disconnect from the device. Asynchronous call: to detect when the device is disconnected listen on the {@link Bluetooth.BluetoothGatt.onConnectionStateChangedEvent}.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        disconnect(): void
+        
+        /**
+        * Retrieve a specific {@link Bluetooth.BluetoothGattService} using its UUID from the GATT server.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        getService(serviceUUID: string): Bluetooth.BluetoothGattService
+        
+        /**
+        * Retrieve all available services from the GATT server.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        getServices(): Bluetooth.BluetoothGattService[]
+        
+        /**
+        * The state of the GATT connection represented as a {@link Bluetooth.ConnectionState} enum.
+        
+        * @readonly
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        connectionState: Bluetooth.ConnectionState
+        
+        /**
+        * The current Maximum Transmission Unit (MTU).
+        
+        * @readonly
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        mtu: number
+        
+        /**
+        * Event to observe changes in connection state.
+        
+        * @readonly
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        onConnectionStateChangedEvent: event1<Bluetooth.ConnectionStateChangedEvent, void>
+        
+        /**
+        * Event to observe changes in Maximum Transmission Unit (MTU).
+        
+        * @readonly
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        onMtuChangedEvent: event1<Bluetooth.MtuChangedEvent, void>
+        
+    }
+
+}
+
+declare namespace Bluetooth {
+    /**
+    * A characteristic of the Bluetooth GATT device.
+    
+    * Characteristics are the individual pieces of data within a {@link Bluetooth.BluetoothGattService} that provide specific information. For example, a heart rate sensor might have a Heart Rate service, and that service might have characteristics including "Heart Rate Measurement," "Sensor Location," etc.
+    
+    * __Value__ ({@link Bluetooth.BluetoothGattCharacteristic.readValue}, {@link Bluetooth.BluetoothGattCharacteristic.writeValue}): The actual data being exchanged.
+    
+    * __Properties__ ({@link Bluetooth.BluetoothGattCharacteristic.properties}): Define how the characteristic can be accessed (e.g., read, write, notify, indicate).
+    
+    * __Descriptors__ ({{@link Bluetooth.BluetoothGattCharacteristic.getDescriptor}, {@link Bluetooth.BluetoothGattCharacteristic.getDescriptors}): Provide additional information about the characteristic, such as its units or format.
+    
+    * __UUID__ ({@link Bluetooth.BluetoothGattCharacteristic.uuid}): A unique identifier that identifies the characteristic.
+    
+    * Common characteristics include battery level, heart rate, temperature, and device name. 
+    */
+    class BluetoothGattCharacteristic extends ScriptObject {
+        
+        protected constructor()
+        
+        /**
+        * Retrieve a specific {@link Bluetooth.BluetoothGattDescriptor} by its UUID from this characteristic.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        getDescriptor(descriptorUUID: string): Bluetooth.BluetoothGattDescriptor
+        
+        /**
+        * Retrieve all descriptors associated with this characteristic.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        getDescriptors(): Bluetooth.BluetoothGattDescriptor[]
+        
+        /**
+        * Read and receive the current value of the characteristic.
+        
+        * __Returns:__ The value in a `Uint8Array`
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        readValue(): Promise<Uint8Array>
+        
+        /**
+        * Register the given callback to receive notifications. Registering a callback will unsubscribe any previous registration on this Characteristic.
+        
+        * `callback` The callback to register, which takes a single parameter `value` of type `Uint8Array`. 
+        
+        * ```javascript
+        * try {
+        *     const value = await characteristic.registerNotifications();
+        *     console.log("Received Uint8Array data: ", value);
+        * } catch (error) {
+        *     console.error("Failed to register notifications: ", error);
+        * }
+        * ```
+        
+        * __Returns:__ Promise resolving to void when the callback is successfully registered.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        registerNotifications(callback: (value: Uint8Array) => void): Promise<void>
+        
+        /**
+        * Unregister all notifications.
+        
+        * __Returns:__ Promise resolving to void when all notifications are successfully unregistered.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        unregisterNotifications(): Promise<void>
+        
+        /**
+        * Write a new value to the characteristic.
+        
+        * `value` The value in a `Uint8Array`
+        
+        * __Returns:__ Promise resolving to void when the value is successfully written.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        writeValue(value: Uint8Array): Promise<void>
+        
+        /**
+        * Write a new value to the characteristic without awaiting acknowledgment.
+        
+        * `value` The value in a `Uint8Array`
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        writeValueWithoutResponse(value: Uint8Array): Promise<void>
+        
+        /**
+        * The supported properties (e.g., read, write) of the characteristic, as an Array of {@link Bluetooth.CharacteristicProperty} values.
+        
+        * @readonly
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        properties: Bluetooth.CharacteristicProperty[]
+        
+        /**
+        * The unique identifier of this characteristic.
+        
+        * @readonly
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        uuid: string
+        
+    }
+
+}
+
+declare namespace Bluetooth {
+    /**
+    * Descriptors contain additional information and attributes of a {@link Bluetooth.BluetoothGattCharacteristic}.
+    */
+    class BluetoothGattDescriptor extends ScriptObject {
+        
+        protected constructor()
+        
+        /**
+        * Read and receive the current value of the descriptor.
+        
+        * __Returns:__ The value in a `Uint8Array`
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        readValue(): Promise<Uint8Array>
+        
+        /**
+        * Write a new value to the descriptor.
+        
+        * `value` The value in a `Uint8Array`
+        
+        * __Returns:__ Promise resolving to void when the value is successfully written.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        writeValue(value: Uint8Array): Promise<void>
+        
+        /**
+        * The UUID of the current descriptor.
+        
+        * @readonly
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        uuid: string
+        
+    }
+
+}
+
+declare namespace Bluetooth {
+    /**
+    * Bluetooth GATT Services are collections of related {@link Bluetooth.BluetoothGattCharacteristic}s representing specific functions or features of a device. For example, a heart rate sensor might have a "Heart Rate" service, which in turn has characteristics like  "Heart Rate Measurement".
+    
+    */
+    class BluetoothGattService extends ScriptObject {
+        
+        protected constructor()
+        
+        /**
+        * Retrieve a {@link Bluetooth.BluetoothGattCharacteristic} from this service using its UUID.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        getCharacteristic(characteristicUUID: string): Bluetooth.BluetoothGattCharacteristic
+        
+        /**
+        * Retrieve all {@link Bluetooth.BluetoothGattCharacteristic}s offered by this service.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        getCharacteristics(): Bluetooth.BluetoothGattCharacteristic[]
+        
+        /**
+        * The UUID of the GATT service.
+        
+        * @readonly
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        uuid: string
+        
+    }
+
+}
+
+declare namespace Bluetooth {
+    /**
+    * The statuses for Bluetooth availability. Currently unsupported.
+    
+    * @experimental
+    
+    * @wearableOnly
+    */
+    enum BluetoothStatus {
+        /**
+        * Status indicating that the Bluetooth permissions or status have not been established.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        Unknown,
+        /**
+        * Status indicating that user has denied Bluetooth permissions.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        PermissionDenied,
+        /**
+        * Status indicating that Bluetooth functionality is not available.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        Unavailable,
+        /**
+        * Status indicating that Bluetooth is ready for use.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        Available
+    }
+
+}
+
+declare namespace Bluetooth {
+    /**
+    * The event received when Bluetooth status has changed. Currently unsupported.
+    
+    * @experimental
+    
+    * @wearableOnly
+    */
+    class BluetoothStatusChangedEvent extends ScriptObject {
+        
+        protected constructor()
+        
+        /**
+        * The new Bluetooth status.
+        
+        * @readonly
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        status: Bluetooth.BluetoothStatus
+        
+    }
+
+}
+
+declare namespace Bluetooth {
+    /**
+    * Properties of a {@link Bluetooth.BluetoothGattCharacteristic}.
+    
+    * @experimental
+    
+    * @wearableOnly
+    */
+    enum CharacteristicProperty {
+        /**
+        * Property indicating that the characteristic supports broadcasting.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        Broadcast,
+        /**
+        * Read and receive the current value of the characteristic.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        Read,
+        /**
+        * Write a new value to the characteristic without awaiting acknowledgment.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        WriteWithoutResponse,
+        /**
+        * Write a new value to the characteristic and await acknowledgment.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        Write,
+        /**
+        * Property indicating characteristic supports notifications.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        Notify,
+        /**
+        * Property indicating characteristic can send indications
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        Indicate,
+        /**
+        * Property indicating characteristic supports signed write operations.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        SignedWrite,
+        /**
+        * Property indicating characteristic has extra properties.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        ExtendedProps,
+        /**
+        * Property indicating notifications must be encrypted.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        NotifyEncryptionRequired,
+        /**
+        * Property indicating indications must be encrypted.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        IndicateEncryptionRequired
+    }
+
+}
+
+declare namespace Bluetooth {
+    /**
+    * State of a Bluetooth connection.
+    
+    * `Disconnected` The Bluetooth device is disconnected from Spectacles.
+    
+    * `Connected` The Bluetooth device is connected and bonded with Spectacles. 
+    
+    
+    * @experimental
+    
+    * @wearableOnly
+    */
+    enum ConnectionState {
+        /**
+        * State indicating that the device is disconnected.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        Disconnected,
+        /**
+        * State indicating that the device is successfully connected.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        Connected
+    }
+
+}
+
+declare namespace Bluetooth {
+    /**
+    * The event received when Bluetooth connection status has changed.
+    
+    * @experimental
+    
+    * @wearableOnly
+    */
+    class ConnectionStateChangedEvent extends ScriptObject {
+        
+        protected constructor()
+        
+        /**
+        * The new state of the Bluetooth connection.
+        
+        * @readonly
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        state: Bluetooth.ConnectionState
+        
+    }
+
+}
+
+declare namespace Bluetooth {
+    /**
+    * The event received when Maximum Transmission Unit (MTU) of a Bluetooth device has changed.
+    
+    * @experimental
+    
+    * @wearableOnly
+    */
+    class MtuChangedEvent extends ScriptObject {
+        
+        protected constructor()
+        
+        /**
+        * The new Maximum Transmission Unit (MTU).
+        
+        * @readonly
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        mtu: number
+        
+    }
+
+}
+
+declare namespace Bluetooth {
+    /**
+    * The filters to be used with {@link BluetoothCentralModule.startScan}.
+    */
+    class ScanFilter extends ScriptObject {
+        /**
+        * Construct a new filter.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        constructor()
+        
+        /**
+        * @experimental
+        
+        * @wearableOnly
+        */
+        deviceName?: string
+        
+        /**
+        * Filter for devices based on a prefix of manufacturer data. If undefined, no filtering on manufacturer data is applied.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        manufacturerDataPrefix?: Uint8Array
+        
+        /**
+        * Filter for devices based on a manufacturer ID. If undefined, no filtering on manufacturer ID is applied.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        manufacturerId?: number
+        
+        /**
+        * Filter for devices based on a service UUID. If undefined, no filtering on service UUID is applied.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        serviceUUID?: string
+        
+    }
+
+}
+
+declare namespace Bluetooth {
+    /**
+    * Defines how Bluetooth devices should be scanned. Used with {@link BluetoothCentralModule.startScan}.
+    
+    * @experimental
+    
+    * @wearableOnly
+    */
+    enum ScanMode {
+        /**
+        * The default setting.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        Unset,
+        /**
+        * Scan devices opportunistically.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        Opportunistic,
+        /**
+        * Scan devices with low power.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        LowPower,
+        /**
+        * Scan devices while balancing power and latency.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        Balanced,
+        /**
+        * Scan devices with low latency.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        LowLatency
+    }
+
+}
+
+declare namespace Bluetooth {
+    /**
+    * The results of a Bluetooth scan. 
+    */
+    class ScanResult extends ScriptObject {
+        
+        protected constructor()
+        
+        /**
+        * Address of the device.
+        
+        * @readonly
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        deviceAddress: Uint8Array
+        
+        /**
+        * Name of the advertised device, if available.
+        
+        * @readonly
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        deviceName?: string
+        
+        /**
+        * Whether the device allows connections.
+        
+        * @readonly
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        isConnectable: boolean
+        
+        /**
+        * Data provided by the manufacturer, if available.
+        
+        * @readonly
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        manufacturerData: {[key:number]:Uint8Array}
+        
+        /**
+        * ID of the device's manufacturer, if available.
+        
+        * @readonly
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        manufacturerId?: number
+        
+        /**
+        * Signal strength of the received packet, measured in dBm.
+        
+        * @readonly
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        rssi?: number
+        
+        /**
+        * Data related to the services offered by the device.
+        
+        * @readonly
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        serviceData: {[key:string]:Uint8Array}
+        
+        /**
+        * Transmission power of the packet, measured in dBm.
+        
+        * @readonly
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        txPower?: number
+        
+    }
+
+}
+
+declare namespace Bluetooth {
+    /**
+    * Settings when scanning for Bluetooth devices via {@link BluetoothCentralModule.startScan}.
+    */
+    class ScanSettings extends ScriptObject {
+        /**
+        * Construct a new setting.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        constructor()
+        
+        /**
+        * Set the scanning method.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        scanMode: Bluetooth.ScanMode
+        
+        /**
+        * Set the scanning timeout duration in seconds. After the timeout period the scan will stop and the promise will resolve.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        timeoutSeconds: number
+        
+        /**
+        * Specify whether to call the predicate function only for unique devices or not.
+        
+        * @experimental
+        
+        * @wearableOnly
+        */
+        uniqueDevices: boolean
+        
+    }
+
 }
 
 /**
@@ -1701,7 +3112,8 @@ declare class BodyComponent extends ColliderComponent {
     density: number
     
     /**
-    * If enabled, the body is dynamically simulated, such that it responds to forces and collisions. Otherwise, it acts as a static collider, functionally equivalent to Physics.ColliderComponent.
+    * If enabled, the body is dynamically simulated, such that it responds to forces and collisions, nested collider/body components will be merged into compound shapes. Otherwise, it acts as a static collider, functionally equivalent to Physics.ColliderComponent.
+    
     */
     dynamic: boolean
     
@@ -1730,6 +3142,11 @@ declare class BodyDepthTextureProvider extends TextureProvider {
     
     */
     minimumConfidence: number
+    
+    /**
+    * The tracking context this effect is being applied to. 
+    */
+    trackingScope: PersonTrackingScope
     
     /**
     * Far plane value in cm, Read only, always outputs 1000.0.
@@ -1761,7 +3178,20 @@ declare class BodyInstanceSegmentationTextureProvider extends TextureProvider {
     */
     bodyIndex: number
     
+    /**
+    * Invert the segmentation of the body.
+    */
+    invertMask: boolean
+    
+    /**
+    * Refine the edge of the segmentation of the body.
+    */
     refineEdge: boolean
+    
+    /**
+    * The tracking context this effect is being applied to. 
+    */
+    trackingScope: PersonTrackingScope
     
 }
 
@@ -1776,6 +3206,11 @@ declare class BodyNormalsTextureProvider extends TextureProvider {
     * The index of the body to track. The first body detected is `0`.
     */
     bodyIndex: number
+    
+    /**
+    * The tracking context this effect is being applied to. 
+    */
+    trackingScope: PersonTrackingScope
     
 }
 
@@ -1811,6 +3246,11 @@ declare class BodyRenderObjectProvider extends RenderObjectProvider {
     */
     rightHandGeometryEnabled: boolean
     
+    /**
+    * The tracking context this effect is being applied to. 
+    */
+    trackingScope: PersonTrackingScope
+    
 }
 
 /**
@@ -1826,6 +3266,11 @@ declare class BodyTrackingAsset extends Object3DAsset {
     * When true, hand tracking will be enabled.
     */
     handTrackingEnabled: boolean
+    
+    /**
+    * The tracking context this effect is being applied to. 
+    */
+    trackingScope: PersonTrackingScope
     
     /**
     * Key for Head attachment point.
@@ -2210,16 +3655,15 @@ declare class Camera extends Component {
     depthStencilRenderTarget: Camera.DepthStencilRenderTarget
     
     /**
+    * The Texture this Camera will be used to render content onto, and will be used to configure device properties which are set to physical. When unset it is assumed to be the DeviceCameraTexture. Relevant for cases where TextureTrackingScope will be used with 3D content like Face Mesh which will need the save fov used for the Camera.
+    */
+    devicePropertiesSource: TextureTrackingScope
+    
+    /**
     * Controls which Camera settings will be overridden by physical device properties.
     * For example, this can be used to override the `fov` property to match the device camera's actual field of view.
     */
     devicePropertyUsage: Camera.DeviceProperty
-    
-    /**
-    * If enabled, this Camera will clear the color on its `renderTarget` before drawing to it.
-    * `inputTexture` will be used to clear it unless it is null, in which case `clearColor` is used instead.
-    */
-    enableClearColor: boolean
     
     /**
     * If enabled, this Camera will clear the depth buffer on its `renderTarget` before drawing to it.
@@ -2372,6 +3816,14 @@ declare namespace Camera {
         */
         PositiveX,
         /**
+        * The right cubemap face, same as PositiveX.
+        */
+        Right,
+        /**
+        * The left cubemap face, same as NegativeX.
+        */
+        Left,
+        /**
         * The negative X cubemap face.
         */
         NegativeX,
@@ -2379,26 +3831,6 @@ declare namespace Camera {
         * The positive Y cubemap face.
         */
         PositiveY,
-        /**
-        * The negative Y cubemap face.
-        */
-        NegativeY,
-        /**
-        * The positive Z cubemap face.
-        */
-        PositiveZ,
-        /**
-        * The negative Z cubemap face.
-        */
-        NegativeZ,
-        /**
-        * The left cubemap face, same as NegativeX.
-        */
-        Left,
-        /**
-        * The right cubemap face, same as PositiveX.
-        */
-        Right,
         /**
         * The top cubemap face, same as PositiveY.
         */
@@ -2408,13 +3840,25 @@ declare namespace Camera {
         */
         Bottom,
         /**
+        * The negative Y cubemap face.
+        */
+        NegativeY,
+        /**
         * The front cubemap face, same as PositiveZ.
         */
         Front,
         /**
+        * The positive Z cubemap face.
+        */
+        PositiveZ,
+        /**
         * The back cubemap face, same as NegativeZ.
         */
-        Back
+        Back,
+        /**
+        * The negative Z cubemap face.
+        */
+        NegativeZ
     }
 
 }
@@ -2525,8 +3969,6 @@ declare class CameraBackEvent extends SceneEvent {
 /**
 * An entity which provided metadata about the current camera image provided by CameraTextureProvider. Modeled after VideoFrame web API
 
-* @experimental
-
 * @exposesUserData
 
 * @wearableOnly
@@ -2536,11 +3978,15 @@ declare class CameraFrame extends ScriptObject {
     protected constructor()
     
     /**
-    * The timestamp (in milliseconds) in which this frame was received.
+    * The timestamp (in seconds) in which this frame was received.
     
     * @readonly
+    
+    * @exposesUserData
+    
+    * @wearableOnly
     */
-    timestampMillis: number
+    timestampSeconds: number
     
 }
 
@@ -2561,8 +4007,6 @@ declare class CameraFrontEvent extends SceneEvent {
 
 * @see [Camera Module](https://developers.snap.com/spectacles/about-spectacles-features/apis/camera-module) guide.
 
-* @experimental
-
 * @exposesUserData
 
 * @wearableOnly
@@ -2572,7 +4016,20 @@ declare class CameraModule extends Asset {
     protected constructor()
     
     /**
+    * Get the list of resolutions this hardware camera can provide.
+    
+    * @exposesUserData
+    
+    * @wearableOnly
+    */
+    getSupportedImageResolutions(): vec2[]
+    
+    /**
     * Returns a {@link Texture} whose provider is {@link CameraTextureProvider} which provides images from the requested camera ID.
+    
+    * @exposesUserData
+    
+    * @wearableOnly
     */
     requestCamera(request: CameraModule.CameraRequest): Texture
     
@@ -2593,13 +4050,15 @@ declare class CameraModule extends Asset {
     *   print(`Still image request failed: ${error}`);
     * }
     * ```
+    
+    * @exposesUserData
+    
+    * @wearableOnly
     */
     requestImage(request: CameraModule.ImageRequest): Promise<ImageFrame>
     
     /**
     * Creates a camera request object.
-    
-    * @experimental
     
     * @exposesUserData
     
@@ -2609,8 +4068,6 @@ declare class CameraModule extends Asset {
     
     /**
     * Spectacles: create a {@link CameraImage.ImageRequest}. This object can be used to configure a request for a high resolution image of the user's camera stream. The resolution of this image will be fixed to 3200x2400.
-    
-    * @experimental
     
     * @exposesUserData
     
@@ -2624,8 +4081,6 @@ declare namespace CameraModule {
     /**
     * A handle to specify which camera on the Spectacles to request from. Used with `CameraModule.createCameraRequest`.
     
-    * @experimental
-    
     * @exposesUserData
     
     * @wearableOnly
@@ -2633,14 +4088,26 @@ declare namespace CameraModule {
     enum CameraId {
         /**
         * The default color camera. On Spectacles (2024), the default color camera is located on the left side of the device.
+        
+        * @exposesUserData
+        
+        * @wearableOnly
         */
         Default_Color,
         /**
         * The color camera on the left side of the device.
+        
+        * @exposesUserData
+        
+        * @wearableOnly
         */
         Left_Color,
         /**
         * The color camera on the right side of the device.
+        
+        * @exposesUserData
+        
+        * @wearableOnly
         */
         Right_Color
     }
@@ -2650,8 +4117,6 @@ declare namespace CameraModule {
 declare namespace CameraModule {
     /**
     * An object that is used to request the desired camera ID. It should be passed to the CameraModule to get back a camera texture.
-    
-    * @experimental
     
     * @exposesUserData
     
@@ -2663,11 +4128,19 @@ declare namespace CameraModule {
         
         /**
         * The id of the camera to be accessed.
+        
+        * @exposesUserData
+        
+        * @wearableOnly
         */
         cameraId: CameraModule.CameraId
         
         /**
         * The desired resolution of the received camera frame. If not specified, will use the system default resolution. It is recommended to use lowest resolution required for your use case to save on power and not overheat the device.
+        
+        * @exposesUserData
+        
+        * @wearableOnly
         */
         imageSmallerDimension?: number
         
@@ -2677,7 +4150,7 @@ declare namespace CameraModule {
 
 declare namespace CameraModule {
     /**
-    * @experimental
+    * Spectacles: ImageRequest contains the parameterization for a still image request, which is a request for a high resolution image of the user's current camera stream. 
     
     * @exposesUserData
     
@@ -2686,6 +4159,24 @@ declare namespace CameraModule {
     class ImageRequest extends ScriptObject {
         
         protected constructor()
+        
+        /**
+        * The desired crop of the Image Request.
+        
+        * @exposesUserData
+        
+        * @wearableOnly
+        */
+        crop: Rect
+        
+        /**
+        * The desired resolution of the Image Request
+        
+        * @exposesUserData
+        
+        * @wearableOnly
+        */
+        resolution: vec2
         
     }
 
@@ -2699,8 +4190,6 @@ declare class CameraTextureProvider extends TextureProvider {
     * Register a callback to be called whenever a new frame is received from the camera. On spectacles, the render rate is different (and typically higher) than the camera update rate, so this callback can be used to know when a new camera frame is available. This allows you to only do additional processing (like run a SnapML model) when a new frame is available instead of doing redundant work on each scene update event.
     
     * @readonly
-    
-    * @experimental
     
     * @exposesUserData
     
@@ -3252,7 +4741,7 @@ declare class ColliderComponent extends Component {
     /**
     * Collision filter to use for this collider.
     */
-    filter: Filter
+    filter: Physics.Filter
     
     /**
     * If enabled, the collider shape extends to fit the visual mesh, if any. Only applicable for Box and Sphere shapes.
@@ -3319,7 +4808,7 @@ declare class ColliderComponent extends Component {
     /**
     * Collision filter used for overlap events.
     */
-    overlapFilter: Filter
+    overlapFilter: Physics.Filter
     
     /**
     * Smoothing spring factor, for rotation.
@@ -4237,6 +5726,112 @@ declare class CylinderShape extends Shape {
 }
 
 /**
+* Provides methods to draw primitive visuals for debugging. Accessible through `global.debugRenderSystem`.
+*/
+declare class DebugRender extends ScriptObject {
+    
+    protected constructor()
+    
+    /**
+    * Clears any visual on the debug render system.
+    */
+    clear(): void
+    
+    /**
+    * Draws a wireframe box.
+    */
+    drawBox(position: vec3, width: number, height: number, depth: number, color: vec4): void
+    
+    /**
+    * Draw a sequence of unconnected line segments (2 points per line).
+    */
+    drawBrokenLine(points: vec3[], color: vec4): void
+    
+    /**
+    * Draw a wireframe circle oriented on the XY plane.
+    */
+    drawCircle(position: vec3, radius: number, color: vec4): void
+    
+    /**
+    * Draw a single line segment.
+    */
+    drawLine(posA: vec3, posB: vec3, color: vec4): void
+    
+    /**
+    * Draws a solid box mesh.
+    */
+    drawSolidBox(position: vec3, width: number, height: number, depth: number, color: vec4): void
+    
+    /**
+    * Draws a solid sphere mesh.
+    */
+    drawSolidSphere(position: vec3, radius: number, color: vec4): void
+    
+    /**
+    * Draws a filled in triangle.
+    */
+    drawSolidTriangle(vertex1: vec3, vertex2: vec3, vertex3: vec3, color: vec4): void
+    
+    /**
+    * Draws a wireframe sphere as a 3 axis-aligned circle.
+    */
+    drawSphere(position: vec3, radius: number, color: vec4): void
+    
+    /**
+    * Currently unused.
+    */
+    isAutoClear: boolean
+    
+}
+
+/**
+* The DeepLinkModule brings the concept of deep linking, familiar from mobile platforms like Android and iOS, to Spectacles. This module allows Lenses to send and receive deep link URIs between Spectacles and the Spectacles App.
+
+* @wearableOnly
+*/
+declare class DeepLinkModule extends Asset {
+    
+    protected constructor()
+    
+    /**
+    * Initiates a deep link request by sending a specified URI from the Lens to SnapOS, allowing dynamic interaction based on the URIs target action or content.
+    
+    * @wearableOnly
+    */
+    openUri(uri: string): Promise<void>
+    
+    /**
+    * An event triggered when a deep link request is received by the Lens from SnapOS, enabling the lens to process and respond to the incoming action or content linked by the URI.
+    
+    * @readonly
+    
+    * @wearableOnly
+    */
+    onUriReceived: event1<DeepLinkUriReceivedArgs, void>
+    
+}
+
+/**
+* Arguments used with the {@link DeepLinkModule#onUriReceived} event.
+
+* @wearableOnly
+*/
+declare class DeepLinkUriReceivedArgs extends ScriptObject {
+    
+    protected constructor()
+    
+    /**
+    * The URI string representing the deep link that has been received.
+    
+    * @readonly
+    
+    * @wearableOnly
+    */
+    uri: string
+    
+}
+
+/**
 * Used for collision meshes that can change shape or form dynamically.
 */
 declare class DeformingCollisionMesh extends CollisionMesh {
@@ -4383,14 +5978,172 @@ declare enum DepthClearOption {
 }
 
 /**
-* Writes video feed depth information to the depth buffer, which automatically sets up depth occlusion for 3D visuals.
+* The depth frame data as provided by the {@link DepthFrameSession.onNewFrame}.
 
-* @remarks
-* Only works in some cases where depth information is supplied by the device.
+* @experimental
+
+* @exposesUserData
+
+* @wearableOnly
+
+* @wearableOnly
 */
-declare class DepthSetter extends PostEffectVisual {
+declare class DepthFrameData extends ScriptObject {
     
     protected constructor()
+    
+    /**
+    * The depth frame as a linear Float32Array in centimeters.
+    
+    * @readonly
+    
+    * @experimental
+    
+    * @exposesUserData
+    
+    * @wearableOnly
+    
+    * @wearableOnly
+    */
+    depthFrame: Float32Array
+    
+    /**
+    * Provides information about the depth device camera.
+    
+    * @readonly
+    
+    * @experimental
+    
+    * @exposesUserData
+    
+    * @wearableOnly
+    
+    * @wearableOnly
+    */
+    deviceCamera: DeviceCamera
+    
+    /**
+    * The timestamp of the start of exposure of the frame in seconds.
+    
+    * @readonly
+    
+    * @experimental
+    
+    * @exposesUserData
+    
+    * @wearableOnly
+    
+    * @wearableOnly
+    */
+    timestampSeconds: number
+    
+    /**
+    * The pose of the device reference relative to the frame of reference of the tracked device position.
+    
+    * @readonly
+    
+    * @experimental
+    
+    * @exposesUserData
+    
+    * @wearableOnly
+    
+    * @wearableOnly
+    */
+    toWorldTrackingOriginFromDeviceRef: mat4
+    
+}
+
+/**
+* Used for receiving {@link DepthFrameData} on Spectacles device.
+
+* @experimental
+
+* @exposesUserData
+
+* @wearableOnly
+
+* @wearableOnly
+*/
+declare class DepthFrameSession extends ScriptObject {
+    
+    protected constructor()
+    
+    /**
+    * Starts depth estimation for the {@link DepthFrameSession} on Spectacles. The {@link DepthFrameSession.onNewFrame} events will only be triggered after start has been called.
+    
+    * @experimental
+    
+    * @exposesUserData
+    
+    * @wearableOnly
+    
+    * @wearableOnly
+    */
+    start(): void
+    
+    /**
+    * Stops depth estimation for the {@link DepthFrameSession} on Spectacles.
+    
+    * @experimental
+    
+    * @exposesUserData
+    
+    * @wearableOnly
+    
+    * @wearableOnly
+    */
+    stop(): void
+    
+    /**
+    * Register a callback to be called whenever new {@link DepthFrameData} is available. On Spectacles, the depth update rate is different from the color frame update rate and the render update rate.
+    
+    * @readonly
+    
+    * @experimental
+    
+    * @exposesUserData
+    
+    * @wearableOnly
+    
+    * @wearableOnly
+    */
+    onNewFrame: event1<DepthFrameData, void>
+    
+}
+
+/**
+* Provides access to a {@link DepthFrameSession} on Spectacles device. 
+
+* @remarks 
+* Used for requesting {@link DepthFrameData}.
+
+* @see [Depth Module](https://developers.snap.com/spectacles/about-spectacles-features/apis/depth-module) guide.
+
+* @experimental
+
+* @exposesUserData
+
+* @wearableOnly
+
+* @wearableOnly
+*/
+declare class DepthModule extends Asset {
+    
+    protected constructor()
+    
+    /**
+    * Create a {@link DepthFrameSession}.
+    
+    * @experimental
+    
+    * @exposesUserData
+    
+    * @wearableOnly
+    
+    * @wearableOnly
+    */
+    createDepthFrameSession(): DepthFrameSession
     
 }
 
@@ -4425,6 +6178,16 @@ declare class DepthStencilRenderTargetProvider extends TextureProvider {
     * Texture with Depth24_Stencil8 format. Stencil8 part used in stencil clear operation in "CustomTexture" mode.
     */
     maskTexture: Texture
+    
+    /**
+    * Enable mipmaps on the current render target.
+    */
+    mipmapsEnabled: boolean
+    
+    /**
+    * The ouput resolution of the current render target.
+    */
+    outputResolution: number
     
     /**
     * Custom render target resolution, this property will use if the "outputResolution" property is a "Custom".
@@ -4546,11 +6309,14 @@ declare class DeviceInfoSystem extends ScriptObject {
     /**
     * Get the DeviceCamera object for the given camera ID which provides intrinsics/extrinsics of the camera. 
     
-    * @experimental
-    
     * @wearableOnly
     */
     getTrackingCameraForId(cameraId: CameraModule.CameraId): DeviceCamera
+    
+    /**
+    * Returns whether the current Lens is running in CameraKit.
+    */
+    isCameraKit(): boolean
     
     /**
     * Returns whether the current Lens is running in a desktop computer.
@@ -4972,26 +6738,30 @@ declare class DistanceEffect extends ScriptObject {
     
 }
 
+/**
+* The domain of a {@link ShoppingModule}. You can leave this empty if you are tagging the products from the catalog dynamically, and assets are fetched and sent to the Lens.
+*/
 declare class DomainInfo {
     
     protected constructor()
     
     /**
-    * @readonly
-    */
-    assetType: string
+    * The description of the domain.
     
-    /**
     * @readonly
     */
     description: string
     
     /**
+    * The name of the domain.
+    
     * @readonly
     */
     name: string
     
     /**
+    * The states available in the domain.
+    
     * @readonly
     */
     states: StateInfo[]
@@ -5426,6 +7196,11 @@ declare class EyeColorVisual extends MaterialMeshVisual {
     */
     faceIndex: number
     
+    /**
+    * The tracking context this effect is being applied to. 
+    */
+    trackingScope: (PersonTrackingScope|TextureTrackingScope|FaceTrackingScope)
+    
 }
 
 /**
@@ -5451,6 +7226,11 @@ declare class FaceCropTextureProvider extends CropTextureProvider {
     * Scaling of the cropped texture.
     */
     textureScale: vec2
+    
+    /**
+    * The tracking context this effect is being applied to. 
+    */
+    trackingScope: (PersonTrackingScope|TextureTrackingScope|FaceTrackingScope)
     
 }
 
@@ -5545,6 +7325,11 @@ declare class FaceInsetVisual extends MaterialMeshVisual {
     */
     subdivisionsCount: number
     
+    /**
+    * The tracking context this effect is being applied to. 
+    */
+    trackingScope: (PersonTrackingScope|TextureTrackingScope|FaceTrackingScope)
+    
 }
 
 /**
@@ -5596,6 +7381,11 @@ declare class FaceMaskVisual extends MaterialMeshVisual {
     
     teethAlpha: number
     
+    /**
+    * The tracking context this effect is being applied to. 
+    */
+    trackingScope: (PersonTrackingScope|TextureTrackingScope|FaceTrackingScope)
+    
     useOriginalTexCoords: boolean
     
 }
@@ -5606,21 +7396,6 @@ declare class FaceMaskVisual extends MaterialMeshVisual {
 declare class FaceRenderObjectProvider extends RenderObjectProvider {
     
     protected constructor()
-    
-    /**
-    * Returns a list of all expression names being tracked.
-    */
-    getExpressionNames(): string[]
-    
-    /**
-    * Returns the weight of the expression with the passed in name. See {@link Expressions} for valid expression names.
-    */
-    getExpressionWeightByName(expressionName: string): number
-    
-    /**
-    * Returns a Float32Array of all expression weights being tracked.
-    */
-    getExpressionWeights(): Float32Array
     
     /**
     * When true, ears will be included in the Face Mesh geometry.
@@ -5653,9 +7428,21 @@ declare class FaceRenderObjectProvider extends RenderObjectProvider {
     mouthGeometryEnabled: boolean
     
     /**
+    * An event that will fire each time new expression weights are available.
+    
+    * @readonly
+    */
+    onExpressionWeightsUpdate: event1<NamedValues, void>
+    
+    /**
     * When true, the skull will be included in the Face Mesh geometry.
     */
     skullGeometryEnabled: boolean
+    
+    /**
+    * The tracking context this effect is being applied to. 
+    */
+    trackingScope: (PersonTrackingScope|TextureTrackingScope|FaceTrackingScope)
     
 }
 
@@ -5688,34 +7475,10 @@ declare class FaceStretchVisual extends BaseMeshVisual {
     */
     faceIndex: number
     
-}
-
-/**
-* TextureProvider for face textures.
-* See the [Face Texture Guide](https://developers.snap.com/lens-studio/features/ar-tracking/face/face-texture) for more information.
-* Can be accessed using {@link Texture | Texture.control} on a face texture asset.
-*/
-declare class FaceTextureProvider extends TextureProvider {
-    
-    protected constructor()
-    
     /**
-    * Index of the face to track.
+    * The tracking context this effect is being applied to. 
     */
-    faceIndex: number
-    
-    /**
-    * The source texture being drawn.
-    * This is useful for controlling which effects are visible on the face texture, based on which camera output texture is being used.
-    */
-    inputTexture: Texture
-    
-    /**
-    * The x and y scale used to draw the face within the texture region.
-    * A lower scale will be more zoomed in on the face, and a higher scale will be more zoomed out.
-    * The default scale is (1, 1).
-    */
-    scale: vec2
+    trackingScope: (PersonTrackingScope|TextureTrackingScope|FaceTrackingScope)
     
 }
 
@@ -5730,6 +7493,30 @@ declare class FaceTrackingEvent extends SceneEvent {
     * The index of the face this event is tracking. Change this value to control which face the event tracks.
     */
     faceIndex: number
+    
+    /**
+    * The tracking context this effect is being applied to. 
+    */
+    trackingScope: (PersonTrackingScope|TextureTrackingScope|FaceTrackingScope)
+    
+}
+
+/**
+* The face that a tracker should use. Allows you to to apply the same face index to a group of Components.
+*/
+declare class FaceTrackingScope extends TrackingScope {
+    
+    protected constructor()
+    
+    /**
+    * The face to track. The first face is 0, the second is 1, and so on. 
+    */
+    faceIndex: number
+    
+    /**
+    * The parent context that this Tracking Scope is identifying the face from. 
+    */
+    parentScope: TextureTrackingScope
     
 }
 
@@ -5806,53 +7593,6 @@ declare class FileLicensedSoundProvider extends AudioTrackProvider {
 declare class FileTextureProvider extends TextureProvider {
     
     protected constructor()
-    
-}
-
-/**
-* Intersection filter settings. Unifies settings for world probes and collider overlap tests. 
-
-* @see {@link ColliderComponent}
-* @see {@link Physics}
-*/
-declare class Filter extends ScriptObject {
-    
-    protected constructor()
-    
-    /**
-    * Include dynamic objects in intersection tests.
-    */
-    includeDynamic: boolean
-    
-    /**
-    * Include intangible objects in intersection tests.
-    */
-    includeIntangible: boolean
-    
-    /**
-    * Include static objects in intersection tests.
-    */
-    includeStatic: boolean
-    
-    /**
-    * If non-empty, only perform collision with these colliders. In other words: the set of colliders to include when performing collision tests, excluding all others.  If empty, this setting is disabled (effectively including all colliders, minus skipColliders).
-    */
-    onlyColliders: ColliderComponent[]
-    
-    /**
-    * If non-empty, only perform collision with colliders in these layers. In other words: the set of layers to include when performing collision tests, excluding all others.  If empty, this setting is disabled (effectively including all layers, minus skipLayers).
-    */
-    onlyLayers: LayerSet
-    
-    /**
-    * Skip collision with these colliders. In other words: the set of colliders to exclude when performing collision tests. This takes precedence over onlyColliders, so a collider that is in both is skipped.
-    */
-    skipColliders: ColliderComponent[]
-    
-    /**
-    * Skip collision with colliders in these layers. In other words: the set of layers to exclude when performing collision tests. This takes precedence over onlyLayers, so a layer that is in both is skipped.
-    */
-    skipLayers: LayerSet
     
 }
 
@@ -6319,6 +8059,11 @@ declare class GeoLocation {
     static createLocationService(): LocationService
     
     /**
+    * Returns the GPS position of a custom location.
+    */
+    static getGeoPositionForLocation(location: LocationAsset): Promise<GeoPosition>
+    
+    /**
     * Calculates heading based on north aligned device orientation.
     */
     static getNorthAlignedHeading(northAlignedOrientation: quat): number
@@ -6446,12 +8191,32 @@ declare class GestureModule extends Asset {
     protected constructor()
     
     /**
+    * Triggered when the thumb and index fingers of the hand in view are pinched together. Compared to `getPinchDownEvent`, this event is more robust when moving the hand.
+    
+    
+    * @wearableOnly
+    */
+    getFilteredPinchDownEvent(handType: GestureModule.HandType): event1<PinchDownArgs, void>
+    
+    /**
+    * Triggered when the thumb and index fingers of the hand in view are separated after being pinched together. Compared to `getPinchUpEvent`, this event is more robust when moving the hand.
+    
+    
+    * @wearableOnly
+    */
+    getFilteredPinchUpEvent(handType: GestureModule.HandType): event1<PinchUpArgs, void>
+    
+    /**
     * Triggered when the hand in view starts performing a grab pose, enabling interactions such as grabbing virtual objects or making a fist.
+    
+    * @wearableOnly
     */
     getGrabBeginEvent(handType: GestureModule.HandType): event1<GrabBeginArgs, void>
     
     /**
     * Triggered when the hand in view ends performing a grab pose and opens the hand, disabling interactions such as grabbing virtual objects or making a fist.
+    
+    * @wearableOnly
     */
     getGrabEndEvent(handType: GestureModule.HandType): event1<GrabEndArgs, void>
     
@@ -6462,6 +8227,8 @@ declare class GestureModule extends Asset {
     * The event indicates that the state of a hand not holding a phone has changed to a hand holding a phone. If a Lens contains a `GestureModel` and has subscribed to `getIsPhoneInHandBeginEvent`, an initial event is always sent at the start of the Lens if a hand already holds a phone.
     
     * For technical reasons, if a Lens does not initially subscribe to `getIsPhoneInHandBeginEvent`, but subscribes at a later time, no initial event will be sent after subscription.
+    
+    * @wearableOnly
     */
     getIsPhoneInHandBeginEvent(handType: GestureModule.HandType): event1<IsPhoneInHandBeginArgs, void>
     
@@ -6472,36 +8239,51 @@ declare class GestureModule extends Asset {
     * The event indicates that the state of a hand holding a phone has changed to a hand not holding a phone. If a Lens contains a `GestureModel` and has subscribed to `getIsPhoneInHandEndEvent`, an initial event is always sent at the start of the Lens if a hand does not hold a phone.
     
     * For technical reasons, if a Lens does not initially subscribe to `getIsPhoneInHandEndEvent`, but subscribes at a later time, no initial event will be sent after subscription.
+    
+    * @wearableOnly
     */
     getIsPhoneInHandEndEvent(handType: GestureModule.HandType): event1<IsPhoneInHandEndArgs, void>
     
     /**
-    * Triggered when the left index finger from one hand touches the palm on the opposite hand. Currently, only the palm tap to the left hand is supported.
+    * Triggered when the index finger of one hand taps the palm of the opposite hand.
+    * Specifically, a right-hand palm tap is recognized when the right index finger touches the left palm, and a left-hand palm tap when the left index finger touches the right palm.
+    
+    * @wearableOnly
     */
     getPalmTapDownEvent(handType: GestureModule.HandType): event1<PalmTapDownArgs, void>
     
     /**
     * Triggered when the left index finger from one hand lifts from the palm on the opposite hand after touching. Currently, only the palm tap to the left hand is supported.
+    
+    * @wearableOnly
     */
     getPalmTapUpEvent(handType: GestureModule.HandType): event1<PalmTapUpArgs, void>
     
     /**
     * Triggered when the thumb and index fingers of the hand in view are pinched together.
+    
+    * @wearableOnly
     */
     getPinchDownEvent(handType: GestureModule.HandType): event1<PinchDownArgs, void>
     
     /**
     * Get the strength of a pinch between the thumb and index fingers of the hand in view.
+    
+    * @wearableOnly
     */
     getPinchStrengthEvent(handType: GestureModule.HandType): event1<PinchStrengthArgs, void>
     
     /**
     * Triggered when the thumb and index fingers of the hand in view are separated after being pinched together.
+    
+    * @wearableOnly
     */
     getPinchUpEvent(handType: GestureModule.HandType): event1<PinchUpArgs, void>
     
     /**
     * Triggered when the user has an intent to target a digital content in space.
+    
+    * @wearableOnly
     */
     getTargetingDataEvent(handType: GestureModule.HandType): event1<TargetingDataArgs, void>
     
@@ -6516,10 +8298,14 @@ declare namespace GestureModule {
     enum HandType {
         /**
         * The left hand.
+        
+        * @wearableOnly
         */
         Left,
         /**
         * The right hand.
+        
+        * @wearableOnly
         */
         Right
     }
@@ -6541,6 +8327,11 @@ declare class GesturesDataArgs extends ScriptObject {
 declare class GltfAsset extends Asset {
     
     protected constructor()
+    
+    /**
+    * Use this method to get a dynamic resource for the url from the gltf extras.
+    */
+    getResourceFromExtras(url: string): DynamicResource
     
     /**
     * Try instantiating an object from the GLTF asset.
@@ -6855,26 +8646,6 @@ declare class Head extends Component {
     protected constructor()
     
     /**
-    * Returns the total number of faces currently being tracked.
-    */
-    getFacesCount(): number
-    
-    /**
-    * Returns the screen position of the face landmark at the passed in index.
-    */
-    getLandmark(index: number): vec2
-    
-    /**
-    * Returns the number of face landmarks being tracked.
-    */
-    getLandmarkCount(): number
-    
-    /**
-    * Returns a list of screen positions of all tracked landmarks.
-    */
-    getLandmarks(): vec2[]
-    
-    /**
     * Changes the attachment point type used to anchor this object to a face.
     */
     setAttachmentPointType(attachmentPointType: AttachmentPointType): void
@@ -6883,6 +8654,18 @@ declare class Head extends Component {
     * The index of the face this head is attached to.
     */
     faceIndex: number
+    
+    /**
+    * Triggered when the landmarks on the head are updated.
+    
+    * @readonly
+    */
+    onLandmarksUpdate: event1<vec2[], void>
+    
+    /**
+    * The tracking context this effect is being applied to. 
+    */
+    trackingScope: (PersonTrackingScope|TextureTrackingScope|FaceTrackingScope)
     
 }
 
@@ -6896,6 +8679,8 @@ declare class Head extends Component {
 declare class Headers extends ScriptObject {
     /**
     * Construct a new, empty Headers object.
+    
+    * @wearableOnly
     */
     constructor()
     
@@ -6909,6 +8694,8 @@ declare class Headers extends ScriptObject {
     * myHeaders.append("Accept-Encoding", "gzip");
     * myHeaders.get("Accept-Encoding"); // Returns 'deflate, gzip'
     * ```
+    
+    * @wearableOnly
     */
     append(name: string, value: string): void
     
@@ -6921,6 +8708,8 @@ declare class Headers extends ScriptObject {
     * myHeaders.delete("Content-Type");
     * myHeaders.get("Content-Type"); // Returns null, as it has been deleted
     * ```
+    
+    * @wearableOnly
     */
     delete(name: string): void
     
@@ -6933,6 +8722,8 @@ declare class Headers extends ScriptObject {
     *     print(`${pair[0]}: ${pair[1]}`);
     * }
     * ```
+    
+    * @wearableOnly
     */
     entries(): string[][]
     
@@ -6944,11 +8735,15 @@ declare class Headers extends ScriptObject {
     * myHeaders.append("Accept-Encoding", "gzip");
     * myHeaders.get("Accept-Encoding"); // Returns "deflate, gzip"
     * ```
+    
+    * @wearableOnly
     */
     get(name: string): string
     
     /**
     * Returns a boolean stating whether the Headers object contains the given header.
+    
+    * @wearableOnly
     */
     has(name: string): boolean
     
@@ -6961,6 +8756,8 @@ declare class Headers extends ScriptObject {
     *   print(key);
     * }
     * ```
+    
+    * @wearableOnly
     */
     keys(): string[]
     
@@ -6974,6 +8771,8 @@ declare class Headers extends ScriptObject {
     * myHeaders.set("Accept-Encoding", "gzip");
     * myHeaders.get("Accept-Encoding"); // Returns 'gzip'
     * ```
+    
+    * @wearableOnly
     */
     set(name: string, value: string): void
     
@@ -6986,6 +8785,8 @@ declare class Headers extends ScriptObject {
     *   print(value);
     * }
     * ```
+    
+    * @wearableOnly
     */
     values(): string[]
     
@@ -7096,7 +8897,44 @@ declare enum HingeMotorType {
 * If you only need to show one hint on Lens start up, you can [configure your project](https://developers.snap.com/lens-studio/publishing/configuring/lens-hints) to display the hint without scripting it.
 
 
-* <table cellspacing=0 cellpadding=0><thead><tr><th>Hint ID</th><th>Hint Message</th></tr></thead><tbody><tr><td>&#8220;lens_hint_blow_a_kiss&#8221;</td><td>&#8220;Blow A Kiss&#8221;</td></tr><tr><td>&#8220;lens_hint_come_closer&#8221;</td><td>&#8220;Come Closer&#8221;</td></tr><tr><td>&#8220;lens_hint_do_not_smile&#8221;</td><td>&#8220;Do Not Smile&#8221;</td></tr><tr><td>&#8220;lens_hint_do_not_try_with_a_friend&#8221;</td><td>&#8220;Do Not Try With A Friend&#8221;</td></tr><tr><td>&#8220;lens_hint_find_face&#8221;</td><td>&#8220;Find Face&#8221;</td></tr><tr><td>&#8220;lens_hint_keep_raising_your_eyebrows&#8221;</td><td>&#8220;Keep Raising Your Eyebrows&#8221;</td></tr><tr><td>&#8220;lens_hint_kiss&#8221;</td><td>&#8220;Kiss&#8221;</td></tr><tr><td>&#8220;lens_hint_kiss_again&#8221;</td><td>&#8220;Kiss Again&#8221;</td></tr><tr><td>&#8220;lens_hint_look_around&#8221;</td><td>&#8220;Look Around&#8221;</td></tr><tr><td>&#8220;lens_hint_look_down&#8221;</td><td>&#8220;Look Down&#8221;</td></tr><tr><td>&#8220;lens_hint_look_left&#8221;</td><td>&#8220;Look Left&#8221;</td></tr><tr><td>&#8220;lens_hint_look_right&#8221;</td><td>&#8220;Look Right&#8221;</td></tr><tr><td>&#8220;lens_hint_look_up&#8221;</td><td>&#8220;Look Up&#8221;</td></tr><tr><td>&#8220;lens_hint_make_some_noise&#8221;</td><td>&#8220;Make Some Noise!&#8221;</td></tr><tr><td>&#8220;lens_hint_nod_your_head&#8221;</td><td>&#8220;Nod Your Head&#8221;</td></tr><tr><td>&#8220;lens_hint_now_kiss&#8221;</td><td>&#8220;Now Kiss&#8221;</td></tr><tr><td>&#8220;lens_hint_now_open_your_mouth&#8221;</td><td>&#8220;Now Open Your Mouth&#8221;</td></tr><tr><td>&#8220;lens_hint_now_raise_your_eyebrows&#8221;</td><td>&#8220;Now Raise Your Eyebrows&#8221;</td></tr><tr><td>&#8220;lens_hint_now_smile&#8221;</td><td>&#8220;Now Smile&#8221;</td></tr><tr><td>&#8220;lens_hint_open_your_mouth&#8221;</td><td>&#8220;Open Your Mouth&#8221;</td></tr><tr><td>&#8220;lens_hint_open_your_mouth_again&#8221;</td><td>&#8220;Open Your Mouth Again&#8221;</td></tr><tr><td>&#8220;lens_hint_raise_eyebrows_or_open_mouth&#8221;</td><td>&#8220;Raise Your Eyebrows / Or / Open Your Mouth&#8221;</td></tr><tr><td>&#8220;lens_hint_raise_your_eyebrows&#8221;</td><td>&#8220;Raise Your Eyebrows&#8221;</td></tr><tr><td>&#8220;lens_hint_raise_your_eyebrows_again&#8221;</td><td>&#8220;Raise Your Eyebrows Again&#8221;</td></tr><tr><td>&#8220;lens_hint_smile&#8221;</td><td>&#8220;Smile&#8221;</td></tr><tr><td>&#8220;lens_hint_smile_again&#8221;</td><td>&#8220;Smile Again&#8221;</td></tr><tr><td>&#8220;lens_hint_swap_camera&#8221;</td><td>&#8220;Swap Camera&#8221;</td></tr><tr><td>&#8220;lens_hint_tap&#8221;</td><td>&#8220;Tap!&#8221;</td></tr><tr><td>&#8220;lens_hint_tap_a_surface&#8221;</td><td>&#8220;Tap A Surface&#8221;</td></tr><tr><td>&#8220;lens_hint_tap_ground&#8221;</td><td>&#8220;Tap The Ground&#8221;</td></tr><tr><td>&#8220;lens_hint_tap_ground_to_place&#8221;</td><td>&#8220;Tap Ground To Place&#8221;</td></tr><tr><td>&#8220;lens_hint_tap_surface_to_place&#8221;</td><td>&#8220;Tap Surface To Place&#8221;</td></tr><tr><td>&#8220;lens_hint_try_friend&#8221;</td><td>&#8220;Try It With A Friend&#8221;</td></tr><tr><td>&#8220;lens_hint_try_rear_camera&#8221;</td><td>&#8220;Try It With Your Rear Camera&#8221;</td></tr><tr><td>&#8220;lens_hint_turn_around&#8221;</td><td>&#8220;Turn Around&#8221;</td></tr><tr><td>&#8220;lens_hint_walk_through_the_door&#8221;</td><td>&#8220;Walk Through The Door&#8221;</td></tr></tbody></table>
+* | Hint ID                                   | Hint Message                          |
+* |------------------------------------------|---------------------------------------|
+* | "lens_hint_blow_a_kiss"                  | "Blow A Kiss"                         |
+* | "lens_hint_come_closer"                  | "Come Closer"                         |
+* | "lens_hint_do_not_smile"                 | "Do Not Smile"                        |
+* | "lens_hint_do_not_try_with_a_friend"     | "Do Not Try With A Friend"            |
+* | "lens_hint_find_face"                    | "Find Face"                           |
+* | "lens_hint_keep_raising_your_eyebrows"   | "Keep Raising Your Eyebrows"          |
+* | "lens_hint_kiss"                         | "Kiss"                                |
+* | "lens_hint_kiss_again"                   | "Kiss Again"                          |
+* | "lens_hint_look_around"                  | "Look Around"                         |
+* | "lens_hint_look_down"                    | "Look Down"                           |
+* | "lens_hint_look_left"                    | "Look Left"                           |
+* | "lens_hint_look_right"                   | "Look Right"                          |
+* | "lens_hint_look_up"                      | "Look Up"                             |
+* | "lens_hint_make_some_noise"              | "Make Some Noise!"                    |
+* | "lens_hint_nod_your_head"                | "Nod Your Head"                       |
+* | "lens_hint_now_kiss"                     | "Now Kiss"                            |
+* | "lens_hint_now_open_your_mouth"          | "Now Open Your Mouth"                 |
+* | "lens_hint_now_raise_your_eyebrows"      | "Now Raise Your Eyebrows"             |
+* | "lens_hint_now_smile"                    | "Now Smile"                           |
+* | "lens_hint_open_your_mouth"              | "Open Your Mouth"                     |
+* | "lens_hint_open_your_mouth_again"        | "Open Your Mouth Again"               |
+* | "lens_hint_raise_eyebrows_or_open_mouth" | "Raise Your Eyebrows / Or / Open Your Mouth" |
+* | "lens_hint_raise_your_eyebrows"          | "Raise Your Eyebrows"                 |
+* | "lens_hint_raise_your_eyebrows_again"    | "Raise Your Eyebrows Again"           |
+* | "lens_hint_smile"                        | "Smile"                               |
+* | "lens_hint_smile_again"                  | "Smile Again"                         |
+* | "lens_hint_swap_camera"                  | "Swap Camera"                         |
+* | "lens_hint_tap"                          | "Tap!"                                |
+* | "lens_hint_tap_a_surface"                | "Tap A Surface"                       |
+* | "lens_hint_tap_ground"                   | "Tap The Ground"                      |
+* | "lens_hint_tap_ground_to_place"          | "Tap Ground To Place"                 |
+* | "lens_hint_tap_surface_to_place"         | "Tap Surface To Place"                |
+* | "lens_hint_try_friend"                   | "Try It With A Friend"                |
+* | "lens_hint_try_rear_camera"              | "Try It With Your Rear Camera"        |
+* | "lens_hint_turn_around"                  | "Turn Around"                         |
+* | "lens_hint_walk_through_the_door"        | "Walk Through The Door"               |
 */
 declare class HintsComponent extends Component {
     
@@ -7125,21 +8963,29 @@ declare class HitTestSession extends ScriptObject {
     
     /**
     * Perform a hit test.
+    
+    * @wearableOnly
     */
     hitTest(rayStart: vec3, rayEnd: vec3, hitCallback: (hit: WorldQueryHitTestResult) => void): void
     
     /**
     * Reset the session.
+    
+    * @wearableOnly
     */
     reset(): void
     
     /**
-    * Start the sesion. Depth computation is started once a session is started. Multiple sessions access the same depth data, thus there is no additional cost. 
+    * Start the session. Depth computation is started once a session is started. Multiple sessions access the same depth data, thus there is no additional cost. 
+    
+    * @wearableOnly
     */
     start(): void
     
     /**
     * Stop the session. Depth computation stops once all hit test sessions are stopped.
+    
+    * @wearableOnly
     */
     stop(): void
     
@@ -7157,6 +9003,8 @@ declare class HitTestSessionOptions extends ScriptObject {
     /**
     * If true - a double exponential filter is applied to filter/smooth over multiple hit test results.
     * By default the filter is set to `false`.
+    
+    * @wearableOnly
     */
     filter: boolean
     
@@ -7212,7 +9060,15 @@ declare enum HorizontalOverflow {
     /**
     * When text exceeds the available space an ellipsis (...) will be added at the end.
     */
-    Ellipsis
+    Ellipsis,
+    /**
+    * When text exceeds the available space in the front, an ellipsis (...) will be added at the front.
+    */
+    EllipsisFront,
+    /**
+    * Text is clipped in the front to the width of horizontal boundaries.
+    */
+    TruncateFront
 }
 
 /**
@@ -7266,14 +9122,15 @@ declare class Image extends MaterialMeshVisual {
     */
     pivot: vec2
     
+    /**
+    * Rotate the image without manipulating the transforms.
+    */
     rotationAngle: number
     
 }
 
 /**
 * Spectacles: ImageFrame contains the results of a still image request initiated from the {@link CameraModule}. Still images are high resolution images of the user's current camera stream.
-
-* @experimental
 
 * @exposesUserData
 
@@ -7284,7 +9141,13 @@ declare class ImageFrame extends ScriptObject {
     protected constructor()
     
     /**
+    * The texture of the ImageFrame.
+    
     * @readonly
+    
+    * @exposesUserData
+    
+    * @wearableOnly
     */
     texture: Texture
     
@@ -7296,6 +9159,16 @@ declare class ImageFrame extends ScriptObject {
 declare class ImageRequest extends ScriptObject {
     
     protected constructor()
+    
+    /**
+    * The crop of the Image Request.
+    */
+    crop: Rect
+    
+    /**
+    * The resolution of the Image Request
+    */
+    resolution: vec2
     
 }
 
@@ -7484,6 +9357,252 @@ declare class InteractionComponent extends Component {
     * @readonly
     */
     onTriggerPrimary: event1<TriggerPrimaryEventArgs, void>
+    
+}
+
+/**
+* Provides access to the open internet. Available only on Spectacles.
+
+*/
+declare class InternetModule extends Asset {
+    
+    protected constructor()
+    
+    /**
+    * The createWebSocket() method initiates a WebSocket connection with the given `wss` URL and returns a {@link WebSocket} object that can be used to send and receive messages from the server.
+    
+    * Syntax
+    * ```
+    * createWebSocket(url)
+    * ```
+    
+    * `url` Defines the `wss` URL to which to establish the WebSocket connection.
+    
+    * Example
+    
+    * ```
+    * //@input Asset.InternetModule internetModule
+    * var internetModule = script.internetModule;
+    
+    * // Create WebSocket connection.
+    * let socket = script.internetModule.createWebSocket("wss://<some-url>");
+    * socket.binaryType = "blob";
+    
+    * // Listen for the open event
+    * socket.onopen = (event) => {
+    *     // Socket has opened, send a message back to the server
+    *     socket.send("Message 1");
+    
+    *     // Try sending a binary message
+    *     // (the bytes below spell 'Message 2')
+    *     const message = [77, 101, 115, 115, 97, 103, 101, 32, 50];
+    *     const bytes = new Uint8Array(message);
+    *     socket.send(bytes);
+    * };
+    
+    * // Listen for messages
+    * socket.onmessage = async (event) => {
+    *     if (event.data instanceof Blob) {
+    *         // Binary frame, can be retrieved as either Uint8Array or string
+    *         let bytes = await event.data.bytes();
+    *         let text = await event.data.text();
+    
+    *         print("Received binary message, printing as text: " + text);
+    *     } else {
+    *         // Text frame
+    *         let text = event.data;
+    *         print("Received text message: " + text);
+    *     }
+    * });
+    
+    * socket.onclose = (event) => {
+    *     if (event.wasClean) {
+    *         print("Socket closed cleanly");
+    *     } else {
+    *         print("Socket closed with error, code: " + event.code);
+    *     }
+    * };
+    
+    * socket.onerror = (event) => {
+    *     print("Socket error");
+    * };
+    * ```
+    
+    * @wearableOnly
+    
+    * @CameraKit
+    */
+    createWebSocket(url: string, protocols?: any): WebSocket
+    
+    /**
+    * This function will create a new instance of a WebView with the specified options. Once it has been created, onSuccess will be invoked, which returns the {@link Texture} of the WebView for rendering. This {@link Texture} contains a reference to the {@link WebPageTextureProvider} through its `Control` property. {@link WebPageTextureProvider} can be used for sending events and actions to the WebView. In the event of an error, the `onError` callback is invoked with the error message.
+    
+    * Arguments:
+    * - **options:** The options for a specific WebView.
+    * - **onSuccess:** Invoked on successful WebView creation. Provides the Asset.Texture for rendering and control.
+    * - **onError:** Invoked on creation failure. Provides an error message.
+    
+    * _Note: Only 1 callback will be invoked, and only once._
+    
+    * _Note: After creation, the webview will later invoke onReady on the WebPageTextureProvider.control object to indicate it is ready for handling events and actions._
+    
+    * Creating a Webview Texture in JavaScript:
+    
+    * ```js
+    * // Create the options 
+    * var resolution = new vec2(512, 512);
+    * var options = InternetModule.createWebViewOptions(resolution);
+    
+    * // Create the WebView
+    * script.internetModule.createWebView(
+    * 	options,
+    * 	(texture) => {
+    * 		script.image.mainPass.baseTex = texture;
+    * 		webViewControl = texture.control;
+    * 		webViewControl.onReady.add(() => {
+    * 			print("onReady");
+    * 			webViewControl.loadUrl("https://snap.com");
+    * 		});
+    * 	},
+    * 	(msg) => {
+    * 		print("Error:" + msg);
+    * 	}
+    * );
+    * ```
+    
+    * Creating a Webview Texture in TypeScript:
+    
+    * ```ts
+    * const resolution = new vec2(512,512)
+    * const options = InternetModule.createWebViewOptions(resolution)
+    
+    * this.internetModule.createWebView(
+    * 	options,
+    * 	(texture: Asset.Texutre) => {
+    * 		this.image.mainPass.baseTex = texture
+    * 		this.webViewControl = texture.control
+    * 		this.webViewControl.onReady.add(() => {
+    * 			print("onReady")
+    * 			this.webViewControl.loadUrl("https://snap.com")
+    * 		})
+    * 	},
+    * 	(msg: string) => {
+    * 		print(`Error: ${msg}`)
+    * 	}
+    * )
+    * ```
+    
+    * @experimental
+    
+    * @wearableOnly
+    */
+    createWebView(options: WebViewOptions, onSuccess: (texture: Texture) => void, onFailure: (errorMessage: string) => void): void
+    
+    /**
+    * The fetch() method starts the process of fetching a resource from the internet, returning a promise that is fulfilled once the response is available.
+    
+    * The promise resolves to a {@link Response} object representing the response to your request.
+    
+    * A fetch() promise only rejects in cases of malformed URLs or network errors. A fetch() promise does not reject if the server responds with HTTP status codes that indicate errors. These errors can be checked manually via the Response status properties.
+    
+    * Syntax
+    * ```
+    * fetch(resource)
+    * fetch(resource, options)
+    * ```
+    
+    * `resource` Defines the URL you wish to fetch, or a {@link Request} object.
+    
+    * `options` Object containing any custom settings you want to apply to the request. Available options are `body`, `method`, `headers`, `redirect`, and `keepalive`. For more information on these properties see the {@link Request} class. If a {@link Request} was given for `resource`, then these options will entry-wise override the options specified in the {@link Request} object.
+    
+    * Example
+    
+    * ```
+    * //@input Asset.InternetModule internetModule
+    * var internetModule = script.internetModule;
+    
+    * // For this example assume this URL simply responds with the same body
+    * // that it receives.
+    * let request = new Request("https://<Your URL>.com", {
+    *     method: "POST",
+    *     body: JSON.stringify({ user: { name: "user", career: "developer" }}),
+    *     headers: {
+    *         "Content-Type": "application/json",
+    *     },
+    * });
+    *            
+    * let response = await internetModule.fetch(request, {
+    *     body: JSON.stringify({ user: { name: "user", career: "salesman" }})
+    * });
+    * if (response.status != 200) {
+    *     print("Failure: response not successful");
+    *     return;
+    * }
+    *   
+    * let contentTypeHeader = response.headers.get("content-type");
+    * if (!contentTypeHeader.includes("application/json")) {
+    *    print("Failure: wrong content type in response");
+    *    return;
+    * }
+    *         
+    * let responseJson = await response.json();
+    * let username = responseJson.json["user"]["name"];
+    * let career = responseJson.json["user"]["career"];
+    
+    * print(career); // will print "salesman"
+    
+    * ```
+    
+    * @wearableOnly
+    */
+    fetch(request: (Request|string), options?: any): Promise<Response>
+    
+    /**
+    * Perform an http request described by {@link RemoteServiceHttpRequest}.
+    
+    * The following example demonstrates how to load a Texture using the InternetModule and {@link RemoteMediaModule}.
+    * ```js
+    * //@input Asset.InternetModule internetModule
+    * //@input Asset.RemoteMediaModule remoteMediaModule
+    * //@input Component.Image image
+    
+    * let request = RemoteServiceHttpRequest.create();
+    * request.url = "https://docs.snap.com/img/spectacles/spectacles-project-info-settings.png";
+    
+    * script.internetModule
+    *     .performHttpRequest(request, function(response){
+    *         const dynamicResource = response.asResource()
+    
+    *         script.remoteMediaModule
+    *             .loadResourceAsImageTexture(dynamicResource, function(texture) {
+    
+    *             script.image.mainPass.baseTex = texture
+    *         },function(error){
+    *             print(error)
+    *         })
+    *     })
+    * ```
+    
+    * @wearableOnly
+    
+    * @CameraKit
+    */
+    performHttpRequest(requestOptions: RemoteServiceHttpRequest, onHttpResponse: (response: RemoteServiceHttpResponse) => void): void
+    
+    /**
+    * This function creates a WebViewOptions instance that allows you to configure your webview.
+    
+    **Resolution:** `vec2` type representing the desired webpage resolution.
+    
+    * _Note: This is capped at 2048x2048._
+    * _Note: Once a webview has been created this can not be changed._
+    
+    
+    * @experimental
+    
+    * @wearableOnly
+    */
+    static createWebViewOptions(resolution: vec2): WebViewOptions
     
 }
 
@@ -7831,6 +9950,9 @@ declare class LevelsetShape extends Shape {
     
 }
 
+/**
+* A Licensed Sounds audio track from Asset LIbrary.
+*/
 declare class LicensedAudioTrackAsset extends AudioTrackAsset {
     
     protected constructor()
@@ -8972,6 +11094,23 @@ declare class MachineLearning {
 
 declare namespace MachineLearning {
     /**
+    * Used with {@link BasePlaceHolder}.
+    */
+    enum DataLayout {
+        /**
+        * Layout where order is: batch, channels, height, width.
+        */
+        NCHW,
+        /**
+        * Layout where order is: batch, height, width, channels.
+        */
+        NHWC
+    }
+
+}
+
+declare namespace MachineLearning {
+    /**
     * Timing options for when MLComponent should start or stop running. Used with `MLComponent.runScheduled()`.
     * For more information, see the [MLComponent Scripting](https://developers.snap.com/lens-studio/features/snap-ml/ml-component/scripting-ml-component) guide.
     */
@@ -9028,13 +11167,13 @@ declare namespace MachineLearning {
     */
     enum ModelState {
         /**
-        * Model is running
-        */
-        Running,
-        /**
         * Model is loading
         */
         Loading,
+        /**
+        * Model is running
+        */
+        Running,
         /**
         * Model is built and ready to run
         */
@@ -9053,13 +11192,13 @@ declare namespace MachineLearning {
     */
     enum OutputMode {
         /**
-        * The output will be in the form of a Texture.
-        */
-        Texture,
-        /**
         * The output will be in the form of a Float32Array.
         */
-        Data
+        Data,
+        /**
+        * The output will be in the form of a Texture.
+        */
+        Texture
     }
 
 }
@@ -9354,21 +11493,21 @@ declare class MappingSession extends ScriptObject {
 declare namespace MappingSession {
     enum MappingThrottling {
         /**
+        * No CPU usage; temporarily pause.
+        */
+        Off,
+        /**
+        * Minimum CPU usage while still mapping.
+        */
+        Background,
+        /**
         * A default mapping method. Equivalent to 'Foreground' when mapping new and 'Background' when incremental mapping.
         */
         Auto,
         /**
         * Maximum CPU usage to mapping.
         */
-        Foreground,
-        /**
-        * Minimum CPU usage while still mapping.
-        */
-        Background,
-        /**
-        * No CPU usage; temporarily pause.
-        */
-        Off
+        Foreground
     }
 
 }
@@ -9942,9 +12081,30 @@ declare class MaterialMeshVisual extends BaseMeshVisual {
     mainPass: Pass
     
     /**
+    * Overrides the mainPass on the material, without affecting other visuals referencing the same material.
+    */
+    mainPassOverrides: (any|PassPropertyOverrides)
+    
+    /**
     * Get the array of materials used by the MaterialMeshVisual.
     */
     materials: Material[]
+    
+    /**
+    * Overrides the property on the material, without affecting other visuals referencing the same material.
+    
+    * @readonly
+    */
+    propertyOverrides: PropertyOverrides
+    
+}
+
+/**
+* Overrides a material's property. Used with {@link MaterialMeshVisual}.
+*/
+declare class MaterialPropertyOverrides extends ScriptObject {
+    
+    protected constructor()
     
 }
 
@@ -10068,7 +12228,7 @@ declare class MediaPickerTextureProvider extends TextureProvider {
     /**
     * Returns underlying TextureProvider for the last selected media file. If the last media file was not image with at least one face, null is returned.
     */
-    faceImageControl: FaceTextureProvider
+    faceImageControl: any
     
     /**
     * Returns underlying TextureProvider for the last selected media file. If the last media file was not image, null is returned.
@@ -10352,29 +12512,29 @@ declare class MeshShape extends Shape {
 */
 declare enum MeshTopology {
     /**
+    * Draws unconnected triangles. Each group of three vertices specifies a new triangle.
+    */
+    Triangles,
+    /**
+    * Draws connected triangles in a strip. After the first two vertices, each vertex defines the third point on a new triangle extending from the previous one.
+    */
+    TriangleStrip,
+    /**
+    * Draws connected triangles sharing one central vertex. The first vertex is the shared one, or "hub" vertex. Starting with the third vertex, each vertex forms a triangle connecting with the previous vertex and hub vertex.
+    */
+    TriangleFan,
+    /**
+    * Draws individual points. Each vertex specifies a new point to draw.
+    */
+    Points,
+    /**
     * Draws unconnected line segments. Each group of two vertices specifies a new line segment.
     */
     Lines,
     /**
     * Draws connected line segments. Starting with the second vertex, a line is drawn between each vertex and the preceding one.
     */
-    LineStrip,
-    /**
-    * Draws individual points. Each vertex specifies a new point to draw.
-    */
-    Points,
-    /**
-    * Draws unconnected triangles. Each group of three vertices specifies a new triangle.
-    */
-    Triangles,
-    /**
-    * Draws connected triangles sharing one central vertex. The first vertex is the shared one, or "hub" vertex. Starting with the third vertex, each vertex forms a triangle connecting with the previous vertex and hub vertex.
-    */
-    TriangleFan,
-    /**
-    * Draws connected triangles in a strip. After the first two vertices, each vertex defines the third point on a new triangle extending from the previous one.
-    */
-    TriangleStrip
+    LineStrip
 }
 
 /**
@@ -10482,6 +12642,13 @@ declare class MicrophoneAudioProvider extends AudioTrackProvider {
     getAudioFrame(audioFrame: Float32Array): vec3
     
     /**
+    * Retrieves the current audio frame, converts it to PCM16 (Pulse-Code Modulation) format, and writes the raw audio samples into the provided `audioFrame` as an `Int16Array`. The length of the array cant be more than `maxFrameSize`. 
+    
+    * @exposesUserData
+    */
+    getAudioFramePCM16(audioFrame: any): vec3
+    
+    /**
     * Start processing audio from microphone. Useful to avoid redundant processing.
     */
     start(): void
@@ -10504,7 +12671,7 @@ declare class MLAsset extends BinAsset {
     * Returns model metadata as JSON object. 
     
     */
-    getMetadata(): object
+    getMetadata(): any
     
 }
 
@@ -10646,41 +12813,57 @@ declare class MotionController extends ScriptObject {
     /**
     * Get the current motion type being provided by the motion controller.
     
+    
+    * @wearableOnly
     */
     getMotionState(): MotionController.MotionType
     
     /**
     * Returns the size of the touchpad in centimeters. Returns `null` if motion controller is not connected.
+    
+    * @wearableOnly
     */
     getTouchpadPhysicalSize(): vec2 | undefined
     
     /**
     * Returns the size of the touchpad in points. Returns `null` if motion controller is not connected.
+    
+    * @wearableOnly
     */
     getTouchpadPointSize(): vec2 | undefined
     
     /**
     * Returns the tracking quality state of the motion controller, indicating whether the data received from it is accurate or not.
+    
+    * @wearableOnly
     */
     getTrackingQuality(): MotionController.TrackingQuality
     
     /**
     * Returns the last known position of the motion controller in world coordinate space. If no motion data has been received, or the motion type is set to `3DOF` or `NoMotion`, this value will be `null`.
+    
+    * @wearableOnly
     */
     getWorldPosition(): vec3
     
     /**
     * Returns the last known rotation of the motion controller in world coordinate space. If no motion data has been received or the motion type is set to `NoMotion`, this value will be `null`.
+    
+    * @wearableOnly
     */
     getWorldRotation(): quat
     
     /**
     * Invokes haptic feedback on the controller using a preset of options, if supported.
+    
+    * @wearableOnly
     */
     invokeHaptic(hapticRequest: MotionController.HapticRequest): void
     
     /**
     * Indicates whether the selected controller is currently available to use. This means that the device is connected, properly set up, and transmitting data.
+    
+    * @wearableOnly
     */
     isControllerAvailable(): boolean
     
@@ -10688,6 +12871,8 @@ declare class MotionController extends ScriptObject {
     * An event triggered when the selected controller's state changes between being available for use (connected, properly set up, and transmitting data) and otherwise.
     
     * @readonly
+    
+    * @wearableOnly
     */
     onControllerStateChange: event1<boolean, void>
     
@@ -10696,6 +12881,8 @@ declare class MotionController extends ScriptObject {
     
     
     * @readonly
+    
+    * @wearableOnly
     */
     onMotionTypeChange: event1<MotionController.MotionType, void>
     
@@ -10708,6 +12895,8 @@ declare class MotionController extends ScriptObject {
     * - **phase:** The current state of the touch.
     
     * @readonly
+    
+    * @wearableOnly
     */
     onTouchEvent: event4<vec2, number, number, MotionController.TouchPhase, void>
     
@@ -10715,6 +12904,8 @@ declare class MotionController extends ScriptObject {
     * Triggered when the touchpad size is changed. Custom controllers can adjust the interactable area of the touchpad.
     
     * @readonly
+    
+    * @wearableOnly
     */
     onTouchpadSizeChange: event2<vec2, vec2, void>
     
@@ -10722,6 +12913,8 @@ declare class MotionController extends ScriptObject {
     * Event triggered when the tracking quality state of the motion controller changes.
     
     * @readonly
+    
+    * @wearableOnly
     */
     onTrackingQualityChange: event1<MotionController.TrackingQuality, void>
     
@@ -10729,6 +12922,8 @@ declare class MotionController extends ScriptObject {
     * An event is triggered when new motion data becomes available. The arguments are the world position and the world rotation of the motion controller, respectively.
     
     * @readonly
+    
+    * @wearableOnly
     */
     onTransformEvent: event2<vec3, quat, void>
     
@@ -10737,6 +12932,8 @@ declare class MotionController extends ScriptObject {
     
     
     * @readonly
+    
+    * @wearableOnly
     */
     options: MotionController.MotionControllerOptions
     
@@ -10752,34 +12949,50 @@ declare namespace MotionController {
     enum HapticFeedback {
         /**
         * Default value, same as `Tick`.
+        
+        * @wearableOnly
         */
         Default,
         /**
         * A brief, single haptic effect that simulates a ticking or clicking sensation
+        
+        * @wearableOnly
         */
         Tick,
         /**
         * A subtle haptic effect used to confirm a selection or interaction.
+        
+        * @wearableOnly
         */
         Select,
         /**
         * A positive haptic pattern indicating that an action was completed successfully.
+        
+        * @wearableOnly
         */
         Success,
         /**
         * A negative haptic pattern indicating that an action failed or encountered an issue.
+        
+        * @wearableOnly
         */
         Error,
         /**
         * A gentle vibration for less intense feedback.
+        
+        * @wearableOnly
         */
         VibrationLow,
         /**
         * A moderate vibration for standard feedback intensity.
+        
+        * @wearableOnly
         */
         VibrationMedium,
         /**
         * A strong vibration for more pronounced feedback.
+        
+        * @wearableOnly
         */
         VibrationHigh
     }
@@ -10798,11 +13011,15 @@ declare namespace MotionController {
         
         /**
         * How long the haptic request should last for.
+        
+        * @wearableOnly
         */
         duration: number
         
         /**
         * A type of haptic feedback.
+        
+        * @wearableOnly
         */
         hapticFeedback: MotionController.HapticFeedback
         
@@ -10830,13 +13047,24 @@ declare namespace MotionController {
         
         /**
         * The unique identifier to connect to a motion controller. The only value currently supported is empty (`""`), which will result in the Mobile Controller being requested.
+        
+        * @wearableOnly
         */
         controllerId: string
         
         /**
         * Represents the motion type of the motion controller.
+        
+        * @wearableOnly
         */
         motionType: MotionController.MotionType
+        
+        /**
+        * Creates the configurations to be used with the {@link MotionController}
+        
+        * @wearableOnly
+        */
+        static create(): MotionController.MotionControllerOptions
         
     }
 
@@ -10852,16 +13080,22 @@ declare namespace MotionController {
         /**
         * Transform of this object does not change.
         
+        
+        * @wearableOnly
         */
         NoMotion,
         /**
         * Only the rotation of the object is changed.
         
+        
+        * @wearableOnly
         */
         ThreeDoF,
         /**
         * Both position and rotation of the object are changed.
         
+        
+        * @wearableOnly
         */
         SixDoF
     }
@@ -10876,13 +13110,6 @@ declare namespace MotionController {
         
         protected constructor()
         
-        /**
-        * Create a new options object.
-        
-        * @wearableOnly
-        */
-        static create(): MotionController.MotionControllerOptions
-        
     }
 
 }
@@ -10896,18 +13123,26 @@ declare namespace MotionController {
     enum TouchPhase {
         /**
         * Indicates that a touch event has started. This is triggered when the user initially touches the interactive area.
+        
+        * @wearableOnly
         */
         Began,
         /**
         * Indicates that the touch event has moved. This is triggered when the user drags or slides their finger across the interactive area.
+        
+        * @wearableOnly
         */
         Moved,
         /**
         * Indicates that the touch event has ended. This occurs when the user lifts their finger off the interactive area, completing the touch interaction.
+        
+        * @wearableOnly
         */
         Ended,
         /**
         * Indicates that the touch event was interrupted or canceled, typically due to an error or the touch being outside the interactive area.
+        
+        * @wearableOnly
         */
         Canceled
     }
@@ -10924,15 +13159,21 @@ declare namespace MotionController {
     enum TrackingQuality {
         /**
         * The tracking quality is unknown. This usually means that the controller is not available.
+        
+        * @wearableOnly
         */
         Unknown,
         /**
         * Transform tracking of the Motion Controller is providing optimal results.
+        
+        * @wearableOnly
         */
         Normal,
         /**
         * Transform tracking of the Motion Controller is providing limited quality results.
         
+        
+        * @wearableOnly
         */
         Limited
     }
@@ -10953,6 +13194,8 @@ declare class MotionControllerModule extends Asset {
     /**
     * Get the Motion Controller with the provided options. If no options are provided, default value will be used. 
     
+    
+    * @wearableOnly
     */
     getController(options: MotionController.MotionControllerOptions): MotionController
     
@@ -11052,6 +13295,29 @@ declare class MultiplayerSession extends ScriptObject {
     * @readonly
     */
     allRealtimeStores: GeneralDataStore[]
+    
+}
+
+/**
+* A type containing two arrays which map positionally to each other.   For example, this is used by {@link FaceRenderObjectProvider}, to provide a `names` array which contains the list of expresion names on the face, while the `values` array which contains the weight of each expression.
+*/
+declare class NamedValues extends ScriptObject {
+    
+    protected constructor()
+    
+    /**
+    * The array of names which positionally correspond to the `value` array property.
+    
+    * @readonly
+    */
+    names: string[]
+    
+    /**
+    * The array of values which positionally correspond to the `names` array property.
+    
+    * @readonly
+    */
+    values: Float32Array
     
 }
 
@@ -11415,10 +13681,6 @@ declare class OnStartEvent extends SceneEvent {
 */
 declare enum OS {
     /**
-    * Android device
-    */
-    Android,
-    /**
     * iOS device
     */
     iOS,
@@ -11426,6 +13688,10 @@ declare enum OS {
     * MacOS device
     */
     MacOS,
+    /**
+    * Android device
+    */
+    Android,
     /**
     * Windows device
     */
@@ -11478,6 +13744,11 @@ declare class OutputBuilder extends ScriptObject {
     * Sets the OutputMode of the OutputPlaceholder to be built.
     */
     setOutputMode(outputMode: MachineLearning.OutputMode): OutputBuilder
+    
+    /**
+    * Sets the shape of the OutputPlaceholder to be built.
+    */
+    setShape(shape: vec3): OutputBuilder
     
     /**
     * Sets the Transformer of the OutputPlaceholder to be built.
@@ -11648,6 +13919,8 @@ declare class PalmTapDownArgs extends ScriptObject {
     * The module's confidence in detecting the gesture.
     
     * @readonly
+    
+    * @wearableOnly
     */
     confidence: number
     
@@ -11666,6 +13939,8 @@ declare class PalmTapUpArgs extends ScriptObject {
     * The module's confidence in detecting the gesture.
     
     * @readonly
+    
+    * @wearableOnly
     */
     confidence: number
     
@@ -11794,6 +14069,15 @@ declare class Pass extends ScriptObject {
 }
 
 /**
+* Overrides a material's pass property. Used with {@link MaterialMeshVisual}.
+*/
+declare class PassPropertyOverrides extends ScriptObject {
+    
+    protected constructor()
+    
+}
+
+/**
 * Similar to {@link Pass}, except used by {@link VFXAsset}.
 */
 declare class PassWrapper extends ScriptObject {
@@ -11897,6 +14181,25 @@ declare class PersistentStorageSystem extends ScriptObject {
 }
 
 /**
+* The person that a tracker should use. Allows you to to apply the same person index to a group of Components. Useful for correlating tracking between Body Tracking and Face Tracking.
+*/
+declare class PersonTrackingScope extends TrackingScope {
+    
+    protected constructor()
+    
+    /**
+    * The scope that the current PersonTrackingScope be based on.
+    */
+    parentScope: TextureTrackingScope
+    
+    /**
+    * The person to track. The first person is 0, the second is 1, and so on. 
+    */
+    personIndex: number
+    
+}
+
+/**
 * Namespace containing physics classes and static physics methods.
 */
 declare class Physics {
@@ -11947,13 +14250,13 @@ declare namespace Physics {
         */
         Fixed,
         /**
-        * Constrains colliders to rotate around a point. See {@link PointConstraint}.
-        */
-        Point,
-        /**
         * Constrains colliders to rotate around a single axis. See {@link HingeConstraint}.
         */
-        Hinge
+        Hinge,
+        /**
+        * Constrains colliders to rotate around a point. See {@link PointConstraint}.
+        */
+        Point
     }
 
 }
@@ -11962,14 +14265,49 @@ declare namespace Physics {
     /**
     * Script interface for applying collision filtering to colliders and ray/shape-casts.
     */
-    class Filter {
+    class Filter extends ScriptObject {
         
         protected constructor()
         
         /**
+        * Include dynamic objects in intersection tests.
+        */
+        includeDynamic: boolean
+        
+        /**
+        * Include intangible objects in intersection tests.
+        */
+        includeIntangible: boolean
+        
+        /**
+        * Include static objects in intersection tests.
+        */
+        includeStatic: boolean
+        
+        /**
+        * If non-empty, only perform collision with these colliders. In other words: the set of colliders to include when performing collision tests, excluding all others. If empty, this setting is disabled (effectively including all colliders, minus skipColliders).
+        */
+        onlyColliders: ColliderComponent[]
+        
+        /**
+        * If non-empty, only perform collision with colliders in these layers. In other words: the set of layers to include when performing collision tests, excluding all others. If empty, this setting is disabled (effectively including all layers, minus skipLayers).
+        */
+        onlyLayers: LayerSet
+        
+        /**
+        * Skip collision with these colliders. In other words: the set of colliders to exclude when performing collision tests. This takes precedence over onlyColliders, so a collider that is in both is skipped.
+        */
+        skipColliders: ColliderComponent[]
+        
+        /**
+        * Skip collision with colliders in these layers. In other words: the set of layers to exclude when performing collision tests. This takes precedence over onlyLayers, so a layer that is in both is skipped.
+        */
+        skipLayers: LayerSet
+        
+        /**
         * Create an instance with default settings.
         */
-        static create(): Filter
+        static create(): Physics.Filter
         
     }
 
@@ -11985,15 +14323,15 @@ declare namespace Physics {
         */
         Force,
         /**
-        * Instantaneous force impulse (kg*cm/s).
-        
-        */
-        Impulse,
-        /**
         * Continuous acceleration (cm/s^2), applied without respect to mass, used for cases where force is applied over multiple frames.
         
         */
         Acceleration,
+        /**
+        * Instantaneous force impulse (kg*cm/s).
+        
+        */
+        Impulse,
         /**
         * Instantaneous change in velocity (cm/s), applied without respect to mass.
         */
@@ -12037,7 +14375,7 @@ declare namespace Physics {
         /**
         * Default Filter used for colliders in the world.
         */
-        defaultFilter: Filter
+        defaultFilter: Physics.Filter
         
         /**
         * Default Matter used for colliders in the world. This is used for a collider when its matter field is unset.
@@ -12091,6 +14429,8 @@ declare class PinchDownArgs extends ScriptObject {
     * The orientation of the detected gesture.
     
     * @readonly
+    
+    * @wearableOnly
     */
     palmOrientation: vec3
     
@@ -12109,6 +14449,8 @@ declare class PinchStrengthArgs extends ScriptObject {
     * The pinch strength of the detected gesture.
     
     * @readonly
+    
+    * @wearableOnly
     */
     strength: number
     
@@ -12127,6 +14469,8 @@ declare class PinchUpArgs extends ScriptObject {
     * The orientation of the detected gesture.
     
     * @readonly
+    
+    * @wearableOnly
     */
     palmOrientation: vec3
     
@@ -12359,7 +14703,7 @@ declare class Probe extends ScriptObject {
     /**
     * Filter settings applied to intersection tests.
     */
-    filter: Filter
+    filter: Physics.Filter
     
 }
 
@@ -12423,6 +14767,15 @@ declare class Properties extends ScriptObject {
 }
 
 declare class PropertyOnEventArgs extends ScriptObject {
+    
+    protected constructor()
+    
+}
+
+/**
+* Overrides a property. Used with {@link MaterialMeshVisual}.
+*/
+declare class PropertyOverrides extends ScriptObject {
     
     protected constructor()
     
@@ -12837,7 +15190,7 @@ declare class RemoteApiRequest extends ScriptObject {
     
     endpoint: string
     
-    parameters: object
+    parameters: Record<string, string>
     
     static create(): RemoteApiRequest
     
@@ -12860,7 +15213,7 @@ declare class RemoteApiResponse extends ScriptObject {
     /**
     * @readonly
     */
-    metadata: object
+    metadata: {[key:string]:string}
     
     /**
     * The integer status code of the response.
@@ -12952,36 +15305,64 @@ declare class RemoteServiceHttpRequest extends ScriptObject {
     
     /**
     * Get the header of the http request.
+    
+    * @wearableOnly
+    
+    * @CameraKit
     */
     getHeader(name: string): string
     
     /**
     * Set the header of the http request.
+    
+    * @wearableOnly
+    
+    * @CameraKit
     */
     setHeader(name: string, value: string): void
     
     /**
     * The body of the http request.
+    
+    * @wearableOnly
+    
+    * @CameraKit
     */
     body: (Uint8Array|number[]|string)
     
     /**
     * The content type of the http request.
+    
+    * @wearableOnly
+    
+    * @CameraKit
     */
     contentType: string
     
     /**
     * The headers of the http request.
+    
+    * @wearableOnly
+    
+    * @CameraKit
     */
-    headers: object
+    headers: {[key:string]:string}
     
     /**
     * The method which should be used to send this http request.
+    
+    * @wearableOnly
+    
+    * @CameraKit
     */
     method: RemoteServiceHttpRequest.HttpRequestMethod
     
     /**
     * The URL which this http request should point to.
+    
+    * @wearableOnly
+    
+    * @CameraKit
     */
     url: string
     
@@ -13007,18 +15388,34 @@ declare namespace RemoteServiceHttpRequest {
     enum HttpRequestMethod {
         /**
         * Get method.
+        
+        * @wearableOnly
+        
+        * @CameraKit
         */
         Get,
         /**
         * Post method.
+        
+        * @wearableOnly
+        
+        * @CameraKit
         */
         Post,
         /**
         * Put method.
+        
+        * @wearableOnly
+        
+        * @CameraKit
         */
         Put,
         /**
         * Delete method.
+        
+        * @wearableOnly
+        
+        * @CameraKit
         */
         Delete
     }
@@ -13038,11 +15435,19 @@ declare class RemoteServiceHttpResponse extends ScriptObject {
     
     /**
     * Get the result as a `DynamicResource` to be used with `RemoteMediaModule`.
+    
+    * @wearableOnly
+    
+    * @CameraKit
     */
     asResource(): DynamicResource
     
     /**
     * Get the header of the response.
+    
+    * @wearableOnly
+    
+    * @CameraKit
     */
     getHeader(name: string): string
     
@@ -13050,6 +15455,10 @@ declare class RemoteServiceHttpResponse extends ScriptObject {
     * The body of the response.
     
     * @readonly
+    
+    * @wearableOnly
+    
+    * @CameraKit
     */
     body: string
     
@@ -13057,6 +15466,10 @@ declare class RemoteServiceHttpResponse extends ScriptObject {
     * the content type of the response.
     
     * @readonly
+    
+    * @wearableOnly
+    
+    * @CameraKit
     */
     contentType: string
     
@@ -13064,20 +15477,28 @@ declare class RemoteServiceHttpResponse extends ScriptObject {
     * The headers of the response.
     
     * @readonly
+    
+    * @wearableOnly
+    
+    * @CameraKit
     */
-    headers: object
+    headers: {[key:string]:string}
     
     /**
     * The http response status code.
     
     * @readonly
+    
+    * @wearableOnly
+    
+    * @CameraKit
     */
     statusCode: number
     
 }
 
 /**
-* Provides access to the remote services. For Spectacles, this module process access to the open internet.
+* Provides access to Snap authorized remote services.
 
 */
 declare class RemoteServiceModule extends Asset {
@@ -13085,143 +15506,39 @@ declare class RemoteServiceModule extends Asset {
     protected constructor()
     
     /**
-    * The createWebSocket() method initiates a WebSocket connection with the given `wss` URL and returns a {@link WebSocket} object that can be used to send and receive messages from the server. 
+    * The createWebAPISocket(endpoint, params) method initiates a WebSocket connection with the specified `endpoint` and the specified `params` to the Snap authorized remote services. Returns a {@link WebSocket} object that can be used to send and receive messages from the server.
     
-    * Syntax
+    * __Syntax__
+    
+    * ```js
+    * createAPIWebSocket(endpoint, params)
     * ```
-    * createWebSocket(url)
-    * ```
     
-    * `url` Defines the `wss` URL to which to establish the WebSocket connection.
+    * - `endpoint` Defines the Snap authorized remote service endpoint to which to establish the WebSocket connection.
+    * - `params` Defines the parameters that will be used to establish the connection.
+    *     
+    * __Example__
     
-    * Example
-    
-    * ```
+    * ```js
     * //@input Asset.RemoteServiceModule remoteServiceModule
-    * var remoteServiceModule = script.remoteServiceModule;
+    * var remoteServiceModule = script.remoteServiceModule
     
     * // Create WebSocket connection.
-    * let socket = script.remoteServiceModule.createWebSocket("wss://<some-url>");
-    * socket.binaryType = "blob";
+    * let socket = script.remoteServiceModule.createAPIWebSocket("real_time", {"api-token" : "token", "api-example" : "realtime=v1", "model": "model"});
     
     * // Listen for the open event
-    * socket.onopen = (event) => {
-    *     // Socket has opened, send a message back to the server
-    *     socket.send("Message 1");
-    
-    *     // Try sending a binary message
-    *     // (the bytes below spell 'Message 2')
-    *     const message = [77, 101, 115, 115, 97, 103, 101, 32, 50];
-    *     const bytes = new Uint8Array(message);
-    *     socket.send(bytes);
-    * };
+    * socket.onopen = (event) => { print("Socket opened"); };
     
     * // Listen for messages
-    * socket.onmessage = async (event) => {
-    *     if (event.data instanceof Blob) {
-    *         // Binary frame, can be retrieved as either Uint8Array or string
-    *         let bytes = await event.data.bytes();
-    *         let text = await event.data.text();
+    * socket.onmessage = async (event) => { print("Socket message"); };
     
-    *         print("Received binary message, printing as text: " + text);
-    *     } else {
-    *         // Text frame
-    *         let text = event.data;
-    *         print("Received text message: " + text);
-    *     }
-    * });
-    
-    * socket.onclose = (event) => {
-    *     if (event.wasClean) {
-    *         print("Socket closed cleanly");
-    *     } else {
-    *         print("Socket closed with error, code: " + event.code);
-    *     }
-    * };
-    
-    * socket.onerror = (event) => {
-    *     print("Socket error");
-    * };
+    * // Listen for the close event
+    * socket.onclose = (event) => { print("Socket closed"); };
     * ```
     
     * @wearableOnly
     */
-    createWebSocket(url: string): WebSocket
-    
-    /**
-    * This function will create a new instance of a webview with the specified options. Once it has been created onSuccess will be invoked which returns the {@link Texture} instance of the WebView for rendering which contains a reference to {@link WebPageTextureProvider} through the `Control` property. WebPageTextureProvider can be used for sending events and actions to the WebView. In the event of an error, the `onError` callback is invoked with the error message. 
-    
-    * - **options:** the options for a specific webview. 
-    * - **onSuccess:** invoked on webview creation. Provides the Asset.Texture for rendering and control. 
-    * - **onError:** invoked on creation failed. Provides the Error message. 
-    
-    * _Note: Only 1 callback will be invoked, and only once._
-    * _Note: After creation, the webview will later invoke onReady on the WebPageTextureProvider.control object to indicate it is ready for handling events and actions._
-    
-    * @experimental
-    
-    * @wearableOnly
-    */
-    createWebView(options: WebViewOptions, onSuccess: (texture: Texture) => void, onFailure: (errorMessage: string) => void): void
-    
-    /**
-    * The fetch() method starts the process of fetching a resource from the internet, returning a promise that is fulfilled once the response is available.
-    
-    * The promise resolves to a {@link Response} object representing the response to your request.
-    
-    * A fetch() promise only rejects in cases of malformed URLs or network errors. A fetch() promise does not reject if the server responds with HTTP status codes that indicate errors. These errors can be checked manually via the Response status properties.
-    
-    * Syntax
-    * ```
-    * fetch(resource)
-    * fetch(resource, options)
-    * ```
-    
-    * `resource` Defines the URL you wish to fetch, or a {@link Request} object.
-    
-    * `options` Object containing any custom settings you want to apply to the request. Available options are `body`, `method`, `headers`, `redirect`, and `keepalive`. For more information on these properties see the {@link Request} class. If a {@link Request} was given for `resource`, then these options will entry-wise override the options specified in the {@link Request} object.
-    
-    * Example
-    
-    * ```
-    * //@input Asset.RemoteServiceModule remoteServiceModule
-    * var remoteServiceModule = script.remoteServiceModule;
-    
-    * // For this example assume this URL simply responds with the same body
-    * // that it receives.
-    * let request = new Request("https://<Your URL>.com", {
-    *     method: "POST",
-    *     body: JSON.stringify({ user: { name: "user", career: "developer" }}),
-    *     headers: {
-    *         "Content-Type": "application/json",
-    *     },
-    * });
-    *            
-    * let response = await remoteServiceModule.fetch(request, {
-    *     body: JSON.stringify({ user: { name: "user", career: "salesman" }})
-    * });
-    * if (response.status != 200) {
-    *     print("Failure: response not successful");
-    *     return;
-    * }
-    *   
-    * let contentTypeHeader = response.headers.get("content-type");
-    * if (!contentTypeHeader.includes("application/json")) {
-    *    print("Failure: wrong content type in response");
-    *    return;
-    * }
-    *         
-    * let responseJson = await response.json();
-    * let username = responseJson.json["user"]["name"];
-    * let career = responseJson.json["user"]["career"];
-    
-    * print(career); // will print "salesman"
-    
-    * ```
-    
-    * @wearableOnly
-    */
-    fetch(request: (Request|string), options?: any): Promise<Response>
+    createAPIWebSocket(endpoint: string, params: any): WebSocket
     
     /**
     * Get a `DynamicResource` to be used with `RemoteMediaModule` from `mediaUrl`.
@@ -13234,31 +15551,7 @@ declare class RemoteServiceModule extends Asset {
     
     performApiRequest(request: RemoteApiRequest, onApiResponse: (response: RemoteApiResponse) => void): void
     
-    /**
-    * Perform an http request described by `RemoteServiceHttpRequest`.
-    
-    * @wearableOnly
-    
-    * @CameraKit
-    */
-    performHttpRequest(requestOptions: RemoteServiceHttpRequest, onHttpResponse: (response: RemoteServiceHttpResponse) => void): void
-    
     subscribeApiRequest(request: RemoteApiRequest, onApiResponse: (response: RemoteApiResponse) => void): string
-    
-    /**
-    * This function creates a WebViewOptions instance that allows you to configure your webview. 
-    
-    **Resolution:** `vec2` type representing the desired webpage resolution. 
-    
-    * _Note: This is capped at 2048x2048._
-    * _Note: Once a webview has been created this can not be changed._
-    
-    
-    * @experimental
-    
-    * @wearableOnly
-    */
-    static createWebViewOptions(resolution: vec2): WebViewOptions
     
 }
 
@@ -13419,15 +15712,19 @@ declare class RenderTargetProvider extends TextureProvider {
     protected constructor()
     
     /**
+    * The anti-aliasing technique applied on the render target.
+    */
+    antialiasingMode: RenderTargetProvider.AntialiasingMode
+    
+    /**
+    * The quality of the anti-aliasing technique applied on the render target.
+    */
+    antialiasingQuality: RenderTargetProvider.AntialiasingQuality
+    
+    /**
     * When `clearColorEnabled` is true and `inputTexture` is null, this color is used to clear this RenderTarget the first time it is drawn to each frame.
     */
     clearColor: vec4
-    
-    /**
-    * If true, the color on this RenderTarget will be cleared the first time it is drawn to each frame.
-    * `inputTexture` will be used to clear it unless it is null, in which case `clearColor` is used instead.
-    */
-    clearColorEnabled: boolean
     
     /**
     * Sets the clear color option.
@@ -13444,6 +15741,11 @@ declare class RenderTargetProvider extends TextureProvider {
     * If this texture is null, `clearColor` will be used instead.
     */
     inputTexture: Texture
+    
+    /**
+    * How MSAA should be applied on the render target.
+    */
+    msaaStrategy: RenderTargetProvider.MSAAStrategy
     
     /**
     * When `useScreenResolution` is false, controls the horizontal and vertical resolution of the Render Target.
@@ -13465,6 +15767,69 @@ declare class RenderTargetProvider extends TextureProvider {
     */
     useScreenResolution: boolean
     
+}
+
+declare namespace RenderTargetProvider {
+    /**
+    * The anti-aliasing technique to use on a render target.
+    */
+    enum AntialiasingMode {
+        /**
+        * No anti-aliasing technique is applied.
+        */
+        Disabled,
+        /**
+        * MSAA anti-aliasing technique is applied.
+        */
+        MSAA
+    }
+
+}
+
+declare namespace RenderTargetProvider {
+    /**
+    * The fidelity of the anti-aliasing technique to apply.
+    */
+    enum AntialiasingQuality {
+        /**
+        * Apply the anti-aliasing technique with low quality.
+        */
+        Low,
+        /**
+        * Apply the anti-aliasing technique with medium quality.
+        */
+        Medium,
+        /**
+        * Apply the anti-aliasing technique with high quality.
+        */
+        High,
+        /**
+        * Apply the anti-aliasing technique with default quality (which corresponds to Ultra).
+        */
+        Default,
+        /**
+        * Apply the anti-aliasing technique with ultra quality.
+        */
+        Ultra
+    }
+
+}
+
+declare namespace RenderTargetProvider {
+    /**
+    * How MSAA should be applied to the render target.
+    */
+    enum MSAAStrategy {
+        /**
+        * Apply MSAA with the default strategy (always on, without optimization).
+        */
+        Default,
+        /**
+        * Apply MSAA only when it's needed.
+        */
+        OnlyWhenRequired
+    }
+
 }
 
 declare namespace RenderTargetProvider {
@@ -13502,28 +15867,38 @@ declare class Request extends ScriptObject {
     *     },
     * });
     * ```
+    
+    * @wearableOnly
     */
     constructor(input: string, options?: any)
     
     /**
     * Retreive the body as `Uint8Array`.
+    
+    * @wearableOnly
     */
-    bytes(): any
+    bytes(): Promise<Uint8Array>
     
     /**
     * Retrieve the body as a json object.
+    
+    * @wearableOnly
     */
-    json(): any
+    json(): Promise<any>
     
     /**
     * Retrieve the body as a string.
+    
+    * @wearableOnly
     */
-    text(): any
+    text(): Promise<string>
     
     /**
     * True if one of the body retrieval methods has been called for this Request.
     
     * @readonly
+    
+    * @wearableOnly
     */
     bodyUsed: boolean
     
@@ -13531,6 +15906,8 @@ declare class Request extends ScriptObject {
     * The {@link Headers} of the Request.
     
     * @readonly
+    
+    * @wearableOnly
     */
     headers: Headers
     
@@ -13538,6 +15915,8 @@ declare class Request extends ScriptObject {
     * The HTTP request method. Must be one of these strings: `GET`, `POST`, `PUT`, or `DELETE`. Default is `GET`.
     
     * @readonly
+    
+    * @wearableOnly
     */
     method: string
     
@@ -13545,6 +15924,8 @@ declare class Request extends ScriptObject {
     * Indicates how redirects are handled. Can be one the following strings: `follow`, `error`, or `manual`. Default value is `follow`.
     
     * @readonly
+    
+    * @wearableOnly
     */
     redirect: string
     
@@ -13552,6 +15933,8 @@ declare class Request extends ScriptObject {
     * The URL of the request.
     
     * @readonly
+    
+    * @wearableOnly
     */
     url: string
     
@@ -13568,23 +15951,31 @@ declare class Response extends ScriptObject {
     
     /**
     * Retrieve the body as `Uint8Array`.
+    
+    * @wearableOnly
     */
-    bytes(): any
+    bytes(): Promise<Uint8Array>
     
     /**
     * Retrieve the body as a json object.
+    
+    * @wearableOnly
     */
-    json(): any
+    json(): Promise<any>
     
     /**
     * Retrieve the body as a string.
+    
+    * @wearableOnly
     */
-    text(): any
+    text(): Promise<string>
     
     /**
     * True if one of the body retrieval methods has been called for this Response.
     
     * @readonly
+    
+    * @wearableOnly
     */
     bodyUsed: boolean
     
@@ -13592,6 +15983,8 @@ declare class Response extends ScriptObject {
     * The {@link Headers} of the Response.
     
     * @readonly
+    
+    * @wearableOnly
     */
     headers: Headers
     
@@ -13599,6 +15992,8 @@ declare class Response extends ScriptObject {
     * True if the response returned HTTP Status Code 200 (OK).
     
     * @readonly
+    
+    * @wearableOnly
     */
     ok: boolean
     
@@ -13606,6 +16001,8 @@ declare class Response extends ScriptObject {
     * The response's HTTP status code. HTTP status code values: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status.
     
     * @readonly
+    
+    * @wearableOnly
     */
     status: number
     
@@ -13613,6 +16010,8 @@ declare class Response extends ScriptObject {
     * The HTTP status code converted to string.
     
     * @readonly
+    
+    * @wearableOnly
     */
     statusText: string
     
@@ -13620,6 +16019,8 @@ declare class Response extends ScriptObject {
     * The URL of the Response. This is the final URL obtained after any redirects.
     
     * @readonly
+    
+    * @wearableOnly
     */
     url: string
     
@@ -13680,6 +16081,11 @@ declare class RetouchVisual extends MaterialMeshVisual {
     * The strength of the teeth whitening effect.
     */
     teethWhiteningIntensity: number
+    
+    /**
+    * The tracking context this effect is being applied to. 
+    */
+    trackingScope: (PersonTrackingScope|TextureTrackingScope|FaceTrackingScope)
     
 }
 
@@ -13860,11 +16266,15 @@ declare class ScanModule extends Asset {
     
     /**
     * Starts a single Scan call using the provided list of ScanModule.Contexts. On success it will invoke `scanComplete` providing a JSON string. On failure it will invoke `onFailure` with a failure message passed in as an argument.
+    
+    * @exposesUserData
     */
     scan(contexts: string[], scanComplete: (resultJson: string) => void, scanFailed: (failureMessage: string) => void): void
     
     /**
     * Optional property to pass in a texture for Scan to use.
+    
+    * @exposesUserData
     */
     scanTarget: Texture
     
@@ -14492,19 +16902,28 @@ declare class ShoppingModule extends Asset {
     
     protected constructor()
     
+    /**
+    * Returns the status of whether the module has loaded.
+    */
     loadingStarted(): any
     
     /**
+    * The domain within this shopping module.
+    
     * @readonly
     */
     domains: DomainInfo[]
     
     /**
+    * Triggered when an error has occured on the module.
+    
     * @readonly
     */
     onError: event2<number, string, void>
     
     /**
+    * Triggered when the client (e.g. Snapchat) has changed the product state.
+    
     * @readonly
     */
     onProductStateUpdate: event1<string, void>
@@ -14836,6 +17255,9 @@ declare class SpriteAligner extends Component {
     
 }
 
+/**
+* A state used in an {@link DomainInfo} used by a {@link ShoppingModule}.
+*/
 declare class StateInfo {
     
     protected constructor()
@@ -14846,6 +17268,8 @@ declare class StateInfo {
     description: string
     
     /**
+    * The name of the state.
+    
     * @readonly
     */
     name: string
@@ -15131,21 +17555,21 @@ declare enum TangentType {
     */
     Const,
     /**
-    * A tangent where the left and right side are not connected.
-    */
-    Broken,
-    /**
-    * A tangent which value is clamped, as in a spline.
-    */
-    Clamped,
-    /**
     * A tangent where the angle and weight of both the left and right side can be changed freely. This is the default value.
     */
     Free,
     /**
+    * A tangent where the left and right side are not connected.
+    */
+    Broken,
+    /**
     * A slope defined by a linear tangent. 
     */
-    Linear
+    Linear,
+    /**
+    * A tangent which value is clamped, as in a spline.
+    */
+    Clamped
 }
 
 /**
@@ -15184,21 +17608,29 @@ declare class TargetingDataArgs extends ScriptObject {
     * Whether the hand intends to target. 
     
     * @readonly
+    
+    * @wearableOnly
     */
     handIntendsToTarget: boolean
     
     /**
     * @readonly
+    
+    * @wearableOnly
     */
     isValid: boolean
     
     /**
     * @readonly
+    
+    * @wearableOnly
     */
     rayDirectionInWorld: vec3
     
     /**
     * @readonly
+    
+    * @wearableOnly
     */
     rayOriginInWorld: vec3
     
@@ -15836,6 +18268,11 @@ declare class Text3D extends MaterialMeshVisual {
     editable: boolean
     
     /**
+    * Optimizes Text3D by combining glyph meshes.
+    */
+    enableBatching: boolean
+    
+    /**
     * Starting from the Text3D's local position control whether the meshes are extruded forwards, backwards, or both directions
     */
     extrudeDirection: number
@@ -15924,6 +18361,57 @@ declare class Text3D extends MaterialMeshVisual {
     
     */
     worldSpaceRect: Rect
+    
+}
+
+/**
+* Contains methods for Text decoding
+*/
+declare class TextDecoder extends ScriptObject {
+    /**
+    * Create a new instance of TextDecoder with specified encoding (optional, defaults to utf-8 if not provided).
+    */
+    constructor(encoding?: string)
+    
+    /**
+    * Decodes a Uint8Array as a string. utf8 by default.
+    */
+    decode(data: Uint8Array): string
+    
+    /**
+    * The encoding format set in the TextDecoder.
+    
+    * @readonly
+    */
+    encoding: string
+    
+}
+
+/**
+* Contains methods for Text encoding
+*/
+declare class TextEncoder extends ScriptObject {
+    /**
+    * Create a new instance of TextEncoder with utf-8 encoding.
+    */
+    constructor()
+    
+    /**
+    * Encodes a string as Uint8Array. utf-8 by default.
+    */
+    encode(value: string): Uint8Array
+    
+    /**
+    * Encodes and saves the `value` into the `result` array.
+    */
+    encodeInto(value: string, result: Uint8Array): void
+    
+    /**
+    * The encoding format set in the TextEncoder.
+    
+    * @readonly
+    */
+    encoding: string
     
 }
 
@@ -16103,7 +18591,13 @@ declare namespace TextInputSystem {
         /**
         * A keyboard type for entering URLs
         */
-        Url
+        Url,
+        /**
+        * A keyboard type for entering passwords.
+        
+        * @wearableOnly
+        */
+        Password
     }
 
 }
@@ -16214,6 +18708,11 @@ declare namespace TextToSpeech {
     class Options extends ScriptObject {
         
         protected constructor()
+        
+        /**
+        * The name of the voice. If not set, the service will choose the default voice based on the chosen language.  Supported voice names: `Sasha`
+        */
+        voiceName: string
         
         /**
         * Creates options for the {@link TextToSpeechModule}.
@@ -16405,6 +18904,20 @@ declare class TextureProvider extends Provider {
     * Returns the width of the texture in pixels.
     */
     getWidth(): number
+    
+}
+
+/**
+* Provides a {@link Texture} to do face tracking on for entities like {@link Head}, {@link FaceStretch}, and {@link FaceMesh}. 
+*/
+declare class TextureTrackingScope extends TrackingScope {
+    
+    protected constructor()
+    
+    /**
+    * The texture on which tracking should be done.
+    */
+    texture: Texture
     
 }
 
@@ -16835,6 +19348,15 @@ declare class TrackedPointComponent extends Component {
 }
 
 /**
+* The scope, such as the texture it should track against, in which a tracker, such as {@link FaceMaskVisual}, {@link EyeColorVisual}, {@link BodyDepthTextureProvider}, should be applied.
+*/
+declare class TrackingScope extends Asset {
+    
+    protected constructor()
+    
+}
+
+/**
 * Controls the position, rotation, and scale of a {@link SceneObject}.  Every SceneObject automatically has a Transform attached.
 */
 declare class Transform extends ScriptObject {
@@ -17165,7 +19687,7 @@ declare class UpdateEvent extends SceneEvent {
 /**
 * Provides a render object of the upper body, without the head. Unlike `BodyMesh` which handles the whole body, this model is optimized to work better with `FaceMesh` and selfie use cases.
 */
-declare class UpperBodyRenderObjectProvider extends RenderObjectProvider {
+declare class UpperBodyRenderObjectProvider extends MeshRenderObjectProvider {
     
     protected constructor()
     
@@ -17231,11 +19753,23 @@ declare class UserContextSystem extends ScriptObject {
     getMyAIUser(callback: (data: SnapchatUser) => void): void
     
     /**
+    * Retrieve the Snapchatter's pinned best friends in order to access details like display name, birthdate, or Bitmoji.
+    
+    * @exposesUserData
+    */
+    getPinnedBestFriends(callback: (data: SnapchatUser[]) => void): void
+    
+    /**
     * Gets the list of friends in the current context, such as 1:1 chats, 1:many chats, and group chats. 
     
     * @exposesUserData
     */
     getUsersInCurrentContext(callback: (data: SnapchatUser[]) => void): void
+    
+    /**
+    * Get a Snapchat User information, given a DynamicResource.
+    */
+    loadResourceAsSnapchatUser(resource: DynamicResource, onSuccess: (snapchatUser: SnapchatUser) => void, onFailure: (errorMessage: string) => void): void
     
     /**
     * Provides the user's current altitude as a localized string.
@@ -18099,6 +20633,11 @@ declare class VFXAsset extends Asset {
     feedbacks: PassWrappers
     
     /**
+    * When `useFixedDeltaTime` is true, this value is used for Delta Time for the asset.
+    */
+    fixedDeltaTime: number
+    
+    /**
     * When `Mesh` is selected as a Geometry Type in the VFX Output Container, the system will render particles using this mesh, otherwise particles will be rendered as quads. Refer to the Custom Mesh Emitter built-in asset as a starting point when working with custom meshes.
     */
     mesh: RenderMesh
@@ -18109,6 +20648,11 @@ declare class VFXAsset extends Asset {
     * @readonly
     */
     outputs: PassWrappers
+    
+    /**
+    * A multiplier on the delta time for this VFX Asset. If `useFixedDeltaTime` is true, `Component Time += fixedDeltaTime * playRate`, otherwise `Component Time += fixedDeltaTime * playRate`. 
+    */
+    playRate: number
     
     /**
     * Controls properties for the VFXAsset. Any scriptable properties on a VFX Graph will automatically become properties of this Properties class. For example, if the VFX Graph defines a variable named `baseColor`, a script would be able to access that property as `vfxAsset.properties.baseColor`.
@@ -18123,6 +20667,11 @@ declare class VFXAsset extends Asset {
     * @readonly
     */
     simulations: PassWrappers
+    
+    /**
+    * Toggles the use of `fixedDeltaTime` for Component Time accumulation and particle simulation. When false, the real delta time of the Lens is used.
+    */
+    useFixedDeltaTime: boolean
     
 }
 
@@ -18144,6 +20693,11 @@ declare class VFXComponent extends BaseMeshVisual {
     restart(): void
     
     /**
+    * Returns the time in seconds since the VFX component was enabled, adjusted by the VFX Asset's delta time configuration. Component Time differs from Elapsed Time in that Elapsed Time is the total time since the Lens started.
+    */
+    time(): number
+    
+    /**
     * The {@link VFXAsset} that describes the VFX simulation.
     */
     asset: VFXAsset
@@ -18153,6 +20707,11 @@ declare class VFXComponent extends BaseMeshVisual {
     
     */
     emitting: boolean
+    
+    /**
+    * When true, stops the VFX simulation by setting delta time to 0.
+    */
+    paused: boolean
     
 }
 
@@ -19066,26 +21625,46 @@ declare class WebPageTextureProvider extends TextureProvider {
     
     /**
     * Get the current user-agent for the webview.
+    
+    * @experimental
+    
+    * @wearableOnly
     */
     getUserAgent(): string
     
     /**
     * Navigate back in the web history.
+    
+    * @experimental
+    
+    * @wearableOnly
     */
     goBack(): void
     
     /**
     * Navigate forward in the web history.
+    
+    * @experimental
+    
+    * @wearableOnly
     */
     goForward(): void
     
     /**
     * Request a url to be loaded.
+    
+    * @experimental
+    
+    * @wearableOnly
     */
     loadUrl(url: string): void
     
     /**
     * Request the current page to be reloaded.
+    
+    * @experimental
+    
+    * @wearableOnly
     */
     reload(): void
     
@@ -19093,6 +21672,10 @@ declare class WebPageTextureProvider extends TextureProvider {
     * Set a custom user-agent for the webview. 
     
     * _Note: By default all webviews will have the same user-agent set by the platform. This can be used to target Spectacles specific websites._
+    
+    * @experimental
+    
+    * @wearableOnly
     */
     setUserAgent(userAgent: string): void
     
@@ -19103,6 +21686,10 @@ declare class WebPageTextureProvider extends TextureProvider {
     
     * _Note: Does not stop scripts on the webpage._
     
+    
+    * @experimental
+    
+    * @wearableOnly
     */
     stop(): void
     
@@ -19116,6 +21703,10 @@ declare class WebPageTextureProvider extends TextureProvider {
     
     * _Note: Using the WebView from the Asset Library will have already implemented this logic with SIK and Hand Tracking and Mobile Controller and it is not expected for creators to re-implement this handling unless they wish to provide further customization and options._ 
     
+    
+    * @experimental
+    
+    * @wearableOnly
     */
     touch(id: number, state: TouchState, x: number, y: number): void
     
@@ -19123,6 +21714,10 @@ declare class WebPageTextureProvider extends TextureProvider {
     * Check if there is any back history on the web stack.
     
     * @readonly
+    
+    * @experimental
+    
+    * @wearableOnly
     */
     canGoBack: boolean
     
@@ -19130,6 +21725,10 @@ declare class WebPageTextureProvider extends TextureProvider {
     * Check if there is any forward history on the web stack.
     
     * @readonly
+    
+    * @experimental
+    
+    * @wearableOnly
     */
     canGoForward: boolean
     
@@ -19137,6 +21736,10 @@ declare class WebPageTextureProvider extends TextureProvider {
     * This event signals that the webview is ready for performing actions such as `loadUrl`, etc. This also is when the WebView should be visible on the {@link Texture} that was originally provided.
     
     * @readonly
+    
+    * @experimental
+    
+    * @wearableOnly
     */
     onReady: event0<void>
     
@@ -19146,6 +21749,8 @@ declare class WebPageTextureProvider extends TextureProvider {
 * WebSocket provides an API for managing a WebSocket connection to a server, as well as for sending and receiving data on the connection.
 
 * @wearableOnly
+
+* @CameraKit
 */
 declare class WebSocket extends ScriptObject {
     
@@ -19165,11 +21770,19 @@ declare class WebSocket extends ScriptObject {
     
     * `open`
     * Fired when a connection with a WebSocket is opened. Also available via the onopen property.
+    
+    * @wearableOnly
+    
+    * @CameraKit
     */
     addEventListener(type: string, listener: (event: WebSocketEvent) => void): void
     
     /**
     * Closes the WebSocket connection or connection attempt, if any. If the connection is already CLOSED, this method does nothing.
+    
+    * @wearableOnly
+    
+    * @CameraKit
     */
     close(): void
     
@@ -19191,6 +21804,10 @@ declare class WebSocket extends ScriptObject {
     * ]);
     * webSocket.send(uint8Array);
     * ```
+    
+    * @wearableOnly
+    
+    * @CameraKit
     */
     send(data: (Uint8Array|string)): void
     
@@ -19214,6 +21831,10 @@ declare class WebSocket extends ScriptObject {
     *     }
     * });
     * ```
+    
+    * @wearableOnly
+    
+    * @CameraKit
     */
     binaryType: string
     
@@ -19225,8 +21846,12 @@ declare class WebSocket extends ScriptObject {
     *   print("The connection has been closed.");
     * };
     * ```
+    
+    * @wearableOnly
+    
+    * @CameraKit
     */
-    onclose: (event: WebSocketEvent) => void
+    onclose: (event: WebSocketCloseEvent) => void
     
     /**
     * Set a listener for the `error` event. The event passed is {@link WebSocketErrorEvent}. Equivalent to `addEventListener("error", ...)`. This listener will be run in addition to any listeners added via `addEventListener`.
@@ -19236,6 +21861,10 @@ declare class WebSocket extends ScriptObject {
     *   print("The connection has been closed due to an error: " + error);
     * };
     * ```
+    
+    * @wearableOnly
+    
+    * @CameraKit
     */
     onerror: (event: WebSocketEvent) => void
     
@@ -19257,8 +21886,12 @@ declare class WebSocket extends ScriptObject {
     *     }
     * };
     * ```
+    
+    * @wearableOnly
+    
+    * @CameraKit
     */
-    onmessage: (event: WebSocketEvent) => void
+    onmessage: (event: WebSocketMessageEvent) => void
     
     /**
     * Set a listener for the `open` event. The event passed is {@link WebSocketEvent}. Equivalent to `addEventListener("open", ...)`. This listener will be run in addition to any listeners added via `addEventListener`.
@@ -19268,6 +21901,10 @@ declare class WebSocket extends ScriptObject {
     *   print("The connection has been opened successfully.");
     * };
     * ```
+    
+    * @wearableOnly
+    
+    * @CameraKit
     */
     onopen: (event: WebSocketEvent) => void
     
@@ -19287,6 +21924,10 @@ declare class WebSocket extends ScriptObject {
     * The connection is closed or couldn't be opened.
     
     * @readonly
+    
+    * @wearableOnly
+    
+    * @CameraKit
     */
     readyState: number
     
@@ -19294,6 +21935,10 @@ declare class WebSocket extends ScriptObject {
     * Returns the url to which the WebSocket is connecting/connected.
     
     * @readonly
+    
+    * @wearableOnly
+    
+    * @CameraKit
     */
     url: string
     
@@ -19303,6 +21948,8 @@ declare class WebSocket extends ScriptObject {
 * Event type for WebSocket close events. This event indicates when the WebSocket connection has been closed. Listen for this event by using `addEventListener` with `close`, or by setting the `onclose` property.
 
 * @wearableOnly
+
+* @CameraKit
 */
 declare class WebSocketCloseEvent extends ScriptObject {
     
@@ -19335,6 +21982,10 @@ declare class WebSocketCloseEvent extends ScriptObject {
     * | 40004999   |                                  | For private use, and thus can't be registered. |
     
     * @readonly
+    
+    * @wearableOnly
+    
+    * @CameraKit
     */
     code: number
     
@@ -19342,6 +21993,10 @@ declare class WebSocketCloseEvent extends ScriptObject {
     * The reason the WebSocket connection was closed.
     
     * @readonly
+    
+    * @wearableOnly
+    
+    * @CameraKit
     */
     reason: string
     
@@ -19349,19 +22004,12 @@ declare class WebSocketCloseEvent extends ScriptObject {
     * True if the socket connection was closed without error.
     
     * @readonly
+    
+    * @wearableOnly
+    
+    * @CameraKit
     */
     wasClean: boolean
-    
-}
-
-/**
-* Event type for WebSocket error events. This event indicates when a server-side error has occurred resulting in closure of the WebSocket connection. Listen for this event by using `addEventListener` with `error`, or by setting the `onerror` property.
-
-* @wearableOnly
-*/
-declare class WebSocketErrorEvent extends ScriptObject {
-    
-    protected constructor()
     
 }
 
@@ -19369,6 +22017,8 @@ declare class WebSocketErrorEvent extends ScriptObject {
 * Generic event type for WebSocket.
 
 * @wearableOnly
+
+* @CameraKit
 */
 declare class WebSocketEvent extends ScriptObject {
     
@@ -19380,6 +22030,8 @@ declare class WebSocketEvent extends ScriptObject {
 * Event type for WebSocket message events. This event fires when a message has been received from the server. Listen for this event by using `addEventListener` with `message`, or by setting the `onmessage` property.
 
 * @wearableOnly
+
+* @CameraKit
 */
 declare class WebSocketMessageEvent extends ScriptObject {
     
@@ -19389,6 +22041,10 @@ declare class WebSocketMessageEvent extends ScriptObject {
     * The data received from the server. For binary messages, this is of type {@link Blob}. For text messages, this is a string.
     
     * @readonly
+    
+    * @wearableOnly
+    
+    * @CameraKit
     */
     data: (Blob|string)
     
@@ -19396,6 +22052,10 @@ declare class WebSocketMessageEvent extends ScriptObject {
     * The type of the data received, `text` or `binary`, returned as a string.
     
     * @readonly
+    
+    * @wearableOnly
+    
+    * @CameraKit
     */
     type: string
     
@@ -19404,7 +22064,7 @@ declare class WebSocketMessageEvent extends ScriptObject {
 /**
 * WebViewOptions allow you to specify various aspects of the WebView that will be created. These are only used at creation time.
 
-* @see {@link RemoteServiceModule#createWebViewOptions}
+* @see {@link InternetModule#createWebViewOptions}
 
 * @experimental
 */
@@ -19416,6 +22076,8 @@ declare class WebViewOptions extends ScriptObject {
     * Allows the ability to set various web request policies. 
     
     * @readonly
+    
+    * @experimental
     */
     requestPolicy: WebViewPolicy
     
@@ -19428,6 +22090,8 @@ declare class WebViewOptions extends ScriptObject {
     * __Tip:__
     * For best results choose a resolution that best matches your expected aspect ratio and desired responsive size of web content. This can not be changed later without creating a new WebView instance.
     
+    
+    * @experimental
     */
     resolution: vec2
     
@@ -19463,6 +22127,8 @@ declare class WebViewPolicy extends ScriptObject {
     
     * _Note: A platform blocked website may not be overridden using this property._
     
+    
+    * @experimental
     */
     allow: string[]
     
@@ -19472,16 +22138,18 @@ declare class WebViewPolicy extends ScriptObject {
     * _Note: Default is to not block any website._
     
     * _Note: A platform allowed website can be blocked by this property._
+    
+    * @experimental
     */
     block: string[]
     
 }
 
 declare enum WeightedMode {
-    Both,
-    Left,
     None,
-    Right
+    Left,
+    Right,
+    Both
 }
 
 /**
@@ -19510,6 +22178,22 @@ declare class WorldComponent extends Component {
     * Reference to world settings. If not set, use the default world settings for the project.
     */
     worldSettings: Physics.WorldSettingsAsset
+    
+}
+
+/**
+* Provides depth information of the video feed that the Lens is being applied to when available.
+*/
+declare class WorldDepthTextureProvider extends TextureProvider {
+    
+    protected constructor()
+    
+    /**
+    * Returns the depth at the passed in point (values between 0 and 1, where (0, 0) represents the top-left corner) of the physical camera. The depth returned samples raw depth captured by the camera--that is: the depth of the real world in cm. The depth will be provided as a positive number.
+    
+    * @exposesUserData
+    */
+    sampleDepthAtPoint(point: vec2): number
     
 }
 
@@ -19597,7 +22281,7 @@ declare class WorldQueryModule extends Asset {
 /**
 * Provider for RenderMesh data representing the estimated shape of real world objects generated from depth information. Only available when world mesh tracking is supported and enabled.
 */
-declare class WorldRenderObjectProvider extends RenderObjectProvider {
+declare class WorldRenderObjectProvider extends MeshRenderObjectProvider {
     
     protected constructor()
     
@@ -19923,6 +22607,44 @@ declare namespace _palette {
     let AnimationTrack: AnimationTrack
     
     /**
+    * Allows the Lens to incorporate voice transcription with higher quality than the {@link VoiceMlModule} and supports a vast number of different languages.
+    
+    */
+    let AsrModule: AsrModule
+    
+    /**
+    * The mode of the transcription to prioritise, between speed and accuracy.
+    
+    
+    * @wearableOnly
+    */
+    let AsrModule_AsrMode: AsrModule.AsrMode
+    
+    /**
+    * An enum stating the status of the transcription.
+    
+    
+    * @wearableOnly
+    */
+    let AsrModule_AsrStatusCode: AsrModule.AsrStatusCode
+    
+    /**
+    * Provides the options for the session.
+    
+    
+    * @wearableOnly
+    */
+    let AsrModule_AsrTranscriptionOptions: AsrModule.AsrTranscriptionOptions
+    
+    /**
+    * Argument passed for a transcription update event.
+    
+    
+    * @wearableOnly
+    */
+    let AsrModule_TranscriptionUpdateEvent: AsrModule.TranscriptionUpdateEvent
+    
+    /**
     * Base class for all assets used in the engine. Assets can be unique to Lens Studio, such as {@link VFXAsset}, or a representation of an imported asset, such as {@link Texture} for jpg, png, and other image formats. In most cases, assets are added to the scene via a {@link Component}.  
     
     * @remarks
@@ -20074,6 +22796,36 @@ declare namespace _palette {
     let Bitmoji3DOptions: Bitmoji3DOptions
     
     /**
+    * Used to set the animation params for the request type.
+    */
+    let Bitmoji3DOptions_AnimationParams: Bitmoji3DOptions.AnimationParams
+    
+    /**
+    * Enum representing avatar scope used in custom params of bitmoji3d options.
+    */
+    let Bitmoji3DOptions_AvatarScope: Bitmoji3DOptions.AvatarScope
+    
+    /**
+    * Enum representing different types of clothing
+    */
+    let Bitmoji3DOptions_ClothingType: Bitmoji3DOptions.ClothingType
+    
+    /**
+    * The custom params can be used for requesting bitmoji assets like garments. These can be set as custom params of Bitmoji3D options. 
+    */
+    let Bitmoji3DOptions_CustomParams: Bitmoji3DOptions.CustomParams
+    
+    /**
+    * Set of parameters used to customize specific parts of avatar such as garment, outerwear etc.
+    */
+    let Bitmoji3DOptions_ParamSet: Bitmoji3DOptions.ParamSet
+    
+    /**
+    * Enum representing different request types.
+    */
+    let Bitmoji3DOptions_RequestType: Bitmoji3DOptions.RequestType
+    
+    /**
     * Provides information about the current user's 3D Bitmoji avatar to be downloaded via the RemoteMediaModule.
     */
     let Bitmoji3DResource: Bitmoji3DResource
@@ -20093,8 +22845,131 @@ declare namespace _palette {
     * Represents a blob, which is a file-like object of immutable, raw data. Can be read as text or binary data. Currently the binary data is only supported as `Uint8Array`.
     
     * @wearableOnly
+    
+    * @CameraKit
     */
     let Blob: Blob
+    
+    /**
+    * Provides access to Bluetooth GATT devices. APIs include scanning for and connecting to these devices, and reading and writing to their descriptors and characteristics.
+    */
+    let Bluetooth_BluetoothCentralModule: Bluetooth.BluetoothCentralModule
+    
+    /**
+    * Provides access to the Bluetooth connection.
+    */
+    let Bluetooth_BluetoothGatt: Bluetooth.BluetoothGatt
+    
+    /**
+    * A characteristic of the Bluetooth GATT device.
+    
+    * Characteristics are the individual pieces of data within a {@link Bluetooth.BluetoothGattService} that provide specific information. For example, a heart rate sensor might have a Heart Rate service, and that service might have characteristics including "Heart Rate Measurement," "Sensor Location," etc.
+    
+    * __Value__ ({@link Bluetooth.BluetoothGattCharacteristic.readValue}, {@link Bluetooth.BluetoothGattCharacteristic.writeValue}): The actual data being exchanged.
+    
+    * __Properties__ ({@link Bluetooth.BluetoothGattCharacteristic.properties}): Define how the characteristic can be accessed (e.g., read, write, notify, indicate).
+    
+    * __Descriptors__ ({{@link Bluetooth.BluetoothGattCharacteristic.getDescriptor}, {@link Bluetooth.BluetoothGattCharacteristic.getDescriptors}): Provide additional information about the characteristic, such as its units or format.
+    
+    * __UUID__ ({@link Bluetooth.BluetoothGattCharacteristic.uuid}): A unique identifier that identifies the characteristic.
+    
+    * Common characteristics include battery level, heart rate, temperature, and device name. 
+    */
+    let Bluetooth_BluetoothGattCharacteristic: Bluetooth.BluetoothGattCharacteristic
+    
+    /**
+    * Descriptors contain additional information and attributes of a {@link Bluetooth.BluetoothGattCharacteristic}.
+    */
+    let Bluetooth_BluetoothGattDescriptor: Bluetooth.BluetoothGattDescriptor
+    
+    /**
+    * Bluetooth GATT Services are collections of related {@link Bluetooth.BluetoothGattCharacteristic}s representing specific functions or features of a device. For example, a heart rate sensor might have a "Heart Rate" service, which in turn has characteristics like  "Heart Rate Measurement".
+    
+    */
+    let Bluetooth_BluetoothGattService: Bluetooth.BluetoothGattService
+    
+    /**
+    * The statuses for Bluetooth availability. Currently unsupported.
+    
+    * @experimental
+    
+    * @wearableOnly
+    */
+    let Bluetooth_BluetoothStatus: Bluetooth.BluetoothStatus
+    
+    /**
+    * The event received when Bluetooth status has changed. Currently unsupported.
+    
+    * @experimental
+    
+    * @wearableOnly
+    */
+    let Bluetooth_BluetoothStatusChangedEvent: Bluetooth.BluetoothStatusChangedEvent
+    
+    /**
+    * Properties of a {@link Bluetooth.BluetoothGattCharacteristic}.
+    
+    * @experimental
+    
+    * @wearableOnly
+    */
+    let Bluetooth_CharacteristicProperty: Bluetooth.CharacteristicProperty
+    
+    /**
+    * State of a Bluetooth connection.
+    
+    * `Disconnected` The Bluetooth device is disconnected from Spectacles.
+    
+    * `Connected` The Bluetooth device is connected and bonded with Spectacles. 
+    
+    
+    * @experimental
+    
+    * @wearableOnly
+    */
+    let Bluetooth_ConnectionState: Bluetooth.ConnectionState
+    
+    /**
+    * The event received when Bluetooth connection status has changed.
+    
+    * @experimental
+    
+    * @wearableOnly
+    */
+    let Bluetooth_ConnectionStateChangedEvent: Bluetooth.ConnectionStateChangedEvent
+    
+    /**
+    * The event received when Maximum Transmission Unit (MTU) of a Bluetooth device has changed.
+    
+    * @experimental
+    
+    * @wearableOnly
+    */
+    let Bluetooth_MtuChangedEvent: Bluetooth.MtuChangedEvent
+    
+    /**
+    * The filters to be used with {@link BluetoothCentralModule.startScan}.
+    */
+    let Bluetooth_ScanFilter: Bluetooth.ScanFilter
+    
+    /**
+    * Defines how Bluetooth devices should be scanned. Used with {@link BluetoothCentralModule.startScan}.
+    
+    * @experimental
+    
+    * @wearableOnly
+    */
+    let Bluetooth_ScanMode: Bluetooth.ScanMode
+    
+    /**
+    * The results of a Bluetooth scan. 
+    */
+    let Bluetooth_ScanResult: Bluetooth.ScanResult
+    
+    /**
+    * Settings when scanning for Bluetooth devices via {@link BluetoothCentralModule.startScan}.
+    */
+    let Bluetooth_ScanSettings: Bluetooth.ScanSettings
     
     /**
     * Used to analyze camera input and apply similar image artifacts to AR objects to better blend and match with the real world.
@@ -20217,8 +23092,6 @@ declare namespace _palette {
     /**
     * An entity which provided metadata about the current camera image provided by CameraTextureProvider. Modeled after VideoFrame web API
     
-    * @experimental
-    
     * @exposesUserData
     
     * @wearableOnly
@@ -20238,8 +23111,6 @@ declare namespace _palette {
     
     * @see [Camera Module](https://developers.snap.com/spectacles/about-spectacles-features/apis/camera-module) guide.
     
-    * @experimental
-    
     * @exposesUserData
     
     * @wearableOnly
@@ -20248,8 +23119,6 @@ declare namespace _palette {
     
     /**
     * A handle to specify which camera on the Spectacles to request from. Used with `CameraModule.createCameraRequest`.
-    
-    * @experimental
     
     * @exposesUserData
     
@@ -20260,8 +23129,6 @@ declare namespace _palette {
     /**
     * An object that is used to request the desired camera ID. It should be passed to the CameraModule to get back a camera texture.
     
-    * @experimental
-    
     * @exposesUserData
     
     * @wearableOnly
@@ -20269,7 +23136,7 @@ declare namespace _palette {
     let CameraModule_CameraRequest: CameraModule.CameraRequest
     
     /**
-    * @experimental
+    * Spectacles: ImageRequest contains the parameterization for a still image request, which is a request for a high resolution image of the user's current camera stream. 
     
     * @exposesUserData
     
@@ -20579,6 +23446,25 @@ declare namespace _palette {
     let CylinderShape: CylinderShape
     
     /**
+    * Provides methods to draw primitive visuals for debugging. Accessible through `global.debugRenderSystem`.
+    */
+    let DebugRender: DebugRender
+    
+    /**
+    * The DeepLinkModule brings the concept of deep linking, familiar from mobile platforms like Android and iOS, to Spectacles. This module allows Lenses to send and receive deep link URIs between Spectacles and the Spectacles App.
+    
+    * @wearableOnly
+    */
+    let DeepLinkModule: DeepLinkModule
+    
+    /**
+    * Arguments used with the {@link DeepLinkModule#onUriReceived} event.
+    
+    * @wearableOnly
+    */
+    let DeepLinkUriReceivedArgs: DeepLinkUriReceivedArgs
+    
+    /**
     * Used for collision meshes that can change shape or form dynamically.
     */
     let DeformingCollisionMesh: DeformingCollisionMesh
@@ -20614,12 +23500,48 @@ declare namespace _palette {
     let DepthClearOption: DepthClearOption
     
     /**
-    * Writes video feed depth information to the depth buffer, which automatically sets up depth occlusion for 3D visuals.
+    * The depth frame data as provided by the {@link DepthFrameSession.onNewFrame}.
     
-    * @remarks
-    * Only works in some cases where depth information is supplied by the device.
+    * @experimental
+    
+    * @exposesUserData
+    
+    * @wearableOnly
+    
+    * @wearableOnly
     */
-    let DepthSetter: DepthSetter
+    let DepthFrameData: DepthFrameData
+    
+    /**
+    * Used for receiving {@link DepthFrameData} on Spectacles device.
+    
+    * @experimental
+    
+    * @exposesUserData
+    
+    * @wearableOnly
+    
+    * @wearableOnly
+    */
+    let DepthFrameSession: DepthFrameSession
+    
+    /**
+    * Provides access to a {@link DepthFrameSession} on Spectacles device. 
+    
+    * @remarks 
+    * Used for requesting {@link DepthFrameData}.
+    
+    * @see [Depth Module](https://developers.snap.com/spectacles/about-spectacles-features/apis/depth-module) guide.
+    
+    * @experimental
+    
+    * @exposesUserData
+    
+    * @wearableOnly
+    
+    * @wearableOnly
+    */
+    let DepthModule: DepthModule
     
     /**
     * Access to a Depth Stencil Render Target that can output depth and stencil values from a Camera in Depth24/Stencil8 format.
@@ -20707,6 +23629,9 @@ declare namespace _palette {
     */
     let DistanceEffect: DistanceEffect
     
+    /**
+    * The domain of a {@link ShoppingModule}. You can leave this empty if you are tagging the products from the catalog dynamically, and assets are fetched and sent to the Lens.
+    */
     let DomainInfo: DomainInfo
     
     /**
@@ -20825,16 +23750,14 @@ declare namespace _palette {
     let FaceStretchVisual: FaceStretchVisual
     
     /**
-    * TextureProvider for face textures.
-    * See the [Face Texture Guide](https://developers.snap.com/lens-studio/features/ar-tracking/face/face-texture) for more information.
-    * Can be accessed using {@link Texture | Texture.control} on a face texture asset.
-    */
-    let FaceTextureProvider: FaceTextureProvider
-    
-    /**
     * This is the base class for all face tracking events. This event won't actually get triggered itself, so use one of the child classes instead.
     */
     let FaceTrackingEvent: FaceTrackingEvent
+    
+    /**
+    * The face that a tracker should use. Allows you to to apply the same face index to a group of Components.
+    */
+    let FaceTrackingScope: FaceTrackingScope
     
     /**
     * Provider for file based Audio Tracks.
@@ -20850,14 +23773,6 @@ declare namespace _palette {
     * A {@link TextureProvider} for textures originating from files.
     */
     let FileTextureProvider: FileTextureProvider
-    
-    /**
-    * Intersection filter settings. Unifies settings for world probes and collider overlap tests. 
-    
-    * @see {@link ColliderComponent}
-    * @see {@link Physics}
-    */
-    let Filter: Filter
     
     let FilteringMode: FilteringMode
     
@@ -21062,7 +23977,44 @@ declare namespace _palette {
     * If you only need to show one hint on Lens start up, you can [configure your project](https://developers.snap.com/lens-studio/publishing/configuring/lens-hints) to display the hint without scripting it.
     
     
-    * <table cellspacing=0 cellpadding=0><thead><tr><th>Hint ID</th><th>Hint Message</th></tr></thead><tbody><tr><td>&#8220;lens_hint_blow_a_kiss&#8221;</td><td>&#8220;Blow A Kiss&#8221;</td></tr><tr><td>&#8220;lens_hint_come_closer&#8221;</td><td>&#8220;Come Closer&#8221;</td></tr><tr><td>&#8220;lens_hint_do_not_smile&#8221;</td><td>&#8220;Do Not Smile&#8221;</td></tr><tr><td>&#8220;lens_hint_do_not_try_with_a_friend&#8221;</td><td>&#8220;Do Not Try With A Friend&#8221;</td></tr><tr><td>&#8220;lens_hint_find_face&#8221;</td><td>&#8220;Find Face&#8221;</td></tr><tr><td>&#8220;lens_hint_keep_raising_your_eyebrows&#8221;</td><td>&#8220;Keep Raising Your Eyebrows&#8221;</td></tr><tr><td>&#8220;lens_hint_kiss&#8221;</td><td>&#8220;Kiss&#8221;</td></tr><tr><td>&#8220;lens_hint_kiss_again&#8221;</td><td>&#8220;Kiss Again&#8221;</td></tr><tr><td>&#8220;lens_hint_look_around&#8221;</td><td>&#8220;Look Around&#8221;</td></tr><tr><td>&#8220;lens_hint_look_down&#8221;</td><td>&#8220;Look Down&#8221;</td></tr><tr><td>&#8220;lens_hint_look_left&#8221;</td><td>&#8220;Look Left&#8221;</td></tr><tr><td>&#8220;lens_hint_look_right&#8221;</td><td>&#8220;Look Right&#8221;</td></tr><tr><td>&#8220;lens_hint_look_up&#8221;</td><td>&#8220;Look Up&#8221;</td></tr><tr><td>&#8220;lens_hint_make_some_noise&#8221;</td><td>&#8220;Make Some Noise!&#8221;</td></tr><tr><td>&#8220;lens_hint_nod_your_head&#8221;</td><td>&#8220;Nod Your Head&#8221;</td></tr><tr><td>&#8220;lens_hint_now_kiss&#8221;</td><td>&#8220;Now Kiss&#8221;</td></tr><tr><td>&#8220;lens_hint_now_open_your_mouth&#8221;</td><td>&#8220;Now Open Your Mouth&#8221;</td></tr><tr><td>&#8220;lens_hint_now_raise_your_eyebrows&#8221;</td><td>&#8220;Now Raise Your Eyebrows&#8221;</td></tr><tr><td>&#8220;lens_hint_now_smile&#8221;</td><td>&#8220;Now Smile&#8221;</td></tr><tr><td>&#8220;lens_hint_open_your_mouth&#8221;</td><td>&#8220;Open Your Mouth&#8221;</td></tr><tr><td>&#8220;lens_hint_open_your_mouth_again&#8221;</td><td>&#8220;Open Your Mouth Again&#8221;</td></tr><tr><td>&#8220;lens_hint_raise_eyebrows_or_open_mouth&#8221;</td><td>&#8220;Raise Your Eyebrows / Or / Open Your Mouth&#8221;</td></tr><tr><td>&#8220;lens_hint_raise_your_eyebrows&#8221;</td><td>&#8220;Raise Your Eyebrows&#8221;</td></tr><tr><td>&#8220;lens_hint_raise_your_eyebrows_again&#8221;</td><td>&#8220;Raise Your Eyebrows Again&#8221;</td></tr><tr><td>&#8220;lens_hint_smile&#8221;</td><td>&#8220;Smile&#8221;</td></tr><tr><td>&#8220;lens_hint_smile_again&#8221;</td><td>&#8220;Smile Again&#8221;</td></tr><tr><td>&#8220;lens_hint_swap_camera&#8221;</td><td>&#8220;Swap Camera&#8221;</td></tr><tr><td>&#8220;lens_hint_tap&#8221;</td><td>&#8220;Tap!&#8221;</td></tr><tr><td>&#8220;lens_hint_tap_a_surface&#8221;</td><td>&#8220;Tap A Surface&#8221;</td></tr><tr><td>&#8220;lens_hint_tap_ground&#8221;</td><td>&#8220;Tap The Ground&#8221;</td></tr><tr><td>&#8220;lens_hint_tap_ground_to_place&#8221;</td><td>&#8220;Tap Ground To Place&#8221;</td></tr><tr><td>&#8220;lens_hint_tap_surface_to_place&#8221;</td><td>&#8220;Tap Surface To Place&#8221;</td></tr><tr><td>&#8220;lens_hint_try_friend&#8221;</td><td>&#8220;Try It With A Friend&#8221;</td></tr><tr><td>&#8220;lens_hint_try_rear_camera&#8221;</td><td>&#8220;Try It With Your Rear Camera&#8221;</td></tr><tr><td>&#8220;lens_hint_turn_around&#8221;</td><td>&#8220;Turn Around&#8221;</td></tr><tr><td>&#8220;lens_hint_walk_through_the_door&#8221;</td><td>&#8220;Walk Through The Door&#8221;</td></tr></tbody></table>
+    * | Hint ID                                   | Hint Message                          |
+    * |------------------------------------------|---------------------------------------|
+    * | "lens_hint_blow_a_kiss"                  | "Blow A Kiss"                         |
+    * | "lens_hint_come_closer"                  | "Come Closer"                         |
+    * | "lens_hint_do_not_smile"                 | "Do Not Smile"                        |
+    * | "lens_hint_do_not_try_with_a_friend"     | "Do Not Try With A Friend"            |
+    * | "lens_hint_find_face"                    | "Find Face"                           |
+    * | "lens_hint_keep_raising_your_eyebrows"   | "Keep Raising Your Eyebrows"          |
+    * | "lens_hint_kiss"                         | "Kiss"                                |
+    * | "lens_hint_kiss_again"                   | "Kiss Again"                          |
+    * | "lens_hint_look_around"                  | "Look Around"                         |
+    * | "lens_hint_look_down"                    | "Look Down"                           |
+    * | "lens_hint_look_left"                    | "Look Left"                           |
+    * | "lens_hint_look_right"                   | "Look Right"                          |
+    * | "lens_hint_look_up"                      | "Look Up"                             |
+    * | "lens_hint_make_some_noise"              | "Make Some Noise!"                    |
+    * | "lens_hint_nod_your_head"                | "Nod Your Head"                       |
+    * | "lens_hint_now_kiss"                     | "Now Kiss"                            |
+    * | "lens_hint_now_open_your_mouth"          | "Now Open Your Mouth"                 |
+    * | "lens_hint_now_raise_your_eyebrows"      | "Now Raise Your Eyebrows"             |
+    * | "lens_hint_now_smile"                    | "Now Smile"                           |
+    * | "lens_hint_open_your_mouth"              | "Open Your Mouth"                     |
+    * | "lens_hint_open_your_mouth_again"        | "Open Your Mouth Again"               |
+    * | "lens_hint_raise_eyebrows_or_open_mouth" | "Raise Your Eyebrows / Or / Open Your Mouth" |
+    * | "lens_hint_raise_your_eyebrows"          | "Raise Your Eyebrows"                 |
+    * | "lens_hint_raise_your_eyebrows_again"    | "Raise Your Eyebrows Again"           |
+    * | "lens_hint_smile"                        | "Smile"                               |
+    * | "lens_hint_smile_again"                  | "Smile Again"                         |
+    * | "lens_hint_swap_camera"                  | "Swap Camera"                         |
+    * | "lens_hint_tap"                          | "Tap!"                                |
+    * | "lens_hint_tap_a_surface"                | "Tap A Surface"                       |
+    * | "lens_hint_tap_ground"                   | "Tap The Ground"                      |
+    * | "lens_hint_tap_ground_to_place"          | "Tap Ground To Place"                 |
+    * | "lens_hint_tap_surface_to_place"         | "Tap Surface To Place"                |
+    * | "lens_hint_try_friend"                   | "Try It With A Friend"                |
+    * | "lens_hint_try_rear_camera"              | "Try It With Your Rear Camera"        |
+    * | "lens_hint_turn_around"                  | "Turn Around"                         |
+    * | "lens_hint_walk_through_the_door"        | "Walk Through The Door"               |
     */
     let HintsComponent: HintsComponent
     
@@ -21115,8 +24067,6 @@ declare namespace _palette {
     /**
     * Spectacles: ImageFrame contains the results of a still image request initiated from the {@link CameraModule}. Still images are high resolution images of the user's current camera stream.
     
-    * @experimental
-    
     * @exposesUserData
     
     * @wearableOnly
@@ -21149,6 +24099,12 @@ declare namespace _palette {
     * @see [Touch Blocking](https://developers.snap.com/lens-studio/features/scripting/touch-input#touch-blocking) guide.
     */
     let InteractionComponent: InteractionComponent
+    
+    /**
+    * Provides access to the open internet. Available only on Spectacles.
+    
+    */
+    let InternetModule: InternetModule
     
     /**
     * Arguments used with the onInternetStatusChanged event.
@@ -21242,6 +24198,9 @@ declare namespace _palette {
     */
     let LevelsetShape: LevelsetShape
     
+    /**
+    * A Licensed Sounds audio track from Asset LIbrary.
+    */
     let LicensedAudioTrackAsset: LicensedAudioTrackAsset
     
     /**
@@ -21402,6 +24361,11 @@ declare namespace _palette {
     let MachineLearning: MachineLearning
     
     /**
+    * Used with {@link BasePlaceHolder}.
+    */
+    let MachineLearning_DataLayout: MachineLearning.DataLayout
+    
+    /**
     * Timing options for when MLComponent should start or stop running. Used with `MLComponent.runScheduled()`.
     * For more information, see the [MLComponent Scripting](https://developers.snap.com/lens-studio/features/snap-ml/ml-component/scripting-ml-component) guide.
     */
@@ -21544,6 +24508,11 @@ declare namespace _palette {
     * Inherits from {@link BaseMeshVisual} and provides access to the {@link Material} used in the rendering process.
     */
     let MaterialMeshVisual: MaterialMeshVisual
+    
+    /**
+    * Overrides a material's property. Used with {@link MaterialMeshVisual}.
+    */
+    let MaterialPropertyOverrides: MaterialPropertyOverrides
     
     /**
     * Provides useful math utility functions.
@@ -21718,6 +24687,11 @@ declare namespace _palette {
     * An instance of a Connected Lens session among a group of participants who were successfully invited into the experience. 
     */
     let MultiplayerSession: MultiplayerSession
+    
+    /**
+    * A type containing two arrays which map positionally to each other.   For example, this is used by {@link FaceRenderObjectProvider}, to provide a `names` array which contains the list of expresion names on the face, while the `values` array which contains the weight of each expression.
+    */
+    let NamedValues: NamedValues
     
     /**
     * Tracking type used by the {@link DeviceTracking} component to specify what type of plane to detect. 
@@ -21896,6 +24870,11 @@ declare namespace _palette {
     let Pass: Pass
     
     /**
+    * Overrides a material's pass property. Used with {@link MaterialMeshVisual}.
+    */
+    let PassPropertyOverrides: PassPropertyOverrides
+    
+    /**
     * Similar to {@link Pass}, except used by {@link VFXAsset}.
     */
     let PassWrapper: PassWrapper
@@ -21913,6 +24892,11 @@ declare namespace _palette {
     * See the [Persistent Storage guide](https://developers.snap.com/lens-studio/features/persistent-cloud-storage/persistent-storage) for more information.
     */
     let PersistentStorageSystem: PersistentStorageSystem
+    
+    /**
+    * The person that a tracker should use. Allows you to to apply the same person index to a group of Components. Useful for correlating tracking between Body Tracking and Face Tracking.
+    */
+    let PersonTrackingScope: PersonTrackingScope
     
     /**
     * Namespace containing physics classes and static physics methods.
@@ -22044,6 +25028,11 @@ declare namespace _palette {
     let PropertyOnEventArgs: PropertyOnEventArgs
     
     /**
+    * Overrides a property. Used with {@link MaterialMeshVisual}.
+    */
+    let PropertyOverrides: PropertyOverrides
+    
+    /**
     * Base class for all resource providers. Providers are the implementation for {@link Asset}.
     
     * @remarks
@@ -22156,7 +25145,7 @@ declare namespace _palette {
     let RemoteServiceHttpResponse: RemoteServiceHttpResponse
     
     /**
-    * Provides access to the remote services. For Spectacles, this module process access to the open internet.
+    * Provides access to Snap authorized remote services.
     
     */
     let RemoteServiceModule: RemoteServiceModule
@@ -22188,6 +25177,21 @@ declare namespace _palette {
     * For more information, see the [Camera and Layers](https://developers.snap.com/lens-studio/lens-studio-workflow/scene-set-up/camera) guide.
     */
     let RenderTargetProvider: RenderTargetProvider
+    
+    /**
+    * The anti-aliasing technique to use on a render target.
+    */
+    let RenderTargetProvider_AntialiasingMode: RenderTargetProvider.AntialiasingMode
+    
+    /**
+    * The fidelity of the anti-aliasing technique to apply.
+    */
+    let RenderTargetProvider_AntialiasingQuality: RenderTargetProvider.AntialiasingQuality
+    
+    /**
+    * How MSAA should be applied to the render target.
+    */
+    let RenderTargetProvider_MSAAStrategy: RenderTargetProvider.MSAAStrategy
     
     /**
     * Specifies what kind of render target it is. Some texture types, for example TextureCubemap, need additional properties set on the rendering camera to work correctly.
@@ -22471,6 +25475,9 @@ declare namespace _palette {
     */
     let SpriteAligner: SpriteAligner
     
+    /**
+    * A state used in an {@link DomainInfo} used by a {@link ShoppingModule}.
+    */
     let StateInfo: StateInfo
     
     /**
@@ -22586,6 +25593,16 @@ declare namespace _palette {
     let Text3D: Text3D
     
     /**
+    * Contains methods for Text decoding
+    */
+    let TextDecoder: TextDecoder
+    
+    /**
+    * Contains methods for Text encoding
+    */
+    let TextEncoder: TextEncoder
+    
+    /**
     * Fill settings used by several text related classes.
     
     * Used in {@link Text}'s `textFill` property, 
@@ -22678,6 +25695,11 @@ declare namespace _palette {
     let TextureProvider: TextureProvider
     
     /**
+    * Provides a {@link Texture} to do face tracking on for entities like {@link Head}, {@link FaceStretch}, and {@link FaceMesh}. 
+    */
+    let TextureTrackingScope: TextureTrackingScope
+    
+    /**
     * Defines the bounding area used for texture tiling with {@link TextFill}'s `tileZone` property.
     */
     let TileZone: TileZone
@@ -22762,6 +25784,11 @@ declare namespace _palette {
     * Allows you to bind the position and rotation of an object with this component to a {@link TrackedPoint}.
     */
     let TrackedPointComponent: TrackedPointComponent
+    
+    /**
+    * The scope, such as the texture it should track against, in which a tracker, such as {@link FaceMaskVisual}, {@link EyeColorVisual}, {@link BodyDepthTextureProvider}, should be applied.
+    */
+    let TrackingScope: TrackingScope
     
     /**
     * Controls the position, rotation, and scale of a {@link SceneObject}.  Every SceneObject automatically has a Transform attached.
@@ -23061,6 +26088,8 @@ declare namespace _palette {
     * WebSocket provides an API for managing a WebSocket connection to a server, as well as for sending and receiving data on the connection.
     
     * @wearableOnly
+    
+    * @CameraKit
     */
     let WebSocket: WebSocket
     
@@ -23068,20 +26097,17 @@ declare namespace _palette {
     * Event type for WebSocket close events. This event indicates when the WebSocket connection has been closed. Listen for this event by using `addEventListener` with `close`, or by setting the `onclose` property.
     
     * @wearableOnly
+    
+    * @CameraKit
     */
     let WebSocketCloseEvent: WebSocketCloseEvent
-    
-    /**
-    * Event type for WebSocket error events. This event indicates when a server-side error has occurred resulting in closure of the WebSocket connection. Listen for this event by using `addEventListener` with `error`, or by setting the `onerror` property.
-    
-    * @wearableOnly
-    */
-    let WebSocketErrorEvent: WebSocketErrorEvent
     
     /**
     * Generic event type for WebSocket.
     
     * @wearableOnly
+    
+    * @CameraKit
     */
     let WebSocketEvent: WebSocketEvent
     
@@ -23089,13 +26115,15 @@ declare namespace _palette {
     * Event type for WebSocket message events. This event fires when a message has been received from the server. Listen for this event by using `addEventListener` with `message`, or by setting the `onmessage` property.
     
     * @wearableOnly
+    
+    * @CameraKit
     */
     let WebSocketMessageEvent: WebSocketMessageEvent
     
     /**
     * WebViewOptions allow you to specify various aspects of the WebView that will be created. These are only used at creation time.
     
-    * @see {@link RemoteServiceModule#createWebViewOptions}
+    * @see {@link InternetModule#createWebViewOptions}
     
     * @experimental
     */
@@ -23131,6 +26159,11 @@ declare namespace _palette {
     * @see [World Component](https://developers.snap.com/lens-studio/features/physics/physics-component#physics-world)
     */
     let WorldComponent: WorldComponent
+    
+    /**
+    * Provides depth information of the video feed that the Lens is being applied to when available.
+    */
+    let WorldDepthTextureProvider: WorldDepthTextureProvider
     
     /**
     * Holds settings for world mesh tracking in DeviceTracking component. Accessible through DeviceTracking.worldOptions.
@@ -23214,3 +26247,4 @@ declare namespace _palette {
     
 }
 
+type Filter = Physics.Filter

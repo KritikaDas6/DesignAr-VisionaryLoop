@@ -40,6 +40,12 @@
         Port_GSplatPointSize_N004:
           typeIdx: 1
           value: 0.000000
+        Port_GSplatRotation_N004:
+          typeIdx: 5
+          value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        Port_GSplatScale_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
         Port_Input1_N002:
           typeIdx: 5
           value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
@@ -266,7 +272,8 @@
             mDefaultVal: 0.500000
             mValues:
               []
-      ShaderPath: 3f51b2b5-a397-4986-9a91-59a1a1fa1ec6/dadadb6e35330f0069ba1e30f96b088f/Data/cfd37fa/Bones_clouds_material_start_.glsl
+        ShaderType: Mesh3d
+      ShaderPath: 3f51b2b5-a397-4986-9a91-59a1a1fa1ec6/dadadb6e35330f0069ba1e30f96b088f/Data/49d8c4c/Bones_clouds_material_start_.glsl
       Defines:
         []
       Properties:

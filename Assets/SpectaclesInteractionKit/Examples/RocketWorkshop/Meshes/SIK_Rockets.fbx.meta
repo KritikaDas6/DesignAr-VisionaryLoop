@@ -74,6 +74,8 @@
   PrimaryAsset: !<reference> 4f5845ce-0bd7-4b9a-bd6a-706f72844459
   PackageType: LegacyPackage
   PackagePolicy: CanBeUnpacked
+  ExtraData:
+    {}
   AssetDataMap:
     Scene: !<own> 412a279d-a52b-413b-b0e2-8969201d86f0
   DependentFiles:
@@ -82,6 +84,7 @@
     UseLegacyImporter: false
     WithMaterials: false
     NamingConvention: ByCategory
+    PersistentIdGenerationAlgorithm: Legacy
     AnimationCurveOptimization: true
     CustomAnimationSamplingRate: 30.000000
     ImportVertexColor: true
@@ -93,7 +96,6 @@
     GeneratePivots: true
     TriangulateNURBS: true
     UseLegacyFbxLoader: false
-    PersistentIdGenerationAlgorithm: Legacy
   CompressionSettings: !<ComplexCompressionSettings>
     Presets:
       None Compression: !<SingleCompressionSettings>
@@ -108,8 +110,6 @@
       jpg: Performance Compression
     Overrides:
       {}
-  ExtraData:
-    {}
 - !<RenderMeshVisual/035410e6-003a-40d7-a99c-1fe5b1d29f5b>
   PrefabRemaps:
     []

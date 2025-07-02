@@ -5,6 +5,8 @@
   PrimaryAsset: !<reference> 465e3f1e-fba6-4589-ab08-1e3a0372beb4
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
   AssetDataMap:
     {}
   DependentFiles:
@@ -17,6 +19,7 @@
       texture0: Float
       texture1: Float
   CompressionSettings: !<SingleCompressionSettings>
+    CompressorName: Draco
     CompressionSettings: !<MeshCompressionSettings>
       EnableDracoCompression: false
       CompressionLevel: 0
@@ -24,6 +27,3 @@
       TexcoordBits: 10
       NormalBits: 8
       ColorBits: 8
-    CompressorName: Draco
-  ExtraData:
-    {}

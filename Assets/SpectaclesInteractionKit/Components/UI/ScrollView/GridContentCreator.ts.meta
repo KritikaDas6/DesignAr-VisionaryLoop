@@ -1,21 +1,23 @@
 - !<AssetImportMetadata/e39a273a-d107-456d-9375-0e7332414ebb>
-  ImporterSettings: !<AssetImporterSettings>
-    {}
   ImportedAssetIds:
     TypeScriptAsset: !<reference> 2ec5fda5-f028-4287-82f0-d39a734ee871
   ImporterName: TypeScriptAssetImporter
   PrimaryAsset: !<reference> 2ec5fda5-f028-4287-82f0-d39a734ee871
   PackageType: NotAPackage
-  AssetDataMap:
-    TypeScriptAsset: !<own> b4e64278-d684-4c47-9b91-4a311ce3c0a0
   PackagePolicy: CannotBeUnpacked
-  DependentFiles:
-    []
-  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
     {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> b4e64278-d684-4c47-9b91-4a311ce3c0a0
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<TypeScriptAssetData/b4e64278-d684-4c47-9b91-4a311ce3c0a0>
-  Icon: ""
+  SvgIcon: ""
+  SetupScript:
+    code: ""
   Description: ""
   InternalVersion: 0
   VersionMajor: 0
@@ -30,6 +32,8 @@
     itemsCount: false
   ScriptTypesHidden:
     {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
     - itemPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
       itemsCount: !<float> 10.000000
@@ -39,5 +43,3 @@
   InputLines:
     - // @input Asset.ObjectPrefab itemPrefab
     - // @input float itemsCount = 10
-  SvgIcon: ""
-  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

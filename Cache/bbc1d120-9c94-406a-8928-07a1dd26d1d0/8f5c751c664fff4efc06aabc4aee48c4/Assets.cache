@@ -22,6 +22,12 @@
         Port_GSplatPointSize_N004:
           typeIdx: 1
           value: 0.000000
+        Port_GSplatRotation_N004:
+          typeIdx: 5
+          value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        Port_GSplatScale_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
         Port_Input1_N014:
           typeIdx: 1
           value: 2.000000
@@ -218,7 +224,8 @@
             mDefaultVal: 0.500000
             mValues:
               []
-      ShaderPath: bbc1d120-9c94-406a-8928-07a1dd26d1d0/8f5c751c664fff4efc06aabc4aee48c4/Data/cfd37fa/InteractorLineMat.glsl
+        ShaderType: Mesh3d
+      ShaderPath: bbc1d120-9c94-406a-8928-07a1dd26d1d0/8f5c751c664fff4efc06aabc4aee48c4/Data/49d8c4c/InteractorLineMat.glsl
       Defines:
         []
       Properties:

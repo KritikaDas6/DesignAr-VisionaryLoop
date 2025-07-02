@@ -1,19 +1,19 @@
 - !<AssetImportMetadata/dc88a8a1-d6a6-4def-ba6b-04a11430b96e>
-  ImporterSettings: !<AssetImporterSettings>
-    {}
   ImportedAssetIds:
     ObjectPrefab: !<reference> 6c612d5f-8b1a-4b14-9516-46e23f841a5d
   ImporterName: ObjectPrefabImporter
   PrimaryAsset: !<reference> 6c612d5f-8b1a-4b14-9516-46e23f841a5d
   PackageType: NotAPackage
-  AssetDataMap:
-    ObjectPrefab: !<own> dfe13074-1592-4516-b890-9792af43e717
   PackagePolicy: CannotBeUnpacked
-  DependentFiles:
-    []
-  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
     {}
+  AssetDataMap:
+    ObjectPrefab: !<own> dfe13074-1592-4516-b890-9792af43e717
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<Text/0e3cd404-d6b6-430c-824f-ecba0306ab82>
   PrefabRemaps:
     []
@@ -88,7 +88,6 @@
     LetterSpacing: 0.000000
     LineSpacing: 1.000000
     CapitalizationOverride: None
-    CapitilizationOverride: None
   DepthTest: false
   TwoSided: false
 - !<ScreenTransform/25ef7ea6-a192-4331-abf7-72cb42f03e5b>

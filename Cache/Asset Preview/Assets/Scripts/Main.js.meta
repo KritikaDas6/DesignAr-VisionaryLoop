@@ -5,6 +5,8 @@
   PrimaryAsset: !<reference> 37340601-91a6-4e19-983f-1fcbc21962d1
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
   AssetDataMap:
     JavaScriptAsset: !<own> fb0339ff-1cfc-47f6-9844-4046de444c41
   DependentFiles:
@@ -12,10 +14,10 @@
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-  ExtraData:
-    {}
 - !<ScriptAssetData/fb0339ff-1cfc-47f6-9844-4046de444c41>
   SvgIcon: ""
+  SetupScript:
+    code: ""
   Description: ""
   InternalVersion: 0
   VersionMajor: 0
@@ -35,15 +37,16 @@
     vfxPreviewController: false
   ScriptTypesHidden:
     {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
     - texturePreviewController: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
       materialPreviewController: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
       meshPreviewController: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
-      placementScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
       vfxPreviewController: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
       otherObjectsPreviewController: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
       gridController: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      placementScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
-  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

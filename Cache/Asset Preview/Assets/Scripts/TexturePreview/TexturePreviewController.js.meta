@@ -5,6 +5,8 @@
   PrimaryAsset: !<reference> 2b1bb5d1-197f-4b43-8295-0cd4cf634d50
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
   AssetDataMap:
     JavaScriptAsset: !<own> d06d4875-7997-4d13-a86b-87535a5c6145
   DependentFiles:
@@ -12,10 +14,10 @@
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-  ExtraData:
-    {}
 - !<ScriptAssetData/d06d4875-7997-4d13-a86b-87535a5c6145>
   SvgIcon: ""
+  SetupScript:
+    code: ""
   Description: ""
   InternalVersion: 0
   VersionMajor: 0
@@ -37,36 +39,22 @@
     texturePreviewMats: false
   ScriptTypesHidden:
     {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
-    - channelsIcons: !<reference.Texture> 00000000-0000-0000-0000-000000000000
-      channelIcons: !<reference.Texture[]>
-        []
-      mappingObjs: !<reference.SceneObject[]>
-        []
-      textureMats: !<reference.Material[]>
-        []
-      channelIconImg: !<reference.Image> 00000000-0000-0000-0000-000000000000
-      mappingIconImg: !<reference.Image> 00000000-0000-0000-0000-000000000000
-      mappingIcons: !<reference.Texture[]>
-        []
-      texturePreviewMats: !<reference.Material[]>
-        []
-      fovController: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
-      texturePreview: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      texturePreview3d: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      textureLeftSection: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+    - textureLeftSection: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      textureMiddleSection: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       channelIconObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       mappingIconObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      channelIconObjects: !<reference.SceneObject[]>
-        []
-      mappingIconObjects: !<reference.SceneObject[]>
-        []
+      fovController: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
       channelBackgroundObjects: !<reference.SceneObject[]>
         []
       mappingBackgroundObjects: !<reference.SceneObject[]>
         []
-      textureMiddleSection: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      mappingObjs: !<reference.SceneObject[]>
+        []
+      texturePreviewMats: !<reference.Material[]>
+        []
   ScriptTypes:
     -
       {}
-  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

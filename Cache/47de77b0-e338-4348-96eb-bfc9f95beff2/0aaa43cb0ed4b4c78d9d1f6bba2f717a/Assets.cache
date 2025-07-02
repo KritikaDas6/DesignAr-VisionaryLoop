@@ -46,6 +46,12 @@
         Port_GSplatPointSize_N004:
           typeIdx: 1
           value: 0.000000
+        Port_GSplatRotation_N004:
+          typeIdx: 5
+          value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        Port_GSplatScale_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
         Port_Input1_N002:
           typeIdx: 1
           value: 1.000000
@@ -918,7 +924,8 @@
             mDefaultVal: 0.500000
             mValues:
               []
-      ShaderPath: 47de77b0-e338-4348-96eb-bfc9f95beff2/0aaa43cb0ed4b4c78d9d1f6bba2f717a/Data/cfd37fa/ToggleOn.glsl
+        ShaderType: Mesh3d
+      ShaderPath: 47de77b0-e338-4348-96eb-bfc9f95beff2/0aaa43cb0ed4b4c78d9d1f6bba2f717a/Data/49d8c4c/ToggleOn.glsl
       Defines:
         []
       Properties:

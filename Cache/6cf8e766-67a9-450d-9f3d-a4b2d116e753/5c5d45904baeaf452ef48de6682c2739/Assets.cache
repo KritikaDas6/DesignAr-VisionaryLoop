@@ -1,6 +1,6 @@
 - !<AssetCache>
   AssetFiles:
-    7d4911f5-c53e-4f47-8363-829a37f5a0f1: 6cf8e766-67a9-450d-9f3d-a4b2d116e753/5c5d45904baeaf452ef48de6682c2739/Data/image_unlit.ss_graph
+    7d4911f5-c53e-4f47-8363-829a37f5a0f1: 6cf8e766-67a9-450d-9f3d-a4b2d116e753/a6194a60716af1e105a4584dc05dbcf0/Data/image_unlit.ss_graph
   Assets:
     - !<ShaderGraphPass/7d4911f5-c53e-4f47-8363-829a37f5a0f1>
       PackagePath: ""
@@ -91,6 +91,17 @@
             mMin: ~
             mMax: ~
             mStep: ~
+            mDefaultVal: 1.000000
+            mValues:
+              []
+          - mLabel: MonotoneAmount
+            mType: Property
+            mName: MonotoneAmount
+            mWidget: spinbox
+            mHint: "Property: MonotoneAmount"
+            mMin: ~
+            mMax: ~
+            mStep: 0.010000
             mDefaultVal: 1.000000
             mValues:
               []
@@ -536,7 +547,7 @@
             mDefaultVal: 0.500000
             mValues:
               []
-      ShaderPath: 6cf8e766-67a9-450d-9f3d-a4b2d116e753/5c5d45904baeaf452ef48de6682c2739/Data/cfd37fa/image_unlit.glsl
+      ShaderPath: 6cf8e766-67a9-450d-9f3d-a4b2d116e753/a6194a60716af1e105a4584dc05dbcf0/Data/cfd37fa/image_unlit.glsl
       Defines:
         []
       Properties:

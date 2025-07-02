@@ -5,6 +5,8 @@
   PrimaryAsset: !<reference> e326fb1f-f4a5-48db-b9cf-a145ade44f42
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
   AssetDataMap:
     ObjectPrefab: !<own> c461a34d-4da4-4479-816d-6f053601f4ee
   DependentFiles:
@@ -12,8 +14,6 @@
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-  ExtraData:
-    {}
 - !<SceneObject/0cb26e3d-aada-4c5a-afa1-9d2bde6583d1>
   PrefabRemaps:
     []

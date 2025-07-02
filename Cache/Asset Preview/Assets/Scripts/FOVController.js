@@ -25,7 +25,7 @@ let isPaused = false;
 init();
 
 function init() {
-    script.sliderScript.api.addOnValueChangedCallbacks(onSliderValueChanged);
+    script.sliderScript.addOnValueChangedCallbacks(onSliderValueChanged);
 }
 
 const updateEvent = script.createEvent('UpdateEvent');
@@ -79,7 +79,7 @@ function showSlider() {
     script.sliderScript.enabled = true;
     script.slider.enabled = true;
     sliderValue = initSliderVal;
-    script.sliderScript.api.setSliderValue(0);
+    script.sliderScript.setSliderValue(0);
 }
 
 function onSliderValueChanged(val) {

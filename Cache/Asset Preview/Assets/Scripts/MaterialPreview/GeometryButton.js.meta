@@ -5,6 +5,8 @@
   PrimaryAsset: !<reference> 3e9a3120-71e4-4378-8d35-845e17e18f86
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
   AssetDataMap:
     JavaScriptAsset: !<own> 429d81da-d3f2-482b-bfc5-38bfb636de42
   DependentFiles:
@@ -12,10 +14,10 @@
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-  ExtraData:
-    {}
 - !<ScriptAssetData/429d81da-d3f2-482b-bfc5-38bfb636de42>
   SvgIcon: ""
+  SetupScript:
+    code: ""
   Description: ""
   InternalVersion: 0
   VersionMajor: 0
@@ -32,14 +34,14 @@
     materialPreviewController: false
   ScriptTypesHidden:
     {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
-    - lightController: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+    - materialPreviewController: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
       dropDownMenu: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
       firstObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      materialPreviewController: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
       icons: !<reference.Texture[]>
         []
   ScriptTypes:
     -
       {}
-  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
