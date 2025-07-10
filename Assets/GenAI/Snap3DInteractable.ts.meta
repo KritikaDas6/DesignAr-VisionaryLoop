@@ -1,0 +1,60 @@
+- !<AssetImportMetadata/9a6a308b-0233-47f3-ad6c-6c0e67a2ebea>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> eef399e7-2d78-48ed-8e42-d8063edec8d1
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> eef399e7-2d78-48ed-8e42-d8063edec8d1
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> fe027d4f-2c50-4843-919b-0ee446dc9a08
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/fe027d4f-2c50-4843-919b-0ee446dc9a08>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: e6be13db-2383-4e52-8551-605876fafde6
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    colliderObj: false
+    displayPlate: false
+    img: false
+    mat: false
+    modelParent: false
+    promptDisplay: false
+    spinner: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - modelParent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      img: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      promptDisplay: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      spinner: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      mat: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      displayPlate: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      colliderObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input SceneObject modelParent
+    - // @input Component.Image img
+    - // @input Component.Text promptDisplay
+    - // @input SceneObject spinner
+    - // @input Asset.Material mat
+    - // @input SceneObject displayPlate
+    - // @input SceneObject colliderObj

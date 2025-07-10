@@ -1,0 +1,51 @@
+- !<AssetImportMetadata/d13fe30d-cb2c-451e-8069-da8142da6cbc>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> e00496a5-75fe-4aaa-b8c6-b22489cabb5f
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> e00496a5-75fe-4aaa-b8c6-b22489cabb5f
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 740f9213-b152-4a4f-8d16-e8df7ca3462f
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/740f9213-b152-4a4f-8d16-e8df7ca3462f>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: fb628e8e-d4b0-4376-85a1-dd2bdf00347f
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    asrQueryController: false
+    snap3DFactory: false
+    targetPosition: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - snap3DFactory: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      asrQueryController: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      targetPosition: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"Example of using generative 3D with Snap3D"}'
+    - // @input AssignableType snap3DFactory
+    - '// @ui {"widget":"separator"}'
+    - // @input AssignableType_1 asrQueryController
+    - // @input SceneObject targetPosition

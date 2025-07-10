@@ -1,7 +1,7 @@
 // @input Asset.RenderMeshVisual myRmv
 
 const SyncKitLogger = require("../../Utils/SyncKitLogger").SyncKitLogger;
-const HSLToRGB = require("SpectaclesInteractionKit.lspkg/Utils/color").HSLToRGB;
+const HSLToRGB = require("SpectaclesInteractionKit/Utils/color").HSLToRGB;
 
 // The speed at which the hue changes
 const COLOR_CHANGE_SPEED = 30;

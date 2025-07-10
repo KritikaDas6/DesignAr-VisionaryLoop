@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 1081
+    size: 1184
     values:
       - AddedAsset
       - AddedAsset/Customizable Progress Bar.lsc
@@ -23,6 +23,23 @@ CollapsedEntities:
       - Font/Manrope/Manrope-Medium.ttf
       - Font/Manrope/Manrope-Regular.ttf
       - Font/Manrope/Manrope-VariableFont_wght.ttf
+      - GenAI
+      - GenAI/AIAsset/AI Visual
+      - GenAI/AIAsset/AI Visual/Animation
+      - GenAI/AIAsset/AI Visual/Materials
+      - GenAI/AIAsset/AI Visual/Textures
+      - GenAI/AIAssistantUIBridge.ts
+      - GenAI/APIKeyHint.ts
+      - GenAI/ASRQueryController.ts
+      - GenAI/GeminiAssistant.ts
+      - GenAI/ImageGenerator.ts
+      - GenAI/InteractableImageGenerator.ts
+      - GenAI/InteractableSnap3DGenerator.ts
+      - GenAI/InternetAvailabilityPopUp.ts
+      - GenAI/OpenAIAssistant.ts
+      - GenAI/Snap3DInteractable.ts
+      - GenAI/Snap3DInteractableFactory.ts
+      - GenAI/SphereController.ts
       - ImageTexture
       - ImageTexture/Bird.mat
       - ImageTexture/Bird.png
@@ -40,8 +57,95 @@ CollapsedEntities:
       - ImageTexture/image_unlit 2.ss_graph
       - ImageTexture/image_unlit.ss_graph
       - ImageTexture/simple_pbr.ss_graph
+      - LSTween.lspkg
+      - LSTween.lspkg/Examples
+      - LSTween.lspkg/Examples/Assets
+      - LSTween.lspkg/Examples/Assets/Box.mesh
+      - LSTween.lspkg/Examples/Assets/Simple Diffuse.mat
+      - LSTween.lspkg/Examples/Assets/Simple Diffuse.ss_graph
+      - LSTween.lspkg/Examples/Assets/Sphere.mesh
+      - LSTween.lspkg/Examples/Example__ADD_TO_SCENE.prefab
+      - LSTween.lspkg/Examples/Scripts
+      - LSTween.lspkg/Examples/Scripts/Example_ChainTween.ts
+      - LSTween.lspkg/Examples/Scripts/Example_RawTween.ts
+      - LSTween.lspkg/Examples/Scripts/Example_YoyoTween.ts
+      - LSTween.lspkg/LSTween.ts
+      - LSTween.lspkg/RotationInterpolationType.ts
+      - LSTween.lspkg/TweenJS
+      - LSTween.lspkg/TweenJS/Easing.ts
+      - LSTween.lspkg/TweenJS/Group.ts
+      - LSTween.lspkg/TweenJS/Index.ts
+      - LSTween.lspkg/TweenJS/Interpolation.ts
+      - LSTween.lspkg/TweenJS/Now.ts
+      - LSTween.lspkg/TweenJS/Sequence.ts
+      - LSTween.lspkg/TweenJS/Tween.ts
+      - LSTween.lspkg/TweenJS/Version.ts
+      - LSTween.lspkg/TweenJS/mainGroup.ts
+      - LSTween.lspkg/package.native
       - Prefab
       - Prefab/Menu.prefab
+      - Remote Service Gateway.lspkg
+      - Remote Service Gateway.lspkg/Helpers
+      - Remote Service Gateway.lspkg/Helpers/AudioProcessor.ts
+      - Remote Service Gateway.lspkg/Helpers/DynamicAudioOutput.ts
+      - Remote Service Gateway.lspkg/Helpers/MicrophoneRecorder.ts
+      - Remote Service Gateway.lspkg/Helpers/VideoController.ts
+      - Remote Service Gateway.lspkg/HostedExternal
+      - Remote Service Gateway.lspkg/HostedExternal/Examples
+      - Remote Service Gateway.lspkg/HostedExternal/Examples/ExampleGeminiCalls.ts
+      - Remote Service Gateway.lspkg/HostedExternal/Examples/ExampleGeminiLive.ts
+      - Remote Service Gateway.lspkg/HostedExternal/Examples/ExampleOAICalls.ts
+      - Remote Service Gateway.lspkg/HostedExternal/Examples/ExampleOAIRealtime.ts
+      - Remote Service Gateway.lspkg/HostedExternal/Gemini.ts
+      - Remote Service Gateway.lspkg/HostedExternal/GeminiTypes.ts
+      - Remote Service Gateway.lspkg/HostedExternal/OpenAI.ts
+      - Remote Service Gateway.lspkg/HostedExternal/OpenAITypes.ts
+      - Remote Service Gateway.lspkg/HostedExternal/RemoteServiceModules
+      - Remote Service Gateway.lspkg/HostedExternal/RemoteServiceModules/Gemini_Live.remoteServiceModule
+      - Remote Service Gateway.lspkg/HostedExternal/RemoteServiceModules/Gemini_Sync.remoteServiceModule
+      - Remote Service Gateway.lspkg/HostedExternal/RemoteServiceModules/OpenAi_Completions.remoteServiceModule
+      - Remote Service Gateway.lspkg/HostedExternal/RemoteServiceModules/OpenAi_Generations.remoteServiceModule
+      - Remote Service Gateway.lspkg/HostedExternal/RemoteServiceModules/OpenAi_Realtime.remoteServiceModule
+      - Remote Service Gateway.lspkg/HostedExternal/RemoteServiceModules/OpenAi_Speech.remoteServiceModule
+      - Remote Service Gateway.lspkg/HostedSnap
+      - Remote Service Gateway.lspkg/HostedSnap/DeepSeekTypes.ts
+      - Remote Service Gateway.lspkg/HostedSnap/Deepseek.ts
+      - Remote Service Gateway.lspkg/HostedSnap/Examples
+      - Remote Service Gateway.lspkg/HostedSnap/Examples/ExampleDeepseekCalls.ts
+      - Remote Service Gateway.lspkg/HostedSnap/Examples/ExampleSnap3D.ts
+      - Remote Service Gateway.lspkg/HostedSnap/RemoteServiceModules
+      - Remote Service Gateway.lspkg/HostedSnap/RemoteServiceModules/Deepseek_Completions.remoteServiceModule
+      - Remote Service Gateway.lspkg/HostedSnap/RemoteServiceModules/Remote Media Module.remoteMediaModule
+      - Remote Service Gateway.lspkg/HostedSnap/RemoteServiceModules/Snap3D_GetStatus.remoteServiceModule
+      - Remote Service Gateway.lspkg/HostedSnap/RemoteServiceModules/Snap3D_Submit.remoteServiceModule
+      - Remote Service Gateway.lspkg/HostedSnap/Snap3D.ts
+      - Remote Service Gateway.lspkg/HostedSnap/Snap3DTypes.ts
+      - Remote Service Gateway.lspkg/Prefabs
+      - Remote Service Gateway.lspkg/Prefabs/RemoteServiceGatewayExamples.prefab
+      - Remote Service Gateway.lspkg/README.md
+      - Remote Service Gateway.lspkg/RemoteServiceGatewayCredentials.ts
+      - Remote Service Gateway.lspkg/Resources
+      - Remote Service Gateway.lspkg/Resources/Audio Output.audioOutput
+      - Remote Service Gateway.lspkg/Resources/Microphone Audio.micaudio
+      - Remote Service Gateway.lspkg/Resources/Visuals
+      - Remote Service Gateway.lspkg/Resources/Visuals/LoadingSpinner
+      - Remote Service Gateway.lspkg/Resources/Visuals/LoadingSpinner/LoadingSpinner
+      - Remote Service Gateway.lspkg/Resources/Visuals/LoadingSpinner/LoadingSpinner.prefab
+      - Remote Service Gateway.lspkg/Resources/Visuals/LoadingSpinner/LoadingSpinner/LoadingSpinner.mat
+      - Remote Service Gateway.lspkg/Resources/Visuals/LoadingSpinner/LoadingSpinner/LoadingSpinner.mesh
+      - Remote Service Gateway.lspkg/Resources/Visuals/LoadingSpinner/LoadingSpinner/LoadingSpinner.ss_graph
+      - Remote Service Gateway.lspkg/Resources/Visuals/LoadingSpinner/LoadingSpinner/LoadingSpinner.ts
+      - Remote Service Gateway.lspkg/Resources/Visuals/Materials
+      - Remote Service Gateway.lspkg/Resources/Visuals/Materials/Image.mat
+      - Remote Service Gateway.lspkg/Resources/Visuals/Materials/Image.png
+      - Remote Service Gateway.lspkg/Resources/Visuals/Materials/SnapImage3D.mat
+      - Remote Service Gateway.lspkg/Resources/Visuals/Materials/Unlit.mat
+      - Remote Service Gateway.lspkg/Resources/Visuals/Materials/flat.ss_graph
+      - Remote Service Gateway.lspkg/Resources/Visuals/Materials/unlit.ss_graph
+      - Remote Service Gateway.lspkg/Utils
+      - Remote Service Gateway.lspkg/Utils/Event.ts
+      - Remote Service Gateway.lspkg/Utils/Promisfy.ts
+      - Remote Service Gateway.lspkg/package.native
       - Resource Bar Pack
       - Resource Bar Pack/.hidden
       - "Resource Bar Pack/.hidden/Bar Mat 1 [EDIT ME].ss_graph"
@@ -114,7 +218,6 @@ CollapsedEntities:
       - Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Segmented Bar/Design 1/Life bars 1.png
       - Scene.scene
       - Script 2.js
-      - Script 3.js
       - Script.js
       - Script_ContainerImage
       - Script_ContainerImage/ImageContainerScaler.ts
@@ -149,6 +252,7 @@ CollapsedEntities:
       - "Spawn Object at World Mesh On Tap/[Mesh Builder Example] Pipe Between Objects/Textures/MaterialParams.png"
       - "Spawn Object at World Mesh On Tap/[Mesh Builder Example] Pipe Between Objects/Textures/Normal.png"
       - Spawn Object at World Mesh On Tap/package.native
+      - SpectaclesInteractionKit
       - SpectaclesInteractionKit/Assets
       - SpectaclesInteractionKit/Assets/Audio
       - SpectaclesInteractionKit/Assets/Audio/HoverAudioTrack.wav
@@ -973,7 +1077,6 @@ CollapsedEntities:
       - SpectaclesSyncKit.lspkg/Mapping/src/Utils/SharedFunctions.ts
       - SpectaclesSyncKit.lspkg/Readme.md
       - SpectaclesSyncKit.lspkg/SpectaclesSyncKit.prefab
-      - SpectaclesSyncKit.lspkg/Utils
       - SpectaclesSyncKit.lspkg/Utils/EnableObjectsOnAwake.ts
       - SpectaclesSyncKit.lspkg/Utils/Helpers.ts
       - SpectaclesSyncKit.lspkg/Utils/Observable.ts

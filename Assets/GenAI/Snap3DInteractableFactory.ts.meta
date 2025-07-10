@@ -1,0 +1,57 @@
+- !<AssetImportMetadata/5a752f1f-fdda-4a87-838a-8cb6e79d5ae4>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 84adcede-03db-452a-b3cd-249a0ceab96b
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 84adcede-03db-452a-b3cd-249a0ceab96b
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> b166ae56-520a-4781-902c-893e903b3051
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/b166ae56-520a-4781-902c-893e903b3051>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 3c1f13f6-d948-4720-9ab4-6dc719e2e061
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    prompt: false
+    refineMesh: false
+    runOnTap: false
+    snap3DInteractablePrefab: false
+    useVertexColor: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - prompt: A cute dog wearing a hat
+      refineMesh: true
+      useVertexColor: false
+      runOnTap: false
+      snap3DInteractablePrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Submit and Get Status Example"}'
+    - '// @input string prompt = "A cute dog wearing a hat" {"widget":"text_area"}'
+    - // @input bool refineMesh = true
+    - // @input bool useVertexColor
+    - '// @ui {"widget":"group_end"}'
+    - // @input bool runOnTap
+    - // @input Asset.ObjectPrefab snap3DInteractablePrefab
