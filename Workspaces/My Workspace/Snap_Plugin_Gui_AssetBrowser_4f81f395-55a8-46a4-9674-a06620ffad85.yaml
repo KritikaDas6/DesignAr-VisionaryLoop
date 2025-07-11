@@ -1,8 +1,9 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 1184
+    size: 1258
     values:
+      - ""
       - AddedAsset
       - AddedAsset/Customizable Progress Bar.lsc
       - AddedAsset/Device Camera Texture.deviceCameraTexture
@@ -11,8 +12,108 @@ CollapsedEntities:
       - AddedAsset/Echopark.hdr/Specular
       - AddedAsset/Precise Object Toggle.lsc
       - AddedAsset/Render Target.renderTarget
+      - AddedAsset/Resource Bar Pack
+      - "AddedAsset/Resource Bar Pack/.hidden/Bar Mat 1 [EDIT ME].ss_graph"
+      - AddedAsset/Resource Bar Pack/.hidden/Info Card Background.ss_graph
+      - AddedAsset/Resource Bar Pack/.hidden/SpritePreset.lsmat.mat
+      - AddedAsset/Resource Bar Pack/Resource_Bar_Pack____PUT_IN_ORTHO_CAM.prefab
+      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._
+      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]"
+      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Fonts"
+      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Fonts/Lato-Bold.ttf"
+      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Fonts/Lato-Regular.ttf"
+      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Materials"
+      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Materials/Info Card Background.mat"
+      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Textures"
+      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Textures/BaseTex.png"
+      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Textures/Icon.png"
+      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials
+      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Continuous Bar Material
+      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Continuous Bar Material/Bar Mat 1 [EDIT ME].mat"
+      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Continuous Bar Material/Bar Mat 2 [EDIT ME].mat"
+      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Continuous Bar Material/Bar Mat 3 [EDIT ME].mat"
+      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Continuous Bar Material/Bar Mat 4 [EDIT ME].mat"
+      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Continuous Bar Material/Bar Mat 5 [EDIT ME].mat"
+      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Frame Materials
+      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Frame Materials/Frame Material 1 [EDIT ME].mat"
+      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Frame Materials/Frame Material 2 [EDIT ME].mat"
+      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Frame Materials/Frame Material 3 [EDIT ME].mat"
+      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Frame Materials/Frame Material 4 [EDIT ME].mat"
+      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Segmented Bar Materials
+      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Segmented Bar Materials/Segment Bar Mat [EDIT ME].mat"
+      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Scripts
+      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Scripts/Behavior.js
+      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Scripts/ContinuousBarUpdaterScript.js
+      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Scripts/Documentation.js
+      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Scripts/SegmentedBarUpdaterScript.js
+      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures
+      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs
+      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar
+      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 2
+      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 2/Life 2.png
+      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 2/Life Bar 2.png
+      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 4
+      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 4/Life 4.png
+      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 4/Life bar 4.png
+      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 5
+      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 5/Life 5.png
+      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 5/Life bar 5.png
+      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 7
+      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 7/Life 7.png
+      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 7/Life Bar 7.png
+      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Segmented Bar
+      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Segmented Bar/Design 1
+      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Segmented Bar/Design 1/Hearth.png
+      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Segmented Bar/Design 1/Life bars 1.png
       - Base.png
       - ButtonToggleFunctions.ts
+      - DepthCache
+      - DepthCache/DepthCache.prefab
+      - DepthCache/Images/MicIcon.png
+      - DepthCache/Images/loading.gif
+      - DepthCache/Materials
+      - DepthCache/Materials/CaptureTexture.mat
+      - DepthCache/Materials/CircleOutline.mat
+      - DepthCache/Materials/MyAi_Voice.mat
+      - DepthCache/Materials/MyAi_Voice.ss_graph
+      - DepthCache/Materials/PinchButton.mat
+      - DepthCache/Materials/SWIS_flat_color.ss_graph
+      - DepthCache/Materials/SWIS_tile.mat
+      - DepthCache/Materials/White.mat
+      - DepthCache/Materials/WorldLabelFrame.mat
+      - DepthCache/Materials/circleOutline.ss_graph
+      - DepthCache/Materials/label.ss_graph
+      - DepthCache/Materials/loadingGif.mat
+      - DepthCache/Materials/loadingGif.ss_graph
+      - DepthCache/Materials/micIcon.mat
+      - DepthCache/Materials/pointRedLabeled.mat
+      - DepthCache/Materials/unlitColor.ss_graph
+      - DepthCache/Materials/unlitTexture.ss_graph
+      - DepthCache/Materials/unlitTextureColor.ss_graph
+      - DepthCache/Mesh/SWIS_tile_solid.mesh
+      - DepthCache/Mesh/Unit Box.mesh
+      - DepthCache/Mesh/Unit Plane.mesh
+      - DepthCache/Mesh/Unit Sphere.mesh
+      - DepthCache/Mesh/arrow.mesh
+      - DepthCache/Modules
+      - DepthCache/Modules/Camera Module.cameraModule
+      - DepthCache/Prefab
+      - DepthCache/Prefab/ColoredPoint.prefab
+      - DepthCache/Prefab/WorldArrow.prefab
+      - DepthCache/Prefab/WorldLabel.prefab
+      - DepthCache/Scripts
+      - DepthCache/Scripts/ASRController.ts
+      - DepthCache/Scripts/DebugVisualizer.ts
+      - DepthCache/Scripts/DepthCache.ts
+      - DepthCache/Scripts/FaceCamera.ts
+      - DepthCache/Scripts/GeminiAPI.ts
+      - DepthCache/Scripts/Labels.ts
+      - DepthCache/Scripts/Loading.ts
+      - DepthCache/Scripts/ResponseUI.ts
+      - DepthCache/Scripts/SceneController.ts
+      - DepthCache/Scripts/SpeechUI.ts
+      - DepthCache/Scripts/TouchDownButton.ts
+      - DepthCache/Scripts/WorldLabel.ts
       - Font
       - Font/DynaPuff
       - Font/DynaPuff/DynaPuff-Bold.ttf
@@ -24,16 +125,32 @@ CollapsedEntities:
       - Font/Manrope/Manrope-Regular.ttf
       - Font/Manrope/Manrope-VariableFont_wght.ttf
       - GenAI
-      - GenAI/AIAsset/AI Visual
       - GenAI/AIAsset/AI Visual/Animation
+      - GenAI/AIAsset/AI Visual/Animation/baselayer
+      - GenAI/AIAsset/AI Visual/Animation/baselayer/BaseLayer.animationMixerLayer
+      - GenAI/AIAsset/AI Visual/Animation/constraint_rotation_45
+      - GenAI/AIAsset/AI Visual/Animation/constraint_rotation_45/Constraint_rotation_45.animationLayer
       - GenAI/AIAsset/AI Visual/Materials
-      - GenAI/AIAsset/AI Visual/Textures
+      - GenAI/AIAsset/AI Visual/Materials/ActivityIndicator.mat
+      - GenAI/AIAsset/AI Visual/Materials/ActivityIndicator.ss_graph
+      - GenAI/AIAsset/AI Visual/Materials/Assist_sphere_Idle_L_T_T.mat
+      - GenAI/AIAsset/AI Visual/Materials/Assist_sphere_Idle_L_T_T.ss_graph
+      - GenAI/AIAsset/AI Visual/Materials/HoverColor.mat
+      - GenAI/AIAsset/AI Visual/Materials/HoverColor.ss_graph
+      - GenAI/AIAsset/AI Visual/Textures/Microphone.png
+      - GenAI/AIAsset/AI Visual/Textures/NoInternetAlert.png
+      - GenAI/AIAsset/AI Visual/Textures/NoInternetWarning.mat
+      - GenAI/AIAsset/AI Visual/Textures/Noise_combine_512.png
+      - GenAI/AIAsset/AI Visual/Textures/purple_halfcolor.png
+      - GenAI/AIAsset/AI Visual/Textures/yellow_alt.png
+      - GenAI/AIAsset/AI Visual/Textures/yellow_halfcolor.png
+      - GenAI/AIAsset/Prefab
+      - GenAI/AIAsset/Prefab/Snap3DInteractables.prefab
       - GenAI/AIAssistantUIBridge.ts
       - GenAI/APIKeyHint.ts
       - GenAI/ASRQueryController.ts
       - GenAI/GeminiAssistant.ts
-      - GenAI/ImageGenerator.ts
-      - GenAI/InteractableImageGenerator.ts
+      - GenAI/GenAI.prefab
       - GenAI/InteractableSnap3DGenerator.ts
       - GenAI/InternetAvailabilityPopUp.ts
       - GenAI/OpenAIAssistant.ts
@@ -44,7 +161,7 @@ CollapsedEntities:
       - ImageTexture/Bird.mat
       - ImageTexture/Bird.png
       - ImageTexture/BirdTrace.mat
-      - ImageTexture/ImageMaterial 14.mat
+      - ImageTexture/BirdTrace.png
       - ImageTexture/SketchRider.mat
       - ImageTexture/SketchRider.png
       - ImageTexture/SketchRiderTrace.mat
@@ -54,12 +171,8 @@ CollapsedEntities:
       - ImageTexture/Test5.mat
       - ImageTexture/Test5.png
       - ImageTexture/flat.ss_graph
-      - ImageTexture/image_unlit 2.ss_graph
-      - ImageTexture/image_unlit.ss_graph
       - ImageTexture/simple_pbr.ss_graph
       - LSTween.lspkg
-      - LSTween.lspkg/Examples
-      - LSTween.lspkg/Examples/Assets
       - LSTween.lspkg/Examples/Assets/Box.mesh
       - LSTween.lspkg/Examples/Assets/Simple Diffuse.mat
       - LSTween.lspkg/Examples/Assets/Simple Diffuse.ss_graph
@@ -124,10 +237,8 @@ CollapsedEntities:
       - Remote Service Gateway.lspkg/Prefabs/RemoteServiceGatewayExamples.prefab
       - Remote Service Gateway.lspkg/README.md
       - Remote Service Gateway.lspkg/RemoteServiceGatewayCredentials.ts
-      - Remote Service Gateway.lspkg/Resources
       - Remote Service Gateway.lspkg/Resources/Audio Output.audioOutput
       - Remote Service Gateway.lspkg/Resources/Microphone Audio.micaudio
-      - Remote Service Gateway.lspkg/Resources/Visuals
       - Remote Service Gateway.lspkg/Resources/Visuals/LoadingSpinner
       - Remote Service Gateway.lspkg/Resources/Visuals/LoadingSpinner/LoadingSpinner
       - Remote Service Gateway.lspkg/Resources/Visuals/LoadingSpinner/LoadingSpinner.prefab
@@ -135,10 +246,6 @@ CollapsedEntities:
       - Remote Service Gateway.lspkg/Resources/Visuals/LoadingSpinner/LoadingSpinner/LoadingSpinner.mesh
       - Remote Service Gateway.lspkg/Resources/Visuals/LoadingSpinner/LoadingSpinner/LoadingSpinner.ss_graph
       - Remote Service Gateway.lspkg/Resources/Visuals/LoadingSpinner/LoadingSpinner/LoadingSpinner.ts
-      - Remote Service Gateway.lspkg/Resources/Visuals/Materials
-      - Remote Service Gateway.lspkg/Resources/Visuals/Materials/Image.mat
-      - Remote Service Gateway.lspkg/Resources/Visuals/Materials/Image.png
-      - Remote Service Gateway.lspkg/Resources/Visuals/Materials/SnapImage3D.mat
       - Remote Service Gateway.lspkg/Resources/Visuals/Materials/Unlit.mat
       - Remote Service Gateway.lspkg/Resources/Visuals/Materials/flat.ss_graph
       - Remote Service Gateway.lspkg/Resources/Visuals/Materials/unlit.ss_graph
@@ -146,81 +253,10 @@ CollapsedEntities:
       - Remote Service Gateway.lspkg/Utils/Event.ts
       - Remote Service Gateway.lspkg/Utils/Promisfy.ts
       - Remote Service Gateway.lspkg/package.native
-      - Resource Bar Pack
-      - Resource Bar Pack/.hidden
-      - "Resource Bar Pack/.hidden/Bar Mat 1 [EDIT ME].ss_graph"
-      - Resource Bar Pack/.hidden/Image.lsmat.mat
-      - Resource Bar Pack/.hidden/Image1.lsmat.ss_graph
-      - Resource Bar Pack/.hidden/Image10.lsmat.mat
-      - Resource Bar Pack/.hidden/Image11.lsmat.mat
-      - Resource Bar Pack/.hidden/Image12.lsmat.mat
-      - Resource Bar Pack/.hidden/Image13.lsmat.mat
-      - Resource Bar Pack/.hidden/Image14.lsmat.mat
-      - Resource Bar Pack/.hidden/Image15.lsmat.mat
-      - Resource Bar Pack/.hidden/Image2.lsmat.mat
-      - Resource Bar Pack/.hidden/Image3.lsmat.mat
-      - Resource Bar Pack/.hidden/Image4.lsmat.mat
-      - Resource Bar Pack/.hidden/Image5.lsmat.mat
-      - Resource Bar Pack/.hidden/Image6.lsmat.mat
-      - Resource Bar Pack/.hidden/Image7.lsmat.mat
-      - Resource Bar Pack/.hidden/Image8.lsmat.mat
-      - Resource Bar Pack/.hidden/Image9.lsmat.mat
-      - Resource Bar Pack/.hidden/Info Card Background.ss_graph
-      - Resource Bar Pack/.hidden/SpritePreset.lsmat.mat
-      - Resource Bar Pack/Resource_Bar_Pack____PUT_IN_ORTHO_CAM.prefab
-      - Resource Bar Pack/_Progress Bar Ressources._
-      - "Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]"
-      - "Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Fonts"
-      - "Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Fonts/Lato-Bold.ttf"
-      - "Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Fonts/Lato-Regular.ttf"
-      - "Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Materials"
-      - "Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Materials/Info Card Background.mat"
-      - "Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Textures"
-      - "Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Textures/BaseTex.png"
-      - "Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Textures/Icon.png"
-      - Resource Bar Pack/_Progress Bar Ressources._/Materials
-      - Resource Bar Pack/_Progress Bar Ressources._/Materials/Continuous Bar Material
-      - "Resource Bar Pack/_Progress Bar Ressources._/Materials/Continuous Bar Material/Bar Mat 1 [EDIT ME].mat"
-      - "Resource Bar Pack/_Progress Bar Ressources._/Materials/Continuous Bar Material/Bar Mat 2 [EDIT ME].mat"
-      - "Resource Bar Pack/_Progress Bar Ressources._/Materials/Continuous Bar Material/Bar Mat 3 [EDIT ME].mat"
-      - "Resource Bar Pack/_Progress Bar Ressources._/Materials/Continuous Bar Material/Bar Mat 4 [EDIT ME].mat"
-      - "Resource Bar Pack/_Progress Bar Ressources._/Materials/Continuous Bar Material/Bar Mat 5 [EDIT ME].mat"
-      - Resource Bar Pack/_Progress Bar Ressources._/Materials/Frame Materials
-      - "Resource Bar Pack/_Progress Bar Ressources._/Materials/Frame Materials/Frame Material 1 [EDIT ME].mat"
-      - "Resource Bar Pack/_Progress Bar Ressources._/Materials/Frame Materials/Frame Material 2 [EDIT ME].mat"
-      - "Resource Bar Pack/_Progress Bar Ressources._/Materials/Frame Materials/Frame Material 3 [EDIT ME].mat"
-      - "Resource Bar Pack/_Progress Bar Ressources._/Materials/Frame Materials/Frame Material 4 [EDIT ME].mat"
-      - Resource Bar Pack/_Progress Bar Ressources._/Materials/Segmented Bar Materials
-      - "Resource Bar Pack/_Progress Bar Ressources._/Materials/Segmented Bar Materials/Segment Bar Mat [EDIT ME].mat"
-      - Resource Bar Pack/_Progress Bar Ressources._/Scripts
-      - Resource Bar Pack/_Progress Bar Ressources._/Scripts/Behavior.js
-      - Resource Bar Pack/_Progress Bar Ressources._/Scripts/ContinuousBarUpdaterScript.js
-      - Resource Bar Pack/_Progress Bar Ressources._/Scripts/Documentation.js
-      - Resource Bar Pack/_Progress Bar Ressources._/Scripts/SegmentedBarUpdaterScript.js
-      - Resource Bar Pack/_Progress Bar Ressources._/Textures
-      - Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs
-      - Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar
-      - Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 2
-      - Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 2/Life 2.png
-      - Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 2/Life Bar 2.png
-      - Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 4
-      - Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 4/Life 4.png
-      - Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 4/Life bar 4.png
-      - Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 5
-      - Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 5/Life 5.png
-      - Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 5/Life bar 5.png
-      - Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 7
-      - Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 7/Life 7.png
-      - Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 7/Life Bar 7.png
-      - Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Segmented Bar
-      - Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Segmented Bar/Design 1
-      - Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Segmented Bar/Design 1/Hearth.png
-      - Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Segmented Bar/Design 1/Life bars 1.png
       - Scene.scene
       - Script 2.js
       - Script.js
       - Script_ContainerImage
-      - Script_ContainerImage/ImageContainerScaler.ts
       - Script_HandFollower
       - Script_HandFollower/DisplayMenuOnOff.ts
       - Script_HandFollower/HandFollower.ts
@@ -253,7 +289,6 @@ CollapsedEntities:
       - "Spawn Object at World Mesh On Tap/[Mesh Builder Example] Pipe Between Objects/Textures/Normal.png"
       - Spawn Object at World Mesh On Tap/package.native
       - SpectaclesInteractionKit
-      - SpectaclesInteractionKit/Assets
       - SpectaclesInteractionKit/Assets/Audio
       - SpectaclesInteractionKit/Assets/Audio/HoverAudioTrack.wav
       - SpectaclesInteractionKit/Assets/Audio/TriggerEndAudioTrack.wav
@@ -266,43 +301,56 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Materials/BaseHandVisualsMaterials/HandOccluderRight.mat
       - SpectaclesInteractionKit/Assets/Materials/BaseHandVisualsMaterials/RadialGradientOcclusion.mat
       - SpectaclesInteractionKit/Assets/Materials/BitmojiMaterial.mat
-      - SpectaclesInteractionKit/Assets/Materials/ContainerImageMaterial.mat
       - SpectaclesInteractionKit/Assets/Materials/LogoMaterial.mat
       - SpectaclesInteractionKit/Assets/Materials/NormalBasedTargetOutline.mat
+      - SpectaclesInteractionKit/Assets/Materials/PinchButtonDarkInactive.mat
+      - SpectaclesInteractionKit/Assets/Materials/PinchButtonDarkRadial.mat
+      - SpectaclesInteractionKit/Assets/Materials/PinchButtonToggleOffIcon.mat
+      - SpectaclesInteractionKit/Assets/Materials/PinchButtonToggleOnDefault.mat
+      - SpectaclesInteractionKit/Assets/Materials/PinchButtonToggleOnIcon.mat
+      - SpectaclesInteractionKit/Assets/Materials/PinchButtonToggleOnSelect.mat
+      - SpectaclesInteractionKit/Assets/Materials/PlatformUI
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/ButtonHover.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/ButtonIdle.mat
+      - SpectaclesInteractionKit/Assets/Materials/PlatformUI/ButtonPinched.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/CapsuleButtonHover.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/CapsuleButtonIdle.mat
+      - SpectaclesInteractionKit/Assets/Materials/PlatformUI/CapsuleButtonPinched.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/RoundButtonGlowHover.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/RoundButtonGlowIdle.mat
+      - SpectaclesInteractionKit/Assets/Materials/PlatformUI/RoundButtonGlowPinched.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/RoundButtonHover.mat
+      - SpectaclesInteractionKit/Assets/Materials/PlatformUI/RoundButtonPinched.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/RoundButton_Idle.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/ScrollBackground.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/ScrollButtonHover.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/ScrollButtonIdle.mat
+      - SpectaclesInteractionKit/Assets/Materials/PlatformUI/ScrollButtonPinched.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/Slider_Platform 2.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/Slider_Platform.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/StateButtonToggledHover.mat
+      - SpectaclesInteractionKit/Assets/Materials/PlatformUI/StateButtonToggledPinched.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/ToggleButtonToggledHover.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/ToggleButtonToggledIdle.mat
+      - SpectaclesInteractionKit/Assets/Materials/PlatformUI/ToggleButtonToggledPinched.mat
       - SpectaclesInteractionKit/Assets/Materials/ScaleBasedTargetOutline.mat
       - SpectaclesInteractionKit/Assets/Materials/ScrollBarButton.mat
       - SpectaclesInteractionKit/Assets/Materials/ScrollBarSlider.mat
       - SpectaclesInteractionKit/Assets/Materials/SimplePBRMaterial.mat
+      - SpectaclesInteractionKit/Assets/Materials/SliderMat
+      - SpectaclesInteractionKit/Assets/Materials/SliderMat/PinchButtonDarkDefault.mat
+      - SpectaclesInteractionKit/Assets/Materials/SliderMat/PinchButtonOnSelect.mat
       - SpectaclesInteractionKit/Assets/Materials/SliderMat/SliderMat.mat
       - SpectaclesInteractionKit/Assets/Materials/SliderMat/TargetOutlineMaterial.mat
       - SpectaclesInteractionKit/Assets/Materials/SpritePreset.mat
       - SpectaclesInteractionKit/Assets/Materials/TargetOutlineMaterial.mat
       - SpectaclesInteractionKit/Assets/Materials/Text3DDefault.mat
-      - SpectaclesInteractionKit/Assets/Meshes
       - SpectaclesInteractionKit/Assets/Meshes/BoxMesh.mesh
       - SpectaclesInteractionKit/Assets/Meshes/ButtonCapsuleMesh.mesh
       - SpectaclesInteractionKit/Assets/Meshes/ButtonSphereMesh.mesh
       - SpectaclesInteractionKit/Assets/Meshes/Check.mesh
       - SpectaclesInteractionKit/Assets/Meshes/LeftHandMesh.mesh
       - SpectaclesInteractionKit/Assets/Meshes/PlaneMesh.mesh
-      - SpectaclesInteractionKit/Assets/Meshes/PlatformUI
-      - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/ImageMaterial.mat
       - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/PlatformCapsuleButton.mesh
       - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/PlatformSphereButton.mesh
       - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/RoundButton.mesh
@@ -317,28 +365,40 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Meshes/SnapGhost_Mesh.mesh
       - SpectaclesInteractionKit/Assets/Meshes/SphereMesh.mesh
       - SpectaclesInteractionKit/Assets/Meshes/Uncheck.mesh
+      - SpectaclesInteractionKit/Assets/Shaders
       - SpectaclesInteractionKit/Assets/Shaders/BaseHandVisualsShaders
       - SpectaclesInteractionKit/Assets/Shaders/BaseHandVisualsShaders/FingerHighlight.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/BaseHandVisualsShaders/FingerTipGlow.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/BaseHandVisualsShaders/HandOccluder.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/BaseHandVisualsShaders/RadialGradientOcclusion.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/NormalBasedTargetOutline.ss_graph
+      - SpectaclesInteractionKit/Assets/Shaders/PinchButton-ActiveOrInActive.ss_graph
+      - SpectaclesInteractionKit/Assets/Shaders/PinchDarkRadial.ss_graph
+      - SpectaclesInteractionKit/Assets/Shaders/PlatformUI
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/ButtonHover.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/ButtonIdle.ss_graph
+      - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/ButtonPinched.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/CapsuleButtonHover.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/CapsuleButtonIdle.ss_graph
+      - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/CapsuleButtonPinched.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/RoundButtonGlowHover.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/RoundButtonGlowIdle.ss_graph
+      - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/RoundButtonGlowPinched.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/RoundButtonHover.ss_graph
+      - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/RoundButtonPinched.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/RoundButton_Idle.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/ScrollBackground.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/ScrollButtonHover.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/ScrollButtonIdle.ss_graph
+      - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/ScrollButtonPinched.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/Slider_Platform 2.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/Slider_Platform.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/StateButtonToggledHover.ss_graph
+      - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/StateButtonToggledPinched.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/ScaleBasedTargetOutline.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/ScrollBarSlider.ss_graph
+      - SpectaclesInteractionKit/Assets/Shaders/SliderShaders
+      - SpectaclesInteractionKit/Assets/Shaders/SliderShaders/PinchButton-Default.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/SliderShaders/Slider.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/SpritePreset.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/TargetOutline.ss_graph
@@ -349,9 +409,11 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Shaders/simple_pbr.ss_graph
       - SpectaclesInteractionKit/Assets/Textures/2DBitmojiAvatar.png
       - SpectaclesInteractionKit/Assets/Textures/Base.png
+      - SpectaclesInteractionKit/Assets/Textures/BaseHandVisualsTextures
       - SpectaclesInteractionKit/Assets/Textures/BaseHandVisualsTextures/Glow.png
       - SpectaclesInteractionKit/Assets/Textures/BaseHandVisualsTextures/handMeshNewMask.png
       - SpectaclesInteractionKit/Assets/Textures/BaseHandVisualsTextures/handMeshNewMaskColored.png
+      - SpectaclesInteractionKit/Assets/Textures/BaseHandVisualsTextures/handMeshPinchTexture.png
       - SpectaclesInteractionKit/Assets/Textures/BaseHandVisualsTextures/handMeshTapTexture.png
       - SpectaclesInteractionKit/Assets/Textures/BaseHandVisualsTextures/mask_fingertip.jpg
       - SpectaclesInteractionKit/Assets/Textures/BaseHandVisualsTextures/mask_fingertip_colored.png
@@ -360,13 +422,11 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Textures/BaseHandVisualsTextures/occlusionGradient.png
       - SpectaclesInteractionKit/Assets/Textures/MaterialParams.png
       - SpectaclesInteractionKit/Assets/Textures/Normal.png
-      - SpectaclesInteractionKit/Assets/Textures/PlatformUI
       - SpectaclesInteractionKit/Assets/Textures/PlatformUI/ArrowDown.png
       - SpectaclesInteractionKit/Assets/Textures/PlatformUI/ArrowUp.png
       - SpectaclesInteractionKit/Assets/Textures/PlatformUI/Close.png
       - SpectaclesInteractionKit/Assets/Textures/PlatformUI/FollowIconBlack.png
       - SpectaclesInteractionKit/Assets/Textures/PlatformUI/FollowIconWhite.png
-      - SpectaclesInteractionKit/Assets/Textures/PlatformUI/Image.png
       - SpectaclesInteractionKit/Assets/Textures/PlatformUI/Mask_simple_reflection_ellipse.png
       - SpectaclesInteractionKit/Assets/Textures/PlatformUI/SimpleIdle.jpg
       - SpectaclesInteractionKit/Assets/Textures/PlatformUI/SimpleIdle_05.jpg
@@ -377,10 +437,8 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Textures/Rectangle-Active.png
       - SpectaclesInteractionKit/Assets/Textures/Rectangle-Inactive.png
       - SpectaclesInteractionKit/Assets/Textures/Rectangle.png
-      - SpectaclesInteractionKit/Assets/Textures/SIKContainerExampleImage.jpg
       - SpectaclesInteractionKit/Assets/Textures/SIKLogo.png
       - SpectaclesInteractionKit/Assets/Textures/ScrollBarRectangle.png
-      - SpectaclesInteractionKit/Components
       - SpectaclesInteractionKit/Components/Helpers
       - SpectaclesInteractionKit/Components/Helpers/ButtonFeedback.ts
       - SpectaclesInteractionKit/Components/Helpers/CapsuleMeshCustomizer.ts
@@ -435,12 +493,10 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Components/Interaction/InteractorLineVisual/InteractorLineRenderer.ts
       - SpectaclesInteractionKit/Components/Interaction/InteractorLineVisual/InteractorLineVisual.ts
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/ContainerFrame.ts
-      - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/FrameMaterial.mat
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/FrameMaterial.ss_graph
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/Ghost Material.mat
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/Ghost Material.ss_graph
-      - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/Image.mat
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/Label.mat
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/Test4.png
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/container-button.mat
@@ -452,6 +508,7 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Meshes/Frame_Mid.mesh
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Meshes/SphereButton.mesh
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Meshes/SysSettings_settings_button.mesh
+      - SpectaclesInteractionKit/Components/UI/ContainerFrame/Meshes/pinch-depth-button.mesh
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Prefabs
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Prefabs/FramePrefab.prefab
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Prefabs/container-button.prefab
@@ -472,10 +529,12 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/ForceContainerParent.ts
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/FrameInputHandler.ts
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/HoverBehavior.ts
+      - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/LabeledPinchButton.ts
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/SimpleLODRenderMeshVisual
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/SimpleLODRenderMeshVisual/SimpleLODRenderMeshVisual.ts
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/SmoothFollow.ts
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/SnappableBehavior.ts
+      - SpectaclesInteractionKit/Components/UI/PinchButton
       - SpectaclesInteractionKit/Components/UI/PinchButton/PinchButton.ts
       - SpectaclesInteractionKit/Components/UI/ScrollBar
       - SpectaclesInteractionKit/Components/UI/ScrollBar/ScrollBar.ts
@@ -516,9 +575,11 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Core/Interactor/PokeTargetProvider.ts
       - SpectaclesInteractionKit/Core/Interactor/RayProvider.ts
       - SpectaclesInteractionKit/Core/Interactor/TouchRayProvider.ts
+      - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms
       - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/AxisAngle.ts
       - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/ContinousIrInteractionTransition.ts
       - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/IrInteractionTransition.ts
+      - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/PinchJumpSuppressor.ts
       - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/RaycastAnchorHead.ts
       - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/RaycastAnchorVariableShoulder.ts
       - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/RaycastBase.ts
@@ -723,14 +784,24 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Providers/CameraProvider/WorldCameraFinderProvider.ts
       - SpectaclesInteractionKit/Providers/CursorControllerProvider
       - SpectaclesInteractionKit/Providers/CursorControllerProvider/CursorControllerProvider.ts
+      - SpectaclesInteractionKit/Providers/HandInputData
       - SpectaclesInteractionKit/Providers/HandInputData/BaseHand.ts
       - SpectaclesInteractionKit/Providers/HandInputData/DefaultHandTrackingAssetProvider.ts
+      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider
       - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/GestureModuleProvider.ts
       - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PalmTapDetection
       - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PalmTapDetection/PalmTapDetector.ts
       - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PalmTapDetection/PalmTapDetectorStateMachine.ts
       - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PalmTapDetectionEvent.ts
       - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PalmTapEvent.ts
+      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection
+      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/DetectionStrategies
+      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/DetectionStrategies/HciPinchDetectionStrategy.ts
+      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/DetectionStrategies/HeuristicPinchDetectionStrategy.ts
+      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/DetectionStrategies/PinchDetectionStrategy.ts
+      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/PinchDetector.ts
+      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/PinchDetectorStateMachine.ts
+      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchEventType.ts
       - SpectaclesInteractionKit/Providers/HandInputData/HandInputData.ts
       - SpectaclesInteractionKit/Providers/HandInputData/HandTrackingAssetProvider.ts
       - SpectaclesInteractionKit/Providers/HandInputData/HandType.ts
@@ -790,6 +861,7 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Utils/views/MeshView.ts
       - SpectaclesInteractionKit/Utils/views/View.ts
       - SpectaclesInteractionKit/package.native
+      - SpectaclesSyncKit.lspkg
       - SpectaclesSyncKit.lspkg/Components
       - SpectaclesSyncKit.lspkg/Components/Instantiator.ts
       - SpectaclesSyncKit.lspkg/Components/SyncHelpers
@@ -1077,6 +1149,7 @@ CollapsedEntities:
       - SpectaclesSyncKit.lspkg/Mapping/src/Utils/SharedFunctions.ts
       - SpectaclesSyncKit.lspkg/Readme.md
       - SpectaclesSyncKit.lspkg/SpectaclesSyncKit.prefab
+      - SpectaclesSyncKit.lspkg/Utils
       - SpectaclesSyncKit.lspkg/Utils/EnableObjectsOnAwake.ts
       - SpectaclesSyncKit.lspkg/Utils/Helpers.ts
       - SpectaclesSyncKit.lspkg/Utils/Observable.ts
@@ -1118,6 +1191,7 @@ CollapsedEntities:
       - Surface Detection.lspkg/Textures/groundIcon.png
       - Surface Detection.lspkg/package.native
       - Untitled JavaScript.js
+      - Untitled TypeScript 2.ts
       - Untitled TypeScript.ts
       - World Mesh - Spawn On Surfaces.lspkg
       - World Mesh - Spawn On Surfaces.lspkg/Materials
