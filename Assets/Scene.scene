@@ -8,6 +8,7 @@
     - !<own> 0d51a72e-e51f-4a83-9736-14093cb11ce6
     - !<own> 93997f9f-856e-4899-b892-43026e8d8dce
     - !<own> e57f651f-eb48-4381-b39e-6c905e5bed25
+    - !<own> 14ad5b61-ece5-44e1-8e99-e89c127aabb5
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       []
@@ -1549,7 +1550,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: -3.000000, z: 2.000000}
+    position: {x: 0.000000, y: -3.000000, z: -18.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -2168,12 +2169,12 @@
   Enabled: true
   ScriptAsset: !<reference> 37976aca-6847-44c8-88d9-5edb6aadbbf2
   ScriptInputsDefault:
-    apiToken: true
+    {}
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
-      apiToken: "[PUT YOUR SNAP API TOKEN HERE]"
+      apiToken: 191eb97e-0c23-43d1-a3b2-3379c384abcd
   ScriptTypes:
     "":
       {}
@@ -2214,7 +2215,7 @@
   PrefabRemaps:
     []
   Name: Snap3DExample
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 40.000000, y: 0.000000, z: -100.000000}
@@ -4005,7 +4006,7 @@
   PrefabRemaps:
     []
   Name: ChoiceButtons
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: -100.000000}
@@ -8193,7 +8194,7 @@
   PrefabRemaps:
     []
   Name: RealtimeAI
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -13822,7 +13823,7 @@
   PrefabRemaps:
     []
   Name: UI
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: -20.000000}
@@ -15196,7 +15197,6 @@
   Children:
     - !<own> 150814e0-3542-441b-99a9-2a712e92694c
     - !<own> dc18643c-49d1-4a9a-b0fa-2f30af474464
-    - !<own> 14ad5b61-ece5-44e1-8e99-e89c127aabb5
     - !<own> 59a07550-a616-4cc0-958b-e3e1d238ea32
   Components:
     - !<own> d77d99c1-25e3-41c4-b82b-0ca0941654fe
@@ -19531,7 +19531,7 @@
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
@@ -21614,7 +21614,7 @@
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
