@@ -124,7 +124,6 @@ CollapsedEntities:
       - Font/Manrope/Manrope-Medium.ttf
       - Font/Manrope/Manrope-Regular.ttf
       - Font/Manrope/Manrope-VariableFont_wght.ttf
-      - GenAI
       - GenAI/AIAsset/AI Visual/Animation
       - GenAI/AIAsset/AI Visual/Animation/baselayer
       - GenAI/AIAsset/AI Visual/Animation/baselayer/BaseLayer.animationMixerLayer
@@ -151,6 +150,7 @@ CollapsedEntities:
       - GenAI/ASRQueryController.ts
       - GenAI/GeminiAssistant.ts
       - GenAI/GenAI.prefab
+      - GenAI/InteractableImageGenerator.js
       - GenAI/InteractableSnap3DGenerator.ts
       - GenAI/InternetAvailabilityPopUp.ts
       - GenAI/OpenAIAssistant.ts

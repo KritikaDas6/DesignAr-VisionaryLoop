@@ -1,0 +1,46 @@
+- !<AssetImportMetadata/cd4b0ee0-e777-4f67-b87b-aa5a8fc39bde>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> d6e3f5d1-2918-428a-b9e4-39d814217e06
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> d6e3f5d1-2918-428a-b9e4-39d814217e06
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> d132f9d6-8abd-4711-a021-382c808e4532
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/d132f9d6-8abd-4711-a021-382c808e4532>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 084d398c-a289-401c-a577-a85f5ba5a841
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    asrQueryController: false
+    image: false
+    spinner: false
+    textDisplay: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - image: !<RequiredType.private> 00000000-0000-0000-0000-000000000000
+      textDisplay: !<RequiredType.private> 00000000-0000-0000-0000-000000000000
+      asrQueryController: !<RequiredType.private> 00000000-0000-0000-0000-000000000000
+      spinner: !<RequiredType.private> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
