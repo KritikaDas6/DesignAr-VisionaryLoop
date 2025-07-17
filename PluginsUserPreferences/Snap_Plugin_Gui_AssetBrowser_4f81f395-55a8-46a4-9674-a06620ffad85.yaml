@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 1258
+    size: 1345
     values:
       - ""
       - AddedAsset
@@ -13,7 +13,24 @@ CollapsedEntities:
       - AddedAsset/Precise Object Toggle.lsc
       - AddedAsset/Render Target.renderTarget
       - AddedAsset/Resource Bar Pack
+      - AddedAsset/Resource Bar Pack/.hidden
       - "AddedAsset/Resource Bar Pack/.hidden/Bar Mat 1 [EDIT ME].ss_graph"
+      - AddedAsset/Resource Bar Pack/.hidden/Image.lsmat.mat
+      - AddedAsset/Resource Bar Pack/.hidden/Image1.lsmat.ss_graph
+      - AddedAsset/Resource Bar Pack/.hidden/Image10.lsmat.mat
+      - AddedAsset/Resource Bar Pack/.hidden/Image11.lsmat.mat
+      - AddedAsset/Resource Bar Pack/.hidden/Image12.lsmat.mat
+      - AddedAsset/Resource Bar Pack/.hidden/Image13.lsmat.mat
+      - AddedAsset/Resource Bar Pack/.hidden/Image14.lsmat.mat
+      - AddedAsset/Resource Bar Pack/.hidden/Image15.lsmat.mat
+      - AddedAsset/Resource Bar Pack/.hidden/Image2.lsmat.mat
+      - AddedAsset/Resource Bar Pack/.hidden/Image3.lsmat.mat
+      - AddedAsset/Resource Bar Pack/.hidden/Image4.lsmat.mat
+      - AddedAsset/Resource Bar Pack/.hidden/Image5.lsmat.mat
+      - AddedAsset/Resource Bar Pack/.hidden/Image6.lsmat.mat
+      - AddedAsset/Resource Bar Pack/.hidden/Image7.lsmat.mat
+      - AddedAsset/Resource Bar Pack/.hidden/Image8.lsmat.mat
+      - AddedAsset/Resource Bar Pack/.hidden/Image9.lsmat.mat
       - AddedAsset/Resource Bar Pack/.hidden/Info Card Background.ss_graph
       - AddedAsset/Resource Bar Pack/.hidden/SpritePreset.lsmat.mat
       - AddedAsset/Resource Bar Pack/Resource_Bar_Pack____PUT_IN_ORTHO_CAM.prefab
@@ -65,10 +82,12 @@ CollapsedEntities:
       - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Segmented Bar/Design 1
       - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Segmented Bar/Design 1/Hearth.png
       - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Segmented Bar/Design 1/Life bars 1.png
+      - Base 2.png
       - Base.png
       - ButtonToggleFunctions.ts
       - DepthCache
       - DepthCache/DepthCache.prefab
+      - DepthCache/Images
       - DepthCache/Images/MicIcon.png
       - DepthCache/Images/loading.gif
       - DepthCache/Materials
@@ -90,6 +109,10 @@ CollapsedEntities:
       - DepthCache/Materials/unlitColor.ss_graph
       - DepthCache/Materials/unlitTexture.ss_graph
       - DepthCache/Materials/unlitTextureColor.ss_graph
+      - DepthCache/Mesh
+      - DepthCache/Mesh/ImageMaterial 2.mat
+      - DepthCache/Mesh/ImageMaterial 3.mat
+      - DepthCache/Mesh/ImageMaterial.mat
       - DepthCache/Mesh/SWIS_tile_solid.mesh
       - DepthCache/Mesh/Unit Box.mesh
       - DepthCache/Mesh/Unit Plane.mesh
@@ -124,6 +147,9 @@ CollapsedEntities:
       - Font/Manrope/Manrope-Medium.ttf
       - Font/Manrope/Manrope-Regular.ttf
       - Font/Manrope/Manrope-VariableFont_wght.ttf
+      - GenAI
+      - GenAI/AIAsset
+      - GenAI/AIAsset/AI Visual
       - GenAI/AIAsset/AI Visual/Animation
       - GenAI/AIAsset/AI Visual/Animation/baselayer
       - GenAI/AIAsset/AI Visual/Animation/baselayer/BaseLayer.animationMixerLayer
@@ -136,6 +162,8 @@ CollapsedEntities:
       - GenAI/AIAsset/AI Visual/Materials/Assist_sphere_Idle_L_T_T.ss_graph
       - GenAI/AIAsset/AI Visual/Materials/HoverColor.mat
       - GenAI/AIAsset/AI Visual/Materials/HoverColor.ss_graph
+      - GenAI/AIAsset/AI Visual/Textures
+      - GenAI/AIAsset/AI Visual/Textures/Image.mat
       - GenAI/AIAsset/AI Visual/Textures/Microphone.png
       - GenAI/AIAsset/AI Visual/Textures/NoInternetAlert.png
       - GenAI/AIAsset/AI Visual/Textures/NoInternetWarning.mat
@@ -150,18 +178,23 @@ CollapsedEntities:
       - GenAI/ASRQueryController.ts
       - GenAI/GeminiAssistant.ts
       - GenAI/GenAI.prefab
+      - GenAI/ImageGenerator.ts
       - GenAI/InteractableImageGenerator.js
+      - GenAI/InteractableImageGenerator.ts
       - GenAI/InteractableSnap3DGenerator.ts
       - GenAI/InternetAvailabilityPopUp.ts
       - GenAI/OpenAIAssistant.ts
       - GenAI/Snap3DInteractable.ts
       - GenAI/Snap3DInteractableFactory.ts
       - GenAI/SphereController.ts
+      - GenAI/Untitled JavaScript.js
+      - HS UI Assets/Guide/ImageMaterial.mat
       - ImageTexture
       - ImageTexture/Bird.mat
       - ImageTexture/Bird.png
       - ImageTexture/BirdTrace.mat
       - ImageTexture/BirdTrace.png
+      - ImageTexture/ImageMaterial 14.mat
       - ImageTexture/SketchRider.mat
       - ImageTexture/SketchRider.png
       - ImageTexture/SketchRiderTrace.mat
@@ -171,9 +204,14 @@ CollapsedEntities:
       - ImageTexture/Test5.mat
       - ImageTexture/Test5.png
       - ImageTexture/flat.ss_graph
+      - ImageTexture/image_unlit 2.ss_graph
+      - ImageTexture/image_unlit.ss_graph
       - ImageTexture/simple_pbr.ss_graph
       - LSTween.lspkg
+      - LSTween.lspkg/Examples
+      - LSTween.lspkg/Examples/Assets
       - LSTween.lspkg/Examples/Assets/Box.mesh
+      - LSTween.lspkg/Examples/Assets/ImageMaterial.mat
       - LSTween.lspkg/Examples/Assets/Simple Diffuse.mat
       - LSTween.lspkg/Examples/Assets/Simple Diffuse.ss_graph
       - LSTween.lspkg/Examples/Assets/Sphere.mesh
@@ -195,6 +233,11 @@ CollapsedEntities:
       - LSTween.lspkg/TweenJS/Version.ts
       - LSTween.lspkg/TweenJS/mainGroup.ts
       - LSTween.lspkg/package.native
+      - MaterialParams.png
+      - Normal.png
+      - PBR 2.mat
+      - PBR 3.mat
+      - PBR.mat
       - Prefab
       - Prefab/Menu.prefab
       - Remote Service Gateway.lspkg
@@ -237,8 +280,10 @@ CollapsedEntities:
       - Remote Service Gateway.lspkg/Prefabs/RemoteServiceGatewayExamples.prefab
       - Remote Service Gateway.lspkg/README.md
       - Remote Service Gateway.lspkg/RemoteServiceGatewayCredentials.ts
+      - Remote Service Gateway.lspkg/Resources
       - Remote Service Gateway.lspkg/Resources/Audio Output.audioOutput
       - Remote Service Gateway.lspkg/Resources/Microphone Audio.micaudio
+      - Remote Service Gateway.lspkg/Resources/Visuals
       - Remote Service Gateway.lspkg/Resources/Visuals/LoadingSpinner
       - Remote Service Gateway.lspkg/Resources/Visuals/LoadingSpinner/LoadingSpinner
       - Remote Service Gateway.lspkg/Resources/Visuals/LoadingSpinner/LoadingSpinner.prefab
@@ -246,6 +291,10 @@ CollapsedEntities:
       - Remote Service Gateway.lspkg/Resources/Visuals/LoadingSpinner/LoadingSpinner/LoadingSpinner.mesh
       - Remote Service Gateway.lspkg/Resources/Visuals/LoadingSpinner/LoadingSpinner/LoadingSpinner.ss_graph
       - Remote Service Gateway.lspkg/Resources/Visuals/LoadingSpinner/LoadingSpinner/LoadingSpinner.ts
+      - Remote Service Gateway.lspkg/Resources/Visuals/Materials
+      - Remote Service Gateway.lspkg/Resources/Visuals/Materials/Image.mat
+      - Remote Service Gateway.lspkg/Resources/Visuals/Materials/Image.png
+      - Remote Service Gateway.lspkg/Resources/Visuals/Materials/SnapImage3D.mat
       - Remote Service Gateway.lspkg/Resources/Visuals/Materials/Unlit.mat
       - Remote Service Gateway.lspkg/Resources/Visuals/Materials/flat.ss_graph
       - Remote Service Gateway.lspkg/Resources/Visuals/Materials/unlit.ss_graph
@@ -257,6 +306,7 @@ CollapsedEntities:
       - Script 2.js
       - Script.js
       - Script_ContainerImage
+      - Script_ContainerImage/ImageContainerScaler.ts
       - Script_HandFollower
       - Script_HandFollower/DisplayMenuOnOff.ts
       - Script_HandFollower/HandFollower.ts
@@ -289,10 +339,12 @@ CollapsedEntities:
       - "Spawn Object at World Mesh On Tap/[Mesh Builder Example] Pipe Between Objects/Textures/Normal.png"
       - Spawn Object at World Mesh On Tap/package.native
       - SpectaclesInteractionKit
+      - SpectaclesInteractionKit/Assets
       - SpectaclesInteractionKit/Assets/Audio
       - SpectaclesInteractionKit/Assets/Audio/HoverAudioTrack.wav
       - SpectaclesInteractionKit/Assets/Audio/TriggerEndAudioTrack.wav
       - SpectaclesInteractionKit/Assets/Audio/TriggerStartAudioTrack.wav
+      - SpectaclesInteractionKit/Assets/Materials
       - SpectaclesInteractionKit/Assets/Materials/BaseHandVisualsMaterials
       - SpectaclesInteractionKit/Assets/Materials/BaseHandVisualsMaterials/FingerHighlightLeft.mat
       - SpectaclesInteractionKit/Assets/Materials/BaseHandVisualsMaterials/FingerHighlightRight.mat
@@ -301,6 +353,7 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Materials/BaseHandVisualsMaterials/HandOccluderRight.mat
       - SpectaclesInteractionKit/Assets/Materials/BaseHandVisualsMaterials/RadialGradientOcclusion.mat
       - SpectaclesInteractionKit/Assets/Materials/BitmojiMaterial.mat
+      - SpectaclesInteractionKit/Assets/Materials/ContainerImageMaterial.mat
       - SpectaclesInteractionKit/Assets/Materials/LogoMaterial.mat
       - SpectaclesInteractionKit/Assets/Materials/NormalBasedTargetOutline.mat
       - SpectaclesInteractionKit/Assets/Materials/PinchButtonDarkInactive.mat
@@ -345,12 +398,22 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Materials/SpritePreset.mat
       - SpectaclesInteractionKit/Assets/Materials/TargetOutlineMaterial.mat
       - SpectaclesInteractionKit/Assets/Materials/Text3DDefault.mat
+      - SpectaclesInteractionKit/Assets/Meshes
       - SpectaclesInteractionKit/Assets/Meshes/BoxMesh.mesh
       - SpectaclesInteractionKit/Assets/Meshes/ButtonCapsuleMesh.mesh
       - SpectaclesInteractionKit/Assets/Meshes/ButtonSphereMesh.mesh
       - SpectaclesInteractionKit/Assets/Meshes/Check.mesh
+      - SpectaclesInteractionKit/Assets/Meshes/ImageMaterial 2.mat
+      - SpectaclesInteractionKit/Assets/Meshes/ImageMaterial 3.mat
+      - SpectaclesInteractionKit/Assets/Meshes/ImageMaterial 4.mat
+      - SpectaclesInteractionKit/Assets/Meshes/ImageMaterial.mat
       - SpectaclesInteractionKit/Assets/Meshes/LeftHandMesh.mesh
       - SpectaclesInteractionKit/Assets/Meshes/PlaneMesh.mesh
+      - SpectaclesInteractionKit/Assets/Meshes/PlatformUI
+      - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/ImageMaterial 2.mat
+      - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/ImageMaterial 3.mat
+      - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/ImageMaterial 4.mat
+      - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/ImageMaterial.mat
       - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/PlatformCapsuleButton.mesh
       - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/PlatformSphereButton.mesh
       - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/RoundButton.mesh
@@ -407,6 +470,7 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Shaders/ToggleOn.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/ToggleOnSelect.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/simple_pbr.ss_graph
+      - SpectaclesInteractionKit/Assets/Textures
       - SpectaclesInteractionKit/Assets/Textures/2DBitmojiAvatar.png
       - SpectaclesInteractionKit/Assets/Textures/Base.png
       - SpectaclesInteractionKit/Assets/Textures/BaseHandVisualsTextures
@@ -422,11 +486,13 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Textures/BaseHandVisualsTextures/occlusionGradient.png
       - SpectaclesInteractionKit/Assets/Textures/MaterialParams.png
       - SpectaclesInteractionKit/Assets/Textures/Normal.png
+      - SpectaclesInteractionKit/Assets/Textures/PlatformUI
       - SpectaclesInteractionKit/Assets/Textures/PlatformUI/ArrowDown.png
       - SpectaclesInteractionKit/Assets/Textures/PlatformUI/ArrowUp.png
       - SpectaclesInteractionKit/Assets/Textures/PlatformUI/Close.png
       - SpectaclesInteractionKit/Assets/Textures/PlatformUI/FollowIconBlack.png
       - SpectaclesInteractionKit/Assets/Textures/PlatformUI/FollowIconWhite.png
+      - SpectaclesInteractionKit/Assets/Textures/PlatformUI/Image.png
       - SpectaclesInteractionKit/Assets/Textures/PlatformUI/Mask_simple_reflection_ellipse.png
       - SpectaclesInteractionKit/Assets/Textures/PlatformUI/SimpleIdle.jpg
       - SpectaclesInteractionKit/Assets/Textures/PlatformUI/SimpleIdle_05.jpg
@@ -437,8 +503,10 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Textures/Rectangle-Active.png
       - SpectaclesInteractionKit/Assets/Textures/Rectangle-Inactive.png
       - SpectaclesInteractionKit/Assets/Textures/Rectangle.png
+      - SpectaclesInteractionKit/Assets/Textures/SIKContainerExampleImage.jpg
       - SpectaclesInteractionKit/Assets/Textures/SIKLogo.png
       - SpectaclesInteractionKit/Assets/Textures/ScrollBarRectangle.png
+      - SpectaclesInteractionKit/Components
       - SpectaclesInteractionKit/Components/Helpers
       - SpectaclesInteractionKit/Components/Helpers/ButtonFeedback.ts
       - SpectaclesInteractionKit/Components/Helpers/CapsuleMeshCustomizer.ts
@@ -492,11 +560,15 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Components/Interaction/InteractorLineVisual/InteractorLineMaterial.mat
       - SpectaclesInteractionKit/Components/Interaction/InteractorLineVisual/InteractorLineRenderer.ts
       - SpectaclesInteractionKit/Components/Interaction/InteractorLineVisual/InteractorLineVisual.ts
+      - SpectaclesInteractionKit/Components/UI
+      - SpectaclesInteractionKit/Components/UI/ContainerFrame
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/ContainerFrame.ts
+      - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/FrameMaterial.mat
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/FrameMaterial.ss_graph
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/Ghost Material.mat
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/Ghost Material.ss_graph
+      - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/Image.mat
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/Label.mat
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/Test4.png
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/container-button.mat
@@ -1190,6 +1262,18 @@ CollapsedEntities:
       - Surface Detection.lspkg/Textures
       - Surface Detection.lspkg/Textures/groundIcon.png
       - Surface Detection.lspkg/package.native
+      - Unit Plane
+      - Unit Plane/.hidden
+      - Unit Plane/.hidden/Textures
+      - Unit Plane/.hidden/Textures/Base.png
+      - Unit Plane/.hidden/Textures/Normal.png
+      - Unit Plane/.hidden/UberDiffuse.lsmat.mat
+      - Unit Plane/.hidden/UberDiffuse1.lsmat.ss_graph
+      - Unit Plane/Meshes
+      - Unit Plane/Meshes/Unit Plane.mesh
+      - Unit Plane/Unit_Plane__PLACE_IN_OBJECTS_PANEL.prefab
+      - Unlit 2.mat
+      - Unlit.mat
       - Untitled JavaScript.js
       - Untitled TypeScript 2.ts
       - Untitled TypeScript.ts
@@ -1261,4 +1345,7 @@ CollapsedEntities:
       - World Query Hit - Spawn On Surface/Textures/statue_params.png
       - World Query Hit - Spawn On Surface/World Query Hit Example.prefab
       - World Query Hit - Spawn On Surface/WorldQueryHitExample.ts
+      - guidescript.ts
+      - pbr.ss_graph
+      - unlit.ss_graph
   options: 4
