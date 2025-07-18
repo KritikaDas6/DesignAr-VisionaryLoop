@@ -16,8 +16,8 @@ dock:
             type: section
             current: 0
         sizes:
-          - 551
-          - 382
+          - 378
+          - 320
         type: splitter
         orientation: vertical
       - items:
@@ -28,6 +28,8 @@ dock:
                 Uuid: 8f84dcf1-562c-4b32-8e3a-252e0dc0b436
               - persistentName: Snap.Plugin.Gui.InspectorPanel
                 Uuid: 75fab2be-000d-4424-8391-963c8859530a
+              - persistentName: Com.Snap.LensBasedEditors
+                Uuid: e0683532-a649-4900-9159-8c79daab9846
             type: section
             current: 2
           - items:
@@ -35,11 +37,13 @@ dock:
                 Uuid: 81de965d-0c94-4d28-82cf-901740003a1f
               - persistentName: Snap.Plugin.Gui.ScriptEditorPanel
                 Uuid: f017401e-0d16-490e-a2ac-364bd032d3c9
+              - persistentName: Snap.Plugin.Gui.SceneEditor
+                Uuid: b34fff67-8270-45a6-8b25-fd27041aaf1a
             type: section
             current: 0
         sizes:
-          - 559
-          - 374
+          - 278
+          - 420
         type: splitter
         orientation: vertical
       - items:
@@ -52,8 +56,8 @@ dock:
         type: section
         current: 0
     sizes:
-      - 488
-      - 628
-      - 784
+      - 344
+      - 554
+      - 440
     type: splitter
     orientation: horizontal

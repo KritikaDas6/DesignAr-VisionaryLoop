@@ -1,9 +1,9 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 1352
+    size: 2118
     values:
-      - AddedAsset
+      - ""
       - AddedAsset/Customizable Progress Bar.lsc
       - AddedAsset/Device Camera Texture.deviceCameraTexture
       - AddedAsset/Echopark.hdr
@@ -11,7 +11,6 @@ CollapsedEntities:
       - AddedAsset/Echopark.hdr/Specular
       - AddedAsset/Precise Object Toggle.lsc
       - AddedAsset/Render Target.renderTarget
-      - AddedAsset/Resource Bar Pack
       - AddedAsset/Resource Bar Pack/.hidden
       - "AddedAsset/Resource Bar Pack/.hidden/Bar Mat 1 [EDIT ME].ss_graph"
       - AddedAsset/Resource Bar Pack/.hidden/Image.lsmat.mat
@@ -33,7 +32,6 @@ CollapsedEntities:
       - AddedAsset/Resource Bar Pack/.hidden/Info Card Background.ss_graph
       - AddedAsset/Resource Bar Pack/.hidden/SpritePreset.lsmat.mat
       - AddedAsset/Resource Bar Pack/Resource_Bar_Pack____PUT_IN_ORTHO_CAM.prefab
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._
       - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]"
       - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Fonts"
       - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Fonts/Lato-Bold.ttf"
@@ -57,8 +55,6 @@ CollapsedEntities:
       - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Frame Materials/Frame Material 4 [EDIT ME].mat"
       - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Segmented Bar Materials
       - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Segmented Bar Materials/Segment Bar Mat [EDIT ME].mat"
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Scripts
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Scripts/Behavior.js
       - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Scripts/ContinuousBarUpdaterScript.js
       - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Scripts/Documentation.js
       - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Scripts/SegmentedBarUpdaterScript.js
@@ -187,8 +183,343 @@ CollapsedEntities:
       - GenAI/Snap3DInteractableFactory.ts
       - GenAI/SphereController.ts
       - GenAI/Untitled JavaScript.js
-      - HS UI Assets
+      - HS UI Assets/Guide
+      - HS UI Assets/Guide/Guide1.png
+      - HS UI Assets/Guide/Guide2.png
+      - HS UI Assets/Guide/Guide3.png
+      - HS UI Assets/Guide/Guide4.png
       - HS UI Assets/Guide/ImageMaterial.mat
+      - HS UI Assets/Icons
+      - HS UI Assets/Icons/Icon
+      - HS UI Assets/Icons/mic1.png
+      - HS UI Assets/Icons/mic2.png
+      - HS UI Assets/Image_mic.mat
+      - HS UI Assets/Mic animation.lspkg/Mic.mat
+      - HS UI Assets/Mic animation.lspkg/MicBlack.png
+      - HS UI Assets/Mic animation.lspkg/MicWhite.png
+      - HS UI Assets/Mic animation.lspkg/Path Option A 2.prefab
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation/BaseLayer.animationAsset
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation/Finger_Scroll_Micro.animationAsset
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation/Finger_Swipe_X.animationAsset
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation/Finger_Swipe_Y.animationAsset
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation/Finger_Tap_Near.animationAsset
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation/Finger_Tap_Surface.animationAsset
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation/Palm_Grab_X.animationAsset
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation/Palm_Grab_Y.animationAsset
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation/Palm_Swipe_X.animationAsset
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation/Palm_Touch_Near.animationAsset
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation/Palm_Touch_Surface.animationAsset
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation/Pinch_Far.animationAsset
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation/Pinch_Move_X.animationAsset
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation/Pinch_Move_Y.animationAsset
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation/Pinch_Move_Z.animationAsset
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation/Pinch_Near.animationAsset
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation/Pinch_Rotate_X.animationAsset
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation/Pinch_Rotate_Y.animationAsset
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation/Pinch_Rotate_Z.animationAsset
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation/Pinch_Swipe_X.animationAsset
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation/Pinch_Swipe_Y.animationAsset
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation/System_Tap_Exit.animationAsset
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation/System_Tap_Rotate_Down.animationAsset
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation/System_Tap_Rotate_Up.animationAsset
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation/System_Tap_Save.animationAsset
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation/System_Tap_Settings.animationAsset
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation/System_Tap_Watch.animationAsset
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation/Two_Hands_Palm_Grab_X.animationAsset
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation/Two_Hands_Palm_Grab_Y.animationAsset
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation/Two_Hands_Pinch_Rotate_Y.animationAsset
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation/Two_Hands_Pinch_Rotate_Z.animationAsset
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation/Two_Hands_Pinch_Scale.animationAsset
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/LSTween
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/LSTween/LSTween.ts
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/LSTween/RotationInterpolationType.ts
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/LSTween/TweenJS
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/LSTween/TweenJS/Easing.ts
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/LSTween/TweenJS/Group.ts
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/LSTween/TweenJS/Interpolation.ts
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/LSTween/TweenJS/Now.ts
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/LSTween/TweenJS/Sequence.ts
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/LSTween/TweenJS/Tween.ts
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/LSTween/TweenJS/mainGroup.ts
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Materials
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Materials/Graphs
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Materials/Graphs/HandHints_Cursor.ss_graph
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Materials/Graphs/HandHints_Inreraction_Glow.ss_graph
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Materials/Graphs/HandHints_Outline.ss_graph
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Materials/Graphs/HandHints_Outline_Glow_Combined.ss_graph
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Materials/Graphs/Occluder.ss_graph
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Materials/HandHints_Cursor.mat
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Materials/HandHints_Interaction_Glow.mat
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Materials/HandHints_Outline.mat
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Materials/Occluder.mat
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Meshes
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Meshes/CursorPlaneGeo.mesh
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Meshes/LeftHandGeo.mesh
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Meshes/RightHandGeo.mesh
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Prefabs
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Prefabs/Spectacles3DHandHints.prefab
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Scripts
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Scripts/ExampleJS.js
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Scripts/ExampleTS.ts
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Scripts/InteractionHintController.ts
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Textures
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Textures/Hands_Interaction_Glow_Mask.png
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Textures/Hands_Opacity_Gradient.png
+      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/package.native
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Assets
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Assets/Audio
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Assets/Audio/HoverAudioTrack.wav
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Assets/Audio/TriggerEndAudioTrack.wav
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Assets/Audio/TriggerStartAudioTrack.wav
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Assets/Materials
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Assets/Materials/PlatformUI
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Assets/Materials/PlatformUI/ButtonHover.mat
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Assets/Materials/PlatformUI/ButtonPinched.mat
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Assets/Meshes
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Assets/Meshes/PlatformUI
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Assets/Meshes/PlatformUI/PlatformSphereButton.mesh
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Assets/Shaders
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Assets/Shaders/PlatformUI
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Assets/Shaders/PlatformUI/ButtonHover.ss_graph
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Assets/Shaders/PlatformUI/ButtonPinched.ss_graph
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Assets/Textures
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Assets/Textures/PlatformUI
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Assets/Textures/PlatformUI/ArrowDown.png
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Assets/Textures/PlatformUI/SimpleIdle.jpg
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Assets/Textures/PlatformUI/SimpleRefl_02.jpg
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Helpers
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Helpers/ButtonFeedback.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Helpers/InteractableAudioFeedback.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Interaction
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Interaction/Billboard
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Interaction/Billboard/Billboard.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Interaction/Billboard/BillboardController.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Interaction/Billboard/BillboardRotationCalculator.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Interaction/HandVisual
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Interaction/HandVisual/GlowEffectView.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Interaction/HandVisual/GlowEffectViewModel.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Interaction/HandVisual/HandVisual.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Interaction/HandVisual/RadialOcclusionView.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Interaction/Headlock
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Interaction/Headlock/Headlock.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Interaction/Headlock/HeadlockController.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Interaction/Headlock/HeadlockRotationCalculator.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Interaction/Headlock/HeadlockTranslationCalculator.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Interaction/Interactable
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Interaction/Interactable/Interactable.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Interaction/InteractableManipulation
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Interaction/InteractableManipulation/InteractableManipulation.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Interaction/InteractionPlane
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Interaction/InteractionPlane/InteractionPlane.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Interaction/InteractorCursor
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Interaction/InteractorCursor/CircleVisual.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Interaction/InteractorCursor/Cursor.mat
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Interaction/InteractorCursor/CursorMat.ss_graph
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Interaction/InteractorCursor/CursorViewModel.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Interaction/InteractorCursor/InteractorCursor.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Interaction/InteractorCursor/ManipulateLineMat.ss_graph
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Interaction/InteractorCursor/ManipulateLineMaterial.mat
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Interaction/InteractorCursor/Plane.mesh
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Interaction/InteractorCursor/disabled.png
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Interaction/InteractorCursor/scale-tl.png
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Interaction/InteractorCursor/scale-tr.png
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Interaction/InteractorCursor/translate.png
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ContainerFrame/ContainerFrame.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/FrameMaterial.mat
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/FrameMaterial.ss_graph
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/Ghost Material.mat
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/Ghost Material.ss_graph
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/container-button.mat
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/container-button.ss_graph
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ContainerFrame/Meshes
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ContainerFrame/Meshes/Frame_Mid.mesh
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ContainerFrame/Meshes/SysSettings_settings_button.mesh
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ContainerFrame/Prefabs
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ContainerFrame/Prefabs/FramePrefab.prefab
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ContainerFrame/Prefabs/container-button.prefab
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ContainerFrame/Textures
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ContainerFrame/Textures/close-icon-1.png
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ContainerFrame/Textures/container-button-matcap.jpg
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ContainerFrame/Textures/follow-black.png
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ContainerFrame/Textures/follow-white.png
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ContainerFrame/Textures/reflection-map-1.jpg
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/CursorHandler.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/FrameInputHandler.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/LabeledPinchButton.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/SmoothFollow.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/PinchButton
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/PinchButton/PinchButton.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ScrollBar
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ScrollBar/ScrollBar.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ScrollView
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ScrollView/ScrollArea.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ScrollView/ScrollProvider.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ScrollView/ScrollView.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ScrollView/boundariesProvider
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ScrollView/boundariesProvider/BoundariesProvider.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ScrollView/boundariesProvider/BufferedBoundariesProvider.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ScrollView/boundariesProvider/SceneObjectBoundariesProvider.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ScrollView/boundariesProvider/ScreenTransformBoundariesProvider.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ScrollView/boundariesProvider/VisualBoundariesProvider.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/Slider
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/Slider/Slider.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ToggleButton
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ToggleButton/ToggleButton.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/HandInteractor
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/HandInteractor/HandInteractor.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/InteractionManager
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/InteractionManager/EventDispatcher.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/InteractionManager/InteractionManager.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/Interactor
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/Interactor/BaseInteractor.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/Interactor/ColliderTargetProvider.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/Interactor/DirectTargetProvider.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/Interactor/DragProvider.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/Interactor/HandRayProvider.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/Interactor/IndirectTargetProvider.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/Interactor/Interactor.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/Interactor/InteractorEvent.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/Interactor/MobileRayProvider.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/Interactor/MouseTargetProvider.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/Interactor/PokeTargetProvider.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/Interactor/RayProvider.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/Interactor/TouchRayProvider.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/AxisAngle.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/ContinousIrInteractionTransition.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/IrInteractionTransition.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/PinchJumpSuppressor.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/RaycastAnchorHead.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/RaycastAnchorVariableShoulder.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/RaycastBase.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/RaycastLegacySingleCamera.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/RaycastProxy.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/RgbIrTransitionJumpSuppressor.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/SwitchIrInteractionTransition.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/TimeDataContainer.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/TimeScalarContainer.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/TimedVec2Container.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/TimedVec3Container.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/MobileInteractor
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/MobileInteractor/MobileInteractor.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/MouseInteractor
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/MouseInteractor/MouseInteractor.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Decorators
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Decorators/Singleton.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/CameraProvider
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/CameraProvider/BaseCameraFinderProvider.js
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/CameraProvider/BaseCameraFinderProvider.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/CameraProvider/BaseWorldCameraProvider.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/CameraProvider/CameraProvider.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/CameraProvider/WorldCameraFinderProvider.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/CursorControllerProvider
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/CursorControllerProvider/CursorControllerProvider.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData/BaseHand.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData/DefaultHandTrackingAssetProvider.js
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData/DefaultHandTrackingAssetProvider.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/GestureModuleProvider.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PalmTapDetection
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PalmTapDetection/PalmTapDetector.js
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PalmTapDetection/PalmTapDetector.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PalmTapDetection/PalmTapDetectorStateMachine.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PalmTapDetectionEvent.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PalmTapEvent.js
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PalmTapEvent.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/DetectionStrategies
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/DetectionStrategies/HciPinchDetectionStrategy.js
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/DetectionStrategies/HciPinchDetectionStrategy.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/DetectionStrategies/HeuristicPinchDetectionStrategy.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/DetectionStrategies/PinchDetectionStrategy.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/PinchDetector.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/PinchDetectorStateMachine.js
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/PinchDetectorStateMachine.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchEventType.js
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchEventType.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData/HandInputData.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData/HandTrackingAssetProvider.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData/HandType.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData/HandVisuals.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData/Joints.js
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData/Joints.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData/Keypoint.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData/LandmarkNames.js
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData/LandmarkNames.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData/LeftHandAsset.handTracking3D
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData/RightHandAsset.handTracking3D
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData/TrackedHand.js
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData/TrackedHand.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/InteractionConfigurationProvider
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/InteractionConfigurationProvider/InteractionConfigurationProvider.js
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/InteractionConfigurationProvider/InteractionConfigurationProvider.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/InteractionConfigurationProvider/LogLevelProvider.js
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/InteractionConfigurationProvider/LogLevelProvider.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/InteractionConfigurationProvider/SIKLogLevelProvider.js
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/InteractionConfigurationProvider/SIKLogLevelProvider.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/MobileInputData
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/MobileInputData/MobileInputData.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/MobileInputData/MotionControllerProvider.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/TargetProvider
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/TargetProvider/TargetProvider.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/TargetProvider/TargetingData.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/SIK.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils/BistableThreshold.js
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils/BistableThreshold.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils/Event.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils/Filter.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils/FunctionTimingUtils.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils/InputChecker.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils/InspectorCallbacks.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils/LensConfig.js
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils/LensConfig.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils/LogLevel.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils/MovingAverageFilter.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils/NativeLogger.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils/OneEuroFilter.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils/ReplayEvent.js
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils/ReplayEvent.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils/SafeReference.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils/SampleOps.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils/SceneObjectUtils.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils/SeededRandomNumberGenerator.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils/State.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils/StateMachine.js
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils/StateMachine.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils/UpdateDispatcher.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils/algorithms.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils/animate.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils/color.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils/lazyProperty.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils/logger.js
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils/logger.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils/mathUtils.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils/notEmpty.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils/validate.js
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils/validate.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils/views
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils/views/LineRenderer
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils/views/LineRenderer/LineMeshUtils.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils/views/LineRenderer/LineRenderer.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Utils/views/View.ts
+      - HS UI Assets/Mic animation.lspkg/Vertex Distortion Material
+      - HS UI Assets/Mic animation.lspkg/Vertex Distortion Material/.hidden
+      - HS UI Assets/Mic animation.lspkg/Vertex Distortion Material/.hidden/Vertex Distortion.ss_graph
+      - HS UI Assets/Mic animation.lspkg/Vertex Distortion Material/Vertex Distortion.mat
+      - HS UI Assets/Mic animation.lspkg/flat.ss_graph
+      - HS UI Assets/Mic animation.lspkg/package.native
+      - HS UI Assets/mic1.png
+      - HS UI Assets/mic2.png
+      - Icon_Mic.mat
+      - Image 2.mat
+      - Image.mat
       - ImageTexture
       - ImageTexture/Bird.mat
       - ImageTexture/Bird.png
@@ -207,11 +538,55 @@ CollapsedEntities:
       - ImageTexture/image_unlit 2.ss_graph
       - ImageTexture/image_unlit.ss_graph
       - ImageTexture/simple_pbr.ss_graph
+      - Jelly
+      - Jelly/Base 2.png
+      - Jelly/Frame 1618872818.png
+      - Jelly/JellyButton
+      - Jelly/JellyButton/Close.png
       - Jelly/JellyButton/Material
+      - Jelly/JellyButton/Material/Image_Close.mat
+      - Jelly/JellyButton/Material/Image_Edit.mat
+      - Jelly/JellyButton/Material/Image_Lock.mat
+      - Jelly/JellyButton/Material/Image_Outline.mat
+      - Jelly/JellyButton/Material/Image_UnLock.mat
+      - Jelly/JellyButton/Material/Mic.mat
+      - Jelly/JellyButton/Material/RoundButtonHoverYellow.mat
+      - Jelly/JellyButton/Material/RoundButtonPinchedGreen.mat
+      - Jelly/JellyButton/Material/RoundButton_IdleGreen.mat
+      - Jelly/JellyButton/Material/RoundButton_IdleYellow.mat
+      - Jelly/JellyButton/Material/Vertex Distortion.mat
       - Jelly/JellyButton/Panel
+      - Jelly/JellyButton/Panel/Meshes
+      - Jelly/JellyButton/Panel/Meshes/ImageMaterial 2.mat
+      - Jelly/JellyButton/Panel/Meshes/ImageMaterial 3.mat
+      - Jelly/JellyButton/Panel/Meshes/ImageMaterial.mat
+      - Jelly/JellyButton/Panel/Meshes/Plane.mesh
+      - Jelly/JellyButton/Panel/Panel.prefab
       - Jelly/JellyButton/Shader
+      - Jelly/JellyButton/Shader/RoundButtonHoverYellow.ss_graph
+      - Jelly/JellyButton/Shader/RoundButtonPinchedGreen.ss_graph
+      - Jelly/JellyButton/Shader/RoundButton_IdleGreen.ss_graph
+      - Jelly/JellyButton/Shader/RoundButton_IdleYellow.ss_graph
+      - Jelly/JellyButton/Shader/Vertex Distortion.ss_graph
+      - Jelly/JellyButton/Shader/flat.ss_graph
+      - Jelly/JellyButton/SimpleRefl_02.jpg
       - Jelly/JellyButton/Sparkles VFX Resources
+      - Jelly/JellyButton/Sparkles VFX Resources/Textures
+      - Jelly/JellyButton/Sparkles VFX Resources/Textures/sparkles.png
+      - Jelly/JellyButton/Sparkles VFX Resources/VFX
+      - Jelly/JellyButton/Sparkles VFX Resources/VFX/Splash2.png
+      - Jelly/JellyButton/Sparkles VFX Resources/VFX/sparkles_vfx Drag.vfxgraph
+      - Jelly/JellyButton/Sparkles VFX Resources/VFX/sparkles_vfx Original.vfxgraph
+      - Jelly/JellyButton/Sparkles VFX Resources/VFX/sparkles_vfx Tap.vfxgraph
       - Jelly/JellyButton/Texture
+      - Jelly/JellyButton/Texture/Edit.png
+      - Jelly/JellyButton/Texture/Lock.png
+      - Jelly/JellyButton/Texture/MicBlack.png
+      - Jelly/JellyButton/Texture/MicWhite.png
+      - Jelly/JellyButton/Texture/Outline.png
+      - Jelly/JellyButton/Texture/Splash.png
+      - Jelly/JellyButton/Texture/Unlock.png
+      - Jelly/simple_pbr.ss_graph
       - LSTween.lspkg
       - LSTween.lspkg/Examples
       - LSTween.lspkg/Examples/Assets
@@ -239,6 +614,326 @@ CollapsedEntities:
       - LSTween.lspkg/TweenJS/mainGroup.ts
       - LSTween.lspkg/package.native
       - MaterialParams.png
+      - Mic animation/Mic.mat
+      - Mic animation/MicBlack.png
+      - Mic animation/MicWhite.png
+      - Mic animation/Path Option A 2.prefab
+      - Mic animation/Spectacles 3D Hand Hints.lspkg
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation/BaseLayer.animationAsset
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation/Finger_Scroll_Micro.animationAsset
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation/Finger_Swipe_X.animationAsset
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation/Finger_Swipe_Y.animationAsset
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation/Finger_Tap_Near.animationAsset
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation/Finger_Tap_Surface.animationAsset
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation/Palm_Grab_X.animationAsset
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation/Palm_Grab_Y.animationAsset
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation/Palm_Swipe_X.animationAsset
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation/Palm_Touch_Near.animationAsset
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation/Palm_Touch_Surface.animationAsset
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation/Pinch_Far.animationAsset
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation/Pinch_Move_X.animationAsset
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation/Pinch_Move_Y.animationAsset
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation/Pinch_Move_Z.animationAsset
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation/Pinch_Near.animationAsset
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation/Pinch_Rotate_X.animationAsset
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation/Pinch_Rotate_Y.animationAsset
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation/Pinch_Rotate_Z.animationAsset
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation/Pinch_Swipe_X.animationAsset
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation/Pinch_Swipe_Y.animationAsset
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation/System_Tap_Exit.animationAsset
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation/System_Tap_Rotate_Down.animationAsset
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation/System_Tap_Rotate_Up.animationAsset
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation/System_Tap_Save.animationAsset
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation/System_Tap_Settings.animationAsset
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation/System_Tap_Watch.animationAsset
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation/Two_Hands_Palm_Grab_X.animationAsset
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation/Two_Hands_Palm_Grab_Y.animationAsset
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation/Two_Hands_Pinch_Rotate_Y.animationAsset
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation/Two_Hands_Pinch_Rotate_Z.animationAsset
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation/Two_Hands_Pinch_Scale.animationAsset
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/LSTween
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/LSTween/LSTween.ts
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/LSTween/RotationInterpolationType.ts
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/LSTween/TweenJS
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/LSTween/TweenJS/Easing.ts
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/LSTween/TweenJS/Group.ts
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/LSTween/TweenJS/Interpolation.ts
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/LSTween/TweenJS/Now.ts
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/LSTween/TweenJS/Sequence.ts
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/LSTween/TweenJS/Tween.ts
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/LSTween/TweenJS/mainGroup.ts
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Materials
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Materials/Graphs
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Materials/Graphs/HandHints_Cursor.ss_graph
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Materials/Graphs/HandHints_Inreraction_Glow.ss_graph
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Materials/Graphs/HandHints_Outline.ss_graph
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Materials/Graphs/HandHints_Outline_Glow_Combined.ss_graph
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Materials/Graphs/Occluder.ss_graph
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Materials/HandHints_Cursor.mat
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Materials/HandHints_Interaction_Glow.mat
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Materials/HandHints_Outline.mat
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Materials/Occluder.mat
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Meshes
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Meshes/CursorPlaneGeo.mesh
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Meshes/LeftHandGeo.mesh
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Meshes/RightHandGeo.mesh
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Prefabs
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Prefabs/Spectacles3DHandHints.prefab
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Scripts
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Scripts/ExampleJS.js
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Scripts/ExampleTS.ts
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Scripts/InteractionHintController.ts
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Textures
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Textures/Hands_Interaction_Glow_Mask.png
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/Textures/Hands_Opacity_Gradient.png
+      - Mic animation/Spectacles 3D Hand Hints.lspkg/package.native
+      - Mic animation/SpectaclesInteractionKit/Assets
+      - Mic animation/SpectaclesInteractionKit/Assets/Audio
+      - Mic animation/SpectaclesInteractionKit/Assets/Audio/HoverAudioTrack.wav
+      - Mic animation/SpectaclesInteractionKit/Assets/Audio/TriggerEndAudioTrack.wav
+      - Mic animation/SpectaclesInteractionKit/Assets/Audio/TriggerStartAudioTrack.wav
+      - Mic animation/SpectaclesInteractionKit/Assets/Materials
+      - Mic animation/SpectaclesInteractionKit/Assets/Materials/PlatformUI
+      - Mic animation/SpectaclesInteractionKit/Assets/Materials/PlatformUI/ButtonHover.mat
+      - Mic animation/SpectaclesInteractionKit/Assets/Materials/PlatformUI/ButtonPinched.mat
+      - Mic animation/SpectaclesInteractionKit/Assets/Meshes
+      - Mic animation/SpectaclesInteractionKit/Assets/Meshes/PlatformUI
+      - Mic animation/SpectaclesInteractionKit/Assets/Meshes/PlatformUI/PlatformSphereButton.mesh
+      - Mic animation/SpectaclesInteractionKit/Assets/Shaders
+      - Mic animation/SpectaclesInteractionKit/Assets/Shaders/PlatformUI
+      - Mic animation/SpectaclesInteractionKit/Assets/Shaders/PlatformUI/ButtonHover.ss_graph
+      - Mic animation/SpectaclesInteractionKit/Assets/Shaders/PlatformUI/ButtonPinched.ss_graph
+      - Mic animation/SpectaclesInteractionKit/Assets/Textures
+      - Mic animation/SpectaclesInteractionKit/Assets/Textures/PlatformUI
+      - Mic animation/SpectaclesInteractionKit/Assets/Textures/PlatformUI/ArrowDown.png
+      - Mic animation/SpectaclesInteractionKit/Assets/Textures/PlatformUI/SimpleIdle.jpg
+      - Mic animation/SpectaclesInteractionKit/Assets/Textures/PlatformUI/SimpleRefl_02.jpg
+      - Mic animation/SpectaclesInteractionKit/Components/Helpers
+      - Mic animation/SpectaclesInteractionKit/Components/Helpers/ButtonFeedback.ts
+      - Mic animation/SpectaclesInteractionKit/Components/Helpers/InteractableAudioFeedback.ts
+      - Mic animation/SpectaclesInteractionKit/Components/Interaction
+      - Mic animation/SpectaclesInteractionKit/Components/Interaction/Billboard
+      - Mic animation/SpectaclesInteractionKit/Components/Interaction/Billboard/Billboard.ts
+      - Mic animation/SpectaclesInteractionKit/Components/Interaction/Billboard/BillboardController.ts
+      - Mic animation/SpectaclesInteractionKit/Components/Interaction/Billboard/BillboardRotationCalculator.ts
+      - Mic animation/SpectaclesInteractionKit/Components/Interaction/HandVisual
+      - Mic animation/SpectaclesInteractionKit/Components/Interaction/HandVisual/GlowEffectView.ts
+      - Mic animation/SpectaclesInteractionKit/Components/Interaction/HandVisual/GlowEffectViewModel.ts
+      - Mic animation/SpectaclesInteractionKit/Components/Interaction/HandVisual/HandVisual.ts
+      - Mic animation/SpectaclesInteractionKit/Components/Interaction/HandVisual/RadialOcclusionView.ts
+      - Mic animation/SpectaclesInteractionKit/Components/Interaction/Headlock
+      - Mic animation/SpectaclesInteractionKit/Components/Interaction/Headlock/Headlock.ts
+      - Mic animation/SpectaclesInteractionKit/Components/Interaction/Headlock/HeadlockController.ts
+      - Mic animation/SpectaclesInteractionKit/Components/Interaction/Headlock/HeadlockRotationCalculator.ts
+      - Mic animation/SpectaclesInteractionKit/Components/Interaction/Headlock/HeadlockTranslationCalculator.ts
+      - Mic animation/SpectaclesInteractionKit/Components/Interaction/Interactable
+      - Mic animation/SpectaclesInteractionKit/Components/Interaction/Interactable/Interactable.ts
+      - Mic animation/SpectaclesInteractionKit/Components/Interaction/InteractableManipulation
+      - Mic animation/SpectaclesInteractionKit/Components/Interaction/InteractableManipulation/InteractableManipulation.ts
+      - Mic animation/SpectaclesInteractionKit/Components/Interaction/InteractionPlane
+      - Mic animation/SpectaclesInteractionKit/Components/Interaction/InteractionPlane/InteractionPlane.ts
+      - Mic animation/SpectaclesInteractionKit/Components/Interaction/InteractorCursor
+      - Mic animation/SpectaclesInteractionKit/Components/Interaction/InteractorCursor/CircleVisual.ts
+      - Mic animation/SpectaclesInteractionKit/Components/Interaction/InteractorCursor/Cursor.mat
+      - Mic animation/SpectaclesInteractionKit/Components/Interaction/InteractorCursor/CursorMat.ss_graph
+      - Mic animation/SpectaclesInteractionKit/Components/Interaction/InteractorCursor/CursorViewModel.ts
+      - Mic animation/SpectaclesInteractionKit/Components/Interaction/InteractorCursor/InteractorCursor.ts
+      - Mic animation/SpectaclesInteractionKit/Components/Interaction/InteractorCursor/ManipulateLineMat.ss_graph
+      - Mic animation/SpectaclesInteractionKit/Components/Interaction/InteractorCursor/ManipulateLineMaterial.mat
+      - Mic animation/SpectaclesInteractionKit/Components/Interaction/InteractorCursor/Plane.mesh
+      - Mic animation/SpectaclesInteractionKit/Components/Interaction/InteractorCursor/disabled.png
+      - Mic animation/SpectaclesInteractionKit/Components/Interaction/InteractorCursor/scale-tl.png
+      - Mic animation/SpectaclesInteractionKit/Components/Interaction/InteractorCursor/scale-tr.png
+      - Mic animation/SpectaclesInteractionKit/Components/Interaction/InteractorCursor/translate.png
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/ContainerFrame.ts
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/FrameMaterial.mat
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/FrameMaterial.ss_graph
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/Ghost Material.mat
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/Ghost Material.ss_graph
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/container-button.mat
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/container-button.ss_graph
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/Meshes
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/Meshes/Frame_Mid.mesh
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/Meshes/SysSettings_settings_button.mesh
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/Prefabs
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/Prefabs/FramePrefab.prefab
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/Prefabs/container-button.prefab
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/Textures
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/Textures/close-icon-1.png
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/Textures/container-button-matcap.jpg
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/Textures/follow-black.png
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/Textures/follow-white.png
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/Textures/reflection-map-1.jpg
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/CursorHandler.ts
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/FrameInputHandler.ts
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/LabeledPinchButton.ts
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/SmoothFollow.ts
+      - Mic animation/SpectaclesInteractionKit/Components/UI/PinchButton
+      - Mic animation/SpectaclesInteractionKit/Components/UI/PinchButton/PinchButton.ts
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ScrollBar
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ScrollBar/ScrollBar.ts
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ScrollView
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ScrollView/ScrollArea.ts
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ScrollView/ScrollProvider.ts
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ScrollView/ScrollView.ts
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ScrollView/boundariesProvider
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ScrollView/boundariesProvider/BoundariesProvider.ts
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ScrollView/boundariesProvider/BufferedBoundariesProvider.ts
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ScrollView/boundariesProvider/SceneObjectBoundariesProvider.ts
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ScrollView/boundariesProvider/ScreenTransformBoundariesProvider.ts
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ScrollView/boundariesProvider/VisualBoundariesProvider.ts
+      - Mic animation/SpectaclesInteractionKit/Components/UI/Slider
+      - Mic animation/SpectaclesInteractionKit/Components/UI/Slider/Slider.ts
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ToggleButton
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ToggleButton/ToggleButton.ts
+      - Mic animation/SpectaclesInteractionKit/Core
+      - Mic animation/SpectaclesInteractionKit/Core/HandInteractor
+      - Mic animation/SpectaclesInteractionKit/Core/HandInteractor/HandInteractor.ts
+      - Mic animation/SpectaclesInteractionKit/Core/InteractionManager
+      - Mic animation/SpectaclesInteractionKit/Core/InteractionManager/EventDispatcher.ts
+      - Mic animation/SpectaclesInteractionKit/Core/InteractionManager/InteractionManager.ts
+      - Mic animation/SpectaclesInteractionKit/Core/Interactor
+      - Mic animation/SpectaclesInteractionKit/Core/Interactor/BaseInteractor.ts
+      - Mic animation/SpectaclesInteractionKit/Core/Interactor/ColliderTargetProvider.ts
+      - Mic animation/SpectaclesInteractionKit/Core/Interactor/DirectTargetProvider.ts
+      - Mic animation/SpectaclesInteractionKit/Core/Interactor/DragProvider.ts
+      - Mic animation/SpectaclesInteractionKit/Core/Interactor/HandRayProvider.ts
+      - Mic animation/SpectaclesInteractionKit/Core/Interactor/IndirectTargetProvider.ts
+      - Mic animation/SpectaclesInteractionKit/Core/Interactor/Interactor.ts
+      - Mic animation/SpectaclesInteractionKit/Core/Interactor/InteractorEvent.ts
+      - Mic animation/SpectaclesInteractionKit/Core/Interactor/MobileRayProvider.ts
+      - Mic animation/SpectaclesInteractionKit/Core/Interactor/MouseTargetProvider.ts
+      - Mic animation/SpectaclesInteractionKit/Core/Interactor/PokeTargetProvider.ts
+      - Mic animation/SpectaclesInteractionKit/Core/Interactor/RayProvider.ts
+      - Mic animation/SpectaclesInteractionKit/Core/Interactor/TouchRayProvider.ts
+      - Mic animation/SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms
+      - Mic animation/SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/AxisAngle.ts
+      - Mic animation/SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/ContinousIrInteractionTransition.ts
+      - Mic animation/SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/IrInteractionTransition.ts
+      - Mic animation/SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/PinchJumpSuppressor.ts
+      - Mic animation/SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/RaycastAnchorHead.ts
+      - Mic animation/SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/RaycastAnchorVariableShoulder.ts
+      - Mic animation/SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/RaycastBase.ts
+      - Mic animation/SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/RaycastLegacySingleCamera.ts
+      - Mic animation/SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/RaycastProxy.ts
+      - Mic animation/SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/RgbIrTransitionJumpSuppressor.ts
+      - Mic animation/SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/SwitchIrInteractionTransition.ts
+      - Mic animation/SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/TimeDataContainer.ts
+      - Mic animation/SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/TimeScalarContainer.ts
+      - Mic animation/SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/TimedVec2Container.ts
+      - Mic animation/SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/TimedVec3Container.ts
+      - Mic animation/SpectaclesInteractionKit/Core/MobileInteractor
+      - Mic animation/SpectaclesInteractionKit/Core/MobileInteractor/MobileInteractor.ts
+      - Mic animation/SpectaclesInteractionKit/Core/MouseInteractor
+      - Mic animation/SpectaclesInteractionKit/Core/MouseInteractor/MouseInteractor.ts
+      - Mic animation/SpectaclesInteractionKit/Decorators
+      - Mic animation/SpectaclesInteractionKit/Decorators/Singleton.ts
+      - Mic animation/SpectaclesInteractionKit/Providers
+      - Mic animation/SpectaclesInteractionKit/Providers/CameraProvider
+      - Mic animation/SpectaclesInteractionKit/Providers/CameraProvider/BaseCameraFinderProvider.js
+      - Mic animation/SpectaclesInteractionKit/Providers/CameraProvider/BaseCameraFinderProvider.ts
+      - Mic animation/SpectaclesInteractionKit/Providers/CameraProvider/BaseWorldCameraProvider.ts
+      - Mic animation/SpectaclesInteractionKit/Providers/CameraProvider/CameraProvider.ts
+      - Mic animation/SpectaclesInteractionKit/Providers/CameraProvider/WorldCameraFinderProvider.ts
+      - Mic animation/SpectaclesInteractionKit/Providers/CursorControllerProvider
+      - Mic animation/SpectaclesInteractionKit/Providers/CursorControllerProvider/CursorControllerProvider.ts
+      - Mic animation/SpectaclesInteractionKit/Providers/HandInputData
+      - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/BaseHand.ts
+      - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/DefaultHandTrackingAssetProvider.js
+      - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/DefaultHandTrackingAssetProvider.ts
+      - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider
+      - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/GestureModuleProvider.ts
+      - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PalmTapDetection
+      - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PalmTapDetection/PalmTapDetector.js
+      - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PalmTapDetection/PalmTapDetector.ts
+      - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PalmTapDetection/PalmTapDetectorStateMachine.ts
+      - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PalmTapDetectionEvent.ts
+      - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PalmTapEvent.js
+      - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PalmTapEvent.ts
+      - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection
+      - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/DetectionStrategies
+      - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/DetectionStrategies/HciPinchDetectionStrategy.js
+      - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/DetectionStrategies/HciPinchDetectionStrategy.ts
+      - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/DetectionStrategies/HeuristicPinchDetectionStrategy.ts
+      - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/DetectionStrategies/PinchDetectionStrategy.ts
+      - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/PinchDetector.ts
+      - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/PinchDetectorStateMachine.js
+      - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/PinchDetectorStateMachine.ts
+      - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchEventType.js
+      - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchEventType.ts
+      - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/HandInputData.ts
+      - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/HandTrackingAssetProvider.ts
+      - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/HandType.ts
+      - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/HandVisuals.ts
+      - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/Joints.js
+      - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/Joints.ts
+      - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/Keypoint.ts
+      - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/LandmarkNames.js
+      - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/LandmarkNames.ts
+      - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/LeftHandAsset.handTracking3D
+      - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/RightHandAsset.handTracking3D
+      - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/TrackedHand.js
+      - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/TrackedHand.ts
+      - Mic animation/SpectaclesInteractionKit/Providers/InteractionConfigurationProvider
+      - Mic animation/SpectaclesInteractionKit/Providers/InteractionConfigurationProvider/InteractionConfigurationProvider.js
+      - Mic animation/SpectaclesInteractionKit/Providers/InteractionConfigurationProvider/InteractionConfigurationProvider.ts
+      - Mic animation/SpectaclesInteractionKit/Providers/InteractionConfigurationProvider/LogLevelProvider.js
+      - Mic animation/SpectaclesInteractionKit/Providers/InteractionConfigurationProvider/LogLevelProvider.ts
+      - Mic animation/SpectaclesInteractionKit/Providers/InteractionConfigurationProvider/SIKLogLevelProvider.js
+      - Mic animation/SpectaclesInteractionKit/Providers/InteractionConfigurationProvider/SIKLogLevelProvider.ts
+      - Mic animation/SpectaclesInteractionKit/Providers/MobileInputData
+      - Mic animation/SpectaclesInteractionKit/Providers/MobileInputData/MobileInputData.ts
+      - Mic animation/SpectaclesInteractionKit/Providers/MobileInputData/MotionControllerProvider.ts
+      - Mic animation/SpectaclesInteractionKit/Providers/TargetProvider
+      - Mic animation/SpectaclesInteractionKit/Providers/TargetProvider/TargetProvider.ts
+      - Mic animation/SpectaclesInteractionKit/Providers/TargetProvider/TargetingData.ts
+      - Mic animation/SpectaclesInteractionKit/SIK.ts
+      - Mic animation/SpectaclesInteractionKit/Utils
+      - Mic animation/SpectaclesInteractionKit/Utils/BistableThreshold.js
+      - Mic animation/SpectaclesInteractionKit/Utils/BistableThreshold.ts
+      - Mic animation/SpectaclesInteractionKit/Utils/Event.ts
+      - Mic animation/SpectaclesInteractionKit/Utils/Filter.ts
+      - Mic animation/SpectaclesInteractionKit/Utils/FunctionTimingUtils.ts
+      - Mic animation/SpectaclesInteractionKit/Utils/InputChecker.ts
+      - Mic animation/SpectaclesInteractionKit/Utils/InspectorCallbacks.ts
+      - Mic animation/SpectaclesInteractionKit/Utils/LensConfig.js
+      - Mic animation/SpectaclesInteractionKit/Utils/LensConfig.ts
+      - Mic animation/SpectaclesInteractionKit/Utils/LogLevel.ts
+      - Mic animation/SpectaclesInteractionKit/Utils/MovingAverageFilter.ts
+      - Mic animation/SpectaclesInteractionKit/Utils/NativeLogger.ts
+      - Mic animation/SpectaclesInteractionKit/Utils/OneEuroFilter.ts
+      - Mic animation/SpectaclesInteractionKit/Utils/ReplayEvent.js
+      - Mic animation/SpectaclesInteractionKit/Utils/ReplayEvent.ts
+      - Mic animation/SpectaclesInteractionKit/Utils/SafeReference.ts
+      - Mic animation/SpectaclesInteractionKit/Utils/SampleOps.ts
+      - Mic animation/SpectaclesInteractionKit/Utils/SceneObjectUtils.ts
+      - Mic animation/SpectaclesInteractionKit/Utils/SeededRandomNumberGenerator.ts
+      - Mic animation/SpectaclesInteractionKit/Utils/State.ts
+      - Mic animation/SpectaclesInteractionKit/Utils/StateMachine.js
+      - Mic animation/SpectaclesInteractionKit/Utils/StateMachine.ts
+      - Mic animation/SpectaclesInteractionKit/Utils/UpdateDispatcher.ts
+      - Mic animation/SpectaclesInteractionKit/Utils/algorithms.ts
+      - Mic animation/SpectaclesInteractionKit/Utils/animate.ts
+      - Mic animation/SpectaclesInteractionKit/Utils/color.ts
+      - Mic animation/SpectaclesInteractionKit/Utils/lazyProperty.ts
+      - Mic animation/SpectaclesInteractionKit/Utils/logger.js
+      - Mic animation/SpectaclesInteractionKit/Utils/logger.ts
+      - Mic animation/SpectaclesInteractionKit/Utils/mathUtils.ts
+      - Mic animation/SpectaclesInteractionKit/Utils/notEmpty.ts
+      - Mic animation/SpectaclesInteractionKit/Utils/validate.js
+      - Mic animation/SpectaclesInteractionKit/Utils/validate.ts
+      - Mic animation/SpectaclesInteractionKit/Utils/views
+      - Mic animation/SpectaclesInteractionKit/Utils/views/LineRenderer
+      - Mic animation/SpectaclesInteractionKit/Utils/views/LineRenderer/LineMeshUtils.ts
+      - Mic animation/SpectaclesInteractionKit/Utils/views/LineRenderer/LineRenderer.ts
+      - Mic animation/SpectaclesInteractionKit/Utils/views/View.ts
+      - Mic animation/Vertex Distortion Material
+      - Mic animation/Vertex Distortion Material/.hidden
+      - Mic animation/Vertex Distortion Material/.hidden/Vertex Distortion.ss_graph
+      - Mic animation/Vertex Distortion Material/Vertex Distortion.mat
+      - Mic animation/flat.ss_graph
       - Normal.png
       - PBR 2.mat
       - PBR 3.mat
@@ -308,15 +1003,19 @@ CollapsedEntities:
       - Remote Service Gateway.lspkg/Utils/Promisfy.ts
       - Remote Service Gateway.lspkg/package.native
       - Scene.scene
+      - Script
       - Script 2.js
       - Script.js
       - Script/EnhancedButtonFeedback.ts
+      - Script/MaterialTextureReplacer.ts
       - Script_ContainerImage
       - Script_ContainerImage/ImageContainerScaler.ts
+      - Script_HandFollower
       - Script_HandFollower/DisplayMenuOnOff.ts
       - Script_HandFollower/HandFollower.ts
       - Script_HandFollower/HandFollowerWithAngleRange.ts
       - Script_HandFollower/VectorUtils.ts
+      - Slider.lsc
       - Spawn Object at World Mesh On Tap
       - Spawn Object at World Mesh On Tap/Point of Interest.prefab
       - Spawn Object at World Mesh On Tap/Spawn Object at World Mesh On Tap.js
@@ -344,7 +1043,76 @@ CollapsedEntities:
       - "Spawn Object at World Mesh On Tap/[Mesh Builder Example] Pipe Between Objects/Textures/MaterialParams.png"
       - "Spawn Object at World Mesh On Tap/[Mesh Builder Example] Pipe Between Objects/Textures/Normal.png"
       - Spawn Object at World Mesh On Tap/package.native
-      - SpectaclesInteractionKit
+      - Spectacles 3D Hand Hints.lspkg
+      - Spectacles 3D Hand Hints.lspkg/Animation
+      - Spectacles 3D Hand Hints.lspkg/Animation/BaseLayer.animationAsset
+      - Spectacles 3D Hand Hints.lspkg/Animation/Finger_Scroll_Micro.animationAsset
+      - Spectacles 3D Hand Hints.lspkg/Animation/Finger_Swipe_X.animationAsset
+      - Spectacles 3D Hand Hints.lspkg/Animation/Finger_Swipe_Y.animationAsset
+      - Spectacles 3D Hand Hints.lspkg/Animation/Finger_Tap_Near.animationAsset
+      - Spectacles 3D Hand Hints.lspkg/Animation/Finger_Tap_Surface.animationAsset
+      - Spectacles 3D Hand Hints.lspkg/Animation/Palm_Grab_X.animationAsset
+      - Spectacles 3D Hand Hints.lspkg/Animation/Palm_Grab_Y.animationAsset
+      - Spectacles 3D Hand Hints.lspkg/Animation/Palm_Swipe_X.animationAsset
+      - Spectacles 3D Hand Hints.lspkg/Animation/Palm_Touch_Near.animationAsset
+      - Spectacles 3D Hand Hints.lspkg/Animation/Palm_Touch_Surface.animationAsset
+      - Spectacles 3D Hand Hints.lspkg/Animation/Pinch_Far.animationAsset
+      - Spectacles 3D Hand Hints.lspkg/Animation/Pinch_Move_X.animationAsset
+      - Spectacles 3D Hand Hints.lspkg/Animation/Pinch_Move_Y.animationAsset
+      - Spectacles 3D Hand Hints.lspkg/Animation/Pinch_Move_Z.animationAsset
+      - Spectacles 3D Hand Hints.lspkg/Animation/Pinch_Near.animationAsset
+      - Spectacles 3D Hand Hints.lspkg/Animation/Pinch_Rotate_X.animationAsset
+      - Spectacles 3D Hand Hints.lspkg/Animation/Pinch_Rotate_Y.animationAsset
+      - Spectacles 3D Hand Hints.lspkg/Animation/Pinch_Rotate_Z.animationAsset
+      - Spectacles 3D Hand Hints.lspkg/Animation/Pinch_Swipe_X.animationAsset
+      - Spectacles 3D Hand Hints.lspkg/Animation/Pinch_Swipe_Y.animationAsset
+      - Spectacles 3D Hand Hints.lspkg/Animation/System_Tap_Exit.animationAsset
+      - Spectacles 3D Hand Hints.lspkg/Animation/System_Tap_Rotate_Down.animationAsset
+      - Spectacles 3D Hand Hints.lspkg/Animation/System_Tap_Rotate_Up.animationAsset
+      - Spectacles 3D Hand Hints.lspkg/Animation/System_Tap_Save.animationAsset
+      - Spectacles 3D Hand Hints.lspkg/Animation/System_Tap_Settings.animationAsset
+      - Spectacles 3D Hand Hints.lspkg/Animation/System_Tap_Watch.animationAsset
+      - Spectacles 3D Hand Hints.lspkg/Animation/Two_Hands_Palm_Grab_X.animationAsset
+      - Spectacles 3D Hand Hints.lspkg/Animation/Two_Hands_Palm_Grab_Y.animationAsset
+      - Spectacles 3D Hand Hints.lspkg/Animation/Two_Hands_Pinch_Rotate_Y.animationAsset
+      - Spectacles 3D Hand Hints.lspkg/Animation/Two_Hands_Pinch_Rotate_Z.animationAsset
+      - Spectacles 3D Hand Hints.lspkg/Animation/Two_Hands_Pinch_Scale.animationAsset
+      - Spectacles 3D Hand Hints.lspkg/LSTween
+      - Spectacles 3D Hand Hints.lspkg/LSTween/LSTween.ts
+      - Spectacles 3D Hand Hints.lspkg/LSTween/RotationInterpolationType.ts
+      - Spectacles 3D Hand Hints.lspkg/LSTween/TweenJS
+      - Spectacles 3D Hand Hints.lspkg/LSTween/TweenJS/Easing.ts
+      - Spectacles 3D Hand Hints.lspkg/LSTween/TweenJS/Group.ts
+      - Spectacles 3D Hand Hints.lspkg/LSTween/TweenJS/Interpolation.ts
+      - Spectacles 3D Hand Hints.lspkg/LSTween/TweenJS/Now.ts
+      - Spectacles 3D Hand Hints.lspkg/LSTween/TweenJS/Sequence.ts
+      - Spectacles 3D Hand Hints.lspkg/LSTween/TweenJS/Tween.ts
+      - Spectacles 3D Hand Hints.lspkg/LSTween/TweenJS/mainGroup.ts
+      - Spectacles 3D Hand Hints.lspkg/Materials
+      - Spectacles 3D Hand Hints.lspkg/Materials/Graphs
+      - Spectacles 3D Hand Hints.lspkg/Materials/Graphs/HandHints_Cursor.ss_graph
+      - Spectacles 3D Hand Hints.lspkg/Materials/Graphs/HandHints_Inreraction_Glow.ss_graph
+      - Spectacles 3D Hand Hints.lspkg/Materials/Graphs/HandHints_Outline.ss_graph
+      - Spectacles 3D Hand Hints.lspkg/Materials/Graphs/HandHints_Outline_Glow_Combined.ss_graph
+      - Spectacles 3D Hand Hints.lspkg/Materials/Graphs/Occluder.ss_graph
+      - Spectacles 3D Hand Hints.lspkg/Materials/HandHints_Cursor.mat
+      - Spectacles 3D Hand Hints.lspkg/Materials/HandHints_Interaction_Glow.mat
+      - Spectacles 3D Hand Hints.lspkg/Materials/HandHints_Outline.mat
+      - Spectacles 3D Hand Hints.lspkg/Materials/Occluder.mat
+      - Spectacles 3D Hand Hints.lspkg/Meshes
+      - Spectacles 3D Hand Hints.lspkg/Meshes/CursorPlaneGeo.mesh
+      - Spectacles 3D Hand Hints.lspkg/Meshes/LeftHandGeo.mesh
+      - Spectacles 3D Hand Hints.lspkg/Meshes/RightHandGeo.mesh
+      - Spectacles 3D Hand Hints.lspkg/Prefabs
+      - Spectacles 3D Hand Hints.lspkg/Prefabs/Spectacles3DHandHints.prefab
+      - Spectacles 3D Hand Hints.lspkg/Scripts
+      - Spectacles 3D Hand Hints.lspkg/Scripts/ExampleJS.js
+      - Spectacles 3D Hand Hints.lspkg/Scripts/ExampleTS.ts
+      - Spectacles 3D Hand Hints.lspkg/Scripts/InteractionHintController.ts
+      - Spectacles 3D Hand Hints.lspkg/Textures
+      - Spectacles 3D Hand Hints.lspkg/Textures/Hands_Interaction_Glow_Mask.png
+      - Spectacles 3D Hand Hints.lspkg/Textures/Hands_Opacity_Gradient.png
+      - Spectacles 3D Hand Hints.lspkg/package.native
       - SpectaclesInteractionKit/Assets
       - SpectaclesInteractionKit/Assets/Audio
       - SpectaclesInteractionKit/Assets/Audio/HoverAudioTrack.wav
@@ -419,6 +1187,7 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/ImageMaterial 2.mat
       - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/ImageMaterial 3.mat
       - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/ImageMaterial 4.mat
+      - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/ImageMaterial 5.mat
       - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/ImageMaterial.mat
       - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/PlatformCapsuleButton.mesh
       - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/PlatformSphereButton.mesh
@@ -512,7 +1281,6 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Textures/SIKContainerExampleImage.jpg
       - SpectaclesInteractionKit/Assets/Textures/SIKLogo.png
       - SpectaclesInteractionKit/Assets/Textures/ScrollBarRectangle.png
-      - SpectaclesInteractionKit/Components
       - SpectaclesInteractionKit/Components/Helpers
       - SpectaclesInteractionKit/Components/Helpers/ButtonFeedback.ts
       - SpectaclesInteractionKit/Components/Helpers/CapsuleMeshCustomizer.ts
@@ -566,8 +1334,6 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Components/Interaction/InteractorLineVisual/InteractorLineMaterial.mat
       - SpectaclesInteractionKit/Components/Interaction/InteractorLineVisual/InteractorLineRenderer.ts
       - SpectaclesInteractionKit/Components/Interaction/InteractorLineVisual/InteractorLineVisual.ts
-      - SpectaclesInteractionKit/Components/UI
-      - SpectaclesInteractionKit/Components/UI/ContainerFrame
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/ContainerFrame.ts
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/FrameMaterial.mat
@@ -602,16 +1368,13 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Textures/reflection-map-1.jpg
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Textures/soft-reflection.jpg
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/container-ui.png
-      - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/CursorHandler.ts
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/ForceContainerParent.ts
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/FrameInputHandler.ts
-      - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/HoverBehavior.ts
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/LabeledPinchButton.ts
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/SimpleLODRenderMeshVisual
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/SimpleLODRenderMeshVisual/SimpleLODRenderMeshVisual.ts
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/SmoothFollow.ts
-      - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/SnappableBehavior.ts
       - SpectaclesInteractionKit/Components/UI/PinchButton
       - SpectaclesInteractionKit/Components/UI/PinchButton/PinchButton.ts
       - SpectaclesInteractionKit/Components/UI/ScrollBar
@@ -939,7 +1702,6 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Utils/views/MeshView.ts
       - SpectaclesInteractionKit/Utils/views/View.ts
       - SpectaclesInteractionKit/package.native
-      - SpectaclesSyncKit.lspkg
       - SpectaclesSyncKit.lspkg/Components
       - SpectaclesSyncKit.lspkg/Components/Instantiator.ts
       - SpectaclesSyncKit.lspkg/Components/SyncHelpers
@@ -1012,7 +1774,6 @@ CollapsedEntities:
       - SpectaclesSyncKit.lspkg/Examples/SyncEntityExample.ts
       - SpectaclesSyncKit.lspkg/Examples/SyncEntityExampleJavascript.js
       - SpectaclesSyncKit.lspkg/Location Cloud Storage Module.locationCloudStorageModule
-      - SpectaclesSyncKit.lspkg/Mapping
       - SpectaclesSyncKit.lspkg/Mapping/Assets
       - SpectaclesSyncKit.lspkg/Mapping/Assets/AnimationMixers
       - SpectaclesSyncKit.lspkg/Mapping/Assets/AnimationMixers/MappingSuccessCheckmark.animationLayer
@@ -1158,7 +1919,6 @@ CollapsedEntities:
       - SpectaclesSyncKit.lspkg/Mapping/Assets/Textures/TutorialRoom.webp
       - SpectaclesSyncKit.lspkg/Mapping/Assets/Textures/TutorialTileMask.jpg
       - SpectaclesSyncKit.lspkg/Mapping/Assets/Textures/UnsuccessNotificationTile.jpg
-      - SpectaclesSyncKit.lspkg/Mapping/src
       - SpectaclesSyncKit.lspkg/Mapping/src/EntryPointComponents
       - SpectaclesSyncKit.lspkg/Mapping/src/EntryPointComponents/EntryPointMain.ts
       - SpectaclesSyncKit.lspkg/Mapping/src/MappingFlowStates
@@ -1216,11 +1976,6 @@ CollapsedEntities:
       - SpectaclesSyncKit.lspkg/Mapping/src/UI/ObjectLocator/animations/Update.ts
       - SpectaclesSyncKit.lspkg/Mapping/src/UI/ObjectLocator/animations/tween.d.ts
       - SpectaclesSyncKit.lspkg/Mapping/src/UI/ObjectLocator/animations/tween.js
-      - SpectaclesSyncKit.lspkg/Mapping/src/Utils
-      - SpectaclesSyncKit.lspkg/Mapping/src/Utils/HeadLockBehavior
-      - SpectaclesSyncKit.lspkg/Mapping/src/Utils/HeadLockBehavior/HeadLockBehavior.ts
-      - SpectaclesSyncKit.lspkg/Mapping/src/Utils/HeadLockBehavior/HeadLockBehaviorInput.ts
-      - SpectaclesSyncKit.lspkg/Mapping/src/Utils/HeadLockBehavior/IHeadLockBehavior.ts
       - SpectaclesSyncKit.lspkg/Mapping/src/Utils/HeadLockBehavior/SecondOrderDynamics.ts
       - SpectaclesSyncKit.lspkg/Mapping/src/Utils/JoiningController.ts
       - SpectaclesSyncKit.lspkg/Mapping/src/Utils/ProjectContainer.ts
@@ -1242,6 +1997,10 @@ CollapsedEntities:
       - SpectaclesSyncKit.lspkg/VersionNumber.ts
       - SpectaclesSyncKit.lspkg/package.native
       - SplashVFX
+      - SplashVFX/Firework Explosion 2.vfxgraph
+      - SplashVFX/Firework Explosion 3.vfxgraph
+      - SplashVFX/Firework Explosion.vfxgraph
+      - SplashVFX/SplashWhite.png
       - Surface Detection.lspkg
       - Surface Detection.lspkg/Audio
       - Surface Detection.lspkg/Audio/CalibrationComplete.mp3
@@ -1280,6 +2039,11 @@ CollapsedEntities:
       - Unit Plane/Meshes/Unit Plane.mesh
       - Unit Plane/Unit_Plane__PLACE_IN_OBJECTS_PANEL.prefab
       - Unlit 2.mat
+      - Unlit Guide
+      - Unlit Guide/Unlit Guide1.mat
+      - Unlit Guide/Unlit Guide2.mat
+      - Unlit Guide/Unlit Guide3.mat
+      - Unlit Guide/Unlit Guide4.mat
       - Unlit.mat
       - Untitled JavaScript.js
       - Untitled TypeScript 2.ts
@@ -1353,6 +2117,8 @@ CollapsedEntities:
       - World Query Hit - Spawn On Surface/World Query Hit Example.prefab
       - World Query Hit - Spawn On Surface/WorldQueryHitExample.ts
       - guidescript.ts
+      - mic1.png
+      - mic2.png
       - pbr.ss_graph
       - unlit.ss_graph
   options: 4

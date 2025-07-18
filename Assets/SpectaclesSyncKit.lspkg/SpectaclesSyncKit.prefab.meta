@@ -9582,14 +9582,14 @@
   ScriptInputsDefault:
     {}
   ScriptTypesDefault:
-    "Instantiator\r": true
+    Instantiator: true
   ScriptInputs:
     "":
-      instantiator: !<RequiredType.Instantiator> dfaa3e2f-9006-47d3-80b5-117c7a8d1821
+      instantiator: !<Typename.Instantiator> dfaa3e2f-9006-47d3-80b5-117c7a8d1821
       prefab: !<reference.ObjectPrefab> 1f9e33dc-e464-491d-b435-dc1703b3f5a3
   ScriptTypes:
     "":
-      "Instantiator\r": !<reference.ScriptAsset> 00000000-0000-0000-0000-000000000000
+      Instantiator: !<reference.ScriptAsset> 00000000-0000-0000-0000-000000000000
 - !<SceneObject/9848aa46-5883-4fc9-ac27-88737e16ddb1>
   PrefabRemaps:
     []

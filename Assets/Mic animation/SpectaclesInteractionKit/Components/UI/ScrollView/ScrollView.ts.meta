@@ -1,0 +1,60 @@
+- !<AssetImportMetadata/283bd227-c31b-20d0-dd4b-69c0fec3181b>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 52ba4db8-02fd-4b01-a6f1-668c3ac5e9ae
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 52ba4db8-02fd-4b01-a6f1-668c3ac5e9ae
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 701b1817-1a1b-4a0d-b9d5-f6b3fc185af9
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/701b1817-1a1b-4a0d-b9d5-f6b3fc185af9>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 014ae827-c3ff-4f15-90f6-a47cda1fed86
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    _debugDrawEnabled: false
+    _enableScrollInertia: false
+    _scrollLimit: false
+    enableHorizontalScroll: false
+    enableScrollLimit: false
+    enableVerticalScroll: false
+    scrollAreaBounds: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - _debugDrawEnabled: false
+      enableHorizontalScroll: false
+      enableVerticalScroll: true
+      _enableScrollInertia: true
+      enableScrollLimit: true
+      _scrollLimit: 0.300000
+      scrollAreaBounds: !<Vec2> {x: 1.000000, y: 1.000000}
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input bool _debugDrawEnabled
+    - // @input bool enableHorizontalScroll
+    - // @input bool enableVerticalScroll = true
+    - // @input bool _enableScrollInertia = true
+    - // @input bool enableScrollLimit = true
+    - '// @input float _scrollLimit = 0.3 {"widget":"slider", "min":0, "max":1, "step":0.01}'
+    - '// @input vec2 scrollAreaBounds = "{1, 1}"'

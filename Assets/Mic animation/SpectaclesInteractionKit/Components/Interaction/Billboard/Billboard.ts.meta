@@ -1,0 +1,59 @@
+- !<AssetImportMetadata/9e4ebc9f-517f-dcd1-ebb9-41dcba2724c1>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 62fdd953-65f3-4f3e-afea-9fd289f8aa77
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 62fdd953-65f3-4f3e-afea-9fd289f8aa77
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 4c352c78-f37c-479a-b63d-17b2912dfb86
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/4c352c78-f37c-479a-b63d-17b2912dfb86>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 8a40c633-5e6b-4276-8c8f-3c449d549eee
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    _axisBufferDegrees: false
+    _axisEasing: false
+    _xAxisEnabled: false
+    _yAxisEnabled: false
+    _zAxisEnabled: false
+    duration: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - _xAxisEnabled: false
+      _yAxisEnabled: true
+      _zAxisEnabled: false
+      _axisBufferDegrees: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      _axisEasing: !<Vec3> {x: 1.000000, y: 1.000000, z: 1.000000}
+      duration: 0.033000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"group_start", "label":"Billboard"}'
+    - // @input bool _xAxisEnabled
+    - // @input bool _yAxisEnabled = true
+    - // @input bool _zAxisEnabled
+    - '// @input vec3 _axisBufferDegrees = {0,0,0} {"hint":"How big the angle must be to start rotating about that axis"}'
+    - '// @input vec3 _axisEasing = {1,1,1} {"hint":"How fast the target should rotate to follow camera, instant follow = 1, delay follow = 0.1"}'
+    - '// @input float duration = 0.033 {"hint":"Decrecated. Please use the property Axis Easing to adjust the rotation speed"}'
+    - '// @ui {"widget":"group_end"}'
