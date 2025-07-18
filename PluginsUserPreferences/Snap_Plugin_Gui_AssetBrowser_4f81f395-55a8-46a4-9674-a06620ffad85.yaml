@@ -1,82 +1,16 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 2118
+    size: 2079
     values:
       - ""
-      - AddedAsset/Customizable Progress Bar.lsc
+      - AddedAsset
       - AddedAsset/Device Camera Texture.deviceCameraTexture
       - AddedAsset/Echopark.hdr
       - AddedAsset/Echopark.hdr/Diffuse
       - AddedAsset/Echopark.hdr/Specular
       - AddedAsset/Precise Object Toggle.lsc
       - AddedAsset/Render Target.renderTarget
-      - AddedAsset/Resource Bar Pack/.hidden
-      - "AddedAsset/Resource Bar Pack/.hidden/Bar Mat 1 [EDIT ME].ss_graph"
-      - AddedAsset/Resource Bar Pack/.hidden/Image.lsmat.mat
-      - AddedAsset/Resource Bar Pack/.hidden/Image1.lsmat.ss_graph
-      - AddedAsset/Resource Bar Pack/.hidden/Image10.lsmat.mat
-      - AddedAsset/Resource Bar Pack/.hidden/Image11.lsmat.mat
-      - AddedAsset/Resource Bar Pack/.hidden/Image12.lsmat.mat
-      - AddedAsset/Resource Bar Pack/.hidden/Image13.lsmat.mat
-      - AddedAsset/Resource Bar Pack/.hidden/Image14.lsmat.mat
-      - AddedAsset/Resource Bar Pack/.hidden/Image15.lsmat.mat
-      - AddedAsset/Resource Bar Pack/.hidden/Image2.lsmat.mat
-      - AddedAsset/Resource Bar Pack/.hidden/Image3.lsmat.mat
-      - AddedAsset/Resource Bar Pack/.hidden/Image4.lsmat.mat
-      - AddedAsset/Resource Bar Pack/.hidden/Image5.lsmat.mat
-      - AddedAsset/Resource Bar Pack/.hidden/Image6.lsmat.mat
-      - AddedAsset/Resource Bar Pack/.hidden/Image7.lsmat.mat
-      - AddedAsset/Resource Bar Pack/.hidden/Image8.lsmat.mat
-      - AddedAsset/Resource Bar Pack/.hidden/Image9.lsmat.mat
-      - AddedAsset/Resource Bar Pack/.hidden/Info Card Background.ss_graph
-      - AddedAsset/Resource Bar Pack/.hidden/SpritePreset.lsmat.mat
-      - AddedAsset/Resource Bar Pack/Resource_Bar_Pack____PUT_IN_ORTHO_CAM.prefab
-      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]"
-      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Fonts"
-      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Fonts/Lato-Bold.ttf"
-      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Fonts/Lato-Regular.ttf"
-      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Materials"
-      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Materials/Info Card Background.mat"
-      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Textures"
-      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Textures/BaseTex.png"
-      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Textures/Icon.png"
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Continuous Bar Material
-      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Continuous Bar Material/Bar Mat 1 [EDIT ME].mat"
-      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Continuous Bar Material/Bar Mat 2 [EDIT ME].mat"
-      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Continuous Bar Material/Bar Mat 3 [EDIT ME].mat"
-      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Continuous Bar Material/Bar Mat 4 [EDIT ME].mat"
-      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Continuous Bar Material/Bar Mat 5 [EDIT ME].mat"
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Frame Materials
-      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Frame Materials/Frame Material 1 [EDIT ME].mat"
-      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Frame Materials/Frame Material 2 [EDIT ME].mat"
-      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Frame Materials/Frame Material 3 [EDIT ME].mat"
-      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Frame Materials/Frame Material 4 [EDIT ME].mat"
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Segmented Bar Materials
-      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Segmented Bar Materials/Segment Bar Mat [EDIT ME].mat"
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Scripts/ContinuousBarUpdaterScript.js
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Scripts/Documentation.js
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Scripts/SegmentedBarUpdaterScript.js
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 2
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 2/Life 2.png
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 2/Life Bar 2.png
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 4
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 4/Life 4.png
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 4/Life bar 4.png
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 5
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 5/Life 5.png
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 5/Life bar 5.png
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 7
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 7/Life 7.png
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 7/Life Bar 7.png
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Segmented Bar
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Segmented Bar/Design 1
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Segmented Bar/Design 1/Hearth.png
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Segmented Bar/Design 1/Life bars 1.png
       - Base 2.png
       - Base.png
       - ButtonToggleFunctions.ts
@@ -183,17 +117,37 @@ CollapsedEntities:
       - GenAI/Snap3DInteractableFactory.ts
       - GenAI/SphereController.ts
       - GenAI/Untitled JavaScript.js
+      - HS UI Assets
       - HS UI Assets/Guide
       - HS UI Assets/Guide/Guide1.png
       - HS UI Assets/Guide/Guide2.png
       - HS UI Assets/Guide/Guide3.png
       - HS UI Assets/Guide/Guide4.png
       - HS UI Assets/Guide/ImageMaterial.mat
-      - HS UI Assets/Icons
-      - HS UI Assets/Icons/Icon
-      - HS UI Assets/Icons/mic1.png
-      - HS UI Assets/Icons/mic2.png
-      - HS UI Assets/Image_mic.mat
+      - HS UI Assets/Icons_Texture
+      - HS UI Assets/Icons_Texture/mic1.png
+      - HS UI Assets/Icons_Texture/mic2.png
+      - HS UI Assets/Material/Icon_Mic.mat
+      - HS UI Assets/Material/Image_mic.mat
+      - HS UI Assets/Material/Unlit 2.mat
+      - HS UI Assets/Material/Unlit Guide
+      - HS UI Assets/Material/Unlit Guide/Unlit Guide1.mat
+      - HS UI Assets/Material/Unlit Guide/Unlit Guide2.mat
+      - HS UI Assets/Material/Unlit Guide/Unlit Guide3.mat
+      - HS UI Assets/Material/Unlit Guide/Unlit Guide4.mat
+      - HS UI Assets/Material/Unlit.mat
+      - HS UI Assets/Mesh
+      - HS UI Assets/Mesh/Unit Plane
+      - HS UI Assets/Mesh/Unit Plane/.hidden
+      - HS UI Assets/Mesh/Unit Plane/.hidden/Textures
+      - HS UI Assets/Mesh/Unit Plane/.hidden/Textures/Base.png
+      - HS UI Assets/Mesh/Unit Plane/.hidden/Textures/Normal.png
+      - HS UI Assets/Mesh/Unit Plane/.hidden/UberDiffuse.lsmat.mat
+      - HS UI Assets/Mesh/Unit Plane/.hidden/UberDiffuse1.lsmat.ss_graph
+      - HS UI Assets/Mesh/Unit Plane/Meshes
+      - HS UI Assets/Mesh/Unit Plane/Meshes/Unit Plane.mesh
+      - HS UI Assets/Mesh/Unit Plane/Unit_Plane__PLACE_IN_OBJECTS_PANEL.prefab
+      - HS UI Assets/Mic animation.lspkg
       - HS UI Assets/Mic animation.lspkg/Mic.mat
       - HS UI Assets/Mic animation.lspkg/MicBlack.png
       - HS UI Assets/Mic animation.lspkg/MicWhite.png
@@ -515,9 +469,8 @@ CollapsedEntities:
       - HS UI Assets/Mic animation.lspkg/Vertex Distortion Material/Vertex Distortion.mat
       - HS UI Assets/Mic animation.lspkg/flat.ss_graph
       - HS UI Assets/Mic animation.lspkg/package.native
-      - HS UI Assets/mic1.png
-      - HS UI Assets/mic2.png
-      - Icon_Mic.mat
+      - HS UI Assets/Shader
+      - HS UI Assets/Shader/unlit.ss_graph
       - Image 2.mat
       - Image.mat
       - ImageTexture
@@ -614,6 +567,7 @@ CollapsedEntities:
       - LSTween.lspkg/TweenJS/mainGroup.ts
       - LSTween.lspkg/package.native
       - MaterialParams.png
+      - Mic animation
       - Mic animation/Mic.mat
       - Mic animation/MicBlack.png
       - Mic animation/MicWhite.png
@@ -935,8 +889,6 @@ CollapsedEntities:
       - Mic animation/Vertex Distortion Material/Vertex Distortion.mat
       - Mic animation/flat.ss_graph
       - Normal.png
-      - PBR 2.mat
-      - PBR 3.mat
       - PBR.mat
       - Prefab
       - Prefab/Menu.prefab
@@ -1003,11 +955,12 @@ CollapsedEntities:
       - Remote Service Gateway.lspkg/Utils/Promisfy.ts
       - Remote Service Gateway.lspkg/package.native
       - Scene.scene
-      - Script
       - Script 2.js
       - Script.js
+      - Script/ContinuousVFXBurstOnPinchWithButtonFeedback.ts
       - Script/EnhancedButtonFeedback.ts
       - Script/MaterialTextureReplacer.ts
+      - Script/SpawnParticleOnPinch.ts
       - Script_ContainerImage
       - Script_ContainerImage/ImageContainerScaler.ts
       - Script_HandFollower
@@ -1113,6 +1066,7 @@ CollapsedEntities:
       - Spectacles 3D Hand Hints.lspkg/Textures/Hands_Interaction_Glow_Mask.png
       - Spectacles 3D Hand Hints.lspkg/Textures/Hands_Opacity_Gradient.png
       - Spectacles 3D Hand Hints.lspkg/package.native
+      - SpectaclesInteractionKit
       - SpectaclesInteractionKit/Assets
       - SpectaclesInteractionKit/Assets/Audio
       - SpectaclesInteractionKit/Assets/Audio/HoverAudioTrack.wav
@@ -1702,6 +1656,7 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Utils/views/MeshView.ts
       - SpectaclesInteractionKit/Utils/views/View.ts
       - SpectaclesInteractionKit/package.native
+      - SpectaclesSyncKit.lspkg
       - SpectaclesSyncKit.lspkg/Components
       - SpectaclesSyncKit.lspkg/Components/Instantiator.ts
       - SpectaclesSyncKit.lspkg/Components/SyncHelpers
@@ -1996,11 +1951,6 @@ CollapsedEntities:
       - SpectaclesSyncKit.lspkg/Utils/Unsubscribe.ts
       - SpectaclesSyncKit.lspkg/VersionNumber.ts
       - SpectaclesSyncKit.lspkg/package.native
-      - SplashVFX
-      - SplashVFX/Firework Explosion 2.vfxgraph
-      - SplashVFX/Firework Explosion 3.vfxgraph
-      - SplashVFX/Firework Explosion.vfxgraph
-      - SplashVFX/SplashWhite.png
       - Surface Detection.lspkg
       - Surface Detection.lspkg/Audio
       - Surface Detection.lspkg/Audio/CalibrationComplete.mp3
@@ -2028,26 +1978,40 @@ CollapsedEntities:
       - Surface Detection.lspkg/Textures
       - Surface Detection.lspkg/Textures/groundIcon.png
       - Surface Detection.lspkg/package.native
-      - Unit Plane
-      - Unit Plane/.hidden
-      - Unit Plane/.hidden/Textures
-      - Unit Plane/.hidden/Textures/Base.png
-      - Unit Plane/.hidden/Textures/Normal.png
-      - Unit Plane/.hidden/UberDiffuse.lsmat.mat
-      - Unit Plane/.hidden/UberDiffuse1.lsmat.ss_graph
-      - Unit Plane/Meshes
-      - Unit Plane/Meshes/Unit Plane.mesh
-      - Unit Plane/Unit_Plane__PLACE_IN_OBJECTS_PANEL.prefab
-      - Unlit 2.mat
-      - Unlit Guide
-      - Unlit Guide/Unlit Guide1.mat
-      - Unlit Guide/Unlit Guide2.mat
-      - Unlit Guide/Unlit Guide3.mat
-      - Unlit Guide/Unlit Guide4.mat
-      - Unlit.mat
+      - UI_Old.prefab
       - Untitled JavaScript.js
-      - Untitled TypeScript 2.ts
       - Untitled TypeScript.ts
+      - VFX/Fireworks VFX/.hidden
+      - VFX/Fireworks VFX/.hidden/Info Card Background.ss_graph
+      - VFX/Fireworks VFX/.hidden/SpritePreset.lsmat.ss_graph
+      - VFX/Fireworks VFX/Fireworks__PLACE_IN_OBJECTS_PANEL.prefab
+      - VFX/Fireworks VFX/Fireworks__PLACE_IN_OBJECTS_PANEL/Converted Scripts
+      - VFX/Fireworks VFX/Fireworks__PLACE_IN_OBJECTS_PANEL/Converted Scripts/Script Spawn VFX_OnStartEvent.js
+      - VFX/Fireworks VFX/Fireworks__PLACE_IN_OBJECTS_PANEL/Converted Scripts/Script Spawn VFX_wrapped.js
+      - VFX/Fireworks VFX/Fireworks__PLACE_IN_OBJECTS_PANEL/Fireworks VFX Resources/VFX/Firework Explosion 2.vfxgraph
+      - VFX/Fireworks VFX/Fireworks__PLACE_IN_OBJECTS_PANEL/Fireworks VFX Resources/VFX/Firework Explosion.vfxgraph
+      - "VFX/Fireworks VFX/Fireworks__PLACE_IN_OBJECTS_PANEL/Info Card [DELETE_ME]"
+      - "VFX/Fireworks VFX/Fireworks__PLACE_IN_OBJECTS_PANEL/Info Card [DELETE_ME]/.hidden"
+      - "VFX/Fireworks VFX/Fireworks__PLACE_IN_OBJECTS_PANEL/Info Card [DELETE_ME]/.hidden/SpritePreset.lsmat.mat"
+      - "VFX/Fireworks VFX/Fireworks__PLACE_IN_OBJECTS_PANEL/Info Card [DELETE_ME]/BaseTex.png"
+      - "VFX/Fireworks VFX/Fireworks__PLACE_IN_OBJECTS_PANEL/Info Card [DELETE_ME]/Fonts"
+      - "VFX/Fireworks VFX/Fireworks__PLACE_IN_OBJECTS_PANEL/Info Card [DELETE_ME]/Fonts/Lato-Bold.ttf"
+      - "VFX/Fireworks VFX/Fireworks__PLACE_IN_OBJECTS_PANEL/Info Card [DELETE_ME]/Fonts/Lato-Regular.ttf"
+      - "VFX/Fireworks VFX/Fireworks__PLACE_IN_OBJECTS_PANEL/Info Card [DELETE_ME]/Icon.png"
+      - "VFX/Fireworks VFX/Fireworks__PLACE_IN_OBJECTS_PANEL/Info Card [DELETE_ME]/Materials"
+      - "VFX/Fireworks VFX/Fireworks__PLACE_IN_OBJECTS_PANEL/Info Card [DELETE_ME]/Materials/Info Card Background.mat"
+      - VFX/Fireworks VFX/Render Target.renderTarget
+      - VFX/Fireworks VFX/SplashWhite.png
+      - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/README.js
+      - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/Script/TapController.js
+      - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/Textures
+      - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/Textures/Soap_bubble_color.png
+      - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/Textures/Soap_bubble_specular.png
+      - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/Textures/Splash_map.png
+      - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/Textures/Swirl_flow_map.png
+      - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/VFX Asset/Soap Bubbles Emitter 2.vfxgraph
+      - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/VFX Asset/Soap Bubbles Emitter.vfxgraph
+      - VFX/Interactive Soap Bubbles VFX/Interactive_Soap_Bubbles__PUT_UNDER_MAIN_CAM.prefab
       - World Mesh - Spawn On Surfaces.lspkg
       - World Mesh - Spawn On Surfaces.lspkg/Materials
       - World Mesh - Spawn On Surfaces.lspkg/Materials/Blue.mat
@@ -2117,8 +2081,5 @@ CollapsedEntities:
       - World Query Hit - Spawn On Surface/World Query Hit Example.prefab
       - World Query Hit - Spawn On Surface/WorldQueryHitExample.ts
       - guidescript.ts
-      - mic1.png
-      - mic2.png
       - pbr.ss_graph
-      - unlit.ss_graph
   options: 4
