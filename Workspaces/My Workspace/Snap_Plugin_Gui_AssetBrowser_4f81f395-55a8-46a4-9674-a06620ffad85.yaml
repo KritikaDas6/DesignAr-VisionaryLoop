@@ -1,9 +1,8 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 1345
+    size: 1352
     values:
-      - ""
       - AddedAsset
       - AddedAsset/Customizable Progress Bar.lsc
       - AddedAsset/Device Camera Texture.deviceCameraTexture
@@ -188,6 +187,7 @@ CollapsedEntities:
       - GenAI/Snap3DInteractableFactory.ts
       - GenAI/SphereController.ts
       - GenAI/Untitled JavaScript.js
+      - HS UI Assets
       - HS UI Assets/Guide/ImageMaterial.mat
       - ImageTexture
       - ImageTexture/Bird.mat
@@ -207,6 +207,11 @@ CollapsedEntities:
       - ImageTexture/image_unlit 2.ss_graph
       - ImageTexture/image_unlit.ss_graph
       - ImageTexture/simple_pbr.ss_graph
+      - Jelly/JellyButton/Material
+      - Jelly/JellyButton/Panel
+      - Jelly/JellyButton/Shader
+      - Jelly/JellyButton/Sparkles VFX Resources
+      - Jelly/JellyButton/Texture
       - LSTween.lspkg
       - LSTween.lspkg/Examples
       - LSTween.lspkg/Examples/Assets
@@ -305,11 +310,12 @@ CollapsedEntities:
       - Scene.scene
       - Script 2.js
       - Script.js
+      - Script/EnhancedButtonFeedback.ts
       - Script_ContainerImage
       - Script_ContainerImage/ImageContainerScaler.ts
-      - Script_HandFollower
       - Script_HandFollower/DisplayMenuOnOff.ts
       - Script_HandFollower/HandFollower.ts
+      - Script_HandFollower/HandFollowerWithAngleRange.ts
       - Script_HandFollower/VectorUtils.ts
       - Spawn Object at World Mesh On Tap
       - Spawn Object at World Mesh On Tap/Point of Interest.prefab
@@ -1235,6 +1241,7 @@ CollapsedEntities:
       - SpectaclesSyncKit.lspkg/Utils/Unsubscribe.ts
       - SpectaclesSyncKit.lspkg/VersionNumber.ts
       - SpectaclesSyncKit.lspkg/package.native
+      - SplashVFX
       - Surface Detection.lspkg
       - Surface Detection.lspkg/Audio
       - Surface Detection.lspkg/Audio/CalibrationComplete.mp3

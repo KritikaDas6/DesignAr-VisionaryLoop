@@ -1,6 +1,5 @@
-@component
-export class NewScript extends BaseScriptComponent {
-    onAwake() {
-
+export class VectorUtils {
+    static scalar3(x: number): vec3 {
+        return new vec3(x, x, x);
     }
 }

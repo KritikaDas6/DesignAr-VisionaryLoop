@@ -1,0 +1,56 @@
+- !<ObjectPrefab/d4f6098e-389e-4652-95e8-ebc3da44aa31>
+  PackagePath: ""
+  objects:
+    - !<own> 33eebf9d-ecd7-4a5c-8abf-1c957c2a409c
+  LazyLoading: false
+  RetainAssets: true
+- !<RenderMeshVisual/0c55dd9a-1249-44b8-b56a-4c87007f4193>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    []
+  Mesh: !<reference> 516db8ef-811a-42b5-859f-9c4d219644a7
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/33eebf9d-ecd7-4a5c-8abf-1c957c2a409c>
+  PrefabRemaps:
+    []
+  Name: Panel
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 7d72075c-cc7d-4664-b6f7-9bc0816d6946
+  Components:
+    []
+- !<SceneObject/7d72075c-cc7d-4664-b6f7-9bc0816d6946>
+  PrefabRemaps:
+    []
+  Name: Plane
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: -90.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 67.055176, y: 34.617310, z: 100.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 0c55dd9a-1249-44b8-b56a-4c87007f4193
