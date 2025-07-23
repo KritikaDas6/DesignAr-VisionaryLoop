@@ -4811,7 +4811,7 @@
   PrefabRemaps:
     []
   Name: Project00
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -6516,25 +6516,6 @@
     - !<own> 585afddb-1b33-4780-b8a2-6edb2d341ee8
     - !<own> 645c532e-5bbc-4a84-91c5-ade336468243
     - !<own> c3bf005b-81ea-421b-ab23-523c300fe703
-- !<Image/31841ab8-628c-4981-9303-9b7a13037561>
-  PrefabRemaps:
-    []
-  Name: Image
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Fit
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> a6b696a2-d6f0-400b-bd2c-a98746218f8d
-  FlipX: false
-  FlipY: false
-  RotationAngle: 0
-  Pivot: {x: 0.000000, y: 0.000000}
-  ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
 - !<SceneObject/3198105a-b2d9-4ecd-b392-696d8ee0c28d>
   PrefabRemaps:
     []
@@ -10085,7 +10066,6 @@
     []
   Components:
     - !<own> e9aa2053-b074-4b8b-b619-8f3e433e6a70
-    - !<own> 31841ab8-628c-4981-9303-9b7a13037561
 - !<SceneObject/46212a19-9667-4a46-a0ce-88a2f0d76382>
   PrefabRemaps:
     []
@@ -21057,7 +21037,7 @@
   PrefabRemaps:
     []
   Name: Imggen00
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -21414,7 +21394,7 @@
   PrefabRemaps:
     []
   Name: UI_HS update
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -28283,7 +28263,7 @@
   PrefabRemaps:
     []
   Name: Menu
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -29359,12 +29339,12 @@
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 40
+  FontSize: 20
   Font: !<reference> 642727e4-0ca5-4667-8a47-08d026610157
   LayoutRect:
     left: 0.000000
     bottom: 0.000000
-    right: 20.000000
+    right: 0.000000
     top: 0.000000
   OverflowVertical: Overflow
   OverflowHorizontal: Wrap
@@ -29906,7 +29886,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 1.000000, z: 1.000000}
+    position: {x: 0.000000, y: 1.000000, z: 20.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -34805,7 +34785,7 @@
   PrefabRemaps:
     []
   Name: Imggen02_processing
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
