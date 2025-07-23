@@ -12,6 +12,9 @@ export class NewScript extends BaseScriptComponent {
     private primaryInteractor;
     private hitTestSession: HitTestSession;
     private transform: Transform;
+    private isSpawned: boolean = false;
+    private count: number = 0;
+    
     @input
     indexToSpawn: number;
 
@@ -25,6 +28,9 @@ export class NewScript extends BaseScriptComponent {
     filterEnabled: boolean;
 
     onAwake() {
+        //isSpawned
+        //isSpawned = false;
+        
         // create new hit session
         this.hitTestSession = this.createHitTestSession(this.filterEnabled);
         if (!this.sceneObject) {
@@ -51,48 +57,98 @@ export class NewScript extends BaseScriptComponent {
     }
 
 
+//    onHitTestResult(results) {
+//        if (results === null) {
+//            this.targetObject.enabled = false;
+//        } else {
+//            //isSpawned = true;
+//            this.targetObject.enabled = true;
+//            // get hit information
+//            const hitPosition = results.position;
+//            const hitNormal = results.normal;
+//
+//
+//            //identifying the direction the object should look at based on the normal of the hit location.
+//
+//
+//            var lookDirection;
+//            if (1 - Math.abs(hitNormal.normalize().dot(vec3.up())) < EPSILON) {
+//                lookDirection = vec3.forward();
+//            } else {
+//                lookDirection = hitNormal.cross(vec3.up());
+//            }
+//
+//
+//            const toRotation = quat.lookAt(lookDirection, hitNormal);
+//            //set position and rotation
+//            this.targetObject.getTransform().setWorldPosition(hitPosition);
+//            this.targetObject.getTransform().setWorldRotation(toRotation);
+//
+//
+//            if (!this.isSpawned && 
+//                this.primaryInteractor.previousTrigger !== InteractorTriggerType.None &&
+//                this.primaryInteractor.currentTrigger === InteractorTriggerType.None
+//            ) {
+//                // Called when a trigger ends
+//                // Copy the plane/axis object
+//                let parent = this.objectsToSpawn[this.indexToSpawn].getParent();
+//                let newObject = parent.copyWholeHierarchy(this.objectsToSpawn[this.indexToSpawn]);
+//                newObject.setParentPreserveWorldTransform(null);
+//                
+//                this.isSpawned = true;
+//            }
+//        }
+//    }
     onHitTestResult(results) {
+        if (this.isSpawned) {
+            return; // ⛔ Prevent double-spawn
+        }
+    
         if (results === null) {
             this.targetObject.enabled = false;
+            return;
+        }
+    
+        this.targetObject.enabled = true;
+    
+        const hitPosition = results.position;
+        const hitNormal = results.normal;
+    
+        // Compute rotation
+        let lookDirection;
+        if (1 - Math.abs(hitNormal.normalize().dot(vec3.up())) < EPSILON) {
+            lookDirection = vec3.forward();
         } else {
-            this.targetObject.enabled = true;
-            // get hit information
-            const hitPosition = results.position;
-            const hitNormal = results.normal;
-
-
-            //identifying the direction the object should look at based on the normal of the hit location.
-
-
-            var lookDirection;
-            if (1 - Math.abs(hitNormal.normalize().dot(vec3.up())) < EPSILON) {
-                lookDirection = vec3.forward();
-            } else {
-                lookDirection = hitNormal.cross(vec3.up());
-            }
-
-
-            const toRotation = quat.lookAt(lookDirection, hitNormal);
-            //set position and rotation
-            this.targetObject.getTransform().setWorldPosition(hitPosition);
-            this.targetObject.getTransform().setWorldRotation(toRotation);
-
-
-            if (
-                this.primaryInteractor.previousTrigger !== InteractorTriggerType.None &&
-                this.primaryInteractor.currentTrigger === InteractorTriggerType.None
-            ) {
-                // Called when a trigger ends
-                // Copy the plane/axis object
-                let parent = this.objectsToSpawn[this.indexToSpawn].getParent();
-                let newObject = parent.copyWholeHierarchy(this.objectsToSpawn[this.indexToSpawn]);
-                newObject.setParentPreserveWorldTransform(null);
-            }
+            lookDirection = hitNormal.cross(vec3.up());
+        }
+        const toRotation = quat.lookAt(lookDirection, hitNormal);
+    
+        this.targetObject.getTransform().setWorldPosition(hitPosition);
+        this.targetObject.getTransform().setWorldRotation(toRotation);
+    
+        if (
+            this.primaryInteractor.previousTrigger !== InteractorTriggerType.None &&
+            this.primaryInteractor.currentTrigger === InteractorTriggerType.None
+        ) {
+            this.count += 1;
+            print(this.count);
+            this.isSpawned = true; // ✅ Set immediately
+            
+            // Copy object
+            let parent = this.objectsToSpawn[this.indexToSpawn].getParent();
+            let newObject = parent.copyWholeHierarchy(this.objectsToSpawn[this.indexToSpawn]);
+            newObject.setParentPreserveWorldTransform(null);
+    
+            
         }
     }
-
-
+    
+    
+    
     onUpdate() {
+        if (this.isSpawned) {
+            return; // ✅ Skip update once spawned
+        }
         this.primaryInteractor = SIK.InteractionManager.getTargetingInteractors().shift();
 
 

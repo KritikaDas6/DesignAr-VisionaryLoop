@@ -2808,15 +2808,19 @@
   ScriptAsset: !<reference> 9e43ef63-b85e-4a86-a7a9-f1b12f5d73ca
   ScriptInputsDefault:
     modelProvider: true
+    projectionImage: true
+    nextButton: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       modelProvider: OpenAI
       image: !<reference.Image> 529bfa8f-b779-4f04-bea4-fa112656e237
+      projectionImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
       textDisplay: !<reference.Text> f50edecb-97d5-4cbe-b296-63dfc67e610d
       asrQueryController: !<MappingBased.AssignableType> 304414a5-41f8-4fae-9d63-3020478584ff
       spinner: !<reference.SceneObject> 6a8d7b59-c661-4f34-9f1f-51d644ef36dd
+      nextButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     "":
       {}

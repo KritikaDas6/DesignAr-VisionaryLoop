@@ -17,11 +17,15 @@ export class InteractableImageGenerator extends BaseScriptComponent {
   @input
   private image: Image;
   @input
+  private projectionImage: Image;
+  @input
   private textDisplay: Text;
   @input
   private asrQueryController: ASRQueryController;
   @input
   private spinner: SceneObject;
+  @input
+  private nextButton: SceneObject;
   private imageGenerator: ImageGenerator = null;
 
   onAwake() {
@@ -29,8 +33,11 @@ export class InteractableImageGenerator extends BaseScriptComponent {
     let imgMat = this.image.mainMaterial.clone();
     this.image.clearMaterials();
     this.image.mainMaterial = imgMat;
+    this.projectionImage.clearMaterials();
+    this.projectionImage.mainMaterial = imgMat;
     this.createEvent("OnStartEvent").bind(() => {
       this.spinner.enabled = false;
+      this.nextButton.enabled = false;
       this.asrQueryController.onQueryEvent.add((query) => {
         this.createImage(query);
       });
@@ -39,6 +46,7 @@ export class InteractableImageGenerator extends BaseScriptComponent {
 
   createImage(prompt: string) {
     this.spinner.enabled = true;
+    this.nextButton.enabled = false;
     this.textDisplay.text = "Generating: " + prompt;
     this.imageGenerator
       .generateImage(prompt)
@@ -46,8 +54,10 @@ export class InteractableImageGenerator extends BaseScriptComponent {
         print("Image generated successfully: " + image);
         this.textDisplay.text = prompt;
         this.image.mainMaterial.mainPass.baseTex = image;
+        this.projectionImage.mainMaterial.mainPass.baseTex = image;
         this.textDisplay.text = prompt;
         this.spinner.enabled = false;
+        this.nextButton.enabled = true;
       })
       .catch((error) => {
         print("Error generating image: " + error);
