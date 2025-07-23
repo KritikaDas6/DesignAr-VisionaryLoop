@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 2079
+    size: 2007
     values:
       - ""
       - AddedAsset
@@ -14,58 +14,6 @@ CollapsedEntities:
       - Base 2.png
       - Base.png
       - ButtonToggleFunctions.ts
-      - DepthCache
-      - DepthCache/DepthCache.prefab
-      - DepthCache/Images
-      - DepthCache/Images/MicIcon.png
-      - DepthCache/Images/loading.gif
-      - DepthCache/Materials
-      - DepthCache/Materials/CaptureTexture.mat
-      - DepthCache/Materials/CircleOutline.mat
-      - DepthCache/Materials/MyAi_Voice.mat
-      - DepthCache/Materials/MyAi_Voice.ss_graph
-      - DepthCache/Materials/PinchButton.mat
-      - DepthCache/Materials/SWIS_flat_color.ss_graph
-      - DepthCache/Materials/SWIS_tile.mat
-      - DepthCache/Materials/White.mat
-      - DepthCache/Materials/WorldLabelFrame.mat
-      - DepthCache/Materials/circleOutline.ss_graph
-      - DepthCache/Materials/label.ss_graph
-      - DepthCache/Materials/loadingGif.mat
-      - DepthCache/Materials/loadingGif.ss_graph
-      - DepthCache/Materials/micIcon.mat
-      - DepthCache/Materials/pointRedLabeled.mat
-      - DepthCache/Materials/unlitColor.ss_graph
-      - DepthCache/Materials/unlitTexture.ss_graph
-      - DepthCache/Materials/unlitTextureColor.ss_graph
-      - DepthCache/Mesh
-      - DepthCache/Mesh/ImageMaterial 2.mat
-      - DepthCache/Mesh/ImageMaterial 3.mat
-      - DepthCache/Mesh/ImageMaterial.mat
-      - DepthCache/Mesh/SWIS_tile_solid.mesh
-      - DepthCache/Mesh/Unit Box.mesh
-      - DepthCache/Mesh/Unit Plane.mesh
-      - DepthCache/Mesh/Unit Sphere.mesh
-      - DepthCache/Mesh/arrow.mesh
-      - DepthCache/Modules
-      - DepthCache/Modules/Camera Module.cameraModule
-      - DepthCache/Prefab
-      - DepthCache/Prefab/ColoredPoint.prefab
-      - DepthCache/Prefab/WorldArrow.prefab
-      - DepthCache/Prefab/WorldLabel.prefab
-      - DepthCache/Scripts
-      - DepthCache/Scripts/ASRController.ts
-      - DepthCache/Scripts/DebugVisualizer.ts
-      - DepthCache/Scripts/DepthCache.ts
-      - DepthCache/Scripts/FaceCamera.ts
-      - DepthCache/Scripts/GeminiAPI.ts
-      - DepthCache/Scripts/Labels.ts
-      - DepthCache/Scripts/Loading.ts
-      - DepthCache/Scripts/ResponseUI.ts
-      - DepthCache/Scripts/SceneController.ts
-      - DepthCache/Scripts/SpeechUI.ts
-      - DepthCache/Scripts/TouchDownButton.ts
-      - DepthCache/Scripts/WorldLabel.ts
       - Font
       - Font/DynaPuff
       - Font/DynaPuff/DynaPuff-Bold.ttf
@@ -642,6 +590,7 @@ CollapsedEntities:
       - Mic animation/Spectacles 3D Hand Hints.lspkg/Textures/Hands_Interaction_Glow_Mask.png
       - Mic animation/Spectacles 3D Hand Hints.lspkg/Textures/Hands_Opacity_Gradient.png
       - Mic animation/Spectacles 3D Hand Hints.lspkg/package.native
+      - Mic animation/SpectaclesInteractionKit
       - Mic animation/SpectaclesInteractionKit/Assets
       - Mic animation/SpectaclesInteractionKit/Assets/Audio
       - Mic animation/SpectaclesInteractionKit/Assets/Audio/HoverAudioTrack.wav
@@ -700,6 +649,8 @@ CollapsedEntities:
       - Mic animation/SpectaclesInteractionKit/Components/Interaction/InteractorCursor/scale-tl.png
       - Mic animation/SpectaclesInteractionKit/Components/Interaction/InteractorCursor/scale-tr.png
       - Mic animation/SpectaclesInteractionKit/Components/Interaction/InteractorCursor/translate.png
+      - Mic animation/SpectaclesInteractionKit/Components/UI
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame
       - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/ContainerFrame.ts
       - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials
       - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/FrameMaterial.mat
@@ -720,6 +671,7 @@ CollapsedEntities:
       - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/Textures/follow-black.png
       - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/Textures/follow-white.png
       - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/Textures/reflection-map-1.jpg
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/modules
       - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/CursorHandler.ts
       - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/FrameInputHandler.ts
       - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/LabeledPinchButton.ts
@@ -955,6 +907,7 @@ CollapsedEntities:
       - Remote Service Gateway.lspkg/Utils/Promisfy.ts
       - Remote Service Gateway.lspkg/package.native
       - Scene.scene
+      - Script
       - Script 2.js
       - Script.js
       - Script/ContinuousVFXBurstOnPinchWithButtonFeedback.ts
@@ -969,33 +922,6 @@ CollapsedEntities:
       - Script_HandFollower/HandFollowerWithAngleRange.ts
       - Script_HandFollower/VectorUtils.ts
       - Slider.lsc
-      - Spawn Object at World Mesh On Tap
-      - Spawn Object at World Mesh On Tap/Point of Interest.prefab
-      - Spawn Object at World Mesh On Tap/Spawn Object at World Mesh On Tap.js
-      - Spawn Object at World Mesh On Tap/Spawn Object at World Mesh on Tap__PLACE_IN_SCENE.prefab
-      - Spawn Object at World Mesh On Tap/Wolrd Mesh Visualization
-      - Spawn Object at World Mesh On Tap/Wolrd Mesh Visualization/Materials
-      - Spawn Object at World Mesh On Tap/Wolrd Mesh Visualization/Materials/occluder.mat
-      - Spawn Object at World Mesh On Tap/Wolrd Mesh Visualization/Materials/world_mesh_visualization.mat
-      - Spawn Object at World Mesh On Tap/Wolrd Mesh Visualization/Meshes
-      - Spawn Object at World Mesh On Tap/Wolrd Mesh Visualization/Meshes/World Mesh.worldmesh
-      - Spawn Object at World Mesh On Tap/Wolrd Mesh Visualization/Shaders
-      - Spawn Object at World Mesh On Tap/Wolrd Mesh Visualization/Shaders/occluder.ss_graph
-      - Spawn Object at World Mesh On Tap/Wolrd Mesh Visualization/Shaders/world_mesh_visualization.ss_graph
-      - Spawn Object at World Mesh On Tap/Wolrd Mesh Visualization/Textures
-      - Spawn Object at World Mesh On Tap/Wolrd Mesh Visualization/Textures/ground_tex.png
-      - "Spawn Object at World Mesh On Tap/[Mesh Builder Example] Pipe Between Objects"
-      - "Spawn Object at World Mesh On Tap/[Mesh Builder Example] Pipe Between Objects/Materials"
-      - "Spawn Object at World Mesh On Tap/[Mesh Builder Example] Pipe Between Objects/Materials/InternalPBRGraph.lsmat.mat"
-      - "Spawn Object at World Mesh On Tap/[Mesh Builder Example] Pipe Between Objects/Meshes"
-      - "Spawn Object at World Mesh On Tap/[Mesh Builder Example] Pipe Between Objects/Meshes/Pin.mesh"
-      - "Spawn Object at World Mesh On Tap/[Mesh Builder Example] Pipe Between Objects/Shaders"
-      - "Spawn Object at World Mesh On Tap/[Mesh Builder Example] Pipe Between Objects/Shaders/InternalPBRGraph1.lsmat.ss_graph"
-      - "Spawn Object at World Mesh On Tap/[Mesh Builder Example] Pipe Between Objects/Textures"
-      - "Spawn Object at World Mesh On Tap/[Mesh Builder Example] Pipe Between Objects/Textures/Base.png"
-      - "Spawn Object at World Mesh On Tap/[Mesh Builder Example] Pipe Between Objects/Textures/MaterialParams.png"
-      - "Spawn Object at World Mesh On Tap/[Mesh Builder Example] Pipe Between Objects/Textures/Normal.png"
-      - Spawn Object at World Mesh On Tap/package.native
       - Spectacles 3D Hand Hints.lspkg
       - Spectacles 3D Hand Hints.lspkg/Animation
       - Spectacles 3D Hand Hints.lspkg/Animation/BaseLayer.animationAsset
@@ -1981,6 +1907,7 @@ CollapsedEntities:
       - UI_Old.prefab
       - Untitled JavaScript.js
       - Untitled TypeScript.ts
+      - VFX
       - VFX/Fireworks VFX/.hidden
       - VFX/Fireworks VFX/.hidden/Info Card Background.ss_graph
       - VFX/Fireworks VFX/.hidden/SpritePreset.lsmat.ss_graph
@@ -2002,6 +1929,7 @@ CollapsedEntities:
       - "VFX/Fireworks VFX/Fireworks__PLACE_IN_OBJECTS_PANEL/Info Card [DELETE_ME]/Materials/Info Card Background.mat"
       - VFX/Fireworks VFX/Render Target.renderTarget
       - VFX/Fireworks VFX/SplashWhite.png
+      - VFX/Interactive Soap Bubbles VFX
       - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/README.js
       - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/Script/TapController.js
       - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/Textures
