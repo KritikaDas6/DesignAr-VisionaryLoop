@@ -1080,21 +1080,6 @@
     - !<own> 5b7550e3-013f-455d-9e71-9684fa80ae38
   Components:
     []
-- !<SceneObject/09f9551c-2a0e-42dc-9fef-9c7e54edc5b7>
-  PrefabRemaps:
-    []
-  Name: Illust
-  Enabled: false
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 7.000000, z: 3.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 17.000000, y: 17.000000, z: 17.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 29d00e88-829d-43ea-923e-f6a2e15e8d0d
 - !<ScriptComponent/0a32a5d0-8cbe-495f-81f3-b7e8859777f9>
   PrefabRemaps:
     []
@@ -4826,7 +4811,7 @@
   PrefabRemaps:
     []
   Name: Project00
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -5153,25 +5138,6 @@
     []
   Components:
     []
-- !<Image/29d00e88-829d-43ea-923e-f6a2e15e8d0d>
-  PrefabRemaps:
-    []
-  Name: Image
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Fit
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> 88522dc5-7f2b-4617-adb7-e76fb5c82ce5
-  FlipX: false
-  FlipY: false
-  RotationAngle: 0
-  Pivot: {x: 0.000000, y: 0.000000}
-  ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
 - !<Canvas/2a338c25-2b72-497e-9f85-4a774efbb520>
   PrefabRemaps:
     []
@@ -10085,7 +10051,6 @@
     hasSegmentScaleCompensation: false
   Children:
     - !<own> 7fdfb896-92cf-4a1a-8762-302315b9bc55
-    - !<own> 09f9551c-2a0e-42dc-9fef-9c7e54edc5b7
     - !<own> 9938e414-0890-4d4e-b34c-b585afc4bccc
     - !<own> f5634290-bbbd-45ab-a7a1-e94a3a092e87
   Components:
@@ -21092,7 +21057,7 @@
   PrefabRemaps:
     []
   Name: Imggen00
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -34840,7 +34805,7 @@
   PrefabRemaps:
     []
   Name: Imggen02_processing
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}

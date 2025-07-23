@@ -1,91 +1,41 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 2118
+    size: 2066
     values:
-      - ""
-      - AddedAsset/Customizable Progress Bar.lsc
+      - AddedAsset
       - AddedAsset/Device Camera Texture.deviceCameraTexture
       - AddedAsset/Echopark.hdr
       - AddedAsset/Echopark.hdr/Diffuse
       - AddedAsset/Echopark.hdr/Specular
       - AddedAsset/Precise Object Toggle.lsc
       - AddedAsset/Render Target.renderTarget
-      - AddedAsset/Resource Bar Pack/.hidden
-      - "AddedAsset/Resource Bar Pack/.hidden/Bar Mat 1 [EDIT ME].ss_graph"
-      - AddedAsset/Resource Bar Pack/.hidden/Image.lsmat.mat
-      - AddedAsset/Resource Bar Pack/.hidden/Image1.lsmat.ss_graph
-      - AddedAsset/Resource Bar Pack/.hidden/Image10.lsmat.mat
-      - AddedAsset/Resource Bar Pack/.hidden/Image11.lsmat.mat
-      - AddedAsset/Resource Bar Pack/.hidden/Image12.lsmat.mat
-      - AddedAsset/Resource Bar Pack/.hidden/Image13.lsmat.mat
-      - AddedAsset/Resource Bar Pack/.hidden/Image14.lsmat.mat
-      - AddedAsset/Resource Bar Pack/.hidden/Image15.lsmat.mat
-      - AddedAsset/Resource Bar Pack/.hidden/Image2.lsmat.mat
-      - AddedAsset/Resource Bar Pack/.hidden/Image3.lsmat.mat
-      - AddedAsset/Resource Bar Pack/.hidden/Image4.lsmat.mat
-      - AddedAsset/Resource Bar Pack/.hidden/Image5.lsmat.mat
-      - AddedAsset/Resource Bar Pack/.hidden/Image6.lsmat.mat
-      - AddedAsset/Resource Bar Pack/.hidden/Image7.lsmat.mat
-      - AddedAsset/Resource Bar Pack/.hidden/Image8.lsmat.mat
-      - AddedAsset/Resource Bar Pack/.hidden/Image9.lsmat.mat
-      - AddedAsset/Resource Bar Pack/.hidden/Info Card Background.ss_graph
-      - AddedAsset/Resource Bar Pack/.hidden/SpritePreset.lsmat.mat
-      - AddedAsset/Resource Bar Pack/Resource_Bar_Pack____PUT_IN_ORTHO_CAM.prefab
+      - AddedAsset/Resource Bar Pack
+      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._
       - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]"
       - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Fonts"
-      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Fonts/Lato-Bold.ttf"
-      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Fonts/Lato-Regular.ttf"
       - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Materials"
-      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Materials/Info Card Background.mat"
       - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Textures"
-      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Textures/BaseTex.png"
-      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Textures/Icon.png"
       - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials
       - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Continuous Bar Material
-      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Continuous Bar Material/Bar Mat 1 [EDIT ME].mat"
-      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Continuous Bar Material/Bar Mat 2 [EDIT ME].mat"
-      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Continuous Bar Material/Bar Mat 3 [EDIT ME].mat"
-      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Continuous Bar Material/Bar Mat 4 [EDIT ME].mat"
-      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Continuous Bar Material/Bar Mat 5 [EDIT ME].mat"
       - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Frame Materials
-      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Frame Materials/Frame Material 1 [EDIT ME].mat"
-      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Frame Materials/Frame Material 2 [EDIT ME].mat"
-      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Frame Materials/Frame Material 3 [EDIT ME].mat"
-      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Frame Materials/Frame Material 4 [EDIT ME].mat"
       - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Segmented Bar Materials
-      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Materials/Segmented Bar Materials/Segment Bar Mat [EDIT ME].mat"
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Scripts/ContinuousBarUpdaterScript.js
+      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Scripts
       - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Scripts/Documentation.js
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Scripts/SegmentedBarUpdaterScript.js
       - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures
       - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs
       - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar
       - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 2
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 2/Life 2.png
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 2/Life Bar 2.png
       - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 4
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 4/Life 4.png
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 4/Life bar 4.png
       - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 5
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 5/Life 5.png
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 5/Life bar 5.png
       - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 7
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 7/Life 7.png
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Continuous Reduction Bar/Design 7/Life Bar 7.png
       - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Segmented Bar
       - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Segmented Bar/Design 1
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Segmented Bar/Design 1/Hearth.png
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Segmented Bar/Design 1/Life bars 1.png
       - Base 2.png
       - Base.png
       - ButtonToggleFunctions.ts
-      - DepthCache
       - DepthCache/DepthCache.prefab
-      - DepthCache/Images
-      - DepthCache/Images/MicIcon.png
       - DepthCache/Images/loading.gif
-      - DepthCache/Materials
       - DepthCache/Materials/CaptureTexture.mat
       - DepthCache/Materials/CircleOutline.mat
       - DepthCache/Materials/MyAi_Voice.mat
@@ -99,7 +49,6 @@ CollapsedEntities:
       - DepthCache/Materials/label.ss_graph
       - DepthCache/Materials/loadingGif.mat
       - DepthCache/Materials/loadingGif.ss_graph
-      - DepthCache/Materials/micIcon.mat
       - DepthCache/Materials/pointRedLabeled.mat
       - DepthCache/Materials/unlitColor.ss_graph
       - DepthCache/Materials/unlitTexture.ss_graph
@@ -142,9 +91,6 @@ CollapsedEntities:
       - Font/Manrope/Manrope-Medium.ttf
       - Font/Manrope/Manrope-Regular.ttf
       - Font/Manrope/Manrope-VariableFont_wght.ttf
-      - GenAI
-      - GenAI/AIAsset
-      - GenAI/AIAsset/AI Visual
       - GenAI/AIAsset/AI Visual/Animation
       - GenAI/AIAsset/AI Visual/Animation/baselayer
       - GenAI/AIAsset/AI Visual/Animation/baselayer/BaseLayer.animationMixerLayer
@@ -157,9 +103,7 @@ CollapsedEntities:
       - GenAI/AIAsset/AI Visual/Materials/Assist_sphere_Idle_L_T_T.ss_graph
       - GenAI/AIAsset/AI Visual/Materials/HoverColor.mat
       - GenAI/AIAsset/AI Visual/Materials/HoverColor.ss_graph
-      - GenAI/AIAsset/AI Visual/Textures
       - GenAI/AIAsset/AI Visual/Textures/Image.mat
-      - GenAI/AIAsset/AI Visual/Textures/Microphone.png
       - GenAI/AIAsset/AI Visual/Textures/NoInternetAlert.png
       - GenAI/AIAsset/AI Visual/Textures/NoInternetWarning.mat
       - GenAI/AIAsset/AI Visual/Textures/Noise_combine_512.png
@@ -191,17 +135,11 @@ CollapsedEntities:
       - HS UI Assets/Guide/ImageMaterial.mat
       - HS UI Assets/Icons
       - HS UI Assets/Icons/Icon
-      - HS UI Assets/Icons/mic1.png
-      - HS UI Assets/Icons/mic2.png
-      - HS UI Assets/Image_mic.mat
-      - HS UI Assets/Mic animation.lspkg/Mic.mat
-      - HS UI Assets/Mic animation.lspkg/MicBlack.png
-      - HS UI Assets/Mic animation.lspkg/MicWhite.png
+      - HS UI Assets/Icons_Texture
+      - HS UI Assets/Material
+      - HS UI Assets/Material/Unlit Guide
       - HS UI Assets/Mic animation.lspkg/Path Option A 2.prefab
-      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg
-      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation
       - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation/BaseLayer.animationAsset
-      - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation/Finger_Scroll_Micro.animationAsset
       - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation/Finger_Swipe_X.animationAsset
       - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation/Finger_Swipe_Y.animationAsset
       - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Animation/Finger_Tap_Near.animationAsset
@@ -268,6 +206,7 @@ CollapsedEntities:
       - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Textures/Hands_Interaction_Glow_Mask.png
       - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Textures/Hands_Opacity_Gradient.png
       - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/package.native
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Assets
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Assets/Audio
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Assets/Audio/HoverAudioTrack.wav
@@ -289,6 +228,7 @@ CollapsedEntities:
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Assets/Textures/PlatformUI/ArrowDown.png
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Assets/Textures/PlatformUI/SimpleIdle.jpg
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Assets/Textures/PlatformUI/SimpleRefl_02.jpg
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Helpers
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Helpers/ButtonFeedback.ts
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Helpers/InteractableAudioFeedback.ts
@@ -326,6 +266,8 @@ CollapsedEntities:
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Interaction/InteractorCursor/scale-tl.png
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Interaction/InteractorCursor/scale-tr.png
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/Interaction/InteractorCursor/translate.png
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ContainerFrame
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ContainerFrame/ContainerFrame.ts
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/FrameMaterial.mat
@@ -346,10 +288,13 @@ CollapsedEntities:
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ContainerFrame/Textures/follow-black.png
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ContainerFrame/Textures/follow-white.png
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ContainerFrame/Textures/reflection-map-1.jpg
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ContainerFrame/modules
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/CursorHandler.ts
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/FrameInputHandler.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/HoverBehavior.ts
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/LabeledPinchButton.ts
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/SmoothFollow.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/SnappableBehavior.ts
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/PinchButton
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/PinchButton/PinchButton.ts
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Components/UI/ScrollBar
@@ -515,9 +460,7 @@ CollapsedEntities:
       - HS UI Assets/Mic animation.lspkg/Vertex Distortion Material/Vertex Distortion.mat
       - HS UI Assets/Mic animation.lspkg/flat.ss_graph
       - HS UI Assets/Mic animation.lspkg/package.native
-      - HS UI Assets/mic1.png
-      - HS UI Assets/mic2.png
-      - Icon_Mic.mat
+      - HS UI Assets/Shader
       - Image 2.mat
       - Image.mat
       - ImageTexture
@@ -538,18 +481,14 @@ CollapsedEntities:
       - ImageTexture/image_unlit 2.ss_graph
       - ImageTexture/image_unlit.ss_graph
       - ImageTexture/simple_pbr.ss_graph
-      - Jelly
       - Jelly/Base 2.png
       - Jelly/Frame 1618872818.png
-      - Jelly/JellyButton
       - Jelly/JellyButton/Close.png
-      - Jelly/JellyButton/Material
       - Jelly/JellyButton/Material/Image_Close.mat
       - Jelly/JellyButton/Material/Image_Edit.mat
       - Jelly/JellyButton/Material/Image_Lock.mat
       - Jelly/JellyButton/Material/Image_Outline.mat
       - Jelly/JellyButton/Material/Image_UnLock.mat
-      - Jelly/JellyButton/Material/Mic.mat
       - Jelly/JellyButton/Material/RoundButtonHoverYellow.mat
       - Jelly/JellyButton/Material/RoundButtonPinchedGreen.mat
       - Jelly/JellyButton/Material/RoundButton_IdleGreen.mat
@@ -578,11 +517,8 @@ CollapsedEntities:
       - Jelly/JellyButton/Sparkles VFX Resources/VFX/sparkles_vfx Drag.vfxgraph
       - Jelly/JellyButton/Sparkles VFX Resources/VFX/sparkles_vfx Original.vfxgraph
       - Jelly/JellyButton/Sparkles VFX Resources/VFX/sparkles_vfx Tap.vfxgraph
-      - Jelly/JellyButton/Texture
       - Jelly/JellyButton/Texture/Edit.png
       - Jelly/JellyButton/Texture/Lock.png
-      - Jelly/JellyButton/Texture/MicBlack.png
-      - Jelly/JellyButton/Texture/MicWhite.png
       - Jelly/JellyButton/Texture/Outline.png
       - Jelly/JellyButton/Texture/Splash.png
       - Jelly/JellyButton/Texture/Unlock.png
@@ -614,14 +550,8 @@ CollapsedEntities:
       - LSTween.lspkg/TweenJS/mainGroup.ts
       - LSTween.lspkg/package.native
       - MaterialParams.png
-      - Mic animation/Mic.mat
-      - Mic animation/MicBlack.png
-      - Mic animation/MicWhite.png
       - Mic animation/Path Option A 2.prefab
-      - Mic animation/Spectacles 3D Hand Hints.lspkg
-      - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation
       - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation/BaseLayer.animationAsset
-      - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation/Finger_Scroll_Micro.animationAsset
       - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation/Finger_Swipe_X.animationAsset
       - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation/Finger_Swipe_Y.animationAsset
       - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation/Finger_Tap_Near.animationAsset
@@ -688,6 +618,7 @@ CollapsedEntities:
       - Mic animation/Spectacles 3D Hand Hints.lspkg/Textures/Hands_Interaction_Glow_Mask.png
       - Mic animation/Spectacles 3D Hand Hints.lspkg/Textures/Hands_Opacity_Gradient.png
       - Mic animation/Spectacles 3D Hand Hints.lspkg/package.native
+      - Mic animation/SpectaclesInteractionKit
       - Mic animation/SpectaclesInteractionKit/Assets
       - Mic animation/SpectaclesInteractionKit/Assets/Audio
       - Mic animation/SpectaclesInteractionKit/Assets/Audio/HoverAudioTrack.wav
@@ -709,6 +640,7 @@ CollapsedEntities:
       - Mic animation/SpectaclesInteractionKit/Assets/Textures/PlatformUI/ArrowDown.png
       - Mic animation/SpectaclesInteractionKit/Assets/Textures/PlatformUI/SimpleIdle.jpg
       - Mic animation/SpectaclesInteractionKit/Assets/Textures/PlatformUI/SimpleRefl_02.jpg
+      - Mic animation/SpectaclesInteractionKit/Components
       - Mic animation/SpectaclesInteractionKit/Components/Helpers
       - Mic animation/SpectaclesInteractionKit/Components/Helpers/ButtonFeedback.ts
       - Mic animation/SpectaclesInteractionKit/Components/Helpers/InteractableAudioFeedback.ts
@@ -746,6 +678,8 @@ CollapsedEntities:
       - Mic animation/SpectaclesInteractionKit/Components/Interaction/InteractorCursor/scale-tl.png
       - Mic animation/SpectaclesInteractionKit/Components/Interaction/InteractorCursor/scale-tr.png
       - Mic animation/SpectaclesInteractionKit/Components/Interaction/InteractorCursor/translate.png
+      - Mic animation/SpectaclesInteractionKit/Components/UI
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame
       - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/ContainerFrame.ts
       - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials
       - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/FrameMaterial.mat
@@ -766,10 +700,13 @@ CollapsedEntities:
       - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/Textures/follow-black.png
       - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/Textures/follow-white.png
       - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/Textures/reflection-map-1.jpg
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/modules
       - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/CursorHandler.ts
       - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/FrameInputHandler.ts
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/HoverBehavior.ts
       - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/LabeledPinchButton.ts
       - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/SmoothFollow.ts
+      - Mic animation/SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/SnappableBehavior.ts
       - Mic animation/SpectaclesInteractionKit/Components/UI/PinchButton
       - Mic animation/SpectaclesInteractionKit/Components/UI/PinchButton/PinchButton.ts
       - Mic animation/SpectaclesInteractionKit/Components/UI/ScrollBar
@@ -935,16 +872,10 @@ CollapsedEntities:
       - Mic animation/Vertex Distortion Material/Vertex Distortion.mat
       - Mic animation/flat.ss_graph
       - Normal.png
-      - PBR 2.mat
-      - PBR 3.mat
       - PBR.mat
       - Prefab
       - Prefab/Menu.prefab
-      - Remote Service Gateway.lspkg
-      - Remote Service Gateway.lspkg/Helpers
       - Remote Service Gateway.lspkg/Helpers/AudioProcessor.ts
-      - Remote Service Gateway.lspkg/Helpers/DynamicAudioOutput.ts
-      - Remote Service Gateway.lspkg/Helpers/MicrophoneRecorder.ts
       - Remote Service Gateway.lspkg/Helpers/VideoController.ts
       - Remote Service Gateway.lspkg/HostedExternal
       - Remote Service Gateway.lspkg/HostedExternal/Examples
@@ -980,9 +911,7 @@ CollapsedEntities:
       - Remote Service Gateway.lspkg/Prefabs/RemoteServiceGatewayExamples.prefab
       - Remote Service Gateway.lspkg/README.md
       - Remote Service Gateway.lspkg/RemoteServiceGatewayCredentials.ts
-      - Remote Service Gateway.lspkg/Resources
       - Remote Service Gateway.lspkg/Resources/Audio Output.audioOutput
-      - Remote Service Gateway.lspkg/Resources/Microphone Audio.micaudio
       - Remote Service Gateway.lspkg/Resources/Visuals
       - Remote Service Gateway.lspkg/Resources/Visuals/LoadingSpinner
       - Remote Service Gateway.lspkg/Resources/Visuals/LoadingSpinner/LoadingSpinner
@@ -1043,10 +972,7 @@ CollapsedEntities:
       - "Spawn Object at World Mesh On Tap/[Mesh Builder Example] Pipe Between Objects/Textures/MaterialParams.png"
       - "Spawn Object at World Mesh On Tap/[Mesh Builder Example] Pipe Between Objects/Textures/Normal.png"
       - Spawn Object at World Mesh On Tap/package.native
-      - Spectacles 3D Hand Hints.lspkg
-      - Spectacles 3D Hand Hints.lspkg/Animation
       - Spectacles 3D Hand Hints.lspkg/Animation/BaseLayer.animationAsset
-      - Spectacles 3D Hand Hints.lspkg/Animation/Finger_Scroll_Micro.animationAsset
       - Spectacles 3D Hand Hints.lspkg/Animation/Finger_Swipe_X.animationAsset
       - Spectacles 3D Hand Hints.lspkg/Animation/Finger_Swipe_Y.animationAsset
       - Spectacles 3D Hand Hints.lspkg/Animation/Finger_Tap_Near.animationAsset
@@ -1113,6 +1039,7 @@ CollapsedEntities:
       - Spectacles 3D Hand Hints.lspkg/Textures/Hands_Interaction_Glow_Mask.png
       - Spectacles 3D Hand Hints.lspkg/Textures/Hands_Opacity_Gradient.png
       - Spectacles 3D Hand Hints.lspkg/package.native
+      - SpectaclesInteractionKit
       - SpectaclesInteractionKit/Assets
       - SpectaclesInteractionKit/Assets/Audio
       - SpectaclesInteractionKit/Assets/Audio/HoverAudioTrack.wav
@@ -1281,6 +1208,7 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Textures/SIKContainerExampleImage.jpg
       - SpectaclesInteractionKit/Assets/Textures/SIKLogo.png
       - SpectaclesInteractionKit/Assets/Textures/ScrollBarRectangle.png
+      - SpectaclesInteractionKit/Components
       - SpectaclesInteractionKit/Components/Helpers
       - SpectaclesInteractionKit/Components/Helpers/ButtonFeedback.ts
       - SpectaclesInteractionKit/Components/Helpers/CapsuleMeshCustomizer.ts
@@ -1334,6 +1262,8 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Components/Interaction/InteractorLineVisual/InteractorLineMaterial.mat
       - SpectaclesInteractionKit/Components/Interaction/InteractorLineVisual/InteractorLineRenderer.ts
       - SpectaclesInteractionKit/Components/Interaction/InteractorLineVisual/InteractorLineVisual.ts
+      - SpectaclesInteractionKit/Components/UI
+      - SpectaclesInteractionKit/Components/UI/ContainerFrame
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/ContainerFrame.ts
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/FrameMaterial.mat
@@ -1368,13 +1298,16 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Textures/reflection-map-1.jpg
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Textures/soft-reflection.jpg
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/container-ui.png
+      - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/CursorHandler.ts
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/ForceContainerParent.ts
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/FrameInputHandler.ts
+      - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/HoverBehavior.ts
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/LabeledPinchButton.ts
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/SimpleLODRenderMeshVisual
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/SimpleLODRenderMeshVisual/SimpleLODRenderMeshVisual.ts
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/SmoothFollow.ts
+      - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/SnappableBehavior.ts
       - SpectaclesInteractionKit/Components/UI/PinchButton
       - SpectaclesInteractionKit/Components/UI/PinchButton/PinchButton.ts
       - SpectaclesInteractionKit/Components/UI/ScrollBar
@@ -1976,7 +1909,9 @@ CollapsedEntities:
       - SpectaclesSyncKit.lspkg/Mapping/src/UI/ObjectLocator/animations/Update.ts
       - SpectaclesSyncKit.lspkg/Mapping/src/UI/ObjectLocator/animations/tween.d.ts
       - SpectaclesSyncKit.lspkg/Mapping/src/UI/ObjectLocator/animations/tween.js
-      - SpectaclesSyncKit.lspkg/Mapping/src/Utils/HeadLockBehavior/SecondOrderDynamics.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/Utils/HeadLockBehavior/HeadLockBehavior.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/Utils/HeadLockBehavior/HeadLockBehaviorInput.ts
+      - SpectaclesSyncKit.lspkg/Mapping/src/Utils/HeadLockBehavior/IHeadLockBehavior.ts
       - SpectaclesSyncKit.lspkg/Mapping/src/Utils/JoiningController.ts
       - SpectaclesSyncKit.lspkg/Mapping/src/Utils/ProjectContainer.ts
       - SpectaclesSyncKit.lspkg/Mapping/src/Utils/SharedFunctions.ts
@@ -1997,10 +1932,6 @@ CollapsedEntities:
       - SpectaclesSyncKit.lspkg/VersionNumber.ts
       - SpectaclesSyncKit.lspkg/package.native
       - SplashVFX
-      - SplashVFX/Firework Explosion 2.vfxgraph
-      - SplashVFX/Firework Explosion 3.vfxgraph
-      - SplashVFX/Firework Explosion.vfxgraph
-      - SplashVFX/SplashWhite.png
       - Surface Detection.lspkg
       - Surface Detection.lspkg/Audio
       - Surface Detection.lspkg/Audio/CalibrationComplete.mp3
@@ -2028,26 +1959,45 @@ CollapsedEntities:
       - Surface Detection.lspkg/Textures
       - Surface Detection.lspkg/Textures/groundIcon.png
       - Surface Detection.lspkg/package.native
+      - UI Panel.lsc
+      - UI Panel.lsc/Modules
+      - UI Panel.lsc/UI Panel
+      - UI Panel.lsc/UI Panel/Materials
+      - UI Panel.lsc/UI Panel/Shaders
+      - UI Panel.lsc/UI Panel/Textures
       - Unit Plane
-      - Unit Plane/.hidden
-      - Unit Plane/.hidden/Textures
-      - Unit Plane/.hidden/Textures/Base.png
-      - Unit Plane/.hidden/Textures/Normal.png
-      - Unit Plane/.hidden/UberDiffuse.lsmat.mat
-      - Unit Plane/.hidden/UberDiffuse1.lsmat.ss_graph
-      - Unit Plane/Meshes
-      - Unit Plane/Meshes/Unit Plane.mesh
-      - Unit Plane/Unit_Plane__PLACE_IN_OBJECTS_PANEL.prefab
-      - Unlit 2.mat
+      - Unit Plane/Unit Plane
+      - Unit Plane/Unit Plane/.hidden
+      - Unit Plane/Unit Plane/.hidden/Textures
+      - Unit Plane/Unit Plane/.hidden/Textures/Base.png
+      - Unit Plane/Unit Plane/.hidden/Textures/Normal.png
+      - Unit Plane/Unit Plane/.hidden/UberDiffuse.lsmat.mat
+      - Unit Plane/Unit Plane/.hidden/UberDiffuse1.lsmat.ss_graph
+      - Unit Plane/Unit Plane/Meshes
+      - Unit Plane/Unit Plane/Meshes/Unit Plane.mesh
+      - Unit Plane/Unit Plane/Unit_Plane__PLACE_IN_OBJECTS_PANEL.prefab
       - Unlit Guide
-      - Unlit Guide/Unlit Guide1.mat
-      - Unlit Guide/Unlit Guide2.mat
-      - Unlit Guide/Unlit Guide3.mat
-      - Unlit Guide/Unlit Guide4.mat
-      - Unlit.mat
       - Untitled JavaScript.js
-      - Untitled TypeScript 2.ts
       - Untitled TypeScript.ts
+      - VFX
+      - VFX/Fireworks VFX
+      - VFX/Fireworks VFX/.hidden
+      - VFX/Fireworks VFX/.hidden/Info Card Background.ss_graph
+      - VFX/Fireworks VFX/.hidden/SpritePreset.lsmat.ss_graph
+      - VFX/Fireworks VFX/Fireworks__PLACE_IN_OBJECTS_PANEL
+      - VFX/Fireworks VFX/Fireworks__PLACE_IN_OBJECTS_PANEL/Converted Scripts
+      - VFX/Fireworks VFX/Fireworks__PLACE_IN_OBJECTS_PANEL/Fireworks VFX Resources
+      - VFX/Fireworks VFX/Fireworks__PLACE_IN_OBJECTS_PANEL/Fireworks VFX Resources/VFX
+      - "VFX/Fireworks VFX/Fireworks__PLACE_IN_OBJECTS_PANEL/Info Card [DELETE_ME]"
+      - "VFX/Fireworks VFX/Fireworks__PLACE_IN_OBJECTS_PANEL/Info Card [DELETE_ME]/.hidden"
+      - "VFX/Fireworks VFX/Fireworks__PLACE_IN_OBJECTS_PANEL/Info Card [DELETE_ME]/.hidden/SpritePreset.lsmat.mat"
+      - "VFX/Fireworks VFX/Fireworks__PLACE_IN_OBJECTS_PANEL/Info Card [DELETE_ME]/Fonts"
+      - "VFX/Fireworks VFX/Fireworks__PLACE_IN_OBJECTS_PANEL/Info Card [DELETE_ME]/Materials"
+      - VFX/Interactive Soap Bubbles VFX
+      - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources
+      - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/Script
+      - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/Textures
+      - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/VFX Asset
       - World Mesh - Spawn On Surfaces.lspkg
       - World Mesh - Spawn On Surfaces.lspkg/Materials
       - World Mesh - Spawn On Surfaces.lspkg/Materials/Blue.mat
@@ -2117,8 +2067,6 @@ CollapsedEntities:
       - World Query Hit - Spawn On Surface/World Query Hit Example.prefab
       - World Query Hit - Spawn On Surface/WorldQueryHitExample.ts
       - guidescript.ts
-      - mic1.png
       - mic2.png
       - pbr.ss_graph
-      - unlit.ss_graph
   options: 4
