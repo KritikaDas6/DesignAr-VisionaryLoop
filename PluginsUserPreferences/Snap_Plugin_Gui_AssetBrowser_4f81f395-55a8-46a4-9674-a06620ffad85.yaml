@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 2048
+    size: 2001
     values:
       - ""
       - AddedAsset
@@ -12,8 +12,6 @@ CollapsedEntities:
       - AddedAsset/Echopark.hdr/Specular
       - AddedAsset/Precise Object Toggle.lsc
       - AddedAsset/Render Target.renderTarget
-      - AddedAsset/Resource Bar Pack
-      - AddedAsset/Resource Bar Pack/.hidden
       - "AddedAsset/Resource Bar Pack/.hidden/Bar Mat 1 [EDIT ME].ss_graph"
       - AddedAsset/Resource Bar Pack/.hidden/Image.lsmat.mat
       - AddedAsset/Resource Bar Pack/.hidden/Image1.lsmat.ss_graph
@@ -31,16 +29,11 @@ CollapsedEntities:
       - AddedAsset/Resource Bar Pack/.hidden/Image7.lsmat.mat
       - AddedAsset/Resource Bar Pack/.hidden/Image8.lsmat.mat
       - AddedAsset/Resource Bar Pack/.hidden/Image9.lsmat.mat
-      - AddedAsset/Resource Bar Pack/.hidden/Info Card Background.ss_graph
       - AddedAsset/Resource Bar Pack/.hidden/SpritePreset.lsmat.mat
       - AddedAsset/Resource Bar Pack/Resource_Bar_Pack____PUT_IN_ORTHO_CAM.prefab
-      - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._
-      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]"
       - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Fonts"
       - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Fonts/Lato-Bold.ttf"
       - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Fonts/Lato-Regular.ttf"
-      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Materials"
-      - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Materials/Info Card Background.mat"
       - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Textures"
       - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Textures/BaseTex.png"
       - "AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Info Card [DELETE_ME]/Textures/Icon.png"
@@ -82,6 +75,7 @@ CollapsedEntities:
       - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Segmented Bar/Design 1
       - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Segmented Bar/Design 1/Hearth.png
       - AddedAsset/Resource Bar Pack/_Progress Bar Ressources._/Textures/Life Bar designs/Segmented Bar/Design 1/Life bars 1.png
+      - Base 2.png
       - Base.png
       - ButtonToggleFunctions.ts
       - Font
@@ -135,6 +129,7 @@ CollapsedEntities:
       - GenAI/Snap3DInteractableFactory.ts
       - GenAI/SphereController.ts
       - GenAI/Untitled JavaScript.js
+      - HS UI Assets/Guide
       - HS UI Assets/Guide/Guide1.png
       - HS UI Assets/Guide/Guide2.png
       - HS UI Assets/Guide/Guide3.png
@@ -146,9 +141,8 @@ CollapsedEntities:
       - HS UI Assets/Guide/Unlit Guide/Unlit Guide3.mat
       - HS UI Assets/Guide/Unlit Guide/Unlit Guide4.mat
       - HS UI Assets/Guide/guidescript.ts
+      - HS UI Assets/Icon
       - HS UI Assets/Icons
-      - HS UI Assets/Icons/mic1.png
-      - HS UI Assets/Icons/mic2.png
       - HS UI Assets/Image_mic.mat
       - HS UI Assets/Mic animation.lspkg
       - HS UI Assets/Mic animation.lspkg/Mic.mat
@@ -500,21 +494,15 @@ CollapsedEntities:
       - ImageTexture/image_unlit 2.ss_graph
       - ImageTexture/image_unlit.ss_graph
       - ImageTexture/simple_pbr.ss_graph
-      - Jelly
+      - Jelly/Base 2.png
       - Jelly/Frame 1618872818.png
-      - Jelly/JellyButton
       - Jelly/JellyButton/Close.png
-      - Jelly/JellyButton/Material
       - Jelly/JellyButton/Material/Image_Close.mat
       - Jelly/JellyButton/Material/Image_Edit.mat
       - Jelly/JellyButton/Material/Image_Lock.mat
       - Jelly/JellyButton/Material/Image_Outline.mat
       - Jelly/JellyButton/Material/Image_UnLock.mat
       - Jelly/JellyButton/Material/Mic.mat
-      - Jelly/JellyButton/Material/RoundButtonHoverYellow.mat
-      - Jelly/JellyButton/Material/RoundButtonPinchedGreen.mat
-      - Jelly/JellyButton/Material/RoundButton_IdleGreen.mat
-      - Jelly/JellyButton/Material/RoundButton_IdleYellow.mat
       - Jelly/JellyButton/Material/Vertex Distortion.mat
       - Jelly/JellyButton/Panel
       - Jelly/JellyButton/Panel/Meshes
@@ -523,11 +511,6 @@ CollapsedEntities:
       - Jelly/JellyButton/Panel/Meshes/ImageMaterial.mat
       - Jelly/JellyButton/Panel/Meshes/Plane.mesh
       - Jelly/JellyButton/Panel/Panel.prefab
-      - Jelly/JellyButton/Shader
-      - Jelly/JellyButton/Shader/RoundButtonHoverYellow.ss_graph
-      - Jelly/JellyButton/Shader/RoundButtonPinchedGreen.ss_graph
-      - Jelly/JellyButton/Shader/RoundButton_IdleGreen.ss_graph
-      - Jelly/JellyButton/Shader/RoundButton_IdleYellow.ss_graph
       - Jelly/JellyButton/Shader/Vertex Distortion.ss_graph
       - Jelly/JellyButton/Shader/flat.ss_graph
       - Jelly/JellyButton/SimpleRefl_02.jpg
@@ -1055,13 +1038,10 @@ CollapsedEntities:
       - Spectacles 3D Hand Hints.lspkg/Textures/Hands_Interaction_Glow_Mask.png
       - Spectacles 3D Hand Hints.lspkg/Textures/Hands_Opacity_Gradient.png
       - Spectacles 3D Hand Hints.lspkg/package.native
-      - SpectaclesInteractionKit
-      - SpectaclesInteractionKit/Assets
       - SpectaclesInteractionKit/Assets/Audio
       - SpectaclesInteractionKit/Assets/Audio/HoverAudioTrack.wav
       - SpectaclesInteractionKit/Assets/Audio/TriggerEndAudioTrack.wav
       - SpectaclesInteractionKit/Assets/Audio/TriggerStartAudioTrack.wav
-      - SpectaclesInteractionKit/Assets/Materials
       - SpectaclesInteractionKit/Assets/Materials/BaseHandVisualsMaterials
       - SpectaclesInteractionKit/Assets/Materials/BaseHandVisualsMaterials/FingerHighlightLeft.mat
       - SpectaclesInteractionKit/Assets/Materials/BaseHandVisualsMaterials/FingerHighlightRight.mat
@@ -1079,20 +1059,12 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Materials/PinchButtonToggleOnDefault.mat
       - SpectaclesInteractionKit/Assets/Materials/PinchButtonToggleOnIcon.mat
       - SpectaclesInteractionKit/Assets/Materials/PinchButtonToggleOnSelect.mat
-      - SpectaclesInteractionKit/Assets/Materials/PlatformUI
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/ButtonHover.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/ButtonIdle.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/ButtonPinched.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/CapsuleButtonHover.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/CapsuleButtonIdle.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/CapsuleButtonPinched.mat
-      - SpectaclesInteractionKit/Assets/Materials/PlatformUI/RoundButtonGlowHover.mat
-      - SpectaclesInteractionKit/Assets/Materials/PlatformUI/RoundButtonGlowIdle.mat
-      - SpectaclesInteractionKit/Assets/Materials/PlatformUI/RoundButtonGlowPinched.mat
-      - SpectaclesInteractionKit/Assets/Materials/PlatformUI/RoundButtonHover.mat
-      - SpectaclesInteractionKit/Assets/Materials/PlatformUI/RoundButtonPinched.mat
-      - SpectaclesInteractionKit/Assets/Materials/PlatformUI/RoundButton_Idle.mat
-      - SpectaclesInteractionKit/Assets/Materials/PlatformUI/ScrollBackground.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/ScrollButtonHover.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/ScrollButtonIdle.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/ScrollButtonPinched.mat
@@ -1115,7 +1087,6 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Materials/SpritePreset.mat
       - SpectaclesInteractionKit/Assets/Materials/TargetOutlineMaterial.mat
       - SpectaclesInteractionKit/Assets/Materials/Text3DDefault.mat
-      - SpectaclesInteractionKit/Assets/Meshes
       - SpectaclesInteractionKit/Assets/Meshes/BoxMesh.mesh
       - SpectaclesInteractionKit/Assets/Meshes/ButtonCapsuleMesh.mesh
       - SpectaclesInteractionKit/Assets/Meshes/ButtonSphereMesh.mesh
@@ -1126,7 +1097,6 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Meshes/ImageMaterial.mat
       - SpectaclesInteractionKit/Assets/Meshes/LeftHandMesh.mesh
       - SpectaclesInteractionKit/Assets/Meshes/PlaneMesh.mesh
-      - SpectaclesInteractionKit/Assets/Meshes/PlatformUI
       - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/ImageMaterial 2.mat
       - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/ImageMaterial 3.mat
       - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/ImageMaterial 4.mat
@@ -1134,8 +1104,6 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/ImageMaterial.mat
       - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/PlatformCapsuleButton.mesh
       - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/PlatformSphereButton.mesh
-      - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/RoundButton.mesh
-      - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/RoundButtonGlow.mesh
       - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/ScrollBarKnobMesh.mesh
       - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/ScrollBarMesh.mesh
       - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/Slider.mesh
@@ -1146,7 +1114,6 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Meshes/SnapGhost_Mesh.mesh
       - SpectaclesInteractionKit/Assets/Meshes/SphereMesh.mesh
       - SpectaclesInteractionKit/Assets/Meshes/Uncheck.mesh
-      - SpectaclesInteractionKit/Assets/Shaders
       - SpectaclesInteractionKit/Assets/Shaders/BaseHandVisualsShaders
       - SpectaclesInteractionKit/Assets/Shaders/BaseHandVisualsShaders/FingerHighlight.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/BaseHandVisualsShaders/FingerTipGlow.ss_graph
@@ -1155,20 +1122,12 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Shaders/NormalBasedTargetOutline.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PinchButton-ActiveOrInActive.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PinchDarkRadial.ss_graph
-      - SpectaclesInteractionKit/Assets/Shaders/PlatformUI
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/ButtonHover.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/ButtonIdle.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/ButtonPinched.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/CapsuleButtonHover.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/CapsuleButtonIdle.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/CapsuleButtonPinched.ss_graph
-      - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/RoundButtonGlowHover.ss_graph
-      - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/RoundButtonGlowIdle.ss_graph
-      - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/RoundButtonGlowPinched.ss_graph
-      - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/RoundButtonHover.ss_graph
-      - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/RoundButtonPinched.ss_graph
-      - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/RoundButton_Idle.ss_graph
-      - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/ScrollBackground.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/ScrollButtonHover.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/ScrollButtonIdle.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/ScrollButtonPinched.ss_graph
@@ -1958,7 +1917,6 @@ CollapsedEntities:
       - SplashVFX/Firework Explosion 3.vfxgraph
       - SplashVFX/Firework Explosion.vfxgraph
       - SplashVFX/SplashWhite.png
-      - Surface Detection.lspkg
       - Surface Detection.lspkg/Audio
       - Surface Detection.lspkg/Audio/CalibrationComplete.mp3
       - "Surface Detection.lspkg/Example [DELETE ME]"
@@ -1982,8 +1940,6 @@ CollapsedEntities:
       - Surface Detection.lspkg/Shaders
       - Surface Detection.lspkg/Shaders/CalibrationShader.ss_graph
       - Surface Detection.lspkg/SurfaceDetection__ADD_TO_SCENE.prefab
-      - Surface Detection.lspkg/Textures
-      - Surface Detection.lspkg/Textures/groundIcon.png
       - Surface Detection.lspkg/package.native
       - Unit Plane
       - Unit Plane/.hidden
@@ -2006,7 +1962,6 @@ CollapsedEntities:
       - Untitled TypeScript.ts
       - VFX
       - VFX/Fireworks VFX
-      - VFX/Fireworks VFX/.hidden
       - VFX/Fireworks VFX/Fireworks__PLACE_IN_OBJECTS_PANEL
       - "VFX/Fireworks VFX/Fireworks__PLACE_IN_OBJECTS_PANEL/Info Card [DELETE_ME]"
       - "VFX/Fireworks VFX/Fireworks__PLACE_IN_OBJECTS_PANEL/Info Card [DELETE_ME]/.hidden"
@@ -2047,8 +2002,6 @@ CollapsedEntities:
       - World Query Hit - Spawn On Surface/Textures/statue_params.png
       - World Query Hit - Spawn On Surface/World Query Hit Example.prefab
       - World Query Hit - Spawn On Surface/WorldQueryHitExample.ts
-      - mic2 2.png
-      - mic2.png
       - pbr.ss_graph
       - unlit.ss_graph
   options: 4
