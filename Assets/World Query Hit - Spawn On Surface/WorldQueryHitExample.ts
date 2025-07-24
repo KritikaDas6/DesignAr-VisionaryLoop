@@ -135,9 +135,9 @@ export class NewScript extends BaseScriptComponent {
             this.isSpawned = true; // ✅ Set immediately
             
             // Copy object
-            let parent = this.objectsToSpawn[this.indexToSpawn].getParent();
-            let newObject = parent.copyWholeHierarchy(this.objectsToSpawn[this.indexToSpawn]);
-            newObject.setParentPreserveWorldTransform(null);
+            //let parent = this.objectsToSpawn[this.indexToSpawn].getParent();
+            //let newObject = parent.copyWholeHierarchy(this.objectsToSpawn[this.indexToSpawn]);
+            //newObject.setParentPreserveWorldTransform(null);
     
             
         }

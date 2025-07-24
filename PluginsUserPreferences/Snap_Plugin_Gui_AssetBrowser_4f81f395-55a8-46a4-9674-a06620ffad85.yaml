@@ -1,9 +1,8 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 2007
+    size: 2002
     values:
-      - ""
       - AddedAsset
       - AddedAsset/Device Camera Texture.deviceCameraTexture
       - AddedAsset/Echopark.hdr
@@ -25,8 +24,6 @@ CollapsedEntities:
       - Font/Manrope/Manrope-Regular.ttf
       - Font/Manrope/Manrope-VariableFont_wght.ttf
       - GenAI
-      - GenAI/AIAsset
-      - GenAI/AIAsset/AI Visual
       - GenAI/AIAsset/AI Visual/Animation
       - GenAI/AIAsset/AI Visual/Animation/baselayer
       - GenAI/AIAsset/AI Visual/Animation/baselayer/BaseLayer.animationMixerLayer
@@ -39,7 +36,6 @@ CollapsedEntities:
       - GenAI/AIAsset/AI Visual/Materials/Assist_sphere_Idle_L_T_T.ss_graph
       - GenAI/AIAsset/AI Visual/Materials/HoverColor.mat
       - GenAI/AIAsset/AI Visual/Materials/HoverColor.ss_graph
-      - GenAI/AIAsset/AI Visual/Textures
       - GenAI/AIAsset/AI Visual/Textures/Image.mat
       - GenAI/AIAsset/AI Visual/Textures/Microphone.png
       - GenAI/AIAsset/AI Visual/Textures/NoInternetAlert.png
@@ -1161,7 +1157,6 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Textures/SIKContainerExampleImage.jpg
       - SpectaclesInteractionKit/Assets/Textures/SIKLogo.png
       - SpectaclesInteractionKit/Assets/Textures/ScrollBarRectangle.png
-      - SpectaclesInteractionKit/Components/Helpers
       - SpectaclesInteractionKit/Components/Helpers/ButtonFeedback.ts
       - SpectaclesInteractionKit/Components/Helpers/CapsuleMeshCustomizer.ts
       - SpectaclesInteractionKit/Components/Helpers/InteractableAudioFeedback.ts

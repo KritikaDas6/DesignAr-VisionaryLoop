@@ -28,6 +28,7 @@ export class SliderMonotoneEditor extends BaseScriptComponent {
     }
 
     private onSliderValueChanged(value: number) {
+        print("Slider value changed: " + value);
         this.targetMonotone = value;
     }
 
@@ -40,11 +41,23 @@ export class SliderMonotoneEditor extends BaseScriptComponent {
     }
 
     private setMonotone(amount: number) {
-        if (!this.image || !this.image.mainMaterial || !this.image.mainMaterial.mainPass) {
+        if (!this.image) {
+            print("[SliderMonotoneEditor] ERROR: image is not assigned.");
             return;
         }
-        if (typeof this.image.mainMaterial.mainPass["MonotoneAmount"] !== "undefined") {
-            this.image.mainMaterial.mainPass["MonotoneAmount"] = amount;
+        if (!this.image.mainMaterial) {
+            print("[SliderMonotoneEditor] ERROR: image.mainMaterial is not assigned.");
+            return;
         }
+        if (!this.image.mainMaterial.mainPass) {
+            print("[SliderMonotoneEditor] ERROR: image.mainMaterial.mainPass is not assigned.");
+            return;
+        }
+        if (typeof this.image.mainMaterial.mainPass["MonotoneAmount"] === "undefined") {
+            print("[SliderMonotoneEditor] ERROR: MonotoneAmount property is not defined on mainPass.");
+            return;
+        }
+        print("[SliderMonotoneEditor] Setting MonotoneAmount to: " + amount);
+        this.image.mainMaterial.mainPass["MonotoneAmount"] = amount;
     }
 } 
