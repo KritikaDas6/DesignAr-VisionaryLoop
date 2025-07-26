@@ -56,49 +56,6 @@ export class NewScript extends BaseScriptComponent {
         return session;
     }
 
-
-//    onHitTestResult(results) {
-//        if (results === null) {
-//            this.targetObject.enabled = false;
-//        } else {
-//            //isSpawned = true;
-//            this.targetObject.enabled = true;
-//            // get hit information
-//            const hitPosition = results.position;
-//            const hitNormal = results.normal;
-//
-//
-//            //identifying the direction the object should look at based on the normal of the hit location.
-//
-//
-//            var lookDirection;
-//            if (1 - Math.abs(hitNormal.normalize().dot(vec3.up())) < EPSILON) {
-//                lookDirection = vec3.forward();
-//            } else {
-//                lookDirection = hitNormal.cross(vec3.up());
-//            }
-//
-//
-//            const toRotation = quat.lookAt(lookDirection, hitNormal);
-//            //set position and rotation
-//            this.targetObject.getTransform().setWorldPosition(hitPosition);
-//            this.targetObject.getTransform().setWorldRotation(toRotation);
-//
-//
-//            if (!this.isSpawned && 
-//                this.primaryInteractor.previousTrigger !== InteractorTriggerType.None &&
-//                this.primaryInteractor.currentTrigger === InteractorTriggerType.None
-//            ) {
-//                // Called when a trigger ends
-//                // Copy the plane/axis object
-//                let parent = this.objectsToSpawn[this.indexToSpawn].getParent();
-//                let newObject = parent.copyWholeHierarchy(this.objectsToSpawn[this.indexToSpawn]);
-//                newObject.setParentPreserveWorldTransform(null);
-//                
-//                this.isSpawned = true;
-//            }
-//        }
-//    }
     onHitTestResult(results) {
         if (this.isSpawned) {
             return; // ⛔ Prevent double-spawn
