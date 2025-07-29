@@ -16,8 +16,13 @@ dock:
             type: section
             current: 0
         sizes:
+<<<<<<< HEAD
           - 483
           - 437
+=======
+          - 368
+          - 345
+>>>>>>> HSUIupdate3
         type: splitter
         orientation: vertical
       - items:
@@ -38,8 +43,13 @@ dock:
             type: section
             current: 2
         sizes:
+<<<<<<< HEAD
           - 423
           - 497
+=======
+          - 314
+          - 399
+>>>>>>> HSUIupdate3
         type: splitter
         orientation: vertical
       - items:
@@ -52,8 +62,14 @@ dock:
         type: section
         current: 0
     sizes:
+<<<<<<< HEAD
       - 446
       - 749
       - 498
+=======
+      - 350
+      - 355
+      - 632
+>>>>>>> HSUIupdate3
     type: splitter
     orientation: horizontal

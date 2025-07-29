@@ -50,7 +50,7 @@
   DepthTest: true
   DepthFunction: LessEqual
   TwoSided: false
-  ColorMask: {x: true, y: true, z: true, w: true}
+  ColorMask: {x: false, y: true, z: true, w: true}
   CullMode: Back
   PolygonOffset: {x: 0.000000, y: 0.000000}
   FrustumCulling: Auto
