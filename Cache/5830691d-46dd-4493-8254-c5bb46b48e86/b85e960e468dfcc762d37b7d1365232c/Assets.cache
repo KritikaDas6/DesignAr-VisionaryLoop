@@ -1,7 +1,6 @@
 - !<AssetCache>
   AssetFiles:
     c403bf42-b482-4aef-8906-13532712a354: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/Rocket_clouds_emit.vfxgraph
-<<<<<<< HEAD
     77372b00-713c-4007-9db8-cea55612cf12: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/90b63b6/System_39/script_39.js
     c071391a-8cf6-41a3-a736-9b4ec70e2f43: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/90b63b6/System_39/feedback_39.mat
     c1e989b3-65cf-4963-8950-97ff51e1320c: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/90b63b6/System_39/feedback_39.glsl
@@ -9,20 +8,10 @@
     ffafc3c2-182f-4c4b-889c-5946b6853b3d: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/90b63b6/System_39/render_39.glsl
     256386ee-5eb5-4134-b03e-5b8973ed29f2: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/90b63b6/System_39/simulate_39.mat
     ce8c7661-2127-47cc-adbb-0abf7c4bdd17: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/90b63b6/System_39/simulate_39.glsl
-=======
-    a9a0a8b5-dec3-436a-8013-f24098516bed: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/cd070e4/System_39/script_39.js
-    9d875228-3718-484e-a645-669d4e82dd2b: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/cd070e4/System_39/feedback_39.mat
-    1b582ae9-c024-46d5-865b-94b3e295135e: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/cd070e4/System_39/feedback_39.glsl
-    4c2e0718-4361-475b-b195-3f11f0a3af6c: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/cd070e4/System_39/render_39.mat
-    9f3710f5-fa69-4f61-819c-5a0e20fe8abd: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/cd070e4/System_39/render_39.glsl
-    1f069ffa-949b-469e-9141-ef4445d4a3ac: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/cd070e4/System_39/simulate_39.mat
-    8042079c-1cf2-48ed-abf7-3fca052529d5: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/cd070e4/System_39/simulate_39.glsl
->>>>>>> HSUIupdate3
   Assets:
     - !<VFXAsset/c403bf42-b482-4aef-8906-13532712a354>
       PackagePath: ""
       Systems:
-<<<<<<< HEAD
         39: !<VFXSystem/2a8ebed8-93b3-46a5-8459-187ea5d3488a>
           FeedbackMaterial: !<Material/c071391a-8cf6-41a3-a736-9b4ec70e2f43>
             PackagePath: ""
@@ -37,22 +26,6 @@
             PassesInfo:
               - !<own> 4530a70b-e712-432c-a976-5376b37e12e5
           FeedbackPass: !<Pass/c1e989b3-65cf-4963-8950-97ff51e1320c>
-=======
-        39: !<VFXSystem/a38963ac-4ced-476c-b92d-d6610d4dfaa8>
-          FeedbackMaterial: !<Material/9d875228-3718-484e-a645-669d4e82dd2b>
-            PackagePath: ""
-            PassesInfo:
-              - !<own> 041d7c1c-17fa-4af1-a240-fd0b63d55ca2
-          SimulateMaterial: !<Material/1f069ffa-949b-469e-9141-ef4445d4a3ac>
-            PackagePath: ""
-            PassesInfo:
-              - !<own> 9541acc5-65c3-4fa7-8ff7-9dc121558baf
-          RenderMaterial: !<Material/4c2e0718-4361-475b-b195-3f11f0a3af6c>
-            PackagePath: ""
-            PassesInfo:
-              - !<own> 848fd507-5bec-4e30-900e-d3267f430289
-          FeedbackPass: !<Pass/1b582ae9-c024-46d5-865b-94b3e295135e>
->>>>>>> HSUIupdate3
             PackagePath: ""
             DefaultDefines:
               []
@@ -576,11 +549,7 @@
               PassBindings:
                 []
               ShaderType: Mesh3d
-<<<<<<< HEAD
           SimulatePass: !<Pass/ce8c7661-2127-47cc-adbb-0abf7c4bdd17>
-=======
-          SimulatePass: !<Pass/8042079c-1cf2-48ed-abf7-3fca052529d5>
->>>>>>> HSUIupdate3
             PackagePath: ""
             DefaultDefines:
               []
@@ -1183,11 +1152,7 @@
                   mValues:
                     []
               ShaderType: PostProcessing
-<<<<<<< HEAD
           RenderPass: !<Pass/ffafc3c2-182f-4c4b-889c-5946b6853b3d>
-=======
-          RenderPass: !<Pass/9f3710f5-fa69-4f61-819c-5a0e20fe8abd>
->>>>>>> HSUIupdate3
             PackagePath: ""
             DefaultDefines:
               []
@@ -1724,11 +1689,7 @@
                   mValues:
                     []
               ShaderType: PostProcessing
-<<<<<<< HEAD
           Script: !<JavaScriptAsset/77372b00-713c-4007-9db8-cea55612cf12>
-=======
-          Script: !<JavaScriptAsset/a9a0a8b5-dec3-436a-8013-f24098516bed>
->>>>>>> HSUIupdate3
             PackagePath: Manager_Script
             Description: ""
             SvgIcon: ""
@@ -1801,11 +1762,7 @@
   FileHash: 738caff7ba659a9503cd8d2b8fbee7fa
   NativePackageItems:
     []
-<<<<<<< HEAD
 - !<PassInfo/4530a70b-e712-432c-a976-5376b37e12e5>
-=======
-- !<PassInfo/041d7c1c-17fa-4af1-a240-fd0b63d55ca2>
->>>>>>> HSUIupdate3
   CachedProperties:
     []
   DepthWrite: true
@@ -2038,243 +1995,6 @@
           borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
           mipmaps: false
         type: Texture2D
-<<<<<<< HEAD
-=======
-  Pass: !<reference> 1b582ae9-c024-46d5-865b-94b3e295135e
-- !<PassInfo/848fd507-5bec-4e30-900e-d3267f430289>
-  CachedProperties:
-    []
-  DepthWrite: true
-  DepthTest: true
-  DepthFunction: LessEqual
-  TwoSided: true
-  ColorMask: {x: true, y: true, z: true, w: true}
-  CullMode: Back
-  PolygonOffset: {x: 0.000000, y: 0.000000}
-  FrustumCulling: Auto
-  FrustumCullPad: 0.000000
-  InstanceCount: 1
-  Defines:
-    []
-  BlendMode: Disabled
-  Properties:
-    Port_Exponent_N002:
-      typeIdx: 1
-      value: 7.000000
-    Port_Input1_N017:
-      typeIdx: 1
-      value: 0.005000
-    Port_Input1_N063:
-      typeIdx: 1
-      value: 2000.000000
-    Port_Input1_N065:
-      typeIdx: 1
-      value: 0.000000
-    Port_Input1_N066:
-      typeIdx: 5
-      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-    Port_Input1_N067:
-      typeIdx: 1
-      value: 2.000000
-    Port_Input2_N065:
-      typeIdx: 1
-      value: 1.000000
-    Port_Intensity_N002:
-      typeIdx: 1
-      value: 1.000000
-    Port_Normal_N002:
-      typeIdx: 4
-      value: {x: 0.000000, y: 0.000000, z: 1.000000}
-    Port_Position1_N068:
-      typeIdx: 1
-      value: 0.200000
-    Port_Position1_N178:
-      typeIdx: 1
-      value: 0.500000
-    Port_Position2_N068:
-      typeIdx: 1
-      value: 0.600000
-    Port_RangeMaxA_N018:
-      typeIdx: 1
-      value: 1.000000
-    Port_RangeMaxB_N018:
-      typeIdx: 1
-      value: -1.000000
-    Port_RangeMinA_N018:
-      typeIdx: 1
-      value: 0.000000
-    Port_RangeMinB_N018:
-      typeIdx: 1
-      value: -100.000000
-    Port_Value0_N068:
-      typeIdx: 5
-      value: {x: 1.000000, y: 0.541054, z: 0.345480, w: 1.000000}
-    Port_Value0_N178:
-      typeIdx: 5
-      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-    Port_Value1_N068:
-      typeIdx: 5
-      value: {x: 1.000000, y: 0.834943, z: 0.445747, w: 1.000000}
-    Port_Value1_N178:
-      typeIdx: 5
-      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-    Port_Value2_N068:
-      typeIdx: 5
-      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-    Port_Value2_N178:
-      typeIdx: 5
-      value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
-    Port_Value3_N068:
-      typeIdx: 5
-      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-    "overrideTimeElapsed[0]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[10]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[11]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[12]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[13]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[14]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[15]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[16]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[17]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[18]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[19]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[1]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[20]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[21]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[22]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[23]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[24]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[25]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[26]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[27]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[28]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[29]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[2]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[30]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[31]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[3]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[4]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[5]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[6]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[7]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[8]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[9]":
-      typeIdx: 1
-      value: 0.000000
-    overrideTimeEnabled:
-      typeIdx: 0
-      value: 0
-    renderTarget0:
-      typeIdx: 9
-      value:
-        id: 00000000-0000-0000-0000-000000000000
-        sampler:
-          filteringMode: Trilinear
-          wrapModeU: Repeat
-          wrapModeV: Repeat
-          wrapModeW: Repeat
-          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-          mipmaps: false
-        type: Texture2D
-    renderTarget1:
-      typeIdx: 9
-      value:
-        id: 00000000-0000-0000-0000-000000000000
-        sampler:
-          filteringMode: Trilinear
-          wrapModeU: Repeat
-          wrapModeV: Repeat
-          wrapModeW: Repeat
-          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-          mipmaps: false
-        type: Texture2D
-    renderTarget2:
-      typeIdx: 9
-      value:
-        id: 00000000-0000-0000-0000-000000000000
-        sampler:
-          filteringMode: Trilinear
-          wrapModeU: Repeat
-          wrapModeV: Repeat
-          wrapModeW: Repeat
-          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-          mipmaps: false
-        type: Texture2D
-    renderTarget3:
-      typeIdx: 9
-      value:
-        id: 00000000-0000-0000-0000-000000000000
-        sampler:
-          filteringMode: Trilinear
-          wrapModeU: Repeat
-          wrapModeV: Repeat
-          wrapModeW: Repeat
-          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-          mipmaps: false
-        type: Texture2D
->>>>>>> HSUIupdate3
     "vfxBatchEnable[0]":
       typeIdx: 2
       value: false
@@ -2383,13 +2103,8 @@
     vfxTargetWidth:
       typeIdx: 0
       value: 0
-<<<<<<< HEAD
   Pass: !<reference> ffafc3c2-182f-4c4b-889c-5946b6853b3d
 - !<PassInfo/6e71e8ee-73ca-47ec-811f-48439be43308>
-=======
-  Pass: !<reference> 9f3710f5-fa69-4f61-819c-5a0e20fe8abd
-- !<PassInfo/9541acc5-65c3-4fa7-8ff7-9dc121558baf>
->>>>>>> HSUIupdate3
   CachedProperties:
     - uReset:
         typeIdx: 0
@@ -3064,7 +2779,6 @@
     vfxTargetWidth:
       typeIdx: 0
       value: 0
-<<<<<<< HEAD
   Pass: !<reference> ce8c7661-2127-47cc-adbb-0abf7c4bdd17
 - !<PassInfo/8a9d2d0b-cfeb-4188-8627-c67a2839de91>
   CachedProperties:
@@ -3132,6 +2846,3 @@
           mipmaps: false
         type: Texture2D
   Pass: !<reference> c1e989b3-65cf-4963-8950-97ff51e1320c
-=======
-  Pass: !<reference> 8042079c-1cf2-48ed-abf7-3fca052529d5
->>>>>>> HSUIupdate3
