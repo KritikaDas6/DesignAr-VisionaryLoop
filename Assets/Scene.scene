@@ -1436,14 +1436,13 @@
   Enabled: true
   ScriptAsset: !<reference> 6e04b490-d3bd-465b-a565-4a758c203142
   ScriptInputsDefault:
-    hand: true
     positionOffset: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       vfxObject: !<reference.SceneObject> b579e28c-c6ff-463f-a8ed-3911263298f0
-      hand: either
+      hand: right
       positionOffset: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
       buttonFeedback: !<MappingBased.AssignableType> 8dd4632b-01b6-457f-b86b-b893e4d3b3d5
   ScriptTypes:
@@ -1725,7 +1724,7 @@
 - !<SceneObject/12fac658-15d5-4ed2-8ea5-a05d9ecce52e>
   PrefabRemaps:
     []
-  Name: ContinuousVFXBurstOnPinchWithButtonFeedback
+  Name: TracingVFX_Right
   Enabled: true
   Layers: 1
   LocalTransform:
@@ -4525,6 +4524,19 @@
     []
   Components:
     []
+- !<VFXComponent/329df2fc-b50a-4804-9a18-5398738abcae>
+  PrefabRemaps:
+    []
+  Name: VFX Component
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  VFXAsset: !<reference> fa40cbc0-c6fb-446b-b9d2-8a3ebbc4f97c
 - !<ColliderComponent/3340fb09-1559-4eb6-91e3-ea95cefcd75e>
   PrefabRemaps:
     []
@@ -4603,6 +4615,25 @@
       customFunctionForOnButtonPinched: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
       onButtonPinchedFunctionNames: !<string[]>
         []
+  ScriptTypes:
+    "":
+      {}
+- !<ScriptComponent/355474eb-4d4e-4d6e-a404-3fa58d4da4ca>
+  PrefabRemaps:
+    []
+  Name: ContinuousVFXBurstOnPinchWithButtonFeedback
+  Enabled: true
+  ScriptAsset: !<reference> 6e04b490-d3bd-465b-a565-4a758c203142
+  ScriptInputsDefault:
+    positionOffset: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      vfxObject: !<reference.SceneObject> fe38e8fe-9dd2-4ec5-ae5e-0bc0dfb7fb77
+      hand: left
+      positionOffset: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      buttonFeedback: !<MappingBased.AssignableType> 8dd4632b-01b6-457f-b86b-b893e4d3b3d5
   ScriptTypes:
     "":
       {}
@@ -9833,6 +9864,21 @@
   BlendNormals: false
   BlendShapes:
     {}
+- !<SceneObject/7e0fc7c2-e2af-497a-9a73-3567f8632d65>
+  PrefabRemaps:
+    []
+  Name: TravingVFXLeft
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> fe38e8fe-9dd2-4ec5-ae5e-0bc0dfb7fb77
+  Components:
+    - !<own> 355474eb-4d4e-4d6e-a404-3fa58d4da4ca
 - !<ScriptComponent/7ecd65e3-cd30-4147-8a3e-b40e2de0822b>
   PrefabRemaps:
     []
@@ -13136,6 +13182,7 @@
     hasSegmentScaleCompensation: false
   Children:
     - !<own> 12fac658-15d5-4ed2-8ea5-a05d9ecce52e
+    - !<own> 7e0fc7c2-e2af-497a-9a73-3567f8632d65
   Components:
     []
 - !<RenderMeshVisual/ab511ab4-a1a3-44c0-8994-4e02049f66d0>
@@ -14248,7 +14295,7 @@
 - !<SceneObject/b579e28c-c6ff-463f-a8ed-3911263298f0>
   PrefabRemaps:
     []
-  Name: VFX
+  Name: TracingVFX_RightHand
   Enabled: true
   Layers: 1
   LocalTransform:
@@ -20697,16 +20744,24 @@
     - 1c2721d8-caf2-4895-800f-5c7f88ffc19c: e569c532-3e4b-45f8-b5b2-82379e27615f
     - 1de1249e-3302-4dd4-817c-6160901e444b: facc59d1-750a-447d-85d7-f2da208956fe
     - 3e9b4da8-f6e5-4df1-b0dc-81c5c321307b: bb6503a3-22bd-4a30-b923-7b77ce00a184
+    - 487a4fd8-169e-4e0c-b297-d639df8b808c: a6c053bc-3ce4-4012-96b6-6155f56eef40
     - 4920bce1-922a-43e1-84ce-43f05f444966: 70f81438-793f-4147-9719-c25e61efb4ba
     - 4c1bb652-7fa4-42ae-851a-5e6d8fce97ab: 620a9680-aea2-437c-9605-ce3336bfecc1
     - 4ebd8253-c101-4ec8-80d2-09f8c28c3969: 8eb07302-5280-4cdd-87a5-8becfdf6c4ff
     - 5bc01537-9175-49e8-a819-a50a28d963e7: 4adac890-d736-4fea-a137-18664e3df81a
+    - 5d553649-0a58-40ff-8ea5-94deb95579d3: 4b1e3992-17d7-4c1d-af72-d8f4631a27fe
     - 6036ac52-08e1-402d-ade1-3c1a16928acd: 986fad9f-6293-4e43-a165-2c2a14fd847b
     - 6b193518-d589-4c76-9f9c-0d67b44bb7bb: fc4634fd-12a1-451c-96ed-f139611febf2
     - 6b7a8468-7073-4a6a-8123-f178c9122fd6: 3f496510-4b23-421e-af4c-0f699804f95f
+    - 6e6752ed-7a6b-4bf0-beaa-29eeedbac376: 9300dd54-1490-463d-b02c-7795604aa11b
+    - 7cb4bded-0b5e-4743-91b0-f02e5fff52b3: 262f71a9-ee1a-4be9-bbb3-9cf8bddbae27
+    - 86c87018-d5d2-4b6a-82ba-c1f595689de0: 532f0069-ca10-4361-aca6-aa55dd6f7d2e
     - 944acdcf-cfc0-4e12-b2d6-826e67917387: 8877a2b6-fbc6-4e64-ac40-1569bd2ac5c1
     - 99d03961-75d9-4dd4-9df1-79afac9aaf11: 1759a169-567f-41ac-91cf-acf19c3aae43
+    - 9d51e49f-3de6-492b-861d-598ba224511c: 2750e9ff-a7cc-4ce0-a09f-49b24fda2863
     - a2cad5ad-5efd-45b9-b5a5-af534235581f: ab1adf31-79bd-4825-9637-1f98f02c09d9
+    - a75362c7-634a-412e-bfbf-77c11b9ce10f: 6352c31d-b4dd-4be2-a396-474a8dd36e4c
+    - a9598a98-a6df-4f18-8adb-c05a99a6b208: 03ed3323-4a03-4ab0-82c3-177e227112ec
     - b17d212e-6c1b-4c05-b885-4547629bc08b: e79a7204-10bd-4919-93e0-92412b109073
     - b9a2c34d-7281-4519-94de-6a93137189d5: da3bfe38-abf7-42ee-aa0f-71e44e38bb02
     - bc5b1c8a-d40b-4b8e-9b37-1989c9dc95a9: aada7af9-8f64-4a85-8112-890b337fc49e
@@ -20715,6 +20770,9 @@
     - d5efba56-ce40-451c-989f-10b08f949038: 02888fa9-9aa0-4b7c-8d76-92dcfb09934c
     - d9b503b1-4d6f-4625-bf77-a75668afc661: 4a9631af-0b16-458e-9349-5b66ed8735db
     - da97201f-53db-4328-82b0-74a9421cdf22: e3ddb21b-a5c4-47e5-94c1-2573bc833b7d
+    - e294ad9b-2833-4e79-93be-86ab5cc39115: 3257230f-d67e-494e-bfc1-5291f0593f28
+    - e624fb6c-4bc0-4a1c-9239-3f6bc9a35140: 6d1d294b-42ab-4d06-84c2-9b7020960c89
+    - ece614b0-f6a6-48c1-878c-01c7b38c1ede: 86bf5440-28a6-40a1-acb7-02a53a6dbb4e
     - f3365cb3-e6a9-4842-a0d8-c35631846e8c: 252cecd1-a845-4559-aef9-671630854c93
     - f3f8de2b-d948-4e5b-9ed0-8a30a0e581fa: 201e3378-90b2-4fdb-a9f7-14fb6ad810ea
     - f979f776-c9fb-4f1a-81ab-1dd35e8b7ee6: 000f720c-17f8-4a81-b4ab-aa508664aa5c
@@ -20735,6 +20793,21 @@
     - !<own> 7cb4bded-0b5e-4743-91b0-f02e5fff52b3
   Components:
     []
+- !<SceneObject/fe38e8fe-9dd2-4ec5-ae5e-0bc0dfb7fb77>
+  PrefabRemaps:
+    []
+  Name: TracingVFX_LeftHand
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 329df2fc-b50a-4804-9a18-5398738abcae
 - !<SceneObject/fe46e505-1255-4c27-a679-6b873cdb75fc>
   PrefabRemaps:
     []

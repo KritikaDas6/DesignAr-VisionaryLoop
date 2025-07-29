@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 2012
+    size: 2038
     values:
       - ""
       - AddedAsset
@@ -65,6 +65,7 @@ CollapsedEntities:
       - GenAI/Snap3DInteractableFactory.ts
       - GenAI/SphereController.ts
       - GenAI/Untitled JavaScript.js
+      - HS UI Assets
       - HS UI Assets/Guide
       - HS UI Assets/Guide/Guide1.png
       - HS UI Assets/Guide/Guide2.png
@@ -95,6 +96,7 @@ CollapsedEntities:
       - HS UI Assets/Mesh/Unit Plane/Meshes
       - HS UI Assets/Mesh/Unit Plane/Meshes/Unit Plane.mesh
       - HS UI Assets/Mesh/Unit Plane/Unit_Plane__PLACE_IN_OBJECTS_PANEL.prefab
+      - HS UI Assets/Mic animation.lspkg
       - HS UI Assets/Mic animation.lspkg/Mic.mat
       - HS UI Assets/Mic animation.lspkg/MicBlack.png
       - HS UI Assets/Mic animation.lspkg/MicWhite.png
@@ -169,6 +171,7 @@ CollapsedEntities:
       - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Textures/Hands_Interaction_Glow_Mask.png
       - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Textures/Hands_Opacity_Gradient.png
       - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/package.native
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Assets
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Assets/Audio
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Assets/Audio/HoverAudioTrack.wav
@@ -317,9 +320,13 @@ CollapsedEntities:
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/MouseInteractor/MouseInteractor.ts
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Decorators
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Decorators/Singleton.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/CameraProvider
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/CameraProvider/BaseCameraFinderProvider.js
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/CameraProvider/BaseCameraFinderProvider.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/CameraProvider/BaseWorldCameraProvider.ts
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/CameraProvider/CameraProvider.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/CameraProvider/WorldCameraFinderProvider.ts
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/CursorControllerProvider
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/CursorControllerProvider/CursorControllerProvider.ts
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData
@@ -516,6 +523,7 @@ CollapsedEntities:
       - LSTween.lspkg/TweenJS/mainGroup.ts
       - LSTween.lspkg/package.native
       - MaterialParams.png
+      - Mic animation
       - Mic animation/Mic.mat
       - Mic animation/MicBlack.png
       - Mic animation/MicWhite.png
@@ -590,6 +598,7 @@ CollapsedEntities:
       - Mic animation/Spectacles 3D Hand Hints.lspkg/Textures/Hands_Interaction_Glow_Mask.png
       - Mic animation/Spectacles 3D Hand Hints.lspkg/Textures/Hands_Opacity_Gradient.png
       - Mic animation/Spectacles 3D Hand Hints.lspkg/package.native
+      - Mic animation/SpectaclesInteractionKit
       - Mic animation/SpectaclesInteractionKit/Assets
       - Mic animation/SpectaclesInteractionKit/Assets/Audio
       - Mic animation/SpectaclesInteractionKit/Assets/Audio/HoverAudioTrack.wav
@@ -738,9 +747,13 @@ CollapsedEntities:
       - Mic animation/SpectaclesInteractionKit/Core/MouseInteractor/MouseInteractor.ts
       - Mic animation/SpectaclesInteractionKit/Decorators
       - Mic animation/SpectaclesInteractionKit/Decorators/Singleton.ts
+      - Mic animation/SpectaclesInteractionKit/Providers
+      - Mic animation/SpectaclesInteractionKit/Providers/CameraProvider
       - Mic animation/SpectaclesInteractionKit/Providers/CameraProvider/BaseCameraFinderProvider.js
       - Mic animation/SpectaclesInteractionKit/Providers/CameraProvider/BaseCameraFinderProvider.ts
+      - Mic animation/SpectaclesInteractionKit/Providers/CameraProvider/BaseWorldCameraProvider.ts
       - Mic animation/SpectaclesInteractionKit/Providers/CameraProvider/CameraProvider.ts
+      - Mic animation/SpectaclesInteractionKit/Providers/CameraProvider/WorldCameraFinderProvider.ts
       - Mic animation/SpectaclesInteractionKit/Providers/CursorControllerProvider
       - Mic animation/SpectaclesInteractionKit/Providers/CursorControllerProvider/CursorControllerProvider.ts
       - Mic animation/SpectaclesInteractionKit/Providers/HandInputData
@@ -905,10 +918,8 @@ CollapsedEntities:
       - Remote Service Gateway.lspkg/Utils/Promisfy.ts
       - Remote Service Gateway.lspkg/package.native
       - Scene.scene
-      - Script
       - Script 2.js
       - Script.js
-      - Script/ContinuousVFXBurstOnPinchWithButtonFeedback.ts
       - Script/EnhancedButtonFeedback.ts
       - Script/MaterialTextureReplacer.ts
       - Script/SpawnParticleOnPinch.ts
@@ -990,6 +1001,7 @@ CollapsedEntities:
       - Spectacles 3D Hand Hints.lspkg/Textures/Hands_Interaction_Glow_Mask.png
       - Spectacles 3D Hand Hints.lspkg/Textures/Hands_Opacity_Gradient.png
       - Spectacles 3D Hand Hints.lspkg/package.native
+      - SpectaclesInteractionKit
       - SpectaclesInteractionKit/Assets
       - SpectaclesInteractionKit/Assets/Audio
       - SpectaclesInteractionKit/Assets/Audio/HoverAudioTrack.wav
@@ -1499,9 +1511,13 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Prefabs
       - SpectaclesInteractionKit/Prefabs/ScrollViewListItem.prefab
       - SpectaclesInteractionKit/Prefabs/SpectaclesInteractionKit.prefab
+      - SpectaclesInteractionKit/Providers
+      - SpectaclesInteractionKit/Providers/CameraProvider
       - SpectaclesInteractionKit/Providers/CameraProvider/ARCameraFinderProvider.ts
       - SpectaclesInteractionKit/Providers/CameraProvider/BaseCameraFinderProvider.ts
+      - SpectaclesInteractionKit/Providers/CameraProvider/BaseWorldCameraProvider.ts
       - SpectaclesInteractionKit/Providers/CameraProvider/CameraProvider.ts
+      - SpectaclesInteractionKit/Providers/CameraProvider/WorldCameraFinderProvider.ts
       - SpectaclesInteractionKit/Providers/CursorControllerProvider
       - SpectaclesInteractionKit/Providers/CursorControllerProvider/CursorControllerProvider.ts
       - SpectaclesInteractionKit/Providers/HandInputData
@@ -1950,9 +1966,11 @@ CollapsedEntities:
       - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/Textures/Splash_map.png
       - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/Textures/Swirl_flow_map.png
       - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/VFX Asset
-      - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/VFX Asset/Soap Bubbles Emitter 2.vfxgraph
       - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/VFX Asset/Soap Bubbles Emitter.vfxgraph
+      - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/VFX Asset/TracingVFX_LeftHand.vfxgraph
+      - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/VFX Asset/TracingVFX_RightHand.vfxgraph
       - VFX/Interactive Soap Bubbles VFX/Interactive_Soap_Bubbles__PUT_UNDER_MAIN_CAM.prefab
+      - World Mesh - Spawn On Surfaces.lspkg
       - World Mesh - Spawn On Surfaces.lspkg/Materials
       - World Mesh - Spawn On Surfaces.lspkg/Materials/Blue.mat
       - World Mesh - Spawn On Surfaces.lspkg/Materials/Brown.mat
@@ -1963,21 +1981,28 @@ CollapsedEntities:
       - World Mesh - Spawn On Surfaces.lspkg/Materials/Purple.mat
       - World Mesh - Spawn On Surfaces.lspkg/Materials/Red.mat
       - World Mesh - Spawn On Surfaces.lspkg/Materials/Yellow.mat
+      - World Mesh - Spawn On Surfaces.lspkg/Meshes
       - World Mesh - Spawn On Surfaces.lspkg/Meshes/Box.mesh
       - World Mesh - Spawn On Surfaces.lspkg/Meshes/Plane.mesh
       - World Mesh - Spawn On Surfaces.lspkg/Meshes/Sphere.mesh
+      - World Mesh - Spawn On Surfaces.lspkg/Meshes/World Mesh.worldmesh
+      - World Mesh - Spawn On Surfaces.lspkg/Scripts
       - World Mesh - Spawn On Surfaces.lspkg/Scripts/MaterialInstanceSpawner
       - World Mesh - Spawn On Surfaces.lspkg/Scripts/MaterialInstanceSpawner/CloneMaterialToObjects.js
       - World Mesh - Spawn On Surfaces.lspkg/Scripts/MaterialInstanceSpawner/InstanceController.js
       - World Mesh - Spawn On Surfaces.lspkg/Scripts/MaterialInstanceSpawner/InstanceSpawner.js
       - World Mesh - Spawn On Surfaces.lspkg/Scripts/MaterialInstanceSpawner/RayCasting.js
       - World Mesh - Spawn On Surfaces.lspkg/Scripts/MaterialInstanceSpawner/SpawnerSetup.js
+      - World Mesh - Spawn On Surfaces.lspkg/Scripts/WorldMesh Scripts
+      - World Mesh - Spawn On Surfaces.lspkg/Scripts/WorldMesh Scripts/WorldMeshController.js
       - World Mesh - Spawn On Surfaces.lspkg/Shaders
       - World Mesh - Spawn On Surfaces.lspkg/Shaders/Color.ss_graph
       - World Mesh - Spawn On Surfaces.lspkg/Shaders/Occluder.ss_graph
       - World Mesh - Spawn On Surfaces.lspkg/Textures
       - World Mesh - Spawn On Surfaces.lspkg/Textures/Placeholder Texture.png
+      - World Mesh - Spawn On Surfaces.lspkg/World Mesh - Spawn On Surfaces__PLACE_IN_SCENE.prefab
       - World Mesh - Spawn On Surfaces.lspkg/package.native
+      - World Query Hit - Spawn On Surface
       - World Query Hit - Spawn On Surface/Materials
       - World Query Hit - Spawn On Surface/Materials/Plane.mat
       - World Query Hit - Spawn On Surface/Materials/cloud.mat
@@ -2011,6 +2036,7 @@ CollapsedEntities:
       - World Query Hit - Spawn On Surface/Textures/statue_base.png
       - World Query Hit - Spawn On Surface/Textures/statue_normal.png
       - World Query Hit - Spawn On Surface/Textures/statue_params.png
+      - World Query Hit - Spawn On Surface/World Query Hit Example.prefab
       - World Query Hit - Spawn On Surface/WorldQueryHitExample.ts
       - World Query Hit - Spawn On Surface/WorldQueryHitExample2.ts
       - guidescript.ts
