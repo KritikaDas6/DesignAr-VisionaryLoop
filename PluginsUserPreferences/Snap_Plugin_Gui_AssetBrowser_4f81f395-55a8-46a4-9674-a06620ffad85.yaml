@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 2038
+    size: 1997
     values:
       - ""
       - AddedAsset
@@ -72,30 +72,17 @@ CollapsedEntities:
       - HS UI Assets/Guide/Guide3.png
       - HS UI Assets/Guide/Guide4.png
       - HS UI Assets/Guide/ImageMaterial.mat
+      - HS UI Assets/Guide/Unlit Guide BG Outline.mat
+      - HS UI Assets/Guide/Unlit Guide pagination.mat
+      - HS UI Assets/Guide/Unlit Guide4.mat
+      - HS UI Assets/Guide/Unlit illust data.mat
       - HS UI Assets/Icons_Texture
-      - HS UI Assets/Icons_Texture/mic1.png
-      - HS UI Assets/Icons_Texture/mic2.png
       - HS UI Assets/Material
       - HS UI Assets/Material/Icon_Mic.mat
       - HS UI Assets/Material/Image_mic.mat
       - HS UI Assets/Material/Unlit 2.mat
-      - HS UI Assets/Material/Unlit Guide
-      - HS UI Assets/Material/Unlit Guide/Unlit Guide1.mat
-      - HS UI Assets/Material/Unlit Guide/Unlit Guide2.mat
-      - HS UI Assets/Material/Unlit Guide/Unlit Guide3.mat
-      - HS UI Assets/Material/Unlit Guide/Unlit Guide4.mat
       - HS UI Assets/Material/Unlit.mat
       - HS UI Assets/Mesh
-      - HS UI Assets/Mesh/Unit Plane
-      - HS UI Assets/Mesh/Unit Plane/.hidden
-      - HS UI Assets/Mesh/Unit Plane/.hidden/Textures
-      - HS UI Assets/Mesh/Unit Plane/.hidden/Textures/Base.png
-      - HS UI Assets/Mesh/Unit Plane/.hidden/Textures/Normal.png
-      - HS UI Assets/Mesh/Unit Plane/.hidden/UberDiffuse.lsmat.mat
-      - HS UI Assets/Mesh/Unit Plane/.hidden/UberDiffuse1.lsmat.ss_graph
-      - HS UI Assets/Mesh/Unit Plane/Meshes
-      - HS UI Assets/Mesh/Unit Plane/Meshes/Unit Plane.mesh
-      - HS UI Assets/Mesh/Unit Plane/Unit_Plane__PLACE_IN_OBJECTS_PANEL.prefab
       - HS UI Assets/Mic animation.lspkg
       - HS UI Assets/Mic animation.lspkg/Mic.mat
       - HS UI Assets/Mic animation.lspkg/MicBlack.png
@@ -427,6 +414,7 @@ CollapsedEntities:
       - HS UI Assets/Mic animation.lspkg/package.native
       - HS UI Assets/Shader
       - HS UI Assets/Shader/unlit.ss_graph
+      - HS UI Assets/Unlit Guide
       - Image 2.mat
       - Image.mat
       - ImageTexture
@@ -917,9 +905,12 @@ CollapsedEntities:
       - Remote Service Gateway.lspkg/Utils/Event.ts
       - Remote Service Gateway.lspkg/Utils/Promisfy.ts
       - Remote Service Gateway.lspkg/package.native
+      - Scene 2.scene
       - Scene.scene
+      - Script
       - Script 2.js
       - Script.js
+      - Script/ContinuousVFXBurstOnPinchWithButtonFeedback.ts
       - Script/EnhancedButtonFeedback.ts
       - Script/MaterialTextureReplacer.ts
       - Script/SpawnParticleOnPinch.ts
@@ -1970,38 +1961,6 @@ CollapsedEntities:
       - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/VFX Asset/TracingVFX_LeftHand.vfxgraph
       - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/VFX Asset/TracingVFX_RightHand.vfxgraph
       - VFX/Interactive Soap Bubbles VFX/Interactive_Soap_Bubbles__PUT_UNDER_MAIN_CAM.prefab
-      - World Mesh - Spawn On Surfaces.lspkg
-      - World Mesh - Spawn On Surfaces.lspkg/Materials
-      - World Mesh - Spawn On Surfaces.lspkg/Materials/Blue.mat
-      - World Mesh - Spawn On Surfaces.lspkg/Materials/Brown.mat
-      - World Mesh - Spawn On Surfaces.lspkg/Materials/Green.mat
-      - World Mesh - Spawn On Surfaces.lspkg/Materials/Occluder.mat
-      - World Mesh - Spawn On Surfaces.lspkg/Materials/Orange.mat
-      - World Mesh - Spawn On Surfaces.lspkg/Materials/Pink.mat
-      - World Mesh - Spawn On Surfaces.lspkg/Materials/Purple.mat
-      - World Mesh - Spawn On Surfaces.lspkg/Materials/Red.mat
-      - World Mesh - Spawn On Surfaces.lspkg/Materials/Yellow.mat
-      - World Mesh - Spawn On Surfaces.lspkg/Meshes
-      - World Mesh - Spawn On Surfaces.lspkg/Meshes/Box.mesh
-      - World Mesh - Spawn On Surfaces.lspkg/Meshes/Plane.mesh
-      - World Mesh - Spawn On Surfaces.lspkg/Meshes/Sphere.mesh
-      - World Mesh - Spawn On Surfaces.lspkg/Meshes/World Mesh.worldmesh
-      - World Mesh - Spawn On Surfaces.lspkg/Scripts
-      - World Mesh - Spawn On Surfaces.lspkg/Scripts/MaterialInstanceSpawner
-      - World Mesh - Spawn On Surfaces.lspkg/Scripts/MaterialInstanceSpawner/CloneMaterialToObjects.js
-      - World Mesh - Spawn On Surfaces.lspkg/Scripts/MaterialInstanceSpawner/InstanceController.js
-      - World Mesh - Spawn On Surfaces.lspkg/Scripts/MaterialInstanceSpawner/InstanceSpawner.js
-      - World Mesh - Spawn On Surfaces.lspkg/Scripts/MaterialInstanceSpawner/RayCasting.js
-      - World Mesh - Spawn On Surfaces.lspkg/Scripts/MaterialInstanceSpawner/SpawnerSetup.js
-      - World Mesh - Spawn On Surfaces.lspkg/Scripts/WorldMesh Scripts
-      - World Mesh - Spawn On Surfaces.lspkg/Scripts/WorldMesh Scripts/WorldMeshController.js
-      - World Mesh - Spawn On Surfaces.lspkg/Shaders
-      - World Mesh - Spawn On Surfaces.lspkg/Shaders/Color.ss_graph
-      - World Mesh - Spawn On Surfaces.lspkg/Shaders/Occluder.ss_graph
-      - World Mesh - Spawn On Surfaces.lspkg/Textures
-      - World Mesh - Spawn On Surfaces.lspkg/Textures/Placeholder Texture.png
-      - World Mesh - Spawn On Surfaces.lspkg/World Mesh - Spawn On Surfaces__PLACE_IN_SCENE.prefab
-      - World Mesh - Spawn On Surfaces.lspkg/package.native
       - World Query Hit - Spawn On Surface
       - World Query Hit - Spawn On Surface/Materials
       - World Query Hit - Spawn On Surface/Materials/Plane.mat
