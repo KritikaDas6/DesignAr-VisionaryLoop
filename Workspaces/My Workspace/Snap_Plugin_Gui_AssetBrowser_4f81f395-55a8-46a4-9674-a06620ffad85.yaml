@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 2010
+    size: 2011
     values:
       - AddedAsset
       - AddedAsset/Device Camera Texture.deviceCameraTexture
@@ -64,13 +64,13 @@ CollapsedEntities:
       - GenAI/Snap3DInteractableFactory.ts
       - GenAI/SphereController.ts
       - GenAI/Untitled JavaScript.js
+      - HS UI Assets
       - HS UI Assets/Guide
       - HS UI Assets/Guide/Guide1.png
       - HS UI Assets/Guide/Guide2.png
       - HS UI Assets/Guide/Guide3.png
       - HS UI Assets/Guide/Guide4.png
       - HS UI Assets/Guide/ImageMaterial.mat
-      - HS UI Assets/Guide/Unlit Guide
       - HS UI Assets/Guide/Unlit Guide/Unlit Guide BG Outline.mat
       - HS UI Assets/Guide/Unlit Guide/Unlit Guide pagination 1.mat
       - HS UI Assets/Guide/Unlit Guide/Unlit Guide pagination 2.mat
@@ -78,6 +78,7 @@ CollapsedEntities:
       - HS UI Assets/Guide/Unlit Guide/Unlit Guide pagination 4.mat
       - HS UI Assets/Guide/Unlit Guide/Unlit illust data.mat
       - HS UI Assets/Guide/unlock.png
+      - HS UI Assets/Icon
       - HS UI Assets/Icon/lock.png
       - HS UI Assets/Icon/mic.png
       - HS UI Assets/Icon/mic_yw.png
@@ -453,6 +454,7 @@ CollapsedEntities:
       - ImageTexture/image_unlit 2.ss_graph
       - ImageTexture/image_unlit.ss_graph
       - ImageTexture/simple_pbr.ss_graph
+      - Jelly
       - Jelly/Base 2.png
       - Jelly/Frame 1618872818.png
       - Jelly/JellyButton/Close.png
@@ -1961,21 +1963,20 @@ CollapsedEntities:
       - "VFX/Fireworks VFX/Fireworks__PLACE_IN_OBJECTS_PANEL/Info Card [DELETE_ME]/Materials/Info Card Background.mat"
       - VFX/Fireworks VFX/Render Target.renderTarget
       - VFX/Fireworks VFX/SplashWhite.png
-      - VFX/Interactive Soap Bubbles VFX
-      - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources
       - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/README.js
       - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/Script
       - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/Script/TapController.js
       - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/Textures
+      - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/Textures/Bubble.png
       - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/Textures/Soap_bubble_color.png
       - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/Textures/Soap_bubble_specular.png
       - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/Textures/Splash_map.png
       - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/Textures/Swirl_flow_map.png
-      - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/VFX Asset
       - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/VFX Asset/Soap Bubbles Emitter.vfxgraph
       - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/VFX Asset/TracingVFX_LeftHand.vfxgraph
       - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/VFX Asset/TracingVFX_RightHand.vfxgraph
       - VFX/Interactive Soap Bubbles VFX/Interactive_Soap_Bubbles__PUT_UNDER_MAIN_CAM.prefab
+      - World Query Hit - Spawn On Surface
       - World Query Hit - Spawn On Surface/Materials
       - World Query Hit - Spawn On Surface/Materials/Plane.mat
       - World Query Hit - Spawn On Surface/Materials/cloud.mat

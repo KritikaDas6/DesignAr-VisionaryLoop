@@ -366,8 +366,6 @@
       floorRotation: !<Vec3> {x: 0.000000, y: 135.000000, z: 90.000000}
       ceilingRotation: !<Vec3> {x: 0.000000, y: 135.000000, z: -90.000000}
       enableVoiceCommands: true
-      confirmButton: !<reference.SceneObject> 7eeec38b-972f-4059-9fef-16ccf0c47597
-      declineButton: !<reference.SceneObject> aeb0d323-d4ef-4dfb-8274-4658c65d3b36
   ScriptTypes:
     "":
       {}
@@ -15416,7 +15414,7 @@
   PrefabRemaps:
     []
   Name: Home
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}

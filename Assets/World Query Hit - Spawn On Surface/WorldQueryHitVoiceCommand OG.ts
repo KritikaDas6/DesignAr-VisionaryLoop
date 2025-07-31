@@ -9,6 +9,9 @@ export class WorldQueryHitVoiceCommand extends BaseScriptComponent {
     private hitTestSession: HitTestSession;
     private transform: Transform;
     private isPlaced: boolean = false;
+    private isPreviewMode: boolean = false; // True when object is previewing position
+    private previewPosition: vec3 = null;
+    private previewRotation: quat = null;
     
     // ASR functionality
     private asrModule: AsrModule = require("LensStudio:AsrModule");
@@ -24,7 +27,8 @@ export class WorldQueryHitVoiceCommand extends BaseScriptComponent {
     @input floorRotation: vec3 = new vec3(0, 0, 0); // Manual floor rotation in degrees
     @input ceilingRotation: vec3 = new vec3(0, 0, 0); // Manual ceiling rotation in degrees
     @input enableVoiceCommands: boolean = true; // Toggle for voice commands (only placement method)
-
+    @input confirmButton: SceneObject; // Button to confirm placement
+    @input declineButton: SceneObject; // Button to decline placement
 
     onAwake() {
         this.hitTestSession = this.createHitTestSession(this.filterEnabled);
@@ -224,12 +228,9 @@ export class WorldQueryHitVoiceCommand extends BaseScriptComponent {
                     print("Using wall rotation");
                 }
 
-                                 // Place the object directly
-                 this.targetObject.enabled = true;
-                 this.targetObject.getTransform().setWorldPosition(hitPosition);
-                 this.targetObject.getTransform().setWorldRotation(toRotation);
-                 this.isPlaced = true;
-                 print("Object placed at: " + hitPosition);
+                // Enter preview mode instead of immediately placing
+                this.enterPreviewMode(hitPosition, toRotation);
+                print("Entered preview mode - use Confirm/Decline buttons or voice commands");
                 
             } else {
                 print("No hit test results - placing in front of camera");
@@ -242,12 +243,9 @@ export class WorldQueryHitVoiceCommand extends BaseScriptComponent {
                     cameraPosition.z + cameraDirection.z * distance
                 );
 
-                                 // Place the object directly in front of camera
-                 this.targetObject.enabled = true;
-                 this.targetObject.getTransform().setWorldPosition(position);
-                 this.targetObject.getTransform().setWorldRotation(quat.lookAt(cameraDirection, vec3.up()));
-                 this.isPlaced = true;
-                 print("No wall found - object placed in front of camera");
+                // Enter preview mode for front-of-camera placement
+                this.enterPreviewMode(position, quat.lookAt(cameraDirection, vec3.up()));
+                print("No wall found - entered preview mode in front of camera");
             }
         });
     }
@@ -262,12 +260,101 @@ export class WorldQueryHitVoiceCommand extends BaseScriptComponent {
         }
     }
 
-
+    // Preview mode methods
+    private enterPreviewMode(position: vec3, rotation: quat) {
+        this.isPreviewMode = true;
+        this.previewPosition = position;
+        this.previewRotation = rotation;
+        
+        // Show the object at preview position
+        this.targetObject.enabled = true;
+        this.targetObject.getTransform().setWorldPosition(position);
+        this.targetObject.getTransform().setWorldRotation(rotation);
+        
+        // Show confirm/decline buttons
+        this.showConfirmationButtons();
+        
+        print("Preview mode active - object positioned at: " + position);
+    }
+    
+    private exitPreviewMode() {
+        this.isPreviewMode = false;
+        this.previewPosition = null;
+        this.previewRotation = null;
+        
+        // Hide the object
+        this.targetObject.enabled = false;
+        
+        // Hide confirm/decline buttons
+        this.hideConfirmationButtons();
+        
+        print("Exited preview mode");
+    }
+    
+    private showConfirmationButtons() {
+        if (this.confirmButton) {
+            this.confirmButton.enabled = true;
+        }
+        if (this.declineButton) {
+            this.declineButton.enabled = true;
+        }
+    }
+    
+    private hideConfirmationButtons() {
+        if (this.confirmButton) {
+            this.confirmButton.enabled = false;
+        }
+        if (this.declineButton) {
+            this.declineButton.enabled = false;
+        }
+    }
+    
+    // Button event handlers
+    public onConfirmButtonPressed() {
+        if (this.isPreviewMode) {
+            this.confirmPlacement();
+        }
+    }
+    
+    public onDeclineButtonPressed() {
+        if (this.isPreviewMode) {
+            this.declinePlacement();
+        }
+    }
+    
+    private confirmPlacement() {
+        if (this.isPreviewMode && this.previewPosition && this.previewRotation) {
+            // Finalize the placement
+            this.targetObject.getTransform().setWorldPosition(this.previewPosition);
+            this.targetObject.getTransform().setWorldRotation(this.previewRotation);
+            this.isPlaced = true;
+            this.isPreviewMode = false;
+            
+            // Hide confirmation buttons
+            this.hideConfirmationButtons();
+            
+            print("Placement confirmed! Object placed at: " + this.previewPosition);
+            print("Final position: " + this.targetObject.getTransform().getWorldPosition());
+            print("Final rotation: " + this.targetObject.getTransform().getWorldRotation());
+        }
+    }
+    
+    private declinePlacement() {
+        if (this.isPreviewMode) {
+            // Exit preview mode and allow user to choose new position
+            this.exitPreviewMode();
+            print("Placement declined - look around to choose new position");
+        }
+    }
 
     // Public method to reset placement
     public resetPlacement() {
         this.isPlaced = false;
+        this.isPreviewMode = false;
+        this.previewPosition = null;
+        this.previewRotation = null;
         this.targetObject.enabled = false;
+        this.hideConfirmationButtons();
         print("Placement reset - ready for new placement");
     }
 
