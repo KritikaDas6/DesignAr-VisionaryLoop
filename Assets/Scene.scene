@@ -319,7 +319,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> 81cc6b4b-7b01-4440-84b5-186d026c06cf
+    - !<reference> e28350a7-aaf6-4f94-9e12-c02a1277c7f0
   Mesh: !<reference> 9d7384d9-0215-4f75-8b03-f44096507d85
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
@@ -1139,7 +1139,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: -0.000001, y: -19.000000, z: -10.000000}
+    position: {x: -0.000001, y: -19.000000, z: -15.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 2.000000, y: 2.000000, z: 2.000000}
     hasSegmentScaleCompensation: false
@@ -1446,7 +1446,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: -0.000001, y: -19.000000, z: -10.000000}
+    position: {x: -0.000001, y: -19.000000, z: -15.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 2.000000, y: 2.000000, z: 2.000000}
     hasSegmentScaleCompensation: false
@@ -2607,7 +2607,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> 5e6e1132-90fd-4c58-86f9-eb992e6747f5
+    - !<reference> 81cc6b4b-7b01-4440-84b5-186d026c06cf
   Mesh: !<reference> 9d7384d9-0215-4f75-8b03-f44096507d85
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
@@ -2949,7 +2949,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: -0.000001, y: -19.407652, z: 4.000008}
+    position: {x: -0.000001, y: -19.000000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 2.000000, y: 2.000000, z: 2.000000}
     hasSegmentScaleCompensation: false
@@ -3103,7 +3103,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 2.500000, z: 0.000000}
+    position: {x: 0.000000, y: 3.500000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -4720,7 +4720,7 @@
   Enabled: true
   RenderOrder: 0
   StretchMode: Stretch
-  VerticalAlignment: Center
+  VerticalAlignment: Top
   HorizontalAlignment: Left
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
@@ -5232,7 +5232,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 2.500000, z: 0.000000}
+    position: {x: 0.000000, y: 3.500000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -5500,7 +5500,7 @@
   PrefabRemaps:
     []
   Name: InteractableOutlineFeedback
-  Enabled: true
+  Enabled: false
   ScriptAsset: !<reference> 657cbbe5-2a9c-4889-93fb-fd72ba8a1d52
   ScriptInputsDefault:
     outlineWeight: true
@@ -5542,13 +5542,15 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: Step 3.
+  Text: |
+    STEP 3.
+
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 50
-  Font: !<reference> 742030c4-491a-4efb-a147-8bea2586b68f
+  FontSize: 60
+  Font: !<reference> 085494f6-9c8c-4006-88a9-9d9c622c8336
   LayoutRect:
     left: -15.000000
     bottom: 0.000000
@@ -5992,7 +5994,7 @@
   PrefabRemaps:
     []
   Name: InteractableOutlineFeedback
-  Enabled: true
+  Enabled: false
   ScriptAsset: !<reference> 657cbbe5-2a9c-4889-93fb-fd72ba8a1d52
   ScriptInputsDefault:
     outlineWeight: true
@@ -8507,13 +8509,13 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: Step 4.
+  Text: STEP 4.
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 50
-  Font: !<reference> 742030c4-491a-4efb-a147-8bea2586b68f
+  FontSize: 60
+  Font: !<reference> 085494f6-9c8c-4006-88a9-9d9c622c8336
   LayoutRect:
     left: -15.000000
     bottom: 0.000000
@@ -9645,7 +9647,7 @@
   Enabled: true
   RenderOrder: 0
   StretchMode: Stretch
-  VerticalAlignment: Center
+  VerticalAlignment: Top
   HorizontalAlignment: Left
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
@@ -10925,13 +10927,15 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: Step 2.
+  Text: |+
+    STEP 2.
+    
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 50
-  Font: !<reference> 742030c4-491a-4efb-a147-8bea2586b68f
+  FontSize: 60
+  Font: !<reference> 085494f6-9c8c-4006-88a9-9d9c622c8336
   LayoutRect:
     left: -15.000000
     bottom: 0.000000
@@ -11384,7 +11388,7 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: Find a surface to project using your hand
+  Text: Look around and say “Project” when you’ve found a surface you like.
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -11490,12 +11494,12 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: " "
+  Text: "  "
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 50
+  FontSize: 40
   Font: !<reference> 6451e811-7319-4994-ae0b-3503a612ef29
   LayoutRect:
     left: -18.000000
@@ -11744,7 +11748,7 @@
   Enabled: true
   RenderOrder: 0
   StretchMode: Stretch
-  VerticalAlignment: Center
+  VerticalAlignment: Top
   HorizontalAlignment: Left
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
@@ -11838,7 +11842,7 @@
   Enabled: true
   RenderOrder: 0
   StretchMode: Stretch
-  VerticalAlignment: Center
+  VerticalAlignment: Top
   HorizontalAlignment: Left
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
@@ -12230,7 +12234,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: -0.000001, y: -19.000000, z: -10.000000}
+    position: {x: -6.000000, y: -19.000000, z: -15.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 2.000000, y: 2.000000, z: 2.000000}
     hasSegmentScaleCompensation: false
@@ -13217,7 +13221,7 @@
     {}
   ScriptInputs:
     "":
-      targetObjectToDisable: !<reference.SceneObject> 26f8d966-e6b7-432d-97e0-1a98519c0537
+      targetObjectToDisable: !<reference.SceneObject> fd7e6612-6f5d-47c1-b676-d1c02b28bc44
       targetObjectToEnable: !<reference.SceneObject> 6fcbc1b3-7533-422d-86f5-58e395741061
       isToggleButton: false
       editEventCallbacks: false
@@ -15290,13 +15294,13 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: Step 5.
+  Text: STEP 5.
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 50
-  Font: !<reference> 742030c4-491a-4efb-a147-8bea2586b68f
+  FontSize: 60
+  Font: !<reference> 085494f6-9c8c-4006-88a9-9d9c622c8336
   LayoutRect:
     left: -15.000000
     bottom: 0.000000
@@ -16505,7 +16509,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: -0.000001, y: -25.000000, z: -10.000000}
+    position: {x: 6.000000, y: -19.000000, z: -15.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 2.000000, y: 2.000000, z: 2.000000}
     hasSegmentScaleCompensation: false
@@ -17953,7 +17957,7 @@
   PrefabRemaps:
     []
   Name: Guide2
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: -2.000000, y: 25.000000, z: -60.000000}
@@ -18879,7 +18883,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: -0.000001, y: -19.000000, z: -10.000000}
+    position: {x: -0.000001, y: -19.000000, z: -15.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 2.000000, y: 2.000000, z: 2.000000}
     hasSegmentScaleCompensation: false
@@ -20332,13 +20336,15 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: Step 1.
+  Text: |
+    STEP 1.
+
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 50
-  Font: !<reference> 742030c4-491a-4efb-a147-8bea2586b68f
+  FontSize: 60
+  Font: !<reference> 085494f6-9c8c-4006-88a9-9d9c622c8336
   LayoutRect:
     left: -15.000000
     bottom: 0.000000
@@ -20471,7 +20477,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 2.500000, z: 0.000000}
+    position: {x: 0.000000, y: 3.500000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -21325,7 +21331,7 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: Confirm placement
+  Text: Reset
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -21341,7 +21347,7 @@
   OverflowHorizontal: Overflow
   Fill: !<TextFill>
     Mode: Solid
-    Color: {x: 0.000000, y: 0.752941, z: 0.180392, w: 1.000000}
+    Color: {x: 0.886275, y: 0.996078, z: 0.000000, w: 1.000000}
     Texture: !<reference> 00000000-0000-0000-0000-000000000000
     TileCount: 5.000000
     TileZone: Rect
@@ -21746,7 +21752,7 @@
   PrefabRemaps:
     []
   Name: Subtitle_Text
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: -4.000000, z: 0.000000}
@@ -21779,7 +21785,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 2.500000, z: 0.000000}
+    position: {x: 0.000000, y: 3.500000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -24346,7 +24352,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 2.500000, z: 0.000000}
+    position: {x: 0.000000, y: 3.500000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -24454,9 +24460,9 @@
   RawMode: true
   ForceBasic: true
   Anchor:
-    left: -1.200000
+    left: -0.500000
     bottom: -1.000000
-    right: 1.200000
+    right: 0.500000
     top: 1.000000
   Offset:
     left: 0.000000
