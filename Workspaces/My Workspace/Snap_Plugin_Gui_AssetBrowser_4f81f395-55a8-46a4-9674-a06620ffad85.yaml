@@ -1,9 +1,8 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 2017
+    size: 2010
     values:
-      - ""
       - AddedAsset
       - AddedAsset/Device Camera Texture.deviceCameraTexture
       - AddedAsset/Echopark.hdr
@@ -65,7 +64,6 @@ CollapsedEntities:
       - GenAI/Snap3DInteractableFactory.ts
       - GenAI/SphereController.ts
       - GenAI/Untitled JavaScript.js
-      - HS UI Assets
       - HS UI Assets/Guide
       - HS UI Assets/Guide/Guide1.png
       - HS UI Assets/Guide/Guide2.png
@@ -79,15 +77,12 @@ CollapsedEntities:
       - HS UI Assets/Guide/Unlit Guide/Unlit Guide pagination 3.mat
       - HS UI Assets/Guide/Unlit Guide/Unlit Guide pagination 4.mat
       - HS UI Assets/Guide/Unlit Guide/Unlit illust data.mat
-      - HS UI Assets/Guide/Unlit Guide4.mat
       - HS UI Assets/Guide/unlock.png
-      - HS UI Assets/Icon
       - HS UI Assets/Icon/lock.png
       - HS UI Assets/Icon/mic.png
       - HS UI Assets/Icon/mic_yw.png
       - HS UI Assets/Icon/palette.png
       - HS UI Assets/Icon/unlock.png
-      - HS UI Assets/Icon_Mic.mat
       - HS UI Assets/Illust
       - HS UI Assets/Illust/Illust_Pagenation1.png
       - HS UI Assets/Illust/Illust_Pagenation2.png
@@ -104,7 +99,6 @@ CollapsedEntities:
       - HS UI Assets/Image 3.mat
       - HS UI Assets/Image 4.mat
       - HS UI Assets/Image.mat
-      - HS UI Assets/Image_mic.mat
       - HS UI Assets/Material
       - HS UI Assets/Material/Unlit 2.mat
       - HS UI Assets/Material/Unlit.mat
@@ -1982,7 +1976,6 @@ CollapsedEntities:
       - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/VFX Asset/TracingVFX_LeftHand.vfxgraph
       - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/VFX Asset/TracingVFX_RightHand.vfxgraph
       - VFX/Interactive Soap Bubbles VFX/Interactive_Soap_Bubbles__PUT_UNDER_MAIN_CAM.prefab
-      - World Query Hit - Spawn On Surface
       - World Query Hit - Spawn On Surface/Materials
       - World Query Hit - Spawn On Surface/Materials/Plane.mat
       - World Query Hit - Spawn On Surface/Materials/cloud.mat
@@ -2018,6 +2011,6 @@ CollapsedEntities:
       - World Query Hit - Spawn On Surface/World Query Hit Example.prefab
       - World Query Hit - Spawn On Surface/WorldQueryHitExample.ts
       - World Query Hit - Spawn On Surface/WorldQueryHitExample2.ts
-      - guidescript.ts
+      - World Query Hit - Spawn On Surface/WorldQueryHitVoiceCommand.ts
       - pbr.ss_graph
   options: 4
