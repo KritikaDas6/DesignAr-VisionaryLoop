@@ -4,7 +4,9 @@
     - !<own> 166103c4-1d88-4b9e-95c2-45b3e7c6178c
 - !<PassInfo/166103c4-1d88-4b9e-95c2-45b3e7c6178c>
   CachedProperties:
-    []
+    - alphaTestThreshold:
+        typeIdx: 1
+        value: 0.500000
   DepthWrite: true
   DepthTest: true
   DepthFunction: LessEqual

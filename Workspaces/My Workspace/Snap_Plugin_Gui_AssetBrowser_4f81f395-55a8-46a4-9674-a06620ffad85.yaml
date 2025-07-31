@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 1997
+    size: 2017
     values:
       - ""
       - AddedAsset
@@ -72,17 +72,42 @@ CollapsedEntities:
       - HS UI Assets/Guide/Guide3.png
       - HS UI Assets/Guide/Guide4.png
       - HS UI Assets/Guide/ImageMaterial.mat
-      - HS UI Assets/Guide/Unlit Guide BG Outline.mat
-      - HS UI Assets/Guide/Unlit Guide pagination.mat
+      - HS UI Assets/Guide/Unlit Guide
+      - HS UI Assets/Guide/Unlit Guide/Unlit Guide BG Outline.mat
+      - HS UI Assets/Guide/Unlit Guide/Unlit Guide pagination 1.mat
+      - HS UI Assets/Guide/Unlit Guide/Unlit Guide pagination 2.mat
+      - HS UI Assets/Guide/Unlit Guide/Unlit Guide pagination 3.mat
+      - HS UI Assets/Guide/Unlit Guide/Unlit Guide pagination 4.mat
+      - HS UI Assets/Guide/Unlit Guide/Unlit illust data.mat
       - HS UI Assets/Guide/Unlit Guide4.mat
-      - HS UI Assets/Guide/Unlit illust data.mat
-      - HS UI Assets/Icons_Texture
+      - HS UI Assets/Guide/unlock.png
+      - HS UI Assets/Icon
+      - HS UI Assets/Icon/lock.png
+      - HS UI Assets/Icon/mic.png
+      - HS UI Assets/Icon/mic_yw.png
+      - HS UI Assets/Icon/palette.png
+      - HS UI Assets/Icon/unlock.png
+      - HS UI Assets/Icon_Mic.mat
+      - HS UI Assets/Illust
+      - HS UI Assets/Illust/Illust_Pagenation1.png
+      - HS UI Assets/Illust/Illust_Pagenation2.png
+      - HS UI Assets/Illust/Illust_Pagenation3.png
+      - HS UI Assets/Illust/Illust_Pagenation4.png
+      - HS UI Assets/Illust/Illust_data.png
+      - HS UI Assets/Illust/Illust_guideoutline.png
+      - HS UI Assets/Illust/Illust_imagineInk Logo.png
+      - HS UI Assets/Illust/bg illust1.png
+      - HS UI Assets/Illust/bg illust2.png
+      - HS UI Assets/Illust/bg illust3.png
+      - HS UI Assets/Illust/bg illust4.png
+      - HS UI Assets/Image 2.mat
+      - HS UI Assets/Image 3.mat
+      - HS UI Assets/Image 4.mat
+      - HS UI Assets/Image.mat
+      - HS UI Assets/Image_mic.mat
       - HS UI Assets/Material
-      - HS UI Assets/Material/Icon_Mic.mat
-      - HS UI Assets/Material/Image_mic.mat
       - HS UI Assets/Material/Unlit 2.mat
       - HS UI Assets/Material/Unlit.mat
-      - HS UI Assets/Mesh
       - HS UI Assets/Mic animation.lspkg
       - HS UI Assets/Mic animation.lspkg/Mic.mat
       - HS UI Assets/Mic animation.lspkg/MicBlack.png
@@ -412,40 +437,36 @@ CollapsedEntities:
       - HS UI Assets/Mic animation.lspkg/Vertex Distortion Material/Vertex Distortion.mat
       - HS UI Assets/Mic animation.lspkg/flat.ss_graph
       - HS UI Assets/Mic animation.lspkg/package.native
+      - HS UI Assets/Plane.mesh
       - HS UI Assets/Shader
       - HS UI Assets/Shader/unlit.ss_graph
-      - HS UI Assets/Unlit Guide
-      - Image 2.mat
-      - Image.mat
+      - HS UI Assets/Unit Plane
+      - HS UI Assets/Unit Plane/Meshes
       - ImageTexture
       - ImageTexture/Bird.mat
       - ImageTexture/Bird.png
       - ImageTexture/BirdTrace.mat
       - ImageTexture/BirdTrace.png
       - ImageTexture/ImageMaterial 14.mat
+      - ImageTexture/Mainlogo.mat
       - ImageTexture/SketchRider.mat
       - ImageTexture/SketchRider.png
       - ImageTexture/SketchRiderTrace.mat
       - ImageTexture/SketchRiderTrace.png
       - ImageTexture/Test4.mat
       - ImageTexture/Test4.png
-      - ImageTexture/Test5.mat
-      - ImageTexture/Test5.png
       - ImageTexture/flat.ss_graph
       - ImageTexture/image_unlit 2.ss_graph
       - ImageTexture/image_unlit.ss_graph
       - ImageTexture/simple_pbr.ss_graph
-      - Jelly
       - Jelly/Base 2.png
       - Jelly/Frame 1618872818.png
-      - Jelly/JellyButton
       - Jelly/JellyButton/Close.png
-      - Jelly/JellyButton/Material
       - Jelly/JellyButton/Material/Image_Close.mat
-      - Jelly/JellyButton/Material/Image_Edit.mat
       - Jelly/JellyButton/Material/Image_Lock.mat
       - Jelly/JellyButton/Material/Image_Outline.mat
       - Jelly/JellyButton/Material/Image_UnLock.mat
+      - Jelly/JellyButton/Material/Image_ai mic.mat
       - Jelly/JellyButton/Material/Mic.mat
       - Jelly/JellyButton/Material/RoundButtonHoverYellow.mat
       - Jelly/JellyButton/Material/RoundButtonPinchedGreen.mat
@@ -1969,7 +1990,6 @@ CollapsedEntities:
       - World Query Hit - Spawn On Surface/Materials/statue.mat
       - World Query Hit - Spawn On Surface/Materials/tree.mat
       - World Query Hit - Spawn On Surface/Meshes
-      - World Query Hit - Spawn On Surface/Meshes/Plane.mesh
       - World Query Hit - Spawn On Surface/Meshes/cloud.mesh
       - World Query Hit - Spawn On Surface/Meshes/eyes.mesh
       - World Query Hit - Spawn On Surface/Meshes/mouth_open.mesh
