@@ -1,4 +1,5 @@
 const WorldQueryModule = require("LensStudio:WorldQueryModule");
+import { Interactable } from "SpectaclesInteractionKit/Components/Interaction/Interactable/Interactable";
 import Event from "SpectaclesInteractionKit/Utils/Event";
 
 const EPSILON = 0.01;
@@ -24,6 +25,7 @@ export class WorldQueryHitVoiceCommand extends BaseScriptComponent {
     @input floorRotation: vec3 = new vec3(0, 0, 0); // Manual floor rotation in degrees
     @input ceilingRotation: vec3 = new vec3(0, 0, 0); // Manual ceiling rotation in degrees
     @input enableVoiceCommands: boolean = true; // Toggle for voice commands (only placement method)
+    @input resetInteractable: Interactable; // Interactable that resets placement mode
 
 
     onAwake() {
@@ -37,6 +39,9 @@ export class WorldQueryHitVoiceCommand extends BaseScriptComponent {
         this.transform = this.targetObject.getTransform();
         this.targetObject.enabled = false;
         this.setObjectEnabled(this.indexToSpawn);
+
+        // Setup interactable reset functionality
+        this.setupInteractableReset();
 
         // Initialize voice commands if enabled (only placement method)
         if (this.enableVoiceCommands) {
@@ -264,11 +269,55 @@ export class WorldQueryHitVoiceCommand extends BaseScriptComponent {
 
 
 
+    // Setup interactable reset functionality
+    private setupInteractableReset() {
+        if (this.resetInteractable) {
+            print("Setting up interactable reset functionality");
+            
+            // Try different event binding methods
+            try {
+                if (this.resetInteractable.onTriggerStart) {
+                    this.resetInteractable.onTriggerStart.add((event) => {
+                        print("Interactable triggered - resetting placement");
+                        this.resetPlacement();
+                    });
+                    print("Interactable reset event bound using onTriggerStart");
+                } else if (this.resetInteractable.onInteractorTriggerStart) {
+                    this.resetInteractable.onInteractorTriggerStart((event) => {
+                        print("Interactable triggered - resetting placement");
+                        this.resetPlacement();
+                    });
+                    print("Interactable reset event bound using onInteractorTriggerStart");
+                } else {
+                    print("Warning: Could not bind interactable reset events");
+                }
+            } catch (error) {
+                print("Error setting up interactable reset: " + error);
+            }
+        } else {
+            print("No reset interactable assigned");
+        }
+    }
+
     // Public method to reset placement
     public resetPlacement() {
         this.isPlaced = false;
         this.targetObject.enabled = false;
         print("Placement reset - ready for new placement");
+        
+        // Restart surface detection
+        this.restartSurfaceDetection();
+    }
+    
+    // Restart surface detection after reset
+    private restartSurfaceDetection() {
+        print("Restarting surface detection...");
+        
+        // Re-enable the target object for preview
+        this.targetObject.enabled = true;
+        
+        // The onUpdate method will handle the surface detection automatically
+        print("Surface detection restarted - move camera to find new surface");
     }
 
     // Public method to toggle voice commands

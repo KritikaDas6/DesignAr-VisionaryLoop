@@ -366,6 +366,7 @@
       floorRotation: !<Vec3> {x: 0.000000, y: 135.000000, z: 90.000000}
       ceilingRotation: !<Vec3> {x: 0.000000, y: 135.000000, z: -90.000000}
       enableVoiceCommands: true
+      resetInteractable: !<MappingBased.AssignableType> f1a0d4f1-9154-4d9f-ab08-c072d51a8d30
   ScriptTypes:
     "":
       {}
@@ -13221,7 +13222,7 @@
     {}
   ScriptInputs:
     "":
-      targetObjectToDisable: !<reference.SceneObject> fd7e6612-6f5d-47c1-b676-d1c02b28bc44
+      targetObjectToDisable: !<reference.SceneObject> 26f8d966-e6b7-432d-97e0-1a98519c0537
       targetObjectToEnable: !<reference.SceneObject> 6fcbc1b3-7533-422d-86f5-58e395741061
       isToggleButton: false
       editEventCallbacks: false

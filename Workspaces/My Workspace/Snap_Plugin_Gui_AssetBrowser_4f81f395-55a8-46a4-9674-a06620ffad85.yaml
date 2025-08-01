@@ -1,8 +1,9 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 2010
+    size: 2005
     values:
+      - ""
       - AddedAsset
       - AddedAsset/Device Camera Texture.deviceCameraTexture
       - AddedAsset/Echopark.hdr
@@ -23,6 +24,7 @@ CollapsedEntities:
       - Font/Manrope/Manrope-Medium.ttf
       - Font/Manrope/Manrope-Regular.ttf
       - Font/Manrope/Manrope-VariableFont_wght.ttf
+      - GenAI
       - GenAI/AIAsset
       - GenAI/AIAsset/AI Visual
       - GenAI/AIAsset/AI Visual/Animation
@@ -63,19 +65,21 @@ CollapsedEntities:
       - GenAI/Snap3DInteractableFactory.ts
       - GenAI/SphereController.ts
       - GenAI/Untitled JavaScript.js
-      - HS UI Assets
       - HS UI Assets/Guide
       - HS UI Assets/Guide/Guide1.png
       - HS UI Assets/Guide/Guide2.png
       - HS UI Assets/Guide/Guide3.png
       - HS UI Assets/Guide/Guide4.png
       - HS UI Assets/Guide/ImageMaterial.mat
+      - HS UI Assets/Guide/Unlit Guide
       - HS UI Assets/Guide/Unlit Guide/Unlit Guide BG Outline.mat
       - HS UI Assets/Guide/Unlit Guide/Unlit Guide pagination 1.mat
       - HS UI Assets/Guide/Unlit Guide/Unlit Guide pagination 2.mat
       - HS UI Assets/Guide/Unlit Guide/Unlit Guide pagination 3.mat
       - HS UI Assets/Guide/Unlit Guide/Unlit Guide pagination 4.mat
       - HS UI Assets/Guide/Unlit Guide/Unlit illust data.mat
+      - HS UI Assets/Guide/Unlit Guide4.mat
+      - HS UI Assets/Guide/guidescript.ts
       - HS UI Assets/Guide/unlock.png
       - HS UI Assets/Icon
       - HS UI Assets/Icon/lock.png
@@ -100,9 +104,10 @@ CollapsedEntities:
       - HS UI Assets/Image 4.mat
       - HS UI Assets/Image.mat
       - HS UI Assets/Material
+      - HS UI Assets/Material/Icon_Mic.mat
+      - HS UI Assets/Material/Image_mic.mat
       - HS UI Assets/Material/Unlit 2.mat
       - HS UI Assets/Material/Unlit.mat
-      - HS UI Assets/Mic animation.lspkg
       - HS UI Assets/Mic animation.lspkg/Mic.mat
       - HS UI Assets/Mic animation.lspkg/MicBlack.png
       - HS UI Assets/Mic animation.lspkg/MicWhite.png
@@ -177,7 +182,6 @@ CollapsedEntities:
       - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Textures/Hands_Interaction_Glow_Mask.png
       - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Textures/Hands_Opacity_Gradient.png
       - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/package.native
-      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Assets
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Assets/Audio
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Assets/Audio/HoverAudioTrack.wav
@@ -326,13 +330,9 @@ CollapsedEntities:
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/MouseInteractor/MouseInteractor.ts
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Decorators
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Decorators/Singleton.ts
-      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers
-      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/CameraProvider
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/CameraProvider/BaseCameraFinderProvider.js
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/CameraProvider/BaseCameraFinderProvider.ts
-      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/CameraProvider/BaseWorldCameraProvider.ts
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/CameraProvider/CameraProvider.ts
-      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/CameraProvider/WorldCameraFinderProvider.ts
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/CursorControllerProvider
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/CursorControllerProvider/CursorControllerProvider.ts
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData
@@ -436,6 +436,7 @@ CollapsedEntities:
       - HS UI Assets/Shader/unlit.ss_graph
       - HS UI Assets/Unit Plane
       - HS UI Assets/Unit Plane/Meshes
+      - HS UI Assets/Unit Plane/Meshes/Unit Plane.mesh
       - ImageTexture
       - ImageTexture/Bird.mat
       - ImageTexture/Bird.png
@@ -456,8 +457,11 @@ CollapsedEntities:
       - Jelly
       - Jelly/Base 2.png
       - Jelly/Frame 1618872818.png
+      - Jelly/JellyButton
       - Jelly/JellyButton/Close.png
+      - Jelly/JellyButton/Material
       - Jelly/JellyButton/Material/Image_Close.mat
+      - Jelly/JellyButton/Material/Image_Edit.mat
       - Jelly/JellyButton/Material/Image_Lock.mat
       - Jelly/JellyButton/Material/Image_Outline.mat
       - Jelly/JellyButton/Material/Image_UnLock.mat
@@ -527,7 +531,6 @@ CollapsedEntities:
       - LSTween.lspkg/TweenJS/mainGroup.ts
       - LSTween.lspkg/package.native
       - MaterialParams.png
-      - Mic animation
       - Mic animation/Mic.mat
       - Mic animation/MicBlack.png
       - Mic animation/MicWhite.png
@@ -602,7 +605,6 @@ CollapsedEntities:
       - Mic animation/Spectacles 3D Hand Hints.lspkg/Textures/Hands_Interaction_Glow_Mask.png
       - Mic animation/Spectacles 3D Hand Hints.lspkg/Textures/Hands_Opacity_Gradient.png
       - Mic animation/Spectacles 3D Hand Hints.lspkg/package.native
-      - Mic animation/SpectaclesInteractionKit
       - Mic animation/SpectaclesInteractionKit/Assets
       - Mic animation/SpectaclesInteractionKit/Assets/Audio
       - Mic animation/SpectaclesInteractionKit/Assets/Audio/HoverAudioTrack.wav
@@ -751,13 +753,9 @@ CollapsedEntities:
       - Mic animation/SpectaclesInteractionKit/Core/MouseInteractor/MouseInteractor.ts
       - Mic animation/SpectaclesInteractionKit/Decorators
       - Mic animation/SpectaclesInteractionKit/Decorators/Singleton.ts
-      - Mic animation/SpectaclesInteractionKit/Providers
-      - Mic animation/SpectaclesInteractionKit/Providers/CameraProvider
       - Mic animation/SpectaclesInteractionKit/Providers/CameraProvider/BaseCameraFinderProvider.js
       - Mic animation/SpectaclesInteractionKit/Providers/CameraProvider/BaseCameraFinderProvider.ts
-      - Mic animation/SpectaclesInteractionKit/Providers/CameraProvider/BaseWorldCameraProvider.ts
       - Mic animation/SpectaclesInteractionKit/Providers/CameraProvider/CameraProvider.ts
-      - Mic animation/SpectaclesInteractionKit/Providers/CameraProvider/WorldCameraFinderProvider.ts
       - Mic animation/SpectaclesInteractionKit/Providers/CursorControllerProvider
       - Mic animation/SpectaclesInteractionKit/Providers/CursorControllerProvider/CursorControllerProvider.ts
       - Mic animation/SpectaclesInteractionKit/Providers/HandInputData
@@ -856,6 +854,7 @@ CollapsedEntities:
       - Mic animation/Vertex Distortion Material/Vertex Distortion.mat
       - Mic animation/flat.ss_graph
       - Normal.png
+      - PBR 2.mat
       - PBR.mat
       - Prefab
       - Prefab/Menu.prefab
@@ -930,6 +929,8 @@ CollapsedEntities:
       - Script/EnhancedButtonFeedback.ts
       - Script/MaterialTextureReplacer.ts
       - Script/SpawnParticleOnPinch.ts
+      - Script/TestScript.ts
+      - Script/VFXBurst.ts
       - Script_ContainerImage
       - Script_ContainerImage/ImageContainerScaler.ts
       - Script_HandFollower
@@ -1008,7 +1009,6 @@ CollapsedEntities:
       - Spectacles 3D Hand Hints.lspkg/Textures/Hands_Interaction_Glow_Mask.png
       - Spectacles 3D Hand Hints.lspkg/Textures/Hands_Opacity_Gradient.png
       - Spectacles 3D Hand Hints.lspkg/package.native
-      - SpectaclesInteractionKit
       - SpectaclesInteractionKit/Assets
       - SpectaclesInteractionKit/Assets/Audio
       - SpectaclesInteractionKit/Assets/Audio/HoverAudioTrack.wav
@@ -1518,13 +1518,9 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Prefabs
       - SpectaclesInteractionKit/Prefabs/ScrollViewListItem.prefab
       - SpectaclesInteractionKit/Prefabs/SpectaclesInteractionKit.prefab
-      - SpectaclesInteractionKit/Providers
-      - SpectaclesInteractionKit/Providers/CameraProvider
       - SpectaclesInteractionKit/Providers/CameraProvider/ARCameraFinderProvider.ts
       - SpectaclesInteractionKit/Providers/CameraProvider/BaseCameraFinderProvider.ts
-      - SpectaclesInteractionKit/Providers/CameraProvider/BaseWorldCameraProvider.ts
       - SpectaclesInteractionKit/Providers/CameraProvider/CameraProvider.ts
-      - SpectaclesInteractionKit/Providers/CameraProvider/WorldCameraFinderProvider.ts
       - SpectaclesInteractionKit/Providers/CursorControllerProvider
       - SpectaclesInteractionKit/Providers/CursorControllerProvider/CursorControllerProvider.ts
       - SpectaclesInteractionKit/Providers/HandInputData
@@ -1962,6 +1958,8 @@ CollapsedEntities:
       - "VFX/Fireworks VFX/Fireworks__PLACE_IN_OBJECTS_PANEL/Info Card [DELETE_ME]/Materials/Info Card Background.mat"
       - VFX/Fireworks VFX/Render Target.renderTarget
       - VFX/Fireworks VFX/SplashWhite.png
+      - VFX/Interactive Soap Bubbles VFX
+      - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources
       - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/README.js
       - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/Script
       - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/Script/TapController.js
@@ -1971,11 +1969,11 @@ CollapsedEntities:
       - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/Textures/Soap_bubble_specular.png
       - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/Textures/Splash_map.png
       - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/Textures/Swirl_flow_map.png
+      - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/VFX Asset
       - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/VFX Asset/Soap Bubbles Emitter.vfxgraph
       - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/VFX Asset/TracingVFX_LeftHand.vfxgraph
       - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/VFX Asset/TracingVFX_RightHand.vfxgraph
       - VFX/Interactive Soap Bubbles VFX/Interactive_Soap_Bubbles__PUT_UNDER_MAIN_CAM.prefab
-      - World Query Hit - Spawn On Surface
       - World Query Hit - Spawn On Surface/Materials
       - World Query Hit - Spawn On Surface/Materials/Plane.mat
       - World Query Hit - Spawn On Surface/Materials/cloud.mat
@@ -2008,9 +2006,6 @@ CollapsedEntities:
       - World Query Hit - Spawn On Surface/Textures/statue_base.png
       - World Query Hit - Spawn On Surface/Textures/statue_normal.png
       - World Query Hit - Spawn On Surface/Textures/statue_params.png
-      - World Query Hit - Spawn On Surface/World Query Hit Example.prefab
-      - World Query Hit - Spawn On Surface/WorldQueryHitExample.ts
-      - World Query Hit - Spawn On Surface/WorldQueryHitExample2.ts
       - World Query Hit - Spawn On Surface/WorldQueryHitVoiceCommand.ts
       - pbr.ss_graph
   options: 4

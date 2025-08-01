@@ -35,6 +35,7 @@
     floorRotation: false
     indexToSpawn: false
     objectsToSpawn: false
+    resetInteractable: false
     targetObject: false
   ScriptTypesHidden:
     {}
@@ -50,6 +51,7 @@
       floorRotation: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
       ceilingRotation: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
       enableVoiceCommands: true
+      resetInteractable: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
@@ -62,3 +64,4 @@
     - "// @input vec3 floorRotation = {0,0,0}"
     - "// @input vec3 ceilingRotation = {0,0,0}"
     - // @input bool enableVoiceCommands = true
+    - // @input AssignableType resetInteractable
