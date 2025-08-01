@@ -988,13 +988,14 @@
   Enabled: true
   ScriptAsset: !<reference> 547e62b4-06f3-4a2f-8d8e-e9c6362af0f0
   ScriptInputsDefault:
-    {}
+    textDisplay: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       button: !<MappingBased.AssignableType> 31920781-d7b0-47fc-b674-0c143bc0e95a
       activityRenderMesh: !<reference.RenderMeshVisual> 21788ab7-dff5-465c-b8fa-71bc10668fb4
+      textDisplay: !<reference.Text> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     "":
       {}
@@ -1918,13 +1919,14 @@
   Enabled: true
   ScriptAsset: !<reference> 547e62b4-06f3-4a2f-8d8e-e9c6362af0f0
   ScriptInputsDefault:
-    {}
+    textDisplay: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       button: !<MappingBased.AssignableType> afea99eb-2c74-481e-a3f5-5fd6e7bb1c06
       activityRenderMesh: !<reference.RenderMeshVisual> 38c7ae0a-18c2-46ea-8758-a218fbbbe96d
+      textDisplay: !<reference.Text> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     "":
       {}
@@ -2070,18 +2072,21 @@
   ScriptAsset: !<reference> 9e43ef63-b85e-4a86-a7a9-f1b12f5d73ca
   ScriptInputsDefault:
     modelProvider: true
+    image: true
     projectionImage: true
+    asrQueryController: true
+    spinner: true
     nextButton: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       modelProvider: OpenAI
-      image: !<reference.Image> 29302eed-131c-451e-b30d-9826a38add16
+      image: !<reference.Image> 00000000-0000-0000-0000-000000000000
       projectionImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
       textDisplay: !<reference.Text> b5957578-b883-4d82-8275-b60e0cdd0f90
-      asrQueryController: !<MappingBased.AssignableType> 84f40276-5a01-4f93-97c2-4c2484849ca3
-      spinner: !<reference.SceneObject> a3da3dfe-f816-45c4-85fd-eb249b2e1a1f
+      asrQueryController: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      spinner: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       nextButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     "":

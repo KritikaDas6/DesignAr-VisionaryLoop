@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 2025
+    size: 2030
     values:
       - ""
       - AddedAsset
@@ -936,6 +936,7 @@ CollapsedEntities:
       - Remote Service Gateway.lspkg/package.native
       - Scene 2.scene
       - Scene.scene
+      - Script
       - Script 2.js
       - Script.js
       - Script/ContinuousVFXBurstOnPinchWithButtonFeedback.ts
@@ -944,6 +945,7 @@ CollapsedEntities:
       - Script/SpawnParticleOnPinch.ts
       - Script/TestScript.ts
       - Script/VFXBurst.ts
+      - Script/VoiceTextFeedback.ts
       - Script_ContainerImage
       - Script_ContainerImage/ImageContainerScaler.ts
       - Script_HandFollower
@@ -1992,6 +1994,7 @@ CollapsedEntities:
       - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/VFX Asset/TracingVFX_LeftHand.vfxgraph
       - VFX/Interactive Soap Bubbles VFX/Interactive Soap Bubbles Resources/VFX Asset/TracingVFX_RightHand.vfxgraph
       - VFX/Interactive Soap Bubbles VFX/Interactive_Soap_Bubbles__PUT_UNDER_MAIN_CAM.prefab
+      - World Query Hit - Spawn On Surface
       - World Query Hit - Spawn On Surface/Materials
       - World Query Hit - Spawn On Surface/Materials/Plane.mat
       - World Query Hit - Spawn On Surface/Materials/cloud.mat
@@ -2027,5 +2030,7 @@ CollapsedEntities:
       - World Query Hit - Spawn On Surface/World Query Hit Example.prefab
       - World Query Hit - Spawn On Surface/WorldQueryHitExample.ts
       - World Query Hit - Spawn On Surface/WorldQueryHitExample2.ts
+      - World Query Hit - Spawn On Surface/WorldQueryHitVoiceCommand OG.ts
+      - World Query Hit - Spawn On Surface/WorldQueryHitVoiceCommand.ts
       - pbr.ss_graph
   options: 4

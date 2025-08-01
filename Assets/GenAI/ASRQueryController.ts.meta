@@ -30,6 +30,7 @@
   ScriptInputsHidden:
     activityRenderMesh: false
     button: false
+    textDisplay: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -37,9 +38,11 @@
   DefaultScriptInputs:
     - button: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
       activityRenderMesh: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
+      textDisplay: !<reference.Text> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
     - // @input AssignableType button
     - // @input Component.RenderMeshVisual activityRenderMesh
+    - // @input Component.Text textDisplay

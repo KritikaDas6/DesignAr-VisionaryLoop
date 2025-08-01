@@ -3846,7 +3846,7 @@
   PrefabRemaps:
     []
   Name: Project00_AI
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: -40.000000}
@@ -6437,13 +6437,14 @@
   Enabled: true
   ScriptAsset: !<reference> 547e62b4-06f3-4a2f-8d8e-e9c6362af0f0
   ScriptInputsDefault:
-    {}
+    textDisplay: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       button: !<MappingBased.AssignableType> 3fcb1df8-eb3a-4688-b999-e0640d1a5225
       activityRenderMesh: !<reference.RenderMeshVisual> e8715ecd-aef5-4be1-a1cf-3ed56c2a7be2
+      textDisplay: !<reference.Text> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     "":
       {}
@@ -8815,13 +8816,14 @@
   Enabled: true
   ScriptAsset: !<reference> 547e62b4-06f3-4a2f-8d8e-e9c6362af0f0
   ScriptInputsDefault:
-    {}
+    textDisplay: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       button: !<MappingBased.AssignableType> 15e5b8a6-957e-40c0-86ec-9a2f93e1a5f9
       activityRenderMesh: !<reference.RenderMeshVisual> 7ddb9254-45fc-4c08-8daa-31b8a9256915
+      textDisplay: !<reference.Text> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     "":
       {}
@@ -10039,6 +10041,7 @@
     "":
       button: !<MappingBased.AssignableType> 68aa6ca5-080d-4052-a76d-fd450ca0ea47
       activityRenderMesh: !<reference.RenderMeshVisual> 2b646418-7e1a-4a59-aa60-7e75be485786
+      textDisplay: !<reference.Text> 77868bbd-5aba-42aa-8623-bcb67dd7e80b
   ScriptTypes:
     "":
       {}
@@ -10902,18 +10905,21 @@
   ScriptAsset: !<reference> 9e43ef63-b85e-4a86-a7a9-f1b12f5d73ca
   ScriptInputsDefault:
     modelProvider: true
+    image: true
     projectionImage: true
+    asrQueryController: true
+    spinner: true
     nextButton: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       modelProvider: OpenAI
-      image: !<reference.Image> 3d459268-01d1-4504-90de-3c66f4e6c089
+      image: !<reference.Image> 00000000-0000-0000-0000-000000000000
       projectionImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
       textDisplay: !<reference.Text> e0e85e59-7074-4340-b1b4-4c12dd2a9b48
-      asrQueryController: !<MappingBased.AssignableType> 5764335a-b198-4e0c-90fb-f03adf9ff600
-      spinner: !<reference.SceneObject> 8e9e3021-d663-4867-9b36-fa401dbbbd82
+      asrQueryController: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      spinner: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       nextButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     "":
@@ -16311,7 +16317,7 @@
       positionOffsetX: !<float> 3.000000
       positionOffsetY: !<float> 4.000000
       positionOffsetZ: !<float> 0.000000
-      rotationOffsetX: !<float> 0.000000
+      rotationOffsetX: !<float> -20.000000
       rotationOffsetY: !<float> 0.000000
       rotationOffsetZ: !<float> 0.000000
       minHandAngle: !<float> -70.000000
@@ -16323,7 +16329,7 @@
   PrefabRemaps:
     []
   Name: Trace
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: -40.000000}
@@ -19819,7 +19825,7 @@
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: -10.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: -15.000000, y: 0.000000, z: -1.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
@@ -25262,7 +25268,7 @@
   PrefabRemaps:
     []
   Name: Projection
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: -40.000000}
