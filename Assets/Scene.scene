@@ -1146,9 +1146,9 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: -0.000001, y: -19.000000, z: -15.000000}
+    position: {x: -0.000001, y: -19.000000, z: -60.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 2.000000, y: 2.000000, z: 2.000000}
+    scale: {x: 3.000000, y: 3.000000, z: 3.000000}
     hasSegmentScaleCompensation: false
   Children:
     - !<own> 24240bd2-f8c4-4fc6-8d0d-61221b351e8f
@@ -1453,9 +1453,9 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: -0.000001, y: -19.000000, z: -15.000000}
+    position: {x: -0.000001, y: -19.000000, z: -60.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 2.000000, y: 2.000000, z: 2.000000}
+    scale: {x: 3.000000, y: 3.000000, z: 3.000000}
     hasSegmentScaleCompensation: false
   Children:
     - !<own> c9dcbfb8-eff6-43c3-9ce4-a0211588e0d0
@@ -3021,28 +3021,6 @@
     - !<own> 72adc3b4-cd92-430a-9c32-d336434c27e7
   Components:
     []
-- !<ScriptComponent/181998f9-9c9e-4e01-897b-4f2227b663e8>
-  PrefabRemaps:
-    []
-  Name: guidescript
-  Enabled: true
-  ScriptAsset: !<reference> 9d34602f-fc7b-4058-be47-9a80b381cb13
-  ScriptInputsDefault:
-    updateEveryFrame: true
-    debugMode: true
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      buttonObject: !<reference.SceneObject> 373a03e6-4224-4805-8b80-a3ac57976507
-      distanceFromCamera: !<float> -20.000000
-      cornerPosition: !<float> 1.000000
-      screenOffset: !<Vec2> {x: 0.000000, y: 4.000000}
-      updateEveryFrame: true
-      debugMode: true
-  ScriptTypes:
-    "":
-      {}
 - !<SceneObject/1822a0dc-6715-40fd-af49-19e48597ac38>
   PrefabRemaps:
     []
@@ -3845,8 +3823,8 @@
 - !<SceneObject/1f85d341-fb01-4b17-b9ec-b79e1005ced9>
   PrefabRemaps:
     []
-  Name: Project00_AI
-  Enabled: true
+  Name: Imagegen00
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: -40.000000}
@@ -4653,13 +4631,13 @@
 - !<SceneObject/26f8d966-e6b7-432d-97e0-1a98519c0537>
   PrefabRemaps:
     []
-  Name: Project00
+  Name: Button
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    position: {x: 0.000000, y: 0.000000, z: -60.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.300000, y: 1.300000, z: 1.300000}
     hasSegmentScaleCompensation: false
   Children:
     - !<own> 7eeec38b-972f-4059-9fef-16ccf0c47597
@@ -6045,21 +6023,6 @@
   ScriptTypes:
     "":
       {}
-- !<SceneObject/373a03e6-4224-4805-8b80-a3ac57976507>
-  PrefabRemaps:
-    []
-  Name: Guide3
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 5.000000, y: 2.702703, z: 2.702703}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 7d443cf6-0014-4aad-ac17-79493aa33e5e
 - !<RenderMeshVisual/373b79ed-3881-44fe-8840-a7eec7c26eb9>
   PrefabRemaps:
     []
@@ -7418,7 +7381,6 @@
   ScriptAsset: !<reference> 94ea82ba-1d42-4617-b71f-c92262f5960b
   ScriptInputsDefault:
     autoShowHide: true
-    border: true
     constantPadding: true
     allowScaling: true
     autoScaleContent: true
@@ -7445,7 +7407,7 @@
     "":
       autoShowHide: true
       innerSize: !<Vec2> {x: 20.000000, y: 20.000000}
-      border: !<float> 4.000000
+      border: !<float> 0.000000
       constantPadding: !<Vec2> {x: 0.000000, y: 0.000000}
       allowScaling: true
       autoScaleContent: true
@@ -9201,21 +9163,6 @@
     []
   Components:
     - !<own> a187245f-9473-45a5-9682-e4e08573080b
-- !<SceneObject/5d239fdd-ec6f-4194-91df-a6a9c5004eb8>
-  PrefabRemaps:
-    []
-  Name: "Guide3[delete]"
-  Enabled: false
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    - !<own> 373a03e6-4224-4805-8b80-a3ac57976507
-  Components:
-    - !<own> 181998f9-9c9e-4e01-897b-4f2227b663e8
 - !<Image/5d553649-0a58-40ff-8ea5-94deb95579d3>
   PrefabRemaps:
     []
@@ -10363,7 +10310,7 @@
   LocalTransform:
     position: {x: 0.000000, y: 5.000000, z: 0.000000}
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 20.000000, y: 20.000000, z: 20.000000}
+    scale: {x: 25.000000, y: 25.000000, z: 25.000000}
     hasSegmentScaleCompensation: false
   Children:
     []
@@ -10726,7 +10673,6 @@
     hasSegmentScaleCompensation: false
   Children:
     - !<own> c6e0b930-580e-42eb-9f8c-b2f760ce9860
-    - !<own> e2863365-7a30-46fe-a8db-e37803d67825
     - !<own> 2b780c9c-ef1d-434b-8f86-e6dac185632d
     - !<own> 096e9a9e-e0a0-4f99-824d-708c67224e85
   Components:
@@ -11428,7 +11374,7 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: Look around and say “Project” when you’ve found a surface you like.
+  Text: "Look around and find a surface you'd like to project onto."
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -11534,20 +11480,20 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: "  "
+  Text: " "
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 40
+  FontSize: 35
   Font: !<reference> 6451e811-7319-4994-ae0b-3503a612ef29
   LayoutRect:
-    left: -18.000000
+    left: -11.000000
     bottom: -2.250000
-    right: 18.000000
+    right: 11.000000
     top: 2.250000
-  OverflowVertical: Overflow
-  OverflowHorizontal: Ellipsis
+  OverflowVertical: Truncate
+  OverflowHorizontal: Wrap
   Fill: !<TextFill>
     Mode: Solid
     Color: {x: 0.000000, y: 0.752941, z: 0.180392, w: 1.000000}
@@ -12059,7 +12005,7 @@
   PrefabRemaps:
     []
   Name: SketchRiderTrace
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: -1.000000, y: 0.000000, z: 0.000000}
@@ -12130,26 +12076,6 @@
     - !<own> ccdd9bf3-725b-4e32-b3fc-ba4f6a3ab456
   Components:
     []
-- !<RenderMeshVisual/7d443cf6-0014-4aad-ac17-79493aa33e5e>
-  PrefabRemaps:
-    []
-  Name: Render Mesh Visual
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> f746473c-025e-4bd2-af8c-32966272479d
-  Mesh: !<reference> 1196c138-1598-4ab3-9468-1da4aac9ef88
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
 - !<SceneObject/7d6073f9-d585-4700-8add-eec96e069223>
   PrefabRemaps:
     []
@@ -12257,7 +12183,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: -24.999998, z: -0.000015}
+    position: {x: 0.000000, y: -24.999998, z: -30.000000}
     rotation: {x: 0.000000, y: 0.000007, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -12276,7 +12202,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: -6.000000, y: -19.000000, z: -15.000000}
+    position: {x: -6.000000, y: -19.000000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 2.000000, y: 2.000000, z: 2.000000}
     hasSegmentScaleCompensation: false
@@ -12427,7 +12353,7 @@
   Enabled: false
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -10.000000}
+    position: {x: 0.000000, y: 0.000000, z: -40.000000}
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 0.800000, y: 0.800000, z: 0.800000}
     hasSegmentScaleCompensation: false
@@ -13281,7 +13207,7 @@
     {}
   ScriptInputs:
     "":
-      targetObjectToDisable: !<reference.SceneObject> 26f8d966-e6b7-432d-97e0-1a98519c0537
+      targetObjectToDisable: !<reference.SceneObject> fd7e6612-6f5d-47c1-b676-d1c02b28bc44
       targetObjectToEnable: !<reference.SceneObject> 6fcbc1b3-7533-422d-86f5-58e395741061
       isToggleButton: false
       editEventCallbacks: false
@@ -14156,7 +14082,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: -4.000000, z: 2.000000}
+    position: {x: 0.000000, y: -6.000000, z: 0.000000}
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.500000, y: 1.500000, z: 1.500000}
     hasSegmentScaleCompensation: false
@@ -15584,10 +15510,10 @@
   PrefabRemaps:
     []
   Name: Home
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    position: {x: 0.000000, y: 0.000000, z: -40.000000}
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -16307,7 +16233,6 @@
   ScriptAsset: !<reference> 796a7671-7b31-48fe-a371-3142c126ebdf
   ScriptInputsDefault:
     positionOffsetZ: true
-    rotationOffsetY: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -16318,7 +16243,7 @@
       positionOffsetY: !<float> 4.000000
       positionOffsetZ: !<float> 0.000000
       rotationOffsetX: !<float> -20.000000
-      rotationOffsetY: !<float> 0.000000
+      rotationOffsetY: !<float> 10.000000
       rotationOffsetZ: !<float> 0.000000
       minHandAngle: !<float> -70.000000
       maxHandAngle: !<float> 70.000000
@@ -16675,7 +16600,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 6.000000, y: -19.000000, z: -15.000000}
+    position: {x: 6.000000, y: -19.000000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 2.000000, y: 2.000000, z: 2.000000}
     hasSegmentScaleCompensation: false
@@ -17628,28 +17553,6 @@
   Components:
     - !<own> 82a5118c-841d-412d-9b51-a44fcf6f1989
     - !<own> 9e9740b5-403c-4694-88ba-21d0e018d819
-- !<ScriptComponent/b440f290-73d5-4571-95a9-0d89c3f381c4>
-  PrefabRemaps:
-    []
-  Name: guidescript
-  Enabled: true
-  ScriptAsset: !<reference> 9d34602f-fc7b-4058-be47-9a80b381cb13
-  ScriptInputsDefault:
-    updateEveryFrame: true
-    debugMode: true
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      buttonObject: !<reference.SceneObject> c2c7a835-fffd-4324-8db5-79e36ec713a1
-      distanceFromCamera: !<float> -20.000000
-      cornerPosition: !<float> 1.000000
-      screenOffset: !<Vec2> {x: 0.000000, y: 4.000000}
-      updateEveryFrame: true
-      debugMode: true
-  ScriptTypes:
-    "":
-      {}
 - !<SceneObject/b48049c2-2ada-4cb6-843b-10c08471349e>
   PrefabRemaps:
     []
@@ -17665,26 +17568,6 @@
     - !<own> 3198105a-b2d9-4ecd-b392-696d8ee0c28d
   Components:
     []
-- !<RenderMeshVisual/b4a3f76f-1314-4b35-b106-81636b3a52f0>
-  PrefabRemaps:
-    []
-  Name: Render Mesh Visual
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> c4bcedea-859e-4d31-ad9d-9b9ef951f574
-  Mesh: !<reference> 1196c138-1598-4ab3-9468-1da4aac9ef88
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
 - !<SceneObject/b4b85124-dd58-41b0-a84c-042947db82cf>
   PrefabRemaps:
     []
@@ -18677,21 +18560,6 @@
   ScriptTypes:
     "":
       {}
-- !<SceneObject/c2c7a835-fffd-4324-8db5-79e36ec713a1>
-  PrefabRemaps:
-    []
-  Name: Guide2
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 5.000000, y: 2.702703, z: 2.702703}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> b4a3f76f-1314-4b35-b106-81636b3a52f0
 - !<SceneObject/c2c86698-50e0-4d42-a19b-25b3014a6855>
   PrefabRemaps:
     []
@@ -19176,7 +19044,6 @@
     hasSegmentScaleCompensation: false
   Children:
     - !<own> 8f4d96fd-e19d-4f1c-9d3d-9089121dbf94
-    - !<own> 5d239fdd-ec6f-4194-91df-a6a9c5004eb8
     - !<own> 116e40c2-f921-4518-a9f0-7dc20d720267
     - !<own> 057610b6-8331-4375-821d-34a3317f363f
   Components:
@@ -19204,9 +19071,9 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: -0.000001, y: -19.000000, z: -15.000000}
+    position: {x: -0.000001, y: -19.000000, z: -60.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 2.000000, y: 2.000000, z: 2.000000}
+    scale: {x: 3.000000, y: 3.000000, z: 3.000000}
     hasSegmentScaleCompensation: false
   Children:
     - !<own> 61ed34e9-6fdf-42f4-a318-ef6bbba45655
@@ -20188,7 +20055,7 @@
   PrefabRemaps:
     []
   Name: SketchRider
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -21221,21 +21088,6 @@
     CapitalizationOverride: None
   DepthTest: false
   TwoSided: false
-- !<SceneObject/e2863365-7a30-46fe-a8db-e37803d67825>
-  PrefabRemaps:
-    []
-  Name: "Guide2[delete]"
-  Enabled: false
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    - !<own> c2c7a835-fffd-4324-8db5-79e36ec713a1
-  Components:
-    - !<own> b440f290-73d5-4571-95a9-0d89c3f381c4
 - !<SceneObject/e294ad9b-2833-4e79-93be-86ab5cc39115>
   PrefabRemaps:
     []
@@ -22110,7 +21962,7 @@
   PrefabRemaps:
     []
   Name: Subtitle_Text
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: -4.000000, z: 0.000000}
@@ -25139,12 +24991,12 @@
   Enabled: true
   ScriptAsset: !<reference> 9e43ef63-b85e-4a86-a7a9-f1b12f5d73ca
   ScriptInputsDefault:
-    modelProvider: true
+    {}
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
-      modelProvider: OpenAI
+      modelProvider: Gemini
       image: !<reference.Image> abcf7d86-1850-4010-9d79-1240ca45b7b2
       projectionImage: !<reference.Image> 61883b6f-6177-43a1-a123-a07876764a6a
       textDisplay: !<reference.Text> 77868bbd-5aba-42aa-8623-bcb67dd7e80b
@@ -25267,7 +25119,7 @@
 - !<SceneObject/fd7e6612-6f5d-47c1-b676-d1c02b28bc44>
   PrefabRemaps:
     []
-  Name: Projection
+  Name: Project
   Enabled: false
   Layers: 1
   LocalTransform:
@@ -26179,7 +26031,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: -15.000000, z: 0.100000}
+    position: {x: 0.000000, y: -17.000000, z: 0.100000}
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
