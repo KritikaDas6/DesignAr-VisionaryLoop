@@ -28,9 +28,14 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
-    collisionTarget: false
+    fixedMaxDistance: false
+    fixedMinDistance: false
     hand: false
+    maxDistanceMultiplier: false
+    minDistanceMultiplier: false
     positionOffset: false
+    targetObject: false
+    useResponsiveRange: false
     vfxObject: false
   ScriptTypesHidden:
     {}
@@ -40,12 +45,22 @@
     - vfxObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       hand: either
       positionOffset: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
-      collisionTarget: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      targetObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      minDistanceMultiplier: 0.500000
+      maxDistanceMultiplier: !<float> 2.000000
+      useResponsiveRange: true
+      fixedMinDistance: 0.300000
+      fixedMaxDistance: !<float> 1.000000
   ScriptTypes:
     -
       {}
   InputLines:
     - '// @input SceneObject vfxObject {"hint":"SceneObject with the VFX to move and enable (not a prefab)"}'
     - '// @input string hand = "either" {"hint":"Which hand to listen for (left, right, or either)"}'
-    - '// @input vec3 positionOffset = {0,0,0} {"hint":"Offset from pinch position (in world units)"}'
-    - '// @input SceneObject collisionTarget {"hint":"Container frame or image to check for collision (optional)"}'
+    - '// @input vec3 positionOffset = {0,0,0} {"hint":"Offset from hand position (in world units)"}'
+    - '// @input SceneObject targetObject {"hint":"Target object to check for hand proximity"}'
+    - '// @input float minDistanceMultiplier = 0.5 {"hint":"Minimum distance multiplier (relative to object size)"}'
+    - '// @input float maxDistanceMultiplier = 2 {"hint":"Maximum distance multiplier (relative to object size)"}'
+    - '// @input bool useResponsiveRange = true {"hint":"Enable responsive range based on object size"}'
+    - '// @input float fixedMinDistance = 0.3 {"hint":"Fixed minimum distance (used when responsive range is disabled)"}'
+    - '// @input float fixedMaxDistance = 1 {"hint":"Fixed maximum distance (used when responsive range is disabled)"}'

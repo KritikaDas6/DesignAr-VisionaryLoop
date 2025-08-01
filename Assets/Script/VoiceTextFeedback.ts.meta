@@ -1,0 +1,57 @@
+- !<AssetImportMetadata/843cadda-fa59-4acb-b9f2-b0e84dffeddd>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 120a0941-f4fa-4e88-93aa-a3893f6ccc2e
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 120a0941-f4fa-4e88-93aa-a3893f6ccc2e
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 007123f5-346a-4e4c-a72b-21b66e9c3ffb
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/007123f5-346a-4e4c-a72b-21b66e9c3ffb>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 7eb0c177-8287-49e5-914f-dac7a639142e
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    enableErrorFeedback: false
+    enableTextFeedback: false
+    feedbackDuration: false
+    showCommandFeedback: false
+    showRealTimeFeedback: false
+    textDisplay: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - textDisplay: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      feedbackDuration: !<float> 3.000000
+      enableTextFeedback: true
+      showRealTimeFeedback: true
+      showCommandFeedback: true
+      enableErrorFeedback: true
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input Component.Text textDisplay {"hint":"Text component to display voice feedback"}'
+    - '// @input float feedbackDuration = 3 {"hint":"Duration to show feedback text (in seconds)"}'
+    - '// @input bool enableTextFeedback = true {"hint":"Enable text feedback"}'
+    - '// @input bool showRealTimeFeedback = true {"hint":"Show real-time transcription feedback"}'
+    - '// @input bool showCommandFeedback = true {"hint":"Show command detection feedback"}'
+    - '// @input bool enableErrorFeedback = true {"hint":"Show error feedback"}'

@@ -27,6 +27,20 @@ export class WorldQueryHitVoiceCommand extends BaseScriptComponent {
     @input enableVoiceCommands: boolean = true; // Toggle for voice commands (only placement method)
     @input resetInteractable: Interactable; // Interactable that resets placement mode
 
+    // Text feedback functionality
+    @input
+    private textDisplay: Text;
+
+    @input
+    @hint("Duration to show feedback text (in seconds)")
+    feedbackDuration: number = 3.0;
+
+    @input
+    @hint("Enable text feedback for voice commands")
+    enableTextFeedback: boolean = true;
+
+    private feedbackTimer: number = 0;
+    private isShowingFeedback: boolean = false;
 
     onAwake() {
         this.hitTestSession = this.createHitTestSession(this.filterEnabled);
@@ -49,7 +63,43 @@ export class WorldQueryHitVoiceCommand extends BaseScriptComponent {
             print("Voice-only placement mode enabled - use voice commands to place objects");
         }
 
+        // Initialize text feedback
+        this.initializeTextFeedback();
+
         this.createEvent("UpdateEvent").bind(this.onUpdate.bind(this));
+    }
+
+    // Initialize text feedback
+    private initializeTextFeedback() {
+        if (this.textDisplay) {
+            this.textDisplay.enabled = false;
+            print("Text feedback initialized");
+        } else {
+            print("Warning: No feedback text component assigned");
+        }
+    }
+
+    // Show text feedback
+    private showTextFeedback(text: string) {
+        if (!this.enableTextFeedback || !this.textDisplay) {
+            return;
+        }
+
+        this.textDisplay.text = text;
+        this.textDisplay.enabled = true;
+        this.isShowingFeedback = true;
+        this.feedbackTimer = 0;
+        
+        print("Text feedback shown: " + text);
+    }
+
+    // Hide text feedback
+    private hideTextFeedback() {
+        if (this.textDisplay) {
+            this.textDisplay.enabled = false;
+            this.isShowingFeedback = false;
+            print("Text feedback hidden");
+        }
     }
 
     // ASR Voice Command Methods
@@ -72,14 +122,22 @@ export class WorldQueryHitVoiceCommand extends BaseScriptComponent {
         
         asrSettings.onTranscriptionUpdateEvent.add((asrOutput) => {
             print("ASR: Received transcription: " + asrOutput.text);
+            
+            // Show real-time feedback for all speech
+            if (this.enableTextFeedback && asrOutput.text.trim().length > 0) {
+                this.showTextFeedback("Listening: " + asrOutput.text);
+            }
+            
             if (asrOutput.isFinal) {
                 // Filter for specific words only
                 const detectedWord = this.filterForSpecificWords(asrOutput.text);
                 if (detectedWord) {
                     print("ASR: Valid command detected: " + detectedWord);
+                    this.showTextFeedback("Command: " + detectedWord);
                     this.handleVoiceCommand(detectedWord);
                 } else {
                     print("ASR: No valid command found in: " + asrOutput.text);
+                    this.showTextFeedback("No valid command detected");
                 }
                 
                 // Restart listening with proper cleanup
@@ -89,6 +147,7 @@ export class WorldQueryHitVoiceCommand extends BaseScriptComponent {
         
         asrSettings.onTranscriptionErrorEvent.add((asrOutput) => {
             print("ASR Error: " + asrOutput);
+            this.showTextFeedback("Voice recognition error");
             
             // Handle specific error codes with better logging
             switch (asrOutput) {
@@ -382,6 +441,14 @@ export class WorldQueryHitVoiceCommand extends BaseScriptComponent {
     }
 
     onUpdate() {
+        // Handle text feedback timer
+        if (this.isShowingFeedback && this.textDisplay) {
+            this.feedbackTimer += getDeltaTime();
+            if (this.feedbackTimer >= this.feedbackDuration) {
+                this.hideTextFeedback();
+            }
+        }
+
         if (this.isPlaced) return;
 
         // Use camera position and direction for object positioning

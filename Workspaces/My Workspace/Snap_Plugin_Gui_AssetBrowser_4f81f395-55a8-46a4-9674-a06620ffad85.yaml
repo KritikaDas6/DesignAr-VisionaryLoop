@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 2005
+    size: 2025
     values:
       - ""
       - AddedAsset
@@ -65,6 +65,7 @@ CollapsedEntities:
       - GenAI/Snap3DInteractableFactory.ts
       - GenAI/SphereController.ts
       - GenAI/Untitled JavaScript.js
+      - HS UI Assets
       - HS UI Assets/Guide
       - HS UI Assets/Guide/Guide1.png
       - HS UI Assets/Guide/Guide2.png
@@ -108,6 +109,7 @@ CollapsedEntities:
       - HS UI Assets/Material/Image_mic.mat
       - HS UI Assets/Material/Unlit 2.mat
       - HS UI Assets/Material/Unlit.mat
+      - HS UI Assets/Mic animation.lspkg
       - HS UI Assets/Mic animation.lspkg/Mic.mat
       - HS UI Assets/Mic animation.lspkg/MicBlack.png
       - HS UI Assets/Mic animation.lspkg/MicWhite.png
@@ -182,6 +184,7 @@ CollapsedEntities:
       - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Textures/Hands_Interaction_Glow_Mask.png
       - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/Textures/Hands_Opacity_Gradient.png
       - HS UI Assets/Mic animation.lspkg/Spectacles 3D Hand Hints.lspkg/package.native
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Assets
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Assets/Audio
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Assets/Audio/HoverAudioTrack.wav
@@ -330,9 +333,13 @@ CollapsedEntities:
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Core/MouseInteractor/MouseInteractor.ts
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Decorators
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Decorators/Singleton.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/CameraProvider
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/CameraProvider/BaseCameraFinderProvider.js
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/CameraProvider/BaseCameraFinderProvider.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/CameraProvider/BaseWorldCameraProvider.ts
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/CameraProvider/CameraProvider.ts
+      - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/CameraProvider/WorldCameraFinderProvider.ts
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/CursorControllerProvider
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/CursorControllerProvider/CursorControllerProvider.ts
       - HS UI Assets/Mic animation.lspkg/SpectaclesInteractionKit/Providers/HandInputData
@@ -531,6 +538,7 @@ CollapsedEntities:
       - LSTween.lspkg/TweenJS/mainGroup.ts
       - LSTween.lspkg/package.native
       - MaterialParams.png
+      - Mic animation
       - Mic animation/Mic.mat
       - Mic animation/MicBlack.png
       - Mic animation/MicWhite.png
@@ -605,6 +613,7 @@ CollapsedEntities:
       - Mic animation/Spectacles 3D Hand Hints.lspkg/Textures/Hands_Interaction_Glow_Mask.png
       - Mic animation/Spectacles 3D Hand Hints.lspkg/Textures/Hands_Opacity_Gradient.png
       - Mic animation/Spectacles 3D Hand Hints.lspkg/package.native
+      - Mic animation/SpectaclesInteractionKit
       - Mic animation/SpectaclesInteractionKit/Assets
       - Mic animation/SpectaclesInteractionKit/Assets/Audio
       - Mic animation/SpectaclesInteractionKit/Assets/Audio/HoverAudioTrack.wav
@@ -753,9 +762,13 @@ CollapsedEntities:
       - Mic animation/SpectaclesInteractionKit/Core/MouseInteractor/MouseInteractor.ts
       - Mic animation/SpectaclesInteractionKit/Decorators
       - Mic animation/SpectaclesInteractionKit/Decorators/Singleton.ts
+      - Mic animation/SpectaclesInteractionKit/Providers
+      - Mic animation/SpectaclesInteractionKit/Providers/CameraProvider
       - Mic animation/SpectaclesInteractionKit/Providers/CameraProvider/BaseCameraFinderProvider.js
       - Mic animation/SpectaclesInteractionKit/Providers/CameraProvider/BaseCameraFinderProvider.ts
+      - Mic animation/SpectaclesInteractionKit/Providers/CameraProvider/BaseWorldCameraProvider.ts
       - Mic animation/SpectaclesInteractionKit/Providers/CameraProvider/CameraProvider.ts
+      - Mic animation/SpectaclesInteractionKit/Providers/CameraProvider/WorldCameraFinderProvider.ts
       - Mic animation/SpectaclesInteractionKit/Providers/CursorControllerProvider
       - Mic animation/SpectaclesInteractionKit/Providers/CursorControllerProvider/CursorControllerProvider.ts
       - Mic animation/SpectaclesInteractionKit/Providers/HandInputData
@@ -855,6 +868,7 @@ CollapsedEntities:
       - Mic animation/flat.ss_graph
       - Normal.png
       - PBR 2.mat
+      - PBR 3.mat
       - PBR.mat
       - Prefab
       - Prefab/Menu.prefab
@@ -922,7 +936,6 @@ CollapsedEntities:
       - Remote Service Gateway.lspkg/package.native
       - Scene 2.scene
       - Scene.scene
-      - Script
       - Script 2.js
       - Script.js
       - Script/ContinuousVFXBurstOnPinchWithButtonFeedback.ts
@@ -1009,6 +1022,7 @@ CollapsedEntities:
       - Spectacles 3D Hand Hints.lspkg/Textures/Hands_Interaction_Glow_Mask.png
       - Spectacles 3D Hand Hints.lspkg/Textures/Hands_Opacity_Gradient.png
       - Spectacles 3D Hand Hints.lspkg/package.native
+      - SpectaclesInteractionKit
       - SpectaclesInteractionKit/Assets
       - SpectaclesInteractionKit/Assets/Audio
       - SpectaclesInteractionKit/Assets/Audio/HoverAudioTrack.wav
@@ -1518,9 +1532,13 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Prefabs
       - SpectaclesInteractionKit/Prefabs/ScrollViewListItem.prefab
       - SpectaclesInteractionKit/Prefabs/SpectaclesInteractionKit.prefab
+      - SpectaclesInteractionKit/Providers
+      - SpectaclesInteractionKit/Providers/CameraProvider
       - SpectaclesInteractionKit/Providers/CameraProvider/ARCameraFinderProvider.ts
       - SpectaclesInteractionKit/Providers/CameraProvider/BaseCameraFinderProvider.ts
+      - SpectaclesInteractionKit/Providers/CameraProvider/BaseWorldCameraProvider.ts
       - SpectaclesInteractionKit/Providers/CameraProvider/CameraProvider.ts
+      - SpectaclesInteractionKit/Providers/CameraProvider/WorldCameraFinderProvider.ts
       - SpectaclesInteractionKit/Providers/CursorControllerProvider
       - SpectaclesInteractionKit/Providers/CursorControllerProvider/CursorControllerProvider.ts
       - SpectaclesInteractionKit/Providers/HandInputData
@@ -2006,6 +2024,8 @@ CollapsedEntities:
       - World Query Hit - Spawn On Surface/Textures/statue_base.png
       - World Query Hit - Spawn On Surface/Textures/statue_normal.png
       - World Query Hit - Spawn On Surface/Textures/statue_params.png
-      - World Query Hit - Spawn On Surface/WorldQueryHitVoiceCommand.ts
+      - World Query Hit - Spawn On Surface/World Query Hit Example.prefab
+      - World Query Hit - Spawn On Surface/WorldQueryHitExample.ts
+      - World Query Hit - Spawn On Surface/WorldQueryHitExample2.ts
       - pbr.ss_graph
   options: 4
