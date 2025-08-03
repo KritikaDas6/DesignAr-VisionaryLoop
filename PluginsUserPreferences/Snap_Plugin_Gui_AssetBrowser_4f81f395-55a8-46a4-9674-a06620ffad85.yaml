@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 1185
+    size: 1260
     values:
       - ""
       - AddedAsset
@@ -14,6 +14,8 @@ CollapsedEntities:
       - AddedAsset/Render Target.renderTarget
       - Base.png
       - ButtonToggleFunctions.ts
+      - CameraBox.js
+      - Camera_box(ts).ts
       - Font
       - Font/DynaPuff
       - Font/DynaPuff/DynaPuff-Bold.ttf
@@ -25,10 +27,31 @@ CollapsedEntities:
       - Font/Manrope/Manrope-Regular.ttf
       - Font/Manrope/Manrope-VariableFont_wght.ttf
       - GenAI
+      - GenAI/AIAsset
       - GenAI/AIAsset/AI Visual
       - GenAI/AIAsset/AI Visual/Animation
+      - GenAI/AIAsset/AI Visual/Animation/baselayer
+      - GenAI/AIAsset/AI Visual/Animation/baselayer/BaseLayer.animationMixerLayer
+      - GenAI/AIAsset/AI Visual/Animation/constraint_rotation_45
+      - GenAI/AIAsset/AI Visual/Animation/constraint_rotation_45/Constraint_rotation_45.animationLayer
       - GenAI/AIAsset/AI Visual/Materials
+      - GenAI/AIAsset/AI Visual/Materials/ActivityIndicator.mat
+      - GenAI/AIAsset/AI Visual/Materials/ActivityIndicator.ss_graph
+      - GenAI/AIAsset/AI Visual/Materials/Assist_sphere_Idle_L_T_T.mat
+      - GenAI/AIAsset/AI Visual/Materials/Assist_sphere_Idle_L_T_T.ss_graph
+      - GenAI/AIAsset/AI Visual/Materials/HoverColor.mat
+      - GenAI/AIAsset/AI Visual/Materials/HoverColor.ss_graph
       - GenAI/AIAsset/AI Visual/Textures
+      - GenAI/AIAsset/AI Visual/Textures/Image.mat
+      - GenAI/AIAsset/AI Visual/Textures/Microphone.png
+      - GenAI/AIAsset/AI Visual/Textures/NoInternetAlert.png
+      - GenAI/AIAsset/AI Visual/Textures/NoInternetWarning.mat
+      - GenAI/AIAsset/AI Visual/Textures/Noise_combine_512.png
+      - GenAI/AIAsset/AI Visual/Textures/purple_halfcolor.png
+      - GenAI/AIAsset/AI Visual/Textures/yellow_alt.png
+      - GenAI/AIAsset/AI Visual/Textures/yellow_halfcolor.png
+      - GenAI/AIAsset/Prefab
+      - GenAI/AIAsset/Prefab/Snap3DInteractables.prefab
       - GenAI/AIAssistantUIBridge.ts
       - GenAI/APIKeyHint.ts
       - GenAI/ASRQueryController.ts
@@ -41,10 +64,7 @@ CollapsedEntities:
       - GenAI/Snap3DInteractable.ts
       - GenAI/Snap3DInteractableFactory.ts
       - GenAI/SphereController.ts
-      - ImageTexture
-      - ImageTexture/Bird.mat
-      - ImageTexture/Bird.png
-      - ImageTexture/BirdTrace.mat
+      - Image.mat
       - ImageTexture/ImageMaterial 14.mat
       - ImageTexture/SketchRider.mat
       - ImageTexture/SketchRider.png
@@ -62,6 +82,7 @@ CollapsedEntities:
       - LSTween.lspkg/Examples
       - LSTween.lspkg/Examples/Assets
       - LSTween.lspkg/Examples/Assets/Box.mesh
+      - LSTween.lspkg/Examples/Assets/ImageMaterial.mat
       - LSTween.lspkg/Examples/Assets/Simple Diffuse.mat
       - LSTween.lspkg/Examples/Assets/Simple Diffuse.ss_graph
       - LSTween.lspkg/Examples/Assets/Sphere.mesh
@@ -253,12 +274,12 @@ CollapsedEntities:
       - "Spawn Object at World Mesh On Tap/[Mesh Builder Example] Pipe Between Objects/Textures/MaterialParams.png"
       - "Spawn Object at World Mesh On Tap/[Mesh Builder Example] Pipe Between Objects/Textures/Normal.png"
       - Spawn Object at World Mesh On Tap/package.native
-      - SpectaclesInteractionKit
       - SpectaclesInteractionKit/Assets
       - SpectaclesInteractionKit/Assets/Audio
       - SpectaclesInteractionKit/Assets/Audio/HoverAudioTrack.wav
       - SpectaclesInteractionKit/Assets/Audio/TriggerEndAudioTrack.wav
       - SpectaclesInteractionKit/Assets/Audio/TriggerStartAudioTrack.wav
+      - SpectaclesInteractionKit/Assets/Materials
       - SpectaclesInteractionKit/Assets/Materials/BaseHandVisualsMaterials
       - SpectaclesInteractionKit/Assets/Materials/BaseHandVisualsMaterials/FingerHighlightLeft.mat
       - SpectaclesInteractionKit/Assets/Materials/BaseHandVisualsMaterials/FingerHighlightRight.mat
@@ -270,26 +291,43 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Materials/ContainerImageMaterial.mat
       - SpectaclesInteractionKit/Assets/Materials/LogoMaterial.mat
       - SpectaclesInteractionKit/Assets/Materials/NormalBasedTargetOutline.mat
+      - SpectaclesInteractionKit/Assets/Materials/PinchButtonDarkInactive.mat
+      - SpectaclesInteractionKit/Assets/Materials/PinchButtonDarkRadial.mat
+      - SpectaclesInteractionKit/Assets/Materials/PinchButtonToggleOffIcon.mat
+      - SpectaclesInteractionKit/Assets/Materials/PinchButtonToggleOnDefault.mat
+      - SpectaclesInteractionKit/Assets/Materials/PinchButtonToggleOnIcon.mat
+      - SpectaclesInteractionKit/Assets/Materials/PinchButtonToggleOnSelect.mat
+      - SpectaclesInteractionKit/Assets/Materials/PlatformUI
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/ButtonHover.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/ButtonIdle.mat
+      - SpectaclesInteractionKit/Assets/Materials/PlatformUI/ButtonPinched.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/CapsuleButtonHover.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/CapsuleButtonIdle.mat
+      - SpectaclesInteractionKit/Assets/Materials/PlatformUI/CapsuleButtonPinched.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/RoundButtonGlowHover.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/RoundButtonGlowIdle.mat
+      - SpectaclesInteractionKit/Assets/Materials/PlatformUI/RoundButtonGlowPinched.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/RoundButtonHover.mat
+      - SpectaclesInteractionKit/Assets/Materials/PlatformUI/RoundButtonPinched.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/RoundButton_Idle.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/ScrollBackground.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/ScrollButtonHover.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/ScrollButtonIdle.mat
+      - SpectaclesInteractionKit/Assets/Materials/PlatformUI/ScrollButtonPinched.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/Slider_Platform 2.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/Slider_Platform.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/StateButtonToggledHover.mat
+      - SpectaclesInteractionKit/Assets/Materials/PlatformUI/StateButtonToggledPinched.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/ToggleButtonToggledHover.mat
       - SpectaclesInteractionKit/Assets/Materials/PlatformUI/ToggleButtonToggledIdle.mat
+      - SpectaclesInteractionKit/Assets/Materials/PlatformUI/ToggleButtonToggledPinched.mat
       - SpectaclesInteractionKit/Assets/Materials/ScaleBasedTargetOutline.mat
       - SpectaclesInteractionKit/Assets/Materials/ScrollBarButton.mat
       - SpectaclesInteractionKit/Assets/Materials/ScrollBarSlider.mat
       - SpectaclesInteractionKit/Assets/Materials/SimplePBRMaterial.mat
+      - SpectaclesInteractionKit/Assets/Materials/SliderMat
+      - SpectaclesInteractionKit/Assets/Materials/SliderMat/PinchButtonDarkDefault.mat
+      - SpectaclesInteractionKit/Assets/Materials/SliderMat/PinchButtonOnSelect.mat
       - SpectaclesInteractionKit/Assets/Materials/SliderMat/SliderMat.mat
       - SpectaclesInteractionKit/Assets/Materials/SliderMat/TargetOutlineMaterial.mat
       - SpectaclesInteractionKit/Assets/Materials/SpritePreset.mat
@@ -300,9 +338,15 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Meshes/ButtonCapsuleMesh.mesh
       - SpectaclesInteractionKit/Assets/Meshes/ButtonSphereMesh.mesh
       - SpectaclesInteractionKit/Assets/Meshes/Check.mesh
+      - SpectaclesInteractionKit/Assets/Meshes/ImageMaterial 2.mat
+      - SpectaclesInteractionKit/Assets/Meshes/ImageMaterial 3.mat
+      - SpectaclesInteractionKit/Assets/Meshes/ImageMaterial.mat
       - SpectaclesInteractionKit/Assets/Meshes/LeftHandMesh.mesh
       - SpectaclesInteractionKit/Assets/Meshes/PlaneMesh.mesh
       - SpectaclesInteractionKit/Assets/Meshes/PlatformUI
+      - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/ImageMaterial 2.mat
+      - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/ImageMaterial 3.mat
+      - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/ImageMaterial 4.mat
       - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/ImageMaterial.mat
       - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/PlatformCapsuleButton.mesh
       - SpectaclesInteractionKit/Assets/Meshes/PlatformUI/PlatformSphereButton.mesh
@@ -318,28 +362,40 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Meshes/SnapGhost_Mesh.mesh
       - SpectaclesInteractionKit/Assets/Meshes/SphereMesh.mesh
       - SpectaclesInteractionKit/Assets/Meshes/Uncheck.mesh
+      - SpectaclesInteractionKit/Assets/Shaders
       - SpectaclesInteractionKit/Assets/Shaders/BaseHandVisualsShaders
       - SpectaclesInteractionKit/Assets/Shaders/BaseHandVisualsShaders/FingerHighlight.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/BaseHandVisualsShaders/FingerTipGlow.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/BaseHandVisualsShaders/HandOccluder.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/BaseHandVisualsShaders/RadialGradientOcclusion.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/NormalBasedTargetOutline.ss_graph
+      - SpectaclesInteractionKit/Assets/Shaders/PinchButton-ActiveOrInActive.ss_graph
+      - SpectaclesInteractionKit/Assets/Shaders/PinchDarkRadial.ss_graph
+      - SpectaclesInteractionKit/Assets/Shaders/PlatformUI
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/ButtonHover.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/ButtonIdle.ss_graph
+      - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/ButtonPinched.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/CapsuleButtonHover.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/CapsuleButtonIdle.ss_graph
+      - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/CapsuleButtonPinched.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/RoundButtonGlowHover.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/RoundButtonGlowIdle.ss_graph
+      - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/RoundButtonGlowPinched.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/RoundButtonHover.ss_graph
+      - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/RoundButtonPinched.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/RoundButton_Idle.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/ScrollBackground.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/ScrollButtonHover.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/ScrollButtonIdle.ss_graph
+      - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/ScrollButtonPinched.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/Slider_Platform 2.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/Slider_Platform.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/StateButtonToggledHover.ss_graph
+      - SpectaclesInteractionKit/Assets/Shaders/PlatformUI/StateButtonToggledPinched.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/ScaleBasedTargetOutline.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/ScrollBarSlider.ss_graph
+      - SpectaclesInteractionKit/Assets/Shaders/SliderShaders
+      - SpectaclesInteractionKit/Assets/Shaders/SliderShaders/PinchButton-Default.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/SliderShaders/Slider.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/SpritePreset.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/TargetOutline.ss_graph
@@ -348,11 +404,14 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Shaders/ToggleOn.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/ToggleOnSelect.ss_graph
       - SpectaclesInteractionKit/Assets/Shaders/simple_pbr.ss_graph
+      - SpectaclesInteractionKit/Assets/Textures
       - SpectaclesInteractionKit/Assets/Textures/2DBitmojiAvatar.png
       - SpectaclesInteractionKit/Assets/Textures/Base.png
+      - SpectaclesInteractionKit/Assets/Textures/BaseHandVisualsTextures
       - SpectaclesInteractionKit/Assets/Textures/BaseHandVisualsTextures/Glow.png
       - SpectaclesInteractionKit/Assets/Textures/BaseHandVisualsTextures/handMeshNewMask.png
       - SpectaclesInteractionKit/Assets/Textures/BaseHandVisualsTextures/handMeshNewMaskColored.png
+      - SpectaclesInteractionKit/Assets/Textures/BaseHandVisualsTextures/handMeshPinchTexture.png
       - SpectaclesInteractionKit/Assets/Textures/BaseHandVisualsTextures/handMeshTapTexture.png
       - SpectaclesInteractionKit/Assets/Textures/BaseHandVisualsTextures/mask_fingertip.jpg
       - SpectaclesInteractionKit/Assets/Textures/BaseHandVisualsTextures/mask_fingertip_colored.png
@@ -435,6 +494,8 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Components/Interaction/InteractorLineVisual/InteractorLineMaterial.mat
       - SpectaclesInteractionKit/Components/Interaction/InteractorLineVisual/InteractorLineRenderer.ts
       - SpectaclesInteractionKit/Components/Interaction/InteractorLineVisual/InteractorLineVisual.ts
+      - SpectaclesInteractionKit/Components/UI
+      - SpectaclesInteractionKit/Components/UI/ContainerFrame
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/ContainerFrame.ts
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/FrameMaterial.mat
@@ -453,6 +514,7 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Meshes/Frame_Mid.mesh
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Meshes/SphereButton.mesh
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Meshes/SysSettings_settings_button.mesh
+      - SpectaclesInteractionKit/Components/UI/ContainerFrame/Meshes/pinch-depth-button.mesh
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Prefabs
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Prefabs/FramePrefab.prefab
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Prefabs/container-button.prefab
@@ -473,10 +535,12 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/ForceContainerParent.ts
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/FrameInputHandler.ts
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/HoverBehavior.ts
+      - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/LabeledPinchButton.ts
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/SimpleLODRenderMeshVisual
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/SimpleLODRenderMeshVisual/SimpleLODRenderMeshVisual.ts
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/SmoothFollow.ts
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/SnappableBehavior.ts
+      - SpectaclesInteractionKit/Components/UI/PinchButton
       - SpectaclesInteractionKit/Components/UI/PinchButton/PinchButton.ts
       - SpectaclesInteractionKit/Components/UI/ScrollBar
       - SpectaclesInteractionKit/Components/UI/ScrollBar/ScrollBar.ts
@@ -495,7 +559,6 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Components/UI/Slider/Slider.ts
       - SpectaclesInteractionKit/Components/UI/ToggleButton
       - SpectaclesInteractionKit/Components/UI/ToggleButton/ToggleButton.ts
-      - SpectaclesInteractionKit/Core
       - SpectaclesInteractionKit/Core/ConfigurationValidator
       - SpectaclesInteractionKit/Core/ConfigurationValidator/ConfigurationValidator.ts
       - SpectaclesInteractionKit/Core/HandInteractor
@@ -503,7 +566,6 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Core/InteractionManager
       - SpectaclesInteractionKit/Core/InteractionManager/EventDispatcher.ts
       - SpectaclesInteractionKit/Core/InteractionManager/InteractionManager.ts
-      - SpectaclesInteractionKit/Core/Interactor
       - SpectaclesInteractionKit/Core/Interactor/BaseInteractor.ts
       - SpectaclesInteractionKit/Core/Interactor/ColliderTargetProvider.ts
       - SpectaclesInteractionKit/Core/Interactor/DirectTargetProvider.ts
@@ -520,12 +582,12 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/AxisAngle.ts
       - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/ContinousIrInteractionTransition.ts
       - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/IrInteractionTransition.ts
+      - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/PinchJumpSuppressor.ts
       - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/RaycastAnchorHead.ts
       - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/RaycastAnchorVariableShoulder.ts
       - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/RaycastBase.ts
       - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/RaycastLegacySingleCamera.ts
       - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/RaycastProxy.ts
-      - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/RgbIrTransitionJumpSuppressor.ts
       - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/SwitchIrInteractionTransition.ts
       - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/TimeDataContainer.ts
       - SpectaclesInteractionKit/Core/Interactor/raycastAlgorithms/TimeScalarContainer.ts
@@ -724,14 +786,24 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Providers/CameraProvider/WorldCameraFinderProvider.ts
       - SpectaclesInteractionKit/Providers/CursorControllerProvider
       - SpectaclesInteractionKit/Providers/CursorControllerProvider/CursorControllerProvider.ts
+      - SpectaclesInteractionKit/Providers/HandInputData
       - SpectaclesInteractionKit/Providers/HandInputData/BaseHand.ts
       - SpectaclesInteractionKit/Providers/HandInputData/DefaultHandTrackingAssetProvider.ts
+      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider
       - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/GestureModuleProvider.ts
       - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PalmTapDetection
       - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PalmTapDetection/PalmTapDetector.ts
       - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PalmTapDetection/PalmTapDetectorStateMachine.ts
       - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PalmTapDetectionEvent.ts
       - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PalmTapEvent.ts
+      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection
+      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/DetectionStrategies
+      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/DetectionStrategies/HciPinchDetectionStrategy.ts
+      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/DetectionStrategies/HeuristicPinchDetectionStrategy.ts
+      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/DetectionStrategies/PinchDetectionStrategy.ts
+      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/PinchDetector.ts
+      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/PinchDetectorStateMachine.ts
+      - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchEventType.ts
       - SpectaclesInteractionKit/Providers/HandInputData/HandInputData.ts
       - SpectaclesInteractionKit/Providers/HandInputData/HandTrackingAssetProvider.ts
       - SpectaclesInteractionKit/Providers/HandInputData/HandType.ts
@@ -791,6 +863,7 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Utils/views/MeshView.ts
       - SpectaclesInteractionKit/Utils/views/View.ts
       - SpectaclesInteractionKit/package.native
+      - SpectaclesSyncKit.lspkg
       - SpectaclesSyncKit.lspkg/Components
       - SpectaclesSyncKit.lspkg/Components/Instantiator.ts
       - SpectaclesSyncKit.lspkg/Components/SyncHelpers
@@ -1078,6 +1151,7 @@ CollapsedEntities:
       - SpectaclesSyncKit.lspkg/Mapping/src/Utils/SharedFunctions.ts
       - SpectaclesSyncKit.lspkg/Readme.md
       - SpectaclesSyncKit.lspkg/SpectaclesSyncKit.prefab
+      - SpectaclesSyncKit.lspkg/Utils
       - SpectaclesSyncKit.lspkg/Utils/EnableObjectsOnAwake.ts
       - SpectaclesSyncKit.lspkg/Utils/Helpers.ts
       - SpectaclesSyncKit.lspkg/Utils/Observable.ts
@@ -1118,7 +1192,7 @@ CollapsedEntities:
       - Surface Detection.lspkg/Textures
       - Surface Detection.lspkg/Textures/groundIcon.png
       - Surface Detection.lspkg/package.native
-      - Untitled JavaScript.js
+      - Untitled TypeScript 2.ts
       - Untitled TypeScript.ts
       - World Mesh - Spawn On Surfaces.lspkg
       - World Mesh - Spawn On Surfaces.lspkg/Materials
@@ -1188,4 +1262,5 @@ CollapsedEntities:
       - World Query Hit - Spawn On Surface/Textures/statue_params.png
       - World Query Hit - Spawn On Surface/World Query Hit Example.prefab
       - World Query Hit - Spawn On Surface/WorldQueryHitExample.ts
+      - s3Bukets__.ts
   options: 4

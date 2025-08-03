@@ -30,6 +30,7 @@
   ScriptInputsHidden:
     asrQueryController: false
     image: false
+    image2: false
     modelProvider: false
     spinner: false
     textDisplay: false
@@ -40,6 +41,7 @@
   DefaultScriptInputs:
     - modelProvider: OpenAI
       image: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      image2: !<reference.Image> 00000000-0000-0000-0000-000000000000
       textDisplay: !<reference.Text> 00000000-0000-0000-0000-000000000000
       asrQueryController: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
       spinner: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
@@ -52,6 +54,7 @@
     - '// @input string modelProvider = "OpenAI" {"widget":"combobox", "values":[{"label":"OpenAI", "value":"OpenAI"}, {"label":"Gemini", "value":"Gemini"}]}'
     - '// @ui {"widget":"separator"}'
     - // @input Component.Image image
+    - // @input Component.Image image2
     - // @input Component.Text textDisplay
     - // @input AssignableType asrQueryController
     - // @input SceneObject spinner

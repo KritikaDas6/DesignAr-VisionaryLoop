@@ -16,6 +16,7 @@ export class InteractableImageGenerator extends BaseScriptComponent {
 
   @ui.separator
   @input private image: Image;
+    @input private image2: Image;
   @input private textDisplay: Text;
   @input private asrQueryController: ASRQueryController;
   @input private spinner: SceneObject;
@@ -49,6 +50,7 @@ export class InteractableImageGenerator extends BaseScriptComponent {
         print("Image generated successfully: " + image);
         this.textDisplay.text = prompt;
         this.image.mainMaterial.mainPass.baseTex = image;
+        this.image2.mainMaterial.mainPass.baseTex = image;
         this.spinner.enabled = false;
       })
       .catch((error) => {
@@ -57,5 +59,10 @@ export class InteractableImageGenerator extends BaseScriptComponent {
         this.textDisplay.text = "Error Generating Image " + finalPrompt;
         this.spinner.enabled = false;
       });
+  }
+    
+    getGeneratedImage(): Texture {
+        return this.image.mainMaterial.mainPass.baseTex;
+        return this.image2.mainMaterial.mainPass.baseTex
   }
 }

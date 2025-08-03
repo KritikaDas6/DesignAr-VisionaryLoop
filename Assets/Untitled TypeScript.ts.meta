@@ -1,20 +1,20 @@
-- !<AssetImportMetadata/cd322c19-45b2-467a-9b2f-ddfc453a2cfe>
+- !<AssetImportMetadata/4647df34-c865-47f1-9f47-edb175165db3>
   ImportedAssetIds:
-    TypeScriptAsset: !<reference> 21064c14-d8be-43ab-a987-fc2ab0ffa306
+    TypeScriptAsset: !<reference> 8bd13028-ac23-4f33-80b8-e5a03a100655
   ImporterName: TypeScriptAssetImporter
-  PrimaryAsset: !<reference> 21064c14-d8be-43ab-a987-fc2ab0ffa306
+  PrimaryAsset: !<reference> 8bd13028-ac23-4f33-80b8-e5a03a100655
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
   ExtraData:
     {}
   AssetDataMap:
-    TypeScriptAsset: !<own> 6f297de3-c344-4b15-b004-66e4c594b7cd
+    TypeScriptAsset: !<own> 78f9cff9-a57f-4c88-94f4-a35810742f64
   DependentFiles:
     []
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<TypeScriptAssetData/6f297de3-c344-4b15-b004-66e4c594b7cd>
+- !<TypeScriptAssetData/78f9cff9-a57f-4c88-94f4-a35810742f64>
   SvgIcon: ""
   SetupScript:
     code: ""
@@ -23,20 +23,21 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 5a1f130c-abf0-4f51-9599-95b8de249d72
+  ComponentUid: 3902014e-0d38-4c3f-b64f-7d1d59bb36f5
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
-    uiImage: false
+    {}
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
-    - uiImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
+    -
+      {}
   ScriptTypes:
     -
       {}
   InputLines:
-    - '// @input Component.Image uiImage {"hint":"The image in the scene that will be showing the captured frame."}'
+    []
