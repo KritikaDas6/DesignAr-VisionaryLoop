@@ -2814,6 +2814,8 @@
     asrQueryController: true
     spinner: true
     nextButton: true
+    micOff: true
+    micOn: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -2825,6 +2827,8 @@
       asrQueryController: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
       spinner: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       nextButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      micOff: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      micOn: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     "":
       {}

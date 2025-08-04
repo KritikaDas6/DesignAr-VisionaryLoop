@@ -3341,7 +3341,7 @@
   PrefabRemaps:
     []
   Name: Subtitle_Text
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: -2.000000, z: 0.000000}
@@ -3573,7 +3573,7 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: "Is your image ready for tracing? Let’s lock it before start tracing!"
+  Text: Let’s start tracing!
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -4312,7 +4312,7 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: Confirm placement
+  Text: Set this spot
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -5301,6 +5301,84 @@
   Components:
     - !<own> 5fec5705-314f-4c9c-8d63-af05f768c83f
     - !<own> 29bb0a28-9c61-4788-9ca5-652115a19998
+- !<Text/2ee22c31-804d-44f8-acc4-1f935fd13c01>
+  PrefabRemaps:
+    []
+  Name: Text
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Left
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Text: |+
+    STEP 3.
+    
+  Editable: false
+  ShowEditingPreview: true
+  TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
+  SizeToFit: false
+  FontSize: 60
+  Font: !<reference> 085494f6-9c8c-4006-88a9-9d9c622c8336
+  LayoutRect:
+    left: -15.000000
+    bottom: 0.000000
+    right: 15.000000
+    top: 0.000000
+  OverflowVertical: Overflow
+  OverflowHorizontal: Wrap
+  Fill: !<TextFill>
+    Mode: Solid
+    Color: {x: 0.000000, y: 0.752941, z: 0.180392, w: 1.000000}
+    Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    TileCount: 5.000000
+    TileZone: Rect
+    TextureStretch: FitWidth
+  Outline: !<OutlineSettings>
+    Enabled: false
+    Fill: !<TextFill>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      TileCount: 5.000000
+      TileZone: Rect
+      TextureStretch: FitWidth
+    Size: 0.250000
+  Dropshadow: !<DropshadowSettings>
+    Enabled: false
+    Fill: !<TextFill>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      TileCount: 5.000000
+      TileZone: Rect
+      TextureStretch: FitWidth
+    OffsetX: 0.250000
+    OffsetY: 0.250000
+  Background: !<BackgroundSettings>
+    Enabled: false
+    Fill: !<TextFill>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      TileCount: 5.000000
+      TileZone: Rect
+      TextureStretch: FitWidth
+    Margins:
+      left: 0.000000
+      bottom: 0.000000
+      right: 0.000000
+      top: 0.000000
+    CornerRadius: 0.000000
+  AdvancedLayout: !<TextAdvancedLayout>
+    ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+    LetterSpacing: 0.000000
+    LineSpacing: 1.100000
+    CapitalizationOverride: None
+  DepthTest: false
+  TwoSided: false
 - !<ScreenTransform/2f109507-5d20-4a52-81fe-d2f8234fbc45>
   PrefabRemaps:
     []
@@ -5530,7 +5608,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: |
-    STEP 3.
+    STEP 4.
 
   Editable: false
   ShowEditingPreview: true
@@ -6060,7 +6138,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: -2.000000, z: 0.000000}
+    position: {x: 0.000000, y: -4.000000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -6994,13 +7072,13 @@
 - !<SceneObject/433bed74-b486-4d5d-9460-e4ce7bdeee1b>
   PrefabRemaps:
     []
-  Name: Sample Illust
+  Name: Illust_Pagenation2
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.500000, y: -7.500000, z: 0.000000}
+    position: {x: 0.500000, y: -8.000000, z: 0.000000}
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 8.000000, y: 8.000000, z: 8.000000}
+    scale: {x: 10.000000, y: 10.000000, z: 10.000000}
     hasSegmentScaleCompensation: false
   Children:
     []
@@ -7362,7 +7440,7 @@
     "":
       autoShowHide: true
       innerSize: !<Vec2> {x: 20.000000, y: 20.000000}
-      border: 1.500000
+      border: !<float> 3.000000
       constantPadding: !<Vec2> {x: 1.500000, y: 1.500000}
       allowScaling: true
       autoScaleContent: true
@@ -8054,7 +8132,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> 18206006-4afa-4aaa-a7fb-f75dd0b28194
+    - !<reference> ac245ca7-6d73-4fb7-af7d-4c184538a2d2
   FlipX: false
   FlipY: false
   RotationAngle: 0
@@ -8476,7 +8554,7 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: STEP 4.
+  Text: STEP 5.
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -8720,7 +8798,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> 287139d4-b749-421e-855e-79c5ab231061
+    - !<reference> 5e0e859f-eb0c-4f45-be61-65d7174cf202
   FlipX: false
   FlipY: false
   RotationAngle: 0
@@ -8729,13 +8807,13 @@
 - !<SceneObject/575c5030-dc0e-487c-aada-794ba5717fea>
   PrefabRemaps:
     []
-  Name: Sample Illust
+  Name: Illust_Trace
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.500000, y: -7.500000, z: 0.000000}
+    position: {x: 0.500000, y: 1.000000, z: 0.000000}
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 8.000000, y: 8.000000, z: 8.000000}
+    scale: {x: 17.000000, y: 17.000000, z: 17.000000}
     hasSegmentScaleCompensation: false
   Children:
     []
@@ -9122,7 +9200,7 @@
   PrefabRemaps:
     []
   Name: Step_Text
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 5.000000, z: 0.000000}
@@ -9284,7 +9362,9 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: Got it!
+  Text: |
+    All set to trace
+
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -9513,7 +9593,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -10.000000}
+    position: {x: 0.000000, y: 0.000000, z: -40.000000}
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 0.800000, y: 0.800000, z: 0.800000}
     hasSegmentScaleCompensation: false
@@ -9605,9 +9685,7 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: |
-    Scale the image
-
+  Text: Pinch corners to resize it to fit your space
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -10675,7 +10753,7 @@
   PrefabRemaps:
     []
   Name: Subtitle_Text
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: -2.000000, z: 0.000000}
@@ -10850,6 +10928,8 @@
     asrQueryController: true
     spinner: true
     nextButton: true
+    micOff: true
+    micOn: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -10861,6 +10941,8 @@
       asrQueryController: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
       spinner: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       nextButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      micOff: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      micOn: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     "":
       {}
@@ -11049,7 +11131,7 @@
   PrefabRemaps:
     []
   Name: PinchButton
-  Enabled: true
+  Enabled: false
   ScriptAsset: !<reference> a54c5722-d3fb-4aa5-97ff-f7425978bc59
   ScriptInputsDefault:
     isToggleButton: true
@@ -11367,7 +11449,9 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: "Look around and find a surface you'd like to project onto."
+  Text: |
+    Look around to find your perfect spot
+
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -11579,7 +11663,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    position: {x: 0.000000, y: 5.000000, z: 0.000000}
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -11709,13 +11793,11 @@
   RenderOrder: 0
   StretchMode: Stretch
   VerticalAlignment: Top
-  HorizontalAlignment: Left
+  HorizontalAlignment: Center
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: |
-    Lock your final look!
-
+  Text: Let’s start tracing!
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -11835,7 +11917,7 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: Create AI-generated img
+  Text: Pinch the mic and say what you want to draw
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -11895,7 +11977,7 @@
   AdvancedLayout: !<TextAdvancedLayout>
     ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
     LetterSpacing: 0.000000
-    LineSpacing: 1.100000
+    LineSpacing: 1.000000
     CapitalizationOverride: None
   DepthTest: false
   TwoSided: false
@@ -12952,12 +13034,14 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: "Pinch mic icon and hold, then say what you want to create — like “a cupcake on a retriever’s head”"
+  Text: |
+    Like “A cat in space!” — go wild!
+
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 60
+  FontSize: 65
   Font: !<reference> 085494f6-9c8c-4006-88a9-9d9c622c8336
   LayoutRect:
     left: -15.000000
@@ -13755,7 +13839,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 2.846248, y: 3.908669, z: 0.000000}
+    position: {x: 0.000000, y: 3.500000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -13824,7 +13908,7 @@
 - !<SceneObject/8f4d96fd-e19d-4f1c-9d3d-9089121dbf94>
   PrefabRemaps:
     []
-  Name: Guide4
+  Name: Guide5
   Enabled: true
   Layers: 1
   LocalTransform:
@@ -15122,11 +15206,11 @@
 - !<SceneObject/9efb83d0-b31f-4245-a468-87d3d3906420>
   PrefabRemaps:
     []
-  Name: Text
+  Name: Status text
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 7.198506, y: -4.324957, z: 0.000000}
+    position: {x: 0.000000, y: -4.000000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -15222,13 +15306,13 @@
 - !<SceneObject/a0d143e4-1e36-4c8f-82dc-0a419ca3fb6b>
   PrefabRemaps:
     []
-  Name: Sample Illust
+  Name: Illust_Pagenation4
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.500000, y: -7.500000, z: 0.000000}
+    position: {x: 0.500000, y: -8.000000, z: 0.000000}
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 8.000000, y: 8.000000, z: 8.000000}
+    scale: {x: 10.000000, y: 10.000000, z: 10.000000}
     hasSegmentScaleCompensation: false
   Children:
     []
@@ -15242,16 +15326,16 @@
   RenderOrder: 0
   StretchMode: Stretch
   VerticalAlignment: Center
-  HorizontalAlignment: Left
+  HorizontalAlignment: Center
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: Subtitle
+  Text: Image not locked
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 100
+  FontSize: 60
   Font: !<reference> 085494f6-9c8c-4006-88a9-9d9c622c8336
   LayoutRect:
     left: -15.000000
@@ -15259,10 +15343,10 @@
     right: 17.000000
     top: 0.000000
   OverflowVertical: Overflow
-  OverflowHorizontal: Wrap
+  OverflowHorizontal: Ellipsis
   Fill: !<TextFill>
     Mode: Solid
-    Color: {x: 0.886275, y: 0.949020, z: 0.000000, w: 1.000000}
+    Color: {x: 1.000000, y: 0.380392, z: 0.000000, w: 1.000000}
     Texture: !<reference> 00000000-0000-0000-0000-000000000000
     TileCount: 5.000000
     TileZone: Rect
@@ -15493,10 +15577,10 @@
   PrefabRemaps:
     []
   Name: Home
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -40.000000}
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -15749,7 +15833,6 @@
     - !<own> 6fcbc1b3-7533-422d-86f5-58e395741061
     - !<own> c9c7024f-4fbd-4650-aa2a-d1d25a3b68eb
     - !<own> fa650408-36b4-4fa3-aa85-4e979b080732
-    - !<own> ab3ad8e6-a09f-4c14-92f3-026d4be72b20
   Components:
     []
 - !<ScreenTransform/a4700040-e124-4fc1-addf-ab9fe9319a7a>
@@ -15911,13 +15994,13 @@
 - !<SceneObject/a708050f-2dae-4f74-b642-5d14c505f8cb>
   PrefabRemaps:
     []
-  Name: Sample Illust
+  Name: Illust_Pagenation5
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.500000, y: -7.500000, z: 0.000000}
+    position: {x: 0.500000, y: -8.000000, z: 0.000000}
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 8.000000, y: 8.000000, z: 8.000000}
+    scale: {x: 10.000000, y: 10.000000, z: 10.000000}
     hasSegmentScaleCompensation: false
   Children:
     []
@@ -16237,10 +16320,10 @@
   PrefabRemaps:
     []
   Name: Trace
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -40.000000}
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -16497,7 +16580,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> 18206006-4afa-4aaa-a7fb-f75dd0b28194
+    - !<reference> b90c9f7c-4e48-4ff6-ac50-22641e6236ae
   FlipX: false
   FlipY: false
   RotationAngle: 0
@@ -16622,6 +16705,21 @@
   ScriptTypes:
     "":
       {}
+- !<SceneObject/af571057-166e-4001-bca5-a21d92b6311a>
+  PrefabRemaps:
+    []
+  Name: Step_Text
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 5.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 2ee22c31-804d-44f8-acc4-1f935fd13c01
 - !<SceneObject/afeeb88b-ec9b-45a0-a85e-8eb7926089f2>
   PrefabRemaps:
     []
@@ -17190,9 +17288,8 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Text: |-
-    Have an idea? 
-    Let’s turn it into something you can touch.
-    Say what you imagine, see it on a surface, and trace it into real art!
+    Imagine it. Project it. Trace it.
+    Turn wild ideas into real sketches — just speak it, place it in your world, and trace it into something real.
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -17796,7 +17893,9 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: 'Hold your head steady when you say "project"!'
+  Text: |
+    Hold steady & say “Project” to lock the view
+
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -17949,7 +18048,7 @@
   LocalTransform:
     position: {x: 0.000000, y: 0.440332, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 36.000000, y: 18.000000, z: 21.621626}
+    scale: {x: 40.000000, y: 21.621599, z: 21.621599}
     hasSegmentScaleCompensation: false
   Children:
     []
@@ -18568,9 +18667,9 @@
   Children:
     - !<own> 8d8145ac-cad2-465c-8166-68cbdd75e6a1
     - !<own> 5d19d738-85d2-4b79-80d8-d63bae4c4ecb
+    - !<own> 575c5030-dc0e-487c-aada-794ba5717fea
     - !<own> f900fa7b-0265-430a-8bb6-e4ffec9ab75e
     - !<own> 1c2f0cd9-0f81-4162-a5a1-033c100344b5
-    - !<own> 575c5030-dc0e-487c-aada-794ba5717fea
   Components:
     - !<own> 4ffe5903-d15e-4cff-8d8d-f2185a0024ec
 - !<ScriptComponent/c5199c19-496e-4b04-b7e3-4d6dabc37517>
@@ -18760,7 +18859,7 @@
 - !<SceneObject/c6e0b930-580e-42eb-9f8c-b2f760ce9860>
   PrefabRemaps:
     []
-  Name: Guide3
+  Name: Guide4
   Enabled: true
   Layers: 1
   LocalTransform:
@@ -18826,6 +18925,25 @@
   ScriptTypes:
     "":
       {}
+- !<Image/c885b9ad-d7e7-4646-8694-5125af2fad1f>
+  PrefabRemaps:
+    []
+  Name: Image
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Fit
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 287139d4-b749-421e-855e-79c5ab231061
+  FlipX: false
+  FlipY: false
+  RotationAngle: 0
+  Pivot: {x: 0.000000, y: 0.000000}
+  ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
 - !<SceneObject/c8862d4a-111e-496a-8d5a-3e14015f51dc>
   PrefabRemaps:
     []
@@ -18991,8 +19109,8 @@
     hasSegmentScaleCompensation: false
   Children:
     - !<own> 8f4d96fd-e19d-4f1c-9d3d-9089121dbf94
-    - !<own> 116e40c2-f921-4518-a9f0-7dc20d720267
     - !<own> 057610b6-8331-4375-821d-34a3317f363f
+    - !<own> 116e40c2-f921-4518-a9f0-7dc20d720267
   Components:
     []
 - !<SceneObject/c9dcbfb8-eff6-43c3-9ce4-a0211588e0d0>
@@ -19015,7 +19133,7 @@
   PrefabRemaps:
     []
   Name: Button
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: -0.000001, y: -19.000000, z: -60.000000}
@@ -20249,18 +20367,20 @@
 - !<SceneObject/d8862104-710d-403c-a3a2-0f1941b327c7>
   PrefabRemaps:
     []
-  Name: Guide2 1
+  Name: Guide3
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: -21.415331, z: 0.000000}
+    position: {x: 0.000000, y: -25.000000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
     - !<own> ba64d191-4d82-45e6-b0f8-67e651f42175
+    - !<own> af571057-166e-4001-bca5-a21d92b6311a
     - !<own> 8e696501-b1bc-4793-8583-38a5b2f073ca
     - !<own> 9efb83d0-b31f-4245-a468-87d3d3906420
+    - !<own> f8ecfc84-de2c-4440-aade-1d099a3e8dc9
   Components:
     - !<own> fbcaa032-60c3-4dfe-8ab3-9113eabbb0d3
 - !<SceneObject/d897042d-b6c0-405b-8ab0-01504dd23a8c>
@@ -22180,13 +22300,13 @@
 - !<SceneObject/eec54429-3be4-41f9-9d29-5398a8f898ac>
   PrefabRemaps:
     []
-  Name: Sample Illust
+  Name: Illust_Pagenation1
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.500000, y: -7.500000, z: 0.000000}
+    position: {x: 0.500000, y: -8.000000, z: 0.000000}
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 8.000000, y: 8.000000, z: 8.000000}
+    scale: {x: 10.000000, y: 10.000000, z: 10.000000}
     hasSegmentScaleCompensation: false
   Children:
     []
@@ -24502,6 +24622,21 @@
     - !<own> c8862d4a-111e-496a-8d5a-3e14015f51dc
   Components:
     []
+- !<SceneObject/f8ecfc84-de2c-4440-aade-1d099a3e8dc9>
+  PrefabRemaps:
+    []
+  Name: Illust_Pagenation3
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.500000, y: -8.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 10.000000, y: 10.000000, z: 10.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> c885b9ad-d7e7-4646-8694-5125af2fad1f
 - !<SceneObject/f900fa7b-0265-430a-8bb6-e4ffec9ab75e>
   PrefabRemaps:
     []
@@ -24509,7 +24644,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 3.500000, z: 0.000000}
+    position: {x: 0.000000, y: -5.000000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -24667,7 +24802,7 @@
   PrefabRemaps:
     []
   Name: Refine02
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: -40.000000}
@@ -24678,6 +24813,7 @@
     - !<own> c4185026-4295-4560-911c-a03dd5b1c8f7
     - !<own> 9586a0bd-3352-4b1d-ba8e-b8315d88627d
     - !<own> ca009df7-70f9-4654-8507-21c207c2b34e
+    - !<own> ab3ad8e6-a09f-4c14-92f3-026d4be72b20
   Components:
     []
 - !<SceneObject/fa9e9e03-e5aa-4237-94ab-befdfe8a42bb>
@@ -25229,7 +25365,7 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: Confirm scale
+  Text: Image fits now
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000

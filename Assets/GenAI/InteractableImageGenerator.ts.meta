@@ -30,6 +30,8 @@
   ScriptInputsHidden:
     asrQueryController: false
     image: false
+    micOff: false
+    micOn: false
     modelProvider: false
     nextButton: false
     projectionImage: false
@@ -47,6 +49,8 @@
       asrQueryController: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
       spinner: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       nextButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      micOff: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      micOn: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
@@ -61,3 +65,5 @@
     - // @input AssignableType asrQueryController
     - // @input SceneObject spinner
     - // @input SceneObject nextButton
+    - // @input SceneObject micOff
+    - // @input SceneObject micOn
