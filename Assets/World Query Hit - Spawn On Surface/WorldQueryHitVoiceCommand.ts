@@ -17,30 +17,26 @@ export class WorldQueryHitVoiceCommand extends BaseScriptComponent {
     private isRestarting: boolean = false;
     private voiceCommandsEnabled: boolean = true;
 
+    // Text feedback components
+    private feedbackText: any;
+    private feedbackTimeout: number = 3000; // 3 seconds
+    private feedbackTimer: number = 0;
+
     @input indexToSpawn: number;
     @input targetObject: SceneObject;
     @input objectsToSpawn: SceneObject[];
     @input filterEnabled: boolean;
-    @input camera: Camera; // Direct camera input instead of CameraService2
-    @input floorRotation: vec3 = new vec3(0, 0, 0); // Manual floor rotation in degrees
-    @input ceilingRotation: vec3 = new vec3(0, 0, 0); // Manual ceiling rotation in degrees
-    @input enableVoiceCommands: boolean = true; // Toggle for voice commands (only placement method)
-    @input resetInteractable: Interactable; // Interactable that resets placement mode
+    @input camera: Camera;
+    @input floorRotation: vec3 = new vec3(0, 0, 0);
+    @input ceilingRotation: vec3 = new vec3(0, 0, 0);
+    @input enableVoiceCommands: boolean = true;
+    @input resetInteractable: Interactable;
 
-    // Text feedback functionality
-    @input
-    private textDisplay: Text;
+    // NEW: confirm placement button
+    @input confirmButton: SceneObject;
 
-    @input
-    @hint("Duration to show feedback text (in seconds)")
-    feedbackDuration: number = 3.0;
-
-    @input
-    @hint("Enable text feedback for voice commands")
-    enableTextFeedback: boolean = true;
-
-    private feedbackTimer: number = 0;
-    private isShowingFeedback: boolean = false;
+    // NEW: text feedback component
+    @input feedbackTextComponent: Text;
 
     onAwake() {
         this.hitTestSession = this.createHitTestSession(this.filterEnabled);
@@ -54,52 +50,46 @@ export class WorldQueryHitVoiceCommand extends BaseScriptComponent {
         this.targetObject.enabled = false;
         this.setObjectEnabled(this.indexToSpawn);
 
-        // Setup interactable reset functionality
+        // Hide confirm button initially
+        if (this.confirmButton) {
+            this.confirmButton.enabled = false;
+        }
+
+        // Setup text feedback
+        this.setupTextFeedback();
+
+        // Setup reset
         this.setupInteractableReset();
 
-        // Initialize voice commands if enabled (only placement method)
         if (this.enableVoiceCommands) {
             this.initializeVoiceCommands();
             print("Voice-only placement mode enabled - use voice commands to place objects");
         }
 
-        // Initialize text feedback
-        this.initializeTextFeedback();
-
         this.createEvent("UpdateEvent").bind(this.onUpdate.bind(this));
     }
 
-    // Initialize text feedback
-    private initializeTextFeedback() {
-        if (this.textDisplay) {
-            this.textDisplay.enabled = false;
-            print("Text feedback initialized");
+    // Text Feedback Methods
+    private setupTextFeedback() {
+        if (this.feedbackTextComponent) {
+            this.feedbackText = this.feedbackTextComponent;
         } else {
-            print("Warning: No feedback text component assigned");
+            print("Warning: No feedback text component assigned. Voice feedback will not be displayed.");
         }
     }
 
-    // Show text feedback
-    private showTextFeedback(text: string) {
-        if (!this.enableTextFeedback || !this.textDisplay) {
-            return;
-        }
-
-        this.textDisplay.text = text;
-        this.textDisplay.enabled = true;
-        this.isShowingFeedback = true;
-        this.feedbackTimer = 0;
+    private showFeedback(message: string, duration: number = this.feedbackTimeout) {
+        if (!this.feedbackText) return;
         
-        print("Text feedback shown: " + text);
+        this.feedbackText.text = message;
+        this.feedbackTimer = duration;
+        print("Voice Feedback: " + message);
     }
 
-    // Hide text feedback
-    private hideTextFeedback() {
-        if (this.textDisplay) {
-            this.textDisplay.enabled = false;
-            this.isShowingFeedback = false;
-            print("Text feedback hidden");
-        }
+    private clearFeedback() {
+        if (!this.feedbackText) return;
+        this.feedbackText.text = "";
+        this.feedbackTimer = 0;
     }
 
     // ASR Voice Command Methods
@@ -109,9 +99,7 @@ export class WorldQueryHitVoiceCommand extends BaseScriptComponent {
     }
 
     private startContinuousListening() {
-        if (this.isRestarting) {
-            return; // Prevent multiple simultaneous restarts
-        }
+        if (this.isRestarting) return;
         
         this.isRecording = true;
         print("ASR: Starting continuous voice listening...");
@@ -123,46 +111,26 @@ export class WorldQueryHitVoiceCommand extends BaseScriptComponent {
         asrSettings.onTranscriptionUpdateEvent.add((asrOutput) => {
             print("ASR: Received transcription: " + asrOutput.text);
             
-            // Show real-time feedback for all speech
-            if (this.enableTextFeedback && asrOutput.text.trim().length > 0) {
-                this.showTextFeedback("Listening: " + asrOutput.text);
-            }
-            
-            if (asrOutput.isFinal) {
-                // Filter for specific words only
+            // Show real-time transcription feedback
+            if (!asrOutput.isFinal) {
+                this.showFeedback("You said: " + asrOutput.text, 1000);
+            } else {
                 const detectedWord = this.filterForSpecificWords(asrOutput.text);
                 if (detectedWord) {
                     print("ASR: Valid command detected: " + detectedWord);
-                    this.showTextFeedback("Command: " + detectedWord);
+                    this.showFeedback("You said: " + asrOutput.text, 2000);
                     this.handleVoiceCommand(detectedWord);
                 } else {
                     print("ASR: No valid command found in: " + asrOutput.text);
-                    this.showTextFeedback("No valid command detected");
+                    this.showFeedback("You said: " + asrOutput.text, 2000);
                 }
-                
-                // Restart listening with proper cleanup
                 this.restartListening();
             }
         });
         
         asrSettings.onTranscriptionErrorEvent.add((asrOutput) => {
             print("ASR Error: " + asrOutput);
-            this.showTextFeedback("Voice recognition error");
-            
-            // Handle specific error codes with better logging
-            switch (asrOutput) {
-                case 1:
-                    print("ASR: Error 1 - Audio input issue, restarting...");
-                    break;
-                case 3:
-                    print("ASR: Error 3 - Transcription service issue, restarting...");
-                    break;
-                default:
-                    print("ASR: Unknown error " + asrOutput + ", restarting...");
-                    break;
-            }
-            
-            // Restart listening with proper cleanup
+            this.showFeedback("Voice recognition error. Please try again.", 2000);
             this.restartListening();
         });
         
@@ -171,83 +139,82 @@ export class WorldQueryHitVoiceCommand extends BaseScriptComponent {
     }
     
     private restartListening() {
-        if (!this.isRecording || this.isRestarting) {
-            return;
-        }
-        
+        if (!this.isRecording || this.isRestarting) return;
         this.isRestarting = true;
-        
-        // Stop current transcription before restarting
         try {
             this.asrModule.stopTranscribing();
         } catch (e) {
             print("ASR: Error stopping transcription: " + e);
         }
-        
-        // Reset restart flag and restart immediately
         this.isRestarting = false;
-        if (this.isRecording) {
-            this.startContinuousListening();
-        }
+        if (this.isRecording) this.startContinuousListening();
     }
 
     private filterForSpecificWords(text: string): string | null {
         const lowerText = text.toLowerCase().trim();
-        const validWords = ["place", "project", "pin", "mount", "reset", "clear", "remove"];
-        
+        const validWords = [
+            // Place variations and similar pronunciations
+            "place", "placed", "placing", "plays", "plane", "play", "player", "playing",
+            "plates", "plate", "plated", "plating", "plaza", "plaster", "plastic",
+            "please", "pleased", "pleasing", "pleasure", "pleasant",
+            "praise", "praised", "praising", "pray", "prayed", "praying",
+            "phase", "phased", "phasing", "face", "faced", "facing",
+            
+            // Project variations and similar pronunciations
+            "project", "projects", "projecting", "projected", "produce", "produced", "producing",
+            "product", "production", "productive", "professor", "profession",
+            "progress", "progressive", "promote", "promoted", "promoting",
+            "protect", "protected", "protecting", "protest", "protested", "protesting",
+            "process", "processed", "processing", "proceed", "proceeded", "proceeding",
+            "propose", "proposed", "proposing", "provide", "provided", "providing",
+            
+            // Pin variations and similar pronunciations
+            "pin", "pinned", "pinning", "pins", "pen", "pens", "penned", "penning",
+            "pain", "pained", "paining", "pane", "paned", "paning",
+            "pan", "panned", "panning", "pans", "pant", "panted", "panting",
+            "penny", "pennies", "pencil", "pencils", "penguin", "penguins",
+            "paint", "painted", "painting", "paintings", "painter", "painters",
+            "point", "pointed", "pointing", "points", "pointer", "pointers",
+            
+            // Mount variations and similar pronunciations
+            "mount", "mounted", "mounting", "mounts", "mound", "mounds", "mounted",
+            "mountain", "mountains", "mountaineer", "mountaineering",
+            "mouth", "mouthed", "mouthing", "mouths", "mouse", "mice",
+            "move", "moved", "moving", "moves", "movement", "movements",
+            "more", "most", "mode", "modes", "model", "models", "modeled", "modeling",
+            "mold", "molded", "molding", "molds", "mole", "moles", "molar", "molars"
+        ];
         for (const word of validWords) {
-            if (lowerText.includes(word)) {
-                return word;
-            }
+            if (lowerText.includes(word)) return word;
         }
-        
         return null;
     }
 
     private handleVoiceCommand(command: string) {
-        print("Handling voice command: " + command);
+        // Check if the command contains any of the placement keywords
+        const lowerCommand = command.toLowerCase();
+        const placementKeywords = ["place", "project", "pin", "mount"];
         
-        switch (command) {
-            case "place":
-            case "project":
-            case "pin":
-            case "mount":
-                print("Valid placement command detected: " + command);
-                if (!this.isPlaced) {
-                    this.placeObject();
-                    print("Object placed via voice command: " + command);
-                } else {
-                    print("Object already placed, ignoring command: " + command);
-                }
-                break;
-            case "reset":
-            case "clear":
-            case "remove":
-                print("Reset command detected: " + command);
-                this.resetPlacement();
-                print("Placement reset - ready for new placement");
-                break;
-            default:
-                print("Unknown voice command: " + command);
-                break;
+        const hasPlacementKeyword = placementKeywords.some(keyword => 
+            lowerCommand.includes(keyword)
+        );
+        
+        if (hasPlacementKeyword) {
+            if (!this.isPlaced) {
+                this.placeObject();
+            } else {
+                this.showFeedback("Object already placed.", 2000);
+            }
         }
     }
 
     private placeObject() {
-        if (this.isPlaced) {
-            print("Object already placed, ignoring command");
-            return;
-        }
+        if (this.isPlaced) return;
 
-        // Use camera position and direction directly
         const cameraTransform = this.camera.getTransform();
         const cameraPosition = cameraTransform.getWorldPosition();
-        const cameraDirection = cameraTransform.back; // Looking direction
+        const cameraDirection = cameraTransform.back;
 
-        print("Camera position: " + cameraPosition);
-        print("Camera direction: " + cameraDirection);
-
-        // Cast a ray from camera to find wall surface
         const rayStart = cameraPosition;
         const rayEnd = new vec3(
             cameraPosition.x + cameraDirection.x * 1000,
@@ -255,50 +222,29 @@ export class WorldQueryHitVoiceCommand extends BaseScriptComponent {
             cameraPosition.z + cameraDirection.z * 1000
         );
 
-        print("Ray start: " + rayStart);
-        print("Ray end: " + rayEnd);
-
-        // Use hit test to find wall surface
         this.hitTestSession.hitTest(rayStart, rayEnd, (results) => {
             if (results) {
                 const hitPosition = results.position;
                 const hitNormal = results.normal;
 
-                print("Hit test successful!");
-                print("Hit position: " + hitPosition);
-                print("Hit normal: " + hitNormal);
-
-                // Calculate rotation to align object to wall surface with manual rotations
                 let toRotation;
                 const upDot = hitNormal.dot(vec3.up());
-                
-                print("Up dot: " + upDot);
-                
                 if (upDot > 0.9) {
-                    // For floors, use manual floor rotation
                     toRotation = this.createRotationFromDegrees(this.floorRotation);
-                    print("Using floor rotation");
                 } else if (upDot < -0.9) {
-                    // For ceilings, use manual ceiling rotation
                     toRotation = this.createRotationFromDegrees(this.ceilingRotation);
-                    print("Using ceiling rotation");
                 } else {
-                    // For walls, align object to surface normal
                     toRotation = quat.lookAt(hitNormal, vec3.up());
-                    print("Using wall rotation");
                 }
 
-                                 // Place the object directly
-                 this.targetObject.enabled = true;
-                 this.targetObject.getTransform().setWorldPosition(hitPosition);
-                 this.targetObject.getTransform().setWorldRotation(toRotation);
-                 this.isPlaced = true;
-                 print("Object placed at: " + hitPosition);
-                
+                this.targetObject.enabled = true;
+                this.targetObject.getTransform().setWorldPosition(hitPosition);
+                this.targetObject.getTransform().setWorldRotation(toRotation);
+                this.isPlaced = true;
+
+                this.showFeedback("Image placed successfully!", 3000);
+
             } else {
-                print("No hit test results - placing in front of camera");
-                
-                // If no wall found, place in front of camera
                 const distance = 3.0;
                 const position = new vec3(
                     cameraPosition.x + cameraDirection.x * distance,
@@ -306,88 +252,62 @@ export class WorldQueryHitVoiceCommand extends BaseScriptComponent {
                     cameraPosition.z + cameraDirection.z * distance
                 );
 
-                                 // Place the object directly in front of camera
-                 this.targetObject.enabled = true;
-                 this.targetObject.getTransform().setWorldPosition(position);
-                 this.targetObject.getTransform().setWorldRotation(quat.lookAt(cameraDirection, vec3.up()));
-                 this.isPlaced = true;
-                 print("No wall found - object placed in front of camera");
+                this.targetObject.enabled = true;
+                this.targetObject.getTransform().setWorldPosition(position);
+                this.targetObject.getTransform().setWorldRotation(quat.lookAt(cameraDirection, vec3.up()));
+                this.isPlaced = true;
+
+                this.showFeedback("Object placed in air.", 3000);
+            }
+
+            // Show confirm button once placed
+            if (this.confirmButton) {
+                this.confirmButton.enabled = true;
             }
         });
     }
 
-    // Public method to manually trigger placement (for testing)
     public manualPlace() {
         if (!this.isPlaced) {
             this.placeObject();
-            print("Object placed manually");
-        } else {
-            print("Object already placed");
         }
     }
 
-
-
-    // Setup interactable reset functionality
     private setupInteractableReset() {
         if (this.resetInteractable) {
-            print("Setting up interactable reset functionality");
-            
-            // Try different event binding methods
             try {
                 if (this.resetInteractable.onTriggerStart) {
-                    this.resetInteractable.onTriggerStart.add((event) => {
-                        print("Interactable triggered - resetting placement");
+                    this.resetInteractable.onTriggerStart.add(() => {
                         this.resetPlacement();
                     });
-                    print("Interactable reset event bound using onTriggerStart");
-                } else if (this.resetInteractable.onInteractorTriggerStart) {
-                    this.resetInteractable.onInteractorTriggerStart((event) => {
-                        print("Interactable triggered - resetting placement");
-                        this.resetPlacement();
-                    });
-                    print("Interactable reset event bound using onInteractorTriggerStart");
-                } else {
-                    print("Warning: Could not bind interactable reset events");
                 }
             } catch (error) {
                 print("Error setting up interactable reset: " + error);
             }
-        } else {
-            print("No reset interactable assigned");
         }
     }
 
-    // Public method to reset placement
     public resetPlacement() {
         this.isPlaced = false;
         this.targetObject.enabled = false;
-        print("Placement reset - ready for new placement");
-        
-        // Restart surface detection
+        if (this.confirmButton) {
+            this.confirmButton.enabled = false;
+        }
         this.restartSurfaceDetection();
     }
     
-    // Restart surface detection after reset
     private restartSurfaceDetection() {
-        print("Restarting surface detection...");
-        
-        // Re-enable the target object for preview
         this.targetObject.enabled = true;
-        
-        // The onUpdate method will handle the surface detection automatically
-        print("Surface detection restarted - move camera to find new surface");
     }
 
-    // Public method to toggle voice commands
     public toggleVoiceCommands() {
         this.voiceCommandsEnabled = !this.voiceCommandsEnabled;
         if (this.voiceCommandsEnabled) {
+            this.showFeedback("Voice listening started", 2000);
             this.startContinuousListening();
-            print("Voice commands enabled");
         } else {
+            this.showFeedback("Voice listening stopped", 2000);
             this.stopListening();
-            print("Voice commands disabled");
         }
     }
 
@@ -414,49 +334,38 @@ export class WorldQueryHitVoiceCommand extends BaseScriptComponent {
         }
 
         this.targetObject.enabled = true;
-
         const hitPosition = results.position;
         const hitNormal = results.normal;
 
-        // Calculate rotation to align object to surface with manual rotations
         let toRotation;
         const upDot = hitNormal.dot(vec3.up());
-        
         if (upDot > 0.9) {
-            // For floors, use manual floor rotation
             toRotation = this.createRotationFromDegrees(this.floorRotation);
         } else if (upDot < -0.9) {
-            // For ceilings, use manual ceiling rotation
             toRotation = this.createRotationFromDegrees(this.ceilingRotation);
         } else {
-            // For walls, align object to surface normal
             toRotation = quat.lookAt(hitNormal, vec3.up());
         }
 
         this.targetObject.getTransform().setWorldPosition(hitPosition);
         this.targetObject.getTransform().setWorldRotation(toRotation);
-
-        // Voice commands only - no pinch placement
-        // Removed the pinch trigger placement logic
     }
 
     onUpdate() {
-        // Handle text feedback timer
-        if (this.isShowingFeedback && this.textDisplay) {
-            this.feedbackTimer += getDeltaTime();
-            if (this.feedbackTimer >= this.feedbackDuration) {
-                this.hideTextFeedback();
+        // Handle feedback timer
+        if (this.feedbackTimer > 0) {
+            this.feedbackTimer -= getDeltaTime() * 1000; // Convert to milliseconds
+            if (this.feedbackTimer <= 0) {
+                this.clearFeedback();
             }
         }
 
         if (this.isPlaced) return;
 
-        // Use camera position and direction for object positioning
         const cameraTransform = this.camera.getTransform();
         const cameraPosition = cameraTransform.getWorldPosition();
-        const cameraDirection = cameraTransform.back; // Looking direction
+        const cameraDirection = cameraTransform.back;
 
-        // Cast a ray from camera to find surface
         const rayStart = cameraPosition;
         const rayEnd = new vec3(
             cameraPosition.x + cameraDirection.x * 1000,
@@ -464,7 +373,6 @@ export class WorldQueryHitVoiceCommand extends BaseScriptComponent {
             cameraPosition.z + cameraDirection.z * 1000
         );
 
-        // Use hit test to find surface
         this.hitTestSession.hitTest(rayStart, rayEnd, this.onHitTestResult.bind(this));
     }
 
@@ -478,7 +386,6 @@ export class WorldQueryHitVoiceCommand extends BaseScriptComponent {
         this.indexToSpawn = i;
     }
 
-    // Helper method to create rotation from degrees
     createRotationFromDegrees(rotationDegrees: vec3): quat {
         const xRad = rotationDegrees.x * Math.PI / 180;
         const yRad = rotationDegrees.y * Math.PI / 180;

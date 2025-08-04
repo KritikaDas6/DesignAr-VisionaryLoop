@@ -1,0 +1,60 @@
+- !<AssetImportMetadata/3193bb95-8cd3-4b7b-938c-3ff556d10521>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 691ddd80-82ee-4ae6-90e0-e663d56acaee
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 691ddd80-82ee-4ae6-90e0-e663d56acaee
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 3c9dc5c6-7120-49e1-8bf9-522a0c9c10eb
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/3c9dc5c6-7120-49e1-8bf9-522a0c9c10eb>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 234bf105-bce4-4ae8-8e68-30b5e68a64a5
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    containerFrame: false
+    isToggleMode: false
+    lockButton: false
+    lockPosition: false
+    lockRotation: false
+    lockScale: false
+    statusText: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - lockButton: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      containerFrame: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      lockPosition: true
+      lockRotation: true
+      lockScale: true
+      isToggleMode: true
+      statusText: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input AssignableType lockButton {"hint":"The button that will trigger the lock/unlock"}'
+    - '// @input SceneObject containerFrame {"hint":"The container frame to be locked/unlocked"}'
+    - '// @input bool lockPosition = true {"hint":"Lock position when enabled"}'
+    - '// @input bool lockRotation = true {"hint":"Lock rotation when enabled"}'
+    - '// @input bool lockScale = true {"hint":"Lock scale when enabled"}'
+    - '// @input bool isToggleMode = true {"hint":"Toggle lock state on each button press"}'
+    - '// @input AssignableType_1 statusText {"hint":"Text component to show lock status"}'

@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 2030
+    size: 2035
     values:
       - ""
       - AddedAsset
@@ -56,8 +56,8 @@ CollapsedEntities:
       - GenAI/GeminiAssistant.ts
       - GenAI/GenAI.prefab
       - GenAI/ImageGenerator.ts
+      - GenAI/InteractableImageGenerator 2.ts
       - GenAI/InteractableImageGenerator.js
-      - GenAI/InteractableImageGenerator.ts
       - GenAI/InteractableSnap3DGenerator.ts
       - GenAI/InternetAvailabilityPopUp.ts
       - GenAI/OpenAIAssistant.ts
@@ -65,6 +65,7 @@ CollapsedEntities:
       - GenAI/Snap3DInteractableFactory.ts
       - GenAI/SphereController.ts
       - GenAI/Untitled JavaScript.js
+      - HS UI Assets
       - HS UI Assets/Guide
       - HS UI Assets/Guide/Guide1.png
       - HS UI Assets/Guide/Guide2.png
@@ -87,6 +88,7 @@ CollapsedEntities:
       - HS UI Assets/Icon/mic_yw.png
       - HS UI Assets/Icon/palette.png
       - HS UI Assets/Icon/unlock.png
+      - HS UI Assets/Illust
       - HS UI Assets/Illust/Illust_Pagenation1.png
       - HS UI Assets/Illust/Illust_Pagenation2.png
       - HS UI Assets/Illust/Illust_Pagenation3.png
@@ -953,6 +955,8 @@ CollapsedEntities:
       - Script_HandFollower/HandFollower.ts
       - Script_HandFollower/HandFollowerWithAngleRange.ts
       - Script_HandFollower/VectorUtils.ts
+      - Scripts
+      - Scripts/ContainerFrameLocker.ts
       - Slider.lsc
       - Spectacles 3D Hand Hints.lspkg
       - Spectacles 3D Hand Hints.lspkg/Animation
@@ -1295,6 +1299,7 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/modules/SnappableBehavior.ts
       - SpectaclesInteractionKit/Components/UI/PinchButton
       - SpectaclesInteractionKit/Components/UI/PinchButton/PinchButton.ts
+      - SpectaclesInteractionKit/Components/UI/PinchButton/PinchButtonArray.ts
       - SpectaclesInteractionKit/Components/UI/ScrollBar
       - SpectaclesInteractionKit/Components/UI/ScrollBar/ScrollBar.ts
       - SpectaclesInteractionKit/Components/UI/ScrollView

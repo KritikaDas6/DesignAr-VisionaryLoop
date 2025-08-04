@@ -30,16 +30,15 @@
   ScriptInputsHidden:
     camera: false
     ceilingRotation: false
-    enableTextFeedback: false
+    confirmButton: false
     enableVoiceCommands: false
-    feedbackDuration: false
+    feedbackTextComponent: false
     filterEnabled: false
     floorRotation: false
     indexToSpawn: false
     objectsToSpawn: false
     resetInteractable: false
     targetObject: false
-    textDisplay: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -55,9 +54,8 @@
       ceilingRotation: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
       enableVoiceCommands: true
       resetInteractable: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
-      textDisplay: !<reference.Text> 00000000-0000-0000-0000-000000000000
-      feedbackDuration: !<float> 3.000000
-      enableTextFeedback: true
+      confirmButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      feedbackTextComponent: !<reference.Text> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
@@ -71,6 +69,5 @@
     - "// @input vec3 ceilingRotation = {0,0,0}"
     - // @input bool enableVoiceCommands = true
     - // @input AssignableType resetInteractable
-    - // @input Component.Text textDisplay
-    - '// @input float feedbackDuration = 3 {"hint":"Duration to show feedback text (in seconds)"}'
-    - '// @input bool enableTextFeedback = true {"hint":"Enable text feedback for voice commands"}'
+    - // @input SceneObject confirmButton
+    - // @input Component.Text feedbackTextComponent

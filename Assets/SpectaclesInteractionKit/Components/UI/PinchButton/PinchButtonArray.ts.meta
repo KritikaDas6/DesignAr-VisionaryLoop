@@ -1,0 +1,62 @@
+- !<AssetImportMetadata/32ddbf13-5a8b-47dc-84a5-9f8a3bbe6eb6>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> b3ddb8ca-a5d6-4ab6-9183-1677ce7765b4
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> b3ddb8ca-a5d6-4ab6-9183-1677ce7765b4
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> c37c8ea5-827d-432d-8b75-392e827ebcec
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/c37c8ea5-827d-432d-8b75-392e827ebcec>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: a5dae1a2-bff4-4ce5-83ce-7894bc319ced
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    customFunctionForOnButtonPinched: false
+    editEventCallbacks: false
+    isToggleButton: false
+    onButtonPinchedFunctionNames: false
+    targetObjectsToDisable: false
+    targetObjectsToEnable: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - targetObjectsToDisable: !<reference.SceneObject[]>
+        []
+      targetObjectsToEnable: !<reference.SceneObject[]>
+        []
+      isToggleButton: false
+      editEventCallbacks: false
+      customFunctionForOnButtonPinched: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      onButtonPinchedFunctionNames: !<string[]>
+        []
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input SceneObject[] targetObjectsToDisable = {} {"hint":"Array of objects to disable when the pinch is triggered"}'
+    - '// @input SceneObject[] targetObjectsToEnable = {} {"hint":"Array of objects to enable when the pinch is triggered"}'
+    - '// @input bool isToggleButton {"hint":"Is toggle on or off"}'
+    - "// @input bool editEventCallbacks {\"hint\":\"Enable this to add functions from another script to this component's callback events\"}"
+    - '// @ui {"widget":"group_start", "label":"On Button Pinched Callbacks", "showIf":"editEventCallbacks"}'
+    - '// @input Component.ScriptComponent customFunctionForOnButtonPinched {"hint":"The script containing functions to be called when button is pinched"}'
+    - '// @input string[] onButtonPinchedFunctionNames = {} {"hint":"The names for the functions on the provided script, to be called on button pinch"}'
+    - '// @ui {"widget":"group_end"}'

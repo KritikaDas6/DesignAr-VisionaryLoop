@@ -1,0 +1,69 @@
+- !<AssetImportMetadata/e90fc112-e302-4f3f-b31c-020e8bd6625d>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> c640a1a8-a360-4010-9ca5-99bb16147baa
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> c640a1a8-a360-4010-9ca5-99bb16147baa
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 2a19034d-ad6f-4442-953a-6fc2b8daed59
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/2a19034d-ad6f-4442-953a-6fc2b8daed59>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 7739371e-5c32-46b2-901b-be182334f811
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    asrQueryController: false
+    image: false
+    micOff: false
+    micOn: false
+    modelProvider: false
+    nextButton: false
+    projectionImage: false
+    spinner: false
+    textDisplay: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - modelProvider: OpenAI
+      image: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      projectionImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      textDisplay: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      asrQueryController: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      spinner: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      nextButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      micOff: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      micOn: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"Example of using generative image APIs"}'
+    - '// @input string modelProvider = "OpenAI" {"widget":"combobox", "values":[{"label":"OpenAI", "value":"OpenAI"}, {"label":"Gemini", "value":"Gemini"}]}'
+    - '// @ui {"widget":"separator"}'
+    - // @input Component.Image image
+    - // @input Component.Image projectionImage
+    - // @input Component.Text textDisplay
+    - // @input AssignableType asrQueryController
+    - // @input SceneObject spinner
+    - // @input SceneObject nextButton
+    - // @input SceneObject micOff
+    - // @input SceneObject micOn
