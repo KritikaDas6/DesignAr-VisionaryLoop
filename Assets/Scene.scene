@@ -10,6 +10,7 @@
     - !<own> e57f651f-eb48-4381-b39e-6c905e5bed25
     - !<own> fdd25812-619d-411a-bd5b-c6bac1f343b5
     - !<own> a3b1407c-ff60-4d11-a6e6-a06efe108921
+    - !<own> ab3ad8e6-a09f-4c14-92f3-026d4be72b20
     - !<own> d1c2dacb-118f-4791-a7d5-3dfb5eb36545
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
@@ -4712,7 +4713,7 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: Adjust img for tracing
+  Text: Open your hand menu to tweak opacity & color
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -6191,7 +6192,7 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: Lock in
+  Text: Start tracing
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -7418,7 +7419,6 @@
     allowScaling: true
     autoScaleContent: true
     relativeZ: true
-    isContentInteractable: true
     allowTranslation: true
     cutOut: true
     minimumSize: true
@@ -7445,7 +7445,7 @@
       allowScaling: true
       autoScaleContent: true
       relativeZ: false
-      isContentInteractable: false
+      isContentInteractable: true
       allowTranslation: true
       cutOut: false
       minimumSize: !<Vec2> {x: 10.000000, y: 10.000000}
@@ -11131,7 +11131,7 @@
   PrefabRemaps:
     []
   Name: PinchButton
-  Enabled: false
+  Enabled: true
   ScriptAsset: !<reference> a54c5722-d3fb-4aa5-97ff-f7425978bc59
   ScriptInputsDefault:
     isToggleButton: true
@@ -11522,7 +11522,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 1.000000}
+    position: {x: 0.000000, y: 3.000000, z: 1.000000}
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 10.000000, y: 10.000000, z: 10.000000}
     hasSegmentScaleCompensation: false
@@ -11797,7 +11797,7 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: Let’s start tracing!
+  Text: You’re all set—let’s trace!
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -12004,7 +12004,7 @@
   PrefabRemaps:
     []
   Name: Subtitle_Text
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: -2.000000, z: 0.000000}
@@ -15577,7 +15577,7 @@
   PrefabRemaps:
     []
   Name: Home
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -16320,11 +16320,11 @@
   PrefabRemaps:
     []
   Name: Trace
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    position: {x: 0.000000, y: 0.000000, z: -40.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
@@ -18656,7 +18656,7 @@
 - !<SceneObject/c4185026-4295-4560-911c-a03dd5b1c8f7>
   PrefabRemaps:
     []
-  Name: Guide5
+  Name: Guide6
   Enabled: true
   Layers: 1
   LocalTransform:
@@ -19133,7 +19133,7 @@
   PrefabRemaps:
     []
   Name: Button
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: -0.000001, y: -19.000000, z: -60.000000}
@@ -24802,7 +24802,7 @@
   PrefabRemaps:
     []
   Name: Refine02
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: -40.000000}
@@ -24813,7 +24813,6 @@
     - !<own> c4185026-4295-4560-911c-a03dd5b1c8f7
     - !<own> 9586a0bd-3352-4b1d-ba8e-b8315d88627d
     - !<own> ca009df7-70f9-4654-8507-21c207c2b34e
-    - !<own> ab3ad8e6-a09f-4c14-92f3-026d4be72b20
   Components:
     []
 - !<SceneObject/fa9e9e03-e5aa-4237-94ab-befdfe8a42bb>
