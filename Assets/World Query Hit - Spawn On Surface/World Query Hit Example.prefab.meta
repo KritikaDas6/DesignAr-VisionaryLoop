@@ -158,7 +158,7 @@
   PrefabRemaps:
     []
   Name: ContainerFrame
-  Enabled: true
+  Enabled: false
   ScriptAsset: !<reference> 94ea82ba-1d42-4617-b71f-c92262f5960b
   ScriptInputsDefault:
     autoShowHide: true
@@ -260,6 +260,32 @@
     []
   Components:
     - !<own> 9a7fa4dd-03ff-4098-a3eb-e054041f67ac
+- !<ScriptComponent/5861c1c9-374d-4889-93a7-173afb6aa417>
+  PrefabRemaps:
+    []
+  Name: ContainerLock
+  Enabled: false
+  ScriptAsset: !<reference> 8c2da898-a4c4-46fa-88ff-480bf7c89a0a
+  ScriptInputsDefault:
+    lockPosition: true
+    lockRotation: true
+    lockScale: true
+    isLocked: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      triggerObject: !<reference.SceneObject> ff0bbde5-0d82-4a0b-8827-9346afef0cec
+      targetObject: !<reference.SceneObject> 9468fdcc-25ab-40d0-826e-617473e3e73c
+      lockPosition: true
+      lockRotation: true
+      lockScale: true
+      autoUnlock: false
+      lockOnStart: false
+      isLocked: false
+  ScriptTypes:
+    "":
+      {}
 - !<ObjectPrefab/731818b4-b3c7-4e86-8323-8c018ee321ff>
   PackagePath: ""
   objects:
@@ -279,6 +305,7 @@
     hasSegmentScaleCompensation: false
   Children:
     - !<own> ff0bbde5-0d82-4a0b-8827-9346afef0cec
+    - !<own> 927caacc-bd70-4e11-a8d4-13d6bcca3cdb
   Components:
     []
 - !<SceneObject/7a60ab9a-a369-4dd3-a4f9-4232ead5b563>
@@ -369,6 +396,21 @@
   BlendNormals: false
   BlendShapes:
     {}
+- !<SceneObject/927caacc-bd70-4e11-a8d4-13d6bcca3cdb>
+  PrefabRemaps:
+    []
+  Name: Object 0
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 5861c1c9-374d-4889-93a7-173afb6aa417
 - !<Image/95fe3733-d08a-400f-bbb9-be474b94e2e0>
   PrefabRemaps:
     []
@@ -421,6 +463,70 @@
     []
   Components:
     - !<own> a1f90dbd-ca04-43eb-8eea-e2a374aaf39f
+- !<ScriptComponent/99771e4d-648d-498b-b301-96bb8909c779>
+  PrefabRemaps:
+    []
+  Name: ContainerFrameLocker
+  Enabled: true
+  ScriptAsset: !<reference> d6a3f0eb-5dae-417c-85d7-edb66930e861
+  ScriptInputsDefault:
+    autoShowHide: true
+    allowScaling: true
+    autoScaleContent: true
+    relativeZ: true
+    isContentInteractable: true
+    allowTranslation: true
+    cutOut: true
+    minimumSize: true
+    maximumSize: true
+    useBillboarding: true
+    xOnTranslate: true
+    xAlways: true
+    yOnTranslate: true
+    yAlways: true
+    useSnapping: true
+    itemSnapping: true
+    worldSnapping: true
+    showFollowButton: true
+    useFOVFollow: true
+    isFollowing: true
+    showCloseButton: true
+    _enableInteractionPlane: true
+    isLocked: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      autoShowHide: true
+      innerSize: !<Vec2> {x: 20.000000, y: 20.000000}
+      border: 1.500000
+      constantPadding: !<Vec2> {x: 1.500000, y: 1.500000}
+      allowScaling: true
+      autoScaleContent: true
+      relativeZ: false
+      isContentInteractable: false
+      allowTranslation: true
+      cutOut: false
+      minimumSize: !<Vec2> {x: 10.000000, y: 10.000000}
+      maximumSize: !<Vec2> {x: 150.000000, y: 150.000000}
+      useBillboarding: false
+      xOnTranslate: false
+      xAlways: false
+      yOnTranslate: false
+      yAlways: false
+      useSnapping: false
+      itemSnapping: false
+      worldSnapping: false
+      showFollowButton: false
+      useFOVFollow: false
+      isFollowing: false
+      showCloseButton: true
+      _enableInteractionPlane: false
+      lockInteractable: !<MappingBased.AssignableType> 1c33f80e-2306-44b2-8fba-aa3503ace9e1
+      isLocked: false
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/99f4df87-65a1-4e72-be7b-5a56bfc9bd21>
   PrefabRemaps:
     []
@@ -684,6 +790,7 @@
     - 2750e9ff-a7cc-4ce0-a09f-49b24fda2863: 95fe3733-d08a-400f-bbb9-be474b94e2e0
     - 2ea64cf3-41d1-4ad2-847f-f1b90b69ad0d: 91d768b9-df7e-4abd-9f99-367d9395824d
     - 3257230f-d67e-494e-bfc1-5291f0593f28: ff0bbde5-0d82-4a0b-8827-9346afef0cec
+    - 37448837-58bb-4f31-a79e-672c771e8194: 99771e4d-648d-498b-b301-96bb8909c779
     - 3f496510-4b23-421e-af4c-0f699804f95f: cf83b7bc-dff5-46e1-b753-867b18b44726
     - 4a9631af-0b16-458e-9349-5b66ed8735db: 525782ce-da8f-432f-82e3-9f018f14ab2c
     - 4adac890-d736-4fea-a137-18664e3df81a: b4e0ecec-d7dd-4007-b6c8-343f5917648d
@@ -701,10 +808,12 @@
     - 8eb07302-5280-4cdd-87a5-8becfdf6c4ff: 9a7fa4dd-03ff-4098-a3eb-e054041f67ac
     - 9300dd54-1490-463d-b02c-7795604aa11b: 18acbcdd-8ee4-4ae5-94b3-087918197e57
     - 986fad9f-6293-4e43-a165-2c2a14fd847b: 9762a85a-8dbd-4697-a7dd-e9d42658a6c2
+    - 9ba98b62-a863-42d9-9af5-76057f6ee1af: 927caacc-bd70-4e11-a8d4-13d6bcca3cdb
     - a6c053bc-3ce4-4012-96b6-6155f56eef40: fe99ab7c-b615-4936-8435-0905f3129f26
     - aada7af9-8f64-4a85-8112-890b337fc49e: 1ca71665-b12e-41a5-a6a3-473ee34cea88
     - ab1adf31-79bd-4825-9637-1f98f02c09d9: bfa4337d-5dd3-4dc6-af17-ce201094fafb
     - bb6503a3-22bd-4a30-b923-7b77ce00a184: 492d21da-d6fa-4bea-ada5-0f2c4080abca
+    - bc0164cb-a8d3-4ef6-9a37-65435b631b57: 5861c1c9-374d-4889-93a7-173afb6aa417
     - c34ef930-7872-485d-98fb-0d1f2a526ee1: ee4d2a5b-3516-490e-b00c-1d49445accf2
     - da3bfe38-abf7-42ee-aa0f-71e44e38bb02: 1f474e4c-0949-4db6-92a6-5997fa73542c
     - e3ddb21b-a5c4-47e5-94c1-2573bc833b7d: a1f90dbd-ca04-43eb-8eea-e2a374aaf39f
@@ -767,3 +876,4 @@
   Components:
     - !<own> 45e5116d-26d7-4bb9-ae06-2ba513cb4130
     - !<own> fe99ab7c-b615-4936-8435-0905f3129f26
+    - !<own> 99771e4d-648d-498b-b301-96bb8909c779
