@@ -1,9 +1,8 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 2022
+    size: 2020
     values:
-      - ""
       - AddedAsset
       - AddedAsset/Device Camera Texture.deviceCameraTexture
       - AddedAsset/Echopark.hdr
@@ -66,6 +65,7 @@ CollapsedEntities:
       - GenAI/Snap3DInteractableFactory.ts
       - GenAI/SphereController.ts
       - GenAI/Untitled JavaScript.js
+      - HS UI Assets
       - HS UI Assets/Guide
       - HS UI Assets/Guide/Guide1.png
       - HS UI Assets/Guide/Guide2.png
@@ -760,6 +760,7 @@ CollapsedEntities:
       - Mic animation/SpectaclesInteractionKit/Core/MouseInteractor/MouseInteractor.ts
       - Mic animation/SpectaclesInteractionKit/Decorators
       - Mic animation/SpectaclesInteractionKit/Decorators/Singleton.ts
+      - Mic animation/SpectaclesInteractionKit/Providers
       - Mic animation/SpectaclesInteractionKit/Providers/CameraProvider
       - Mic animation/SpectaclesInteractionKit/Providers/CameraProvider/BaseCameraFinderProvider.js
       - Mic animation/SpectaclesInteractionKit/Providers/CameraProvider/BaseCameraFinderProvider.ts
@@ -768,6 +769,7 @@ CollapsedEntities:
       - Mic animation/SpectaclesInteractionKit/Providers/CameraProvider/WorldCameraFinderProvider.ts
       - Mic animation/SpectaclesInteractionKit/Providers/CursorControllerProvider
       - Mic animation/SpectaclesInteractionKit/Providers/CursorControllerProvider/CursorControllerProvider.ts
+      - Mic animation/SpectaclesInteractionKit/Providers/HandInputData
       - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/BaseHand.ts
       - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/DefaultHandTrackingAssetProvider.js
       - Mic animation/SpectaclesInteractionKit/Providers/HandInputData/DefaultHandTrackingAssetProvider.ts
@@ -929,7 +931,6 @@ CollapsedEntities:
       - Remote Service Gateway.lspkg/Utils/Promisfy.ts
       - Remote Service Gateway.lspkg/package.native
       - Scene.scene
-      - Script
       - Script 2.js
       - Script.js
       - Script/ContinuousVFXBurstOnPinchWithButtonFeedback.ts
@@ -946,8 +947,6 @@ CollapsedEntities:
       - Script_HandFollower/HandFollower.ts
       - Script_HandFollower/HandFollowerWithAngleRange.ts
       - Script_HandFollower/VectorUtils.ts
-      - Scripts
-      - Scripts/ContainerFrameLocker.ts
       - Slider.lsc
       - Spectacles 3D Hand Hints.lspkg
       - Spectacles 3D Hand Hints.lspkg/Animation
@@ -1019,7 +1018,6 @@ CollapsedEntities:
       - Spectacles 3D Hand Hints.lspkg/Textures/Hands_Interaction_Glow_Mask.png
       - Spectacles 3D Hand Hints.lspkg/Textures/Hands_Opacity_Gradient.png
       - Spectacles 3D Hand Hints.lspkg/package.native
-      - SpectaclesInteractionKit/Assets
       - SpectaclesInteractionKit/Assets/Audio
       - SpectaclesInteractionKit/Assets/Audio/HoverAudioTrack.wav
       - SpectaclesInteractionKit/Assets/Audio/TriggerEndAudioTrack.wav
@@ -1187,7 +1185,6 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Textures/SIKContainerExampleImage.jpg
       - SpectaclesInteractionKit/Assets/Textures/SIKLogo.png
       - SpectaclesInteractionKit/Assets/Textures/ScrollBarRectangle.png
-      - SpectaclesInteractionKit/Components
       - SpectaclesInteractionKit/Components/Helpers
       - SpectaclesInteractionKit/Components/Helpers/ButtonFeedback.ts
       - SpectaclesInteractionKit/Components/Helpers/CapsuleMeshCustomizer.ts
@@ -1241,9 +1238,8 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Components/Interaction/InteractorLineVisual/InteractorLineMaterial.mat
       - SpectaclesInteractionKit/Components/Interaction/InteractorLineVisual/InteractorLineRenderer.ts
       - SpectaclesInteractionKit/Components/Interaction/InteractorLineVisual/InteractorLineVisual.ts
-      - SpectaclesInteractionKit/Components/UI
-      - SpectaclesInteractionKit/Components/UI/ContainerFrame
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/ContainerFrame.ts
+      - SpectaclesInteractionKit/Components/UI/ContainerFrame/ContainerFrameLocker.ts
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/FrameMaterial.mat
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials/FrameMaterial.ss_graph
@@ -1529,6 +1525,7 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Prefabs
       - SpectaclesInteractionKit/Prefabs/ScrollViewListItem.prefab
       - SpectaclesInteractionKit/Prefabs/SpectaclesInteractionKit.prefab
+      - SpectaclesInteractionKit/Providers
       - SpectaclesInteractionKit/Providers/CameraProvider
       - SpectaclesInteractionKit/Providers/CameraProvider/ARCameraFinderProvider.ts
       - SpectaclesInteractionKit/Providers/CameraProvider/BaseCameraFinderProvider.ts
@@ -1537,6 +1534,7 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Providers/CameraProvider/WorldCameraFinderProvider.ts
       - SpectaclesInteractionKit/Providers/CursorControllerProvider
       - SpectaclesInteractionKit/Providers/CursorControllerProvider/CursorControllerProvider.ts
+      - SpectaclesInteractionKit/Providers/HandInputData
       - SpectaclesInteractionKit/Providers/HandInputData/BaseHand.ts
       - SpectaclesInteractionKit/Providers/HandInputData/DefaultHandTrackingAssetProvider.ts
       - SpectaclesInteractionKit/Providers/HandInputData/GestureProvider

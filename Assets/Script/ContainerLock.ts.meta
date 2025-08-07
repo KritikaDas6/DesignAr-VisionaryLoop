@@ -1,0 +1,67 @@
+- !<AssetImportMetadata/18473b10-1c6e-47e9-89ab-3bb913b9c94f>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 8c2da898-a4c4-46fa-88ff-480bf7c89a0a
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 8c2da898-a4c4-46fa-88ff-480bf7c89a0a
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 88bf536d-dcfc-4836-bb52-3b17da60c386
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/88bf536d-dcfc-4836-bb52-3b17da60c386>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 814a66db-5be0-4ccc-8310-d9eb464f241f
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    autoUnlock: false
+    isLocked: false
+    lockOnStart: false
+    lockPosition: false
+    lockRotation: false
+    lockScale: false
+    targetObject: false
+    triggerObject: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - triggerObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      targetObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      lockPosition: true
+      lockRotation: true
+      lockScale: true
+      autoUnlock: true
+      lockOnStart: true
+      isLocked: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"group_start", "label":"Container Settings"}'
+    - '// @input SceneObject triggerObject {"hint":"The scene object that will trigger the lock when interacted with"}'
+    - '// @input SceneObject targetObject {"hint":"The scene object whose transform will be locked"}'
+    - '// @input bool lockPosition = true {"hint":"Lock position when triggered"}'
+    - '// @input bool lockRotation = true {"hint":"Lock rotation when triggered"}'
+    - '// @input bool lockScale = true {"hint":"Lock scale when triggered"}'
+    - '// @input bool autoUnlock = true {"hint":"Automatically unlock when interaction ends"}'
+    - '// @input bool lockOnStart = true {"hint":"Lock immediately on interaction start"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Lock State"}'
+    - '// @input bool isLocked {"hint":"Current lock state - can be manually toggled"}'
+    - '// @ui {"widget":"group_end"}'

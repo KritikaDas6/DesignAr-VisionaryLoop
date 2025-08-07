@@ -2927,6 +2927,70 @@
     - !<own> b48049c2-2ada-4cb6-843b-10c08471349e
   Components:
     []
+- !<ScriptComponent/16fdd575-2f4a-4405-b9a4-8e2ca39ca42d>
+  PrefabRemaps:
+    []
+  Name: ContainerFrameLocker
+  Enabled: true
+  ScriptAsset: !<reference> d6a3f0eb-5dae-417c-85d7-edb66930e861
+  ScriptInputsDefault:
+    autoShowHide: true
+    allowScaling: true
+    autoScaleContent: true
+    relativeZ: true
+    isContentInteractable: true
+    allowTranslation: true
+    cutOut: true
+    minimumSize: true
+    maximumSize: true
+    useBillboarding: true
+    xOnTranslate: true
+    xAlways: true
+    yOnTranslate: true
+    yAlways: true
+    useSnapping: true
+    itemSnapping: true
+    worldSnapping: true
+    showFollowButton: true
+    useFOVFollow: true
+    isFollowing: true
+    showCloseButton: true
+    _enableInteractionPlane: true
+    isLocked: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      autoShowHide: true
+      innerSize: !<Vec2> {x: 20.000000, y: 20.000000}
+      border: 1.500000
+      constantPadding: !<Vec2> {x: 1.500000, y: 1.500000}
+      allowScaling: true
+      autoScaleContent: true
+      relativeZ: false
+      isContentInteractable: false
+      allowTranslation: true
+      cutOut: false
+      minimumSize: !<Vec2> {x: 10.000000, y: 10.000000}
+      maximumSize: !<Vec2> {x: 150.000000, y: 150.000000}
+      useBillboarding: false
+      xOnTranslate: false
+      xAlways: false
+      yOnTranslate: false
+      yAlways: false
+      useSnapping: false
+      itemSnapping: false
+      worldSnapping: false
+      showFollowButton: false
+      useFOVFollow: false
+      isFollowing: false
+      showCloseButton: true
+      _enableInteractionPlane: false
+      lockInteractable: !<MappingBased.AssignableType> 1c33f80e-2306-44b2-8fba-aa3503ace9e1
+      isLocked: false
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/1708ada9-a83e-4854-8f98-5d6e2056bc1e>
   PrefabRemaps:
     []
@@ -4796,6 +4860,21 @@
   RotationAngle: 0
   Pivot: {x: 0.000000, y: 0.000000}
   ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/28c88f92-98c0-41f3-bdcf-a758480de355>
+  PrefabRemaps:
+    []
+  Name: Object 0
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 557dde9a-7d6e-43b7-86a6-54eb855e3834
 - !<SceneObject/28db111f-577b-4e32-9d5e-ec34c4b47e19>
   PrefabRemaps:
     []
@@ -7412,7 +7491,7 @@
   PrefabRemaps:
     []
   Name: ContainerFrame
-  Enabled: true
+  Enabled: false
   ScriptAsset: !<reference> 94ea82ba-1d42-4617-b71f-c92262f5960b
   ScriptInputsDefault:
     autoShowHide: true
@@ -8696,6 +8775,32 @@
     bottom: 0.000000
     right: 0.000000
     top: 0.000000
+- !<ScriptComponent/557dde9a-7d6e-43b7-86a6-54eb855e3834>
+  PrefabRemaps:
+    []
+  Name: ContainerLock
+  Enabled: false
+  ScriptAsset: !<reference> 8c2da898-a4c4-46fa-88ff-480bf7c89a0a
+  ScriptInputsDefault:
+    lockPosition: true
+    lockRotation: true
+    lockScale: true
+    isLocked: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      triggerObject: !<reference.SceneObject> e294ad9b-2833-4e79-93be-86ab5cc39115
+      targetObject: !<reference.SceneObject> 9468fdcc-25ab-40d0-826e-617473e3e73c
+      lockPosition: true
+      lockRotation: true
+      lockScale: true
+      autoUnlock: false
+      lockOnStart: false
+      isLocked: false
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/5600c3fd-4188-4900-8ed0-9ec969c9a36d>
   PrefabRemaps:
     []
@@ -11673,6 +11778,7 @@
   Components:
     - !<own> 4596338c-c0df-465b-bb47-593529710bdd
     - !<own> c019c10b-5a67-4cca-a67f-d977fea4f664
+    - !<own> 834222de-6938-47b8-b654-664c6c8eeb57
 - !<SceneObject/77f38488-b1fa-402a-a39d-64d12378e017>
   PrefabRemaps:
     []
@@ -12112,6 +12218,7 @@
     hasSegmentScaleCompensation: false
   Children:
     - !<own> e294ad9b-2833-4e79-93be-86ab5cc39115
+    - !<own> 28c88f92-98c0-41f3-bdcf-a758480de355
   Components:
     []
 - !<SceneObject/7cdf135a-a2e4-467f-a81f-e65e2c1c263e>
@@ -12585,6 +12692,70 @@
     bottom: 0.000000
     right: 0.000000
     top: 0.000000
+- !<ScriptComponent/834222de-6938-47b8-b654-664c6c8eeb57>
+  PrefabRemaps:
+    []
+  Name: ContainerFrameLocker
+  Enabled: true
+  ScriptAsset: !<reference> d6a3f0eb-5dae-417c-85d7-edb66930e861
+  ScriptInputsDefault:
+    autoShowHide: true
+    allowScaling: true
+    autoScaleContent: true
+    relativeZ: true
+    isContentInteractable: true
+    allowTranslation: true
+    cutOut: true
+    minimumSize: true
+    maximumSize: true
+    useBillboarding: true
+    xOnTranslate: true
+    xAlways: true
+    yOnTranslate: true
+    yAlways: true
+    useSnapping: true
+    itemSnapping: true
+    worldSnapping: true
+    showFollowButton: true
+    useFOVFollow: true
+    isFollowing: true
+    showCloseButton: true
+    _enableInteractionPlane: true
+    isLocked: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      autoShowHide: true
+      innerSize: !<Vec2> {x: 20.000000, y: 20.000000}
+      border: 1.500000
+      constantPadding: !<Vec2> {x: 1.500000, y: 1.500000}
+      allowScaling: true
+      autoScaleContent: true
+      relativeZ: false
+      isContentInteractable: false
+      allowTranslation: true
+      cutOut: false
+      minimumSize: !<Vec2> {x: 10.000000, y: 10.000000}
+      maximumSize: !<Vec2> {x: 150.000000, y: 150.000000}
+      useBillboarding: false
+      xOnTranslate: false
+      xAlways: false
+      yOnTranslate: false
+      yAlways: false
+      useSnapping: false
+      itemSnapping: false
+      worldSnapping: false
+      showFollowButton: false
+      useFOVFollow: false
+      isFollowing: false
+      showCloseButton: true
+      _enableInteractionPlane: false
+      lockInteractable: !<MappingBased.AssignableType> 1c33f80e-2306-44b2-8fba-aa3503ace9e1
+      isLocked: false
+  ScriptTypes:
+    "":
+      {}
 - !<RenderMeshVisual/83825c07-7de8-4a3c-9749-58920ae37d6c>
   PrefabRemaps:
     []
@@ -16189,7 +16360,7 @@
   PrefabRemaps:
     []
   Name: ContainerFrame
-  Enabled: true
+  Enabled: false
   ScriptAsset: !<reference> 94ea82ba-1d42-4617-b71f-c92262f5960b
   ScriptInputsDefault:
     autoShowHide: true
@@ -16320,7 +16491,7 @@
   PrefabRemaps:
     []
   Name: Trace
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: -40.000000}
@@ -21171,6 +21342,7 @@
   Components:
     - !<own> a9598a98-a6df-4f18-8adb-c05a99a6b208
     - !<own> 487a4fd8-169e-4e0c-b297-d639df8b808c
+    - !<own> 16fdd575-2f4a-4405-b9a4-8e2ca39ca42d
 - !<ScreenTransform/e2cde620-d281-43ae-9f30-22d96af3e4b9>
   PrefabRemaps:
     []
