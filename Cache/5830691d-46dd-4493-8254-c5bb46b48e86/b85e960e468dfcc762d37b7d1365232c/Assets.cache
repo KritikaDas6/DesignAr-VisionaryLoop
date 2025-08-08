@@ -1,31 +1,31 @@
 - !<AssetCache>
   AssetFiles:
     c403bf42-b482-4aef-8906-13532712a354: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/Rocket_clouds_emit.vfxgraph
-    87d04056-827c-4a47-b099-93a4eb184f78: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/90b63b6/System_39/script_39.js
-    272f3790-d153-4076-bdaa-269b7aebf79b: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/90b63b6/System_39/feedback_39.mat
-    f6aaf5c2-3777-433b-8b23-4e1c374540f3: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/90b63b6/System_39/feedback_39.glsl
-    cc448280-cce0-4e9c-8499-7c7bfaaa98f5: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/90b63b6/System_39/render_39.mat
-    997043e4-34d4-423e-9490-4d33d3ca1d94: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/90b63b6/System_39/render_39.glsl
-    2d2f5fec-27c4-442b-a861-e32ed1c706bf: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/90b63b6/System_39/simulate_39.mat
-    738d1bc2-ccd9-44cf-a401-4aad345a33d8: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/90b63b6/System_39/simulate_39.glsl
+    e5d1f99d-74b6-4ab2-8928-58721160e60b: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/90b63b6/System_39/script_39.js
+    37c55dd9-82a7-4ace-89ff-ccd70b557254: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/90b63b6/System_39/feedback_39.mat
+    acb430ed-4267-44c7-a71f-9256910379ca: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/90b63b6/System_39/feedback_39.glsl
+    fe848bbe-cbdd-4850-9ca2-faa9854b4a4f: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/90b63b6/System_39/render_39.mat
+    36856652-bc87-4a23-b997-301ea60a62ca: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/90b63b6/System_39/render_39.glsl
+    9acd6e93-8ed8-47b3-bdd4-81f3c27425e0: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/90b63b6/System_39/simulate_39.mat
+    00bdd5c1-95f2-4f40-bb09-f91ff51f32a2: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/90b63b6/System_39/simulate_39.glsl
   Assets:
     - !<VFXAsset/c403bf42-b482-4aef-8906-13532712a354>
       PackagePath: ""
       Systems:
-        39: !<VFXSystem/d5d75692-d05f-41f3-b450-1d56b6278216>
-          FeedbackMaterial: !<Material/272f3790-d153-4076-bdaa-269b7aebf79b>
+        39: !<VFXSystem/791706a8-a61d-4f3f-9d2d-40dc5c125eb4>
+          FeedbackMaterial: !<Material/37c55dd9-82a7-4ace-89ff-ccd70b557254>
             PackagePath: ""
             PassesInfo:
-              - !<own> e632c8c5-66cb-49b1-b157-ad2a1e64cdac
-          SimulateMaterial: !<Material/2d2f5fec-27c4-442b-a861-e32ed1c706bf>
+              - !<own> 0541b0d2-ab10-4c8e-ba79-457274bbae2f
+          SimulateMaterial: !<Material/9acd6e93-8ed8-47b3-bdd4-81f3c27425e0>
             PackagePath: ""
             PassesInfo:
-              - !<own> 6da31236-1954-4cb6-9ea6-f57e9f784372
-          RenderMaterial: !<Material/cc448280-cce0-4e9c-8499-7c7bfaaa98f5>
+              - !<own> 06bed026-5525-4c83-ac01-f2baa974c5f8
+          RenderMaterial: !<Material/fe848bbe-cbdd-4850-9ca2-faa9854b4a4f>
             PackagePath: ""
             PassesInfo:
-              - !<own> 54b6b96d-8fc5-49ed-9cc2-2f76788437e6
-          FeedbackPass: !<Pass/f6aaf5c2-3777-433b-8b23-4e1c374540f3>
+              - !<own> e8417a8e-cee4-4de3-a7df-3f0e38bad33a
+          FeedbackPass: !<Pass/acb430ed-4267-44c7-a71f-9256910379ca>
             PackagePath: ""
             DefaultDefines:
               []
@@ -549,7 +549,7 @@
               PassBindings:
                 []
               ShaderType: Mesh3d
-          SimulatePass: !<Pass/738d1bc2-ccd9-44cf-a401-4aad345a33d8>
+          SimulatePass: !<Pass/00bdd5c1-95f2-4f40-bb09-f91ff51f32a2>
             PackagePath: ""
             DefaultDefines:
               []
@@ -1152,7 +1152,7 @@
                   mValues:
                     []
               ShaderType: PostProcessing
-          RenderPass: !<Pass/997043e4-34d4-423e-9490-4d33d3ca1d94>
+          RenderPass: !<Pass/36856652-bc87-4a23-b997-301ea60a62ca>
             PackagePath: ""
             DefaultDefines:
               []
@@ -1689,7 +1689,7 @@
                   mValues:
                     []
               ShaderType: PostProcessing
-          Script: !<JavaScriptAsset/87d04056-827c-4a47-b099-93a4eb184f78>
+          Script: !<JavaScriptAsset/e5d1f99d-74b6-4ab2-8928-58721160e60b>
             PackagePath: Manager_Script
             Description: ""
             SvgIcon: ""
@@ -1762,12 +1762,12 @@
   FileHash: 738caff7ba659a9503cd8d2b8fbee7fa
   NativePackageItems:
     []
-- !<PassInfo/54b6b96d-8fc5-49ed-9cc2-2f76788437e6>
+- !<PassInfo/0541b0d2-ab10-4c8e-ba79-457274bbae2f>
   CachedProperties:
     []
-  DepthWrite: true
-  DepthTest: true
-  DepthFunction: LessEqual
+  DepthWrite: false
+  DepthTest: false
+  DepthFunction: Always
   TwoSided: true
   ColorMask: {x: true, y: true, z: true, w: true}
   CullMode: Back
@@ -1779,332 +1779,56 @@
     []
   BlendMode: Disabled
   Properties:
-    Port_Exponent_N002:
-      typeIdx: 1
-      value: 7.000000
-    Port_Input1_N017:
-      typeIdx: 1
-      value: 0.005000
-    Port_Input1_N063:
-      typeIdx: 1
-      value: 2000.000000
-    Port_Input1_N065:
-      typeIdx: 1
-      value: 0.000000
-    Port_Input1_N066:
-      typeIdx: 5
-      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-    Port_Input1_N067:
-      typeIdx: 1
-      value: 2.000000
-    Port_Input2_N065:
-      typeIdx: 1
-      value: 1.000000
-    Port_Intensity_N002:
-      typeIdx: 1
-      value: 1.000000
-    Port_Normal_N002:
-      typeIdx: 4
-      value: {x: 0.000000, y: 0.000000, z: 1.000000}
-    Port_Position1_N068:
-      typeIdx: 1
-      value: 0.200000
-    Port_Position1_N178:
-      typeIdx: 1
-      value: 0.500000
-    Port_Position2_N068:
-      typeIdx: 1
-      value: 0.600000
-    Port_RangeMaxA_N018:
-      typeIdx: 1
-      value: 1.000000
-    Port_RangeMaxB_N018:
-      typeIdx: 1
-      value: -1.000000
-    Port_RangeMinA_N018:
-      typeIdx: 1
-      value: 0.000000
-    Port_RangeMinB_N018:
-      typeIdx: 1
-      value: -100.000000
-    Port_Value0_N068:
-      typeIdx: 5
-      value: {x: 1.000000, y: 0.541054, z: 0.345480, w: 1.000000}
-    Port_Value0_N178:
-      typeIdx: 5
-      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-    Port_Value1_N068:
-      typeIdx: 5
-      value: {x: 1.000000, y: 0.834943, z: 0.445747, w: 1.000000}
-    Port_Value1_N178:
-      typeIdx: 5
-      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-    Port_Value2_N068:
-      typeIdx: 5
-      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-    Port_Value2_N178:
-      typeIdx: 5
-      value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
-    Port_Value3_N068:
-      typeIdx: 5
-      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-    "overrideTimeElapsed[0]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[10]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[11]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[12]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[13]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[14]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[15]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[16]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[17]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[18]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[19]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[1]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[20]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[21]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[22]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[23]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[24]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[25]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[26]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[27]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[28]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[29]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[2]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[30]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[31]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[3]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[4]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[5]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[6]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[7]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[8]":
-      typeIdx: 1
-      value: 0.000000
-    "overrideTimeElapsed[9]":
-      typeIdx: 1
-      value: 0.000000
-    overrideTimeEnabled:
-      typeIdx: 0
-      value: 0
     renderTarget0:
       typeIdx: 9
       value:
-        id: 00000000-0000-0000-0000-000000000000
+        id: ffffffff-ffff-ffff-ffff-ffffffffffff
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
           wrapModeV: Repeat
-          wrapModeW: Repeat
+          wrapModeW: ClampToEdge
           borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
           mipmaps: false
         type: Texture2D
     renderTarget1:
       typeIdx: 9
       value:
-        id: 00000000-0000-0000-0000-000000000000
+        id: ffffffff-ffff-ffff-ffff-ffffffffffff
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
           wrapModeV: Repeat
-          wrapModeW: Repeat
+          wrapModeW: ClampToEdge
           borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
           mipmaps: false
         type: Texture2D
     renderTarget2:
       typeIdx: 9
       value:
-        id: 00000000-0000-0000-0000-000000000000
+        id: ffffffff-ffff-ffff-ffff-ffffffffffff
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
           wrapModeV: Repeat
-          wrapModeW: Repeat
+          wrapModeW: ClampToEdge
           borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
           mipmaps: false
         type: Texture2D
     renderTarget3:
       typeIdx: 9
       value:
-        id: 00000000-0000-0000-0000-000000000000
+        id: ffffffff-ffff-ffff-ffff-ffffffffffff
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
           wrapModeV: Repeat
-          wrapModeW: Repeat
+          wrapModeW: ClampToEdge
           borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
           mipmaps: false
         type: Texture2D
-    "vfxBatchEnable[0]":
-      typeIdx: 2
-      value: false
-    "vfxBatchEnable[10]":
-      typeIdx: 2
-      value: false
-    "vfxBatchEnable[11]":
-      typeIdx: 2
-      value: false
-    "vfxBatchEnable[12]":
-      typeIdx: 2
-      value: false
-    "vfxBatchEnable[13]":
-      typeIdx: 2
-      value: false
-    "vfxBatchEnable[14]":
-      typeIdx: 2
-      value: false
-    "vfxBatchEnable[15]":
-      typeIdx: 2
-      value: false
-    "vfxBatchEnable[16]":
-      typeIdx: 2
-      value: false
-    "vfxBatchEnable[17]":
-      typeIdx: 2
-      value: false
-    "vfxBatchEnable[18]":
-      typeIdx: 2
-      value: false
-    "vfxBatchEnable[19]":
-      typeIdx: 2
-      value: false
-    "vfxBatchEnable[1]":
-      typeIdx: 2
-      value: false
-    "vfxBatchEnable[20]":
-      typeIdx: 2
-      value: false
-    "vfxBatchEnable[21]":
-      typeIdx: 2
-      value: false
-    "vfxBatchEnable[22]":
-      typeIdx: 2
-      value: false
-    "vfxBatchEnable[23]":
-      typeIdx: 2
-      value: false
-    "vfxBatchEnable[24]":
-      typeIdx: 2
-      value: false
-    "vfxBatchEnable[25]":
-      typeIdx: 2
-      value: false
-    "vfxBatchEnable[26]":
-      typeIdx: 2
-      value: false
-    "vfxBatchEnable[27]":
-      typeIdx: 2
-      value: false
-    "vfxBatchEnable[28]":
-      typeIdx: 2
-      value: false
-    "vfxBatchEnable[29]":
-      typeIdx: 2
-      value: false
-    "vfxBatchEnable[2]":
-      typeIdx: 2
-      value: false
-    "vfxBatchEnable[30]":
-      typeIdx: 2
-      value: false
-    "vfxBatchEnable[31]":
-      typeIdx: 2
-      value: false
-    "vfxBatchEnable[3]":
-      typeIdx: 2
-      value: false
-    "vfxBatchEnable[4]":
-      typeIdx: 2
-      value: false
-    "vfxBatchEnable[5]":
-      typeIdx: 2
-      value: false
-    "vfxBatchEnable[6]":
-      typeIdx: 2
-      value: false
-    "vfxBatchEnable[7]":
-      typeIdx: 2
-      value: false
-    "vfxBatchEnable[8]":
-      typeIdx: 2
-      value: false
-    "vfxBatchEnable[9]":
-      typeIdx: 2
-      value: false
-    vfxNumCopies:
-      typeIdx: 0
-      value: 0
-    vfxOffsetInstancesRead:
-      typeIdx: 0
-      value: 0
-    vfxTargetSizeRead:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    vfxTargetWidth:
-      typeIdx: 0
-      value: 0
-  Pass: !<reference> 997043e4-34d4-423e-9490-4d33d3ca1d94
-- !<PassInfo/6da31236-1954-4cb6-9ea6-f57e9f784372>
+  Pass: !<reference> acb430ed-4267-44c7-a71f-9256910379ca
+- !<PassInfo/06bed026-5525-4c83-ac01-f2baa974c5f8>
   CachedProperties:
     - uReset:
         typeIdx: 0
@@ -2779,13 +2503,13 @@
     vfxTargetWidth:
       typeIdx: 0
       value: 0
-  Pass: !<reference> 738d1bc2-ccd9-44cf-a401-4aad345a33d8
-- !<PassInfo/e632c8c5-66cb-49b1-b157-ad2a1e64cdac>
+  Pass: !<reference> 00bdd5c1-95f2-4f40-bb09-f91ff51f32a2
+- !<PassInfo/e8417a8e-cee4-4de3-a7df-3f0e38bad33a>
   CachedProperties:
     []
-  DepthWrite: false
-  DepthTest: false
-  DepthFunction: Always
+  DepthWrite: true
+  DepthTest: true
+  DepthFunction: LessEqual
   TwoSided: true
   ColorMask: {x: true, y: true, z: true, w: true}
   CullMode: Back
@@ -2797,52 +2521,328 @@
     []
   BlendMode: Disabled
   Properties:
+    Port_Exponent_N002:
+      typeIdx: 1
+      value: 7.000000
+    Port_Input1_N017:
+      typeIdx: 1
+      value: 0.005000
+    Port_Input1_N063:
+      typeIdx: 1
+      value: 2000.000000
+    Port_Input1_N065:
+      typeIdx: 1
+      value: 0.000000
+    Port_Input1_N066:
+      typeIdx: 5
+      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    Port_Input1_N067:
+      typeIdx: 1
+      value: 2.000000
+    Port_Input2_N065:
+      typeIdx: 1
+      value: 1.000000
+    Port_Intensity_N002:
+      typeIdx: 1
+      value: 1.000000
+    Port_Normal_N002:
+      typeIdx: 4
+      value: {x: 0.000000, y: 0.000000, z: 1.000000}
+    Port_Position1_N068:
+      typeIdx: 1
+      value: 0.200000
+    Port_Position1_N178:
+      typeIdx: 1
+      value: 0.500000
+    Port_Position2_N068:
+      typeIdx: 1
+      value: 0.600000
+    Port_RangeMaxA_N018:
+      typeIdx: 1
+      value: 1.000000
+    Port_RangeMaxB_N018:
+      typeIdx: 1
+      value: -1.000000
+    Port_RangeMinA_N018:
+      typeIdx: 1
+      value: 0.000000
+    Port_RangeMinB_N018:
+      typeIdx: 1
+      value: -100.000000
+    Port_Value0_N068:
+      typeIdx: 5
+      value: {x: 1.000000, y: 0.541054, z: 0.345480, w: 1.000000}
+    Port_Value0_N178:
+      typeIdx: 5
+      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    Port_Value1_N068:
+      typeIdx: 5
+      value: {x: 1.000000, y: 0.834943, z: 0.445747, w: 1.000000}
+    Port_Value1_N178:
+      typeIdx: 5
+      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    Port_Value2_N068:
+      typeIdx: 5
+      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    Port_Value2_N178:
+      typeIdx: 5
+      value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+    Port_Value3_N068:
+      typeIdx: 5
+      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    "overrideTimeElapsed[0]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[10]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[11]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[12]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[13]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[14]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[15]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[16]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[17]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[18]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[19]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[1]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[20]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[21]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[22]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[23]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[24]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[25]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[26]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[27]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[28]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[29]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[2]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[30]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[31]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[3]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[4]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[5]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[6]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[7]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[8]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[9]":
+      typeIdx: 1
+      value: 0.000000
+    overrideTimeEnabled:
+      typeIdx: 0
+      value: 0
     renderTarget0:
       typeIdx: 9
       value:
-        id: ffffffff-ffff-ffff-ffff-ffffffffffff
+        id: 00000000-0000-0000-0000-000000000000
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
           wrapModeV: Repeat
-          wrapModeW: ClampToEdge
+          wrapModeW: Repeat
           borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
           mipmaps: false
         type: Texture2D
     renderTarget1:
       typeIdx: 9
       value:
-        id: ffffffff-ffff-ffff-ffff-ffffffffffff
+        id: 00000000-0000-0000-0000-000000000000
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
           wrapModeV: Repeat
-          wrapModeW: ClampToEdge
+          wrapModeW: Repeat
           borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
           mipmaps: false
         type: Texture2D
     renderTarget2:
       typeIdx: 9
       value:
-        id: ffffffff-ffff-ffff-ffff-ffffffffffff
+        id: 00000000-0000-0000-0000-000000000000
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
           wrapModeV: Repeat
-          wrapModeW: ClampToEdge
+          wrapModeW: Repeat
           borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
           mipmaps: false
         type: Texture2D
     renderTarget3:
       typeIdx: 9
       value:
-        id: ffffffff-ffff-ffff-ffff-ffffffffffff
+        id: 00000000-0000-0000-0000-000000000000
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
           wrapModeV: Repeat
-          wrapModeW: ClampToEdge
+          wrapModeW: Repeat
           borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
           mipmaps: false
         type: Texture2D
-  Pass: !<reference> f6aaf5c2-3777-433b-8b23-4e1c374540f3
+    "vfxBatchEnable[0]":
+      typeIdx: 2
+      value: false
+    "vfxBatchEnable[10]":
+      typeIdx: 2
+      value: false
+    "vfxBatchEnable[11]":
+      typeIdx: 2
+      value: false
+    "vfxBatchEnable[12]":
+      typeIdx: 2
+      value: false
+    "vfxBatchEnable[13]":
+      typeIdx: 2
+      value: false
+    "vfxBatchEnable[14]":
+      typeIdx: 2
+      value: false
+    "vfxBatchEnable[15]":
+      typeIdx: 2
+      value: false
+    "vfxBatchEnable[16]":
+      typeIdx: 2
+      value: false
+    "vfxBatchEnable[17]":
+      typeIdx: 2
+      value: false
+    "vfxBatchEnable[18]":
+      typeIdx: 2
+      value: false
+    "vfxBatchEnable[19]":
+      typeIdx: 2
+      value: false
+    "vfxBatchEnable[1]":
+      typeIdx: 2
+      value: false
+    "vfxBatchEnable[20]":
+      typeIdx: 2
+      value: false
+    "vfxBatchEnable[21]":
+      typeIdx: 2
+      value: false
+    "vfxBatchEnable[22]":
+      typeIdx: 2
+      value: false
+    "vfxBatchEnable[23]":
+      typeIdx: 2
+      value: false
+    "vfxBatchEnable[24]":
+      typeIdx: 2
+      value: false
+    "vfxBatchEnable[25]":
+      typeIdx: 2
+      value: false
+    "vfxBatchEnable[26]":
+      typeIdx: 2
+      value: false
+    "vfxBatchEnable[27]":
+      typeIdx: 2
+      value: false
+    "vfxBatchEnable[28]":
+      typeIdx: 2
+      value: false
+    "vfxBatchEnable[29]":
+      typeIdx: 2
+      value: false
+    "vfxBatchEnable[2]":
+      typeIdx: 2
+      value: false
+    "vfxBatchEnable[30]":
+      typeIdx: 2
+      value: false
+    "vfxBatchEnable[31]":
+      typeIdx: 2
+      value: false
+    "vfxBatchEnable[3]":
+      typeIdx: 2
+      value: false
+    "vfxBatchEnable[4]":
+      typeIdx: 2
+      value: false
+    "vfxBatchEnable[5]":
+      typeIdx: 2
+      value: false
+    "vfxBatchEnable[6]":
+      typeIdx: 2
+      value: false
+    "vfxBatchEnable[7]":
+      typeIdx: 2
+      value: false
+    "vfxBatchEnable[8]":
+      typeIdx: 2
+      value: false
+    "vfxBatchEnable[9]":
+      typeIdx: 2
+      value: false
+    vfxNumCopies:
+      typeIdx: 0
+      value: 0
+    vfxOffsetInstancesRead:
+      typeIdx: 0
+      value: 0
+    vfxTargetSizeRead:
+      typeIdx: 3
+      value: {x: 1.000000, y: 1.000000}
+    vfxTargetWidth:
+      typeIdx: 0
+      value: 0
+  Pass: !<reference> 36856652-bc87-4a23-b997-301ea60a62ca

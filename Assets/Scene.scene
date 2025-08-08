@@ -7819,15 +7819,12 @@
     {}
   ScriptInputs:
     "":
-      modelProvider: Gemini
       image: !<reference.Image> abcf7d86-1850-4010-9d79-1240ca45b7b2
       projectionImage: !<reference.Image> 61883b6f-6177-43a1-a123-a07876764a6a
       textDisplay: !<reference.Text> 77868bbd-5aba-42aa-8623-bcb67dd7e80b
       asrQueryController: !<MappingBased.AssignableType> 6883c5bc-0001-42b9-9002-2bf5eaab31d3
       spinner: !<reference.SceneObject> 76478c66-be19-4af4-a6c8-cef8c826745d
       nextButton: !<reference.SceneObject> 1708ada9-a83e-4854-8f98-5d6e2056bc1e
-      micOff: !<reference.SceneObject> bfee05d5-46a7-4c0b-8de7-78ec127099b5
-      micOn: !<reference.SceneObject> 172dcef8-5f5c-4a35-a410-eebf8d150ab7
   ScriptTypes:
     "":
       {}

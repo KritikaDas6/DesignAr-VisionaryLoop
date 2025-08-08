@@ -56,11 +56,11 @@ export class ContinuousVFXBurstOnPinchWithButtonFeedback extends BaseScriptCompo
   private calculatedMaxDistance: number = 1.0;
 
   onAwake() {
-    print("[VFXBurst] onAwake called - script is loading");
-    print("[VFXBurst] Script attached to: " + this.getSceneObject().name);
-    
+//    print("[VFXBurst] onAwake called - script is loading");
+//    print("[VFXBurst] Script attached to: " + this.getSceneObject().name);
+//    
     this.createEvent("OnStartEvent").bind(() => {
-      print("[VFXBurst] OnStartEvent triggered");
+//      print("[VFXBurst] OnStartEvent triggered");
       this.onStart();
     });
     this.createEvent("UpdateEvent").bind(() => {
@@ -84,14 +84,14 @@ export class ContinuousVFXBurstOnPinchWithButtonFeedback extends BaseScriptCompo
     // Calculate responsive range based on object size
     this.calculateResponsiveRange();
     
-    print("[VFXBurst] Target object assigned: " + this.targetObject.name);
-    print("[VFXBurst] Responsive range: " + this.useResponsiveRange);
-    print("[VFXBurst] Range: " + this.calculatedMinDistance + " to " + this.calculatedMaxDistance + " units");
-    
+//    print("[VFXBurst] Target object assigned: " + this.targetObject.name);
+//    print("[VFXBurst] Responsive range: " + this.useResponsiveRange);
+//    print("[VFXBurst] Range: " + this.calculatedMinDistance + " to " + this.calculatedMaxDistance + " units");
+//    
     this.vfxObject.enabled = false;
     this.handInputData = HandInputData.getInstance();
-    
-    print("[VFXBurst] Script setup complete");
+//    
+//    print("[VFXBurst] Script setup complete");
   }
 
   private calculateResponsiveRange() {
@@ -148,7 +148,7 @@ export class ContinuousVFXBurstOnPinchWithButtonFeedback extends BaseScriptCompo
       // Disable VFX when not in range
       this.vfxObject.enabled = false;
       if (Math.random() < 0.01) { // 1% chance per frame to avoid spam
-        print("[VFXBurst] Hand not in range");
+//        print("[VFXBurst] Hand not in range");
       }
     }
   }
@@ -198,9 +198,9 @@ export class ContinuousVFXBurstOnPinchWithButtonFeedback extends BaseScriptCompo
           
           const inRange = distance >= this.calculatedMinDistance && distance <= this.calculatedMaxDistance;
           
-          print("[VFXBurst] Range check - Hand: " + handPosition + ", Target: " + targetPosition + 
-                ", Distance: " + distance + " (Range: " + this.calculatedMinDistance + "-" + this.calculatedMaxDistance + 
-                ", InRange: " + inRange + ")");
+//          print("[VFXBurst] Range check - Hand: " + handPosition + ", Target: " + targetPosition + 
+//                ", Distance: " + distance + " (Range: " + this.calculatedMinDistance + "-" + this.calculatedMaxDistance + 
+//                ", InRange: " + inRange + ")");
           
           if (inRange) {
             return true;

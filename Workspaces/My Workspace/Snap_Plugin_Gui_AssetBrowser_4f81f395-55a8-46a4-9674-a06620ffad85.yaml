@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 2023
+    size: 2022
     values:
       - AddedAsset
       - AddedAsset/Device Camera Texture.deviceCameraTexture
@@ -932,7 +932,6 @@ CollapsedEntities:
       - Remote Service Gateway.lspkg/Utils/Promisfy.ts
       - Remote Service Gateway.lspkg/package.native
       - Scene.scene
-      - Script
       - Script 2.js
       - Script.js
       - Script/ContinuousVFXBurstOnPinchWithButtonFeedback.ts
