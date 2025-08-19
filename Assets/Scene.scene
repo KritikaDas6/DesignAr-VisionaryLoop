@@ -3141,7 +3141,6 @@
     hasSegmentScaleCompensation: false
   Children:
     - !<own> d263d930-1e86-4a56-94cc-b90ca66fb5b0
-    - !<own> 442dad1b-ee82-497f-9e60-50e892249296
     - !<own> b7119176-db04-4dcb-af76-0f824bf08fef
     - !<own> 626beb05-d61d-442f-96e9-ddfa87fda0c7
   Components:
@@ -3875,7 +3874,7 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: Open your hand menu to tweak opacity & color
+  Text: "User your hand menu to tweak opacity, color, and lock it in place."
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -5881,21 +5880,6 @@
     wrist_to_ring_R: !<reference> e7132e3e-b3ba-4649-b95e-c87d70e65bd4
     wrist_to_thumb_L: !<reference> 24af858d-0f64-4ab0-83d3-07d57ae97fbb
     wrist_to_thumb_R: !<reference> 27102be1-b90b-4521-841b-b0e001c8824f
-- !<SceneObject/442dad1b-ee82-497f-9e60-50e892249296>
-  PrefabRemaps:
-    []
-  Name: "Guide1[delete]"
-  Enabled: false
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 75.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.250000, y: 1.250000, z: 1.250000}
-    hasSegmentScaleCompensation: false
-  Children:
-    - !<own> fcc38dd0-3da7-417a-9021-92ee1a40c53b
-  Components:
-    - !<own> 4e4675df-290e-497b-ae88-c4527075ab29
 - !<SceneObject/44804661-ea03-4664-943f-5f203b7a658e>
   PrefabRemaps:
     []
@@ -6376,29 +6360,6 @@
   RotationAngle: 0
   Pivot: {x: 0.000000, y: 0.000000}
   ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
-- !<ScriptComponent/4e4675df-290e-497b-ae88-c4527075ab29>
-  PrefabRemaps:
-    []
-  Name: guidescript
-  Enabled: true
-  ScriptAsset: !<reference> 9d34602f-fc7b-4058-be47-9a80b381cb13
-  ScriptInputsDefault:
-    cornerPosition: true
-    updateEveryFrame: true
-    debugMode: true
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      buttonObject: !<reference.SceneObject> fcc38dd0-3da7-417a-9021-92ee1a40c53b
-      distanceFromCamera: !<float> -20.000000
-      cornerPosition: !<float> 0.000000
-      screenOffset: !<Vec2> {x: 0.000000, y: 4.000000}
-      updateEveryFrame: true
-      debugMode: true
-  ScriptTypes:
-    "":
-      {}
 - !<SceneObject/4e5ed911-cad7-4291-a283-1fd5a9877b58>
   PrefabRemaps:
     []
@@ -7533,26 +7494,6 @@
     - !<own> 6d5e5898-0f67-41c8-96f7-4e13d7be339e
   Components:
     []
-- !<RenderMeshVisual/63eeadb7-dc60-40a4-aae1-6d1045434be6>
-  PrefabRemaps:
-    []
-  Name: Render Mesh Visual
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> 65eb0e4d-3e9f-4c7a-a812-276c8dc974b7
-  Mesh: !<reference> 1196c138-1598-4ab3-9468-1da4aac9ef88
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
 - !<SceneObject/6402c1d1-2da2-4081-a56c-01c5de848c66>
   PrefabRemaps:
     []
@@ -9394,7 +9335,7 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: You’re all set—let’s trace!
+  Text: "Locked in? Let's trace!!"
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -11858,7 +11799,8 @@
   ShadowDensity: 1.000000
   Text: |-
     Imagine it. Project it. Trace it.
-    Turn wild ideas into real sketches — just speak it, place it in your world, and trace it into something real.
+    Turn wild ideas into real sketches! 
+    Just speak it, place it in your world, and trace it into something real.
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -18285,21 +18227,6 @@
     bottom: -0.800000
     right: 3.200000
     top: 0.800000
-- !<SceneObject/fcc38dd0-3da7-417a-9021-92ee1a40c53b>
-  PrefabRemaps:
-    []
-  Name: Guide1
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 5.000000, y: 2.702703, z: 2.702703}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 63eeadb7-dc60-40a4-aae1-6d1045434be6
 - !<ColliderComponent/fcf31a75-9e0b-45d3-aeda-d49ad7c1ae20>
   PrefabRemaps:
     []
