@@ -230,9 +230,11 @@ export class WorldQueryHitVoiceCommand extends BaseScriptComponent {
                 let toRotation;
                 const upDot = hitNormal.dot(vec3.up());
                 if (upDot > 0.9) {
-                    toRotation = this.createRotationFromDegrees(this.floorRotation);
+                    // Floor: Use forward direction only, ignore camera rotation
+                    toRotation = this.createFloorRotation(cameraDirection);
                 } else if (upDot < -0.9) {
-                    toRotation = this.createRotationFromDegrees(this.ceilingRotation);
+                    // Ceiling: Use forward direction only, ignore camera rotation
+                    toRotation = this.createCeilingRotation(cameraDirection);
                 } else {
                     toRotation = quat.lookAt(hitNormal, vec3.up());
                 }
@@ -340,9 +342,15 @@ export class WorldQueryHitVoiceCommand extends BaseScriptComponent {
         let toRotation;
         const upDot = hitNormal.dot(vec3.up());
         if (upDot > 0.9) {
-            toRotation = this.createRotationFromDegrees(this.floorRotation);
+            // Floor: Use forward direction only, ignore camera rotation
+            const cameraTransform = this.camera.getTransform();
+            const cameraDirection = cameraTransform.back;
+            toRotation = this.createFloorRotation(cameraDirection);
         } else if (upDot < -0.9) {
-            toRotation = this.createRotationFromDegrees(this.ceilingRotation);
+            // Ceiling: Use forward direction only, ignore camera rotation
+            const cameraTransform = this.camera.getTransform();
+            const cameraDirection = cameraTransform.back;
+            toRotation = this.createCeilingRotation(cameraDirection);
         } else {
             toRotation = quat.lookAt(hitNormal, vec3.up());
         }
@@ -396,5 +404,33 @@ export class WorldQueryHitVoiceCommand extends BaseScriptComponent {
         const quatZ = new quat(0, 0, Math.sin(zRad/2), Math.cos(zRad/2));
         
         return quatX.multiply(quatY).multiply(quatZ);
+    }
+
+    // NEW: Create floor rotation that ignores camera rotation and only uses forward direction
+    private createFloorRotation(cameraDirection: vec3): quat {
+        // Project camera direction onto XZ plane to ignore pitch (up/down rotation)
+        const forwardDirection = new vec3(cameraDirection.x, 0, cameraDirection.z).normalize();
+        
+        // Create rotation based on the forward direction only
+        const forwardRotation = quat.lookAt(forwardDirection, vec3.up());
+        
+        // Apply the floor rotation offset
+        const floorRotationQuat = this.createRotationFromDegrees(this.floorRotation);
+        
+        return forwardRotation.multiply(floorRotationQuat);
+    }
+
+    // NEW: Create ceiling rotation that ignores camera rotation and only uses forward direction
+    private createCeilingRotation(cameraDirection: vec3): quat {
+        // Project camera direction onto XZ plane to ignore pitch (up/down rotation)
+        const forwardDirection = new vec3(cameraDirection.x, 0, cameraDirection.z).normalize();
+        
+        // Create rotation based on the forward direction only
+        const forwardRotation = quat.lookAt(forwardDirection, vec3.up());
+        
+        // Apply the ceiling rotation offset
+        const ceilingRotationQuat = this.createRotationFromDegrees(this.ceilingRotation);
+        
+        return forwardRotation.multiply(ceilingRotationQuat);
     }
 }

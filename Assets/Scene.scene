@@ -348,7 +348,6 @@
   ScriptInputsDefault:
     indexToSpawn: true
     objectsToSpawn: true
-    filterEnabled: true
     enableVoiceCommands: true
   ScriptTypesDefault:
     {}
@@ -358,10 +357,10 @@
       targetObject: !<reference.SceneObject> ffaa6f68-ac8a-4440-9fc4-88cde3fe47c0
       objectsToSpawn: !<reference.SceneObject[]>
         []
-      filterEnabled: false
+      filterEnabled: true
       camera: !<reference.Camera> 00000000-0000-0065-0000-000000000065
-      floorRotation: !<Vec3> {x: 0.000000, y: 135.000000, z: 90.000000}
-      ceilingRotation: !<Vec3> {x: 0.000000, y: 135.000000, z: -90.000000}
+      floorRotation: !<Vec3> {x: 0.000000, y: 0.000000, z: 90.000000}
+      ceilingRotation: !<Vec3> {x: 0.000000, y: 0.000000, z: -90.000000}
       enableVoiceCommands: true
       resetInteractable: !<MappingBased.AssignableType> f1a0d4f1-9154-4d9f-ab08-c072d51a8d30
       confirmButton: !<reference.SceneObject> 26f8d966-e6b7-432d-97e0-1a98519c0537
@@ -9871,7 +9870,7 @@
   Enabled: false
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -40.000000}
+    position: {x: 0.000000, y: 0.000000, z: -100.000000}
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 0.800000, y: 0.800000, z: 0.800000}
     hasSegmentScaleCompensation: false
@@ -10032,7 +10031,6 @@
     autoScaleContent: true
     relativeZ: true
     isContentInteractable: true
-    allowTranslation: true
     cutOut: true
     minimumSize: true
     maximumSize: true
@@ -10061,7 +10059,7 @@
       autoScaleContent: true
       relativeZ: false
       isContentInteractable: false
-      allowTranslation: true
+      allowTranslation: false
       cutOut: false
       minimumSize: !<Vec2> {x: 10.000000, y: 10.000000}
       maximumSize: !<Vec2> {x: 150.000000, y: 150.000000}
@@ -18115,10 +18113,10 @@
   PrefabRemaps:
     []
   Name: HomeUpdate
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 6.000000, z: -60.000000}
+    position: {x: 0.000000, y: 6.000000, z: -100.000000}
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -18279,7 +18277,7 @@
   PrefabRemaps:
     []
   Name: Project
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: -40.000000}
