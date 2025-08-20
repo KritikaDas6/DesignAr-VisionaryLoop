@@ -2922,8 +2922,8 @@
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 35
-  Font: !<reference> 742030c4-491a-4efb-a147-8bea2586b68f
+  FontSize: 40
+  Font: !<reference> 085494f6-9c8c-4006-88a9-9d9c622c8336
   LayoutRect:
     left: -11.000000
     bottom: 0.000000
@@ -3526,7 +3526,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: -10.000000, z: 3.000000}
+    position: {x: 0.000000, y: -10.500000, z: 3.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -14831,6 +14831,7 @@
   ShadowDensity: 1.000000
   Text: |-
     Imagine it. Project it. Trace it.
+    
     Turn wild ideas into real sketches! 
     Just speak it, place it in your world, and trace it into something real.
   Editable: false
