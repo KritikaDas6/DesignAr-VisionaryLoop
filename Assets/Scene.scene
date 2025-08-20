@@ -3550,7 +3550,7 @@
       vfxObject: !<reference.SceneObject> b579e28c-c6ff-463f-a8ed-3911263298f0
       hand: right
       positionOffset: !<Vec3> {x: 0.000000, y: 0.000000, z: -1.000000}
-      targetObject: !<reference.SceneObject> d5d32d8f-cfb7-4023-acad-683aeb966758
+      targetObject: !<reference.SceneObject> 515009ce-ffd6-4064-91ab-ec676ee417ba
       minDistanceMultiplier: 0.100000
       maxDistanceMultiplier: !<float> 2.000000
       useResponsiveRange: true
@@ -18829,7 +18829,7 @@
       vfxObject: !<reference.SceneObject> fe38e8fe-9dd2-4ec5-ae5e-0bc0dfb7fb77
       hand: left
       positionOffset: !<Vec3> {x: 0.000000, y: 0.000000, z: -1.000000}
-      targetObject: !<reference.SceneObject> d5d32d8f-cfb7-4023-acad-683aeb966758
+      targetObject: !<reference.SceneObject> 515009ce-ffd6-4064-91ab-ec676ee417ba
       minDistanceMultiplier: 0.500000
       maxDistanceMultiplier: !<float> 2.000000
       useResponsiveRange: true
