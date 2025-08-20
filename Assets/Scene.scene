@@ -872,9 +872,9 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.500000, y: 6.575161, z: 0.000000}
+    position: {x: 0.500000, y: 4.182327, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 17.000000, y: 17.000000, z: 17.000000}
+    scale: {x: 13.000000, y: 13.000000, z: 13.000000}
     hasSegmentScaleCompensation: false
   Children:
     []
@@ -2422,7 +2422,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 1.999999, y: -9.000000, z: 0.000000}
+    position: {x: 1.500000, y: -9.000000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 3.000000, y: 3.000000, z: 3.000000}
     hasSegmentScaleCompensation: false
@@ -2578,7 +2578,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 1.999999, y: -9.000000, z: 0.000000}
+    position: {x: 1.500000, y: -9.000000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 3.000000, y: 3.000000, z: 3.000000}
     hasSegmentScaleCompensation: false
@@ -3897,7 +3897,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 9.500000, z: 0.000000}
+    position: {x: 4.000000, y: 6.000000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -4334,7 +4334,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 4.000000, y: 3.460808, z: 0.000000}
+    position: {x: 4.000000, y: 3.500000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -4536,9 +4536,9 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 1.401140, z: 0.000000}
+    position: {x: 0.000000, y: 1.500000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 30.000000, y: 16.216200, z: 16.216200}
+    scale: {x: 30.000000, y: 16.000000, z: 16.000000}
     hasSegmentScaleCompensation: false
   Children:
     []
@@ -6303,7 +6303,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.500000, y: -5.039192, z: 0.000000}
+    position: {x: 0.500000, y: -5.000000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 10.000000, y: 10.000000, z: 10.000000}
     hasSegmentScaleCompensation: false
@@ -7304,6 +7304,7 @@
   Enabled: false
   ScriptAsset: !<reference> 74eafc23-e98b-4073-ab18-82ca532994e3
   ScriptInputsDefault:
+    _xAxisEnabled: true
     _zAxisEnabled: true
     _axisBufferDegrees: true
     _axisEasing: true
@@ -7312,7 +7313,7 @@
     {}
   ScriptInputs:
     "":
-      _xAxisEnabled: true
+      _xAxisEnabled: false
       _yAxisEnabled: false
       _zAxisEnabled: false
       _axisBufferDegrees: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -7348,7 +7349,7 @@
   Enabled: false
   Layers: 1
   LocalTransform:
-    position: {x: -2.000000, y: 25.000000, z: 0.000000}
+    position: {x: -1.500000, y: 25.000000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -7852,7 +7853,7 @@
   Enabled: false
   Layers: 1
   LocalTransform:
-    position: {x: -2.000000, y: 25.000000, z: 0.000000}
+    position: {x: -1.500000, y: 25.000000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -8316,9 +8317,9 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 6.000000, z: 0.000000}
+    position: {x: 0.000000, y: 3.500000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 40.000000, y: 21.621626, z: 21.621626}
+    scale: {x: 30.000000, y: 16.000000, z: 16.000000}
     hasSegmentScaleCompensation: false
   Children:
     []
@@ -8689,6 +8690,7 @@
   Enabled: false
   ScriptAsset: !<reference> 74eafc23-e98b-4073-ab18-82ca532994e3
   ScriptInputsDefault:
+    _xAxisEnabled: true
     _zAxisEnabled: true
     _axisBufferDegrees: true
     _axisEasing: true
@@ -8697,7 +8699,7 @@
     {}
   ScriptInputs:
     "":
-      _xAxisEnabled: true
+      _xAxisEnabled: false
       _yAxisEnabled: false
       _zAxisEnabled: false
       _axisBufferDegrees: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -10645,6 +10647,7 @@
   Enabled: false
   ScriptAsset: !<reference> 74eafc23-e98b-4073-ab18-82ca532994e3
   ScriptInputsDefault:
+    _xAxisEnabled: true
     _zAxisEnabled: true
     _axisBufferDegrees: true
     _axisEasing: true
@@ -10653,7 +10656,7 @@
     {}
   ScriptInputs:
     "":
-      _xAxisEnabled: true
+      _xAxisEnabled: false
       _yAxisEnabled: false
       _zAxisEnabled: false
       _axisBufferDegrees: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -10905,6 +10908,7 @@
   Enabled: false
   ScriptAsset: !<reference> 74eafc23-e98b-4073-ab18-82ca532994e3
   ScriptInputsDefault:
+    _xAxisEnabled: true
     _zAxisEnabled: true
     _axisBufferDegrees: true
     _axisEasing: true
@@ -10913,7 +10917,7 @@
     {}
   ScriptInputs:
     "":
-      _xAxisEnabled: true
+      _xAxisEnabled: false
       _yAxisEnabled: false
       _zAxisEnabled: false
       _axisBufferDegrees: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -11269,7 +11273,7 @@
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 90
+  FontSize: 60
   Font: !<reference> 642727e4-0ca5-4667-8a47-08d026610157
   LayoutRect:
     left: -15.000000
@@ -11456,9 +11460,9 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 6.000000, z: 0.000000}
+    position: {x: 0.000000, y: 3.500000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 40.000000, y: 21.621626, z: 21.621626}
+    scale: {x: 30.000000, y: 16.000000, z: 16.000000}
     hasSegmentScaleCompensation: false
   Children:
     []
@@ -11820,7 +11824,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 4.000000, y: 4.960808, z: 0.000000}
+    position: {x: 4.000000, y: 5.000000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -12006,7 +12010,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 9.500000, z: 0.000000}
+    position: {x: 4.000000, y: 6.000000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -13341,7 +13345,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 11.000000, z: 0.000000}
+    position: {x: 4.000000, y: 7.500000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -13922,7 +13926,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 11.000000, z: 0.000000}
+    position: {x: 4.000000, y: 7.500000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -14202,7 +14206,7 @@
   PrefabRemaps:
     []
   Name: Guide3
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: -1.500000, y: 25.000000, z: 0.000000}
@@ -14728,7 +14732,7 @@
   Enabled: false
   Layers: 1
   LocalTransform:
-    position: {x: -2.000000, y: 25.000000, z: 0.000000}
+    position: {x: -1.500000, y: 25.000000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -16177,12 +16181,14 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: "User your hand menu to tweak opacity, color, and lock it in place."
+  Text: |-
+    User your hand menu to tweak opacity, color, and lock it 
+    in place.
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 90
+  FontSize: 60
   Font: !<reference> 642727e4-0ca5-4667-8a47-08d026610157
   LayoutRect:
     left: -15.000000
@@ -16511,7 +16517,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 0.575159, z: 0.000000}
+    position: {x: 0.000000, y: -1.000000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -19445,9 +19451,9 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 6.000000, z: 0.000000}
+    position: {x: 0.000000, y: 3.500000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 40.000000, y: 21.621626, z: 21.621626}
+    scale: {x: 30.000000, y: 16.000000, z: 16.000000}
     hasSegmentScaleCompensation: false
   Children:
     []
@@ -19679,7 +19685,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 23.000000, y: -28.000000, z: 60.000000}
+    position: {x: 23.000000, y: -37.000000, z: 60.000000}
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -20682,7 +20688,7 @@
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
@@ -21358,12 +21364,14 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: Pinch corners of the image to resize!
+  Text: |-
+    Pinch corners of the image 
+    to resize!
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 90
+  FontSize: 60
   Font: !<reference> 642727e4-0ca5-4667-8a47-08d026610157
   LayoutRect:
     left: -15.000000
@@ -23534,7 +23542,7 @@
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
@@ -23548,7 +23556,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 1.999999, y: -9.000000, z: 0.000000}
+    position: {x: 1.500000, y: -9.000000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 3.000000, y: 3.000000, z: 3.000000}
     hasSegmentScaleCompensation: false
