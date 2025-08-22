@@ -1,0 +1,30 @@
+- !<AssetImportMetadata/39babfd3-c5a5-4ea9-89a8-8147b7ca7897>
+  ImportedAssetIds:
+    AnimatedTexture: !<reference> aaadeb86-2a51-446a-8552-6cae2a01a97a
+    animation_bubble_0.png: !<reference> 64396b25-78d1-4892-aca6-bff2473e0a2a
+  ImporterName: LensAnimationImporter
+  PrimaryAsset: !<reference> aaadeb86-2a51-446a-8552-6cae2a01a97a
+  PackageType: LegacyPackage
+  PackagePolicy: CannotBeUnpackedTransparent
+  ExtraData:
+    {}
+  AssetDataMap:
+    AnimatedTexture: !<own> 1b0561a4-5b75-4978-a4b5-d77d72568290
+  DependentFiles:
+    - animation_bubble_0.png
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<SingleCompressionSettings>
+    CompressorName: None
+    CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<AnimatedTextureData/1b0561a4-5b75-4978-a4b5-d77d72568290>
+  AutoPlay: true
+  Reversed: false
+  PingPong: false
+  CurrentSequence: default
+  KeyFramesData:
+    default:
+      - time: 0.000000
+        value: 0
+      - time: 1.000000
+        value: 29
