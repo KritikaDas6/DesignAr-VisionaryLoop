@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 2031
+    size: 2022
     values:
       - AddedAsset
       - AddedAsset/Device Camera Texture.deviceCameraTexture
@@ -10,12 +10,8 @@ CollapsedEntities:
       - AddedAsset/Echopark.hdr/Specular
       - AddedAsset/Precise Object Toggle.lsc
       - AddedAsset/Render Target.renderTarget
+      - Animation
       - Animation/AnimationStop.ts
-      - Animation/Animation_bubble/animation_bubble.mat
-      - Animation/Animation_bubble/animation_bubble.ss_graph
-      - Animation/Animation_bubble/animation_bubble.t3d
-      - Animation/Animation_bubble/animation_bubble.t3d/animation
-      - Animation/Animation_bubble/animation_bubble.t3d/animation_bubble_0.png
       - Animation/CartoonWobble.wav
       - Animation/ImageMaterial.mat
       - Animation/animation.t3d
@@ -76,14 +72,11 @@ CollapsedEntities:
       - GenAI/Snap3DInteractableFactory.ts
       - GenAI/SphereController.ts
       - GenAI/Untitled JavaScript.js
-      - HS UI Assets
-      - HS UI Assets/Guide
       - HS UI Assets/Guide/Guide1.png
       - HS UI Assets/Guide/Guide2.png
       - HS UI Assets/Guide/Guide3.png
       - HS UI Assets/Guide/Guide4.png
       - HS UI Assets/Guide/ImageMaterial.mat
-      - HS UI Assets/Guide/Unlit Guide
       - HS UI Assets/Guide/Unlit Guide/Unlit Guide BG Outline.mat
       - HS UI Assets/Guide/Unlit Guide/Unlit Guide pagination 1.mat
       - HS UI Assets/Guide/Unlit Guide/Unlit Guide pagination 2.mat
@@ -549,7 +542,6 @@ CollapsedEntities:
       - LSTween.lspkg/TweenJS/mainGroup.ts
       - LSTween.lspkg/package.native
       - MaterialParams.png
-      - Mic animation
       - Mic animation/Mic.mat
       - Mic animation/MicBlack.png
       - Mic animation/MicWhite.png
@@ -624,7 +616,6 @@ CollapsedEntities:
       - Mic animation/Spectacles 3D Hand Hints.lspkg/Textures/Hands_Interaction_Glow_Mask.png
       - Mic animation/Spectacles 3D Hand Hints.lspkg/Textures/Hands_Opacity_Gradient.png
       - Mic animation/Spectacles 3D Hand Hints.lspkg/package.native
-      - Mic animation/SpectaclesInteractionKit
       - Mic animation/SpectaclesInteractionKit/Assets
       - Mic animation/SpectaclesInteractionKit/Assets/Audio
       - Mic animation/SpectaclesInteractionKit/Assets/Audio/HoverAudioTrack.wav

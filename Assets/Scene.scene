@@ -2922,8 +2922,8 @@
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 35
-  Font: !<reference> 742030c4-491a-4efb-a147-8bea2586b68f
+  FontSize: 40
+  Font: !<reference> 085494f6-9c8c-4006-88a9-9d9c622c8336
   LayoutRect:
     left: -11.000000
     bottom: 0.000000
@@ -8724,7 +8724,7 @@
   ScriptInputs:
     "":
       targetObjectToDisable: !<reference.SceneObject> 1f85d341-fb01-4b17-b9ec-b79e1005ced9
-      targetObjectToEnable: !<reference.SceneObject> fd7e6612-6f5d-47c1-b676-d1c02b28bc44
+      targetObjectToEnable: !<reference.SceneObject> 736cdcd3-6bd9-4fb6-a52d-ee4044a2ff7c
       isToggleButton: false
       editEventCallbacks: false
       customFunctionForOnButtonPinched: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
@@ -10333,22 +10333,6 @@
   ScriptTypes:
     "":
       {}
-- !<SceneObject/6f50d257-eb56-4e6d-b502-866da3b25f54>
-  PrefabRemaps:
-    []
-  Name: animation_bubble
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: -4.500000, y: 1.000000, z: 5.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: -10.000000}
-    scale: {x: 11.000000, y: 11.000001, z: 11.000001}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 8c0b81d0-6c12-48b5-b07f-0f1c684a0a3f
-    - !<own> 94941964-cc8e-4e70-9472-424c1d059efc
 - !<RenderMeshVisual/6f6e4394-3407-45f7-8050-d93eea54c5e2>
   PrefabRemaps:
     []
@@ -13692,25 +13676,6 @@
     - !<own> 44804661-ea03-4664-943f-5f203b7a658e
   Components:
     []
-- !<Image/8c0b81d0-6c12-48b5-b07f-0f1c684a0a3f>
-  PrefabRemaps:
-    []
-  Name: Image
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Fit
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> 23315ed9-1586-432e-93e1-fbafc1f7d3e7
-  FlipX: false
-  FlipY: false
-  RotationAngle: 0
-  Pivot: {x: 0.000000, y: 0.000000}
-  ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
 - !<SceneObject/8c59a2fa-ccef-4fc0-b890-c78b288053ec>
   PrefabRemaps:
     []
@@ -14418,23 +14383,6 @@
     - !<own> f423049a-cea1-4637-ab3e-8b9145629a73
     - !<own> 9afc1e3a-d29e-4b05-8372-87396aa2d133
     - !<own> 6c5d374a-a172-4810-90ef-479a7dbe8208
-- !<ScriptComponent/94941964-cc8e-4e70-9472-424c1d059efc>
-  PrefabRemaps:
-    []
-  Name: AnimationStop
-  Enabled: true
-  ScriptAsset: !<reference> b12ca9d8-6df9-4c6b-bb16-0454f9dd3925
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      audioTrack: !<reference.AudioTrackAsset> 76a2cba7-7d08-483c-9a51-b08f583a1554
-      revealObject: !<reference.SceneObject> 6f50d257-eb56-4e6d-b502-866da3b25f54
-  ScriptTypes:
-    "":
-      {}
 - !<ScreenTransform/94d755df-1f65-48d6-9ff4-3d645f494eb2>
   PrefabRemaps:
     []
@@ -15617,10 +15565,7 @@
     - !<own> fb5d2821-bf8b-44be-a7ca-17d21cf33263
     - !<own> 81271654-50a8-4493-966b-7806f21ceb5c
     - !<own> 1f85d341-fb01-4b17-b9ec-b79e1005ced9
-    - !<own> fd7e6612-6f5d-47c1-b676-d1c02b28bc44
-    - !<own> 6fcbc1b3-7533-422d-86f5-58e395741061
-    - !<own> c9c7024f-4fbd-4650-aa2a-d1d25a3b68eb
-    - !<own> fa650408-36b4-4fa3-aa85-4e979b080732
+    - !<own> 736cdcd3-6bd9-4fb6-a52d-ee4044a2ff7c
     - !<own> ecbfc884-b273-4d89-bee2-0d9ada79a939
   Components:
     []
@@ -22378,7 +22323,10 @@
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
-    - !<own> 736cdcd3-6bd9-4fb6-a52d-ee4044a2ff7c
+    - !<own> fd7e6612-6f5d-47c1-b676-d1c02b28bc44
+    - !<own> 6fcbc1b3-7533-422d-86f5-58e395741061
+    - !<own> c9c7024f-4fbd-4650-aa2a-d1d25a3b68eb
+    - !<own> fa650408-36b4-4fa3-aa85-4e979b080732
   Components:
     []
 - !<ScriptComponent/ed0c0346-6662-41b4-b0de-906276127f3f>
@@ -23703,7 +23651,6 @@
     hasSegmentScaleCompensation: false
   Children:
     - !<own> bbcef45f-1cea-45e9-b0da-989b6acd8b1a
-    - !<own> 6f50d257-eb56-4e6d-b502-866da3b25f54
     - !<own> 3b1e37c1-a5a1-4895-8fe3-3096f7415af8
   Components:
     - !<own> bc77266a-a5a4-4bec-8c3a-cb92b28ff5a5
