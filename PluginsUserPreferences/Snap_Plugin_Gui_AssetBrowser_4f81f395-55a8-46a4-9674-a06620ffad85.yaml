@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 2022
+    size: 2031
     values:
       - AddedAsset
       - AddedAsset/Device Camera Texture.deviceCameraTexture
@@ -12,6 +12,10 @@ CollapsedEntities:
       - AddedAsset/Render Target.renderTarget
       - Animation
       - Animation/AnimationStop.ts
+      - Animation/Animation_bubble/Animation_bubble/animation_bubble.mat
+      - Animation/Animation_bubble/Animation_bubble/animation_bubble.ss_graph
+      - Animation/Animation_bubble/Animation_bubble/animation_bubble.t3d
+      - Animation/Animation_bubble/Animation_bubble/animation_bubble.t3d/animation_bubble_0.png
       - Animation/CartoonWobble.wav
       - Animation/ImageMaterial.mat
       - Animation/animation.t3d
@@ -72,11 +76,13 @@ CollapsedEntities:
       - GenAI/Snap3DInteractableFactory.ts
       - GenAI/SphereController.ts
       - GenAI/Untitled JavaScript.js
+      - HS UI Assets/Guide
       - HS UI Assets/Guide/Guide1.png
       - HS UI Assets/Guide/Guide2.png
       - HS UI Assets/Guide/Guide3.png
       - HS UI Assets/Guide/Guide4.png
       - HS UI Assets/Guide/ImageMaterial.mat
+      - HS UI Assets/Guide/Unlit Guide
       - HS UI Assets/Guide/Unlit Guide/Unlit Guide BG Outline.mat
       - HS UI Assets/Guide/Unlit Guide/Unlit Guide pagination 1.mat
       - HS UI Assets/Guide/Unlit Guide/Unlit Guide pagination 2.mat
@@ -88,11 +94,11 @@ CollapsedEntities:
       - HS UI Assets/Guide/Unlit Guide4.mat
       - HS UI Assets/Guide/guidescript.ts
       - HS UI Assets/Guide/unlock.png
-      - HS UI Assets/Icon
+      - HS UI Assets/Icon/editgreen.png
+      - HS UI Assets/Icon/edityellow.png
       - HS UI Assets/Icon/lock.png
       - HS UI Assets/Icon/mic.png
       - HS UI Assets/Icon/mic_yw.png
-      - HS UI Assets/Icon/palette.png
       - HS UI Assets/Icon/unlock.png
       - HS UI Assets/Illust
       - HS UI Assets/Illust/Illust_Pagenation1.png
@@ -119,6 +125,7 @@ CollapsedEntities:
       - HS UI Assets/Material/Image_mic.mat
       - HS UI Assets/Material/Unlit 2.mat
       - HS UI Assets/Material/Unlit.mat
+      - HS UI Assets/Mic animation.lspkg
       - HS UI Assets/Mic animation.lspkg/Mic.mat
       - HS UI Assets/Mic animation.lspkg/MicBlack.png
       - HS UI Assets/Mic animation.lspkg/MicWhite.png
@@ -542,6 +549,7 @@ CollapsedEntities:
       - LSTween.lspkg/TweenJS/mainGroup.ts
       - LSTween.lspkg/package.native
       - MaterialParams.png
+      - Mic animation
       - Mic animation/Mic.mat
       - Mic animation/MicBlack.png
       - Mic animation/MicWhite.png
@@ -616,6 +624,7 @@ CollapsedEntities:
       - Mic animation/Spectacles 3D Hand Hints.lspkg/Textures/Hands_Interaction_Glow_Mask.png
       - Mic animation/Spectacles 3D Hand Hints.lspkg/Textures/Hands_Opacity_Gradient.png
       - Mic animation/Spectacles 3D Hand Hints.lspkg/package.native
+      - Mic animation/SpectaclesInteractionKit
       - Mic animation/SpectaclesInteractionKit/Assets
       - Mic animation/SpectaclesInteractionKit/Assets/Audio
       - Mic animation/SpectaclesInteractionKit/Assets/Audio/HoverAudioTrack.wav
