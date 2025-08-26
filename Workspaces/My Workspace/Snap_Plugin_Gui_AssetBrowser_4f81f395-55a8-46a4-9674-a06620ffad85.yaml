@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 2032
+    size: 2037
     values:
       - ""
       - AddedAsset
@@ -85,6 +85,7 @@ CollapsedEntities:
       - GenAI/Snap3DInteractableFactory.ts
       - GenAI/SphereController.ts
       - GenAI/Untitled JavaScript.js
+      - HS UI Assets
       - HS UI Assets/Guide
       - HS UI Assets/Guide/Guide1.png
       - HS UI Assets/Guide/Guide2.png
@@ -496,6 +497,7 @@ CollapsedEntities:
       - ImageTexture/image_unlit 2.ss_graph
       - ImageTexture/image_unlit.ss_graph
       - ImageTexture/simple_pbr.ss_graph
+      - Jelly
       - Jelly/Base 2.png
       - Jelly/JellyButton
       - Jelly/JellyButton/Close.png
@@ -571,6 +573,7 @@ CollapsedEntities:
       - LSTween.lspkg/TweenJS/mainGroup.ts
       - LSTween.lspkg/package.native
       - MaterialParams.png
+      - Mic animation
       - Mic animation/Mic.mat
       - Mic animation/MicBlack.png
       - Mic animation/MicWhite.png
@@ -1045,6 +1048,7 @@ CollapsedEntities:
       - Spectacles 3D Hand Hints.lspkg/Textures/Hands_Interaction_Glow_Mask.png
       - Spectacles 3D Hand Hints.lspkg/Textures/Hands_Opacity_Gradient.png
       - Spectacles 3D Hand Hints.lspkg/package.native
+      - SpectaclesInteractionKit
       - SpectaclesInteractionKit/Assets
       - SpectaclesInteractionKit/Assets/Audio
       - SpectaclesInteractionKit/Assets/Audio/HoverAudioTrack.wav
@@ -1626,6 +1630,7 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Utils/views/MeshView.ts
       - SpectaclesInteractionKit/Utils/views/View.ts
       - SpectaclesInteractionKit/package.native
+      - SpectaclesSyncKit.lspkg
       - SpectaclesSyncKit.lspkg/Components
       - SpectaclesSyncKit.lspkg/Components/Instantiator.ts
       - SpectaclesSyncKit.lspkg/Components/SyncHelpers
