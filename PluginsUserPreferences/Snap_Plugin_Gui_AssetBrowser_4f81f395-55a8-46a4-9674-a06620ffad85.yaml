@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 2003
+    size: 2008
     values:
       - ""
       - AddedAsset
@@ -22,7 +22,11 @@ CollapsedEntities:
       - Animation/Animation_bubble/Animation_bubble/animation_bubble.t3d/animation_bubble
       - Animation/Animation_bubble/Animation_bubble/animation_bubble.t3d/animation_bubble_0.png
       - Animation/CartoonWobble.wav
+      - Animation/ChainedAnimations.ts
       - Animation/ImageMaterial.mat
+      - Animation/ImaginkBubble.t3d
+      - Animation/ImaginkBubble.t3d/ImagInk_0.png
+      - Animation/ImaginkBubble.t3d/ImaginkBubble
       - Animation/animation.t3d
       - Animation/animation.t3d/animation
       - Animation/animation.t3d/atlas_0.png
@@ -933,6 +937,7 @@ CollapsedEntities:
       - Script/ContinuousVFXBurstOnPinchWithButtonFeedback.ts
       - Script/EnhancedButtonFeedback.ts
       - Script/MaterialTextureReplacer.ts
+      - Script/SmartTether.ts
       - Script/SpawnParticleOnPinch.ts
       - Script/TestScript.ts
       - Script/VFXBurst.ts

@@ -22,7 +22,7 @@ export class AnimationStop extends BaseScriptComponent {
         if (typeof control.pause === 'function') { control.pause(); }
         if (this.revealObject) { this.revealObject.enabled = true; }
       });
-      pauseEvent.reset(2.95);
+      pauseEvent.reset(3.15);
 
       // Optional: start audio at t=3.0s
       if (this.audioTrack) {

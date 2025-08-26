@@ -1,0 +1,57 @@
+- !<AssetImportMetadata/731a3a14-0c98-4d40-b22b-ffb427a65da2>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> d71234f3-7552-4bff-830d-84dcaa4411e1
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> d71234f3-7552-4bff-830d-84dcaa4411e1
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> fbe711ee-253b-41bf-88ea-2863fde38f6a
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/fbe711ee-253b-41bf-88ea-2863fde38f6a>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: b25c4cfc-6ecd-4e99-bddc-0e4a2b61379d
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    audioTrack: false
+    resumeFirstAfterSecond: false
+    revealObject: false
+    secondAnimObject: false
+    secondDuration: false
+    switchTime: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - audioTrack: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
+      revealObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      secondAnimObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      switchTime: 2.950000
+      secondDuration: !<float> 1.000000
+      resumeFirstAfterSecond: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input Asset.AudioTrackAsset audioTrack
+    - // @input SceneObject revealObject
+    - // @input SceneObject secondAnimObject
+    - // @input float switchTime = 2.95
+    - // @input float secondDuration = 1
+    - // @input bool resumeFirstAfterSecond

@@ -28,15 +28,18 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
-    revealObject: false
+    startDelay: false
+    targetObject: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
-    - revealObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+    - targetObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      startDelay: 2.950000
   ScriptTypes:
     -
       {}
   InputLines:
-    - // @input SceneObject revealObject
+    - // @input SceneObject targetObject
+    - // @input float startDelay = 2.95
