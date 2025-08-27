@@ -1032,6 +1032,82 @@
     - !<own> 79d51cf4-90f1-4b1e-93ba-a9921e7c861f
   Components:
     []
+- !<Text/0c95b9af-3e3f-4c67-b765-51d3413c2eac>
+  PrefabRemaps:
+    []
+  Name: Text
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Top
+  HorizontalAlignment: Left
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Text: "You’ll need a physical surface to draw on  — like a wall, notebook, or sketchpad."
+  Editable: false
+  ShowEditingPreview: true
+  TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
+  SizeToFit: false
+  FontSize: 44
+  Font: !<reference> 085494f6-9c8c-4006-88a9-9d9c622c8336
+  LayoutRect:
+    left: -11.000000
+    bottom: 0.000000
+    right: 11.000000
+    top: 0.000000
+  OverflowVertical: Overflow
+  OverflowHorizontal: Wrap
+  Fill: !<TextFill>
+    Mode: Solid
+    Color: {x: 1.000000, y: 0.380392, z: 0.000000, w: 1.000000}
+    Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    TileCount: 5.000000
+    TileZone: Rect
+    TextureStretch: FitWidth
+  Outline: !<OutlineSettings>
+    Enabled: false
+    Fill: !<TextFill>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      TileCount: 5.000000
+      TileZone: Rect
+      TextureStretch: FitWidth
+    Size: 0.250000
+  Dropshadow: !<DropshadowSettings>
+    Enabled: false
+    Fill: !<TextFill>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      TileCount: 5.000000
+      TileZone: Rect
+      TextureStretch: FitWidth
+    OffsetX: 0.250000
+    OffsetY: 0.250000
+  Background: !<BackgroundSettings>
+    Enabled: false
+    Fill: !<TextFill>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      TileCount: 5.000000
+      TileZone: Rect
+      TextureStretch: FitWidth
+    Margins:
+      left: 0.000000
+      bottom: 0.000000
+      right: 0.000000
+      top: 0.000000
+    CornerRadius: 0.000000
+  AdvancedLayout: !<TextAdvancedLayout>
+    ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+    LetterSpacing: 0.000000
+    LineSpacing: 0.900000
+    CapitalizationOverride: None
+  DepthTest: false
+  TwoSided: false
 - !<SceneObject/0d2c74d8-0fbd-49c5-904f-8702423dd342>
   PrefabRemaps:
     []
@@ -1362,6 +1438,21 @@
     bottom: 0.000000
     right: 0.000000
     top: 0.000000
+- !<SceneObject/1131887d-3241-48e5-8947-221e44d7af7e>
+  PrefabRemaps:
+    []
+  Name: Guide_BG
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: -13.600000, y: -13.500000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 4.000000, y: 4.000000, z: 4.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> ee9a951d-6e31-4435-9361-9dfe6a70437c
 - !<ScreenTransform/1138e11f-6f3d-4191-87d9-92f81917cf2a>
   PrefabRemaps:
     []
@@ -1739,6 +1830,22 @@
     hasSegmentScaleCompensation: false
   Children:
     - !<own> fb865784-da41-40e0-a1a7-b4911a34baed
+  Components:
+    []
+- !<SceneObject/14d63dd6-e9e3-4298-868d-3a3f50c3ed61>
+  PrefabRemaps:
+    []
+  Name: Tip info
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 3.200000, y: -1.500000, z: 4.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 1131887d-3241-48e5-8947-221e44d7af7e
+    - !<own> 1a817743-b9c0-49b5-9949-a4826fb42ae6
   Components:
     []
 - !<Text/14de0055-037a-4466-8823-0450acd4154f>
@@ -2434,6 +2541,21 @@
     - !<own> 4042deb0-6c09-4ef1-82df-e9b97f8ddd12
   Components:
     []
+- !<SceneObject/1a817743-b9c0-49b5-9949-a4826fb42ae6>
+  PrefabRemaps:
+    []
+  Name: Title_Text
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: -12.700000, z: 0.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 0c95b9af-3e3f-4c67-b765-51d3413c2eac
 - !<SceneObject/1a87c452-0bd2-4064-97e8-9cbf2889eb73>
   PrefabRemaps:
     []
@@ -3513,7 +3635,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: -10.500000, z: 3.000000}
+    position: {x: 0.000000, y: -9.500000, z: 3.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -5832,6 +5954,7 @@
   Children:
     - !<own> 21d79614-97c1-4d00-b78a-996ddc20ad08
     - !<own> 64492e4c-f7ed-484a-96ae-d73f6c252929
+    - !<own> 14d63dd6-e9e3-4298-868d-3a3f50c3ed61
   Components:
     []
 - !<ScriptComponent/3c13eca0-f39c-4ce0-b9c4-56a2c0d92ec0>
@@ -6744,7 +6867,7 @@
   ScriptInputs:
     "":
       targetObjectToDisable: !<reference.SceneObject> fb5d2821-bf8b-44be-a7ca-17d21cf33263
-      targetObjectToEnable: !<reference.SceneObject> 81271654-50a8-4493-966b-7806f21ceb5c
+      targetObjectToEnable: !<reference.SceneObject> 1f85d341-fb01-4b17-b9ec-b79e1005ced9
       isToggleButton: false
       editEventCallbacks: true
       customFunctionForOnButtonPinched: !<reference.ScriptComponent> 3817ea87-8ee7-4844-9f7e-3656d7107047
@@ -8994,7 +9117,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: -17.000000, z: 4.000000}
+    position: {x: 0.000000, y: -21.000000, z: 4.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 2.000000, y: 2.000000, z: 2.000000}
     hasSegmentScaleCompensation: false
@@ -11368,7 +11491,7 @@
   PrefabRemaps:
     []
   Name: Button_Outline
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: -5.000000, z: 0.000000}
@@ -13256,7 +13379,7 @@
 - !<SceneObject/81271654-50a8-4493-966b-7806f21ceb5c>
   PrefabRemaps:
     []
-  Name: Setup
+  Name: Setup(Not active)
   Enabled: false
   Layers: 1
   LocalTransform:
@@ -16348,21 +16471,17 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: |-
-    Imagine it. Project it. Trace it.
-    
-    Turn wild ideas into real sketches! 
-    Just speak it, place it in your world, and trace it into something real.
+  Text: "Speak your idea, project it onto a surface around you, and trace it into something real!"
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 40
+  FontSize: 50
   Font: !<reference> 6451e811-7319-4994-ae0b-3503a612ef29
   LayoutRect:
-    left: -11.000000
+    left: -13.000000
     bottom: 0.000000
-    right: 11.000000
+    right: 13.000000
     top: 0.000000
   OverflowVertical: Overflow
   OverflowHorizontal: Wrap
@@ -16412,7 +16531,7 @@
   AdvancedLayout: !<TextAdvancedLayout>
     ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
     LetterSpacing: 0.000000
-    LineSpacing: 1.100000
+    LineSpacing: 1.200000
     CapitalizationOverride: None
   DepthTest: false
   TwoSided: false
@@ -25313,6 +25432,26 @@
     wrist_to_ring_R: !<reference> 9f45e99d-f309-4662-b410-d003a2f3658a
     wrist_to_thumb_L: !<reference> 334a7113-0e04-4d5f-82cb-cb296783bd56
     wrist_to_thumb_R: !<reference> 02bf5be4-218f-437e-b12c-e523fdf0708b
+- !<RenderMeshVisual/ee9a951d-6e31-4435-9361-9dfe6a70437c>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> b4a439e4-1310-4a9d-9ee9-947be98426ef
+  Mesh: !<reference> 1196c138-1598-4ab3-9468-1da4aac9ef88
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
 - !<SceneObject/eed3e04d-250c-4274-9780-a5f3b237be2b>
   PrefabRemaps:
     []
