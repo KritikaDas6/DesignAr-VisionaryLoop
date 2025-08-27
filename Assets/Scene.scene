@@ -1307,7 +1307,7 @@
       camera: !<reference.Camera> 00000000-0000-0065-0000-000000000065
       floorRotation: !<Vec3> {x: 0.000000, y: 0.000000, z: 90.000000}
       ceilingRotation: !<Vec3> {x: 0.000000, y: 0.000000, z: -90.000000}
-      resetInteractable: !<MappingBased.AssignableType> f1a0d4f1-9154-4d9f-ab08-c072d51a8d30
+      resetInteractable: !<MappingBased.AssignableType> b57cf9c8-34e8-49c2-9a6e-ae9136b78b1f
       placement: !<reference.SceneObject> 9dd5d2d1-84d0-449e-bfd6-eb7c5232a577
       confirmButton: !<reference.SceneObject> eb625c70-7952-468f-a02f-cead81f0accb
       feedbackTextComponent: !<reference.Text> 007b3272-1473-4171-81ac-c8e802d2a298
