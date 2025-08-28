@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 1737
+    size: 1699
     values:
       - AddedAsset
       - AddedAsset/Device Camera Texture.deviceCameraTexture
@@ -78,14 +78,8 @@ CollapsedEntities:
       - GenAI/Snap3DInteractable.ts
       - GenAI/Snap3DInteractableFactory.ts
       - GenAI/SphereController.ts
-      - GenAI/Untitled JavaScript.js
       - HS UI Assets
       - HS UI Assets/Guide
-      - HS UI Assets/Guide/Guide1.png
-      - HS UI Assets/Guide/Guide2.png
-      - HS UI Assets/Guide/Guide3.png
-      - HS UI Assets/Guide/Guide4.png
-      - HS UI Assets/Guide/ImageMaterial.mat
       - HS UI Assets/Guide/Step1_Mic button.png
       - HS UI Assets/Guide/Step1mic image.mat
       - HS UI Assets/Guide/Step3 illust.mat
@@ -96,12 +90,6 @@ CollapsedEntities:
       - HS UI Assets/Guide/Unlit Guide/Unlit Guide pagination 2.mat
       - HS UI Assets/Guide/Unlit Guide/Unlit Guide pagination 3.mat
       - HS UI Assets/Guide/Unlit Guide/Unlit Guide pagination 4.mat
-      - HS UI Assets/Guide/Unlit Guide/Unlit Guide pagination 5.mat
-      - HS UI Assets/Guide/Unlit Guide/Unlit illust data.mat
-      - HS UI Assets/Guide/Unlit Guide/Unlit illust tracing.mat
-      - HS UI Assets/Guide/Unlit Guide4.mat
-      - HS UI Assets/Guide/guidescript.ts
-      - HS UI Assets/Guide/unlock.png
       - HS UI Assets/Icon
       - HS UI Assets/Icon/Info.png
       - HS UI Assets/Icon/editgreen.png
@@ -116,24 +104,10 @@ CollapsedEntities:
       - HS UI Assets/Illust/Illust_Pagenation2.png
       - HS UI Assets/Illust/Illust_Pagenation3.png
       - HS UI Assets/Illust/Illust_Pagenation4.png
-      - HS UI Assets/Illust/Illust_Pagenation5.png
-      - HS UI Assets/Illust/Illust_Trace.png
-      - HS UI Assets/Illust/Illust_data.png
-      - HS UI Assets/Illust/Illust_empty state.png
       - HS UI Assets/Illust/Illust_empty state_grey.png
       - HS UI Assets/Illust/Illust_guideoutline.png
-      - HS UI Assets/Illust/Illust_imagineInk Logo.png
-      - HS UI Assets/Illust/bg illust1.png
-      - HS UI Assets/Illust/bg illust2.png
-      - HS UI Assets/Illust/bg illust3.png
-      - HS UI Assets/Illust/bg illust4.png
-      - HS UI Assets/Image 2.mat
-      - HS UI Assets/Image 3.mat
-      - HS UI Assets/Image 4.mat
-      - HS UI Assets/Image.mat
       - HS UI Assets/Material
       - HS UI Assets/Material/Icon_Mic.mat
-      - HS UI Assets/Material/Image_mic.mat
       - HS UI Assets/Material/Unlit 2.mat
       - HS UI Assets/Material/Unlit.mat
       - HS UI Assets/Mic animation.lspkg
@@ -465,11 +439,9 @@ CollapsedEntities:
       - HS UI Assets/Mic animation.lspkg/Vertex Distortion Material/Vertex Distortion.mat
       - HS UI Assets/Mic animation.lspkg/flat.ss_graph
       - HS UI Assets/Mic animation.lspkg/package.native
-      - HS UI Assets/Plane.mesh
       - HS UI Assets/Shader
       - HS UI Assets/Shader/unlit.ss_graph
       - HS UI Assets/Unit Plane
-      - HS UI Assets/Unit Plane/Meshes
       - HS UI Assets/Unit Plane/Meshes/Unit Plane.mesh
       - Hint - Rotate Head (Left to Right)
       - Hint - Rotate Head (Left to Right)/.hidden
@@ -972,18 +944,14 @@ CollapsedEntities:
       - Remote Service Gateway.lspkg/Utils/Promisfy.ts
       - Remote Service Gateway.lspkg/package.native
       - Scene.scene
+      - Script
       - Script/ContainerLock.ts
-      - Script/ContinuousVFXBurstOnPinchWithButtonFeedback.ts
       - Script/EnhancedButtonFeedback.ts
       - Script/MaterialTextureReplacer.ts
       - Script/SmartTether.ts
-      - Script/SpawnParticleOnPinch.ts
-      - Script/TestScript.ts
       - Script/VFXBurst.ts
-      - Script/VoiceTextFeedback.ts
       - Script_HandFollower
       - Script_HandFollower/DisplayMenuOnOff.ts
-      - Script_HandFollower/HandFollower.ts
       - Script_HandFollower/HandFollowerWithAngleRange.ts
       - Script_HandFollower/VectorUtils.ts
       - Slider.lsc
@@ -1732,12 +1700,6 @@ CollapsedEntities:
       - World Query Hit - Spawn On Surface/Textures/statue_params.png
       - World Query Hit - Spawn On Surface/World Query Hit Example.prefab
       - World Query Hit - Spawn On Surface/WorldQueryHit.ts
-      - World Query Hit - Spawn On Surface/WorldQueryHitExample.ts
-      - World Query Hit - Spawn On Surface/WorldQueryHitExample2.ts
-      - World Query Hit - Spawn On Surface/WorldQueryHitExample3.ts
-      - World Query Hit - Spawn On Surface/WorldQueryHitVoiceCommand OG.ts
-      - World Query Hit - Spawn On Surface/WorldQueryHitVoiceCommand OG2.ts
-      - World Query Hit - Spawn On Surface/WorldQueryHitVoiceCommand.ts
       - image_unlit.ss_graph
       - pbr.ss_graph
   options: 4
