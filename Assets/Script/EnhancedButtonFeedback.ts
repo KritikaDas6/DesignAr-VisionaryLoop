@@ -1,4 +1,4 @@
-import { ButtonFeedback } from "../SpectaclesInteractionKit/Components/Helpers/ButtonFeedback";
+import { ButtonFeedback } from "SpectaclesInteractionKit.lspkg/Components/Helpers/ButtonFeedback";
 
 /**
  * EnhancedButtonFeedback

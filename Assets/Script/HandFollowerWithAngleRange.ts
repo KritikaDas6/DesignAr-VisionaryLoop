@@ -1,8 +1,8 @@
 import { VectorUtils } from "./VectorUtils";
-import { HandInputData } from '../SpectaclesInteractionKit/Providers/HandInputData/HandInputData';
-import { HandType } from "../SpectaclesInteractionKit/Providers/HandInputData/HandType";
-import TrackedHand from "../SpectaclesInteractionKit/Providers/HandInputData/TrackedHand"
-import WorldCameraFinderProvider from "../SpectaclesInteractionKit/Providers/CameraProvider/WorldCameraFinderProvider"
+import { HandInputData } from 'SpectaclesInteractionKit.lspkg/Providers/HandInputData/HandInputData';
+import { HandType } from "SpectaclesInteractionKit.lspkg/Providers/HandInputData/HandType";
+import TrackedHand from "SpectaclesInteractionKit.lspkg/Providers/HandInputData/TrackedHand"
+import WorldCameraFinderProvider from "SpectaclesInteractionKit.lspkg/Providers/CameraProvider/WorldCameraFinderProvider"
 
 @component
 export class HandFollowerWithAngleRange extends BaseScriptComponent {

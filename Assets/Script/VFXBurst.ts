@@ -1,6 +1,6 @@
-import { PinchDetector, PinchDetectionSelection } from "SpectaclesInteractionKit/Providers/HandInputData/GestureProvider/PinchDetection/PinchDetector";
-import { HandInputData } from "SpectaclesInteractionKit/Providers/HandInputData/HandInputData";
-import { HandType } from "SpectaclesInteractionKit/Providers/HandInputData/HandType";
+import { PinchDetector, PinchDetectionSelection } from "SpectaclesInteractionKit.lspkg/Providers/HandInputData/GestureProvider/PinchDetection/PinchDetector";
+import { HandInputData } from "SpectaclesInteractionKit.lspkg/Providers/HandInputData/HandInputData";
+import { HandType } from "SpectaclesInteractionKit.lspkg/Providers/HandInputData/HandType";
 
 // Global test to see if script is being loaded
 print("[VFXBurst] Script file is being loaded");

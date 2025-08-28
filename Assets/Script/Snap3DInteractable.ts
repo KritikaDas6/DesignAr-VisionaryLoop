@@ -1,4 +1,4 @@
-import { setTimeout } from "SpectaclesInteractionKit/Utils/FunctionTimingUtils";
+import { setTimeout } from "SpectaclesInteractionKit.lspkg/Utils/FunctionTimingUtils";
 @component
 export class Snap3DInteractable extends BaseScriptComponent {
   @input

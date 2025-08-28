@@ -1,6 +1,6 @@
 const WorldQueryModule = require("LensStudio:WorldQueryModule");
-import { Interactable } from "SpectaclesInteractionKit/Components/Interaction/Interactable/Interactable";
-import Event from "SpectaclesInteractionKit/Utils/Event";
+import { Interactable } from "SpectaclesInteractionKit.lspkg/Components/Interaction/Interactable/Interactable";
+import Event from "SpectaclesInteractionKit.lspkg/Utils/Event";
 
 const EPSILON = 0.01;
 

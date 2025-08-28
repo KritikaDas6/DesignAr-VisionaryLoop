@@ -1,5 +1,5 @@
-import { Interactable } from "../SpectaclesInteractionKit/Components/Interaction/Interactable/Interactable";
-import { InteractorEvent } from "../SpectaclesInteractionKit/Core/Interactor/InteractorEvent";
+import { Interactable } from "SpectaclesInteractionKit.lspkg/Components/Interaction/Interactable/Interactable";
+import { InteractorEvent } from "SpectaclesInteractionKit.lspkg/Core/Interactor/InteractorEvent";
 
 @component
 export class displayMenuMenuOnOff extends BaseScriptComponent {
