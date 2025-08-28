@@ -16,8 +16,8 @@ export class WorldQueryHit extends BaseScriptComponent {
     @input objectsToSpawn: SceneObject[];
     @input filterEnabled: boolean;
     @input camera: Camera;
-    @input floorRotation: vec3 = new vec3(0, 0, 0);
-    @input ceilingRotation: vec3 = new vec3(0, 0, 0);
+    @input floorRotationZ: number = 0; // Only Z rotation for floor
+    @input ceilingRotationZ: number = 0; // Only Z rotation for ceiling
     @input resetInteractable: Interactable;
     @input placement: SceneObject;
 
@@ -106,9 +106,11 @@ export class WorldQueryHit extends BaseScriptComponent {
                 let toRotation;
                 const upDot = hitNormal.dot(vec3.up());
                 if (upDot > 0.9) {
-                    toRotation = this.createRotationFromDegrees(this.floorRotation);
+                    // Floor: Use forward direction only, ignore camera rotation
+                    toRotation = this.createFloorRotation(cameraDirection);
                 } else if (upDot < -0.9) {
-                    toRotation = this.createRotationFromDegrees(this.ceilingRotation);
+                    // Ceiling: Use forward direction only, ignore camera rotation
+                    toRotation = this.createCeilingRotation(cameraDirection);
                 } else {
                     toRotation = quat.lookAt(hitNormal, vec3.up());
                 }
@@ -198,9 +200,15 @@ export class WorldQueryHit extends BaseScriptComponent {
         let toRotation;
         const upDot = hitNormal.dot(vec3.up());
         if (upDot > 0.9) {
-            toRotation = this.createRotationFromDegrees(this.floorRotation);
+            // Floor: Use forward direction only, ignore camera rotation
+            const cameraTransform = this.camera.getTransform();
+            const cameraDirection = cameraTransform.back;
+            toRotation = this.createFloorRotation(cameraDirection);
         } else if (upDot < -0.9) {
-            toRotation = this.createRotationFromDegrees(this.ceilingRotation);
+            // Ceiling: Use forward direction only, ignore camera rotation
+            const cameraTransform = this.camera.getTransform();
+            const cameraDirection = cameraTransform.back;
+            toRotation = this.createCeilingRotation(cameraDirection);
         } else {
             toRotation = quat.lookAt(hitNormal, vec3.up());
         }
@@ -250,16 +258,38 @@ export class WorldQueryHit extends BaseScriptComponent {
         this.indexToSpawn = i;
     }
 
-    createRotationFromDegrees(rotationDegrees: vec3): quat {
-        const xRad = rotationDegrees.x * Math.PI / 180;
-        const yRad = rotationDegrees.y * Math.PI / 180;
-        const zRad = rotationDegrees.z * Math.PI / 180;
+    // Simplified rotation method that only uses Z rotation
+    createRotationFromZ(rotationZ: number): quat {
+        const zRad = rotationZ * Math.PI / 180;
+        return new quat(0, 0, Math.sin(zRad / 2), Math.cos(zRad / 2));
+    }
 
-        const quatX = new quat(Math.sin(xRad / 2), 0, 0, Math.cos(xRad / 2));
-        const quatY = new quat(0, Math.sin(yRad / 2), 0, Math.cos(yRad / 2));
-        const quatZ = new quat(0, 0, Math.sin(zRad / 2), Math.cos(zRad / 2));
+    // NEW: Create floor rotation that ignores camera rotation and only uses forward direction
+    private createFloorRotation(cameraDirection: vec3): quat {
+        // Project camera direction onto XZ plane to ignore pitch (up/down rotation)
+        const forwardDirection = new vec3(cameraDirection.x, 0, cameraDirection.z).normalize();
+        
+        // Create rotation based on the forward direction only
+        const forwardRotation = quat.lookAt(forwardDirection, vec3.up());
+        
+        // Apply the floor rotation offset (Z only)
+        const floorRotationQuat = this.createRotationFromZ(this.floorRotationZ);
+        
+        return forwardRotation.multiply(floorRotationQuat);
+    }
 
-        return quatX.multiply(quatY).multiply(quatZ);
+    // NEW: Create ceiling rotation that ignores camera rotation and only uses forward direction
+    private createCeilingRotation(cameraDirection: vec3): quat {
+        // Project camera direction onto XZ plane to ignore pitch (up/down rotation)
+        const forwardDirection = new vec3(cameraDirection.x, 0, cameraDirection.z).normalize();
+        
+        // Create rotation based on the forward direction only
+        const forwardRotation = quat.lookAt(forwardDirection, vec3.up());
+        
+        // Apply the ceiling rotation offset (Z only)
+        const ceilingRotationQuat = this.createRotationFromZ(this.ceilingRotationZ);
+        
+        return forwardRotation.multiply(ceilingRotationQuat);
     }
 }
 

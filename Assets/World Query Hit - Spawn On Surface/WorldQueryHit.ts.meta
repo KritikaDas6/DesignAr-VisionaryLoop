@@ -29,11 +29,11 @@
   MaxVisibility: Editable
   ScriptInputsHidden:
     camera: false
-    ceilingRotation: false
+    ceilingRotationZ: false
     confirmButton: false
     feedbackTextComponent: false
     filterEnabled: false
-    floorRotation: false
+    floorRotationZ: false
     indexToSpawn: false
     objectsToSpawn: false
     placement: false
@@ -50,8 +50,8 @@
         []
       filterEnabled: false
       camera: !<reference.Camera> 00000000-0000-0000-0000-000000000000
-      floorRotation: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
-      ceilingRotation: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      floorRotationZ: !<float> 0.000000
+      ceilingRotationZ: !<float> 0.000000
       resetInteractable: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
       placement: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       confirmButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
@@ -65,8 +65,8 @@
     - "// @input SceneObject[] objectsToSpawn"
     - // @input bool filterEnabled
     - // @input Component.Camera camera
-    - "// @input vec3 floorRotation = {0,0,0}"
-    - "// @input vec3 ceilingRotation = {0,0,0}"
+    - // @input float floorRotationZ
+    - // @input float ceilingRotationZ
     - // @input AssignableType resetInteractable
     - // @input SceneObject placement
     - // @input SceneObject confirmButton

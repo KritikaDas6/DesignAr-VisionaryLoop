@@ -932,8 +932,8 @@
         []
       filterEnabled: true
       camera: !<reference.Camera> 00000000-0000-0065-0000-000000000065
-      floorRotation: !<Vec3> {x: 0.000000, y: 0.000000, z: 90.000000}
-      ceilingRotation: !<Vec3> {x: 0.000000, y: 0.000000, z: -90.000000}
+      floorRotationZ: !<float> 90.000000
+      ceilingRotationZ: !<float> -90.000000
       resetInteractable: !<MappingBased.AssignableType> b57cf9c8-34e8-49c2-9a6e-ae9136b78b1f
       placement: !<reference.SceneObject> 9dd5d2d1-84d0-449e-bfd6-eb7c5232a577
       confirmButton: !<reference.SceneObject> eb625c70-7952-468f-a02f-cead81f0accb
@@ -2140,7 +2140,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: -0.000001, y: -19.000000, z: 0.000000}
+    position: {x: -0.000001, y: -22.000000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 2.000000, y: 2.000000, z: 2.000000}
     hasSegmentScaleCompensation: false
@@ -12018,7 +12018,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: -5.000000, z: 0.000000}
+    position: {x: 0.000000, y: -10.000000, z: 0.000000}
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -27129,7 +27129,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: -17.000000, z: 0.100000}
+    position: {x: 0.000000, y: -16.000000, z: 0.100000}
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false

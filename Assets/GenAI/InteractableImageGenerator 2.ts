@@ -63,7 +63,7 @@ export class InteractableImageGenerator extends BaseScriptComponent {
         try {
           store.putString(this.base64Key, encoded);
           store.putString("last_save_ts", String(Math.floor(getTime())));
-          if (this.textDisplay) this.textDisplay.text = "Saved!";
+          if (this.textDisplay) this.textDisplay.text = "Created!";
         } catch (e) {
           print("❌ putString error: " + e);
         }
@@ -94,7 +94,7 @@ export class InteractableImageGenerator extends BaseScriptComponent {
         if (this.projectionImage?.mainMaterial?.mainPass) {
           this.projectionImage.mainMaterial.mainPass.baseTex = tex;
         }
-        if (this.textDisplay) this.textDisplay.text = "Loaded saved image";
+        if (this.textDisplay) this.textDisplay.text = "";
         this.setConfirmVisible(true);
       },
       () => {
@@ -188,7 +188,7 @@ export class InteractableImageGenerator extends BaseScriptComponent {
       })
       .catch((error) => {
         print("Error generating image: " + error);
-        if (this.textDisplay) this.textDisplay.text = "Error Generating Image";
+        if (this.textDisplay) this.textDisplay.text = "Sorry something went wrong... Please try again!";
         this.setConfirmVisible(false);
 
         // immediately re-arm the mic so you can try again
