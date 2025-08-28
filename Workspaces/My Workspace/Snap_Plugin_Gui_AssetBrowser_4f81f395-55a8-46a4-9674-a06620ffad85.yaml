@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 1779
+    size: 1737
     values:
       - AddedAsset
       - AddedAsset/Device Camera Texture.deviceCameraTexture
@@ -30,8 +30,6 @@ CollapsedEntities:
       - Animation/animation.t3d/animation
       - Animation/animation.t3d/atlas_0.png
       - Base 2.png
-      - Base.png
-      - ButtonToggleFunctions.ts
       - Font
       - Font/DynaPuff
       - Font/DynaPuff/DynaPuff-Bold.ttf
@@ -493,19 +491,11 @@ CollapsedEntities:
       - Image 2.mat
       - Image.mat
       - ImageTexture
-      - ImageTexture/Bird.mat
-      - ImageTexture/Bird.png
-      - ImageTexture/BirdTrace.mat
-      - ImageTexture/BirdTrace.png
-      - ImageTexture/ImageMaterial 14.mat
-      - ImageTexture/Mainlogo.mat
-      - ImageTexture/SketchRider.mat
+      - "ImageTexture/ImageGenerator'.mat"
+      - ImageTexture/SampleIllustration.mat
       - ImageTexture/SketchRider.png
       - ImageTexture/SketchRiderTrace.mat
       - ImageTexture/SketchRiderTrace.png
-      - ImageTexture/Test4.mat
-      - ImageTexture/Test4.png
-      - ImageTexture/flat.ss_graph
       - ImageTexture/image_unlit 2.ss_graph
       - ImageTexture/image_unlit.ss_graph
       - ImageTexture/simple_pbr.ss_graph
@@ -982,7 +972,6 @@ CollapsedEntities:
       - Remote Service Gateway.lspkg/Utils/Promisfy.ts
       - Remote Service Gateway.lspkg/package.native
       - Scene.scene
-      - Script
       - Script/ContainerLock.ts
       - Script/ContinuousVFXBurstOnPinchWithButtonFeedback.ts
       - Script/EnhancedButtonFeedback.ts
@@ -992,14 +981,11 @@ CollapsedEntities:
       - Script/TestScript.ts
       - Script/VFXBurst.ts
       - Script/VoiceTextFeedback.ts
-      - Script_ContainerImage
-      - Script_ContainerImage/ImageContainerScaler.ts
       - Script_HandFollower
       - Script_HandFollower/DisplayMenuOnOff.ts
       - Script_HandFollower/HandFollower.ts
       - Script_HandFollower/HandFollowerWithAngleRange.ts
       - Script_HandFollower/VectorUtils.ts
-      - SimplePlacementButton.ts
       - Slider.lsc
       - Spectacles 3D Hand Hints.lspkg
       - Spectacles 3D Hand Hints.lspkg/Animation
@@ -1669,34 +1655,6 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Utils/views/MeshView.ts
       - SpectaclesInteractionKit/Utils/views/View.ts
       - SpectaclesInteractionKit/package.native
-      - Surface Detection.lspkg
-      - Surface Detection.lspkg/Audio
-      - Surface Detection.lspkg/Audio/CalibrationComplete.mp3
-      - "Surface Detection.lspkg/Example [DELETE ME]"
-      - "Surface Detection.lspkg/Example [DELETE ME]/Example Script [EDIT].ts"
-      - "Surface Detection.lspkg/Example [DELETE ME]/Materials"
-      - "Surface Detection.lspkg/Example [DELETE ME]/Materials/Uber PBR.mat"
-      - "Surface Detection.lspkg/Example [DELETE ME]/Meshes"
-      - "Surface Detection.lspkg/Example [DELETE ME]/Meshes/Box.mesh"
-      - "Surface Detection.lspkg/Example [DELETE ME]/Shaders"
-      - "Surface Detection.lspkg/Example [DELETE ME]/Shaders/uber_pbr.ss_graph"
-      - "Surface Detection.lspkg/Example [DELETE ME]/Textures"
-      - "Surface Detection.lspkg/Example [DELETE ME]/Textures/Base.png"
-      - "Surface Detection.lspkg/Example [DELETE ME]/Textures/Normal.png"
-      - Surface Detection.lspkg/Materials
-      - Surface Detection.lspkg/Materials/CalibrationMat.mat
-      - Surface Detection.lspkg/Meshes
-      - Surface Detection.lspkg/Meshes/Unit Plane.mesh
-      - Surface Detection.lspkg/Scripts
-      - Surface Detection.lspkg/Scripts/CircleAnimation.ts
-      - Surface Detection.lspkg/Scripts/SurfaceDetection.ts
-      - Surface Detection.lspkg/Shaders
-      - Surface Detection.lspkg/Shaders/CalibrationShader.ss_graph
-      - Surface Detection.lspkg/SurfaceDetection__ADD_TO_SCENE.prefab
-      - Surface Detection.lspkg/Textures
-      - Surface Detection.lspkg/Textures/groundIcon.png
-      - Surface Detection.lspkg/package.native
-      - UI_Old.prefab
       - VFX
       - VFX/Fireworks VFX
       - VFX/Fireworks VFX/.hidden
