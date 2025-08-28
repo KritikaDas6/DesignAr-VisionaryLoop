@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 727
+    size: 723
     values:
       - Animation
       - Animation/Hint_Rotate_Head_Left_Right.lensanim
@@ -175,7 +175,6 @@ CollapsedEntities:
       - Remote Service Gateway.lspkg/Utils/Promisfy.ts
       - Remote Service Gateway.lspkg/package.native
       - Scene.scene
-      - Script
       - Script/ASRQueryController.ts
       - Script/AnimationStop.ts
       - Script/DisplayMenuOnOff.ts
@@ -184,6 +183,7 @@ CollapsedEntities:
       - Script/ImageGenerator.ts
       - Script/InteractableImageGenerator 2.ts
       - Script/MaterialTextureReplacer.ts
+      - Script/SliderTransparentEditor.ts
       - Script/SmartTether.ts
       - Script/Snap3DInteractable.ts
       - Script/Snap3DInteractableFactory.ts
@@ -500,8 +500,6 @@ CollapsedEntities:
       - SpectaclesInteractionKit.lspkg/Components/Interaction/InteractorLineVisual/InteractorLineMaterial.mat
       - SpectaclesInteractionKit.lspkg/Components/Interaction/InteractorLineVisual/InteractorLineRenderer.ts
       - SpectaclesInteractionKit.lspkg/Components/Interaction/InteractorLineVisual/InteractorLineVisual.ts
-      - SpectaclesInteractionKit.lspkg/Components/UI
-      - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/ContainerFrame.ts
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Materials
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Materials/FrameMaterial.mat
@@ -520,11 +518,9 @@ CollapsedEntities:
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Meshes/SphereButton.mesh
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Meshes/SysSettings_settings_button.mesh
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Meshes/pinch-depth-button.mesh
-      - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Prefabs
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Prefabs/FramePrefab.prefab
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Prefabs/container-button.prefab
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/README.md
-      - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Textures
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Textures/close-icon-1.png
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Textures/close-icon.png
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Textures/container-button-matcap.jpg
