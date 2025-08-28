@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 1699
+    size: 1613
     values:
       - AddedAsset
       - AddedAsset/Device Camera Texture.deviceCameraTexture
@@ -12,7 +12,6 @@ CollapsedEntities:
       - AddedAsset/Render Target.renderTarget
       - Animation
       - Animation/AnimationLoop.ts
-      - Animation/AnimationStop.ts
       - Animation/Animation_bubble
       - Animation/Animation_bubble/Animation_bubble
       - Animation/Animation_bubble/Animation_bubble/animation_bubble.mat
@@ -29,7 +28,6 @@ CollapsedEntities:
       - Animation/animation.t3d
       - Animation/animation.t3d/animation
       - Animation/animation.t3d/atlas_0.png
-      - Base 2.png
       - Font
       - Font/DynaPuff
       - Font/DynaPuff/DynaPuff-Bold.ttf
@@ -79,37 +77,6 @@ CollapsedEntities:
       - GenAI/Snap3DInteractableFactory.ts
       - GenAI/SphereController.ts
       - HS UI Assets
-      - HS UI Assets/Guide
-      - HS UI Assets/Guide/Step1_Mic button.png
-      - HS UI Assets/Guide/Step1mic image.mat
-      - HS UI Assets/Guide/Step3 illust.mat
-      - HS UI Assets/Guide/Step3 illust.png
-      - HS UI Assets/Guide/Unlit Guide
-      - HS UI Assets/Guide/Unlit Guide/Unlit Guide BG Outline.mat
-      - HS UI Assets/Guide/Unlit Guide/Unlit Guide pagination 1.mat
-      - HS UI Assets/Guide/Unlit Guide/Unlit Guide pagination 2.mat
-      - HS UI Assets/Guide/Unlit Guide/Unlit Guide pagination 3.mat
-      - HS UI Assets/Guide/Unlit Guide/Unlit Guide pagination 4.mat
-      - HS UI Assets/Icon
-      - HS UI Assets/Icon/Info.png
-      - HS UI Assets/Icon/editgreen.png
-      - HS UI Assets/Icon/edityellow.png
-      - HS UI Assets/Icon/lock.png
-      - HS UI Assets/Icon/mic.png
-      - HS UI Assets/Icon/mic_yw.png
-      - HS UI Assets/Icon/unlock.png
-      - HS UI Assets/Icon_info.mat
-      - HS UI Assets/Illust
-      - HS UI Assets/Illust/Illust_Pagenation1.png
-      - HS UI Assets/Illust/Illust_Pagenation2.png
-      - HS UI Assets/Illust/Illust_Pagenation3.png
-      - HS UI Assets/Illust/Illust_Pagenation4.png
-      - HS UI Assets/Illust/Illust_empty state_grey.png
-      - HS UI Assets/Illust/Illust_guideoutline.png
-      - HS UI Assets/Material
-      - HS UI Assets/Material/Icon_Mic.mat
-      - HS UI Assets/Material/Unlit 2.mat
-      - HS UI Assets/Material/Unlit.mat
       - HS UI Assets/Mic animation.lspkg
       - HS UI Assets/Mic animation.lspkg/Mic.mat
       - HS UI Assets/Mic animation.lspkg/MicBlack.png
@@ -439,10 +406,6 @@ CollapsedEntities:
       - HS UI Assets/Mic animation.lspkg/Vertex Distortion Material/Vertex Distortion.mat
       - HS UI Assets/Mic animation.lspkg/flat.ss_graph
       - HS UI Assets/Mic animation.lspkg/package.native
-      - HS UI Assets/Shader
-      - HS UI Assets/Shader/unlit.ss_graph
-      - HS UI Assets/Unit Plane
-      - HS UI Assets/Unit Plane/Meshes/Unit Plane.mesh
       - Hint - Rotate Head (Left to Right)
       - Hint - Rotate Head (Left to Right)/.hidden
       - Hint - Rotate Head (Left to Right)/.hidden/SpriteGraphPreset.lsmat.mat
@@ -460,67 +423,6 @@ CollapsedEntities:
       - Hint - Rotate Head (Left to Right)/Custom Hint Resources/Scripts
       - Hint - Rotate Head (Left to Right)/Custom Hint Resources/Scripts/CustomHint.js
       - Hint - Rotate Head (Left to Right)/Hint - Rotate Head (Left to Right).prefab
-      - Image 2.mat
-      - Image.mat
-      - ImageTexture
-      - "ImageTexture/ImageGenerator'.mat"
-      - ImageTexture/SampleIllustration.mat
-      - ImageTexture/SketchRider.png
-      - ImageTexture/SketchRiderTrace.mat
-      - ImageTexture/SketchRiderTrace.png
-      - ImageTexture/image_unlit 2.ss_graph
-      - ImageTexture/image_unlit.ss_graph
-      - ImageTexture/simple_pbr.ss_graph
-      - Jelly
-      - Jelly/Base 2.png
-      - Jelly/Frame 1618872818.png
-      - Jelly/JellyButton
-      - Jelly/JellyButton/Close.png
-      - Jelly/JellyButton/Material
-      - Jelly/JellyButton/Material/Image_Close.mat
-      - Jelly/JellyButton/Material/Image_Edit.mat
-      - Jelly/JellyButton/Material/Image_Lock.mat
-      - Jelly/JellyButton/Material/Image_Outline.mat
-      - Jelly/JellyButton/Material/Image_UnLock.mat
-      - Jelly/JellyButton/Material/Image_ai mic.mat
-      - Jelly/JellyButton/Material/Mic.mat
-      - Jelly/JellyButton/Material/RoundButtonHoverYellow.mat
-      - Jelly/JellyButton/Material/RoundButtonPinchedGreen.mat
-      - Jelly/JellyButton/Material/RoundButton_IdleGreen.mat
-      - Jelly/JellyButton/Material/RoundButton_IdleYellow.mat
-      - Jelly/JellyButton/Material/Vertex Distortion.mat
-      - Jelly/JellyButton/Panel
-      - Jelly/JellyButton/Panel/Meshes
-      - Jelly/JellyButton/Panel/Meshes/ImageMaterial 2.mat
-      - Jelly/JellyButton/Panel/Meshes/ImageMaterial 3.mat
-      - Jelly/JellyButton/Panel/Meshes/ImageMaterial.mat
-      - Jelly/JellyButton/Panel/Meshes/Plane.mesh
-      - Jelly/JellyButton/Panel/Panel.prefab
-      - Jelly/JellyButton/Shader
-      - Jelly/JellyButton/Shader/RoundButtonHoverYellow.ss_graph
-      - Jelly/JellyButton/Shader/RoundButtonPinchedGreen.ss_graph
-      - Jelly/JellyButton/Shader/RoundButton_IdleGreen.ss_graph
-      - Jelly/JellyButton/Shader/RoundButton_IdleYellow.ss_graph
-      - Jelly/JellyButton/Shader/Vertex Distortion.ss_graph
-      - Jelly/JellyButton/Shader/flat.ss_graph
-      - Jelly/JellyButton/SimpleRefl_02.jpg
-      - Jelly/JellyButton/Sparkles VFX Resources
-      - Jelly/JellyButton/Sparkles VFX Resources/Textures
-      - Jelly/JellyButton/Sparkles VFX Resources/Textures/sparkles.png
-      - Jelly/JellyButton/Sparkles VFX Resources/VFX
-      - Jelly/JellyButton/Sparkles VFX Resources/VFX/Splash2.png
-      - Jelly/JellyButton/Sparkles VFX Resources/VFX/sparkles_vfx Drag.vfxgraph
-      - Jelly/JellyButton/Sparkles VFX Resources/VFX/sparkles_vfx Original.vfxgraph
-      - Jelly/JellyButton/Sparkles VFX Resources/VFX/sparkles_vfx Tap.vfxgraph
-      - Jelly/JellyButton/Texture
-      - Jelly/JellyButton/Texture/Edit.png
-      - Jelly/JellyButton/Texture/Lock.png
-      - Jelly/JellyButton/Texture/MicBlack.png
-      - Jelly/JellyButton/Texture/MicWhite.png
-      - Jelly/JellyButton/Texture/Outline.png
-      - Jelly/JellyButton/Texture/Splash.png
-      - Jelly/JellyButton/Texture/Unlock.png
-      - Jelly/simple_pbr.ss_graph
       - LSTween.lspkg
       - LSTween.lspkg/Examples
       - LSTween.lspkg/Examples/Assets
@@ -547,11 +449,19 @@ CollapsedEntities:
       - LSTween.lspkg/TweenJS/Version.ts
       - LSTween.lspkg/TweenJS/mainGroup.ts
       - LSTween.lspkg/package.native
-      - MaterialParams.png
+      - Material
+      - Material/Button
+      - Material/HandMenu
+      - Material/Mic
+      - Material/Steps
+      - Material/Unlit Guide
+      - Material/Unlit Guide/Unlit Guide BG Outline.mat
+      - Material/Unlit Guide/Unlit Guide pagination 1.mat
+      - Material/Unlit Guide/Unlit Guide pagination 2.mat
+      - Material/Unlit Guide/Unlit Guide pagination 3.mat
+      - Material/Unlit Guide/Unlit Guide pagination 4.mat
+      - Meshes
       - Mic animation
-      - Mic animation/Mic.mat
-      - Mic animation/MicBlack.png
-      - Mic animation/MicWhite.png
       - Mic animation/Path Option A 2.prefab
       - Mic animation/Spectacles 3D Hand Hints.lspkg
       - Mic animation/Spectacles 3D Hand Hints.lspkg/Animation
@@ -872,15 +782,6 @@ CollapsedEntities:
       - Mic animation/SpectaclesInteractionKit/Utils/views/LineRenderer/LineMeshUtils.ts
       - Mic animation/SpectaclesInteractionKit/Utils/views/LineRenderer/LineRenderer.ts
       - Mic animation/SpectaclesInteractionKit/Utils/views/View.ts
-      - Mic animation/Vertex Distortion Material
-      - Mic animation/Vertex Distortion Material/.hidden
-      - Mic animation/Vertex Distortion Material/.hidden/Vertex Distortion.ss_graph
-      - Mic animation/Vertex Distortion Material/Vertex Distortion.mat
-      - Mic animation/flat.ss_graph
-      - Normal.png
-      - PBR.mat
-      - Prefab
-      - Prefab/Menu.prefab
       - Remote Service Gateway.lspkg
       - Remote Service Gateway.lspkg/Helpers
       - Remote Service Gateway.lspkg/Helpers/AudioProcessor.ts
@@ -950,10 +851,16 @@ CollapsedEntities:
       - Script/MaterialTextureReplacer.ts
       - Script/SmartTether.ts
       - Script/VFXBurst.ts
-      - Script_HandFollower
-      - Script_HandFollower/DisplayMenuOnOff.ts
-      - Script_HandFollower/HandFollowerWithAngleRange.ts
-      - Script_HandFollower/VectorUtils.ts
+      - Shader
+      - Shader/HandMenu
+      - Shader/HandMenu/RoundButtonHoverYellow.ss_graph
+      - Shader/HandMenu/RoundButtonPinchedGreen.ss_graph
+      - Shader/HandMenu/RoundButton_IdleGreen.ss_graph
+      - Shader/HandMenu/RoundButton_IdleYellow.ss_graph
+      - Shader/ImageGen_Mic
+      - Shader/ImageGen_Mic/ImageGen_MicOn.ss_graph
+      - Shader/flat.ss_graph
+      - Shader/image_unlit 2.ss_graph
       - Slider.lsc
       - Spectacles 3D Hand Hints.lspkg
       - Spectacles 3D Hand Hints.lspkg/Animation
@@ -1623,6 +1530,15 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Utils/views/MeshView.ts
       - SpectaclesInteractionKit/Utils/views/View.ts
       - SpectaclesInteractionKit/package.native
+      - Textures
+      - Textures/HandMenu
+      - Textures/HomeUpdate
+      - Textures/HomeUpdate/HomUpdate_Button_SimpleRefl.jpg
+      - Textures/Illust
+      - Textures/ImageGen_Mic
+      - Textures/ImageGen_TracingImage
+      - Textures/Menu
+      - Textures/Steps
       - VFX
       - VFX/Fireworks VFX
       - VFX/Fireworks VFX/.hidden
@@ -1700,6 +1616,4 @@ CollapsedEntities:
       - World Query Hit - Spawn On Surface/Textures/statue_params.png
       - World Query Hit - Spawn On Surface/World Query Hit Example.prefab
       - World Query Hit - Spawn On Surface/WorldQueryHit.ts
-      - image_unlit.ss_graph
-      - pbr.ss_graph
   options: 4
