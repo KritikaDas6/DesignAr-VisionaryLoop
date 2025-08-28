@@ -1,13 +1,8 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 827
+    size: 825
     values:
-      - AddedAsset/Device Camera Texture.deviceCameraTexture
-      - AddedAsset/Echopark.hdr
-      - AddedAsset/Echopark.hdr/Diffuse
-      - AddedAsset/Echopark.hdr/Specular
-      - AddedAsset/Render Target.renderTarget
       - Animation
       - Animation/Hint_Rotate_Head_Left_Right.lensanim
       - Animation/Hint_Rotate_Head_Left_Right.lensanim/Hint_Rotate_Head_Left_Right
@@ -16,6 +11,9 @@ CollapsedEntities:
       - Animation/TitleAnimation.t3d/ImagInk_0.png
       - Audio
       - Audio/CartoonWobble.wav
+      - Camera
+      - Camera/Device Camera Texture.deviceCameraTexture
+      - Camera/Render Target.renderTarget
       - Font
       - Font/DynaPuff
       - Font/DynaPuff/DynaPuff-Bold.ttf
@@ -389,6 +387,7 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Assets/Textures/SIKContainerExampleImage.jpg
       - SpectaclesInteractionKit/Assets/Textures/SIKLogo.png
       - SpectaclesInteractionKit/Assets/Textures/ScrollBarRectangle.png
+      - SpectaclesInteractionKit/Components
       - SpectaclesInteractionKit/Components/Helpers
       - SpectaclesInteractionKit/Components/Helpers/ButtonFeedback.ts
       - SpectaclesInteractionKit/Components/Helpers/CapsuleMeshCustomizer.ts
@@ -732,7 +731,6 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Prefabs/ScrollViewListItem.prefab
       - SpectaclesInteractionKit/Prefabs/SpectaclesInteractionKit.prefab
       - SpectaclesInteractionKit/Providers
-      - SpectaclesInteractionKit/Providers/CameraProvider
       - SpectaclesInteractionKit/Providers/CameraProvider/ARCameraFinderProvider.ts
       - SpectaclesInteractionKit/Providers/CameraProvider/BaseCameraFinderProvider.ts
       - SpectaclesInteractionKit/Providers/CameraProvider/BaseWorldCameraProvider.ts
