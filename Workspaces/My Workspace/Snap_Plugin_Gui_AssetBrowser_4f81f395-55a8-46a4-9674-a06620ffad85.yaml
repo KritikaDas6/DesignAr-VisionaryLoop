@@ -1,9 +1,8 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 860
+    size: 827
     values:
-      - AddedAsset
       - AddedAsset/Device Camera Texture.deviceCameraTexture
       - AddedAsset/Echopark.hdr
       - AddedAsset/Echopark.hdr/Diffuse
@@ -15,7 +14,6 @@ CollapsedEntities:
       - Animation/Hint_Rotate_Head_Left_Right.lensanim/Hint_Rotate_Head_Left_Right.png
       - Animation/TitleAnimation.t3d
       - Animation/TitleAnimation.t3d/ImagInk_0.png
-      - Animation/TitleAnimation.t3d/ImaginkBubble
       - Audio
       - Audio/CartoonWobble.wav
       - Font
@@ -28,69 +26,31 @@ CollapsedEntities:
       - Font/Manrope/Manrope-Medium.ttf
       - Font/Manrope/Manrope-Regular.ttf
       - Font/Manrope/Manrope-VariableFont_wght.ttf
-      - GenAI
-      - GenAI/AIAsset
-      - GenAI/AIAsset/AI Visual
-      - GenAI/AIAsset/AI Visual/Animation/baselayer
-      - GenAI/AIAsset/AI Visual/Animation/baselayer/BaseLayer.animationMixerLayer
-      - GenAI/AIAsset/AI Visual/Animation/constraint_rotation_45
-      - GenAI/AIAsset/AI Visual/Animation/constraint_rotation_45/Constraint_rotation_45.animationLayer
-      - GenAI/AIAsset/AI Visual/Materials
-      - GenAI/AIAsset/AI Visual/Materials/ActivityIndicator.mat
-      - GenAI/AIAsset/AI Visual/Materials/ActivityIndicator.ss_graph
-      - GenAI/AIAsset/AI Visual/Materials/Assist_sphere_Idle_L_T_T.mat
-      - GenAI/AIAsset/AI Visual/Materials/Assist_sphere_Idle_L_T_T.ss_graph
-      - GenAI/AIAsset/AI Visual/Materials/HoverColor.mat
-      - GenAI/AIAsset/AI Visual/Materials/HoverColor.ss_graph
-      - GenAI/AIAsset/AI Visual/Textures
-      - GenAI/AIAsset/AI Visual/Textures/Image.mat
-      - GenAI/AIAsset/AI Visual/Textures/Microphone.png
-      - GenAI/AIAsset/AI Visual/Textures/NoInternetAlert.png
-      - GenAI/AIAsset/AI Visual/Textures/NoInternetWarning.mat
-      - GenAI/AIAsset/AI Visual/Textures/Noise_combine_512.png
-      - GenAI/AIAsset/AI Visual/Textures/purple_halfcolor.png
-      - GenAI/AIAsset/AI Visual/Textures/yellow_alt.png
-      - GenAI/AIAsset/AI Visual/Textures/yellow_halfcolor.png
-      - GenAI/AIAsset/Prefab
-      - GenAI/AIAsset/Prefab/Snap3DInteractables.prefab
-      - GenAI/AIAssistantUIBridge.ts
-      - GenAI/APIKeyHint.ts
-      - GenAI/ASRQueryController.ts
-      - GenAI/GeminiAssistant.ts
-      - GenAI/GenAI.prefab
-      - GenAI/InteractableImageGenerator 2.ts
-      - GenAI/InteractableSnap3DGenerator.ts
-      - GenAI/InternetAvailabilityPopUp.ts
-      - GenAI/OpenAIAssistant.ts
-      - GenAI/Snap3DInteractable.ts
-      - GenAI/Snap3DInteractableFactory.ts
-      - GenAI/SphereController.ts
-      - LSTween.lspkg
-      - LSTween.lspkg/Examples
-      - LSTween.lspkg/Examples/Assets
-      - LSTween.lspkg/Examples/Assets/Box.mesh
-      - LSTween.lspkg/Examples/Assets/ImageMaterial.mat
-      - LSTween.lspkg/Examples/Assets/Simple Diffuse.mat
-      - LSTween.lspkg/Examples/Assets/Simple Diffuse.ss_graph
-      - LSTween.lspkg/Examples/Assets/Sphere.mesh
-      - LSTween.lspkg/Examples/Example__ADD_TO_SCENE.prefab
-      - LSTween.lspkg/Examples/Scripts
-      - LSTween.lspkg/Examples/Scripts/Example_ChainTween.ts
-      - LSTween.lspkg/Examples/Scripts/Example_RawTween.ts
-      - LSTween.lspkg/Examples/Scripts/Example_YoyoTween.ts
-      - LSTween.lspkg/LSTween.ts
-      - LSTween.lspkg/RotationInterpolationType.ts
-      - LSTween.lspkg/TweenJS
-      - LSTween.lspkg/TweenJS/Easing.ts
-      - LSTween.lspkg/TweenJS/Group.ts
-      - LSTween.lspkg/TweenJS/Index.ts
-      - LSTween.lspkg/TweenJS/Interpolation.ts
-      - LSTween.lspkg/TweenJS/Now.ts
-      - LSTween.lspkg/TweenJS/Sequence.ts
-      - LSTween.lspkg/TweenJS/Tween.ts
-      - LSTween.lspkg/TweenJS/Version.ts
-      - LSTween.lspkg/TweenJS/mainGroup.ts
-      - LSTween.lspkg/package.native
+      - LS Tween.lspkg
+      - LS Tween.lspkg/Examples
+      - LS Tween.lspkg/Examples/Assets
+      - LS Tween.lspkg/Examples/Assets/Box.mesh
+      - LS Tween.lspkg/Examples/Assets/Simple Diffuse.mat
+      - LS Tween.lspkg/Examples/Assets/Simple Diffuse.ss_graph
+      - LS Tween.lspkg/Examples/Assets/Sphere.mesh
+      - LS Tween.lspkg/Examples/Example__ADD_TO_SCENE.prefab
+      - LS Tween.lspkg/Examples/Scripts
+      - LS Tween.lspkg/Examples/Scripts/Example_ChainTween.ts
+      - LS Tween.lspkg/Examples/Scripts/Example_RawTween.ts
+      - LS Tween.lspkg/Examples/Scripts/Example_YoyoTween.ts
+      - LS Tween.lspkg/LSTween.ts
+      - LS Tween.lspkg/RotationInterpolationType.ts
+      - LS Tween.lspkg/TweenJS
+      - LS Tween.lspkg/TweenJS/Easing.ts
+      - LS Tween.lspkg/TweenJS/Group.ts
+      - LS Tween.lspkg/TweenJS/Index.ts
+      - LS Tween.lspkg/TweenJS/Interpolation.ts
+      - LS Tween.lspkg/TweenJS/Now.ts
+      - LS Tween.lspkg/TweenJS/Sequence.ts
+      - LS Tween.lspkg/TweenJS/Tween.ts
+      - LS Tween.lspkg/TweenJS/Version.ts
+      - LS Tween.lspkg/TweenJS/mainGroup.ts
+      - LS Tween.lspkg/package.native
       - Material
       - Material/Button
       - Material/HandMenu
@@ -148,6 +108,7 @@ CollapsedEntities:
       - Remote Service Gateway.lspkg/Resources
       - Remote Service Gateway.lspkg/Resources/Audio Output.audioOutput
       - Remote Service Gateway.lspkg/Resources/Microphone Audio.micaudio
+      - Remote Service Gateway.lspkg/Resources/Visuals
       - Remote Service Gateway.lspkg/Resources/Visuals/LoadingSpinner
       - Remote Service Gateway.lspkg/Resources/Visuals/LoadingSpinner/LoadingSpinner
       - Remote Service Gateway.lspkg/Resources/Visuals/LoadingSpinner/LoadingSpinner.prefab
@@ -168,10 +129,14 @@ CollapsedEntities:
       - Remote Service Gateway.lspkg/package.native
       - Scene.scene
       - Script
+      - Script/ASRQueryController.ts
       - Script/ContainerLock.ts
       - Script/EnhancedButtonFeedback.ts
+      - Script/InteractableImageGenerator 2.ts
       - Script/MaterialTextureReplacer.ts
       - Script/SmartTether.ts
+      - Script/Snap3DInteractable.ts
+      - Script/Snap3DInteractableFactory.ts
       - Script/VFXBurst.ts
       - Script/WorldQueryHit.ts
       - Shader
@@ -477,6 +442,8 @@ CollapsedEntities:
       - SpectaclesInteractionKit/Components/Interaction/InteractorLineVisual/InteractorLineMaterial.mat
       - SpectaclesInteractionKit/Components/Interaction/InteractorLineVisual/InteractorLineRenderer.ts
       - SpectaclesInteractionKit/Components/Interaction/InteractorLineVisual/InteractorLineVisual.ts
+      - SpectaclesInteractionKit/Components/UI
+      - SpectaclesInteractionKit/Components/UI/ContainerFrame
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/ContainerFrame.ts
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/ContainerFrameLocker.ts
       - SpectaclesInteractionKit/Components/UI/ContainerFrame/Materials
