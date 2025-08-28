@@ -2178,7 +2178,7 @@
   PrefabRemaps:
     []
   Name: Imagegen00
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: -40.000000}
@@ -9878,21 +9878,6 @@
     - !<own> cea29e78-b5d3-46d9-a8cc-b63f701219c2
   Components:
     []
-- !<SceneObject/8e2893d9-efe8-4e0f-b1ef-75f55dab118f>
-  PrefabRemaps:
-    []
-  Name: animation_bubble
-  Enabled: false
-  Layers: 1
-  LocalTransform:
-    position: {x: -4.500000, y: 1.000000, z: 2.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: -10.000000}
-    scale: {x: 11.000000, y: 11.000000, z: 11.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> aab54442-439a-4cdc-893f-1bf7aee5ce56
 - !<SceneObject/8e696501-b1bc-4793-8583-38a5b2f073ca>
   PrefabRemaps:
     []
@@ -11986,25 +11971,6 @@
   BlendNormals: false
   BlendShapes:
     {}
-- !<Image/aab54442-439a-4cdc-893f-1bf7aee5ce56>
-  PrefabRemaps:
-    []
-  Name: Image
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Fit
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> aac587cc-164f-4f5e-ba75-a30ed0bd1293
-  FlipX: false
-  FlipY: false
-  RotationAngle: 0
-  Pivot: {x: 0.000000, y: 0.000000}
-  ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
 - !<SceneObject/aae96ba6-f83c-4936-8109-7d3916166b5a>
   PrefabRemaps:
     []
@@ -13082,7 +13048,7 @@
 - !<SceneObject/bbcef45f-1cea-45e9-b0da-989b6acd8b1a>
   PrefabRemaps:
     []
-  Name: animation
+  Name: Title_Animation
   Enabled: true
   Layers: 1
   LocalTransform:
@@ -17074,7 +17040,6 @@
     hasSegmentScaleCompensation: false
   Children:
     - !<own> bbcef45f-1cea-45e9-b0da-989b6acd8b1a
-    - !<own> 8e2893d9-efe8-4e0f-b1ef-75f55dab118f
     - !<own> 3b1e37c1-a5a1-4895-8fe3-3096f7415af8
   Components:
     []
@@ -17263,7 +17228,7 @@
   PrefabRemaps:
     []
   Name: Project
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: -40.000000}
