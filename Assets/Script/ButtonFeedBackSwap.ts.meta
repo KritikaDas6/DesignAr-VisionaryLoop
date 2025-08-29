@@ -1,20 +1,20 @@
-- !<AssetImportMetadata/d3c436ce-374c-4d4f-a24e-d96f3bf67e5f>
+- !<AssetImportMetadata/962f99ac-8960-4d50-b1b2-8bfef6b99f7b>
   ImportedAssetIds:
-    TypeScriptAsset: !<reference> 37d2fbc1-9825-4184-9122-7a1c191313da
+    TypeScriptAsset: !<reference> 03dfae84-6479-46c2-9047-07153ddaabfd
   ImporterName: TypeScriptAssetImporter
-  PrimaryAsset: !<reference> 37d2fbc1-9825-4184-9122-7a1c191313da
+  PrimaryAsset: !<reference> 03dfae84-6479-46c2-9047-07153ddaabfd
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
   ExtraData:
     {}
   AssetDataMap:
-    TypeScriptAsset: !<own> e23a91b6-87ee-4c3c-959e-37bdbd978ed0
+    TypeScriptAsset: !<own> 4345f33b-29c9-4f42-9d20-2a7a09217338
   DependentFiles:
     []
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<TypeScriptAssetData/e23a91b6-87ee-4c3c-959e-37bdbd978ed0>
+- !<TypeScriptAssetData/4345f33b-29c9-4f42-9d20-2a7a09217338>
   SvgIcon: ""
   SetupScript:
     code: ""
@@ -23,13 +23,14 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 8d635c65-bc20-43c8-8c49-2b3ae8d4cb0b
+  ComponentUid: 4dfa5390-e88e-43ed-9748-18f3a9bd6816
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
     buttonType: false
     defaultIcon: false
+    enableMaterialSwap: false
     glowBlendShapeName: false
     glowHoverMaterial: false
     glowIdleMaterial: false
@@ -79,6 +80,7 @@
       defaultIcon: !<reference.Texture> 00000000-0000-0000-0000-000000000000
       onIcon: !<reference.Texture> 00000000-0000-0000-0000-000000000000
       swapMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      enableMaterialSwap: false
   ScriptTypes:
     -
       {}
@@ -109,4 +111,6 @@
     - '// @ui {"widget":"separator"}'
     - '// @input Asset.Texture defaultIcon {"hint":"The texture displayed on the button in its default state (not toggled). Applied to idle, hover, and pinched materials."}'
     - '// @input Asset.Texture onIcon {"hint":"The texture displayed when the button is toggled on. Replaces defaultIcon for toggle and state buttons when activated."}'
-    - '// @input Asset.Material swapMaterial {"hint":"Material to swap with meshIdleMaterial on pinch"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input Asset.Material swapMaterial {"hint":"Material to swap with meshIdleMaterial on pinch. Each pinch toggles between original and swap materials."}'
+    - '// @input bool enableMaterialSwap {"hint":"When enabled, each pinch will toggle between the original idle material and swap material."}'
