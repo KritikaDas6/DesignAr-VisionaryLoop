@@ -1,5 +1,5 @@
 // Import required components and utilities for the ASR (Automatic Speech Recognition) controller
-import { PinchButton } from "SpectaclesInteractionKit.lspkg/Components/UI/PinchButton/PinchButton";
+import { PinchButton } from "./PinchButton";
 import Event from "SpectaclesInteractionKit.lspkg/Utils/Event";
 import { LSTween } from "LS Tween.lspkg/LSTween";
 

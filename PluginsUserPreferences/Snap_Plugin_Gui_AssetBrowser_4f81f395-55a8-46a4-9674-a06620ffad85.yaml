@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 723
+    size: 734
     values:
       - Animation
       - Animation/Hint_Rotate_Head_Left_Right.lensanim
@@ -83,6 +83,7 @@ CollapsedEntities:
       - Material/HandMenu/HandMenu_Image_Lock.mat
       - Material/HandMenu/HandMenu_Image_UnLock.mat
       - Material/HomeUpdate_Icon_info.mat
+      - Material/ImageGenInitial.mat
       - Material/ImageGenerator.mat
       - Material/Menu Panel.mat
       - Material/Mic
@@ -91,6 +92,8 @@ CollapsedEntities:
       - Material/Project_Hint_Rotate_Head.mat
       - Material/SampleIllustration.mat
       - Material/SketchRiderTrace.mat
+      - Material/Slider_Platform 2.mat
+      - Material/Slider_Platform.mat
       - Material/Steps
       - Material/Steps/Step1mic image.mat
       - Material/Steps/Step3 illust.mat
@@ -112,6 +115,7 @@ CollapsedEntities:
       - Meshes/PlatformUI/RoundButtonGlow.mesh
       - Meshes/PlatformUI/ScrollBarKnobMesh.mesh
       - Meshes/PlatformUI/ScrollBarMesh.mesh
+      - Meshes/Slider.mesh
       - Remote Service Gateway.lspkg
       - Remote Service Gateway.lspkg/Helpers
       - Remote Service Gateway.lspkg/Helpers/AudioProcessor.ts
@@ -175,21 +179,24 @@ CollapsedEntities:
       - Remote Service Gateway.lspkg/Utils/Promisfy.ts
       - Remote Service Gateway.lspkg/package.native
       - Scene.scene
+      - Script
       - Script/ASRQueryController.ts
       - Script/AnimationStop.ts
+      - Script/ContainerFrameLocker.ts
       - Script/DisplayMenuOnOff.ts
       - Script/EnhancedButtonFeedback.ts
       - Script/HandFollowerWithAngleRange.ts
       - Script/ImageGenerator.ts
       - Script/InteractableImageGenerator 2.ts
       - Script/MaterialTextureReplacer.ts
+      - Script/PinchButton.ts
+      - Script/SliderMonotoneEditor.ts
       - Script/SliderTransparentEditor.ts
       - Script/SmartTether.ts
       - Script/Snap3DInteractable.ts
       - Script/Snap3DInteractableFactory.ts
       - Script/VFXBurst.ts
       - Script/VectorUtils.ts
-      - Script/WorldQueryHit.ts
       - Shader
       - Shader/HandMenu
       - Shader/HandMenu/RoundButtonHoverYellow.ss_graph
@@ -219,6 +226,8 @@ CollapsedEntities:
       - Shader/PlatformUI/StateButtonToggledHover.ss_graph
       - Shader/PlatformUI/StateButtonToggledPinched.ss_graph
       - Shader/SampleIllustration.ss_graph
+      - Shader/Slider_Platform 2.ss_graph
+      - Shader/Slider_Platform.ss_graph
       - Shader/Unlit Guide Pagination.ss_graph
       - Shader/flat.ss_graph
       - Shader/image_unlit 2.ss_graph
@@ -500,6 +509,8 @@ CollapsedEntities:
       - SpectaclesInteractionKit.lspkg/Components/Interaction/InteractorLineVisual/InteractorLineMaterial.mat
       - SpectaclesInteractionKit.lspkg/Components/Interaction/InteractorLineVisual/InteractorLineRenderer.ts
       - SpectaclesInteractionKit.lspkg/Components/Interaction/InteractorLineVisual/InteractorLineVisual.ts
+      - SpectaclesInteractionKit.lspkg/Components/UI
+      - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/ContainerFrame.ts
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Materials
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Materials/FrameMaterial.mat
@@ -518,9 +529,11 @@ CollapsedEntities:
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Meshes/SphereButton.mesh
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Meshes/SysSettings_settings_button.mesh
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Meshes/pinch-depth-button.mesh
+      - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Prefabs
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Prefabs/FramePrefab.prefab
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Prefabs/container-button.prefab
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/README.md
+      - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Textures
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Textures/close-icon-1.png
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Textures/close-icon.png
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Textures/container-button-matcap.jpg
@@ -607,8 +620,6 @@ CollapsedEntities:
       - SpectaclesInteractionKit.lspkg/Prefabs
       - SpectaclesInteractionKit.lspkg/Prefabs/ScrollViewListItem.prefab
       - SpectaclesInteractionKit.lspkg/Prefabs/SpectaclesInteractionKit.prefab
-      - SpectaclesInteractionKit.lspkg/Providers
-      - SpectaclesInteractionKit.lspkg/Providers/CameraProvider
       - SpectaclesInteractionKit.lspkg/Providers/CameraProvider/ARCameraFinderProvider.ts
       - SpectaclesInteractionKit.lspkg/Providers/CameraProvider/BaseCameraFinderProvider.ts
       - SpectaclesInteractionKit.lspkg/Providers/CameraProvider/CameraProvider.ts
