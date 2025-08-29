@@ -10,7 +10,7 @@ const TAG = "PinchButton"
  * This class provides basic pinch button functionality for the prefab pinch button. It is meant to be added to a Scene Object with an Interactable component, with visual behavior configured in the Lens Studio scene.
  */
 @component
-export class PinchButton extends BaseScriptComponent {
+export class PinchButton_Modified extends BaseScriptComponent {
   @input("SceneObject")
   @allowUndefined
   @hint("The object to disable when the pinch is triggered")

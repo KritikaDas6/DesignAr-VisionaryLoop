@@ -12,7 +12,7 @@ const STATE_BUTTON: number = 2
  * Button. It allows customization of the button's appearance and behavior based on its state.
  */
 @component
-export class ButtonFeedbackSwap extends BaseScriptComponent {
+export class ButtonFeedback_Modified extends BaseScriptComponent {
   /**
    * Defines the interactive behavior and visual feedback style of the button:
    * - Pinch Button: Standard button with hover/pinch states.

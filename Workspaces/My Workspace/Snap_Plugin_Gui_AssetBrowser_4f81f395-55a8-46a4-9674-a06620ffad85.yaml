@@ -3,6 +3,7 @@ CollapsedEntities:
   value:
     size: 703
     values:
+      - ""
       - Animation
       - Animation/Hint_Rotate_Head_Left_Right.lensanim
       - Animation/Hint_Rotate_Head_Left_Right.lensanim/Hint_Rotate_Head_Left_Right
@@ -162,15 +163,14 @@ CollapsedEntities:
       - Remote Service Gateway.lspkg/Utils/Promisfy.ts
       - Remote Service Gateway.lspkg/package.native
       - Scene.scene
-      - Script
       - Script/ASRQueryController.ts
       - Script/AnimationStop.ts
-      - Script/ButtonFeedBackSwap.ts
+      - Script/ButtonFeedBack_Modified.ts
       - Script/ContainerFrameLocker.ts
       - Script/DisplayMenuOnOff.ts
       - Script/HandFollowerWithAngleRange.ts
       - Script/MaterialTextureReplacer.ts
-      - Script/PinchButton.ts
+      - Script/PinchButton_Modified.ts
       - Script/SliderMonotoneEditor.ts
       - Script/SliderTransparentEditor.ts
       - Script/SmartTether.ts

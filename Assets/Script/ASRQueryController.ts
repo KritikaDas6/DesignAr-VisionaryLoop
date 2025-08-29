@@ -1,5 +1,5 @@
 // Import required components and utilities for the ASR (Automatic Speech Recognition) controller
-import { PinchButton } from "./PinchButton";
+import { PinchButton_Modified } from "./PinchButton_Modified";
 import Event from "SpectaclesInteractionKit.lspkg/Utils/Event";
 import { LSTween } from "LS Tween.lspkg/LSTween";
 
@@ -11,7 +11,7 @@ import { LSTween } from "LS Tween.lspkg/LSTween";
 @component
 export class ASRQueryController extends BaseScriptComponent {
   // Input references - these are set in the Lens Studio inspector
-  @input private button: PinchButton;                    // Pinch button that triggers voice recording
+  @input private button: PinchButton_Modified;                    // Pinch button that triggers voice recording
   @input private activityRenderMesh: RenderMeshVisual;  // Visual mesh that shows recording activity
   @input private textDisplay: Text;                      // Text component to display transcribed speech
 

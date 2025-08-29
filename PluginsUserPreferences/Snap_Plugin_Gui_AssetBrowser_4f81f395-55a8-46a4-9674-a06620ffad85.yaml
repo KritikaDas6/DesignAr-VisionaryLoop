@@ -1,8 +1,9 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 700
+    size: 703
     values:
+      - ""
       - Animation
       - Animation/Hint_Rotate_Head_Left_Right.lensanim
       - Animation/Hint_Rotate_Head_Left_Right.lensanim/Hint_Rotate_Head_Left_Right
@@ -105,6 +106,7 @@ CollapsedEntities:
       - Meshes/PlatformUI/ScrollBarKnobMesh.mesh
       - Meshes/PlatformUI/ScrollBarMesh.mesh
       - Meshes/Slider.mesh
+      - Remote Service Gateway.lspkg
       - Remote Service Gateway.lspkg/Helpers
       - Remote Service Gateway.lspkg/Helpers/AudioProcessor.ts
       - Remote Service Gateway.lspkg/Helpers/DynamicAudioOutput.ts
@@ -161,15 +163,14 @@ CollapsedEntities:
       - Remote Service Gateway.lspkg/Utils/Promisfy.ts
       - Remote Service Gateway.lspkg/package.native
       - Scene.scene
-      - Script
       - Script/ASRQueryController.ts
       - Script/AnimationStop.ts
-      - Script/ButtonFeedBackSwap.ts
+      - Script/ButtonFeedBack_Modified.ts
       - Script/ContainerFrameLocker.ts
       - Script/DisplayMenuOnOff.ts
       - Script/HandFollowerWithAngleRange.ts
       - Script/MaterialTextureReplacer.ts
-      - Script/PinchButton.ts
+      - Script/PinchButton_Modified.ts
       - Script/SliderMonotoneEditor.ts
       - Script/SliderTransparentEditor.ts
       - Script/SmartTether.ts
@@ -282,6 +283,7 @@ CollapsedEntities:
       - Spectacles 3D Hand Hints.lspkg/Textures/Hands_Interaction_Glow_Mask.png
       - Spectacles 3D Hand Hints.lspkg/Textures/Hands_Opacity_Gradient.png
       - Spectacles 3D Hand Hints.lspkg/package.native
+      - SpectaclesInteractionKit.lspkg
       - SpectaclesInteractionKit.lspkg/Assets/Audio
       - SpectaclesInteractionKit.lspkg/Assets/Audio/HoverAudioTrack.wav
       - SpectaclesInteractionKit.lspkg/Assets/Audio/TriggerEndAudioTrack.wav
@@ -673,6 +675,7 @@ CollapsedEntities:
       - SpectaclesInteractionKit.lspkg/VersionNumber.ts
       - SpectaclesInteractionKit.lspkg/package.native
       - SpectaclesInteractionKit.lspkg/tsconfig.json
+      - Textures
       - Textures/Bubble.png
       - Textures/HandMenu
       - Textures/HandMenu/HandMenu_EditGreen.png
