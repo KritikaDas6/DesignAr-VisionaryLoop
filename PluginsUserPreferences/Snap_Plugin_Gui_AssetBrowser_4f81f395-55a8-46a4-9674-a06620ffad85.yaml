@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 703
+    size: 707
     values:
       - ""
       - Animation
@@ -16,6 +16,9 @@ CollapsedEntities:
       - Camera
       - Camera/Device Camera Texture.deviceCameraTexture
       - Camera/Render Target.renderTarget
+      - Echopark.hdr
+      - Echopark.hdr/Diffuse
+      - Echopark.hdr/Specular
       - Font
       - Font/DynaPuff
       - Font/DynaPuff/DynaPuff-Bold.ttf
@@ -163,6 +166,7 @@ CollapsedEntities:
       - Remote Service Gateway.lspkg/Utils/Promisfy.ts
       - Remote Service Gateway.lspkg/package.native
       - Scene.scene
+      - Script
       - Script/ASRQueryController.ts
       - Script/AnimationStop.ts
       - Script/ButtonFeedBack_Modified.ts

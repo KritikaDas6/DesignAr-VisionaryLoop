@@ -16,8 +16,8 @@ dock:
             type: section
             current: 0
         sizes:
-          - 419
-          - 514
+          - 413
+          - 507
         type: splitter
         orientation: vertical
       - items:
@@ -42,10 +42,10 @@ dock:
               - persistentName: Snap.Plugin.Gui.SceneEditor
                 Uuid: c19fc2c8-0523-4f46-b9c6-8c47d0dc9a2c
             type: section
-            current: 2
+            current: 0
         sizes:
-          - 437
-          - 496
+          - 431
+          - 489
         type: splitter
         orientation: vertical
       - items:
@@ -56,8 +56,8 @@ dock:
         type: section
         current: 0
     sizes:
-      - 453
-      - 714
-      - 733
+      - 404
+      - 636
+      - 653
     type: splitter
     orientation: horizontal
