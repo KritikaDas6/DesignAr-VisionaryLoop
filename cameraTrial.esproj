@@ -10,9 +10,9 @@ updateCheckpoint: 61
 sceneId: 0a1ccb1a-fe88-4fbb-9883-e3af3c75fd99
 viewConfig:
   simulation:
-    device: No Simulation
-    cameraFov: 66.519997
-    fullFrameAspect: nan
+    device: Spectacles (2024)
+    cameraFov: nan
+    fullFrameAspect: 0.666660
     resolutionScale: 1.000000
     viewport: Maximized
     output: Live
@@ -25,7 +25,7 @@ metaInfo:
     []
   tags:
     []
-  lensName: Imagink MVP
+  lensName: Imangink MVP
   lensDescriptors:
     []
   lensApplicability:
@@ -33,12 +33,11 @@ metaInfo:
     - Back
   lensClientCompatibilities:
     - Spectacles
-    - CameraKit
   platformBundlesEnabled: false
   iconHash: ""
   videoPreviewHash: ""
   fromTemplateName: Default
-  fromTemplateUrl: Lens Studio 5.7.2.25030805
+  fromTemplateUrl: Lens Studio 5.10.1.25061003
   activationCamera: Front
   sourceMapEnabled: false
   usingMinClientVersions: false
