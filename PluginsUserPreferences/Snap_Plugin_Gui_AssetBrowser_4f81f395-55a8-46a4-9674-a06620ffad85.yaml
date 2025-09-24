@@ -1,9 +1,8 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 707
+    size: 737
     values:
-      - ""
       - Animation
       - Animation/Hint_Rotate_Head_Left_Right.lensanim
       - Animation/Hint_Rotate_Head_Left_Right.lensanim/Hint_Rotate_Head_Left_Right
@@ -82,13 +81,16 @@ CollapsedEntities:
       - Material/Button/RoundButtonPinchedGreen.mat
       - Material/Button/RoundButton_IdleGreen.mat
       - Material/Button/RoundButton_IdleYellow.mat
+      - Material/HandMenu
       - Material/HomeUpdate_Icon_info.mat
       - Material/Menu Panel.mat
+      - Material/Mic
       - Material/Project_Hint_Rotate_Head.mat
       - Material/SampleIllustration.mat
       - Material/SketchRiderTrace.mat
       - Material/Slider_Platform 2.mat
       - Material/Slider_Platform.mat
+      - Material/Steps
       - Material/Steps/Step3 illust.mat
       - Material/TitleAnimation.mat
       - Material/Unlit Guide
@@ -109,6 +111,31 @@ CollapsedEntities:
       - Meshes/PlatformUI/ScrollBarKnobMesh.mesh
       - Meshes/PlatformUI/ScrollBarMesh.mesh
       - Meshes/Slider.mesh
+      - "Pointer/Example [REMOVE_ME]"
+      - "Pointer/Example [REMOVE_ME]/Device Camera Texture [REMOVE_ME].deviceCameraTexture"
+      - "Pointer/Example [REMOVE_ME]/Materials"
+      - "Pointer/Example [REMOVE_ME]/Materials/Blue.mat"
+      - "Pointer/Example [REMOVE_ME]/Materials/Green.mat"
+      - "Pointer/Example [REMOVE_ME]/Materials/Grey.mat"
+      - "Pointer/Example [REMOVE_ME]/Materials/Red.mat"
+      - "Pointer/Example [REMOVE_ME]/Models"
+      - "Pointer/Example [REMOVE_ME]/Models/Box.mesh"
+      - "Pointer/Example [REMOVE_ME]/Render Target [REMOVE_ME].renderTarget"
+      - "Pointer/Example [REMOVE_ME]/Scripts"
+      - "Pointer/Example [REMOVE_ME]/Scripts/PointerExample.js"
+      - "Pointer/Example [REMOVE_ME]/Shaders"
+      - "Pointer/Example [REMOVE_ME]/Shaders/simple_pbr.ss_graph"
+      - "Pointer/Example [REMOVE_ME]/Textures"
+      - "Pointer/Example [REMOVE_ME]/Textures/Base.png"
+      - Pointer/Materials
+      - Pointer/Materials/Arrow.mat
+      - Pointer/Pointer__PLACE_IN_SCENE.prefab
+      - Pointer/Scripts
+      - Pointer/Scripts/Pointer.js
+      - Pointer/Shaders
+      - Pointer/Shaders/sprite_shader.ss_graph
+      - Pointer/Textures
+      - Pointer/Textures/arrow_1.png
       - Remote Service Gateway.lspkg
       - Remote Service Gateway.lspkg/Helpers
       - Remote Service Gateway.lspkg/Helpers/AudioProcessor.ts
@@ -174,6 +201,7 @@ CollapsedEntities:
       - Script/DisplayMenuOnOff.ts
       - Script/HandFollowerWithAngleRange.ts
       - Script/MaterialTextureReplacer.ts
+      - Script/PinchButtonMulti_Modified.ts
       - Script/PinchButton_Modified.ts
       - Script/SliderMonotoneEditor.ts
       - Script/SliderTransparentEditor.ts
@@ -193,6 +221,7 @@ CollapsedEntities:
       - Shader/HandMenu/Slider_Platform 2.ss_graph
       - Shader/HandMenu/Slider_Platform.ss_graph
       - Shader/ImageGen_Mic
+      - Shader/InvisiblePlane.ss_graph
       - Shader/PlatformUI
       - Shader/PlatformUI/ButtonHover.ss_graph
       - Shader/PlatformUI/ButtonIdle.ss_graph
@@ -707,6 +736,7 @@ CollapsedEntities:
       - Textures/Steps
       - Textures/Steps/Step1_Mic button.png
       - Textures/Steps/Step3 illust.png
+      - Textures/Transparent.png
       - VFX
       - VFX/TracingVFX_LeftHand.vfxgraph
       - VFX/TracingVFX_RightHand.vfxgraph

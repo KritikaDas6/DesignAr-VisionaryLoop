@@ -25,7 +25,7 @@ metaInfo:
     []
   tags:
     []
-  lensName: Imagink MVP
+  lensName: Imangink MVP
   lensDescriptors:
     []
   lensApplicability:
@@ -33,12 +33,11 @@ metaInfo:
     - Back
   lensClientCompatibilities:
     - Spectacles
-    - CameraKit
   platformBundlesEnabled: false
   iconHash: ""
   videoPreviewHash: ""
   fromTemplateName: Default
-  fromTemplateUrl: Lens Studio 5.7.2.25030805
+  fromTemplateUrl: Lens Studio 5.10.1.25061003
   activationCamera: Front
   sourceMapEnabled: false
   usingMinClientVersions: false
