@@ -108,4 +108,16 @@ export class PinchButton_Modified extends BaseScriptComponent {
 //        }
     }
   }
+
+ public resetButton(): void {
+    if (this.isToggleButton) {
+      // make sure the disabled/enabled visuals are restored to their initial state
+      if (this.targetObjectToEnable) this.targetObjectToEnable.enabled = false;
+      if (this.targetObjectToDisable) this.targetObjectToDisable.enabled = true;
+    } else {
+      // for non-toggle buttons, just reset visuals
+      if (this.targetObjectToEnable) this.targetObjectToEnable.enabled = false;
+      if (this.targetObjectToDisable) this.targetObjectToDisable.enabled = true;
+    }
+  }
 }

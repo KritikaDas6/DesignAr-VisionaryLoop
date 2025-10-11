@@ -9793,24 +9793,6 @@
   ScriptTypes:
     "":
       {}
-- !<ScriptComponent/a203d885-e3dc-43e7-a777-11974d7cfb90>
-  PrefabRemaps:
-    []
-  Name: ASRQueryController
-  Enabled: true
-  ScriptAsset: !<reference> 547e62b4-06f3-4a2f-8d8e-e9c6362af0f0
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      button: !<MappingBased.AssignableType> 743891d5-a246-44dc-81ad-912ec02025e3
-      activityRenderMesh: !<reference.RenderMeshVisual> 6954df8c-b5e5-466a-9613-3b2862fc2c0e
-      textDisplay: !<reference.Text> fd147243-fc22-423e-8664-ac151e803ec0
-  ScriptTypes:
-    "":
-      {}
 - !<SceneObject/a22a0955-d1e6-45a3-b72c-a98203bd88ca>
   PrefabRemaps:
     []
@@ -14348,6 +14330,22 @@
     - !<own> 26047408-154f-4f15-9145-ab12fa5e6694
   Components:
     []
+- !<ScriptComponent/e644b105-fd8f-4c5c-96c8-32f884408ecf>
+  PrefabRemaps:
+    []
+  Name: ASRQueryController
+  Enabled: true
+  ScriptAsset: !<reference> 2eb81ce7-cbc0-4f0c-b665-80bbb84420b3
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
+  ScriptTypes:
+    "":
+      {}
 - !<ScriptComponent/e6e9fe0f-5b21-4a54-a6af-6bff0fd0cd83>
   PrefabRemaps:
     []
@@ -15619,7 +15617,7 @@
     - !<own> 8ad4d0cb-e899-45a2-ac20-8826b1ad4766
     - !<own> 7f19f280-c80e-4e59-a005-41ad193abce3
   Components:
-    - !<own> a203d885-e3dc-43e7-a777-11974d7cfb90
+    - !<own> e644b105-fd8f-4c5c-96c8-32f884408ecf
 - !<SceneObject/fb865784-da41-40e0-a1a7-b4911a34baed>
   PrefabRemaps:
     []

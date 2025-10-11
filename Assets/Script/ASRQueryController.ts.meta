@@ -1,20 +1,20 @@
-- !<AssetImportMetadata/dc4d130b-fac4-4f93-a603-2c807255f95c>
+- !<AssetImportMetadata/072def33-bba7-4475-8a13-69991d7549c6>
   ImportedAssetIds:
-    TypeScriptAsset: !<reference> 547e62b4-06f3-4a2f-8d8e-e9c6362af0f0
+    TypeScriptAsset: !<reference> 2eb81ce7-cbc0-4f0c-b665-80bbb84420b3
   ImporterName: TypeScriptAssetImporter
-  PrimaryAsset: !<reference> 547e62b4-06f3-4a2f-8d8e-e9c6362af0f0
+  PrimaryAsset: !<reference> 2eb81ce7-cbc0-4f0c-b665-80bbb84420b3
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
   ExtraData:
     {}
   AssetDataMap:
-    TypeScriptAsset: !<own> 8a51b921-1558-43a0-b2b1-5b16232f8453
+    TypeScriptAsset: !<own> cca6050f-ebcb-4f1a-b3dd-f5ce700d6adf
   DependentFiles:
     []
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<TypeScriptAssetData/8a51b921-1558-43a0-b2b1-5b16232f8453>
+- !<TypeScriptAssetData/cca6050f-ebcb-4f1a-b3dd-f5ce700d6adf>
   SvgIcon: ""
   SetupScript:
     code: ""
@@ -23,13 +23,14 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 748b00a4-f984-4fe3-8883-d00cee0212d1
+  ComponentUid: 2c1fdd71-e1e4-433d-b72f-be9ecc514634
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
-    activityRenderMesh: false
     button: false
+    micActiveObject: false
+    micDefaultObject: false
     textDisplay: false
   ScriptTypesHidden:
     {}
@@ -37,12 +38,14 @@
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
     - button: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
-      activityRenderMesh: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
+      micDefaultObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      micActiveObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       textDisplay: !<reference.Text> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
     - // @input AssignableType button
-    - // @input Component.RenderMeshVisual activityRenderMesh
+    - // @input SceneObject micDefaultObject
+    - // @input SceneObject micActiveObject
     - // @input Component.Text textDisplay
