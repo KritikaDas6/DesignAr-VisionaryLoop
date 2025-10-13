@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 736
+    size: 737
     values:
       - Animation
       - Animation/Hint_Rotate_Head_Left_Right.lensanim
@@ -193,6 +193,7 @@ CollapsedEntities:
       - Remote Service Gateway.lspkg/Utils/Promisfy.ts
       - Remote Service Gateway.lspkg/package.native
       - Scene.scene
+      - Script
       - Script/ASRQueryController.ts
       - Script/AnimationStop.ts
       - Script/ButtonFeedBack_Modified.ts

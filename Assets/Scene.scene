@@ -12221,7 +12221,7 @@
       image: !<reference.Image> 038bdb3e-7629-46ca-8e83-de34d24ee0f5
       projectionImage: !<reference.Image> dc8dfaa6-f205-4ec6-bf59-2bd4884f4790
       textDisplay: !<reference.Text> fd147243-fc22-423e-8664-ac151e803ec0
-      asrQueryController: !<MappingBased.AssignableType> a203d885-e3dc-43e7-a777-11974d7cfb90
+      asrQueryController: !<MappingBased.AssignableType> e644b105-fd8f-4c5c-96c8-32f884408ecf
       spinner: !<reference.SceneObject> f2edfe92-2c78-4b2b-bfed-e355ba9f53cc
       nextButton: !<reference.SceneObject> aac9c91f-215b-4ec7-934c-1959c6bdc1f0
       micOff: !<reference.SceneObject> 8ad4d0cb-e899-45a2-ac20-8826b1ad4766
@@ -14342,7 +14342,10 @@
     {}
   ScriptInputs:
     "":
-      {}
+      button: !<MappingBased.AssignableType> 743891d5-a246-44dc-81ad-912ec02025e3
+      micDefaultObject: !<reference.SceneObject> 8ad4d0cb-e899-45a2-ac20-8826b1ad4766
+      micActiveObject: !<reference.SceneObject> 7f19f280-c80e-4e59-a005-41ad193abce3
+      textDisplay: !<reference.Text> fd147243-fc22-423e-8664-ac151e803ec0
   ScriptTypes:
     "":
       {}
