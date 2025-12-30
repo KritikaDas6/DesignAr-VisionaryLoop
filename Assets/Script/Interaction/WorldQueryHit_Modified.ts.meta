@@ -1,0 +1,72 @@
+- !<AssetImportMetadata/b0b19da1-f45c-4afa-af73-444e962bbf99>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> efb6b9bb-02d2-40eb-83e6-945b3bdf8441
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> efb6b9bb-02d2-40eb-83e6-945b3bdf8441
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 87be18ff-c215-485a-b365-e62fbd6308c9
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/87be18ff-c215-485a-b365-e62fbd6308c9>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 550d2a49-e0d6-48c8-b355-6c554808d3f8
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    camera: false
+    ceilingRotationZ: false
+    feedbackTextComponent: false
+    filterEnabled: false
+    floorRotationZ: false
+    indexToSpawn: false
+    objectsToSpawn: false
+    placeButtonInteractable: false
+    placement: false
+    targetObject: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - indexToSpawn: !<float> 0.000000
+      targetObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      objectsToSpawn: !<reference.SceneObject[]>
+        []
+      filterEnabled: false
+      camera: !<reference.Camera> 00000000-0000-0000-0000-000000000000
+      floorRotationZ: !<float> 0.000000
+      ceilingRotationZ: !<float> 0.000000
+      placement: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      feedbackTextComponent: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      placeButtonInteractable: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input float indexToSpawn
+    - // @input SceneObject targetObject
+    - "// @input SceneObject[] objectsToSpawn"
+    - // @input bool filterEnabled
+    - // @input Component.Camera camera
+    - '// @input float floorRotationZ {"hint":"Z rotation offset for floor surfaces (in degrees)"}'
+    - '// @input float ceilingRotationZ {"hint":"Z rotation offset for ceiling surfaces (in degrees)"}'
+    - // @input SceneObject placement
+    - // @input Component.Text feedbackTextComponent
+    - '// @input AssignableType placeButtonInteractable {"hint":"Place/Project button interactable (for click handler)"}'

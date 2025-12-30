@@ -1,6 +1,7 @@
-//@input SceneObject hintParent
-//@input vec2 leftRightPosition
-//@input string hintText
+//@input bool showHint
+//@input SceneObject hintParent {"showIf" : "showHint"}
+//@input vec2 leftRightPosition {"showIf" : "showHint"}
+//@input string hintText {"showIf" : "showHint"}
 
 let isCreated = false;
 let hintObject = null;
@@ -9,19 +10,29 @@ const delay = 0.5;
 
 const interactionComp = script.getSceneObject().getComponent('Component.InteractionComponent');
 
+let mainPass;
+
+init();
+
+function init() {
+    mainPass = script.getSceneObject().getComponent("Component.Image").mainPass;
+}
+
 const delayedEvent = script.createEvent('DelayedCallbackEvent');
 delayedEvent.bind(function() {
     checkHoverStatus();
 });
 
 interactionComp.onHoverStart.add(function() {
-    if (script.hintText.length > 0) {
+    if (script.showHint && script.hintText.length > 0) {
         if (!isCreated) {
             setUpHint();
         }
     }
+    
+    mainPass.Hover = true;
 
-    if (hintObject) {
+    if (script.showHint && hintObject) {
         hintObject.enabled = true;
         hoverIdx = global.hoverIdx;
         delayedEvent.enable = true;
@@ -30,12 +41,14 @@ interactionComp.onHoverStart.add(function() {
 });
 
 interactionComp.onHoverEnd.add(function() {
-    if (hintObject) {
+    mainPass.Hover = false;
+    if (script.showHint && hintObject) {
         hintObject.enabled = false;
     }
 });
 
 script.createEvent("OnDisableEvent").bind(function(){
+    mainPass.Hover = false;
     if (hintObject) {
         hintObject.enabled = false;
     }
@@ -43,7 +56,8 @@ script.createEvent("OnDisableEvent").bind(function(){
 
 function checkHoverStatus() {
     if (hoverIdx != global.hoverIdx) {
-        if (hintObject) {
+        mainPass.Hover = false;
+        if (script.showHint && hintObject) {
             hintObject.enabled = false;
         }
         delayedEvent.enable = false;

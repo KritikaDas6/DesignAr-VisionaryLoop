@@ -1,0 +1,73 @@
+- !<AssetImportMetadata/86e474ec-17cf-4655-ad8c-bc97f6b94cee>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 532fde64-60c6-4851-9d72-f243e01b5b8f
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 532fde64-60c6-4851-9d72-f243e01b5b8f
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 9f2ef93c-b9c5-4d9e-89b5-d50b3286a65e
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/9f2ef93c-b9c5-4d9e-89b5-d50b3286a65e>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 272d7c65-94af-47aa-898c-f35a9324a3ab
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    asrQueryController: false
+    confirmButton: false
+    displayImage: false
+    micOff: false
+    micOn: false
+    modelProvider: false
+    projectionImage: false
+    spinner: false
+    textDisplay: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - modelProvider: Gemini
+      displayImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      projectionImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      textDisplay: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      spinner: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      micOff: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      micOn: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      confirmButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      asrQueryController: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"Image Generation Settings"}'
+    - '// @input string modelProvider = "Gemini" {"widget":"combobox", "values":[{"label":"OpenAI", "value":"OpenAI"}, {"label":"Gemini", "value":"Gemini"}]}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"UI References"}'
+    - '// @input Component.Image displayImage {"hint":"Image component to display generated image"}'
+    - '// @input Component.Image projectionImage {"hint":"Image component for projection (shares texture)"}'
+    - '// @input Component.Text textDisplay {"hint":"Text display for status/prompt"}'
+    - '// @input SceneObject spinner {"hint":"Spinner/loading indicator"}'
+    - '// @input SceneObject micOff {"hint":"Mic off icon"}'
+    - '// @input SceneObject micOn {"hint":"Mic on/active icon"}'
+    - '// @input SceneObject confirmButton {"hint":"Confirm/Next button"}'
+    - '// @ui {"widget":"group_end"}'
+    - // @input AssignableType asrQueryController

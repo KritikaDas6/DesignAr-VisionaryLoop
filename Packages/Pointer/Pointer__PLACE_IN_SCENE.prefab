@@ -10,11 +10,11 @@
   Name: X
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 1.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 0.500000, z: 0.500000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -119,11 +119,11 @@
   Name: "Director Example [REMOVE_ME]"
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> e9124bb2-e2cf-4cda-b262-d3e139d2a0c0
   Components:
@@ -134,11 +134,11 @@
   Name: Y
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 1.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 0.500000, y: 1.000000, z: 0.500000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -149,11 +149,11 @@
   Name: Full Frame Region
   Enabled: true
   Layers: 4
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -161,15 +161,31 @@
     - !<own> f9e3ac6c-f4b7-47f4-8408-f96343283338
 - !<SceneObject/7f9d5e64-11c4-4673-b310-f4de3797a041>
   PrefabRemaps:
-    []
+    - 1b744610-89e5-4167-8271-8dabb8e88585: 1b744610-89e5-4167-7d8e-725447177a7a
+    - 2f5c3299-c688-46b1-bf14-eba022b38f59: 2f5c3299-c688-46b1-40eb-145fdd4c70a6
+    - 37699eb3-24e0-43ba-bb3c-0da0adc9d5a5: 37699eb3-24e0-43ba-44c3-f25f52362a5a
+    - 3b930b7d-83f7-4f6b-ad8a-919a70428a4c: 3b930b7d-83f7-4f6b-5275-6e658fbd75b3
+    - 41a8e8ba-119b-46e2-a94b-f484faaadc61: 41a8e8ba-119b-46e2-56b4-0b7b0555239e
+    - 54b6426e-52d1-48d3-846c-c1d6afd6b43e: 54b6426e-52d1-48d3-7b93-3e2950294bc1
+    - 64231283-c669-45db-80cb-ecbb3048af55: 64231283-c669-45db-7f34-1344cfb750aa
+    - 742c1bb2-25d7-4bbb-9bc7-a202d723006d: 742c1bb2-25d7-4bbb-6438-5dfd28dcff92
+    - 7be1f82e-01c9-4126-bd37-8ae96ee11661: 7be1f82e-01c9-4126-42c8-7516911ee99e
+    - 7f9d5e64-11c4-4673-b310-f4de3797a041: 7f9d5e64-11c4-4673-4cef-0b21c8685fbe
+    - 882fa797-e049-417d-8577-9098690eb77c: 882fa797-e049-417d-7a88-6f6796f14883
+    - 98358df7-06c5-4bd9-8188-7320552f5f04: 98358df7-06c5-4bd9-7e77-8cdfaad0a0fb
+    - 995a5f5e-db7b-485b-a447-0f2133de85c5: 995a5f5e-db7b-485b-5bb8-f0decc217a3a
+    - b6dd45ba-08d1-4906-a664-5b80a86b55c8: b6dd45ba-08d1-4906-599b-a47f5794aa37
+    - dfa50265-0876-49fc-b3cf-7c8c1c27de0b: dfa50265-0876-49fc-4c30-8373e3d821f4
+    - e9124bb2-e2cf-4cda-b262-d3e139d2a0c0: e9124bb2-e2cf-4cda-4d9d-2c1ec62d5f3f
+    - f9e3ac6c-f4b7-47f4-8408-f96343283338: f9e3ac6c-f4b7-47f4-7bf7-069cbcd7ccc7
   Name: Pointer
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 40.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 995a5f5e-db7b-485b-a447-0f2133de85c5
     - !<own> 64231283-c669-45db-80cb-ecbb3048af55
@@ -232,11 +248,11 @@
   Name: Pointer Camera
   Enabled: true
   Layers: 4
-  LocalTransform:
-    position: {x: -120.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 7be1f82e-01c9-4126-bd37-8ae96ee11661
   Components:
@@ -247,11 +263,11 @@
   Name: Z
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 1.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 0.500000, y: 0.500000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -282,11 +298,11 @@
   Name: Gizmo
   Enabled: false
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -40.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 5.000000, y: 5.000000, z: 5.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 1b744610-89e5-4167-8271-8dabb8e88585
     - !<own> 742c1bb2-25d7-4bbb-9bc7-a202d723006d

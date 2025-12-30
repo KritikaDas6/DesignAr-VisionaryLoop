@@ -1,7 +1,5 @@
 //@input SceneObject textureLeftSection
 //@input SceneObject textureMiddleSection
-//@input SceneObject channelIconObj
-//@input SceneObject mappingIconObj
 //@input Component.ScriptComponent fovController
 //@input SceneObject[] channelBackgroundObjects
 //@input SceneObject[] mappingBackgroundObjects
@@ -13,6 +11,8 @@ let channelIdx = 0;
 let mappingObjIdx = 0;
 const channelBackgroundPass = [];
 const mappingBackgroundPass = [];
+const channelNames = ["red_channel", "green_channel", "blue_channel", "alpha_channel", "envmap_preview"]
+let buttonStates = [true, true, true, true, false];
 let texturePreviewPass;
 
 function init() {
@@ -38,25 +38,35 @@ function show(newTexture) {
     script.textureLeftSection.enabled = true;
     script.textureMiddleSection.enabled = true;
     texturePreviewPass[0].baseTex = newTexture;
-    setChannelIdx(0);
-    setMappingIndex(0);
+    script.mappingObjs[mappingObjIdx].enabled = true;
 }
 
 function setChannelIdx(idx) {
-    setChannelBackgroundColor(channelIdx, 0);
-    channelIdx = idx;
-    setChannelBackgroundColor(channelIdx, 1);
-    texturePreviewPass[mappingObjIdx].channel = channelIdx;
+    buttonStates[idx] = !buttonStates[idx];
+    setChannelBackgroundColor(idx, buttonStates[idx]);
+    texturePreviewPass[mappingObjIdx][channelNames[idx]] = buttonStates[idx];
+}
+
+function setChannelStates() {
+    channelNames.forEach(function(channelName, idx) {
+        texturePreviewPass[mappingObjIdx][channelName] = buttonStates[idx];
+    })
+}
+
+function setButtonStates() {
+    buttonStates.forEach(function(state, idx) {
+        setChannelBackgroundColor(idx, state);
+    })
 }
 
 function setMappingIndex(idx) {
-    setMappingBackgroundColor(mappingObjIdx, 0);
+    setMappingBackgroundColor(mappingObjIdx, false);
     script.mappingObjs[mappingObjIdx].enabled = false;
     mappingObjIdx = idx;
-    setMappingBackgroundColor(mappingObjIdx, 1);
+    setMappingBackgroundColor(mappingObjIdx, true);
     script.mappingObjs[mappingObjIdx].enabled = true;
     texturePreviewPass[mappingObjIdx].baseTex = texturePreviewPass[0].baseTex;
-    texturePreviewPass[mappingObjIdx].channel = channelIdx;
+    setChannelStates();
 
     if (mappingObjIdx == 0 || mappingObjIdx == 2) {
         script.fovController.pause();
@@ -74,21 +84,18 @@ function onMappingButtonTapped(idx) {
 }
 
 function reset() {
-    setChannelIdx(0);
+    buttonStates = [true, true, true, true, false];
+    setButtonStates();
     setMappingIndex(0);
     hideMappingObjs();
 }
 
-function setChannelBackgroundColor(idx, alpha) {
-    const color = channelBackgroundPass[idx].baseColor;
-    color.w = alpha;
-    channelBackgroundPass[idx].baseColor = color;
+function setChannelBackgroundColor(idx, state) {
+    channelBackgroundPass[idx].Active = state;
 }
 
-function setMappingBackgroundColor(idx, alpha) {
-    const color = mappingBackgroundPass[idx].baseColor;
-    color.w = alpha;
-    mappingBackgroundPass[idx].baseColor = color;
+function setMappingBackgroundColor(idx, state) {
+    mappingBackgroundPass[idx].Active = state;
 }
 
 function hideMappingObjs() {

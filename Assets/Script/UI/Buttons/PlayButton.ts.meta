@@ -1,0 +1,44 @@
+- !<AssetImportMetadata/17bf4bec-644b-431b-87bd-ca078113cbd8>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 125f3479-361b-4e3d-9839-d9cc98fa5536
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 125f3479-361b-4e3d-9839-d9cc98fa5536
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 16f4b3ff-ca5b-4a60-8519-a234a67ab648
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/16f4b3ff-ca5b-4a60-8519-a234a67ab648>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 1b172b7a-2924-437d-a19b-7a8646b9434a
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    interactable: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - interactable: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input AssignableType interactable {"hint":"The interactable component for this button"}'

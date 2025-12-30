@@ -36,26 +36,20 @@ if (!script.sceneObject) {
 // Setup the external API
 script.tweenObject = script.getSceneObject();
 script.tweenType = 'transform';
-script.tweenName = script.tweenName;
-script.time = script.time;
 script.startTween = startTween;
 script.resetObject = resetObject;
 script.tween = null;
-script.type = script.type;
-script.movementType = script.movementType;
 script.setupTween = setupTween;
 script.setupTweenBackwards = setupTweenBackwards;
-script.sceneObject = script.sceneObject;
 script.updateToStart = updateToStart;
 script.updateToEnd = updateToEnd;
-script.loopType = script.loopType;
 script.start = null;
 script.end = null;
 script.setStart = setStart;
 script.setEnd = setEnd;
 script.manualStart = false;
 script.manualEnd = false;
-script.playAutomatically = script.playAutomatically;
+
 script.createEvent('OnDestroyEvent').bind(stopTween);
 
 if (global.tweenManager && global.tweenManager.addToRegistry) {

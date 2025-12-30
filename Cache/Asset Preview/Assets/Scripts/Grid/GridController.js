@@ -15,6 +15,7 @@ init();
 function init() {
     gridButtonImage = script.gridButtonObj.getComponent('Component.Image');
     gridPass = script.gridMaterial.mainPass;
+    script.gridButtonObj.enabled = true;
 }
 
 const updateEvent = script.createEvent('UpdateEvent');
@@ -44,11 +45,8 @@ function update() {
 }
 
 function onGridButtonTapped() {
-    const color = gridButtonImage.mainPass.baseColor;
-    color.w = (color.w + 1) % 2;
-    gridButtonImage.mainPass.baseColor = color;
-
-    if (color.w > 0) {
+    gridButtonImage.mainPass.Active = !gridButtonImage.mainPass.Active;
+    if (gridButtonImage.mainPass.Active) {
         script.gridObject.enabled = true;
         update();
     } else {
@@ -57,11 +55,9 @@ function onGridButtonTapped() {
 }
 
 function show(){
-    const color = gridButtonImage.mainPass.baseColor;
-    color.w = 1;
-    gridButtonImage.mainPass.baseColor = color;
-    
+    gridButtonImage.mainPass.Active = true;
     script.gridObject.enabled = true;
+    script.gridButtonObj.enabled = true;
 }
 
 script.onGridButtonTapped = onGridButtonTapped;

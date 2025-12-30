@@ -1,0 +1,78 @@
+- !<AssetImportMetadata/0771e63c-cc01-4695-a5fa-d10650a8d6e1>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 9829a492-6960-4f59-9ec3-e01a8f991908
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 9829a492-6960-4f59-9ec3-e01a8f991908
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> b2e22727-0667-468b-90f9-a980773446af
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/b2e22727-0667-468b-90f9-a980773446af>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: dee655ab-7e2f-44bf-925e-d19f4a9f8698
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    currentStepIndex: false
+    doneButtonInteractable: false
+    doneButtonObject: false
+    nextButtonInteractable: false
+    nextButtonObject: false
+    previousButtonInteractable: false
+    previousButtonObject: false
+    tutorialObject1: false
+    tutorialObject2: false
+    tutorialSteps: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - tutorialObject1: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      tutorialObject2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      tutorialSteps: !<reference.SceneObject[]>
+        []
+      currentStepIndex: !<float> 0.000000
+      nextButtonInteractable: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      doneButtonInteractable: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      previousButtonInteractable: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      nextButtonObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      previousButtonObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      doneButtonObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"group_start", "label":"Tutorial Objects"}'
+    - '// @input SceneObject tutorialObject1 {"hint":"First tutorial SceneObject (shown in HOW_TO_EDIT state)"}'
+    - '// @input SceneObject tutorialObject2 {"hint":"Second tutorial SceneObject (shown in HOW_TO_EDIT state)"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Tutorial Steps (Optional)"}'
+    - '// @input SceneObject[] tutorialSteps {"hint":"Array of SceneObjects, one for each tutorial step (guide images)"}'
+    - '// @input float currentStepIndex {"hint":"Current step index (0-based)"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Navigation"}'
+    - '// @input AssignableType nextButtonInteractable {"hint":"Next button interactable"}'
+    - '// @input AssignableType_1 doneButtonInteractable {"hint":"Done button interactable (optional, separate from Next)"}'
+    - '// @input AssignableType_2 previousButtonInteractable {"hint":"Previous button interactable (optional)"}'
+    - '// @input SceneObject nextButtonObject {"hint":"Next button SceneObject (to hide on last step)"}'
+    - '// @input SceneObject previousButtonObject {"hint":"Previous button SceneObject (to hide on first step)"}'
+    - '// @input SceneObject doneButtonObject {"hint":"Done button SceneObject (to show on last step)"}'
+    - '// @ui {"widget":"group_end"}'

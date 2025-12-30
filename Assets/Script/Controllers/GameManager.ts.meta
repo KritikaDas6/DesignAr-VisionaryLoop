@@ -1,0 +1,120 @@
+- !<AssetImportMetadata/8a7b57bf-be20-4c99-b513-f1faa65ed9d2>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> eb3e95c6-7753-4798-81f9-90d69161a714
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> eb3e95c6-7753-4798-81f9-90d69161a714
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> c95dbfce-4702-4cf5-b991-5ce626ef87f6
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/c95dbfce-4702-4cf5-b991-5ce626ef87f6>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: ef761e71-43f0-4241-bd8c-12032ffaec63
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    ProjectButton: false
+    backButton: false
+    confirmButton: false
+    confirmButtonInteractable: false
+    doneButton: false
+    generatingSpinner: false
+    guideBackground: false
+    howToEdit_State: false
+    imageConfirmButton: false
+    imageGenGuide: false
+    imageGen_State: false
+    imagePreviewContainer: false
+    intro_State: false
+    micButtonContainer: false
+    nextButton: false
+    projectedImageContainerFrame: false
+    projectedImageObject: false
+    projectionGuide: false
+    projection_State: false
+    resetButton: false
+    resetButtonInteractable: false
+    textHint: false
+    tracing_State: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - intro_State: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      imageGen_State: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      imageGenGuide: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      micButtonContainer: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      generatingSpinner: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      imagePreviewContainer: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      imageConfirmButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      textHint: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      projection_State: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      projectionGuide: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      guideBackground: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      ProjectButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      confirmButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      resetButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      confirmButtonInteractable: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      resetButtonInteractable: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      projectedImageObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      projectedImageContainerFrame: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      howToEdit_State: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      nextButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      backButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      doneButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      tracing_State: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"group_start", "label":"Intro State"}'
+    - '// @input SceneObject intro_State {"hint":"Root object for Intro state UI"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Image Gen State"}'
+    - '// @input SceneObject imageGen_State {"hint":"Root object for Image Generation state UI"}'
+    - '// @input SceneObject imageGenGuide {"hint":"How-to guide shown during ready to record"}'
+    - '// @input SceneObject micButtonContainer {"hint":"Mic button container (ready to record)"}'
+    - '// @input SceneObject generatingSpinner {"hint":"Spinner/loading indicator"}'
+    - '// @input SceneObject imagePreviewContainer {"hint":"Image preview container with confirm/regenerate buttons"}'
+    - '// @input SceneObject imageConfirmButton {"hint":"Confirm button for generated image"}'
+    - '// @input SceneObject textHint {"hint":"Text hint/display showing prompt (hides when entering projection)"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Projection State"}'
+    - '// @input SceneObject projection_State {"hint":"Root object for Projection state UI"}'
+    - '// @input SceneObject projectionGuide {"hint":"How-to guide shown during surface detection (sibling of HowToEditState, shares Guide_BG)"}'
+    - '// @input SceneObject guideBackground {"hint":"Shared background for ProjectionGuide and HowToEditState (Guide_BG)"}'
+    - '// @input SceneObject ProjectButton {"hint":"Project button for projection"}'
+    - '// @input SceneObject confirmButton {"hint":"Confirm button SceneObject (for placement confirmation)"}'
+    - '// @input SceneObject resetButton {"hint":"Reset button SceneObject (for placement reset)"}'
+    - '// @input AssignableType confirmButtonInteractable {"hint":"Confirm button Interactable component"}'
+    - '// @input AssignableType_1 resetButtonInteractable {"hint":"Reset button Interactable component"}'
+    - '// @input SceneObject projectedImageObject {"hint":"The projected image object"}'
+    - '// @input AssignableType_2 projectedImageContainerFrame {"hint":"ContainerFrame component on the projected image (optional - will search if not provided)"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"How To Edit State"}'
+    - '// @input SceneObject howToEdit_State {"hint":"Root object for How To Edit tutorial (sibling of ProjectionGuide, shares Guide_BG)"}'
+    - '// @input SceneObject nextButton {"hint":"Next button SceneObject (for tutorial navigation)"}'
+    - '// @input SceneObject backButton {"hint":"Back button SceneObject (for tutorial navigation)"}'
+    - '// @input SceneObject doneButton {"hint":"Done button SceneObject (for tutorial completion)"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Tracing State"}'
+    - '// @input SceneObject tracing_State {"hint":"Root object for Tracing state UI"}'
+    - '// @ui {"widget":"group_end"}'

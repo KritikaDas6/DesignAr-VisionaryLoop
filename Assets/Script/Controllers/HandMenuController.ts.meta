@@ -1,0 +1,130 @@
+- !<AssetImportMetadata/e8e0754e-c98f-43ef-aa04-05b4c61a7bf5>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> d56bb4a5-4eb4-4036-b7bd-10c66ac53715
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> d56bb4a5-4eb4-4036-b7bd-10c66ac53715
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 8fabbfcc-cc54-4536-bfc1-d623608db2f9
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/8fabbfcc-cc54-4536-bfc1-d623608db2f9>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 4a7f50bc-b1f1-45c7-8e5e-3661966c9cfc
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    containerFrame: false
+    editButtonDefaultIcon: false
+    editButtonFeedback: false
+    editButtonIconMaterial: false
+    editButtonIdleMaterial: false
+    editButtonInteractable: false
+    editButtonObject: false
+    editButtonOnIcon: false
+    editButtonRenderMeshVisual: false
+    handMenu_State: false
+    homeButtonInteractable: false
+    lockButtonFeedback: false
+    lockButtonIdleMaterial: false
+    lockButtonInteractable: false
+    lockButtonObject: false
+    lockButtonRenderMeshVisual: false
+    lockIconMaterial: false
+    lockTexture: false
+    opacitySlider: false
+    projectedImageObject: false
+    saturationSlider: false
+    saturationTargetImage: false
+    sliderMenuPanel: false
+    targetImage: false
+    unlockTexture: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - homeButtonInteractable: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      lockButtonInteractable: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      editButtonInteractable: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      lockIconMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      lockTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      unlockTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      lockButtonRenderMeshVisual: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
+      lockButtonIdleMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      editButtonRenderMeshVisual: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
+      editButtonIdleMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      lockButtonObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      editButtonObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      editButtonIconMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      editButtonDefaultIcon: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      editButtonOnIcon: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      lockButtonFeedback: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+      editButtonFeedback: !<MappingBased.AssignableType_4> 00000000-0000-0000-0000-000000000000
+      opacitySlider: !<MappingBased.AssignableType_5> 00000000-0000-0000-0000-000000000000
+      targetImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      saturationSlider: !<MappingBased.AssignableType_6> 00000000-0000-0000-0000-000000000000
+      saturationTargetImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      projectedImageObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      containerFrame: !<MappingBased.AssignableType_7> 00000000-0000-0000-0000-000000000000
+      handMenu_State: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      sliderMenuPanel: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"group_start", "label":"Buttons"}'
+    - '// @input AssignableType homeButtonInteractable {"hint":"Home button interactable"}'
+    - '// @input AssignableType_1 lockButtonInteractable {"hint":"Lock button interactable"}'
+    - '// @input AssignableType_2 editButtonInteractable {"hint":"Edit button interactable (for pinch detection)"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Lock Button Visuals"}'
+    - '// @input Asset.Material lockIconMaterial {"hint":"Material on the lock icon to swap textures"}'
+    - '// @input Asset.Texture lockTexture {"hint":"Lock texture (shown when unlocked)"}'
+    - '// @input Asset.Texture unlockTexture {"hint":"Unlock texture (shown when locked)"}'
+    - '// @input Component.RenderMeshVisual lockButtonRenderMeshVisual {"hint":"Lock button render mesh visual (for material reset)"}'
+    - '// @input Asset.Material lockButtonIdleMaterial {"hint":"Lock button idle material (green - for reset)"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Edit Button Visuals"}'
+    - '// @input Component.RenderMeshVisual editButtonRenderMeshVisual {"hint":"Edit button render mesh visual (for material reset)"}'
+    - '// @input Asset.Material editButtonIdleMaterial {"hint":"Edit button idle material (green - for reset)"}'
+    - '// @input SceneObject lockButtonObject {"hint":"Lock button SceneObject (with ButtonFeedback_Modified component) - easier to drag & drop"}'
+    - '// @input SceneObject editButtonObject {"hint":"Edit button SceneObject (with ButtonFeedback_Modified component) - easier to drag & drop"}'
+    - '// @input Asset.Material editButtonIconMaterial {"hint":"Material on the edit button icon to swap icon textures"}'
+    - '// @input Asset.Texture editButtonDefaultIcon {"hint":"Edit button default icon texture (shown when not in edit mode)"}'
+    - '// @input Asset.Texture editButtonOnIcon {"hint":"Edit button on icon texture (shown when in edit mode)"}'
+    - '// @input AssignableType_3 lockButtonFeedback {"hint":"Lock button ButtonFeedback_Modified component (optional - will auto-find if lockButtonObject is assigned)"}'
+    - '// @input AssignableType_4 editButtonFeedback {"hint":"Edit button ButtonFeedback_Modified component (optional - will auto-find if editButtonObject is assigned)"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Opacity Slider"}'
+    - '// @input AssignableType_5 opacitySlider {"hint":"Slider component for opacity control"}'
+    - '// @input Component.Image targetImage {"hint":"Image component to apply opacity to (projected image)"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Saturation Slider"}'
+    - '// @input AssignableType_6 saturationSlider {"hint":"Slider component for saturation control"}'
+    - '// @input Component.Image saturationTargetImage {"hint":"Image component to apply saturation to (projected image)"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Target Objects"}'
+    - '// @input SceneObject projectedImageObject {"hint":"The projected image object to control"}'
+    - '// @input AssignableType_7 containerFrame {"hint":"Container frame component (for lock functionality)"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Hand Menu Root"}'
+    - '// @input SceneObject handMenu_State {"hint":"Root object for the hand menu (for visibility control)"}'
+    - '// @input SceneObject sliderMenuPanel {"hint":"Slider UI panel (to close when edit button is pinched)"}'
+    - '// @ui {"widget":"group_end"}'

@@ -1,0 +1,53 @@
+- !<AssetImportMetadata/0782aa60-b3f7-45af-a755-fe8198ebe6d7>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> e2042e5a-9a9a-45ec-851c-4fbac0994c3b
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> e2042e5a-9a9a-45ec-851c-4fbac0994c3b
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> a732d891-a226-49ed-91e8-07a751467f58
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/a732d891-a226-49ed-91e8-07a751467f58>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: c661f180-775a-4857-b22c-9e4be91661d7
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    interactable: false
+    originalTexture: false
+    replacementTexture: false
+    targetMaterial: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - interactable: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      targetMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      originalTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      replacementTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input AssignableType interactable {"hint":"Interactable component to listen for interaction events"}'
+    - '// @input Asset.Material targetMaterial {"hint":"Material whose texture will be replaced"}'
+    - '// @input Asset.Texture originalTexture {"hint":"Original texture for the material"}'
+    - '// @input Asset.Texture replacementTexture {"hint":"Replacement texture for the material"}'

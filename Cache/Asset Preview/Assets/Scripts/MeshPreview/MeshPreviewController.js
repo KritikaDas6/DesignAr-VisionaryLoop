@@ -30,11 +30,9 @@ function hide() {
 }
 
 function onMappingButtonTapped() {
-    const color = mappingImage.mainPass.baseColor;
-    color.w = (color.w + 1) % 2;
-    mappingImage.mainPass.baseColor = color;
+    mappingImage.mainPass.Active = !mappingImage.mainPass.Active
 
-    if (color.w > 0) {
+    if (mappingImage.mainPass.Active) {
         mainPass.baseTex = script.textureAnalyzer;
     } else {
         mainPass.baseTex = initTex;
@@ -42,9 +40,7 @@ function onMappingButtonTapped() {
 }
 
 function reset() {
-    const color = mappingImage.mainPass.baseColor;
-    color.w = 0;
-    mappingImage.mainPass.baseColor = color;
+    mappingImage.mainPass.Active = false;
 }
 
 script.onMappingButtonTapped = onMappingButtonTapped;

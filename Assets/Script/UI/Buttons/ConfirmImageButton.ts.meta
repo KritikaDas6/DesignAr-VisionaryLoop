@@ -1,0 +1,47 @@
+- !<AssetImportMetadata/0d6e89a0-39cd-4ed2-81c8-dd2738d4a70b>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> fc7c34ef-1686-4778-a39b-73d2d6167a80
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> fc7c34ef-1686-4778-a39b-73d2d6167a80
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 105f8e40-b63c-4d39-bcdf-a770d66e6c0f
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/105f8e40-b63c-4d39-bcdf-a770d66e6c0f>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: b566d966-5c5c-4c6d-8ead-ed38506620a3
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    imageGenController: false
+    interactable: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - interactable: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      imageGenController: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input AssignableType interactable {"hint":"The interactable component for this button (optional, will try to find on same object)"}'
+    - '// @input AssignableType_1 imageGenController {"hint":"ImageGenController to hide displayImage (optional, will try to find)"}'

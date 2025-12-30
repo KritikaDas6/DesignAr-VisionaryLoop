@@ -1,7 +1,7 @@
 /**
  * @module Built-In
- * @version 5.10.0
- * For Snapchat Version: 13.42
+ * @version 5.15.0
+ * For Snapchat Version: 13.60
 */
 interface ComponentNameMap {
     "AnimationPlayer": AnimationPlayer;
@@ -14,8 +14,6 @@ interface ComponentNameMap {
     "BlurNoiseEstimation": BlurNoiseEstimation;
     "Camera": Camera;
     "Canvas": Canvas;
-    "ClearDepth": ClearDepth;
-    "ClearScreen": ClearDepth;
     "ClothVisual": ClothVisual;
     "ColliderComponent": ColliderComponent;
     "ColocatedTrackingComponent": ColocatedTrackingComponent;
@@ -30,8 +28,6 @@ interface ComponentNameMap {
     "Component.BlurNoiseEstimation": BlurNoiseEstimation;
     "Component.Camera": Camera;
     "Component.Canvas": Canvas;
-    "Component.ClearDepth": ClearDepth;
-    "Component.ClearScreen": ClearDepth;
     "Component.ClothVisual": ClothVisual;
     "Component.ColliderComponent": ColliderComponent;
     "Component.ColocatedTrackingComponent": ColocatedTrackingComponent;
@@ -74,8 +70,6 @@ interface ComponentNameMap {
     "Component.Script": ScriptComponent;
     "Component.ScriptComponent": ScriptComponent;
     "Component.Skin": Skin;
-    "Component.SplineComponent": SplineComponent;
-    "Component.SpriteAligner": SpriteAligner;
     "Component.SpriteVisualV2": Image;
     "Component.Text": Text;
     "Component.Text3D": Text3D;
@@ -129,8 +123,6 @@ interface ComponentNameMap {
     "Script": ScriptComponent;
     "ScriptComponent": ScriptComponent;
     "Skin": Skin;
-    "SplineComponent": SplineComponent;
-    "SpriteAligner": SpriteAligner;
     "SpriteVisualV2": Image;
     "Text": Text;
     "Text3D": Text3D;
@@ -152,10 +144,13 @@ interface EventNameMap {
     "ClientInterfacePlayButtonTriggerEvent": ConnectedLensEnteredEvent;
     "ConnectedLensEnteredEvent": ConnectedLensEnteredEvent;
     "DelayedCallbackEvent": DelayedCallbackEvent;
+    "DoubleTapEvent": DoubleTapEvent;
     "FaceFoundEvent": FaceFoundEvent;
     "FaceLostEvent": FaceLostEvent;
     "FaceTrackingEvent": FaceTrackingEvent;
+    "HoverEndEvent": HoverEndEvent;
     "HoverEvent": HoverEvent;
+    "HoverStartEvent": HoverStartEvent;
     "KissFinishedEvent": KissFinishedEvent;
     "KissStartedEvent": KissStartedEvent;
     "LateUpdateEvent": LateUpdateEvent;
@@ -203,6 +198,18 @@ interface EventNameMap {
     "WorldTrackingResetEvent": SurfaceTrackingResetEvent;
 }
 
+/**
+* Unhandled Promise rejections are silently ignored by default.
+* `failAsync` rethrows the error, ensuring it results in an unhandled exception. Note: error is not rethrown immediately, some pending JS code might still be executed.
+* Use it as a default `.catch()` handler when no other error handling is provided.
+
+* Example:
+
+* ```js
+* someAsyncFunction().catch(failAsync);
+* ```
+
+*/
 declare function failAsync(error: any): void
 
 /**
@@ -239,7 +246,6 @@ declare function print(message: any): void
 * Load a JavaScript module. Used for importing another JavaScript file found in the Resources panel to be used in the current script. Similar to `require` found in CommonJS specification. You can access Lens Studio specific modules (like `RemoteServiceModule`) using the `LensStudio` prefix, such as: `require("LensStudio:RemoteServiceModule)`. 
 
 * You can use the modules name or path, meaning you can have two version of the same module in your project if needed. Both by name or by path will be relative to the script which is calling require, but by name will check the same folder as the script, then the parent folder, and so on. In addition, any require can be relative to your library folder. Take a look at the [Scripting guide](https://developers.snap.com/lens-studio/features/scripting/script-overview) to learn more.
-
 */
 declare function require(moduleName: (ScriptAsset|string)): any
 
@@ -305,10 +311,11 @@ declare namespace global {
 }
 
 /**
-* An object containing the position of an object relative to a LocationAsset. 
+* An object containing the position of an object relative to a LocationAsset.
 */
 declare class Anchor extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -328,7 +335,7 @@ declare class Anchor extends ScriptObject {
 }
 
 /**
-* Provider for animated texture resource. 
+* Provider for animated texture resource.
 
 * @remarks
 * Can be accessed from {@link Asset | Texture.Control} on an animated texture.
@@ -337,6 +344,7 @@ declare class Anchor extends ScriptObject {
 */
 declare class AnimatedTextureFileProvider extends TextureProvider {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -431,10 +439,10 @@ declare class AnimatedTextureFileProvider extends TextureProvider {
 
 * @remarks
 * AnimationAssets themselves do not handle playing or orchestrating animations. This is left to the {@link AnimationPlayer} component to handle.
-
 */
 declare class AnimationAsset extends Asset {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -484,10 +492,11 @@ declare class AnimationAsset extends Asset {
 }
 
 /**
-* Animation Clip is what an Animation Player uses to manage playback for a specific animation. It defines that animation by referencing an Animation Asset and providing start and end points, playback speed and direction, and blending information. 
+* Animation Clip is what an Animation Player uses to manage playback for a specific animation. It defines that animation by referencing an Animation Asset and providing start and end points, playback speed and direction, and blending information.
 */
 declare class AnimationClip extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -535,7 +544,7 @@ declare class AnimationClip extends ScriptObject {
     name: string
     
     /**
-    * The offset (in seconds) which is the starting point for an animation. After the first iteration, it starts back at the beginning of the clip. 
+    * The offset (in seconds) which is the starting point for an animation. After the first iteration, it starts back at the beginning of the clip.
     */
     offset: number
     
@@ -581,6 +590,7 @@ declare class AnimationClip extends ScriptObject {
 */
 declare class AnimationCurve extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -594,7 +604,7 @@ declare class AnimationCurve extends ScriptObject {
     evaluate(time: number): number
     
     /**
-    * Get an `AnimationKeyFrame` at the passed in index. 
+    * Get an `AnimationKeyFrame` at the passed in index.
     */
     getKeyFrame(index: number): AnimationKeyFrame
     
@@ -604,7 +614,7 @@ declare class AnimationCurve extends ScriptObject {
     removeKeyFrame(t: number): void
     
     /**
-    * The number of keyframes in the animation curve. 
+    * The number of keyframes in the animation curve.
     
     * @readonly
     */
@@ -630,15 +640,16 @@ declare class AnimationCurve extends ScriptObject {
 /**
 * Container for one or more {@link AnimationCurve}s. Can be sampled to drive attributes (e.g. animation, vfx, code etc.)
 
-* @remarks 
-* When evaluating multiple values, the values are selected from left to right in order. For example, for a {@link vec3} containing `x`,`y`,`z` it will correspond to track index `0`, `1`, `2` from left to right. 
+* @remarks
+* When evaluating multiple values, the values are selected from left to right in order. For example, for a {@link vec3} containing `x`,`y`,`z` it will correspond to track index `0`, `1`, `2` from left to right.
 */
 declare class AnimationCurveTrack extends AnimationTrack {
     
+    /** @hidden */
     protected constructor()
     
     /**
-    * Samples the track at the given time to get some value. 
+    * Samples the track at the given time to get some value.
     */
     evaluateNumber(time: number): number
     
@@ -689,6 +700,7 @@ declare class AnimationCurveTrack extends AnimationTrack {
 */
 declare class AnimationKeyFrame extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -742,7 +754,7 @@ declare enum AnimationLayerScaleMode {
     */
     Multiply,
     /**
-    * Add the layers value. 
+    * Add the layers value.
     */
     Additive
 }
@@ -756,6 +768,7 @@ declare enum AnimationLayerScaleMode {
 */
 declare class AnimationPlayer extends Component {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -874,6 +887,7 @@ declare class AnimationPlayer extends Component {
 */
 declare class AnimationPlayerOnEventArgs extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -890,6 +904,7 @@ declare class AnimationPlayerOnEventArgs extends ScriptObject {
 */
 declare class AnimationPropertyEventRegistration extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -899,6 +914,7 @@ declare class AnimationPropertyEventRegistration extends ScriptObject {
 */
 declare class AnimationPropertyLayer extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -908,20 +924,21 @@ declare class AnimationPropertyLayer extends ScriptObject {
 */
 declare class AnimationTrack extends Asset {
     
+    /** @hidden */
     protected constructor()
     
 }
 
 /**
 * Allows the Lens to incorporate voice transcription with higher quality than the {@link VoiceMlModule} and supports a vast number of different languages.
-
 */
 declare class AsrModule extends Asset {
     
+    /** @hidden */
     protected constructor()
     
     /**
-    * Starts a new ASR session. While active the Lens will transcribe speech to text. 
+    * Starts a new ASR session. While active the Lens will transcribe speech to text.
     * `asrTranscriptionOptions` provides the options for the session
     
     * The event `onTranscriptionUpdateEvent` is triggered when the transcription is updated.
@@ -929,6 +946,7 @@ declare class AsrModule extends Asset {
     
     * If `startTranscribing` is called again while a session is active, the current session is cancelled and a new one started.
     
+    * @exposesUserData
     
     * @wearableOnly
     */
@@ -937,10 +955,11 @@ declare class AsrModule extends Asset {
     /**
     * Stops an active ASR Session before transcription is finished and discards the current session.
     
+    * @exposesUserData
     
     * @wearableOnly
     */
-    stopTranscribing(): Promise<void>
+    stopTranscribing(streamType?: number): Promise<void>
     
 }
 
@@ -948,13 +967,11 @@ declare namespace AsrModule {
     /**
     * The mode of the transcription to prioritise, between speed and accuracy.
     
-    
     * @wearableOnly
     */
     enum AsrMode {
         /**
         * Focus on higher accuracy at the cost of speed.
-        
         
         * @wearableOnly
         */
@@ -962,13 +979,11 @@ declare namespace AsrModule {
         /**
         * A balance between accuracy and speed.
         
-        
         * @wearableOnly
         */
         Balanced,
         /**
         * Faster transcription time but at the cost of accuracy.
-        
         
         * @wearableOnly
         */
@@ -981,13 +996,11 @@ declare namespace AsrModule {
     /**
     * An enum stating the status of the transcription.
     
-    
     * @wearableOnly
     */
     enum AsrStatusCode {
         /**
         * Asr operation was successfully executed.
-        
         
         * @wearableOnly
         */
@@ -995,20 +1008,17 @@ declare namespace AsrModule {
         /**
         * An unknown internal error occurred.
         
-        
         * @wearableOnly
         */
         InternalError,
         /**
         * User is not authenticated.
         
-        
         * @wearableOnly
         */
         Unauthenticated,
         /**
         * Device is not connected to the internet.
-        
         
         * @wearableOnly
         */
@@ -1021,16 +1031,15 @@ declare namespace AsrModule {
     /**
     * Provides the options for the session.
     
-    
     * @wearableOnly
     */
     class AsrTranscriptionOptions extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
-        * The operation mode of the ASR session. 
-        
+        * The operation mode of the ASR session.
         
         * @wearableOnly
         */
@@ -1038,7 +1047,6 @@ declare namespace AsrModule {
         
         /**
         * An event triggered by transcription errors.
-        
         
         * @readonly
         
@@ -1049,7 +1057,6 @@ declare namespace AsrModule {
         /**
         * An event triggered by transcription updates.
         
-        
         * @readonly
         
         * @wearableOnly
@@ -1059,14 +1066,12 @@ declare namespace AsrModule {
         /**
         * Silence duration in milliseconds to detect the end of the speech.
         
-        
         * @wearableOnly
         */
         silenceUntilTerminationMs: number
         
         /**
         * Creates a new instance.
-        
         
         * @wearableOnly
         */
@@ -1080,16 +1085,15 @@ declare namespace AsrModule {
     /**
     * Argument passed for a transcription update event.
     
-    
     * @wearableOnly
     */
     class TranscriptionUpdateEvent extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
         * Specifies whether the transcription returned is final, or partial (interim) which can be updated later as the sentence continues.
-        
         
         * @wearableOnly
         */
@@ -1098,14 +1102,12 @@ declare namespace AsrModule {
         /**
         * Transcribed text.
         
-        
         * @wearableOnly
         */
         text: string
         
         /**
         * Creates a new instance.
-        
         
         * @wearableOnly
         */
@@ -1116,7 +1118,7 @@ declare namespace AsrModule {
 }
 
 /**
-* Base class for all assets used in the engine. Assets can be unique to Lens Studio, such as {@link VFXAsset}, or a representation of an imported asset, such as {@link Texture} for jpg, png, and other image formats. In most cases, assets are added to the scene via a {@link Component}.  
+* Base class for all assets used in the engine. Assets can be unique to Lens Studio, such as {@link VFXAsset}, or a representation of an imported asset, such as {@link Texture} for jpg, png, and other image formats. In most cases, assets are added to the scene via a {@link Component}.
 
 * @remarks
 * For example, you might import an `.jpg` file into your project to be used in the Lens by dragging your file into the Asset Browser panel, which will create a {@link Texture} asset. Then, in the Scene Hierarchy panel, you can add a {@link SceneObject} containing the {@link Image} component (Scene Hierarchy panel > + > Image), and set the Texture field of the Image component to the newly imported asset in the Inspector panel.
@@ -1126,6 +1128,7 @@ declare namespace AsrModule {
 */
 declare class Asset extends SerializableWithUID {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -1208,10 +1211,10 @@ declare namespace Audio {
 * You can assign an {@link AudioTrackAsset} to play through script, or through the Audio Component input in the Inspector panel of Lens Studio.
 
 * @see [Playing Audio](https://developers.snap.com/lens-studio/features/audio/playing-audio) guide for more information.
-
 */
 declare class AudioComponent extends Component {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -1312,6 +1315,7 @@ declare class AudioComponent extends Component {
 */
 declare class AudioEffectAsset extends Asset {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -1323,10 +1327,10 @@ declare class AudioEffectAsset extends Asset {
 * When present in the scene, it will automatically apply the selected audio effect to recordings made with the Lens.
 
 * @see [Audio Effect](https://developers.snap.com/lens-studio/features/audio/audio-effect) Guide.
-
 */
 declare class AudioEffectComponent extends Component {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -1336,36 +1340,38 @@ declare class AudioEffectComponent extends Component {
 */
 declare class AudioEffectProvider extends Provider {
     
+    /** @hidden */
     protected constructor()
     
 }
 
 /**
-* Processes input from {@link AudioComponent}s that use Spatial Audio. 
+* Processes input from {@link AudioComponent}s that use Spatial Audio.
 
 * @remarks
-* The Audio Listener component acts as a microphone-like device. It receives input from {@link AudioComponent}s that have Spatial Audio setting enabled and allows to calculate their relative positions to the scene object it is attached to and properly mix them. 
+* The Audio Listener component acts as a microphone-like device. It receives input from {@link AudioComponent}s that have Spatial Audio setting enabled and allows to calculate their relative positions to the scene object it is attached to and properly mix them.
 
 * @see [Audio Listener](https://developers.snap.com/lens-studio/features/audio/audio-listener) guide
 */
 declare class AudioListenerComponent extends Component {
     
+    /** @hidden */
     protected constructor()
     
 }
 
 /**
-* Provider of the Audio Output Audio Track asset. 
+* Provider of the Audio Output Audio Track asset.
 */
 declare class AudioOutputProvider extends AudioTrackProvider {
     
+    /** @hidden */
     protected constructor()
     
     /**
     * Enqueue audio data into an audio playback system.
     
     * `shape.x` - buffer size, must be less or equal to `audioFrame` length.
-    
     */
     enqueueAudioFrame(audioFrame: Float32Array, inShape: vec3): void
     
@@ -1384,6 +1390,7 @@ declare class AudioOutputProvider extends AudioTrackProvider {
 */
 declare class AudioTrackAsset extends Asset {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -1398,6 +1405,7 @@ declare class AudioTrackAsset extends Asset {
 */
 declare class AudioTrackProvider extends Provider {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -1438,6 +1446,7 @@ declare enum Axis {
 */
 declare class BackgroundSettings extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -1467,12 +1476,13 @@ declare class BackgroundSettings extends ScriptObject {
 */
 declare class Base64 {
     
+    /** @hidden */
     protected constructor()
     
     static decode(value: string): Uint8Array
     
     /**
-    * Decode a texture from Base64, asynchronously. 
+    * Decode a texture from Base64, asynchronously.
     */
     static decodeTextureAsync(value: string, onSuccess: (decodedTexture: Texture) => void, onFailure: () => void): void
     
@@ -1496,6 +1506,7 @@ declare class Base64 {
 */
 declare class BaseMeshVisual extends Visual {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -1568,6 +1579,7 @@ declare class BaseMeshVisual extends Visual {
 */
 declare class BaseMultiplayerSessionOptions extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -1639,6 +1651,7 @@ declare class BaseMultiplayerSessionOptions extends ScriptObject {
 */
 declare class BasePlaceholder extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -1682,6 +1695,7 @@ declare class BasePlaceholder extends ScriptObject {
 */
 declare class BasicTransform extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -1716,6 +1730,7 @@ declare class BasicTransform extends ScriptObject {
 */
 declare class BinAsset extends Asset {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -1725,6 +1740,7 @@ declare class BinAsset extends Asset {
 */
 declare class Bitmoji2DOptions extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -1749,6 +1765,7 @@ declare class Bitmoji2DOptions extends ScriptObject {
 */
 declare class Bitmoji2DResource extends DynamicResource {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -1758,6 +1775,7 @@ declare class Bitmoji2DResource extends DynamicResource {
 */
 declare class Bitmoji3DOptions extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -1793,6 +1811,7 @@ declare namespace Bitmoji3DOptions {
     */
     class AnimationParams extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -1904,10 +1923,11 @@ declare namespace Bitmoji3DOptions {
 
 declare namespace Bitmoji3DOptions {
     /**
-    * The custom params can be used for requesting bitmoji assets like garments. These can be set as custom params of Bitmoji3D options. 
+    * The custom params can be used for requesting bitmoji assets like garments. These can be set as custom params of Bitmoji3D options.
     */
     class CustomParams extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -1980,6 +2000,7 @@ declare namespace Bitmoji3DOptions {
     */
     class ParamSet extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -2024,23 +2045,23 @@ declare namespace Bitmoji3DOptions {
 */
 declare class Bitmoji3DResource extends DynamicResource {
     
+    /** @hidden */
     protected constructor()
     
 }
 
 /**
-* Provides access to functionalities related to [Bitmoji](https://developers.snap.com/lens-studio/features/bitmoji-avatar/overview) avatar. 
+* Provides access to functionalities related to [Bitmoji](https://developers.snap.com/lens-studio/features/bitmoji-avatar/overview) avatar.
 
 * @see [Bitmoji Overview](https://developers.snap.com/lens-studio/features/bitmoji-avatar/overview) guide.
-
-
 */
 declare class BitmojiModule extends Asset {
     
+    /** @hidden */
     protected constructor()
     
     /**
-    * Returns a `DynamicResource` via the provided `callback`, which can be resolved into a texture using `RemoteMediaModule`. 
+    * Returns a `DynamicResource` via the provided `callback`, which can be resolved into a texture using `RemoteMediaModule`.
     */
     requestBitmoji2DResource(options: Bitmoji2DOptions, callback: (resource: Bitmoji2DResource) => void): void
     
@@ -2050,7 +2071,7 @@ declare class BitmojiModule extends Asset {
     requestBitmoji3DResource(callback: (resource: Bitmoji3DResource) => void): void
     
     /**
-    * Request the Bitmoji3D resource. 
+    * Request the Bitmoji3D resource.
     */
     requestBitmoji3DResourceWithOptions(options: Bitmoji3DOptions, callback: (resource: Bitmoji3DResource) => void): void
     
@@ -2081,13 +2102,15 @@ declare enum BlendMode {
 */
 declare class Blob extends ScriptObject {
     /**
-    * Construct a new Blob. Currently unused.
+    * Construct a new Blob from blob parts and optional options.
+    * @param blobParts Optional array of strings, Uint8Arrays, or other Blobs to be combined into the blob
+    * @param options Optional object containing properties like 'type' for MIME type
     
     * @wearableOnly
     
     * @CameraKit
     */
-    constructor()
+    constructor(blobParts?: (Blob|Uint8Array|string[]), options?: any)
     
     /**
     * Returns a Promise that resolves with a `Uint8Array` containing the contents of the blob as an array of bytes.
@@ -2118,6 +2141,17 @@ declare class Blob extends ScriptObject {
     */
     size: number
     
+    /**
+    * The MIME type of the blob.
+    
+    * @readonly
+    
+    * @wearableOnly
+    
+    * @CameraKit
+    */
+    type: string
+    
 }
 
 declare namespace Bluetooth {
@@ -2126,14 +2160,15 @@ declare namespace Bluetooth {
     */
     class BluetoothCentralModule extends Asset {
         
+        /** @hidden */
         protected constructor()
         
         /**
-        * Connect to a GATT server on a given device address. 
+        * Connect to a GATT server on a given device address.
         
         * `deviceAddress` Address to which to connect. Received in {@link Bluetooth.ScanResult.deviceAddress}
         
-        * __Returns:__ Promise resolving to a {Bluetooth.BluetoothGatt} object if successful. The Promise is rejected if the connection cannot be made. 
+        * __Returns:__ Promise resolving to a {Bluetooth.BluetoothGatt} object if successful. The Promise is rejected if the connection cannot be made.
         
         * @experimental
         
@@ -2148,7 +2183,7 @@ declare namespace Bluetooth {
         
         * `settings` {@link Bluetooth.ScanSettings} to configure the scan.
         
-        * `predicate` Predicate to select a device. Returning true will stop the scan and return the device. 
+        * `predicate` Predicate to select a device. Returning true will stop the scan and return the device.
         
         * __Returns:__ Promise resolving to the first device which passes the predicate. The promise is rejected if the scan times out.
         
@@ -2158,7 +2193,7 @@ declare namespace Bluetooth {
         * scanSettings.timeoutSeconds = 30;
         * scanSettings.scanMode = Bluetooth.ScanMode.LowPower;
         
-        * var scanResult = await script.bluetoothModule.startScan([scanFilter], scanSettings, 
+        * var scanResult = await script.bluetoothModule.startScan([scanFilter], scanSettings,
         *     function(result) {
         *         print("Running predicate on " + result.deviceName);
         *         return result.deviceName == "[DEVICE NAME]";
@@ -2215,6 +2250,7 @@ declare namespace Bluetooth {
     */
     class BluetoothGatt extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -2324,10 +2360,11 @@ declare namespace Bluetooth {
     
     * __UUID__ ({@link Bluetooth.BluetoothGattCharacteristic.uuid}): A unique identifier that identifies the characteristic.
     
-    * Common characteristics include battery level, heart rate, temperature, and device name. 
+    * Common characteristics include battery level, heart rate, temperature, and device name.
     */
     class BluetoothGattCharacteristic extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -2362,7 +2399,7 @@ declare namespace Bluetooth {
         /**
         * Register the given callback to receive notifications. Registering a callback will unsubscribe any previous registration on this Characteristic.
         
-        * `callback` The callback to register, which takes a single parameter `value` of type `Uint8Array`. 
+        * `callback` The callback to register, which takes a single parameter `value` of type `Uint8Array`.
         
         * ```javascript
         * try {
@@ -2448,6 +2485,7 @@ declare namespace Bluetooth {
     */
     class BluetoothGattDescriptor extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -2492,10 +2530,10 @@ declare namespace Bluetooth {
 declare namespace Bluetooth {
     /**
     * Bluetooth GATT Services are collections of related {@link Bluetooth.BluetoothGattCharacteristic}s representing specific functions or features of a device. For example, a heart rate sensor might have a "Heart Rate" service, which in turn has characteristics like  "Heart Rate Measurement".
-    
     */
     class BluetoothGattService extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -2586,6 +2624,7 @@ declare namespace Bluetooth {
     */
     class BluetoothStatusChangedEvent extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -2702,8 +2741,7 @@ declare namespace Bluetooth {
     
     * `Disconnected` The Bluetooth device is disconnected from Spectacles.
     
-    * `Connected` The Bluetooth device is connected and bonded with Spectacles. 
-    
+    * `Connected` The Bluetooth device is connected and bonded with Spectacles.
     
     * @experimental
     
@@ -2740,6 +2778,7 @@ declare namespace Bluetooth {
     */
     class ConnectionStateChangedEvent extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -2767,6 +2806,7 @@ declare namespace Bluetooth {
     */
     class MtuChangedEvent extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -2891,10 +2931,11 @@ declare namespace Bluetooth {
 
 declare namespace Bluetooth {
     /**
-    * The results of a Bluetooth scan. 
+    * The results of a Bluetooth scan.
     */
     class ScanResult extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -3039,6 +3080,7 @@ declare namespace Bluetooth {
 */
 declare class BlurNoiseEstimation extends Component {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -3046,7 +3088,7 @@ declare class BlurNoiseEstimation extends Component {
 /**
 * Allows Physics simulation to control SceneObject.
 
-* @remarks 
+* @remarks
 * Derived from {@link ColliderComponent}, attaching this to a {@link SceneObject} turns it into a dynamic rigid-body that is automatically moved by the physics simulation in response to gravity, collisions, and other forces.
 
 * @see [Physics Body](https://developers.snap.com/lens-studio/features/physics/physics-component#physics-body) guide.
@@ -3054,6 +3096,7 @@ declare class BlurNoiseEstimation extends Component {
 */
 declare class BodyComponent extends ColliderComponent {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -3113,7 +3156,6 @@ declare class BodyComponent extends ColliderComponent {
     
     /**
     * If enabled, the body is dynamically simulated, such that it responds to forces and collisions, nested collider/body components will be merged into compound shapes. Otherwise, it acts as a static collider, functionally equivalent to Physics.ColliderComponent.
-    
     */
     dynamic: boolean
     
@@ -3126,10 +3168,10 @@ declare class BodyComponent extends ColliderComponent {
 
 /**
 * Provides depth values of the tracked body encoded as D24_UNORM_S8_UINT in screen resolution. Depth is normalized between 0-1, and the stencil component is ignored. The values may be remapped from normalized units (0 to 1) to negative centimeters from the camera (-near in cm to -far in cm) using the `Depth Map` mode of the `Texture 2D Sample` node in Material Editor.
-
 */
 declare class BodyDepthTextureProvider extends TextureProvider {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -3138,19 +3180,17 @@ declare class BodyDepthTextureProvider extends TextureProvider {
     bodyIndex: number
     
     /**
-    * A background depth (where confidence < `minimumConfidence`) is represented by 1.0 (zFar). A value from 0.0 to 1.0 (default value 0.5). 
-    
+    * A background depth (where confidence < `minimumConfidence`) is represented by 1.0 (zFar). A value from 0.0 to 1.0 (default value 0.5).
     */
     minimumConfidence: number
     
     /**
-    * The tracking context this effect is being applied to. 
+    * The tracking context this effect is being applied to.
     */
     trackingScope: PersonTrackingScope
     
     /**
     * Far plane value in cm, Read only, always outputs 1000.0.
-    
     
     * @readonly
     */
@@ -3159,7 +3199,6 @@ declare class BodyDepthTextureProvider extends TextureProvider {
     /**
     * Near plane value in cm, Read only, always outputs 1.0.
     
-    
     * @readonly
     */
     zNear: number
@@ -3167,10 +3206,11 @@ declare class BodyDepthTextureProvider extends TextureProvider {
 }
 
 /**
-* Provides segmentation confidence values encoded in the `R` channel. The texture has the {@link Colorspace#RGBA} format in screen resolution, but `G`, `B`, `A` channels should be ignored. 
+* Provides segmentation confidence values encoded in the `R` channel. The texture has the {@link Colorspace#RGBA} format in screen resolution, but `G`, `B`, `A` channels should be ignored.
 */
 declare class BodyInstanceSegmentationTextureProvider extends TextureProvider {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -3189,7 +3229,7 @@ declare class BodyInstanceSegmentationTextureProvider extends TextureProvider {
     refineEdge: boolean
     
     /**
-    * The tracking context this effect is being applied to. 
+    * The tracking context this effect is being applied to.
     */
     trackingScope: PersonTrackingScope
     
@@ -3200,6 +3240,7 @@ declare class BodyInstanceSegmentationTextureProvider extends TextureProvider {
 */
 declare class BodyNormalsTextureProvider extends TextureProvider {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -3208,7 +3249,7 @@ declare class BodyNormalsTextureProvider extends TextureProvider {
     bodyIndex: number
     
     /**
-    * The tracking context this effect is being applied to. 
+    * The tracking context this effect is being applied to.
     */
     trackingScope: PersonTrackingScope
     
@@ -3219,6 +3260,7 @@ declare class BodyNormalsTextureProvider extends TextureProvider {
 */
 declare class BodyRenderObjectProvider extends RenderObjectProvider {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -3247,7 +3289,7 @@ declare class BodyRenderObjectProvider extends RenderObjectProvider {
     rightHandGeometryEnabled: boolean
     
     /**
-    * The tracking context this effect is being applied to. 
+    * The tracking context this effect is being applied to.
     */
     trackingScope: PersonTrackingScope
     
@@ -3260,6 +3302,7 @@ declare class BodyRenderObjectProvider extends RenderObjectProvider {
 */
 declare class BodyTrackingAsset extends Object3DAsset {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -3268,7 +3311,7 @@ declare class BodyTrackingAsset extends Object3DAsset {
     handTrackingEnabled: boolean
     
     /**
-    * The tracking context this effect is being applied to. 
+    * The tracking context this effect is being applied to.
     */
     trackingScope: PersonTrackingScope
     
@@ -3539,6 +3582,7 @@ declare class BodyTrackingAsset extends Object3DAsset {
 */
 declare class BoxShape extends Shape {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -3553,6 +3597,7 @@ declare class BoxShape extends Shape {
 */
 declare class BrowsLoweredEvent extends FaceTrackingEvent {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -3562,6 +3607,7 @@ declare class BrowsLoweredEvent extends FaceTrackingEvent {
 */
 declare class BrowsRaisedEvent extends FaceTrackingEvent {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -3571,6 +3617,7 @@ declare class BrowsRaisedEvent extends FaceTrackingEvent {
 */
 declare class BrowsReturnedToNormalEvent extends FaceTrackingEvent {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -3581,11 +3628,12 @@ declare class BrowsReturnedToNormalEvent extends FaceTrackingEvent {
 * @remarks
 * A Camera will only render a  {@link SceneObject} if its render layer is enabled on the Camera.
 
-* @see 
+* @see
 * [Camera and Layers](https://developers.snap.com/lens-studio/lens-studio-workflow/scene-set-up/camera) guide.
 */
 declare class Camera extends Component {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -3595,7 +3643,6 @@ declare class Camera extends Component {
     
     /**
     * Returns true if a sphere with the specified world space center position and radius is visible within the camera frustum, false otherwise.
-    
     */
     isSphereVisible(center: vec3, radius: number): boolean
     
@@ -3731,7 +3778,6 @@ declare class Camera extends Component {
     
     /**
     * Controls which type of rendering the camera uses.
-    
     */
     type: Camera.Type
     
@@ -3763,6 +3809,7 @@ declare namespace Camera {
     */
     class BaseRenderTarget extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -3790,6 +3837,7 @@ declare namespace Camera {
     */
     class ColorRenderTarget extends Camera.BaseRenderTarget {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -3888,6 +3936,7 @@ declare namespace Camera {
     */
     class DepthStencilRenderTarget extends Camera.BaseRenderTarget {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -3962,6 +4011,7 @@ declare namespace Camera {
 */
 declare class CameraBackEvent extends SceneEvent {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -3975,6 +4025,7 @@ declare class CameraBackEvent extends SceneEvent {
 */
 declare class CameraFrame extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -3995,14 +4046,15 @@ declare class CameraFrame extends ScriptObject {
 */
 declare class CameraFrontEvent extends SceneEvent {
     
+    /** @hidden */
     protected constructor()
     
 }
 
 /**
-* Provides access to a specific camera on Spectacles device. 
+* Provides access to a specific camera on Spectacles device.
 
-* @remarks 
+* @remarks
 * Useful for requesting a specific camera on Spectacles or requesting images from both cameras simultaneously.
 
 * @see [Camera Module](https://developers.snap.com/spectacles/about-spectacles-features/apis/camera-module) guide.
@@ -4013,6 +4065,7 @@ declare class CameraFrontEvent extends SceneEvent {
 */
 declare class CameraModule extends Asset {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -4034,15 +4087,15 @@ declare class CameraModule extends Asset {
     requestCamera(request: CameraModule.CameraRequest): Texture
     
     /**
-    * Spectacles: Request a still image of the user's camera stream. Unlike {@CameraModule.requestCamera}, this method takes more time but yields a higher resolution image (3200x2400) suitable for tasks like OCR. This method is asynchronous and when complete will return an {@link ImageFrame} that contains a {@Texture} that can be attached to a visual.  
+    * Spectacles: Request a still image of the user's camera stream. Unlike {@CameraModule.requestCamera}, this method takes more time but yields a higher resolution image (3200x2400) suitable for tasks like OCR. This method is asynchronous and when complete will return an {@link ImageFrame} that contains a {@Texture} that can be attached to a visual.
     
     * ```js
     * let cameraModule = require("LensStudio:CameraModule");
-    * let imageRequest = CameraModule.createImageRequest(); 
+    * let imageRequest = CameraModule.createImageRequest();
     
     * try {
     *   let imageFrame = await cameraModule.requestImage(imageRequest);
-    *   
+    
     *   // Use the texture in some visual
     *   script.image.mainPass.baseTex = imageFrame.texture;
     *   let timestamp = imageFrame.timestampMillis; // scene-relative time
@@ -4124,6 +4177,7 @@ declare namespace CameraModule {
     */
     class CameraRequest extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -4150,7 +4204,7 @@ declare namespace CameraModule {
 
 declare namespace CameraModule {
     /**
-    * Spectacles: ImageRequest contains the parameterization for a still image request, which is a request for a high resolution image of the user's current camera stream. 
+    * Spectacles: ImageRequest contains the parameterization for a still image request, which is a request for a high resolution image of the user's current camera stream. This object is created from the {@link CameraModule}. Currently there are no parameters that can be set for an ImageRequest.
     
     * @exposesUserData
     
@@ -4158,10 +4212,11 @@ declare namespace CameraModule {
     */
     class ImageRequest extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
-        * The desired crop of the Image Request.
+        * The crop of the Image Request.
         
         * @exposesUserData
         
@@ -4170,7 +4225,7 @@ declare namespace CameraModule {
         crop: Rect
         
         /**
-        * The desired resolution of the Image Request
+        * The resolution of the Image Request
         
         * @exposesUserData
         
@@ -4182,8 +4237,130 @@ declare namespace CameraModule {
 
 }
 
+/**
+* Represents media selected from the device camera roll.
+*/
+declare class CameraRollMedia extends ScriptObject {
+    
+    /** @hidden */
+    protected constructor()
+    
+    /**
+    * Checks if two CameraRollMedia objects represent the same media.
+    */
+    isSameMedia(other: CameraRollMedia): boolean
+    
+    /**
+    * Unique hash of the source media. Can be used to identify the media, for example as a key to store in maps.
+    
+    * @readonly
+    */
+    mediaId: number
+    
+    /**
+    * Type of media.
+    
+    * @readonly
+    */
+    mediaType: CameraRollMediaType
+    
+    /**
+    * Dynamic resource for accessing the media content.
+    
+    * @readonly
+    */
+    resource: DynamicResource
+    
+}
+
+/**
+* Enum representing the type of media selected from camera roll.
+*/
+declare enum CameraRollMediaType {
+    /**
+    * Media type not specified
+    */
+    Unset,
+    /**
+    * Still image media type.
+    */
+    Image,
+    /**
+    * Video media type.
+    */
+    Video
+}
+
+/**
+* Provides an interface to the device’s camera roll and allows users to select multiple media.
+*/
+declare class CameraRollModule extends Asset {
+    
+    /** @hidden */
+    protected constructor()
+    
+    /**
+    * Closes the device camera roll interface.
+    */
+    hideMediaPicker(): void
+    
+    /**
+    * Opens the device camera roll interface to allow multiple media selection with specified configuration options.
+    */
+    showMediaPicker(options: CameraRollModule.ShowOptions): void
+    
+    /**
+    * Event triggered when selections are updated.
+    
+    * @readonly
+    */
+    onSelectionsUpdated: event1<CameraRollMedia[], void>
+    
+    /**
+    * Array of currently selected media objects.
+    
+    * @readonly
+    */
+    selectedMedia: CameraRollMedia[]
+    
+    /**
+    * Returns the default selection limit for media picker.
+    */
+    static getDefaultSelectionLimit(): number
+    
+    /**
+    * Returns the maximum allowed selection limit for media picker.
+    */
+    static getMaxSelectionLimit(): number
+    
+}
+
+declare namespace CameraRollModule {
+    /**
+    * Configuration options for displaying the camera roll media picker.
+    */
+    class ShowOptions {
+        /**
+        * Creates a new ShowOptions instance with default selection limit of 10 media items.
+        */
+        constructor()
+        
+        /**
+        * Maximum number of media items that can be selected (1-20, defaults to 10).
+        */
+        selectionLimit: number
+        
+        showImages: boolean
+        
+        showVideos: boolean
+        
+    }
+
+}
+
 declare class CameraTextureProvider extends TextureProvider {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -4206,13 +4383,13 @@ declare class CameraTextureProvider extends TextureProvider {
 
 * {@link SceneObject}s with {@link ScreenTransform} can be placed on the Canvas, and the Canvas can be sized and placed anywhere in 3D space. It is like a painter’s canvas for ScreenTransforms.
 
-* @see 
+* @see
 * [Canvas](https://developers.snap.com/lens-studio/lens-studio-workflow/scene-set-up/2d/canvas-component) guide.
 * [Screen Transform Overview](https://developers.snap.com/lens-studio/lens-studio-workflow/scene-set-up/2d/screen-transform-overview) guide.
-
 */
 declare class Canvas extends Component {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -4308,6 +4485,7 @@ declare enum CapitilizationOverride {
 */
 declare class CapsuleShape extends Shape {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -4350,24 +4528,16 @@ declare enum ClearColorOption {
 }
 
 /**
-* Clears depth in the drawing order.
-*/
-declare class ClearDepth extends Visual {
-    
-    protected constructor()
-    
-}
-
-/**
 * Simulates and renders cloth visuals in a Lens.
 
-* @remarks 
+* @remarks
 * Handles the mesh data of cloth and prepares it for cloth simulation. Also controls all the parameters of the cloth simulator and colliders.
 
 * @see [Cloth Simulation](https://developers.snap.com/lens-studio/features/physics/cloth-simulation)
 */
 declare class ClothVisual extends MaterialMeshVisual {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -4541,8 +4711,7 @@ declare class ClothVisual extends MaterialMeshVisual {
     repulsionStiffness: number
     
     /**
-    * Returns the modified simulated mesh which can be used in another {@link RenderMeshVisual} if the same simulated mesh is needed. Useful when creating effects that might require the same mesh to be rendered twice, such as with a mirror effect. Prevents the need to run a simulation twice. 
-    
+    * Returns the modified simulated mesh which can be used in another {@link RenderMeshVisual} if the same simulated mesh is needed. Useful when creating effects that might require the same mesh to be rendered twice, such as with a mirror effect. Prevents the need to run a simulation twice.
     
     * @readonly
     */
@@ -4586,6 +4755,7 @@ declare namespace ClothVisual {
 */
 declare class CloudStorageListOptions extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -4612,6 +4782,7 @@ declare class CloudStorageListOptions extends ScriptObject {
 */
 declare class CloudStorageModule extends Asset {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -4623,15 +4794,14 @@ declare class CloudStorageModule extends Asset {
 
 /**
 * Used to configure `Cloud Storage Module` with various options. Note: if `session` scoped storage is required, this option must be provided.
-
 */
 declare class CloudStorageOptions extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
     * If session scoped storage is required, set this property with the session object from {@link ConnectedLensModule}.
-    
     */
     session: MultiplayerSession
     
@@ -4647,6 +4817,7 @@ declare class CloudStorageOptions extends ScriptObject {
 */
 declare class CloudStorageReadOptions extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -4666,6 +4837,7 @@ declare class CloudStorageReadOptions extends ScriptObject {
 */
 declare class CloudStorageWriteOptions extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -4685,6 +4857,7 @@ declare class CloudStorageWriteOptions extends ScriptObject {
 */
 declare class CloudStore extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -4712,7 +4885,7 @@ declare class CloudStore extends ScriptObject {
 /**
 * Used to define the physical boundaries of an object, allowing it to interact with other objects in Physics, Cloth or Hair simulation.
 
-* @remarks 
+* @remarks
 * Provides a way for scene objects to detect and respond to collisions. Useful for detecting when objects overlap or contact each other, which can then be used to trigger events or effects within the Lens experience.
 
 * @see [Collision and Overlap](https://developers.snap.com/lens-studio/features/physics/collision-and-overlap).
@@ -4721,6 +4894,7 @@ declare class CloudStore extends ScriptObject {
 */
 declare class ColliderComponent extends Component {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -4821,7 +4995,7 @@ declare class ColliderComponent extends Component {
     shape: Shape
     
     /**
-    * Smooth transform changes using a dampened spring. Useful to reduce motion noise. This only applies to the simulation and changes from outside the simulation. The scene object's transform is not affected. It has no effect for dynamic bodies. 
+    * Smooth transform changes using a dampened spring. Useful to reduce motion noise. This only applies to the simulation and changes from outside the simulation. The scene object's transform is not affected. It has no effect for dynamic bodies.
     */
     smooth: boolean
     
@@ -4847,6 +5021,7 @@ declare class ColliderComponent extends Component {
 */
 declare class Collision extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -4884,6 +5059,7 @@ declare class Collision extends ScriptObject {
 */
 declare class CollisionEnterEventArgs extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -4900,6 +5076,7 @@ declare class CollisionEnterEventArgs extends ScriptObject {
 */
 declare class CollisionExitEventArgs extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -4912,13 +5089,14 @@ declare class CollisionExitEventArgs extends ScriptObject {
 }
 
 /**
-* Defines the physical boundaries of an object for collision detection. 
+* Defines the physical boundaries of an object for collision detection.
 
 * @remarks
 * It represents the shape and form of a 3D object, allowing Physics engine to determine when and how objects interact with each other within a scene.
 */
 declare class CollisionMesh extends Asset {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -4928,6 +5106,7 @@ declare class CollisionMesh extends Asset {
 */
 declare class CollisionStayEventArgs extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -4944,6 +5123,7 @@ declare class CollisionStayEventArgs extends ScriptObject {
 */
 declare class ColocatedLandmarks2DRenderObjectProvider extends ColocatedLandmarksRenderObjectProviderBase {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -4953,12 +5133,14 @@ declare class ColocatedLandmarks2DRenderObjectProvider extends ColocatedLandmark
 */
 declare class ColocatedLandmarks3DRenderObjectProvider extends ColocatedLandmarksRenderObjectProviderBase {
     
+    /** @hidden */
     protected constructor()
     
 }
 
 declare class ColocatedLandmarksRenderObjectProviderBase extends RenderObjectProvider {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -4967,12 +5149,13 @@ declare class ColocatedLandmarksRenderObjectProviderBase extends RenderObjectPro
 * Allows {@link SceneObject} to be tracked in a Connected Lens Experience.
 
 * @remarks
-* Creates Colocated Connected Lenses experiences by enabling the creation and tracking of a shared space which can be used to place several users in the same coordinate frame. This shared space will be made available and can be tracked by any friend you invite to join your session via Snapcode. Users are expected to be located in the same room when using the colocated feature. This component needs to be attached to the camera. 
+* Creates Colocated Connected Lenses experiences by enabling the creation and tracking of a shared space which can be used to place several users in the same coordinate frame. This shared space will be made available and can be tracked by any friend you invite to join your session via Snapcode. Users are expected to be located in the same room when using the colocated feature. This component needs to be attached to the camera.
 
 * @see [Connected Lenses Overview](https://developers.snap.com/lens-studio/features/connected-lenses/connected-lenses-overview#remote-and-colocated)
 */
 declare class ColocatedTrackingComponent extends Component {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -5032,7 +5215,7 @@ declare class ColocatedTrackingComponent extends Component {
     isTracking: boolean
     
     /**
-    * Event fired when the building operation fails (for example, sharing your space failed). Once `onTrackingAvailable` event is triggered, this event will not be triggered anymore. 
+    * Event fired when the building operation fails (for example, sharing your space failed). Once `onTrackingAvailable` event is triggered, this event will not be triggered anymore.
     
     * @readonly
     */
@@ -5068,28 +5251,590 @@ declare class ColocatedTrackingComponent extends Component {
     
 }
 
-/**
-* Data type used for color values.
-*/
-declare enum Colorspace {
+declare namespace Commerce {
     /**
-    * Color data has one value: Red
+    * The primary interface for interacting with the commerce system within a Lens.
+    * Once built and configured using the {@link CommerceKitModule}, its methods are used to perform all key commerce
+    * operations. This includes initiating connections to the payment service, querying details about products,
+    * launching purchase flows for users, checking a user's purchase history, and acknowledging completed purchases.
+    
+    * @wearableOnly
     */
-    R,
+    class Client extends ScriptObject {
+        
+        /** @hidden */
+        protected constructor()
+        
+        /**
+        * After a user makes a purchase, especially for consumable or subscription items, it's crucial to acknowledge that
+        * purchase. This tells the payment system that you have successfully delivered the purchased item or service to the
+        * user, and prevents the purchase from being automatically refunded.
+        
+        * purchaseToken: The unique identifier associated with the purchase requiring acknowledgment. This token is
+        * received as part of the {@link Purchase} object.
+        
+        * Returns: A Promise that resolves with a {@link PurchaseResult} object that tells if the purchase has been
+        * successfully acknowledged, canceled by the user, or if an error occurred.
+        
+        * Throws: A `Error` if the purchase has already been acknowledged, there's no network connection,
+        * or the service is unavailable.
+        
+        * @wearableOnly
+        */
+        acknowledgePurchase(purchaseToken: string): Promise<Commerce.PurchaseResult>
+        
+        /**
+        * Closes the connection to the payment service. It's good practice to call this method when you're finished with
+        * commerce operations or when your Lens is being closed to free up resources.
+        * There is no return value, and it doesn't throw exceptions, as it handles its own finalization.
+        
+        * @wearableOnly
+        */
+        endConnection(): void
+        
+        /**
+        * Starts the process for a user to buy a specific product.
+        * It will typically open a user interface where the user can confirm their purchase and enter payment details.
+        
+        * productId: The unique identifier of the product you want the user to purchase.
+        
+        * Returns: A Promise that resolves to a {@link PurchaseResult} object. This object indicates whether the purchase
+        * flow was successfully launched, canceled by the user, or if an error occurred.
+        
+        * Throws: A `Error` if the product is not found, the user's payment method is invalid, there's no network
+        * connection, or the service is unavailable.
+        
+        * @wearableOnly
+        */
+        launchPurchaseFlow(productId: string): Promise<Commerce.PurchaseResult>
+        
+        /**
+        * Allows you to retrieve detailed information about specific products from the commerce platform.
+        * You provide a list of product IDs, and it returns all available details for those products, such as display name,
+        * description, and price.
+        
+        * productIds: An array of strings, where each string is a unique identifier for a product you want to query.
+        
+        * Returns: A Promise that resolves to an array of {@link Product} objects. Each object in the array contains
+        * comprehensive details about a product. If a product ID is not found, it might not be included in the returned
+        * array, or an error might be thrown.
+        
+        * Throws: A `Error` if a product is not found, there's no network connection, or the service is unavailable.
+        
+        * @wearableOnly
+        */
+        queryProductDetails(productIds: string[]): Promise<Commerce.Product[]>
+        
+        /**
+        * Allows you to check the user's ownership or purchase status for products of a specific category.
+        * For example, you can use it to see all "non-consumable" items the user has purchased.
+        * It's useful for verifying if a user has already bought certain items or to retrieve details of their existing
+        * purchases based on how the product is classified.
+        
+        * productType: The type of products you want to look up, like "non-consumable"
+        
+        * Returns: A list of {@link Purchase} objects that represent all transactions for products of the specified type.
+        * If no purchases of that type are found, the list will be empty. If there's a problem connecting to the service,
+        * it will show an error.
+        
+        * @wearableOnly
+        */
+        queryPurchase(productType: Commerce.ProductType): Promise<Commerce.Purchase[]>
+        
+        /**
+        * Fetches a record of all purchases the user has made previously.
+        * This is particularly useful for ensuring that users retain access to products they've already bought, especially
+        * for non-consumable items or subscriptions. It can also help verify past transactions.
+        
+        * Returns: A Promise that resolves to an array of {@link Purchase} objects. Each object in the array represents a
+        * past transaction.
+        
+        * Throws: An `Error` if there's no network connection or if the service is unavailable.
+        
+        * @wearableOnly
+        */
+        queryPurchaseHistory(): Promise<Commerce.Purchase[]>
+        
+        /**
+        * Initiates a connection to the payment service, which is a necessary first step before you can perform any
+        * commerce-related operations like querying products or launching purchase flows.
+        
+        * Returns: A Promise that resolves with no value when the connection is successfully established.
+        
+        * Throws: A `Error` if there's no network connection or if the payment service is temporarily unavailable.
+        * You should handle these errors to provide appropriate feedback to the user.
+        
+        * @wearableOnly
+        */
+        startConnection(): Promise<void>
+        
+    }
+
+}
+
+declare namespace Commerce {
     /**
-    * Color data has 2 values: Red, Green
+    * Specifies the configuration for creating a commerce client.
+    * It defines important behaviors and callback functions, such as the `onPurchasesUpdated`,
+    * which is essential for receiving real-time notifications about the status of user purchases.
+    
+    * @wearableOnly
     */
-    RG,
+    class ClientOptions extends ScriptObject {
+        /**
+        * Constructor for `ClientOptions`.
+        
+        * @wearableOnly
+        */
+        constructor(onPurchasesUpdated: (result: Commerce.PurchaseResult, purchases: Commerce.Purchase[]) => void)
+        
+        /**
+        * An optional field that intended for advanced configuration of the CommerceKit client and is not
+        * recommended for general developer use. It accepts a JSON-formatted string to allow for flexible customization
+        * of the commerce module's behavior, primarily through various settings or extra data, to meet specific internal
+        * requirements or features.
+        
+        * @wearableOnly
+        */
+        extras?: string
+        
+        /**
+        * Essential for receiving real-time updates on the status of user purchases.
+        * It is invoked when a purchase is completed, cancelled, or encounters an error, allowing your Lens to react
+        * appropriately (e.g., granting access to a purchased item or displaying an error message).
+        * The `result` parameter provides a summary of the outcome, and the optional `purchases` array contains details
+        * of the transactions if successful.
+        
+        * @wearableOnly
+        */
+        onPurchasesUpdated: (result: Commerce.PurchaseResult, purchases: Commerce.Purchase[]) => void
+        
+    }
+
+}
+
+declare namespace Commerce {
     /**
-    * Color data has 4 values: Red, Green, Blue, Alpha
+    * Represents the price of a product in a Lens.
+    
+    * @wearableOnly
     */
-    RGBA
+    class Price extends ScriptObject {
+        /**
+        * Constructor for `Price`.
+        
+        * @wearableOnly
+        */
+        constructor(price: number, displayPrice: string, currency: string)
+        
+        /**
+        * The standard three-letter code that indicates the currency of the price (e.g., "USD" for US Dollars,
+        * "EUR" for Euros). It helps ensure that prices are displayed and processed correctly across different regions.
+        
+        * @readonly
+        
+        * @wearableOnly
+        */
+        currency: string
+        
+        /**
+        * Provides a pre-formatted string of the product's price, including the appropriate currency symbol and localized
+        * formatting (e.g., "$10.99" in the US, "10,99 " in Europe). This ensures prices are displayed clearly and
+        * correctly to users worldwide without requiring manual formatting.
+        
+        * @readonly
+        
+        * @wearableOnly
+        */
+        displayPrice: string
+        
+        /**
+        * The price of the product in cents (e.g., 1099 for $10.99 USD).
+        * This format is commonly used for displaying prices.
+        
+        * @readonly
+        
+        * @wearableOnly
+        */
+        price: number
+        
+    }
+
+}
+
+declare namespace Commerce {
+    /**
+    * Contains all the essential details about an item available for purchase in a Lens.
+    * When products are queried, these objects are received, which include information like the product's unique ID,
+    * its type (e.g., a non-consumable), its display name, a description, and its price.
+    * This information is crucial for presenting products to users in a Lens's store or interface.
+    
+    * @wearableOnly
+    */
+    class Product extends ScriptObject {
+        /**
+        * Constructor for `Product`.
+        
+        * @wearableOnly
+        */
+        constructor(id: string, type: Commerce.ProductType, displayName: string, description: string, price: Commerce.Price, iconUri?: string, extras?: string)
+        
+        /**
+        * A brief explanation of what the product is, its features, or its benefits.
+        * This text helps users understand what they are buying before they make a purchase.
+        
+        * @readonly
+        
+        * @wearableOnly
+        */
+        description: string
+        
+        /**
+        * The name of the product as it will appear to users in the store or within your Lens.
+        * It should be clear and appealing.
+        
+        * @readonly
+        
+        * @wearableOnly
+        */
+        displayName: string
+        
+        /**
+        * Allows you to include any additional information or custom data related to the product.
+        * It can be used to store JSON-encoded strings with extra metadata that is not covered by the other standard
+        * fields. This is useful for flexible product configurations or displaying unique product attributes within your
+        * Lens.
+        
+        * @readonly
+        
+        * @wearableOnly
+        */
+        extras?: string
+        
+        /**
+        * An optional field that provides a URI to an image file that can serve as an icon for the product.
+        * It's typically used to display a visual representation of the product within a store interface or other UI
+        * elements, helping users quickly identify and differentiate items.
+        
+        * @readonly
+        
+        * @wearableOnly
+        */
+        iconUri?: string
+        
+        /**
+        * A unique identifier for the product of the Lens. This is a crucial piece of information for referencing the
+        * product within the commerce system and for internal tracking.
+        
+        * @readonly
+        
+        * @wearableOnly
+        */
+        id: string
+        
+        /**
+        * The cost of the product, provided as a {@link Price} object.
+        * This object holds the price as a standard decimal value, along with currency and country codes,
+        * ensuring accurate and properly formatted display of prices to users.
+        
+        * @readonly
+        
+        * @wearableOnly
+        */
+        price: Commerce.Price
+        
+        /**
+        * Specifies the category of the product, which impacts how it behaves in the store.
+        
+        * @readonly
+        
+        * @wearableOnly
+        */
+        type: Commerce.ProductType
+        
+    }
+
+}
+
+declare namespace Commerce {
+    /**
+    * Defines the type of product that can be purchased in a Lens.
+    
+    * @wearableOnly
+    */
+    enum ProductType {
+        /**
+        * A placeholder indicating an unknown product type, which usually suggests that the product catalog is not properly
+        * configured.
+        
+        * @wearableOnly
+        */
+        Unknown,
+        /**
+        * A one-time purchase that grants permanent access or ownership to an item or feature.
+        * Once purchased, it does not expire or need to be repurchased. Examples include unlocking a character, a specific
+        * effect, or a permanent filter.
+        
+        * @wearableOnly
+        */
+        NonConsumable
+    }
+
+}
+
+declare namespace Commerce {
+    /**
+    * Represents a completed or pending transaction for a product.
+    * When a user buys something, or when their purchase history is retrieved, `Purchase` objects are received.
+    * These objects contain important details like the unique ID of the purchase, the ID of the product that was bought,
+    * when the purchase occurred, and its current state (e.g., purchased, pending, or invalidated).
+    
+    * @wearableOnly
+    */
+    class Purchase extends ScriptObject {
+        
+        /** @hidden */
+        protected constructor()
+        
+        /**
+        * The unique identifier for the product that was purchased.
+        * It's the same ID you use to identify the product in the store or when querying for product details.
+        
+        * @readonly
+        
+        * @wearableOnly
+        */
+        productId: string
+        
+        /**
+        * Indicates the current status of the transaction.
+        
+        * @readonly
+        
+        * @wearableOnly
+        */
+        purchaseState: Commerce.PurchaseState
+        
+        /**
+        * Represents the exact moment the purchase was made, measured as the number of milliseconds since
+        * January 1, 1970, UTC (Unix epoch time).
+        * This timestamp is crucial for tracking purchase dates, managing subscriptions, and for reconciliation purposes.
+        
+        * @readonly
+        
+        * @wearableOnly
+        */
+        purchaseTime: number
+        
+        /**
+        * A unique identifier generated by the payment system for the order.
+        * It can be useful for linking purchases to specific order records in your backend or for support purposes.
+        
+        * @readonly
+        
+        * @wearableOnly
+        */
+        token: string
+        
+    }
+
+}
+
+declare namespace Commerce {
+    /**
+    * Provides an immediate summary of the outcome of a purchase attempt.
+    * It indicates whether the transaction was successful, canceled by the user, or if an error occurred.
+    * This is the first place to look to understand the immediate result of a purchase flow.
+    
+    * @wearableOnly
+    */
+    class PurchaseResult extends ScriptObject {
+        
+        /** @hidden */
+        protected constructor()
+        
+        /**
+        * If there was an issue with your purchase, this message provides more specific information to help you understand
+        * what happened. Its useful for troubleshooting and diagnosing problems that might occur during the purchase
+        * process.
+        
+        * @readonly
+        
+        * @wearableOnly
+        */
+        debugMessage: string
+        
+        /**
+        * Tells you if the purchase was successful or if something went wrong.
+        * It's like a signal that gives you an immediate update on the transaction's outcome.
+        
+        * @readonly
+        
+        * @wearableOnly
+        */
+        responseCode: Commerce.ResponseCode
+        
+    }
+
+}
+
+declare namespace Commerce {
+    /**
+    * Represents the state of a purchase in a Lens.
+    
+    * @wearableOnly
+    */
+    enum PurchaseState {
+        /**
+        * The product is not currently in the user's purchase history, meaning it has not been purchased or is no longer
+        * considered owned. For items that should be owned, this typically means the user has not yet acquired it.
+        
+        * @wearableOnly
+        */
+        Unset,
+        /**
+        * The product has been successfully bought and the transaction is complete. At this state, the user should have
+        * access to the purchased item or feature.
+        
+        * @wearableOnly
+        */
+        Purchased,
+        /**
+        * The purchase has been invalidated, meaning it is no longer considered active or valid.
+        * This can happen for several reasons, such as a refund being issued for the purchase, or other system-level
+        * invalidations. When a purchase is invalidated, the user should no longer have access to the associated product
+        * or feature.
+        
+        * @wearableOnly
+        */
+        Invalidated,
+        /**
+        * The purchase is currently in a state of waiting for further action or confirmation. This might occur if the
+        * transaction requires additional verification, if there's a delay in payment processing, or for certain types of
+        * payment methods. The purchase is not yet finalized, and the user may not have access to the item until its state
+        * changes to `Purchased`. You should monitor for updates to this purchase through the
+        * {@link ClientOptions}.onPurchasesUpdated.
+        
+        * @wearableOnly
+        */
+        Pending
+    }
+
+}
+
+declare namespace Commerce {
+    /**
+    * Defines the possible outcomes of a purchase attempt in a Lens.
+    
+    * @wearableOnly
+    */
+    enum ResponseCode {
+        /**
+        * The transaction was completed without any issues.
+        
+        * @wearableOnly
+        */
+        Success,
+        /**
+        * The user intentionally stopped the purchase process, typically by closing the payment interface or declining the
+        * transaction. No purchase was made.
+        
+        * @wearableOnly
+        */
+        UserCanceled,
+        /**
+        * The user attempted to purchase an item they already own. This usually applies to non-consumable products that are
+        * not meant to be purchased multiple times.
+        
+        * @wearableOnly
+        */
+        ItemAlreadyOwned,
+        /**
+        * Indicates that an attempt was made to consume or interact with an item that the user does not currently own.
+        * This can happen if an item was previously consumed, refunded, or never purchased in the first place.
+        
+        * @wearableOnly
+        */
+        ItemNotOwned,
+        /**
+        * The requested item cannot be purchased at this time, possibly due to regional restrictions, being out of stock,
+        * or not being published.
+        
+        * @wearableOnly
+        */
+        ItemUnavailable,
+        /**
+        * An error occurred with the user's payment method or during the payment processing stage.
+        * This could be due to insufficient funds, an invalid payment method, or issues with the payment provider.
+        * The user might need to check their payment details or try again with a different method.
+        
+        * @wearableOnly
+        */
+        PaymentUnavailable,
+        /**
+        * A general error occurred during the purchase process that doesn't fit into the other specific categories.
+        * This could be due to various reasons, such as unexpected system issues, network problems, or other unhandled
+        * exceptions during the transaction. You might need to check the `debugMessage` for more details.
+        
+        * @wearableOnly
+        */
+        Error,
+        /**
+        * The commerce backend service is temporarily down or experiencing issues. This is usually a transient problem,
+        * and users should be advised to try again later.
+        
+        * @wearableOnly
+        */
+        ServiceUnavailable,
+        /**
+        * The connection to the commerce service was unexpectedly lost during an operation. This may be due to network
+        * instability or the service becoming unavailable. You may need to attempt to re-establish the connection.
+        
+        * @wearableOnly
+        */
+        ServiceDisconnected,
+        /**
+        * An issue with the network connection prevented the operation from completing successfully. This could be due to
+        * a lost internet connection or other network-related problems. Users should verify their network settings and try
+        * again.
+        
+        * @wearableOnly
+        */
+        NetworkError
+    }
+
 }
 
 /**
-* The base class for all components. Components are attached to {@link SceneObject} and add various behaviors to it. 
+* The main entry point for integrating commerce functionalities into a Lens.
+* It is typically added as an {@link Asset} in a Lens Studio project. This module provides access to the primary method
+* for configuring and creating a {@link Client} object, which is used for all in-Lens purchase and product management
+* needs. This module allows a Lens to interact with the commerce system, enabling features like displaying products,
+* initiating purchases, and managing user entitlements.
 
-* @remarks 
+* @wearableOnly
+*/
+declare class CommerceKitModule extends Asset {
+    
+    /** @hidden */
+    protected constructor()
+    
+    /**
+    * Allows for creating a fully configured commerce client.
+    * {@link ClientOptions} can be provided to customize its behavior, such as setting up a listener for purchase
+    * updates. The returned client is the primary tool for all commerce interactions, including displaying products,
+    * managing purchases, and checking purchase history.
+    
+    * @wearableOnly
+    */
+    createClient(options: Commerce.ClientOptions): Commerce.Client
+    
+}
+
+/**
+* The base class for all components. Components are attached to {@link SceneObject} and add various behaviors to it.
+
+* @remarks
 * For example, in the default scene, the `Camera Object` is a scene object which contains the {@link Camera} component to render the scene from the point of view of that object. You can add a {@link DeviceTracking} component onto the object, so that the {@link Transform} of that object is modified based on the device's movement.
 
 * @see [Building Lenses](https://developers.snap.com/lens-studio/overview/building-your-first-lens/built-in-ar-effects) Guide.
@@ -5097,6 +5842,7 @@ declare enum Colorspace {
 */
 declare class Component extends SerializableWithUID {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -5118,6 +5864,13 @@ declare class Component extends SerializableWithUID {
     * If disabled, the Component will stop enacting its behavior.
     */
     enabled: boolean
+    
+    /**
+    * Returns true if this Component, its SceneObject, and all of that SceneObjects parents are enabled.
+    
+    * @readonly
+    */
+    isEnabledInHierarchy: boolean
     
     /**
     * The scene object this component is on.
@@ -5159,6 +5912,7 @@ declare enum CompressionQuality {
 */
 declare class ConeShape extends Shape {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -5183,6 +5937,7 @@ declare class ConeShape extends Shape {
 */
 declare class ConnectedLensEnteredEvent extends SceneEvent {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -5198,6 +5953,7 @@ declare class ConnectedLensEnteredEvent extends SceneEvent {
 */
 declare class ConnectedLensModule extends Asset {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -5218,10 +5974,11 @@ declare namespace ConnectedLensModule {
     */
     class ConnectionInfo extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
-        * Get the information about all the other users connected to the same session. 
+        * Get the information about all the other users connected to the same session.
         
         * @readonly
         */
@@ -5263,6 +6020,7 @@ declare namespace ConnectedLensModule {
     */
     class HostUpdateInfo extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -5273,7 +6031,7 @@ declare namespace ConnectedLensModule {
         sentServerTimeMilliseconds: number
         
         /**
-        * Information about the new host user. 
+        * Information about the new host user.
         
         * @readonly
         */
@@ -5289,6 +6047,7 @@ declare namespace ConnectedLensModule {
     */
     class RealtimeStoreCreationInfo extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -5307,7 +6066,6 @@ declare namespace ConnectedLensModule {
         
         /**
         * Provides the UserInfo of the current owner of the RealtimeStore. If the store is unowned, a UserInfo object with null fields will be returned.
-        
         
         * @readonly
         */
@@ -5340,10 +6098,11 @@ declare namespace ConnectedLensModule {
 
 declare namespace ConnectedLensModule {
     /**
-    * Gives information about the Realtime Store delete operation. 
+    * Gives information about the Realtime Store delete operation.
     */
     class RealtimeStoreDeleteInfo extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -5370,6 +6129,7 @@ declare namespace ConnectedLensModule {
     */
     class RealtimeStoreKeyRemovalInfo extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -5410,6 +6170,7 @@ declare namespace ConnectedLensModule {
     */
     class RealtimeStoreOwnershipUpdateInfo extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -5429,6 +6190,7 @@ declare namespace ConnectedLensModule {
     */
     class RealtimeStoreUpdateInfo extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -5472,6 +6234,7 @@ declare namespace ConnectedLensModule {
     */
     class UserInfo extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -5509,6 +6272,7 @@ declare namespace ConnectedLensModule {
 */
 declare class ConnectedLensSessionOptions extends DirectMultiplayerSessionOptions {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -5550,10 +6314,66 @@ declare namespace ConnectedLensSessionOptions {
 }
 
 /**
+* Contains various utilities that can print out various messages in the Logger panel.
+*/
+declare class console {
+    
+    /** @hidden */
+    protected constructor()
+    
+    /**
+    * Prints out a message to the Logger window at the debug log level.
+    */
+    static debug(...data: any[]): void
+    
+    /**
+    * Prints out a message to the Logger window at the error log level.
+    */
+    static error(...data: any[]): void
+    
+    /**
+    * Prints out a message to the Logger window at the info log level.
+    */
+    static info(...data: any[]): void
+    
+    /**
+    * Prints out a message to the Logger window.
+    */
+    static log(...data: any[]): void
+    
+    /**
+    * Starts a timer named label or "default" if no label specified.
+    */
+    static time(...label: any[]): void
+    
+    /**
+    * Ends timer with name label or "default" if no label specified.
+    */
+    static timeEnd(...label: any[]): void
+    
+    /**
+    * Logs current time for timer named label or "default" if no label specified.
+    */
+    static timeLog(...label: any[]): void
+    
+    /**
+    * Prints out a stack trace to the Logger window.
+    */
+    static trace(...data: any[]): void
+    
+    /**
+    * Prints out a message to the Logger window at the warning log level.
+    */
+    static warn(...data: any[]): void
+    
+}
+
+/**
 * Constraints body motion in configurable ways, for simulating physical objects such as joints and hinges.
 */
 declare class Constraint extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -5572,10 +6392,10 @@ declare class Constraint extends ScriptObject {
 * This component allows developers to simulate certain types of mechanical connections or joints between objects.
 
 * @see [Constrain Types](https://developers.snap.com/lens-studio/features/physics/physics-examples/physics#constraint-types) guide.
-
 */
 declare class ConstraintComponent extends Component {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -5601,15 +6421,15 @@ declare class ConstraintComponent extends Component {
 }
 
 /**
-* Contact point between two colliding objects.  
+* Contact point between two colliding objects.
 
 * @see {@link ColliderComponent}
 * @see {@link CollisionEnterEventArgs}
 * @see {@link CollisionExitEventArgs}
-
 */
 declare class Contact extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -5647,6 +6467,7 @@ declare class Contact extends ScriptObject {
 */
 declare class CropTextureProvider extends TextureProvider {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -5654,6 +6475,56 @@ declare class CropTextureProvider extends TextureProvider {
     */
     inputTexture: Texture
     
+}
+
+/**
+* The Crypto class in our system serves a similar purpose to the web standard Crypto module, providing high-quality cryptographic operations crucial for secure application development. It offers methods for generating cryptographically secure UUIDs, random bytes, and SHA hashes. This class is designed to meet the stringent security requirements of applications handling authentication and sensitive transactions, complementing our existing framework by adding enhanced security features for robust and reliable cryptographic functionality.
+*/
+declare class crypto {
+    
+    /** @hidden */
+    protected constructor()
+    
+    /**
+    * Fills a provided Uint8Array with cryptographically secure random values. This method emulates `crypto.getRandomValues()` from the Web Crypto API.
+    
+    * `typedArray` A Uint8Array to fill with random values.
+    
+    * __Returns:__ Uint8Array The same array passed in after being filled with random values.
+    */
+    static getRandomValues(typedArray: Uint8Array): Uint8Array
+    
+    /**
+    * Generates a cryptographically secure UUID. This method mimics `crypto.randomUUID()` from the Web Crypto API.
+    
+    * __Returns:__ A securely generated UUID string.
+    */
+    static randomUUID(): string
+    
+}
+
+declare namespace crypto {
+    /**
+    * The `Crypto.subtle` read-only property returns an object which can then be used to perform low-level cryptographic operations.
+    */
+    class subtle {
+        
+        /** @hidden */
+        protected constructor()
+        
+        /**
+        * Generates a cryptographic hash of the given data using the specified algorithm. This method replicates `crypto.subtle.digest()` from the Web Crypto API, suitable for SHA and other algorithms.
+        
+        * `algorithm` The hash algorithm to use (e.g., "SHA1", "SHA256", "SHA384", "SHA512").
+        
+        * `data` The data to hash.
+        
+        * __Returns:__ A Promise that resolves to the hashed output as an Uint8Array.
+        */
+        static digest(algorithm: string, data: Uint8Array): Promise<Uint8Array>
+        
+    }
+
 }
 
 /**
@@ -5677,23 +6548,21 @@ declare enum CullMode {
 
 /**
 * A component managing and tracking a group of Custom Locations with known relative transforms. The {@link Transform} of the Custom Location Group's {@link SceneObject} is updated when any child is successfully tracked.
-
 */
 declare class CustomLocationGroupComponent extends Component {
     
+    /** @hidden */
     protected constructor()
     
     /**
-    * Provides a hint of the user's position relative to the Custom Location Group's origin and used to optimize tracking when this position is known. 
+    * Provides a hint of the user's position relative to the Custom Location Group's origin and used to optimize tracking when this position is known.
     
     **Note:** You can set this value through the Inspector panel in Lens Studio, or by using this API. When setting by API, it will override any initially trackable location set (child Custom Locations of this group) within Lens Studio. However, the next time the Lens opens again, it will default to what was set in the Inspector panel of Lens Studio.
-    
     */
     hintUserPosition(groupLocalPosition: vec3): void
     
     /**
     * Event fired when a child Custom Location successfully tracks for the first time. Event is fired with the ID of the newly tracking Custom Location.
-    
     
     * @readonly
     */
@@ -5706,6 +6575,7 @@ declare class CustomLocationGroupComponent extends Component {
 */
 declare class CylinderShape extends Shape {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -5730,6 +6600,7 @@ declare class CylinderShape extends Shape {
 */
 declare class DebugRender extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -5791,6 +6662,7 @@ declare class DebugRender extends ScriptObject {
 */
 declare class DeepLinkModule extends Asset {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -5818,6 +6690,7 @@ declare class DeepLinkModule extends Asset {
 */
 declare class DeepLinkUriReceivedArgs extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -5836,6 +6709,7 @@ declare class DeepLinkUriReceivedArgs extends ScriptObject {
 */
 declare class DeformingCollisionMesh extends CollisionMesh {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -5845,6 +6719,7 @@ declare class DeformingCollisionMesh extends CollisionMesh {
 */
 declare class Delay extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -5866,6 +6741,7 @@ declare class Delay extends ScriptObject {
 */
 declare class DelayBuilder extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -5890,6 +6766,7 @@ declare class DelayBuilder extends ScriptObject {
 */
 declare class DelayedCallbackEvent extends SceneEvent {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -5919,6 +6796,7 @@ declare class DelayedCallbackEvent extends SceneEvent {
 */
 declare class Delta extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -5940,6 +6818,7 @@ declare class Delta extends ScriptObject {
 */
 declare class DeltaBuilder extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -5990,6 +6869,7 @@ declare enum DepthClearOption {
 */
 declare class DepthFrameData extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -6067,6 +6947,7 @@ declare class DepthFrameData extends ScriptObject {
 */
 declare class DepthFrameSession extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -6113,9 +6994,9 @@ declare class DepthFrameSession extends ScriptObject {
 }
 
 /**
-* Provides access to a {@link DepthFrameSession} on Spectacles device. 
+* Provides access to a {@link DepthFrameSession} on Spectacles device.
 
-* @remarks 
+* @remarks
 * Used for requesting {@link DepthFrameData}.
 
 * @see [Depth Module](https://developers.snap.com/spectacles/about-spectacles-features/apis/depth-module) guide.
@@ -6130,6 +7011,7 @@ declare class DepthFrameSession extends ScriptObject {
 */
 declare class DepthModule extends Asset {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -6152,6 +7034,7 @@ declare class DepthModule extends Asset {
 */
 declare class DepthStencilRenderTargetProvider extends TextureProvider {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -6207,10 +7090,11 @@ declare class DepthStencilRenderTargetProvider extends TextureProvider {
 */
 declare class DepthTextureProvider extends TextureProvider {
     
+    /** @hidden */
     protected constructor()
     
     /**
-    * Get the depth at the given `point`.
+    * Get the depth at the given `point`
     
     * @exposesUserData
     */
@@ -6223,6 +7107,7 @@ declare class DepthTextureProvider extends TextureProvider {
 */
 declare class DeviceCamera extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -6232,28 +7117,26 @@ declare class DeviceCamera extends ScriptObject {
     
     /**
     * Unprojects the normalized screen space point `normalizedScreenSpacePoint` based on some distance `absoluteDepth` to produce a 3d position in device reference space. On Spectacles, this means that the returned position already includes the offset between the device center and the camera.
-    
     */
     unproject(normalizedScreenSpacePoint: vec2, absoluteDepth: number): vec3
     
     /**
     * Provides the focal length of the device camera in pixels.
     
-    
     * @readonly
     */
     focalLength: vec2
     
     /**
-    * Provides the relative offset between a reference point on the device and the camera. On mobile, the reference point is same as the camera, so this transform is identity. 
+    * Provides the relative offset between a reference point on the device and the camera. On mobile, the reference point is same as the camera, so this transform is identity.
     
     * On Spectacles, the reference point is the device center and the transform converts points in camera space to points relative to device center. Together with pose from DeviceTracking, you can obtain the world positions of points in device camera space.
     
-    * For example, 
+    * For example,
     * ```
     * // @input SceneObject objectWithDeviceTracking
     
-    * // Get device camera 
+    * // Get device camera
     * const deviceCamera = global.deviceInfoSystem.getTrackingCamera();
     * // calculate 3d position in device camera space (using your custom code which uses snapml or a similar technique)
     * const pointInDeviceCamera = ...; // vec3
@@ -6264,7 +7147,6 @@ declare class DeviceCamera extends ScriptObject {
     * // Use pointInWorld. For example, place a scene object at this world position
     * ```
     
-    
     * @readonly
     */
     pose: mat4
@@ -6272,14 +7154,12 @@ declare class DeviceCamera extends ScriptObject {
     /**
     * Provides the principal point of the device camera in pixels with origin at the center of the top-left pixel. Note: Principal point is typically in the center of the image, but it may not always be the case.
     
-    
     * @readonly
     */
     principalPoint: vec2
     
     /**
-    * Provides the default resolution of the image returned by the device camera in pixels. The principal point and focal length are calculated relative to this resolution. If you resize the image to a different resolution than the default, then you also need to update the principal points and focal length appropriately. 
-    
+    * Provides the default resolution of the image returned by the device camera in pixels. The principal point and focal length are calculated relative to this resolution. If you resize the image to a different resolution than the default, then you also need to update the principal points and focal length appropriately.
     
     * @readonly
     */
@@ -6292,6 +7172,7 @@ declare class DeviceCamera extends ScriptObject {
 */
 declare class DeviceInfoSystem extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -6307,7 +7188,7 @@ declare class DeviceInfoSystem extends ScriptObject {
     getTrackingCamera(): DeviceCamera
     
     /**
-    * Get the DeviceCamera object for the given camera ID which provides intrinsics/extrinsics of the camera. 
+    * Get the DeviceCamera object for the given camera ID which provides intrinsics/extrinsics of the camera.
     
     * @wearableOnly
     */
@@ -6335,8 +7216,8 @@ declare class DeviceInfoSystem extends ScriptObject {
     * ```js
     * // @input Component.Text textObject
     
-    * script.textObject.text = global.deviceInfoSystem.isInternetAvailable() 
-    *     ? "Internet is available" 
+    * script.textObject.text = global.deviceInfoSystem.isInternetAvailable()
+    *     ? "Internet is available"
     *     : "No internet";
     * ```
     
@@ -6353,7 +7234,6 @@ declare class DeviceInfoSystem extends ScriptObject {
     *   }
     * }
     * ```
-    
     */
     isInternetAvailable(): boolean
     
@@ -6380,8 +7260,8 @@ declare class DeviceInfoSystem extends ScriptObject {
     * // @input Component.Text textObject
     
     * global.deviceInfoSystem.onInternetStatusChanged.add(function(eventData) {
-    *     script.textObject.text = eventData.isInternetAvailable 
-    *         ? "UPDATED: Internet is available" 
+    *     script.textObject.text = eventData.isInternetAvailable
+    *         ? "UPDATED: Internet is available"
     *         : "UPDATED: No internet";
     * });
     * ```
@@ -6422,13 +7302,14 @@ declare class DeviceInfoSystem extends ScriptObject {
 }
 
 /**
-* Used to track a real-world location in a Lens. 
+* Used to track a real-world location in a Lens.
 
 * @see [Landmarkers](https://developers.snap.com/lens-studio/features/location-ar/guide) guide.
 * @see [Custom Location AR](https://developers.snap.com/lens-studio/features/location-ar/custom-landmarker) guide.
 */
 declare class DeviceLocationTrackingComponent extends Component {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -6495,10 +7376,10 @@ declare class DeviceLocationTrackingComponent extends Component {
 * object to a position and rotation that matches the physical camera's pose in the world.
 
 * @see [Tracking Modes](https://developers.snap.com/lens-studio/features/ar-tracking/world/tracking-modes) guide for more information.
-
 */
 declare class DeviceTracking extends Component {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -6508,6 +7389,7 @@ declare class DeviceTracking extends Component {
     
     /**
     * Creates a TrackedPoint at world position `worldPos` and world rotation `worldRot`.
+    * When creating a TrackedPoint, the {@link DeviceTracking} component must be set to `World` mode.
     */
     createTrackedWorldPoint(worldPos: vec3, worldRot: quat): TrackedPoint
     
@@ -6515,16 +7397,6 @@ declare class DeviceTracking extends Component {
     * Returns the actual DeviceTrackingMode being used. This may be different from the requested DeviceTrackingMode.
     */
     getActualDeviceTrackingMode(): DeviceTrackingMode
-    
-    /**
-    * This capability is no longer available.
-    */
-    getDevicePath(): BasicTransform[]
-    
-    /**
-    * This capability is no longer available.
-    */
-    getDevicePathIndex(): number
     
     /**
     * Returns the 3D point cloud representing important features visible by the camera.
@@ -6584,11 +7456,6 @@ declare class DeviceTracking extends Component {
     surfaceOptions: SurfaceOptions
     
     /**
-    * Helps to improve surface tracking accuracy while the target `SceneObject` is being moved.
-    */
-    surfaceTrackingTarget: SceneObject
-    
-    /**
     * Returns the WorldOptions object of this component, which can be used to control World Tracking settings.
     */
     worldOptions: WorldOptions
@@ -6625,6 +7492,7 @@ declare enum DeviceTrackingMode {
 */
 declare class DeviceTrackingModule extends Asset {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -6635,6 +7503,7 @@ declare namespace Dialog {
     */
     class Answer extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -6665,11 +7534,12 @@ declare namespace Dialog {
 /**
 * Provides access to [Question Answering Service](https://developers.snap.com/lens-studio/features/voice-ml/q&a-template-guide) powered by VoiceML.
 
-* @remarks 
+* @remarks
 * Allows to answer questions based on provided text.
 */
 declare class DialogModule extends Asset {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -6680,10 +7550,11 @@ declare class DialogModule extends Asset {
 }
 
 /**
-* An Audio Component effect that simulates sound attenuation based on the orientation of the transform relative to the {@link AudioListenerComponent}. 
+* An Audio Component effect that simulates sound attenuation based on the orientation of the transform relative to the {@link AudioListenerComponent}.
 */
 declare class DirectivityEffect extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -6705,15 +7576,17 @@ declare class DirectivityEffect extends ScriptObject {
 
 declare class DirectMultiplayerSessionOptions extends BaseMultiplayerSessionOptions {
     
+    /** @hidden */
     protected constructor()
     
 }
 
 /**
-* An audio effect that simulates sound attenuation based on the distance between the Audio and the {@link AudioListenerComponent}. 
+* An audio effect that simulates sound attenuation based on the distance between the Audio and the {@link AudioListenerComponent}.
 */
 declare class DistanceEffect extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -6727,7 +7600,7 @@ declare class DistanceEffect extends ScriptObject {
     maxDistance: number
     
     /**
-    * If the distance is less than this value, the distance effect is not applied at all. 
+    * If the distance is less than this value, the distance effect is not applied at all.
     */
     minDistance: number
     
@@ -6743,6 +7616,7 @@ declare class DistanceEffect extends ScriptObject {
 */
 declare class DomainInfo {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -6769,11 +7643,39 @@ declare class DomainInfo {
 }
 
 /**
+* Triggered when a double tap event has occured.
+*/
+declare class DoubleTapEvent extends SceneObjectEvent {
+    
+    /** @hidden */
+    protected constructor()
+    
+    /**
+    * Returns the normalized 2D screen position of the user's double tap. The normalized coordinates range from ([0-1], [0-1]), (0,0) being top-left and (1,1) being bottom-right.
+    */
+    getTapPosition(): vec2
+    
+}
+
+declare class DoubleTapEventArgs extends ScriptObject {
+    
+    /** @hidden */
+    protected constructor()
+    
+    /**
+    * @readonly
+    */
+    position: vec2
+    
+}
+
+/**
 * Used in {@link Text}'s `dropShadowSettings` property.
 * Configures how dropshadow will appear on a Text component.
 */
 declare class DropshadowSettings extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -6798,6 +7700,7 @@ declare class DropshadowSettings extends ScriptObject {
 */
 declare class DynamicResource extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -6818,16 +7721,17 @@ declare enum EncodingType {
 
 declare class EventRegistration extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
 }
 
 /**
-* Expression names used with `FaceRenderObjectProvider.getExpressionWeightByName()`
-* and returned by `FaceRenderObjectProvider.getExpressionNames()`.
+* Expression names used with `FaceRenderObjectProvider.getExpressionWeightByName()` and returned by `FaceRenderObjectProvider.getExpressionNames()`.
 */
 declare class Expressions {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -7092,11 +7996,11 @@ declare class Expressions {
 */
 declare class ExternalMusicInfo extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
     * Returns true if this object represents the same music track as the passed in object.
-    
     */
     isSameTrack(other: ExternalMusicInfo): boolean
     
@@ -7111,7 +8015,7 @@ declare class ExternalMusicInfo extends ScriptObject {
 * 2. On the imported audio asset, make sure `Bundled` is disabled
 * 3. Reference the audio asset somewhere in the scene (for example, `@input audioAsset: AudioTrackAsset`)
 
-* When this module is present in a Lens, the client running the Lens (either Snapchat or Lens Studio) will automatically fetch and auto-play the licensed music track included in the Lens. 
+* When this module is present in a Lens, the client running the Lens (either Snapchat or Lens Studio) will automatically fetch and auto-play the licensed music track included in the Lens.
 
 * This provides the benefits of:
 * - The music file is not included in the lens, leading to smaller lens size
@@ -7126,23 +8030,26 @@ declare class ExternalMusicInfo extends ScriptObject {
 */
 declare class ExternalMusicModule extends Asset {
     
+    /** @hidden */
     protected constructor()
     
     /**
     * Returns the {@link ExternalMusicInfo} object for the current external music track. This can be used to compare two audio tracks during the Lens runtime.
-    
     */
     getExternalMusicInfo(): ExternalMusicInfo
     
     /**
     * Returns the {@link LyricsTracker} for the current external music track.
-    
     */
     getLyricsTracker(): LyricsTracker
     
     /**
-    * Returns true if an external music track is set.
+    * Returns the sound sync (beats) tracker for the external music track.
+    */
+    getSoundSyncTracker(): SoundSyncTracker
     
+    /**
+    * Returns true if an external music track is set.
     
     * @readonly
     */
@@ -7151,14 +8058,12 @@ declare class ExternalMusicModule extends Asset {
     /**
     * Event that triggers when the external music track changes.
     
-    
     * @readonly
     */
     onTrackChanged: event1<ExternalMusicInfo, void>
     
     /**
     * Event that fires when an external music track is removed.
-    
     
     * @readonly
     */
@@ -7167,14 +8072,12 @@ declare class ExternalMusicModule extends Asset {
     /**
     * Event that fires when an external music track starts playing.
     
-    
     * @readonly
     */
     onTrackStarted: event1<ExternalMusicInfo, void>
     
     /**
     * Event that fires when an external music track stops playing.
-    
     
     * @readonly
     */
@@ -7189,6 +8092,7 @@ declare class ExternalMusicModule extends Asset {
 */
 declare class EyeColorVisual extends MaterialMeshVisual {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -7197,7 +8101,7 @@ declare class EyeColorVisual extends MaterialMeshVisual {
     faceIndex: number
     
     /**
-    * The tracking context this effect is being applied to. 
+    * The tracking context this effect is being applied to.
     */
     trackingScope: (PersonTrackingScope|TextureTrackingScope|FaceTrackingScope)
     
@@ -7210,7 +8114,13 @@ declare class EyeColorVisual extends MaterialMeshVisual {
 */
 declare class FaceCropTextureProvider extends CropTextureProvider {
     
+    /** @hidden */
     protected constructor()
+    
+    /**
+    * Returns a new copy of this FaceCropTextureProvider. Useful for keeping crop settings while assigning a different TrackingScope for instance.
+    */
+    clone(): FaceCropTextureProvider
     
     /**
     * Ratio of the mouth position on the cropped texture. Value ranges from 0 to 1, with 0 having no effect and 1 centering the image on the mouth.
@@ -7228,7 +8138,7 @@ declare class FaceCropTextureProvider extends CropTextureProvider {
     textureScale: vec2
     
     /**
-    * The tracking context this effect is being applied to. 
+    * The tracking context this effect is being applied to.
     */
     trackingScope: (PersonTrackingScope|TextureTrackingScope|FaceTrackingScope)
     
@@ -7239,6 +8149,7 @@ declare class FaceCropTextureProvider extends CropTextureProvider {
 */
 declare class FaceFoundEvent extends FaceTrackingEvent {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -7248,23 +8159,23 @@ declare class FaceFoundEvent extends FaceTrackingEvent {
 */
 declare enum FaceInsetRegion {
     /**
-    * Targets the entire face
+    * Targets the entire face.
     */
     Face,
     /**
-    * Targets the left eye
+    * Targets the left eye.
     */
     LeftEye,
     /**
-    * Targets the mouth
+    * Targets the mouth.
     */
     Mouth,
     /**
-    * Targets the nose
+    * Targets the nose.
     */
     Nose,
     /**
-    * Targets the right eye
+    * Targets the right eye.
     */
     RightEye
 }
@@ -7276,6 +8187,7 @@ declare enum FaceInsetRegion {
 */
 declare class FaceInsetVisual extends MaterialMeshVisual {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -7326,7 +8238,7 @@ declare class FaceInsetVisual extends MaterialMeshVisual {
     subdivisionsCount: number
     
     /**
-    * The tracking context this effect is being applied to. 
+    * The tracking context this effect is being applied to.
     */
     trackingScope: (PersonTrackingScope|TextureTrackingScope|FaceTrackingScope)
     
@@ -7337,12 +8249,13 @@ declare class FaceInsetVisual extends MaterialMeshVisual {
 */
 declare class FaceLostEvent extends FaceTrackingEvent {
     
+    /** @hidden */
     protected constructor()
     
 }
 
 /**
-* Maps a 2D texture to the user's face. 
+* Maps a 2D texture to the user's face.
 
 * @remarks
 * The texture appears to be painted on user's skin and contorts with facial movements. Great for full face masks but also can be used for realistic makeup.
@@ -7351,6 +8264,7 @@ declare class FaceLostEvent extends FaceTrackingEvent {
 */
 declare class FaceMaskVisual extends MaterialMeshVisual {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -7382,7 +8296,7 @@ declare class FaceMaskVisual extends MaterialMeshVisual {
     teethAlpha: number
     
     /**
-    * The tracking context this effect is being applied to. 
+    * The tracking context this effect is being applied to.
     */
     trackingScope: (PersonTrackingScope|TextureTrackingScope|FaceTrackingScope)
     
@@ -7395,6 +8309,7 @@ declare class FaceMaskVisual extends MaterialMeshVisual {
 */
 declare class FaceRenderObjectProvider extends RenderObjectProvider {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -7440,7 +8355,7 @@ declare class FaceRenderObjectProvider extends RenderObjectProvider {
     skullGeometryEnabled: boolean
     
     /**
-    * The tracking context this effect is being applied to. 
+    * The tracking context this effect is being applied to.
     */
     trackingScope: (PersonTrackingScope|TextureTrackingScope|FaceTrackingScope)
     
@@ -7457,12 +8372,35 @@ declare class FaceRenderObjectProvider extends RenderObjectProvider {
 */
 declare class FaceStretchVisual extends BaseMeshVisual {
     
+    /** @hidden */
     protected constructor()
+    
+    /**
+    * Add a feature to the face stretch effect.
+    */
+    addFeature(name: string): void
+    
+    /**
+    * Remove all features from the face stretch effect.
+    */
+    clearFeatures(): void
+    
+    /**
+    * Get an array of all the feature names on the face stretch effect.
+    */
+    getFeatureNames(): string[]
+    
+    getFeaturePoints(name: string): StretchPoint[]
     
     /**
     * Returns the weight of the face stretch feature named `feature`.
     */
     getFeatureWeight(feature: string): number
+    
+    /**
+    * Remove a feature from the face stretch effect.
+    */
+    removeFeature(name: string): void
     
     /**
     * Sets the weight of the face stretch feature named `feature` to `intensity`.
@@ -7471,12 +8409,17 @@ declare class FaceStretchVisual extends BaseMeshVisual {
     setFeatureWeight(feature: string, intensity: number): void
     
     /**
+    * Update the points on the provided face stretch feature.
+    */
+    updateFeaturePoints(name: string, points: StretchPoint[]): void
+    
+    /**
     * The index of the face the stretch will be applied to.
     */
     faceIndex: number
     
     /**
-    * The tracking context this effect is being applied to. 
+    * The tracking context this effect is being applied to.
     */
     trackingScope: (PersonTrackingScope|TextureTrackingScope|FaceTrackingScope)
     
@@ -7487,6 +8430,7 @@ declare class FaceStretchVisual extends BaseMeshVisual {
 */
 declare class FaceTrackingEvent extends SceneEvent {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -7495,7 +8439,7 @@ declare class FaceTrackingEvent extends SceneEvent {
     faceIndex: number
     
     /**
-    * The tracking context this effect is being applied to. 
+    * The tracking context this effect is being applied to.
     */
     trackingScope: (PersonTrackingScope|TextureTrackingScope|FaceTrackingScope)
     
@@ -7506,15 +8450,16 @@ declare class FaceTrackingEvent extends SceneEvent {
 */
 declare class FaceTrackingScope extends TrackingScope {
     
+    /** @hidden */
     protected constructor()
     
     /**
-    * The face to track. The first face is 0, the second is 1, and so on. 
+    * The face to track. The first face is 0, the second is 1, and so on.
     */
     faceIndex: number
     
     /**
-    * The parent context that this Tracking Scope is identifying the face from. 
+    * The parent context that this Tracking Scope is identifying the face from.
     */
     parentScope: TextureTrackingScope
     
@@ -7525,6 +8470,7 @@ declare class FaceTrackingScope extends TrackingScope {
 */
 declare class FileAudioTrackProvider extends AudioTrackProvider {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -7561,6 +8507,7 @@ declare class FileAudioTrackProvider extends AudioTrackProvider {
 */
 declare class FileLicensedSoundProvider extends AudioTrackProvider {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -7592,6 +8539,7 @@ declare class FileLicensedSoundProvider extends AudioTrackProvider {
 */
 declare class FileTextureProvider extends TextureProvider {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -7607,17 +8555,19 @@ declare enum FilteringMode {
 */
 declare class FixedCollisionMesh extends CollisionMesh {
     
+    /** @hidden */
     protected constructor()
     
 }
 
 /**
-* Fully constrain rotation and translation.  
+* Fully constrain rotation and translation.
 
 * @see {@link ConstraintComponent}.
 */
 declare class FixedConstraint extends Constraint {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -7627,6 +8577,7 @@ declare class FixedConstraint extends Constraint {
 */
 declare class FocusEndEventArgs extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -7636,6 +8587,7 @@ declare class FocusEndEventArgs extends ScriptObject {
 */
 declare class FocusStartEventArgs extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -7648,6 +8600,7 @@ declare class FocusStartEventArgs extends ScriptObject {
 */
 declare class Font extends Asset {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -7666,23 +8619,24 @@ declare enum FrustumCullMode {
     Extend,
     /**
     * Users define the specific AABB which is used for culling test. Assumes frustumCullMin and frustumCullMax are calculated in local space of the object. frustumCullMin is the bottom-left-back and frustumCullMax is the top-right-front of the user defined AABB.
-    
     */
     UserDefinedAABB
 }
 
 /**
 * Asset that contains [Gaussian Splats](https://developers.snap.com/lens-studio/features/graphics/gaussian-splatting). Used with {@link GaussianSplattingVisual}.
-
 */
 declare class GaussianSplattingAsset extends Asset {
     
+    /** @hidden */
     protected constructor()
     
     /**
-    * The number of frames in the asset. Useful when animating through several Gaussian Splats. 
+    * The number of frames in the asset. Useful when animating through several Gaussian Splats.
     */
     getNumberOfFrames(): number
+    
+    getSplatCount(): number
     
 }
 
@@ -7693,6 +8647,7 @@ declare class GaussianSplattingAsset extends Asset {
 */
 declare class GaussianSplattingVisual extends MaterialMeshVisual {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -7739,6 +8694,7 @@ declare class GaussianSplattingVisual extends MaterialMeshVisual {
 */
 declare class GeneralDataStore extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -7773,7 +8729,7 @@ declare class GeneralDataStore extends ScriptObject {
     
     getFloat32Array(key: string): Float32Array
     
-    getFloat64Array(key: string): any
+    getFloat64Array(key: string): Float64Array
     
     /**
     * Returns a floating point array being stored under the given key, or an empty array if none exists.
@@ -7785,11 +8741,11 @@ declare class GeneralDataStore extends ScriptObject {
     */
     getInt(key: string): number
     
-    getInt16Array(key: string): any
+    getInt16Array(key: string): Int16Array
     
-    getInt32Array(key: string): any
+    getInt32Array(key: string): Int32Array
     
-    getInt8Array(key: string): any
+    getInt8Array(key: string): Int8Array
     
     /**
     * Returns an integer array being stored under the given key, or an empty array if none exists.
@@ -7919,7 +8875,7 @@ declare class GeneralDataStore extends ScriptObject {
     
     putFloat32Array(key: string, value: Float32Array): void
     
-    putFloat64Array(key: string, value: any): void
+    putFloat64Array(key: string, value: Float64Array): void
     
     /**
     * Stores a floating point array under the given key.
@@ -7931,11 +8887,11 @@ declare class GeneralDataStore extends ScriptObject {
     */
     putInt(key: string, value: number): void
     
-    putInt16Array(key: string, value: any): void
+    putInt16Array(key: string, value: Int16Array): void
     
-    putInt32Array(key: string, value: any): void
+    putInt32Array(key: string, value: Int32Array): void
     
-    putInt8Array(key: string, value: any): void
+    putInt8Array(key: string, value: Int8Array): void
     
     /**
     * Stores an integer array under the given key.
@@ -8051,6 +9007,7 @@ declare class GeneralDataStore extends ScriptObject {
 */
 declare class GeoLocation {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -8079,14 +9036,13 @@ declare enum GeoLocationAccuracy {
     /**
     * Used for guiding the user. Generally accurate up to 5 meters.
     
-    * > **Spectacles** : Used for guiding the user in navigation use cases. Accuracy is dependent on the environment (rural / urban) but generally accurate up to 20 meters. This configuration enables locations with location type {@link GeoPosition#locationSource | 'FUSED_LOCATION'} which is available at rendering rate frequency when reception is good. Otherwise, location updates are provided every 10 seconds. 
-    
+    * > **Spectacles** : Used for guiding the user in navigation use cases. Accuracy is dependent on the environment (rural / urban) but generally accurate up to 20 meters. This configuration enables locations with location type {@link GeoPosition#locationSource | 'FUSED_LOCATION'} which is available at rendering rate frequency when reception is good. Otherwise, location updates are provided every 10 seconds.
     */
     Navigation,
     /**
     * Best possible accuracy without navigation requirement. Generally accurate up to 5 meters.
     
-    * > **Spectacles** : Good accuracy without navigation requirement. Generally accurate up to 30 meters depending on the environment (rural/urban). Use for use cases where navigation is not a requirement and lower waiting times are expected. Location updates provided once per second under good conditions, otherwise one location every 10 seconds. 
+    * > **Spectacles** : Good accuracy without navigation requirement. Generally accurate up to 30 meters depending on the environment (rural/urban). Use for use cases where navigation is not a requirement and lower waiting times are expected. Location updates provided once per second under good conditions, otherwise one location every 10 seconds.
     */
     High,
     /**
@@ -8108,11 +9064,11 @@ declare enum GeoLocationAccuracy {
 */
 declare class GeoPosition extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
     * Represents the position's elevation from sea level in meters. Value will be zero if not available.
-    
     */
     altitude: number
     
@@ -8152,7 +9108,7 @@ declare class GeoPosition extends ScriptObject {
     * | NOT_AVAILABLE | Unknown source. Non-wearables users will always receive this option |
     * | GNSS_RECEIVER | Uses built-in antenna to acquire a location. Not expected to work indoors or in challenging scenarios where reception is poor. |
     * | WIFI_POSITIONING_SYSTEM | Provides rough location in indoor and challenging scenarios. Useful for urban environments with no GPS reception.
-    * | FUSED_LOCATION | Provides a fused location between several location sources. Accuracy is dependent on the accuracy of the sources. Update frequency coincides with rendering rate. Ideal for navigation scenarios. Enable this source by selecting {@link GeoLocationAccuracy#Navigation | Navigation Location Accuracy}.| 
+    * | FUSED_LOCATION | Provides a fused location between several location sources. Accuracy is dependent on the accuracy of the sources. Update frequency coincides with rendering rate. Ideal for navigation scenarios. Enable this source by selecting {@link GeoLocationAccuracy#Navigation | Navigation Location Accuracy}.|
     */
     locationSource: string
     
@@ -8163,7 +9119,6 @@ declare class GeoPosition extends ScriptObject {
     
     /**
     * Represents the date and time when the location coordinates were acquired.
-    
     */
     timestamp: Date
     
@@ -8173,7 +9128,7 @@ declare class GeoPosition extends ScriptObject {
     verticalAccuracy: number
     
     /**
-    * Create a new GeoPosition. 
+    * Create a new GeoPosition.
     */
     static create(): GeoPosition
     
@@ -8188,11 +9143,11 @@ declare class GeoPosition extends ScriptObject {
 */
 declare class GestureModule extends Asset {
     
+    /** @hidden */
     protected constructor()
     
     /**
     * Triggered when the thumb and index fingers of the hand in view are pinched together. Compared to `getPinchDownEvent`, this event is more robust when moving the hand.
-    
     
     * @wearableOnly
     */
@@ -8200,7 +9155,6 @@ declare class GestureModule extends Asset {
     
     /**
     * Triggered when the thumb and index fingers of the hand in view are separated after being pinched together. Compared to `getPinchUpEvent`, this event is more robust when moving the hand.
-    
     
     * @wearableOnly
     */
@@ -8317,6 +9271,7 @@ declare namespace GestureModule {
 */
 declare class GesturesDataArgs extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -8326,6 +9281,7 @@ declare class GesturesDataArgs extends ScriptObject {
 */
 declare class GltfAsset extends Asset {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -8361,6 +9317,7 @@ declare class GltfAsset extends Asset {
 */
 declare class GltfSettings extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -8369,7 +9326,7 @@ declare class GltfSettings extends ScriptObject {
     convertMetersToCentimeters: boolean
     
     /**
-    * Whether the GLB Loader should optimize geometry. 
+    * Whether the GLB Loader should optimize geometry.
     */
     optimizeGeometry: boolean
     
@@ -8389,6 +9346,7 @@ declare class GltfSettings extends ScriptObject {
 */
 declare class GrabBeginArgs extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -8400,6 +9358,7 @@ declare class GrabBeginArgs extends ScriptObject {
 */
 declare class GrabEndArgs extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -8409,6 +9368,7 @@ declare class GrabEndArgs extends ScriptObject {
 */
 declare class HairDataAsset extends Asset {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -8421,6 +9381,7 @@ declare class HairDataAsset extends Asset {
 */
 declare class HairVisual extends BaseMeshVisual {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -8587,10 +9548,10 @@ declare class HairVisual extends BaseMeshVisual {
 
 /**
 * Provides additional data for the tracked hand. You can figure out whether the tracked hand is the left hand by accessing the *isLeft* property [true/false], as well as the probability of this data through the  *isLeftProbability*  property [0-1].
-
 */
 declare class HandSpecificData extends ObjectSpecificData {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -8599,20 +9560,20 @@ declare class HandSpecificData extends ObjectSpecificData {
 * Enables Hand Tracking 3D for the {@link ObjectTracking3D} component.
 
 * @see [3D Body and Hand Tracking](https://developers.snap.com/lens-studio/features/ar-tracking/body/object-tracking-3d) guide.
-
 */
 declare class HandTracking3DAsset extends Object3DAsset {
     
+    /** @hidden */
     protected constructor()
     
 }
 
 /**
 * Triggers haptic feedback on the device. (iOS Devices only)
-
 */
 declare class HapticFeedbackSystem extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -8643,6 +9604,7 @@ declare enum HapticFeedbackType {
 */
 declare class Head extends Component {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -8663,7 +9625,7 @@ declare class Head extends Component {
     onLandmarksUpdate: event1<vec2[], void>
     
     /**
-    * The tracking context this effect is being applied to. 
+    * The tracking context this effect is being applied to.
     */
     trackingScope: (PersonTrackingScope|TextureTrackingScope|FaceTrackingScope)
     
@@ -8797,10 +9759,11 @@ declare class Headers extends ScriptObject {
 */
 declare class HingeConstraint extends Constraint {
     
+    /** @hidden */
     protected constructor()
     
     /**
-    * Settings limiting the behaviour of hinge constraint in respect to the applied forces. 
+    * Settings limiting the behaviour of hinge constraint in respect to the applied forces.
     */
     limitSettings: HingeLimitSettings
     
@@ -8816,6 +9779,7 @@ declare class HingeConstraint extends Constraint {
 */
 declare class HingeLimitSettings {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -8834,7 +9798,7 @@ declare class HingeLimitSettings {
     high: number
     
     /**
-    * Minimum allowed angle (in radians), relative to the constraint resting state. 
+    * Minimum allowed angle (in radians), relative to the constraint resting state.
     */
     low: number
     
@@ -8850,6 +9814,7 @@ declare class HingeLimitSettings {
 */
 declare class HingeMotorSettings {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -8938,6 +9903,7 @@ declare enum HingeMotorType {
 */
 declare class HintsComponent extends Component {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -8959,6 +9925,7 @@ declare class HintsComponent extends Component {
 */
 declare class HitTestSession extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -8976,7 +9943,7 @@ declare class HitTestSession extends ScriptObject {
     reset(): void
     
     /**
-    * Start the session. Depth computation is started once a session is started. Multiple sessions access the same depth data, thus there is no additional cost. 
+    * Start the session. Depth computation is started once a session is started. Multiple sessions access the same depth data, thus there is no additional cost.
     
     * @wearableOnly
     */
@@ -8998,7 +9965,17 @@ declare class HitTestSession extends ScriptObject {
 */
 declare class HitTestSessionOptions extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
+    
+    /**
+    * If set to true, the surface classification of the hit surface is enabled. By default the classification is set to false.
+    
+    * @experimental
+    
+    * @wearableOnly
+    */
+    classification: boolean
     
     /**
     * If true - a double exponential filter is applied to filter/smooth over multiple hit test results.
@@ -9072,10 +10049,43 @@ declare enum HorizontalOverflow {
 }
 
 /**
+* Triggered when hovering state has ended on an {@link InteractionComponent}.
+*/
+declare class HoverEndEvent extends SceneObjectEvent {
+    
+    /** @hidden */
+    protected constructor()
+    
+    /**
+    * Get the screen space of the hover position.
+    */
+    getHoverPosition(): vec2
+    
+}
+
+/**
+* The arguments passed in by {@link HoverEndEvent}.
+*/
+declare class HoverEndEventArgs extends ScriptObject {
+    
+    /** @hidden */
+    protected constructor()
+    
+    /**
+    * The position of the event.
+    
+    * @readonly
+    */
+    position: vec2
+    
+}
+
+/**
 * Triggered when a mouse hover event occurs. Only triggered in the `Preview` panel of Lens studio. Useful when working with Spectacles, where you can simulate the use of your hand to hover over an object. Does not get triggered on mobile.
 */
 declare class HoverEvent extends SceneObjectEvent {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -9085,17 +10095,56 @@ declare class HoverEvent extends SceneObjectEvent {
     
 }
 
+declare class HoverEventArgs extends ScriptObject {
+    
+    /** @hidden */
+    protected constructor()
+    
+    /**
+    * @readonly
+    */
+    position: vec2
+    
+}
+
+declare class HoverStartEvent extends SceneObjectEvent {
+    
+    /** @hidden */
+    protected constructor()
+    
+    getHoverPosition(): vec2
+    
+}
+
+/**
+* The arguments passed in by {@link HoverStartEvent}.
+*/
+declare class HoverStartEventArgs extends ScriptObject {
+    
+    /** @hidden */
+    protected constructor()
+    
+    /**
+    * The position of the event.
+    
+    * @readonly
+    */
+    position: vec2
+    
+}
+
 /**
 * The base class for parameter objects passed into event callbacks.
 */
 declare class IEventParameters extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
 }
 
 /**
-* Used to display 2D textures within a scene. 
+* Used to display 2D textures within a scene.
 
 * @remarks
 * Commonly used with {@link ScreenTransform} for drawing images on the screen.
@@ -9104,6 +10153,7 @@ declare class IEventParameters extends ScriptObject {
 */
 declare class Image extends MaterialMeshVisual {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -9138,6 +10188,7 @@ declare class Image extends MaterialMeshVisual {
 */
 declare class ImageFrame extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -9154,29 +10205,11 @@ declare class ImageFrame extends ScriptObject {
 }
 
 /**
-* Spectacles: ImageRequest contains the parameterization for a still image request, which is a request for a high resolution image of the user's current camera stream. This object is created from the {@link CameraModule}. Currently there are no parameters that can be set for an ImageRequest.
-*/
-declare class ImageRequest extends ScriptObject {
-    
-    protected constructor()
-    
-    /**
-    * The crop of the Image Request.
-    */
-    crop: Rect
-    
-    /**
-    * The resolution of the Image Request
-    */
-    resolution: vec2
-    
-}
-
-/**
 * Builds InputPlaceHolders for MLComponent.
 */
 declare class InputBuilder extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -9217,6 +10250,7 @@ declare class InputBuilder extends ScriptObject {
 */
 declare class InputPlaceholder extends BasePlaceholder {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -9234,9 +10268,9 @@ declare class InputPlaceholder extends BasePlaceholder {
 }
 
 /**
-* Enables invoking touch interactions with a {@link BaseMeshVisual} rendered to specific {@link Camera}. 
+* Enables invoking touch interactions with a {@link BaseMeshVisual} rendered to specific {@link Camera}.
 
-* @remarks  
+* @remarks
 * Sometimes touch events within lens may collide with Snapchat touch events. To avoid this use Touch Blocking.
 
 * @see [Touch And Interactions](https://developers.snap.com/lens-studio/features/scripting/touch-input) guide.
@@ -9244,6 +10278,7 @@ declare class InputPlaceholder extends BasePlaceholder {
 */
 declare class InteractionComponent extends Component {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -9296,28 +10331,133 @@ declare class InteractionComponent extends Component {
     isSelected: boolean
     
     /**
-    * On mobile devices, this is triggered when the user releases their touch. On wearable devices, this is triggered when the user looks away from the current object. 
+    * Triggered when the user double taps on the screen.
+    
+    * @readonly
+    */
+    onDoubleTap: event1<DoubleTapEventArgs, void>
+    
+    /**
+    * On mobile devices, this is triggered when the user releases their touch. On wearable devices, this is triggered when the user looks away from the current object.
     
     * @readonly
     */
     onFocusEnd: event1<FocusEndEventArgs, void>
     
     /**
-    * On mobile devices, this is triggered when the user starts touching. On wearable devices, this is triggered when the user gazes on the current object. 
+    * On mobile devices, this is triggered when the user starts touching. On wearable devices, this is triggered when the user gazes on the current object.
     
     * @readonly
     */
     onFocusStart: event1<FocusStartEventArgs, void>
     
     /**
-    * On mobile devices, this is triggered when the user releases their touch. On wearable devices, this is triggered when the user stops touching the current object. 
+    * Gets called when hover events are passed to the lens.
+    
+    * @readonly
+    */
+    onHover: event1<HoverEventArgs, void>
+    
+    /**
+    * Gets called when hover events are finished.
+    
+    * @readonly
+    */
+    onHoverEnd: event1<HoverEndEventArgs, void>
+    
+    /**
+    * Gets called when hover event is initially triggered.
+    
+    * @readonly
+    */
+    onHoverStart: event1<HoverStartEventArgs, void>
+    
+    /**
+    * Triggered when the user ends a tap and hold.
+    
+    * @readonly
+    */
+    onLongPressEnd: event1<LongPressEndEventArgs, void>
+    
+    /**
+    * Triggered when the user begins to tap and hold.
+    
+    * @readonly
+    */
+    onLongPressStart: event1<LongPressStartEventArgs, void>
+    
+    /**
+    * Triggered when the pan ends.
+    
+    * @readonly
+    */
+    onPanEnd: event1<PanEndEventArgs, void>
+    
+    /**
+    * Triggered when the user is panning.
+    
+    * @readonly
+    */
+    onPanMove: event1<PanMoveEventArgs, void>
+    
+    /**
+    * Triggered when the user starts to pan across the screen.
+    
+    * @readonly
+    */
+    onPanStart: event1<PanStartEventArgs, void>
+    
+    /**
+    * Triggered when the user ends the pinch.
+    
+    * @readonly
+    */
+    onPinchEnd: event1<PinchEndEventArgs, void>
+    
+    /**
+    * Triggered when the user is pinching the screen.
+    
+    * @readonly
+    */
+    onPinchMove: event1<PinchMoveEventArgs, void>
+    
+    /**
+    * Triggered when the user pinches the screen.
+    
+    * @readonly
+    */
+    onPinchStart: event1<PinchStartEventArgs, void>
+    
+    /**
+    * Gets called when user scrolls on screen.
+    
+    * @readonly
+    */
+    onScroll: event1<ScrollEventArgs, void>
+    
+    /**
+    * Gets called when scroll ends.
+    
+    * @readonly
+    */
+    onScrollEnd: event1<ScrollEndEventArgs, void>
+    
+    /**
+    * Gets called when scroll begins.
+    
+    * @readonly
+    */
+    onScrollStart: event1<ScrollStartEventArgs, void>
+    
+    /**
+    * On mobile devices, this is triggered when the user releases their touch. On wearable devices, this is triggered when the user stops touching the current object.
     
     * @readonly
     */
     onSelectEnd: event1<SelectEndEventArgs, void>
     
     /**
-    * On mobile devices, this is triggered when the user starts touching the current object. On wearable devices, this is triggered when the user touches the touchpad while focusing on an object. 
+    * On mobile devices, this is triggered when the user starts touching the current object. On wearable devices, this is triggered when the user touches the touchpad while focusing on an object.
     
     * @readonly
     */
@@ -9361,11 +10501,11 @@ declare class InteractionComponent extends Component {
 }
 
 /**
-* Provides access to the open internet. Available only on Spectacles.
-
+* Provides access to the open internet. Available only on Spectacles and Camera Kit.
 */
 declare class InternetModule extends Asset {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -9449,7 +10589,7 @@ declare class InternetModule extends Asset {
     * Creating a Webview Texture in JavaScript:
     
     * ```js
-    * // Create the options 
+    * // Create the options
     * var resolution = new vec2(512, 512);
     * var options = InternetModule.createWebViewOptions(resolution);
     
@@ -9530,7 +10670,7 @@ declare class InternetModule extends Asset {
     *         "Content-Type": "application/json",
     *     },
     * });
-    *            
+    
     * let response = await internetModule.fetch(request, {
     *     body: JSON.stringify({ user: { name: "user", career: "salesman" }})
     * });
@@ -9538,13 +10678,13 @@ declare class InternetModule extends Asset {
     *     print("Failure: response not successful");
     *     return;
     * }
-    *   
+    
     * let contentTypeHeader = response.headers.get("content-type");
     * if (!contentTypeHeader.includes("application/json")) {
     *    print("Failure: wrong content type in response");
     *    return;
     * }
-    *         
+    
     * let responseJson = await response.json();
     * let username = responseJson.json["user"]["name"];
     * let career = responseJson.json["user"]["career"];
@@ -9556,6 +10696,24 @@ declare class InternetModule extends Asset {
     * @wearableOnly
     */
     fetch(request: (Request|string), options?: any): Promise<Response>
+    
+    /**
+    * Get a `DynamicResource` to be used with `RemoteMediaModule` from a `Blob`.
+    
+    * @wearableOnly
+    
+    * @CameraKit
+    */
+    makeResourceFromBlob(blob: Blob): DynamicResource
+    
+    /**
+    * Get a `DynamicResource` to be used with `RemoteMediaModule` from `mediaUrl`.
+    
+    * @wearableOnly
+    
+    * @CameraKit
+    */
+    makeResourceFromUrl(mediaUrl: string): DynamicResource
     
     /**
     * Perform an http request described by {@link RemoteServiceHttpRequest}.
@@ -9597,7 +10755,6 @@ declare class InternetModule extends Asset {
     * _Note: This is capped at 2048x2048._
     * _Note: Once a webview has been created this can not be changed._
     
-    
     * @experimental
     
     * @wearableOnly
@@ -9608,15 +10765,14 @@ declare class InternetModule extends Asset {
 
 /**
 * Arguments used with the onInternetStatusChanged event.
-
 */
 declare class InternetStatusChangedArgs extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
     * Whether the device has access to the internet.
-    
     
     * @readonly
     
@@ -9633,6 +10789,7 @@ declare class InternetStatusChangedArgs extends ScriptObject {
 */
 declare class IsPhoneInHandBeginArgs extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -9644,6 +10801,7 @@ declare class IsPhoneInHandBeginArgs extends ScriptObject {
 */
 declare class IsPhoneInHandEndArgs extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -9653,6 +10811,7 @@ declare class IsPhoneInHandEndArgs extends ScriptObject {
 */
 declare class KissFinishedEvent extends FaceTrackingEvent {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -9662,6 +10821,7 @@ declare class KissFinishedEvent extends FaceTrackingEvent {
 */
 declare class KissStartedEvent extends FaceTrackingEvent {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -9672,6 +10832,7 @@ declare class KissStartedEvent extends FaceTrackingEvent {
 */
 declare class LateUpdateEvent extends SceneEvent {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -9690,6 +10851,7 @@ declare class LateUpdateEvent extends SceneEvent {
 */
 declare class LayerSet {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -9737,10 +10899,11 @@ declare class LayerSet {
 }
 
 /**
-* A leaderboard which can contain scores and information about participating users. Accessible through the `LeaderboardModule` asset. 
+* A leaderboard which can contain scores and information about participating users. Accessible through the `LeaderboardModule` asset.
 */
 declare class Leaderboard extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -9770,7 +10933,6 @@ declare class Leaderboard extends ScriptObject {
     /**
     * How long entries on the leaderboard should last in seconds. Can be between 0-2 years. Setting `0` will result in default ttl which is 1 year. You must include this parameter when creating a leaderboard.
     
-    
     * @readonly
     */
     ttlSeconds: number
@@ -9783,6 +10945,7 @@ declare namespace Leaderboard {
     */
     class CreateOptions extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -9832,11 +10995,11 @@ declare namespace Leaderboard {
     */
     class RetrievalOptions extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
         * The number of users to be retrieved. The number should be >= 0.
-        
         */
         usersLimit: number
         
@@ -9860,6 +11023,7 @@ declare namespace Leaderboard {
     */
     class UserRecord extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -9918,6 +11082,7 @@ declare namespace Leaderboard {
 */
 declare class LeaderboardModule extends Asset {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -9932,6 +11097,7 @@ declare class LeaderboardModule extends Asset {
 */
 declare class LevelsetColliderAsset extends BinAsset {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -9941,6 +11107,7 @@ declare class LevelsetColliderAsset extends BinAsset {
 */
 declare class LevelsetShape extends Shape {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -9955,11 +11122,11 @@ declare class LevelsetShape extends Shape {
 */
 declare class LicensedAudioTrackAsset extends AudioTrackAsset {
     
+    /** @hidden */
     protected constructor()
     
     /**
     * Returns the {@link ExternalMusicInfo} object for the current external music track. This can be used to compare two audio tracks during the Lens runtime.
-    
     */
     getExternalMusicInfo(): ExternalMusicInfo
     
@@ -9972,6 +11139,7 @@ declare class LicensedAudioTrackAsset extends AudioTrackAsset {
 */
 declare class LightSource extends Component {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -10087,11 +11255,11 @@ declare enum LightType {
     */
     Ambient,
     /**
-    * A type of light that illuminates based on a provided environment map texture. 
+    * A type of light that illuminates based on a provided environment map texture.
     */
     Envmap,
     /**
-    * A type of light that illuminates based on estimation of light in the `Device Camera Texture`. 
+    * A type of light that illuminates based on estimation of light in the `Device Camera Texture`.
     */
     Estimation
 }
@@ -10103,6 +11271,7 @@ declare enum LightType {
 */
 declare class LiquifyVisual extends BaseMeshVisual {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -10124,9 +11293,9 @@ declare enum LoadStatus {
 }
 
 /**
-* Asset that provides the necessary localized text for your Lens. 
+* Asset that provides the necessary localized text for your Lens.
 
-* @remarks 
+* @remarks
 * The asset refers to a folder containing files for each language that you’ve translated your texts to.
 
 * The Lens will automatically use the correct localized string provided by a Localizations Asset based on the Snapchatter's device language.
@@ -10135,6 +11304,7 @@ declare enum LoadStatus {
 */
 declare class LocalizationsAsset extends Asset {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -10147,6 +11317,7 @@ declare class LocalizationsAsset extends Asset {
 */
 declare class LocalizationSystem extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -10253,10 +11424,10 @@ declare class LocalizationSystem extends ScriptObject {
 
 /**
 * Enables placing a {@link SceneObject} at a real world location provided by {@link LocationAsset} and specified relative position.
-
 */
 declare class LocatedAtComponent extends Component {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -10266,7 +11437,6 @@ declare class LocatedAtComponent extends Component {
     
     /**
     * The LocationAsset which contains the position this object should be anchored to.
-    
     */
     location: LocationAsset
     
@@ -10327,6 +11497,7 @@ declare class LocatedAtComponent extends Component {
 */
 declare class LocationAsset extends Asset {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -10338,6 +11509,24 @@ declare class LocationAsset extends Asset {
     * Gets the Proxy LocationID if the LocationAsset is a proxyLocation; returns null otherwise. This is useful in instances where a callback may return a mix of different location assets, and the creator of the proxy asset has specific handling in mind for particular proxy locations.
     */
     getProxyId(): string | undefined
+    
+    /**
+    * Serialize the LocationAsset to a string representation.
+    
+    * @exposesUserData
+    
+    * @wearableOnly
+    */
+    toSerialized(): string
+    
+    /**
+    * Deserialize the provided serialized LocationAsset.
+    
+    * @exposesUserData
+    
+    * @wearableOnly
+    */
+    static fromSerialized(serialized: string): LocationAsset
     
     /**
     * Gets the origin position of the `LocationAsset`.
@@ -10363,10 +11552,10 @@ declare class LocationAsset extends Asset {
 
 /**
 * Provides access to location cloud storage depending upon the {@link LocationCloudStorageOptions}.
-
 */
 declare class LocationCloudStorageModule extends Asset {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -10394,10 +11583,11 @@ declare class LocationCloudStorageModule extends Asset {
 }
 
 /**
-* Used to configure LocationCloudStorage module with various options. 
+* Used to configure LocationCloudStorage module with various options.
 */
 declare class LocationCloudStorageOptions extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -10413,7 +11603,6 @@ declare class LocationCloudStorageOptions extends ScriptObject {
     /**
     * Event raised on discovery of nearby cloud stores.
     
-    
     * @readonly
     */
     onDiscoveredNearby: event2<LocationAsset, LocationCloudStore, void>
@@ -10426,7 +11615,7 @@ declare class LocationCloudStorageOptions extends ScriptObject {
     onError: event3<LocationAsset, string, string, void>
     
     /**
-    * Create options to provide to LocationCloudStorageModule  
+    * Create options to provide to LocationCloudStorageModule
     */
     static create(): LocationCloudStorageOptions
     
@@ -10437,6 +11626,7 @@ declare class LocationCloudStorageOptions extends ScriptObject {
 */
 declare class LocationCloudStore extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -10464,7 +11654,6 @@ declare class LocationCloudStore extends ScriptObject {
 /**
 * Used by {@link DeviceLocationTrackingComponent} to indicate the user's distance from the landmarker location.
 * See the [Landmarker guide](https://developers.snap.com/lens-studio/features/location-ar/guide) for more information.
-
 */
 declare enum LocationProximityStatus {
     /**
@@ -10486,6 +11675,7 @@ declare enum LocationProximityStatus {
 */
 declare class LocationRenderObjectProvider extends RenderObjectProvider {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -10514,12 +11704,10 @@ declare class LocationRenderObjectProvider extends RenderObjectProvider {
 * The LocationService allows the user to provide their location to Lens applications if they so desire. For privacy reasons, the user is asked for permission to report location information.
 
 * > **Spectacles**: To use location services, users must be logged in and paired with their Snapchat account, and their location permission must be enabled. Users are also expected to be connected to the internet. To access the location API on Spectacles, refer to the [Spectacles Location](https://developers.snap.com/spectacles/about-spectacles-features/apis/location) documentation for examples and extra setup instructions regarding permissions.
-
-
-
 */
 declare class LocationService extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -10533,14 +11721,11 @@ declare class LocationService extends ScriptObject {
     
     /**
     * The accuracy of the provided position.
-    
-    
     */
     accuracy: GeoLocationAccuracy
     
     /**
     * Event to notify when north aligned orientation data is available to use. Use in combination with {@link GeoLocation.getNorthAlignedHeading} to acquire heading direction.
-    
     
     * @readonly
     */
@@ -10553,6 +11738,7 @@ declare class LocationService extends ScriptObject {
 */
 declare class LocationTextureProvider extends TextureProvider {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -10568,10 +11754,45 @@ declare class LocationTextureProvider extends TextureProvider {
 }
 
 /**
+* Arguments used with the {@link InteractionComponent#onLongPressEnd} event.
+*/
+declare class LongPressEndEventArgs extends ScriptObject {
+    
+    /** @hidden */
+    protected constructor()
+    
+    /**
+    * The normalized 2D screen position where the user lifted their long touch. The normalized coordinates range from ([0-1], [0-1]), (0,0) being top-left and (1,1) being bottom-right.
+    
+    * @readonly
+    */
+    position: vec2
+    
+}
+
+/**
+* Arguments used with the {@link InteractionComponent#onLonPressStart} event.
+*/
+declare class LongPressStartEventArgs extends ScriptObject {
+    
+    /** @hidden */
+    protected constructor()
+    
+    /**
+    * The normalized 2D screen position where the user started their long touch. The normalized coordinates range from ([0-1], [0-1]), (0,0) being top-left and (1,1) being bottom-right.
+    
+    * @readonly
+    */
+    position: vec2
+    
+}
+
+/**
 * Orients a {@link SceneObject} towards a target {@link SceneObject}.
 */
 declare class LookAtComponent extends Component {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -10774,15 +11995,14 @@ declare namespace LookAtComponent {
 
 /**
 * Represents the full set of Lyrics data for tracked music. Can be accessed through {@link LyricsTracker#fullLyrics | LyricsTracker.fullLyrics} when lyrics are available.
-
 */
 declare class Lyrics extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
     * Duration (in seconds) of the tracked music.
-    
     
     * @readonly
     */
@@ -10791,14 +12011,12 @@ declare class Lyrics extends ScriptObject {
     /**
     * Lyrics represented as a list of {@link LyricsLine} objects in the order they appear in the tracked music.
     
-    
     * @readonly
     */
     lines: LyricsLine[]
     
     /**
     * {@link LyricsType | Type} of the lyrics data available. Describes the granularity of timing data available for the lyrics.
-    
     
     * @readonly
     */
@@ -10808,15 +12026,14 @@ declare class Lyrics extends ScriptObject {
 
 /**
 * Represents a single line of Lyrics.
-
 */
 declare class LyricsLine extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
     * The full line of lyrics represented as a single string.
-    
     
     * @readonly
     */
@@ -10825,7 +12042,6 @@ declare class LyricsLine extends ScriptObject {
     /**
     * Offset (in seconds) that this line begins relative to the start of the tracked music. Note that this value can be negative, since music tracks can start halfway through a line being sung. This value is useful to compare with {@link LyricsTracker#playbackPosition | LyricsTracker.playbackPosition}.
     
-    
     * @readonly
     */
     offset: number
@@ -10833,16 +12049,14 @@ declare class LyricsLine extends ScriptObject {
     /**
     * Offset (in seconds) that this line ends relative to the start of the tracked music. This value is useful to compare with {@link LyricsTracker#playbackPosition | LyricsTracker.playbackPosition}.
     
-    
     * @readonly
     */
     offsetEnd: number
     
     /**
-    * Lyrics for this line represented as a list of {@link LyricsSync} objects in the order they appear. 
+    * Lyrics for this line represented as a list of {@link LyricsSync} objects in the order they appear.
     
     * Note that for {@link LyricsType#LineSync | LineSync} lyrics data, only one {@link LyricsSync} object will be present in the list, representing the entire line.
-    
     
     * @readonly
     */
@@ -10852,15 +12066,14 @@ declare class LyricsLine extends ScriptObject {
 
 /**
 * Represents a single sync/word of a {@link LyricsLine}.
-
 */
 declare class LyricsSync extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
     * Duration (in seconds) of this sync. Equivalent to {@link LyricsSync#offsetEnd | offsetEnd} - {@link LyricsSync#offset | offset}.
-    
     
     * @readonly
     */
@@ -10869,14 +12082,12 @@ declare class LyricsSync extends ScriptObject {
     /**
     * Offset (in seconds) that this sync begins, relative to the start of the {@link LyricsLine} this sync is part of. Add this offset to the {@link LyricsLine#offset | LyricsLine.offset} to convert it to playback time, which can be compared to {@link LyricsTracker#playbackPosition | LyricsTracker.playbackPosition}.
     
-    
     * @readonly
     */
     offset: number
     
     /**
     * Offset (in seconds) that this sync ends, relative to the start of the {@link LyricsLine} this sync is part of. Add this offset to the {@link LyricsLine#offset | LyricsLine.offset} to convert it to playback time, which can be compared to {@link LyricsTracker#playbackPosition | LyricsTracker.playbackPosition}.
-    
     
     * @readonly
     */
@@ -10897,16 +12108,14 @@ declare class LyricsSync extends ScriptObject {
 * Note that lyrics data may not be available immediately when this class is accessed. Subscribe to {@link LyricsTracker#onLyricsAvailable | onLyricsAvailable} to be notified when lyrics data becomes available.
 
 * Also note that some music tracks may not support lyrics. In this case, {@link LyricsTracker#onLyricsAvailable | onLyricsAvailable} will not be triggered.
-
-
 */
 declare class LyricsTracker extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
     * The current {@link LyricsLine} for the tracked music. Returns `null` if no line is currently playing, or lyrics are not available.
-    
     
     * @readonly
     */
@@ -10915,14 +12124,12 @@ declare class LyricsTracker extends ScriptObject {
     /**
     * The full {@link Lyrics} for the tracked music. Useful for pre-processing the lyrics of a track ahead of time.
     
-    
     * @readonly
     */
     fullLyrics: Lyrics
     
     /**
-    * Returns true if the tracked audio is playing. 
-    
+    * Returns true if the tracked audio is playing.
     
     * @readonly
     */
@@ -10931,14 +12138,12 @@ declare class LyricsTracker extends ScriptObject {
     /**
     * The next {@link LyricsLine} for the tracked music. Returns `null` if no next line is present, or lyrics data is not available.
     
-    
     * @readonly
     */
     nextLine: LyricsLine
     
     /**
     * Event that triggers when a {@link LyricsLine} has ended.
-    
     
     * @readonly
     */
@@ -10947,14 +12152,12 @@ declare class LyricsTracker extends ScriptObject {
     /**
     * Event that triggers when a {@link LyricsLine} has started. Note that if playback begins partway through a line, this event will immediately fire.
     
-    
     * @readonly
     */
     onLineStart: event1<LyricsLine, void>
     
     /**
     * Event that triggers when lyrics data becomes available for the tracked music. Note that when lyrics are not available for the selected music track, this event will never trigger.
-    
     
     * @readonly
     */
@@ -10963,14 +12166,12 @@ declare class LyricsTracker extends ScriptObject {
     /**
     * Event that fires when lyrics data is cleared. This usually indicates that the tracked music has either been removed or changed. It's good practice to clear any lyrics visuals when this event fires.
     
-    
     * @readonly
     */
     onLyricsCleared: event0<void>
     
     /**
     * Event that triggers when playback has been reset on the tracked music. It's good practice to clear any lyrics visuals when this event fires.
-    
     
     * @readonly
     */
@@ -10979,14 +12180,12 @@ declare class LyricsTracker extends ScriptObject {
     /**
     * Event that triggers when playback has started on the tracked music.
     
-    
     * @readonly
     */
     onPlaybackStarted: event1<ExternalMusicInfo, void>
     
     /**
     * Event that triggers when a {@link LyricsSync} has ended.
-    
     
     * @readonly
     */
@@ -10995,16 +12194,14 @@ declare class LyricsTracker extends ScriptObject {
     /**
     * Event that triggers when a {@link LyricsSync} has started. Note that if playback begins partway through a LyricsSync, this event will immediately fire.
     
-    
     * @readonly
     */
     onWordStart: event1<LyricsSync, void>
     
     /**
-    * Current playback position (in seconds) of the tracked music. 
+    * Current playback position (in seconds) of the tracked music.
     
     * This can be used to compare playback position to the {@link LyricsLine#offset | offset} and {@link LyricsLine#offsetEnd | offsetEnd} properties on {@link LyricsLine} objects. It can also be used with offsets on {@link LyricsSync} objects, after adjusting their offsets by the `offset` of the {@link LyricsLine} they belong to.
-    
     
     * @readonly
     */
@@ -11017,28 +12214,25 @@ declare class LyricsTracker extends ScriptObject {
 */
 declare enum LyricsType {
     /**
-    * Type is not set. 
-    
+    * Type is not set.
     */
     Unset,
     /**
     * Lyrics data is available for each word and space between words. Each {@link LyricsLine}'s {@link LyricsLine#syncs | syncs} list will contain a {@link LyricsSync} object for each word and space between words in the line. This means that timing data is available for each word in the tracked music.
-    
     */
     RichSync,
     /**
     * Lyrics data is only available for entire lines at a time. Each {@link LyricsLine}'s {@link LyricsLine#syncs | syncs} list will contain a single {@link LyricsSync} object, with its {@link LyricsSync#text | text} property containing the entire line. This means that timing data is only available for entire lines of the song, and is not available for each individual word.
-    
     */
     LineSync
 }
 
 /**
-* Namespace for Machine Learning related classes and methods.
-* For more information, see the [Machine Learning Overview](https://developers.snap.com/lens-studio/features/snap-ml/ml-overview).
+* Namespace for Machine Learning related classes and methods. For more information, see the [Machine Learning Overview](https://developers.snap.com/lens-studio/features/snap-ml/ml-overview).
 */
 declare class MachineLearning {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -11155,7 +12349,16 @@ declare namespace MachineLearning {
         /**
         * MLComponent will automatically decide how to run the neural network based on what is supported. It will start with Accelerator, then fall back to GPU, then CPU.
         */
-        Auto
+        Auto,
+        /**
+        * MLComponent will run the model on CPU using device native backend (like CoreML on Apple devices).
+        */
+        NativeCPU,
+        /**
+        * NativeCPUAndNPU: MLComponent will try to run the model using device Neural Processing Unit (e.g. Apple Neural Engine on Apple devices) if exists and model is supported, with fallback support for running on CPU.
+        
+        */
+        NativeCPUAndNPU
     }
 
 }
@@ -11181,7 +12384,11 @@ declare namespace MachineLearning {
         /**
         * Model is not ready to run
         */
-        NotReady
+        NotReady,
+        /**
+        * An error was encountered while loading the model.
+        */
+        LoadingError
     }
 
 }
@@ -11208,6 +12415,7 @@ declare namespace MachineLearning {
 */
 declare class ManipulateComponent extends Component {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -11303,6 +12511,7 @@ declare class ManipulateComponent extends Component {
 */
 declare class ManipulateEndEvent extends SceneObjectEvent {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -11312,6 +12521,7 @@ declare class ManipulateEndEvent extends SceneObjectEvent {
 */
 declare class ManipulateEndEventArgs extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -11321,6 +12531,7 @@ declare class ManipulateEndEventArgs extends ScriptObject {
 */
 declare class ManipulateFrameIntersectResult {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -11340,6 +12551,7 @@ declare class ManipulateFrameIntersectResult {
 */
 declare class ManipulateStartEvent extends SceneObjectEvent {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -11349,6 +12561,7 @@ declare class ManipulateStartEvent extends SceneObjectEvent {
 */
 declare class ManipulateStartEventArgs extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -11378,6 +12591,7 @@ declare enum ManipulateType {
 */
 declare class MapModule extends Asset {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -11397,7 +12611,13 @@ declare class MapModule extends Asset {
 */
 declare class MappingOptions extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
+    
+    /**
+    * Toggles the acquisition of geolocation metadata during a mapping session.
+    */
+    geoPositionEnabled: boolean
     
     /**
     * Location hint for mapping. Leave unset or use `LocationAsset.getAROrigin()` for mapping in the current AR session frame. (planned future extension) Use a pre-existing location for incremental mapping.
@@ -11421,6 +12641,7 @@ declare class MappingOptions extends ScriptObject {
 */
 declare class MappingSession extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -11517,6 +12738,7 @@ declare namespace MappingSession {
 */
 declare class MapTextureProvider extends TextureProvider {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -11547,6 +12769,7 @@ declare class MapTextureProvider extends TextureProvider {
 */
 declare class MarkerAsset extends Asset {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -11569,6 +12792,7 @@ declare class MarkerAsset extends Asset {
 */
 declare class MarkerProvider extends Provider {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -11582,6 +12806,7 @@ declare class MarkerProvider extends Provider {
 */
 declare class MarkerTrackingComponent extends Component {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -11615,12 +12840,13 @@ declare class MarkerTrackingComponent extends Component {
 * Masks out visuals and {@link InteractionComponent} touch events area within a rectangle defined by {@link ScreenTransform} component.
 
 * @remarks
-* Any {@link RenderMeshVisual} or {@link InteractionComponent} components will be clipped within user defined 2D bounds. These 2D bounds are defined by a {@link ScreenTransform}. 
+* Any {@link RenderMeshVisual} or {@link InteractionComponent} components will be clipped within user defined 2D bounds. These 2D bounds are defined by a {@link ScreenTransform}.
 
 * @see [Masking Component](https://developers.snap.com/lens-studio/lens-studio-workflow/scene-set-up/2d/masking-component)
 */
 declare class MaskingComponent extends BaseMeshVisual {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -12011,7 +13237,7 @@ declare class mat4 {
 /**
 * An asset that describes how visual objects should appear.
 
-* @remarks 
+* @remarks
 * Each Material is a collection of {@link Pass} which define the actual rendering passes.
 * Materials are used by {@link MaterialMeshVisual} for drawing meshes in the scene.
 
@@ -12019,6 +13245,7 @@ declare class mat4 {
 */
 declare class Material extends Asset {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -12048,6 +13275,7 @@ declare class Material extends Asset {
 */
 declare class MaterialMeshVisual extends BaseMeshVisual {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -12104,6 +13332,7 @@ declare class MaterialMeshVisual extends BaseMeshVisual {
 */
 declare class MaterialPropertyOverrides extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -12113,6 +13342,7 @@ declare class MaterialPropertyOverrides extends ScriptObject {
 */
 declare class MathUtils {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -12152,19 +13382,20 @@ declare class MathUtils {
 */
 declare class Matter extends Asset {
     
+    /** @hidden */
     protected constructor()
     
     /**
-    * Bounciness, or restitution, for dynamic bodies. This is the proportion of energy preserved after a collision, in the range 0 to 1. 
-    * This defaults to 0.0. Dynamic bounciness should usually be less than 1.0, to prevent energy from accumulating excessively (there is a certain amount of energy gained due to collision response). 
+    * Bounciness, or restitution, for dynamic bodies. This is the proportion of energy preserved after a collision, in the range 0 to 1.
+    * This defaults to 0.0. Dynamic bounciness should usually be less than 1.0, to prevent energy from accumulating excessively (there is a certain amount of energy gained due to collision response).
     * The effective bounciness for a collision is the product of both colliding objects. So if your bounciness setting appears to have no effect, it probably means the object it's colliding with has 0 bounciness.
     */
     dynamicBounciness: number
     
     /**
-    * Coefficient of friction. 
-    * The effective friction between two objects is the product of both objects' friction. So for example, the default between two objects is 0.5*0.5=0.25. 
-    * Typical ranges are between 0 and 1, but larger values (up to 10) are allowed. This may be used to increase the effective friction when colliding against another object with low friction. 
+    * Coefficient of friction.
+    * The effective friction between two objects is the product of both objects' friction. So for example, the default between two objects is 0.5*0.5=0.25.
+    * Typical ranges are between 0 and 1, but larger values (up to 10) are allowed. This may be used to increase the effective friction when colliding against another object with low friction.
     * This is a very simplified approximation of realistic friction, since it does not correctly take into account the combined surface characteristics of both objects. It also doesn't distinguish between static and dynamic friction.
     */
     friction: number
@@ -12180,8 +13411,8 @@ declare class Matter extends Asset {
     spinningFriction: number
     
     /**
-    * Bounciness (AKA restitution), for static colliders. This is the proportion of energy preserved after a collision, in the range 0 to 1. 
-    * This defaults to 1.0. Typically we use high bounciness for static colliders because they are unaffected by collision, and thus maximally preserve energy. 
+    * Bounciness (AKA restitution), for static colliders. This is the proportion of energy preserved after a collision, in the range 0 to 1.
+    * This defaults to 1.0. Typically we use high bounciness for static colliders because they are unaffected by collision, and thus maximally preserve energy.
     * The effective bounciness for a collision is the product of both colliding objects. So if your bounciness setting appears to have no effect, it probably means the object it's colliding with has 0 bounciness.
     */
     staticBounciness: number
@@ -12193,6 +13424,7 @@ declare class Matter extends Asset {
 */
 declare class MediaPickerTextureProvider extends TextureProvider {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -12260,7 +13492,7 @@ declare class MediaPickerTextureProvider extends TextureProvider {
     isVideoPickingEnabled: boolean
     
     /**
-    * Returns underlying VideoTextureProvider for the last selected media file. If the last media file was not video, null is returned. 
+    * Returns underlying VideoTextureProvider for the last selected media file. If the last media file was not video, null is returned.
     
     * @readonly
     */
@@ -12273,6 +13505,7 @@ declare class MediaPickerTextureProvider extends TextureProvider {
 */
 declare class MelSpectrogram extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -12287,6 +13520,7 @@ declare class MelSpectrogram extends ScriptObject {
 */
 declare class MelSpectrogramBuilder extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -12353,7 +13587,6 @@ declare class MeshBuilder {
     *     { name: "texture0", components: 2 },
     * ]);
     * ```
-    
     */
     constructor(layout: any[])
     
@@ -12464,6 +13697,7 @@ declare enum MeshIndexType {
 
 declare class MeshRenderObjectProvider extends RenderObjectProvider {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -12479,6 +13713,7 @@ declare enum MeshShadowMode {
 */
 declare class MeshShape extends Shape {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -12538,11 +13773,21 @@ declare enum MeshTopology {
 }
 
 /**
-* Deprecated. Serves as alias for {@link BaseMeshVisual}.
+* This class has been DEPRECATED starting in Lens Studio 2.3.
+* The `Component.MeshVisual` typename is now an alias for [BaseMeshVisual](https://developers.snap.com/api/classes/BaseMeshVisual).
+* When upgrading a project to Lens Studio 2.3 or higher, any instances of the MeshVisual component will be upgraded to [RenderMeshVisual](https://developers.snap.com/api/classes/RenderMeshVisual).
 
+* This class was split into the following three classes, to better distinguish the behaviors of child classes.
+
+* [BaseMeshVisual](https://developers.snap.com/api/classes/BaseMeshVisual): Base class for all visual classes using meshes to render
+
+* [MaterialMeshVisual](https://developers.snap.com/api/classes/MaterialMeshVisual): Child class of BaseMeshVisual, gives access to the [Materials](https://developers.snap.com/api/classes/Material) used to render
+
+* [RenderMeshVisual](https://developers.snap.com/api/classes/RenderMeshVisual): Child class of MaterialMeshVisual, gives access to the [RenderMesh](https://developers.snap.com/api/classes/RenderMesh) used to render
 */
 declare class MeshVisual extends Component {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -12552,6 +13797,7 @@ declare class MeshVisual extends Component {
 */
 declare class MFCC extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -12573,6 +13819,7 @@ declare class MFCC extends ScriptObject {
 */
 declare class MFCCBuilder extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -12632,6 +13879,7 @@ declare class MFCCBuilder extends ScriptObject {
 */
 declare class MicrophoneAudioProvider extends AudioTrackProvider {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -12642,11 +13890,11 @@ declare class MicrophoneAudioProvider extends AudioTrackProvider {
     getAudioFrame(audioFrame: Float32Array): vec3
     
     /**
-    * Retrieves the current audio frame, converts it to PCM16 (Pulse-Code Modulation) format, and writes the raw audio samples into the provided `audioFrame` as an `Int16Array`. The length of the array cant be more than `maxFrameSize`. 
+    * Retrieves the current audio frame, converts it to PCM16 (Pulse-Code Modulation) format, and writes the raw audio samples into the provided `audioFrame` as an `Int16Array`. The length of the array cant be more than `maxFrameSize`.
     
     * @exposesUserData
     */
-    getAudioFramePCM16(audioFrame: any): vec3
+    getAudioFramePCM16(audioFrame: Int16Array): vec3
     
     /**
     * Start processing audio from microphone. Useful to avoid redundant processing.
@@ -12665,11 +13913,11 @@ declare class MicrophoneAudioProvider extends AudioTrackProvider {
 */
 declare class MLAsset extends BinAsset {
     
+    /** @hidden */
     protected constructor()
     
     /**
-    * Returns model metadata as JSON object. 
-    
+    * Returns model metadata as JSON object.
     */
     getMetadata(): any
     
@@ -12686,12 +13934,18 @@ declare class MLAsset extends BinAsset {
 */
 declare class MLComponent extends Component {
     
+    /** @hidden */
     protected constructor()
     
     /**
     * Builds the MLComponent model when all placeholders are determined. Config is an array of Input and Output placeholders.
     */
     build(placeholders: BasePlaceholder[]): void
+    
+    /**
+    * Build the MLComponent asynchronously.
+    */
+    buildAsync(placeholders: BasePlaceholder[]): Promise<void>
     
     /**
     * Stops running the MLComponent. The `onRunningFinished` callback will not be executed.
@@ -12705,7 +13959,6 @@ declare class MLComponent extends Component {
     
     /**
     * Returns an array of InputPlaceholders of the MLComponent's model with default settings. Returns empty array if the model asset is not set.
-    
     */
     getInputs(): InputPlaceholder[]
     
@@ -12716,7 +13969,6 @@ declare class MLComponent extends Component {
     
     /**
     * Returns an array of OutputPlaceholders of MLComponent's model with default settings. Returns empty array if the model is not set.
-    
     */
     getOutputs(): OutputPlaceholder[]
     
@@ -12776,9 +14028,19 @@ declare class MLComponent extends Component {
     model: MLAsset
     
     /**
+    * Bind a function that is triggered when the component fails to load a model.
+    */
+    onLoadingFailed: (error: string) => void
+    
+    /**
     * Function that gets called when model loading is finished.
     */
     onLoadingFinished: () => void
+    
+    /**
+    * Bind a function that is triggered when the component fails to run a model.
+    */
+    onRunningFailed: (error: string) => void
     
     /**
     * Function that gets called when the model stops running.
@@ -12808,11 +14070,11 @@ declare class MLComponent extends Component {
 */
 declare class MotionController extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
     * Get the current motion type being provided by the motion controller.
-    
     
     * @wearableOnly
     */
@@ -12879,7 +14141,6 @@ declare class MotionController extends ScriptObject {
     /**
     * Event triggered when the motion type of the controller changes.
     
-    
     * @readonly
     
     * @wearableOnly
@@ -12887,8 +14148,8 @@ declare class MotionController extends ScriptObject {
     onMotionTypeChange: event1<MotionController.MotionType, void>
     
     /**
-    * Triggered by a touch event from the controller. 
-    * Arguments: 
+    * Triggered by a touch event from the controller.
+    * Arguments:
     * - **normalizedPosition:** A normalized 2D position of the user's touch on the touchpad. The coordinates range from ([0-1], [0-1]), where (0,0) represents the top-left and (1,1) represents the bottom-right.
     * - **touchId:** Returns the unique identifier of the specific touch; useful for distinguishing between multiple simultaneous touches.
     * - **timestampMilliseconds:** Returns the timestamp, in milliseconds, of when the touch event occurred.
@@ -12928,8 +14189,7 @@ declare class MotionController extends ScriptObject {
     onTransformEvent: event2<vec3, quat, void>
     
     /**
-    * Returns the configuration of the motion controller. 
-    
+    * Returns the configuration of the motion controller.
     
     * @readonly
     
@@ -12942,7 +14202,6 @@ declare class MotionController extends ScriptObject {
 declare namespace MotionController {
     /**
     * Defines a set of haptic feedback patterns that can be requested.
-    
     
     * @wearableOnly
     */
@@ -13007,6 +14266,7 @@ declare namespace MotionController {
     */
     class HapticRequest extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -13038,11 +14298,11 @@ declare namespace MotionController {
     /**
     * Settings for configuring a motion controller.
     
-    
     * @wearableOnly
     */
     class MotionControllerOptions extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -13080,20 +14340,17 @@ declare namespace MotionController {
         /**
         * Transform of this object does not change.
         
-        
         * @wearableOnly
         */
         NoMotion,
         /**
         * Only the rotation of the object is changed.
         
-        
         * @wearableOnly
         */
         ThreeDoF,
         /**
         * Both position and rotation of the object are changed.
-        
         
         * @wearableOnly
         */
@@ -13103,11 +14360,9 @@ declare namespace MotionController {
 }
 
 declare namespace MotionController {
-    /**
-    * Settings for configuring a motion controller.
-    */
     class Options {
         
+        /** @hidden */
         protected constructor()
         
     }
@@ -13153,7 +14408,6 @@ declare namespace MotionController {
     /**
     * Describes Motion Controller tracking quality state, whether the data received from the Motion Controller is accurate or not.
     
-    
     * @wearableOnly
     */
     enum TrackingQuality {
@@ -13172,7 +14426,6 @@ declare namespace MotionController {
         /**
         * Transform tracking of the Motion Controller is providing limited quality results.
         
-        
         * @wearableOnly
         */
         Limited
@@ -13189,11 +14442,11 @@ declare namespace MotionController {
 */
 declare class MotionControllerModule extends Asset {
     
+    /** @hidden */
     protected constructor()
     
     /**
-    * Get the Motion Controller with the provided options. If no options are provided, default value will be used. 
-    
+    * Get the Motion Controller with the provided options. If no options are provided, default value will be used.
     
     * @wearableOnly
     */
@@ -13206,6 +14459,7 @@ declare class MotionControllerModule extends Asset {
 */
 declare class MouthClosedEvent extends FaceTrackingEvent {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -13215,15 +14469,17 @@ declare class MouthClosedEvent extends FaceTrackingEvent {
 */
 declare class MouthOpenedEvent extends FaceTrackingEvent {
     
+    /** @hidden */
     protected constructor()
     
 }
 
 /**
-* An instance of a Connected Lens session among a group of participants who were successfully invited into the experience. 
+* An instance of a Connected Lens session among a group of participants who were successfully invited into the experience.
 */
 declare class MultiplayerSession extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -13233,12 +14489,11 @@ declare class MultiplayerSession extends ScriptObject {
     
     /**
     * Creates a realtime store to share data within a multiplayer session. The realtime store will allow you to pass data between multiple connected users in the same experience, such as: syncing the position of objects in the scene, syncing the current game score, etc.
-    
     */
     createRealtimeStore(options: RealtimeStoreCreateOptions, onSuccess: (store: GeneralDataStore) => void, onError: (message: string) => void): void
     
     /**
-    * Deletes a realtime store. 
+    * Deletes a realtime store.
     */
     deleteRealtimeStore(store: GeneralDataStore, onSuccess: (store: GeneralDataStore) => void, onError: (message: string) => void): void
     
@@ -13246,7 +14501,6 @@ declare class MultiplayerSession extends ScriptObject {
     
     /**
     * Gets information about the current user, which includes their display name and unique `userID` which can be used to identify them in session.
-    
     */
     getLocalUserInfo(localUserInfoCallback: (userInfo: ConnectedLensModule.UserInfo) => void): void
     
@@ -13260,6 +14514,13 @@ declare class MultiplayerSession extends ScriptObject {
     * `-1` will be returned if session is not connected to the server.
     */
     getServerTimestamp(): number
+    
+    /**
+    * Get the current Snapchat user in the session.
+    
+    * @wearableOnly
+    */
+    getSnapchatUser(userInfo: ConnectedLensModule.UserInfo, snapchatUserCallback: (snapchatUser: SnapchatUser) => void): void
     
     /**
     * Requests for ownership of the realtime store.
@@ -13278,7 +14539,6 @@ declare class MultiplayerSession extends ScriptObject {
     
     /**
     * Get the number of active users in the Session.
-    
     
     * @readonly
     */
@@ -13303,6 +14563,7 @@ declare class MultiplayerSession extends ScriptObject {
 */
 declare class NamedValues extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -13322,7 +14583,8 @@ declare class NamedValues extends ScriptObject {
 }
 
 /**
-* Tracking type used by the {@link DeviceTracking} component to specify what type of plane to detect. 
+* Tracking type used by the {@link DeviceTracking} component to specify what type of plane to detect.
+* When tracking planes, the {@link DeviceTracking} component must be set to `World` mode.
 */
 declare enum NativePlaneTrackingType {
     /**
@@ -13338,13 +14600,14 @@ declare enum NativePlaneTrackingType {
     */
     Vertical,
     /**
-    * Both horizontal and vertical planes will be detected. 
+    * Both horizontal and vertical planes will be detected.
     */
     Both
 }
 
 declare class NoiseReduction extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     process(inTensor: Float32Array, inShape: vec3, outTensor: Float32Array): vec3
@@ -13360,6 +14623,7 @@ declare class NoiseReduction extends ScriptObject {
 
 declare class NoiseReductionBuilder extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     build(): NoiseReduction
@@ -13373,6 +14637,7 @@ declare class NoiseReductionBuilder extends ScriptObject {
 */
 declare class Object3DAsset extends Asset {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -13387,6 +14652,7 @@ declare class Object3DAsset extends Asset {
 */
 declare class ObjectPrefab extends Asset {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -13403,10 +14669,11 @@ declare class ObjectPrefab extends Asset {
 }
 
 /**
-* Provides additional data for the tracked object. For example, with hand tracking, you can figure out whether the tracked hand is the left hand by accessing the `isLeft` property [true/false], as well as the probability of this data through the `isLeftProbability` property [0-1]. 
+* Provides additional data for the tracked object. For example, with hand tracking, you can figure out whether the tracked hand is the left hand by accessing the `isLeft` property [true/false], as well as the probability of this data through the `isLeftProbability` property [0-1].
 */
 declare class ObjectSpecificData extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -13417,11 +14684,12 @@ declare class ObjectSpecificData extends ScriptObject {
 * @remarks
 * Moves the local {@link ScreenTransform} to match the detected image.
 
-* @see [Object Tracking](https://developers.snap.com/lens-studio/features/ar-tracking/world/object-tracking) guide. 
+* @see [Object Tracking](https://developers.snap.com/lens-studio/features/ar-tracking/world/object-tracking) guide.
 * @see[Hand Gestures](https://developers.snap.com/lens-studio/features/ar-tracking/hand/hand-gestures) guide.
 */
 declare class ObjectTracking extends Component {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -13430,7 +14698,7 @@ declare class ObjectTracking extends Component {
     isTracking(): boolean
     
     /**
-    * Registers a callback to be executed when the passed in descriptor ends for this tracked object. For example, the possible descriptors for hand tracking are: "victory", "open", "index_finger", "horns", "close", "thumb". 
+    * Registers a callback to be executed when the passed in descriptor ends for this tracked object. For example, the possible descriptors for hand tracking are: "victory", "open", "index_finger", "horns", "close", "thumb".
     */
     registerDescriptorEnd(descriptor: string, callback: (descriptor: string) => void): void
     
@@ -13475,6 +14743,7 @@ declare class ObjectTracking extends Component {
 */
 declare class ObjectTracking3D extends Component {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -13520,7 +14789,7 @@ declare class ObjectTracking3D extends Component {
     objectIndex: number
     
     /**
-    * The data provided by the tracker on this component. 
+    * The data provided by the tracker on this component.
     
     * @see {@link SpectaclesHandSpecificData}
     
@@ -13580,6 +14849,7 @@ declare namespace ObjectTracking3D {
 
 declare class ObjectTrackingMaskedTextureProvider extends CropTextureProvider {
     
+    /** @hidden */
     protected constructor()
     
     objectIndex: number
@@ -13588,6 +14858,7 @@ declare class ObjectTrackingMaskedTextureProvider extends CropTextureProvider {
 
 declare class ObjectTrackingNormalsTextureProvider extends ObjectTrackingMaskedTextureProvider {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -13597,6 +14868,7 @@ declare class ObjectTrackingNormalsTextureProvider extends ObjectTrackingMaskedT
 */
 declare class ObjectTrackingTextureProvider extends ObjectTrackingMaskedTextureProvider {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -13606,6 +14878,7 @@ declare class ObjectTrackingTextureProvider extends ObjectTrackingMaskedTextureP
 */
 declare class OnAwakeEvent extends SceneEvent {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -13615,40 +14888,41 @@ declare class OnAwakeEvent extends SceneEvent {
 */
 declare class OnDestroyEvent extends SceneEvent {
     
+    /** @hidden */
     protected constructor()
     
 }
 
 /**
 * Triggered when the `ScriptComponent` this event is bound to is disabled.
-
 */
 declare class OnDisableEvent extends SceneEvent {
     
+    /** @hidden */
     protected constructor()
     
 }
 
 /**
 * Triggered when the `ScriptComponent` this event is bound to is enabled.
-
 */
 declare class OnEnableEvent extends SceneEvent {
     
+    /** @hidden */
     protected constructor()
     
 }
 
 /**
-* Triggered when users tap the menu button in Palm UI. 
+* Triggered when users tap the menu button in Palm UI.
 
 * When paused, certain behaviors like animations or script updates continue running in the background, while inputs (e.g., Hand Tracking, Mobile Controller) are disabled to allow the system overlay to take priority. Developers should manage scenarios where the Lens is paused to maintain a seamless experience.
-
 
 * @wearableOnly
 */
 declare class OnPauseEvent extends SceneEvent {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -13658,11 +14932,11 @@ declare class OnPauseEvent extends SceneEvent {
 
 * When paused, certain behaviors like animations or script updates continue running in the background, while inputs (e.g., Hand Tracking, Mobile Controller) are disabled to allow the system overlay to take priority. Developers should manage scenarios where the Lens is resumed after pause to maintain a seamless experience.
 
-
 * @wearableOnly
 */
 declare class OnResumeEvent extends SceneEvent {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -13672,6 +14946,7 @@ declare class OnResumeEvent extends SceneEvent {
 */
 declare class OnStartEvent extends SceneEvent {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -13704,6 +14979,7 @@ declare enum OS {
 */
 declare class OutlineSettings extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -13728,6 +15004,7 @@ declare class OutlineSettings extends ScriptObject {
 */
 declare class OutputBuilder extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -13763,6 +15040,7 @@ declare class OutputBuilder extends ScriptObject {
 */
 declare class OutputPlaceholder extends BasePlaceholder {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -13789,7 +15067,7 @@ declare class OutputPlaceholder extends BasePlaceholder {
 }
 
 /**
-* Exposes state generated for ColliderComponent overlap events. 
+* Exposes state generated for ColliderComponent overlap events.
 
 * @see {@link ColliderComponent}
 * @see {@link OverlapEnterEventArgs}
@@ -13798,6 +15076,7 @@ declare class OutputPlaceholder extends BasePlaceholder {
 */
 declare class Overlap extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -13817,10 +15096,11 @@ declare class Overlap extends ScriptObject {
 }
 
 /**
-* Args used for {@link ColliderComponent.onOverlapEnter}, which is triggered when the collider begins overlapping another object. Typically used for volume triggers.
+* Args used for {@link ColliderComponent.onOverlapEnter}, which is triggered when the collider begins overlapping another object. Typically used for volume triggers
 */
 declare class OverlapEnterEventArgs extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -13838,7 +15118,7 @@ declare class OverlapEnterEventArgs extends ScriptObject {
     currentOverlaps: Overlap[]
     
     /**
-    * Structure containing information about the current overlap.
+    *  Structure containing information about the current overlap.
     
     * @readonly
     */
@@ -13851,6 +15131,7 @@ declare class OverlapEnterEventArgs extends ScriptObject {
 */
 declare class OverlapExitEventArgs extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -13868,7 +15149,7 @@ declare class OverlapExitEventArgs extends ScriptObject {
     currentOverlaps: Overlap[]
     
     /**
-    * Structure containing information about the current overlap.
+    *  Structure containing information about the current overlap.
     
     * @readonly
     */
@@ -13881,6 +15162,7 @@ declare class OverlapExitEventArgs extends ScriptObject {
 */
 declare class OverlapStayEventArgs extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -13898,7 +15180,7 @@ declare class OverlapStayEventArgs extends ScriptObject {
     currentOverlaps: Overlap[]
     
     /**
-    * Structure containing information about the current overlap.
+    *  Structure containing information about the current overlap.
     
     * @readonly
     */
@@ -13913,6 +15195,7 @@ declare class OverlapStayEventArgs extends ScriptObject {
 */
 declare class PalmTapDownArgs extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -13933,6 +15216,7 @@ declare class PalmTapDownArgs extends ScriptObject {
 */
 declare class PalmTapUpArgs extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -13947,12 +15231,85 @@ declare class PalmTapUpArgs extends ScriptObject {
 }
 
 /**
+* Arguments used with the {@link InteractionComponent#onPanEnd} event.
+*/
+declare class PanEndEventArgs extends ScriptObject {
+    
+    /** @hidden */
+    protected constructor()
+    
+    /**
+    * All the normalized 2D screen position where the user lifted their touches at the end of a panning gesture. The normalized coordinates range from ([0-1], [0-1]), (0,0) being top-left and (1,1) being bottom-right.
+    
+    * @readonly
+    */
+    touches: vec2[]
+    
+    /**
+    * The change in position relative to initial position of gesture in normalized screen coordinates.
+    
+    * @readonly
+    */
+    translation: vec2
+    
+}
+
+/**
+* Arguments used with the {@link InteractionComponent#onPanMove} event.
+*/
+declare class PanMoveEventArgs extends ScriptObject {
+    
+    /** @hidden */
+    protected constructor()
+    
+    /**
+    * All the normalized 2D screen position where the user touches while panning. The normalized coordinates range from ([0-1], [0-1]), (0,0) being top-left and (1,1) being bottom-right.
+    
+    * @readonly
+    */
+    touches: vec2[]
+    
+    /**
+    * The change in position relative to initial position of gesture in normalized screen coordinates.
+    
+    * @readonly
+    */
+    translation: vec2
+    
+}
+
+/**
+* Arguments used with the {@link InteractionComponent#onPanStart} event.
+*/
+declare class PanStartEventArgs extends ScriptObject {
+    
+    /** @hidden */
+    protected constructor()
+    
+    /**
+    * All the normalized 2D screen position of the user's touches at the start of a panning gesture. The normalized coordinates range from ([0-1], [0-1]), (0,0) being top-left and (1,1) being bottom-right.
+    
+    * @readonly
+    */
+    touches: vec2[]
+    
+    /**
+    * The change in position relative to initial position of gesture in normalized screen coordinates.
+    
+    * @readonly
+    */
+    translation: vec2
+    
+}
+
+/**
 * Controls how a mesh will get rendered. Each Pass acts as an interface for the shader it's associated with.
 * Any properties on a Pass's shader will automatically become properties on that Pass.
 * For example, if the shader defines a variable named `baseColor`, a script would be able to access that property as `material.mainPass.baseColor`.
 */
 declare class Pass extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     [index:string]: any
@@ -14073,7 +15430,14 @@ declare class Pass extends ScriptObject {
 */
 declare class PassPropertyOverrides extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
+    
+    [index:string]: any
+    
+    baseTex: Texture
+    
+    baseColor: vec4
     
 }
 
@@ -14082,10 +15446,11 @@ declare class PassPropertyOverrides extends ScriptObject {
 */
 declare class PassWrapper extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
-    * The blend mode used for rendering. 
+    * The blend mode used for rendering.
     */
     blendMode: BlendMode
     
@@ -14130,7 +15495,7 @@ declare class PassWrapper extends ScriptObject {
     polygonOffset: vec2
     
     /**
-    * A proxy class that provides the access to the properties of the passes under the hood of {@link VFXAsset}. PassWrapper.samplers property which is tied to the Pass.samplers one. For example:  
+    * A proxy class that provides the access to the properties of the passes under the hood of {@link VFXAsset}. PassWrapper.samplers property which is tied to the Pass.samplers one. For example:
     * ```js
     * pass.samplers.texture_name.Fitering = FilteringMode.Nearest
     * ```
@@ -14151,6 +15516,7 @@ declare class PassWrapper extends ScriptObject {
 */
 declare class PassWrappers extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -14171,6 +15537,7 @@ declare class PassWrappers extends ScriptObject {
 */
 declare class PersistentStorageSystem extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -14185,6 +15552,7 @@ declare class PersistentStorageSystem extends ScriptObject {
 */
 declare class PersonTrackingScope extends TrackingScope {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -14193,7 +15561,7 @@ declare class PersonTrackingScope extends TrackingScope {
     parentScope: TextureTrackingScope
     
     /**
-    * The person to track. The first person is 0, the second is 1, and so on. 
+    * The person to track. The first person is 0, the second is 1, and so on.
     */
     personIndex: number
     
@@ -14204,6 +15572,7 @@ declare class PersonTrackingScope extends TrackingScope {
 */
 declare class Physics {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -14224,11 +15593,9 @@ declare class Physics {
 }
 
 declare namespace Physics {
-    /**
-    * Namespace containing static helper methods for {@link Constraint}.
-    */
     class Constraint {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -14267,6 +15634,7 @@ declare namespace Physics {
     */
     class Filter extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -14324,12 +15692,10 @@ declare namespace Physics {
         Force,
         /**
         * Continuous acceleration (cm/s^2), applied without respect to mass, used for cases where force is applied over multiple frames.
-        
         */
         Acceleration,
         /**
         * Instantaneous force impulse (kg*cm/s).
-        
         */
         Impulse,
         /**
@@ -14349,6 +15715,7 @@ declare namespace Physics {
     */
     class WorldSettingsAsset extends Asset {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -14363,7 +15730,6 @@ declare namespace Physics {
         
         /**
         * Given 2 layer numbers A and B, enables or disables collision between colliders in those layers. The layer numbers correspond to those used to form a `LayerSet` with `LayerSet.fromNumber()`. The relationship is symmetric, so if collision is disabled for (A, B), it is also disabled for (B, A). This accesses a flag in the "Layer Collision Matrix", as viewable in Studio. Note however that layer numbers are not the same as layer IDs. To get the number of a Studio-created layer, use LayerSet.numbers.
-        
         */
         setLayersCollidable(layerNumberA: number, layerNumberB: number, enable: boolean): void
         
@@ -14423,6 +15789,7 @@ declare namespace Physics {
 */
 declare class PinchDownArgs extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -14437,12 +15804,85 @@ declare class PinchDownArgs extends ScriptObject {
 }
 
 /**
+* Arguments used with the {@link InteractionComponent#onPinchEnd} event.
+*/
+declare class PinchEndEventArgs extends ScriptObject {
+    
+    /** @hidden */
+    protected constructor()
+    
+    /**
+    * Change in scale relative to initial span of gesture.
+    
+    * @readonly
+    */
+    scale: number
+    
+    /**
+    * All the normalized 2D screen position of the user's touches at the end of a pinch gesture. The normalized coordinates range from ([0-1], [0-1]), (0,0) being top-left and (1,1) being bottom-right.
+    
+    * @readonly
+    */
+    touches: vec2[]
+    
+}
+
+/**
+* Arguments used with the {@link InteractionComponent#onPinchMove} event.
+*/
+declare class PinchMoveEventArgs extends ScriptObject {
+    
+    /** @hidden */
+    protected constructor()
+    
+    /**
+    * Change in scale relative to initial span of gesture.
+    
+    * @readonly
+    */
+    scale: number
+    
+    /**
+    * All the normalized 2D screen position of the user's touches during a pinch gesture. The normalized coordinates range from ([0-1], [0-1]), (0,0) being top-left and (1,1) being bottom-right.
+    
+    * @readonly
+    */
+    touches: vec2[]
+    
+}
+
+/**
+* Arguments used with the {@link InteractionComponent#onPinchStart} event.
+*/
+declare class PinchStartEventArgs extends ScriptObject {
+    
+    /** @hidden */
+    protected constructor()
+    
+    /**
+    * Change in scale relative to initial span of gesture.
+    
+    * @readonly
+    */
+    scale: number
+    
+    /**
+    * All the normalized 2D screen position of the user's touches at the start of pa inch gesture. The normalized coordinates range from ([0-1], [0-1]), (0,0) being top-left and (1,1) being bottom-right.
+    
+    * @readonly
+    */
+    touches: vec2[]
+    
+}
+
+/**
 * The arguments of the PinchStrength event on `GestureModule`
 
 * @wearableOnly
 */
 declare class PinchStrengthArgs extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -14463,6 +15903,7 @@ declare class PinchStrengthArgs extends ScriptObject {
 */
 declare class PinchUpArgs extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -14483,6 +15924,7 @@ declare class PinchUpArgs extends ScriptObject {
 */
 declare class PinToMeshComponent extends Component {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -14547,6 +15989,7 @@ declare namespace PinToMeshComponent {
 
 declare class PitchShifter extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     process(inTensor: Float32Array, inShape: vec3, outTensor: Float32Array): vec3
@@ -14562,6 +16005,7 @@ declare class PitchShifter extends ScriptObject {
 
 declare class PitchShifterBuilder extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     build(): PitchShifter
@@ -14590,10 +16034,10 @@ declare enum PlaybackMode {
 
 /**
 * Represents 3D locations of stationary features in the environment. The resulting cloud of points provides a sparse description of the 3D environment.
-
 */
 declare class PointCloud extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -14626,6 +16070,7 @@ declare class PointCloud extends ScriptObject {
 */
 declare class PointConstraint extends Constraint {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -14635,6 +16080,7 @@ declare class PointConstraint extends Constraint {
 */
 declare class PositionEffect extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -14651,18 +16097,20 @@ declare class PositionEffect extends ScriptObject {
 */
 declare class PostEffectVisual extends MaterialMeshVisual {
     
+    /** @hidden */
     protected constructor()
     
 }
 
 /**
-* Performs collision tests (such as ray casts) in one or more world. 
+* Performs collision tests (such as ray casts) in one or more world.
 * @see {@link Physics.createGlobalProbe}
 * @see {@link Physics.createRootProbe}
 * @see {@link WorldComponent.createProbe}
 */
 declare class Probe extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -14712,6 +16160,7 @@ declare class Probe extends ScriptObject {
 */
 declare class ProceduralMeshRenderObjectProvider extends MeshRenderObjectProvider {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -14721,53 +16170,62 @@ declare class ProceduralMeshRenderObjectProvider extends MeshRenderObjectProvide
 */
 declare class ProceduralTextureProvider extends TextureProvider {
     
+    /** @hidden */
     protected constructor()
     
     /**
-    * Returns a Uint8 array containing the pixel values in a region of the texture. The region starts at the pixel coordinates x, y, and extends rightward by width and upward by height. Values returned are integers ranging from 0 to 255.
+    * Returns a Uint8 array containing the pixel values in a region of the texture. The region starts at the pixel coordinate x, y, and extends rightward by width and upward by height. Values returned are integers ranging from 0 to 255
     
     * @exposesUserData
     */
     getPixels(x: number, y: number, width: number, height: number, data: Uint8Array): void
     
     /**
-    * Sets a region of pixels on the texture. The region starts at the pixel coordinates x, y, and extends rightward by width and upward by height. Uses the values of the passed in Uint8Array data, which should be integer values ranging from 0 to 255.
+    * Returns a Float32 array containing the pixel values in a region of the texture. The region starts at the pixel coordinates x, y, and extends rightward by width and upward by height.
+    */
+    getPixelsFloat32(x: number, y: number, width: number, height: number, data: Float32Array): void
+    
+    /**
+    *  Sets a region of pixels on the texture. The region starts at the pixel coordinates x, y, and extends rightward by width and upward by height. Uses the values of the passed in Uint8Array data, which should be integer values ranging from 0 to 255.
+    
+    *  When used with `createWithFormat`, use `TextureFormat.RGBA8Unorm`. This is the corresponding format for Uint8Array.
     */
     setPixels(x: number, y: number, width: number, height: number, data: Uint8Array): void
     
     /**
-    * Creates a new, blank Texture Provider using the passed in dimensions and Colorspace. The ProceduralTextureProvider can be accessed through the control property on the returned texture.
+    * Sets a region of pixels on the texture. The region starts at the pixel coordinates x, y, and extends rightward by width and upward by height. Uses the values of the passed in Float32Array data.
     */
-    static create(width: number, height: number, colorspace: Colorspace): Texture
+    setPixelsFloat32(x: number, y: number, width: number, height: number, data: Float32Array): void
     
     /**
     * Creates a new Procedural Texture based on the passed in texture. The ProceduralTextureProvider can be accessed through the control property on the returned texture.
     */
     static createFromTexture(texture: Texture): Texture
     
+    /**
+    * Creates a new provider stored with the specified`format`.
+    */
+    static createWithFormat(width: number, height: number, format: TextureFormat): Texture
+    
 }
 
 /**
-* Declares the precise location tracking permission for your Lens project. 
+* Declares the precise location tracking permission for your Lens project.
 
 * @see [Permissions Overview](https://developers.snap.com/spectacles/permission-privacy/overview#list-of-permissions-types).
 * @see [Location](https://developers.snap.com/spectacles/about-spectacles-features/apis/location) guide for Spectacles.
-* @see {@link LocationService} 
+* @see {@link LocationService}
 */
 declare class ProcessedLocationModule extends Asset {
     
+    /** @hidden */
     protected constructor()
     
 }
 
 declare class Properties extends ScriptObject {
     
-    protected constructor()
-    
-}
-
-declare class PropertyOnEventArgs extends ScriptObject {
-    
+    /** @hidden */
     protected constructor()
     
 }
@@ -14777,6 +16235,7 @@ declare class PropertyOnEventArgs extends ScriptObject {
 */
 declare class PropertyOverrides extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -14785,13 +16244,29 @@ declare class PropertyOverrides extends ScriptObject {
 * Base class for all resource providers. Providers are the implementation for {@link Asset}.
 
 * @remarks
-* For example: {@link VideoTextureProvider} is the implementation for a {@link Texture} backed by a video file. 
+* For example: {@link VideoTextureProvider} is the implementation for a {@link Texture} backed by a video file.
 */
 declare class Provider extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     getLoadStatus(): LoadStatus
+    
+}
+
+/**
+* Texture Provider used as output from other systems, for instance SnapML.
+*/
+declare class ProxyTextureProvider extends TextureProvider {
+    
+    /** @hidden */
+    protected constructor()
+    
+    /**
+    * Returns a new Texture backed by an empty ProxyTextureProvider which can then be assigned to other Components and systems.
+    */
+    static create(): Texture
     
 }
 
@@ -14932,14 +16407,15 @@ declare class quat {
 }
 
 /**
-* Declares the coarse location tracking permission for your Lens project. 
+* Declares the coarse location tracking permission for your Lens project.
 
 * @see [Permissions Overview](https://developers.snap.com/spectacles/permission-privacy/overview#list-of-permissions-types).
 * @see [Location](https://developers.snap.com/spectacles/about-spectacles-features/apis/location) guide for Spectacles.
-* @see {@link LocationService} 
+* @see {@link LocationService}
 */
 declare class RawLocationModule extends Asset {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -14949,6 +16425,7 @@ declare class RawLocationModule extends Asset {
 */
 declare class RayCastHit extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -15005,13 +16482,13 @@ declare class RayCastHit extends ScriptObject {
 */
 declare class RealtimeStoreCreateOptions extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     allowOwnershipTakeOver: boolean
     
     /**
     * An existing store to be used as the initial values for the real time store.
-    
     */
     initialStore: GeneralDataStore
     
@@ -15032,7 +16509,6 @@ declare class RealtimeStoreCreateOptions extends ScriptObject {
     
     /**
     * Creates the realtime store options object.
-    
     */
     static create(): RealtimeStoreCreateOptions
     
@@ -15084,10 +16560,10 @@ declare namespace RealtimeStoreCreateOptions {
 * An axis aligned rectangle.
 * Used by `anchors` and `offsets` in {@link ScreenTransform} to represent screen boundaries.
 * Rect can only store finite numbers in the range Number.MIN_VALUE to Number.MAX_VALUE.
-
 */
 declare class Rect extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -15145,13 +16621,14 @@ declare class Rect extends ScriptObject {
 /**
 * Positions {@link ScreenTransform} according to a cropped region of a texture provided by {@link CropTextureProvider}.
 
-* @remarks 
+* @remarks
 * Used with Hand Segmentation texture and ML face effects.
 
 * @see [Crop Textures](https://developers.snap.com/lens-studio/features/snap-ml/ml-component/crop-textures) guide.
 */
 declare class RectangleSetter extends Component {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -15168,6 +16645,7 @@ declare class RectangleSetter extends Component {
 */
 declare class RectCropTextureProvider extends CropTextureProvider {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -15184,6 +16662,7 @@ declare class RectCropTextureProvider extends CropTextureProvider {
 
 declare class RemoteApiRequest extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     body: (Uint8Array|number[]|string)
@@ -15198,6 +16677,7 @@ declare class RemoteApiRequest extends ScriptObject {
 
 declare class RemoteApiResponse extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -15232,7 +16712,6 @@ declare class RemoteApiResponse extends ScriptObject {
     
     * All other values have undefined meaning and should be treated as internal error (code 10).
     
-    
     * @readonly
     */
     statusCode: number
@@ -15246,21 +16725,23 @@ declare class RemoteApiResponse extends ScriptObject {
 
 /**
 * Allows the Lens to download and integrate remote media content such as 3D GLTF assets, images, audio tracks, and video textures into Lenses.
-
-
 */
 declare class RemoteMediaModule extends Asset {
     
+    /** @hidden */
     protected constructor()
     
     /**
     * Downloads the remote image resource from the {@link DynamicResource} object and loads the resource as {@link AudioTrackAsset}.
     */
-    loadResourceAsAudioTrackAsset(resource: DynamicResource, onSuccess: (glTFAsset: AudioTrackAsset) => void, onFailure: (errorMessage: string) => void): void
+    loadResourceAsAudioTrackAsset(resource: DynamicResource, onSuccess: (audioTrackAsset: AudioTrackAsset) => void, onFailure: (errorMessage: string) => void): void
+    
+    loadResourceAsBytes(resource: DynamicResource, onSuccess: (bytes: Uint8Array) => void, onFailure: (errorMessage: string) => void): void
+    
+    loadResourceAsGaussianSplattingAsset(resource: DynamicResource, onSuccess: (gaussianSplattingAsset: GaussianSplattingAsset) => void, onFailure: (errorMessage: string) => void): void
     
     /**
     * Downloads a remote 3D GLTF file given a {@link DynamicResource}.
-    
     */
     loadResourceAsGltfAsset(resource: DynamicResource, onSuccess: (glTFAsset: GltfAsset) => void, onFailure: (errorMessage: string) => void): void
     
@@ -15268,6 +16749,13 @@ declare class RemoteMediaModule extends Asset {
     * Downloads the remote image resource from the {@link DynamicResource} object and loads the resource as an {@link Image} Texture.
     */
     loadResourceAsImageTexture(resource: DynamicResource, onSuccess: (texture: Texture) => void, onFailure: (errorMessage: string) => void): void
+    
+    /**
+    * Downloads the remote asset resource from the {@link DynamicResource} object and loads the resource as an {@link Asset}.
+    */
+    loadResourceAsRuntimeBundle(resource: DynamicResource, onSuccess: (asset: Asset) => void, onFailure: (errorMessage: string) => void): void
+    
+    loadResourceAsString(resource: DynamicResource, onSuccess: (string: string) => void, onFailure: (errorMessage: string) => void): void
     
     /**
     * Downloads the remote image resource from the {@link DynamicResource} object and loads the resource as a {@link VideoTextureProvider}.
@@ -15283,6 +16771,7 @@ declare class RemoteMediaModule extends Asset {
 */
 declare class RemoteReferenceAsset extends Asset {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -15301,6 +16790,7 @@ declare class RemoteReferenceAsset extends Asset {
 */
 declare class RemoteServiceHttpRequest extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -15417,7 +16907,15 @@ declare namespace RemoteServiceHttpRequest {
         
         * @CameraKit
         */
-        Delete
+        Delete,
+        /**
+        * Patch method.
+        
+        * @wearableOnly
+        
+        * @CameraKit
+        */
+        Patch
     }
 
 }
@@ -15431,6 +16929,7 @@ declare namespace RemoteServiceHttpRequest {
 */
 declare class RemoteServiceHttpResponse extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -15499,10 +16998,10 @@ declare class RemoteServiceHttpResponse extends ScriptObject {
 
 /**
 * Provides access to Snap authorized remote services.
-
 */
 declare class RemoteServiceModule extends Asset {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -15516,7 +17015,7 @@ declare class RemoteServiceModule extends Asset {
     
     * - `endpoint` Defines the Snap authorized remote service endpoint to which to establish the WebSocket connection.
     * - `params` Defines the parameters that will be used to establish the connection.
-    *     
+    
     * __Example__
     
     * ```js
@@ -15540,15 +17039,6 @@ declare class RemoteServiceModule extends Asset {
     */
     createAPIWebSocket(endpoint: string, params: any): WebSocket
     
-    /**
-    * Get a `DynamicResource` to be used with `RemoteMediaModule` from `mediaUrl`.
-    
-    * @wearableOnly
-    
-    * @CameraKit
-    */
-    makeResourceFromUrl(mediaUrl: string): DynamicResource
-    
     performApiRequest(request: RemoteApiRequest, onApiResponse: (response: RemoteApiResponse) => void): void
     
     subscribeApiRequest(request: RemoteApiRequest, onApiResponse: (response: RemoteApiResponse) => void): string
@@ -15562,6 +17052,7 @@ declare class RemoteServiceModule extends Asset {
 */
 declare class RenderMesh extends Asset {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -15629,6 +17120,7 @@ declare class RenderMesh extends Asset {
 */
 declare class RenderMeshVisual extends MaterialMeshVisual {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -15662,7 +17154,7 @@ declare class RenderMeshVisual extends MaterialMeshVisual {
     setSkin(value: Skin): void
     
     /**
-    *  Clears the blend shape with the matching name.
+    * Clears the blend shape with the matching name.
     */
     unsetBlendShapeWeight(name: string): void
     
@@ -15698,6 +17190,7 @@ declare class RenderMeshVisual extends MaterialMeshVisual {
 */
 declare class RenderObjectProvider extends Provider {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -15709,6 +17202,7 @@ declare class RenderObjectProvider extends Provider {
 */
 declare class RenderTargetProvider extends TextureProvider {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -15858,15 +17352,15 @@ declare class Request extends ScriptObject {
     /**
     * Construct a new Request. Takes a URL and an optional JSON object with options. Available options are `body`, `method`, `headers`, `redirect`, and `keepalive`.
     
-    * ```
-    * let request = new Request("https://<Your URL>.com", {
-    *     method: "POST",
-    *     body: JSON.stringify({ user: { name: "user", career: "developer" }}),
-    *     headers: {
-    *         "Content-Type": "application/json",
-    *     },
-    * });
-    * ```
+    *  ``\`
+    *   let request = new Request("https://<Your URL>.com", {
+    *      method: "POST",
+    *      body: JSON.stringify({ user: { name: "user", career: "developer" }}),
+    *      headers: {
+    *           "Content-Type": "application/json",
+    *      },
+    *   });
+    *  ``\`
     
     * @wearableOnly
     */
@@ -15912,7 +17406,7 @@ declare class Request extends ScriptObject {
     headers: Headers
     
     /**
-    * The HTTP request method. Must be one of these strings: `GET`, `POST`, `PUT`, or `DELETE`. Default is `GET`.
+    * The HTTP request method. Must be one of these strings: `GET`, `POST`, `PUT`, `DELETE`, or `PATCH`. Default is `GET`.
     
     * @readonly
     
@@ -15947,7 +17441,15 @@ declare class Request extends ScriptObject {
 */
 declare class Response extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
+    
+    /**
+    * Retrieve the body as a Blob.
+    
+    * @wearableOnly
+    */
+    blob(): Promise<Blob>
     
     /**
     * Retrieve the body as `Uint8Array`.
@@ -16033,6 +17535,7 @@ declare class Response extends ScriptObject {
 */
 declare class RetouchVisual extends MaterialMeshVisual {
     
+    /** @hidden */
     protected constructor()
     
     isAuto(): boolean
@@ -16083,7 +17586,7 @@ declare class RetouchVisual extends MaterialMeshVisual {
     teethWhiteningIntensity: number
     
     /**
-    * The tracking context this effect is being applied to. 
+    * The tracking context this effect is being applied to.
     */
     trackingScope: (PersonTrackingScope|TextureTrackingScope|FaceTrackingScope)
     
@@ -16092,16 +17595,18 @@ declare class RetouchVisual extends MaterialMeshVisual {
 /**
 * Texture Provider giving the camera texture that is the opposite of {@link CameraTextureProvider}. The provider will have {@link LoadStatus.Loading} until the camera feed is available. On some devices it will never be available. Use {@link DeviceInfoSystem#supportsDualCamera} to check the current device.
 
-* For example, if the `CameraTextureProvider` is providing the rear camera feed, `ReverseCameraTextureProvider` would provide the front camera feed. 
+* For example, if the `CameraTextureProvider` is providing the rear camera feed, `ReverseCameraTextureProvider` would provide the front camera feed.
 */
 declare class ReverseCameraTextureProvider extends TextureProvider {
     
+    /** @hidden */
     protected constructor()
     
 }
 
 declare class RotatedRect extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -16136,6 +17641,7 @@ declare class RotatedRect extends ScriptObject {
 */
 declare class RotationOptions extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -16147,6 +17653,7 @@ declare class RotationOptions extends ScriptObject {
 
 declare class Sampler extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -16156,6 +17663,7 @@ declare class Sampler extends ScriptObject {
 */
 declare class SamplerBuilder extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -16205,6 +17713,7 @@ declare class SamplerBuilder extends ScriptObject {
 */
 declare class SamplerWrapper extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -16242,13 +17751,13 @@ declare class SamplerWrapper extends ScriptObject {
 /**
 * A proxy class that provides the access to the properties of the sampler under the hood of the passes contained in the {@link Material} asset and {@link VFXAsset} via either VFXAsset's `PassWrapper.samplers` or Material's `Pass.samplers`. Each property returns a corresponding {@link SamplerWrapper}.
 
-* This class uses dynamic properties, meaning that its properties depend on the referenced material or vfx asset and thus not shown below. 
+* This class uses dynamic properties, meaning that its properties depend on the referenced material or vfx asset and thus not shown below.
 
-* In the example below, the material that is referenced in the material asset contains the `baseTex` property, which this class then provides access to. 
-
+* In the example below, the material that is referenced in the material asset contains the `baseTex` property, which this class then provides access to.
 */
 declare class SamplerWrappers extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -16262,6 +17771,7 @@ declare class SamplerWrappers extends ScriptObject {
 */
 declare class ScanModule extends Asset {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -16286,6 +17796,7 @@ declare namespace ScanModule {
     */
     class Contexts {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -16308,12 +17819,13 @@ declare namespace ScanModule {
 }
 
 /**
-* The base class for scenewide events. SceneEvents can be created using {@link ScriptComponent}'s {@link ScriptComponent#createEvent} method. 
+* The base class for scenewide events. SceneEvents can be created using {@link ScriptComponent}'s {@link ScriptComponent#createEvent} method.
 
 * @see [Script Events](https://developers.snap.com/lens-studio/features/scripting/script-events) guide.
 */
 declare class SceneEvent extends IEventParameters {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -16339,6 +17851,7 @@ declare class SceneEvent extends IEventParameters {
 */
 declare class SceneObject extends SerializableWithUID {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -16467,6 +17980,7 @@ declare class SceneObject extends SerializableWithUID {
 */
 declare class SceneObjectEvent extends SceneEvent {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -16483,6 +17997,7 @@ declare class SceneObjectEvent extends SceneEvent {
 */
 declare class ScreenRegionComponent extends Component {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -16523,6 +18038,7 @@ declare enum ScreenRegionType {
 */
 declare class ScreenTextureProvider extends TextureProvider {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -16530,26 +18046,25 @@ declare class ScreenTextureProvider extends TextureProvider {
 /**
 * Used for positioning objects in 2D screen space. Modifies the position, size, and anchoring of a rectangle relatively to a parent {@link ScreenTransform}.
 
-* @remarks 
+* @remarks
 * It overrides the regular {@link Transform} component on the {@link SceneObject} it's attached to.
 
 * @see [Screen Transform](https://developers.snap.com/lens-studio/lens-studio-workflow/scene-set-up/2d/screen-transform-overview) guide.
 */
 declare class ScreenTransform extends Component {
     
+    /** @hidden */
     protected constructor()
     
     /**
     * Returns true if the local point is within the boundaries of this ScreenTransform--that is: its position is within `-1` and `1` in both the x and y coordinates.
-    
     */
     containsLocalPoint(localPoint: vec2): boolean
     
     /**
     * Returns true if the screen position is within the boundaries of this ScreenTransform.
-    * Useful for checking if a touch event overlaps with this object. 
+    * Useful for checking if a touch event overlaps with this object.
     * This function will calculate the ScreenPoint by heuristically looking for a camera: first checking for a camera in it's parent's hierarchy, then looking for a camera with the same render layer, and finally just choosing the first camera in the scene.
-    
     */
     containsScreenPoint(screenPoint: vec2): boolean
     
@@ -16568,7 +18083,6 @@ declare class ScreenTransform extends Component {
     
     /**
     * Converts from a normalized (-1 to 1) position within this ScreenTransform's bounds to a screen position. This function will calculate the ScreenPoint by heuristically looking for a camera: first checking for a camera in it's parent's hierarchy, then looking for a camera with the same render layer, and finally just choosing the first camera in the scene.
-    
     */
     localPointToScreenPoint(relativeLocalPoint: vec2): vec2
     
@@ -16655,21 +18169,23 @@ declare class ScreenTransform extends Component {
 */
 declare class ScriptAsset extends Asset {
     
+    /** @hidden */
     protected constructor()
     
 }
 
 /**
-* Used to bind custom JavaScript or TypeScript code to specific Lens events for dynamic interactivity. 
+* Used to bind custom JavaScript or TypeScript code to specific Lens events for dynamic interactivity.
 
 * @remarks These Script Components are attached to SceneObjects, providing the ability to modify properties and behaviors of those objects or others within the scene. Script Components expose input fields in the Inspector panel, allowing for customization of script behavior without altering code. Any script can access the ScriptComponent executing them through the variable `script`.
 
-* @remarks 
+* @remarks
 * @see [Scripting Overview](https://developers.snap.com/lens-studio/essential-skills/scripting/script-overview).
 * @see [Script Events Guide](https://developers.snap.com/lens-studio/features/scripting/script-events).
 */
 declare class ScriptComponent extends Component {
     
+    /** @hidden */
     protected constructor()
     
     [index:string]: any
@@ -16691,6 +18207,7 @@ declare class ScriptComponent extends Component {
 */
 declare class ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -16715,6 +18232,7 @@ declare class ScriptObject {
 */
 declare class ScriptScene extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -16764,7 +18282,7 @@ declare class ScriptScene extends ScriptObject {
     captureTarget: Texture
     
     /**
-    * Returns true if the device supports Raytracing and Advanced Graphics Features is enabled in the project settings.
+    * Returns true if the device supports Ray Tracing and Advanced Graphics Features is enabled in the project settings.
     
     * @readonly
     */
@@ -16783,10 +18301,69 @@ declare class ScriptScene extends ScriptObject {
 }
 
 /**
+* Arguments used with the {@link InteractionComponent#onScrollEnd} event.
+*/
+declare class ScrollEndEventArgs extends ScriptObject {
+    
+    /** @hidden */
+    protected constructor()
+    
+    /**
+    * The normalized 2D screen position of the user's touches at the end of a scroll gesture. The normalized coordinates range from ([0-1], [0-1]), (0,0) being top-left and (1,1) being bottom-right.
+    
+    * @readonly
+    */
+    position: vec2
+    
+}
+
+/**
+* Arguments used with the {@link InteractionComponent#onScroll} event.
+*/
+declare class ScrollEventArgs extends ScriptObject {
+    
+    /** @hidden */
+    protected constructor()
+    
+    /**
+    * The delta value between the current and last position.
+    
+    * @readonly
+    */
+    delta: vec2
+    
+    /**
+    * The normalized 2D screen position of the user's touches during a scroll gesture. The normalized coordinates range from ([0-1], [0-1]), (0,0) being top-left and (1,1) being bottom-right.
+    
+    * @readonly
+    */
+    position: vec2
+    
+}
+
+/**
+* Arguments used with the {@link InteractionComponent#onScrollStart} event.
+*/
+declare class ScrollStartEventArgs extends ScriptObject {
+    
+    /** @hidden */
+    protected constructor()
+    
+    /**
+    * The normalized 2D screen position of the user's touches at the start of a scroll gesture. The normalized coordinates range from ([0-1], [0-1]), (0,0) being top-left and (1,1) being bottom-right.
+    
+    * @readonly
+    */
+    position: vec2
+    
+}
+
+/**
 * Segmentation model used for {@link SegmentationTextureProvider}.
 */
 declare class SegmentationModel extends BinAsset {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -16798,6 +18375,7 @@ declare class SegmentationModel extends BinAsset {
 */
 declare class SegmentationTextureProvider extends TextureProvider {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -16814,6 +18392,7 @@ declare class SegmentationTextureProvider extends TextureProvider {
 */
 declare class SelectEndEventArgs extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -16823,6 +18402,7 @@ declare class SelectEndEventArgs extends ScriptObject {
 */
 declare class SelectStartEventArgs extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -16832,6 +18412,7 @@ declare class SelectStartEventArgs extends ScriptObject {
 */
 declare class SerializableWithUID extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -16846,6 +18427,7 @@ declare class SerializableWithUID extends ScriptObject {
 */
 declare class Shape extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -16888,7 +18470,7 @@ declare class Shape extends ScriptObject {
 /**
 * Allows the creation of Shopping Lenses with an integrated Product Catalog.
 
-* @remarks 
+* @remarks
 * The ShoppingModule includes several input fields for you to define as you create your Shopping Lens. The fields include:
 
 **Domain:** name of the product line (e.g., Running Shoes).
@@ -16900,12 +18482,15 @@ declare class Shape extends ScriptObject {
 */
 declare class ShoppingModule extends Asset {
     
+    /** @hidden */
     protected constructor()
     
     /**
     * Returns the status of whether the module has loaded.
     */
     loadingStarted(): any
+    
+    selectProduct(index: number): void
     
     /**
     * The domain within this shopping module.
@@ -16928,6 +18513,11 @@ declare class ShoppingModule extends Asset {
     */
     onProductStateUpdate: event1<string, void>
     
+    /**
+    * @readonly
+    */
+    onProductsLoaded: event1<string, void>
+    
 }
 
 /**
@@ -16935,6 +18525,7 @@ declare class ShoppingModule extends Asset {
 */
 declare class Skin extends Component {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -16964,6 +18555,7 @@ declare class Skin extends Component {
 */
 declare class SmileFinishedEvent extends FaceTrackingEvent {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -16973,6 +18565,7 @@ declare class SmileFinishedEvent extends FaceTrackingEvent {
 */
 declare class SmileStartedEvent extends FaceTrackingEvent {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -16982,6 +18575,7 @@ declare class SmileStartedEvent extends FaceTrackingEvent {
 */
 declare class SnapchatFriendUserInfo {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -17001,10 +18595,11 @@ declare class SnapchatFriendUserInfo {
 }
 
 /**
-* Represents a Snapchat user in order to pass to other APIs or to retrieve certain details about the user like display name. 
+* Represents a Snapchat user in order to pass to other APIs or to retrieve certain details about the user like display name.
 */
 declare class SnapchatUser extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -17056,6 +18651,7 @@ declare class SnapchatUser extends ScriptObject {
 */
 declare class SnapchatUserBirthday {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -17080,7 +18676,23 @@ declare class SnapchatUserBirthday {
 */
 declare class SnapcodeMarkerProvider extends MarkerProvider {
     
+    /** @hidden */
     protected constructor()
+    
+}
+
+/**
+* A handle to add automatic tags like mention stickers to the Snap.
+*/
+declare class SnapData {
+    
+    /** @hidden */
+    protected constructor()
+    
+    /**
+    * If a Snap is taken, the passed in user will be included in a mention sticker. Pass in `null` to remove any previously assigned users.
+    */
+    static addUserMention(user: SnapchatUser): void
     
 }
 
@@ -17089,6 +18701,7 @@ declare class SnapcodeMarkerProvider extends MarkerProvider {
 */
 declare class SnapImageCaptureEvent extends SceneEvent {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -17098,6 +18711,7 @@ declare class SnapImageCaptureEvent extends SceneEvent {
 */
 declare class SnapRecordStartEvent extends SceneEvent {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -17107,6 +18721,7 @@ declare class SnapRecordStartEvent extends SceneEvent {
 */
 declare class SnapRecordStopEvent extends SceneEvent {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -17122,8 +18737,173 @@ declare enum SortOrder {
     Descending
 }
 
+/**
+* Represents beat synchronization data for a music track.
+*/
+declare class SoundSync extends ScriptObject {
+    
+    /** @hidden */
+    protected constructor()
+    
+    /**
+    * Timestamps of all beats in the music track in milliseconds.
+    
+    * @readonly
+    */
+    allBeatsTimestampMS: number[]
+    
+    /**
+    * The interval between consecutive beats in milliseconds.
+    
+    * @readonly
+    */
+    beatPeriodMS: number
+    
+    /**
+    * Tempo of the music track expressed as beats per minute (BPM).
+    
+    * @readonly
+    */
+    beatsPerMinute: number
+    
+    /**
+    * Timestamps of downbeats in milliseconds.
+    
+    * @readonly
+    */
+    downbeatsTimestampsMS: number[]
+    
+    /**
+    * Number of beats in each musical measure of this music track.
+    
+    * @readonly
+    */
+    numBeatsInMeasure: number
+    
+    /**
+    * Total duration of the track in seconds.
+    
+    * @readonly
+    */
+    trackDurationSeconds: number
+    
+}
+
+/**
+* Represents a single musical beat used to synchronize effects with music.
+*/
+declare class SoundSyncBeat extends ScriptObject {
+    
+    /** @hidden */
+    protected constructor()
+    
+    /**
+    * The position of this beat within its measure, starting with 1.
+    
+    * @readonly
+    */
+    beatIndex: number
+    
+    /**
+    * The time in seconds when this beat occurs in the music track.
+    
+    * @readonly
+    */
+    timestamp: number
+    
+}
+
+/**
+* Tracks music beats and provides events for beat occurrences and playback state changes.
+*/
+declare class SoundSyncTracker extends ScriptObject {
+    
+    /** @hidden */
+    protected constructor()
+    
+    /**
+    * The complete beat synchronization data for the current music track.
+    
+    * @readonly
+    */
+    fullSoundSync: SoundSync
+    
+    /**
+    * Indicates whether music is currently playing.
+    
+    * @readonly
+    */
+    isPlaying: boolean
+    
+    /**
+    * Event triggered when any beat occurs in the music.
+    
+    * @readonly
+    */
+    onBeat: event1<SoundSyncBeat, void>
+    
+    /**
+    * Event triggered when a down beat (first beat within a measure) occurs in the music.
+    
+    * @readonly
+    */
+    onDownBeat: event1<SoundSyncBeat, void>
+    
+    /**
+    * Event triggered when music playback is stopped or reset.
+    
+    * @readonly
+    */
+    onPlaybackReset: event0<void>
+    
+    /**
+    * Event triggered when music playback begins, providing information about the track.
+    
+    * @readonly
+    */
+    onPlaybackStarted: event1<ExternalMusicInfo, void>
+    
+    /**
+    * Event triggered when beat synchronization data becomes available for the track.
+    
+    * @readonly
+    */
+    onSoundSyncAvailable: event0<void>
+    
+    /**
+    * Event triggered when beat synchronization data is cleared, such as when changing tracks.
+    
+    * @readonly
+    */
+    onSoundSyncCleared: event0<void>
+    
+    /**
+    * Current playback position (in seconds) of the tracked music.
+    
+    * @readonly
+    */
+    playbackPosition: number
+    
+}
+
+/**
+* Provides access to the SourceMaps utilities that maps TypeScript to JavaScript.
+*/
+declare class SourceMaps {
+    
+    /** @hidden */
+    protected constructor()
+    
+    /**
+    * Applies the SourceMaps to the stack trace to map JavaScript to TypeScript.
+    */
+    static applyToStackTrace(trace: string): string
+    
+}
+
 declare class SpatialAudio extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -17159,7 +18939,121 @@ declare class SpatialAudio extends ScriptObject {
 */
 declare class SpectaclesHandSpecificData extends ObjectSpecificData {
     
+    /** @hidden */
     protected constructor()
+    
+}
+
+/**
+* SpectaclesMobileKitModule serves as the primary entry point for the Spectacles Mobile Kit, enabling interaction with
+* a specific mobile application, such as requesting data or receiving events.
+
+* ⚠️ Best Practice: Only one SpectaclesMobileKitModule should be used per Lens.
+
+* ⚠️ Privacy Note: Using SpectaclesMobileKitModule requires the `INTERNET` permission. By default, access to sensitive
+* data is restricted when a Lens uses internet-connected components. To enable access to both sensitive data and the
+* internet simultaneously, certain Experimental APIs must be activated through a feature called Extended Permissions.
+* Note that Lenses using Extended Permissions cannot be published.
+
+* @wearableOnly
+*/
+declare class SpectaclesMobileKitModule extends Asset {
+    
+    /** @hidden */
+    protected constructor()
+    
+    /**
+    * Creates a {@link SpectaclesMobileKitSession} instance. To begin interacting with your mobile application, a Lens
+    * must first start a session. Once the mobile application connects to the session, the Lens can start communicating
+    * with it.
+    
+    * @wearableOnly
+    */
+    createSession(): SpectaclesMobileKitSession
+    
+}
+
+/**
+* Spectacles Mobile Kit session allows you to initiate the connection to peer, and send data.
+
+* @wearableOnly
+*/
+declare class SpectaclesMobileKitSession extends ScriptObject {
+    
+    /** @hidden */
+    protected constructor()
+    
+    /**
+    * Disconnect and stop the session. Session object will be invalid after this call and will need to be re-created.
+    
+    * @wearableOnly
+    */
+    close(): void
+    
+    /**
+    * Use sendData() to send a one-way message to the connected mobile app. This is a fire-and-forget operation, no
+    * response is expected.
+    
+    * @wearableOnly
+    */
+    sendData(data: string): void
+    
+    /**
+    * Send a request expecting a response from the peer. Returns a promise with the response.
+    
+    * @wearableOnly
+    */
+    sendRequest(data: string): Promise<string>
+    
+    /**
+    * Initialize the session before interacting with the app. Ensure that all callbacks and events are configured prior
+    * to calling this method. This action creates the session and begins listening for incoming connections.
+    
+    * @wearableOnly
+    */
+    start(): void
+    
+    /**
+    * Start a subscription, multiple responses can be sent by the peer. Returns the subscription event. onError will be
+    * called if the subscription is cancelled by peer.
+    
+    * @wearableOnly
+    */
+    startSubscription(data: string, onError: (error: string) => void): event1<string, void>
+    
+    /**
+    * Stop the subscription.
+    
+    * @wearableOnly
+    */
+    stopSubscription(id: event1<string, void>): void
+    
+    /**
+    * True if were connected to the peer.
+    
+    * @readonly
+    
+    * @wearableOnly
+    */
+    isConnected: boolean
+    
+    /**
+    * Notified when the connection to the peer is established and ready.
+    
+    * @readonly
+    
+    * @wearableOnly
+    */
+    onConnected: event0<void>
+    
+    /**
+    * Triggered when the connection to the peer is severed. The session is no longer valid and must be re-created.
+    
+    * @readonly
+    
+    * @wearableOnly
+    */
+    onDisconnected: event0<void>
     
 }
 
@@ -17168,6 +19062,7 @@ declare class SpectaclesHandSpecificData extends ObjectSpecificData {
 */
 declare class Spectrogram extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -17189,6 +19084,7 @@ declare class Spectrogram extends ScriptObject {
 */
 declare class SpectrogramBuilder extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -17218,6 +19114,7 @@ declare class SpectrogramBuilder extends ScriptObject {
 */
 declare class SphereShape extends Shape {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -17228,38 +19125,11 @@ declare class SphereShape extends Shape {
 }
 
 /**
-* Used by {@link HairVisual} to visualize hair strands.
-*/
-declare class SplineComponent extends Component {
-    
-    protected constructor()
-    
-}
-
-/**
-* Represents transform data for deprecated SpriteVisual component. Use {@link ScreenTransform} in combination with {@link Image} component instead.
-*/
-declare class SpriteAligner extends Component {
-    
-    protected constructor()
-    
-    /**
-    * The location of the point this sprite is bound to.
-    */
-    bindingPoint: vec2
-    
-    /**
-    * The width and height of the SpriteVisual.
-    */
-    size: vec2
-    
-}
-
-/**
 * A state used in an {@link DomainInfo} used by a {@link ShoppingModule}.
 */
 declare class StateInfo {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -17393,6 +19263,7 @@ declare enum StencilOperation {
 */
 declare class StencilState extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -17447,6 +19318,7 @@ declare class StencilState extends ScriptObject {
 */
 declare class StorageOptions extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -17511,8 +19383,36 @@ declare enum StretchMode {
     FillAndCut
 }
 
+/**
+* A point in the {@link FaceStretchVisual} feature.
+*/
+declare class StretchPoint {
+    
+    /** @hidden */
+    protected constructor()
+    
+    /**
+    * The direction in which the stretch should occur.
+    */
+    delta: vec3
+    
+    /**
+    * The index of the stretch point
+    
+    * @readonly
+    */
+    index: number
+    
+    /**
+    * The strength of the stretch effect.
+    */
+    weight: number
+    
+}
+
 declare class Studio {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -17523,10 +19423,97 @@ declare class Studio {
 }
 
 /**
+* Provides access to Supabase authentication and database capabilities.
+
+* @wearableOnly
+*/
+declare class SupabaseModule extends Asset {
+    
+    /** @hidden */
+    protected constructor()
+    
+    /**
+    * Performs a request to any Supabase Project to replace InternetModule.fetch for supabase.
+    
+    * @wearableOnly
+    */
+    performSupabaseRequest(request: (Request|string), options?: any): Promise<Response>
+    
+}
+
+/**
+* Represents a Supabase project with configuration details.
+
+* @wearableOnly
+*/
+declare class SupabaseProject extends Asset {
+    
+    /** @hidden */
+    protected constructor()
+    
+    /**
+    * @readonly
+    
+    * @wearableOnly
+    */
+    id: string
+    
+    /**
+    * @readonly
+    
+    * @wearableOnly
+    */
+    name: string
+    
+    /**
+    * @readonly
+    
+    * @wearableOnly
+    */
+    publicToken: string
+    
+    /**
+    * @readonly
+    
+    * @wearableOnly
+    */
+    url: string
+    
+}
+
+/**
+* The classification of the surface at the position where the ray intersects with the environment.
+* This is used in {@link WorldQueryHitTestResult} to provide additional information about the surface type.
+
+* @experimental
+
+* @wearableOnly
+*/
+declare enum SurfaceClassification {
+    /**
+    * The detected surface could not be identified.
+    
+    * @experimental
+    
+    * @wearableOnly
+    */
+    None,
+    /**
+    * The detected surface is ground.
+    
+    * @experimental
+    
+    * @wearableOnly
+    */
+    Ground
+}
+
+/**
 * Used with {@link DeviceTracking#surfaceOptions} to change settings for Surface tracking mode.
 */
 declare class SurfaceOptions extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -17542,6 +19529,7 @@ declare class SurfaceOptions extends ScriptObject {
 */
 declare class SurfaceTrackingResetEvent extends SceneEvent {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -17563,7 +19551,7 @@ declare enum TangentType {
     */
     Broken,
     /**
-    * A slope defined by a linear tangent. 
+    * A slope defined by a linear tangent.
     */
     Linear,
     /**
@@ -17577,7 +19565,13 @@ declare enum TangentType {
 */
 declare class TapEvent extends SceneObjectEvent {
     
+    /** @hidden */
     protected constructor()
+    
+    /**
+    * Returns the normalized 2D screen position of the user's tap. The normalized coordinates range from ([0-1], [0-1]), (0,0) being top-left and (1,1) being bottom-right.
+    */
+    getTapPosition(): vec2
     
 }
 
@@ -17586,6 +19580,7 @@ declare class TapEvent extends SceneObjectEvent {
 */
 declare class TapEventArgs extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -17602,10 +19597,11 @@ declare class TapEventArgs extends ScriptObject {
 */
 declare class TargetingDataArgs extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
-    * Whether the hand intends to target. 
+    * Whether the hand intends to target.
     
     * @readonly
     
@@ -17647,6 +19643,7 @@ declare class TargetingDataArgs extends ScriptObject {
 */
 declare class TensorMath {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -17704,7 +19701,6 @@ declare class TensorMath {
     * var size = TensorMath.argSortMasked(inTensor, mask, outTensor, order); 
     * print(outTensor.subarray(size)); // Expected: [2, 1, 3, 0, 4]
     * ```
-    
     */
     static argSortMasked(inTensor: Float32Array, mask: Float32Array, outTensor: Uint32Array, order: SortOrder): number
     
@@ -17741,19 +19737,17 @@ declare class TensorMath {
     /**
     * Fills a convex polygon.
     */
-    static fillConvexPoly(imgTensor: Float32Array, imgShape: vec3, pointsTensor: any, pointsShape: vec3, color: vec4, lineType: number, shift: number): void
+    static fillConvexPoly(imgTensor: Float32Array, imgShape: vec3, pointsTensor: Int32Array, pointsShape: vec3, color: vec4, lineType: number, shift: number): void
     
     /**
     * Fills a polygon. Note that you should pass an Array of Int32Array-s (polygonsTensors).
-    
     */
-    static fillPoly(imgTensor: Float32Array, imgShape: vec3, polygonsTensors: any[], color: vec4, lineType: number, shift: number, offset: vec2): void
+    static fillPoly(imgTensor: Float32Array, imgShape: vec3, polygonsTensors: Int32Array[], color: vec4, lineType: number, shift: number, offset: vec2): void
     
     /**
     * Returns contours. Note that: contours are sorted from the largest to the smallest; 2) We cannot return Array of TypedArray-s, so all contours data is stored in single outTensor and Array with sizes of each contour is returned.
-    
     */
-    static findContours(inTensor: Uint8Array, inShape: vec3, mode: number, method: number, offset: vec2, outTensor: any): number[]
+    static findContours(inTensor: Uint8Array, inShape: vec3, mode: number, method: number, offset: vec2, outTensor: Int32Array): number[]
     
     /**
     * Finds minimum distances between each 2D point from one array, to 2D points in another array.
@@ -17854,7 +19848,6 @@ declare class TensorMath {
     
     /**
     * Return TensorMath's format of RotatedRect.
-    
     */
     static minAreaRect(inTensor: Float32Array, inShape: vec3): RotatedRect
     
@@ -18026,7 +20019,6 @@ declare class TensorMath {
     * `distortionCoeffShape` - {numElements, 1, 1} where numElements can be 4, 5, 8 or 12.
     
     * `useExtrinsicGuess` - The function uses the provided outRotTrans values as initial approximations of the rotation and translation vectors and further optimizes them.
-    
     */
     static solvePnPExtended(inObjectPoints: Float32Array, inImagePoints: Float32Array, imagePointsShape: vec3, cameraIntrinsicsMatrix: mat3, distortionCoeff: Float32Array, distortionCoeffShape: vec3, useExtrinsicGuess: boolean, flags: number, outRotTrans: Float32Array): boolean
     
@@ -18103,21 +20095,32 @@ declare namespace TensorMath {
 }
 
 /**
-* Renders 2D text with specific style and layout. 
+* Renders 2D text with specific style and layout.
 
-* @remarks 
-* Supports Dynamic Text. 
+* @remarks
+* Supports Dynamic Text.
 
 * @see [Text](https://developers.snap.com/lens-studio/features/text/2d-text) guide.
 */
 declare class Text extends BaseMeshVisual {
     
+    /** @hidden */
     protected constructor()
+    
+    /**
+    * Gets the bounding box encompassing the characters in the range from `start` to `end`. The range is inclusive of `start` and exclusive of `end`.
+    */
+    getBoundingBox(start?: number, end?: number): Rect
     
     /**
     * Settings for drawing a background behind the text.
     */
     backgroundSettings: BackgroundSettings
+    
+    /**
+    * How the text should be blended during rendering.
+    */
+    blendMode: BlendMode
     
     /**
     * Overrides the capitalization of the text rendered.
@@ -18151,7 +20154,6 @@ declare class Text extends BaseMeshVisual {
     
     /**
     * Controls how text should be handled when it goes past the horizontal boundaries defined by the world space rect or ScreenTransform.
-    
     */
     horizontalOverflow: HorizontalOverflow
     
@@ -18204,7 +20206,6 @@ declare class Text extends BaseMeshVisual {
     
     /**
     * If enabled, the rendered text will always scale to fit the boundaries defined by the world space rect or ScreenTransform.
-    
     */
     sizeToFit: boolean
     
@@ -18230,13 +20231,11 @@ declare class Text extends BaseMeshVisual {
     
     /**
     * Controls how text should be handled when it goes past the vertical boundaries defined by the world space rect or ScreenTransform.
-    
     */
     verticalOverflow: VerticalOverflow
     
     /**
     * Controls the boundaries the text is aligned and wraps within when not using ScreenTransform. Referred to as the Layout Rect in the Inspector panel.
-    
     */
     worldSpaceRect: Rect
     
@@ -18246,11 +20245,16 @@ declare class Text extends BaseMeshVisual {
 * Renders 3D text with specific style, layout and material.
 
 * @see [3D Text](https://developers.snap.com/lens-studio/features/text/3d-text) guide.
-
 */
 declare class Text3D extends MaterialMeshVisual {
     
+    /** @hidden */
     protected constructor()
+    
+    /**
+    * Gets the bounding box encompassing the characters in the range from `start` to `end`. The range is inclusive of `start` and exclusive of `end`.
+    */
+    getBoundingBox(start?: number, end?: number): Rect
     
     /**
     * Splits the Text3D into individual RenderMeshVisuals. This destroys the Text3D component and you can no longer edit its properties like text.
@@ -18289,7 +20293,6 @@ declare class Text3D extends MaterialMeshVisual {
     
     /**
     * Controls how text should be handled when it goes past the horizontal boundaries defined by the world space rect or ScreenTransform.
-    
     */
     horizontalOverflow: HorizontalOverflow
     
@@ -18336,7 +20339,6 @@ declare class Text3D extends MaterialMeshVisual {
     
     /**
     * If enabled, the rendered text will always scale to fit the boundaries defined by the world space rect or ScreenTransform.
-    
     */
     sizeToFit: boolean
     
@@ -18352,13 +20354,11 @@ declare class Text3D extends MaterialMeshVisual {
     
     /**
     * Controls how text should be handled when it goes past the vertical boundaries defined by the world space rect or ScreenTransform.
-    
     */
     verticalOverflow: VerticalOverflow
     
     /**
     * Controls the boundaries the text is aligned and wraps within when not using ScreenTransform. Referred to as the Layout Rect in the Inspector panel.
-    
     */
     worldSpaceRect: Rect
     
@@ -18418,18 +20418,24 @@ declare class TextEncoder extends ScriptObject {
 /**
 * Fill settings used by several text related classes.
 
-* Used in {@link Text}'s `textFill` property, 
-* {@link DropshadowSettings}' `fill` property, and 
+* Used in {@link Text}'s `textFill` property,
+* {@link DropshadowSettings}' `fill` property, and
 * {@link OutlineSettings}' `fill` property.
 */
 declare class TextFill extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
     * If `mode` is set to `TextFillMode.Solid`, this will be used as the solid color used in drawing.
     */
     color: vec4
+    
+    /**
+    * If `mode` is set to `TextFillMode.Texture`, this will be used as the color tint over the texture.
+    */
+    colorTint: vec4
     
     /**
     * Controls which drawing method is used. Can switch between `Texture` mode (for drawing using a tiled texture) or `Solid` mode (for drawing a solid color).
@@ -18474,20 +20480,21 @@ declare enum TextFillMode {
 }
 
 /**
-* Declares the Input Framework (Text) permission for your Lens project. 
-
+* Declares the Input Framework (Text) permission for your Lens project.
 */
 declare class TextInputModule extends Asset {
     
+    /** @hidden */
     protected constructor()
     
 }
 
 /**
-* Provides access to the device's input system. Accessible through `global.textInputSystem`. 
+* Provides access to the device's input system. Accessible through `global.textInputSystem`.
 */
 declare class TextInputSystem extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -18597,7 +20604,11 @@ declare namespace TextInputSystem {
         
         * @wearableOnly
         */
-        Password
+        Password,
+        /**
+        * @wearableOnly
+        */
+        Pin
     }
 
 }
@@ -18641,6 +20652,7 @@ declare namespace TextInputSystem {
 */
 declare class TextProvider extends TextureProvider {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -18697,6 +20709,7 @@ declare class TextProvider extends TextureProvider {
 
 declare class TextToSpeech {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -18707,6 +20720,7 @@ declare namespace TextToSpeech {
     */
     class Options extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -18729,6 +20743,7 @@ declare namespace TextToSpeech {
     */
     class PhonemeInfo extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -18769,6 +20784,7 @@ declare namespace TextToSpeech {
     */
     class VoiceNames {
         
+        /** @hidden */
         protected constructor()
         
     }
@@ -18777,28 +20793,29 @@ declare namespace TextToSpeech {
 
 declare namespace TextToSpeech {
     /**
-    * Parameter returned in the `onTTSCompleteHandler` callback providing timing details for word pronunciation. 
+    * Parameter returned in the `onTTSCompleteHandler` callback providing timing details for word pronunciation.
     */
     class WordInfo extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
-        * The time in milliseconds when the word ended in the audio. 
+        * The time in milliseconds when the word ended in the audio.
         
         * @readonly
         */
         endTime: number
         
         /**
-        * The time in milliseconds when the word started in the audio. 
+        * The time in milliseconds when the word started in the audio.
         
         * @readonly
         */
         startTime: number
         
         /**
-        * The words the synthesized audio was generated for (as text might be expanded during the synthesize process, there might be a slight variation between the input text and the words returned). 
+        * The words the synthesized audio was generated for (as text might be expanded during the synthesize process, there might be a slight variation between the input text and the words returned).
         
         * @readonly
         */
@@ -18813,25 +20830,26 @@ declare namespace TextToSpeech {
 
 * @remarks
 
-* You can use only one `TextToSpeechModule` in a Lens. However, its methods can be called multiple times in parallel if needed. 
+* You can use only one `TextToSpeechModule` in a Lens. However, its methods can be called multiple times in parallel if needed.
 
 * @see {@link TextToSpeech.Options}
 * @see [Text To Speech](https://developers.snap.com/lens-studio/features/voice-ml/text-to-speech) guide.
 */
 declare class TextToSpeechModule extends Asset {
     
+    /** @hidden */
     protected constructor()
     
     /**
-    * Generates speech {@link AudioTrackAsset} of a given text. 
+    * Generates speech {@link AudioTrackAsset} of a given text.
     
-    * `Input` should be the text to synthesize (Currently supports text in English only. Non English characters will be stripped). 
-    * `Options` should be a {@link TextToSpeech.Options}. 
-    * `onTTsComplete` should be a callback function which will be called once the audio generation is completed. 
+    * `Input` should be the text to synthesize (Currently supports text in English only. Non English characters will be stripped).
+    * `Options` should be a {@link TextToSpeech.Options}.
+    * `onTTsComplete` should be a callback function which will be called once the audio generation is completed.
     
-    * The callback will receive two parameters: the generated audio file ({@link AudioTrackAsset}) and maps of word/timing ({@link TextToSpeech.WordInfo}). 
+    * The callback will receive two parameters: the generated audio file ({@link AudioTrackAsset}) and maps of word/timing ({@link TextToSpeech.WordInfo}).
     
-    * `onTTSError` should be a callback function which will be called if there is an error. This callback will receive a message of the error code and its description. 
+    * `onTTSError` should be a callback function which will be called if there is an error. This callback will receive a message of the error code and its description.
     */
     synthesize(input: string, options: TextToSpeech.Options, onTTSComplete: (audioTrackAsset: AudioTrackAsset, wordInfo: TextToSpeech.WordInfo[], phonemeInfo: TextToSpeech.PhonemeInfo[], voiceStyle: any) => void, onTTSError: (error: number, description: string) => void): void
     
@@ -18842,6 +20860,7 @@ declare class TextToSpeechModule extends Asset {
 */
 declare class Texture extends Asset {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -18850,14 +20869,11 @@ declare class Texture extends Asset {
     copyFrame(): Texture
     
     /**
-    * Creates a marker asset from the texture. 
+    * Creates a marker asset from the texture.
     */
     createMarkerAsset(): MarkerAsset
     
-    /**
-    * Returns the Colorspace of the Texture.
-    */
-    getColorspace(): Colorspace
+    getFormat(): TextureFormat
     
     /**
     * Returns the height of the texture.
@@ -18877,10 +20893,49 @@ declare class Texture extends Asset {
     
 }
 
-declare class TextureFormat {
-    
-    protected constructor()
-    
+declare enum TextureFormat {
+    R8Unorm,
+    RG8Unorm,
+    RGB8Unorm,
+    RGBA8Unorm,
+    R16Unorm,
+    RG16Unorm,
+    RGBA16Unorm,
+    R8Snorm,
+    RG8Snorm,
+    RGBA8Snorm,
+    R16Snorm,
+    RG16Snorm,
+    RGBA16Snorm,
+    R8Uint,
+    RG8Uint,
+    RGBA8Uint,
+    R16Uint,
+    RG16Uint,
+    RGBA16Uint,
+    R32Uint,
+    RG32Uint,
+    RGBA32Uint,
+    R8Sint,
+    RG8Sint,
+    RGBA8Sint,
+    R16Sint,
+    RG16Sint,
+    RGBA16Sint,
+    R32Sint,
+    RG32Sint,
+    RGBA32Sint,
+    R16Float,
+    RG16Float,
+    RGBA16Float,
+    R32Float,
+    RG32Float,
+    RGBA32Float,
+    BGRA8Unorm,
+    RGBA8Srgb,
+    RGB10A2Unorm,
+    RGB10A2Uint,
+    RG11B10Float
 }
 
 /**
@@ -18888,6 +20943,7 @@ declare class TextureFormat {
 */
 declare class TextureProvider extends Provider {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -18908,10 +20964,11 @@ declare class TextureProvider extends Provider {
 }
 
 /**
-* Provides a {@link Texture} to do face tracking on for entities like {@link Head}, {@link FaceStretch}, and {@link FaceMesh}. 
+* Provides a {@link Texture} to do face tracking on for entities like {@link Head}, {@link FaceStretch}, and {@link FaceMesh}.
 */
 declare class TextureTrackingScope extends TrackingScope {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -18958,6 +21015,7 @@ declare enum TileZone {
 */
 declare class TouchDataProvider extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -18987,6 +21045,7 @@ declare class TouchDataProvider extends ScriptObject {
 */
 declare class TouchEndEvent extends SceneObjectEvent {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -19004,6 +21063,7 @@ declare class TouchEndEvent extends SceneObjectEvent {
 
 declare class TouchEndEventArgs extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -19027,6 +21087,7 @@ declare class TouchEndEventArgs extends ScriptObject {
 */
 declare class TouchMoveEvent extends SceneObjectEvent {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -19047,6 +21108,7 @@ declare class TouchMoveEvent extends SceneObjectEvent {
 */
 declare class TouchMoveEventArgs extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -19070,6 +21132,7 @@ declare class TouchMoveEventArgs extends ScriptObject {
 */
 declare class TouchStartEvent extends SceneObjectEvent {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -19090,6 +21153,7 @@ declare class TouchStartEvent extends SceneObjectEvent {
 */
 declare class TouchStartEventArgs extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -19120,6 +21184,7 @@ declare enum TouchState {
 */
 declare class TrackedMesh extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -19181,6 +21246,7 @@ declare enum TrackedMeshFaceClassification {
 */
 declare class TrackedMeshHistogramResult extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -19214,10 +21280,11 @@ declare class TrackedMeshHistogramResult extends ScriptObject {
 */
 declare class TrackedMeshHitTestResult extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
-    * Returns the classification of the mesh face at the intersection point. 
+    * Returns the classification of the mesh face at the intersection point.
     
     * @readonly
     */
@@ -19251,6 +21318,7 @@ declare class TrackedMeshHitTestResult extends ScriptObject {
 */
 declare class TrackedPlane extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -19269,7 +21337,6 @@ declare class TrackedPlane extends ScriptObject {
     
     /**
     * Returns the orientation of the detected plane, either vertical or horizontal.
-    
     
     * @readonly
     */
@@ -19308,6 +21375,7 @@ declare enum TrackedPlaneOrientation {
 */
 declare class TrackedPoint extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -19331,6 +21399,7 @@ declare class TrackedPoint extends ScriptObject {
 */
 declare class TrackedPointComponent extends Component {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -19352,6 +21421,7 @@ declare class TrackedPointComponent extends Component {
 */
 declare class TrackingScope extends Asset {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -19361,6 +21431,7 @@ declare class TrackingScope extends Asset {
 */
 declare class Transform extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -19504,6 +21575,7 @@ declare class Transform extends ScriptObject {
 */
 declare class Transformer extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -19527,6 +21599,7 @@ declare class Transformer extends ScriptObject {
 */
 declare class TransformerBuilder extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -19598,11 +21671,11 @@ declare enum TransformerRotation {
 */
 declare class TriangleHit extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
     * Barycentric coordinate of the hit on the triangle. This is used to interpolate values over the triangle surface. Essentially, these are weights for each of the 3 triangle vertices. For example, you can compute the hit position from vertex positions as: (V0\*b0 + V1\*b1 + V2\*b2). We already have the hit position in RayCastHit, but 'V' can be any interpolated value, such as color or texture coordinate.
-    
     
     * @readonly
     */
@@ -19643,6 +21716,7 @@ declare class TriangleHit extends ScriptObject {
 */
 declare class TriggerPrimaryEvent extends SceneObjectEvent {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -19657,6 +21731,7 @@ declare class TriggerPrimaryEvent extends SceneObjectEvent {
 */
 declare class TriggerPrimaryEventArgs extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -19666,6 +21741,7 @@ declare class TriggerPrimaryEventArgs extends ScriptObject {
 */
 declare class TurnOffEvent extends SceneEvent {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -19675,6 +21751,7 @@ declare class TurnOffEvent extends SceneEvent {
 */
 declare class UpdateEvent extends SceneEvent {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -19689,6 +21766,7 @@ declare class UpdateEvent extends SceneEvent {
 */
 declare class UpperBodyRenderObjectProvider extends MeshRenderObjectProvider {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -19699,16 +21777,16 @@ declare class UpperBodyRenderObjectProvider extends MeshRenderObjectProvider {
 }
 
 /**
-* Configures 3D Upper Body Tracking for the {@link ObjectTracking3D} component. 
+* Configures 3D Upper Body Tracking for the {@link ObjectTracking3D} component.
 
 * @remarks
 * It is optimized to track with the face and in selfie use cases.
 
 * @see [Upper Body Tracking](https://developers.snap.com/lens-studio/features/ar-tracking/body/upper-body-tracking) guide.
-
 */
 declare class UpperBodyTrackingAsset extends Object3DAsset {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -19722,6 +21800,7 @@ declare class UpperBodyTrackingAsset extends Object3DAsset {
 */
 declare class UserContextSystem extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -19760,7 +21839,7 @@ declare class UserContextSystem extends ScriptObject {
     getPinnedBestFriends(callback: (data: SnapchatUser[]) => void): void
     
     /**
-    * Gets the list of friends in the current context, such as 1:1 chats, 1:many chats, and group chats. 
+    * Gets the list of friends in the current context, such as 1:1 chats, 1:many chats, and group chats.
     
     * @exposesUserData
     */
@@ -19846,6 +21925,7 @@ declare class UserContextSystem extends ScriptObject {
 */
 declare class Utf8 {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -19863,7 +21943,6 @@ declare class Utf8 {
 /**
 * A two dimensional vector.
 * Vectors can only store finite numbers in the range Number.MIN_VALUE to Number.MAX_VALUE.
-
 */
 declare class vec2 {
     /**
@@ -20044,9 +22123,8 @@ declare class vec2 {
 }
 
 /**
-* A three dimensional vector. 
+* A three dimensional vector.
 * Vectors can only store finite numbers in the range Number.MIN_VALUE to Number.MAX_VALUE.
-
 */
 declare class vec3 {
     /**
@@ -20060,7 +22138,7 @@ declare class vec3 {
     add(vec: vec3): vec3
     
     /**
-    * Returns the angle in radians between the vector and `vec`.
+    * Returns the angle between the vector and `vec`.
     */
     angleTo(vec: vec3): number
     
@@ -20137,7 +22215,6 @@ declare class vec3 {
     * If `step` is negative, this rotates the source vector away from `target`. It stops when the direction is precisely opposite to `target`.
     * If the vectors are in opposite directions, the result is rotated along an arbitrary (but consistent) axis.
     * If either vector is zero magnitude, it returns the source vector.
-    
     */
     rotateTowards(target: vec3, step: number): vec3
     
@@ -20276,7 +22353,6 @@ declare class vec3 {
 /**
 * A four dimensional vector.
 * Vectors can only store finite numbers in the range Number.MIN_VALUE to Number.MAX_VALUE.
-
 */
 declare class vec4 {
     /**
@@ -20512,6 +22588,7 @@ declare class vec4b {
 */
 declare class VertexCache extends Component {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -20531,6 +22608,7 @@ declare class VertexCache extends Component {
 */
 declare class VertexSimulationSettings extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -20613,15 +22691,18 @@ declare enum VerticalOverflow {
 }
 
 /**
-* Defines a VFX to use with {@link VFXComponent}. 
+* Defines a VFX to use with {@link VFXComponent}.
 * @see [VFX](https://developers.snap.com/lens-studio/learning-lens-studio/graphics/particles/vfx-editor/introduction-and-concepts) guide.
 */
 declare class VFXAsset extends Asset {
     
+    /** @hidden */
     protected constructor()
     
+    [index:string]: any
+    
     /**
-    * Clones the VFX asset and returns a copy. 
+    * Clones the VFX asset and returns a copy.
     */
     clone(): VFXAsset
     
@@ -20650,7 +22731,7 @@ declare class VFXAsset extends Asset {
     outputs: PassWrappers
     
     /**
-    * A multiplier on the delta time for this VFX Asset. If `useFixedDeltaTime` is true, `Component Time += fixedDeltaTime * playRate`, otherwise `Component Time += fixedDeltaTime * playRate`. 
+    * A multiplier on the delta time for this VFX Asset. If `useFixedDeltaTime` is true, `Component Time += fixedDeltaTime * playRate`, otherwise `Component Time += fixedDeltaTime * playRate`.
     */
     playRate: number
     
@@ -20680,6 +22761,7 @@ declare class VFXAsset extends Asset {
 */
 declare class VFXComponent extends BaseMeshVisual {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -20704,7 +22786,6 @@ declare class VFXComponent extends BaseMeshVisual {
     
     /**
     * Enables or disables emission logic for emitters on this component.
-    
     */
     emitting: boolean
     
@@ -20713,6 +22794,64 @@ declare class VFXComponent extends BaseMeshVisual {
     */
     paused: boolean
     
+}
+
+/**
+* Allows you to record a new texture (i.e video), based on on another texture.
+*/
+declare class VideoRecorder extends ScriptObject {
+    
+    /** @hidden */
+    protected constructor()
+    
+    /**
+    * Cancels any ongoing recording and discards what has been recorded so far.
+    */
+    cancelRecording(): void
+    
+    /**
+    * Starts to record the target texture on the next frame.
+    */
+    startRecording(): void
+    
+    /**
+    * Stops recording and returns a Promise which will be fulfilled with a Texture containing a VideoTextureProvider that is the recorded data.
+    */
+    stopRecording(): Promise<Texture>
+    
+    /**
+    * Create a VideoRecorder instance given Options. Options cannot be changed afterwards.
+    */
+    static create(options: VideoRecorder.Options): VideoRecorder
+    
+}
+
+declare namespace VideoRecorder {
+    /**
+    * Configuration options for {@link VideoRecorder}.
+    */
+    class Options {
+        constructor(sourceTexture: Texture)
+        
+        /**
+        * Whether to also save the first recorded frame as a still image to use as a placeholder when the VideoTextureProvider is not playing.
+        */
+        saveThumbnail: boolean
+        
+        /**
+        * Read back the Texture used to construct the Options.
+        
+        * @readonly
+        */
+        sourceTexture: Texture
+        
+        /**
+        * A scalar on the resolution of the input Texture to the video. Can be used to scale down a large Texture during recording to avoid extra overhead.
+        */
+        textureScale: number
+        
+    }
+
 }
 
 /**
@@ -20742,6 +22881,7 @@ declare enum VideoStatus {
 */
 declare class VideoTextureProvider extends TextureProvider {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -20820,7 +22960,6 @@ declare class VideoTextureProvider extends TextureProvider {
     
     /**
     * The playback rate of the video. The rate is set when starting playback, meaning that updates to this property does not take effect until the video is stopped and started again. Defaults to 1.
-    
     */
     playbackRate: number
     
@@ -20857,10 +22996,10 @@ declare class VideoTextureProvider extends TextureProvider {
 
 /**
 * Base class for all visual Components.
-
 */
 declare class Visual extends Component {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -20873,20 +23012,27 @@ declare class Visual extends Component {
     */
     setRenderOrder(value: number): void
     
+    /**
+    * The order in which the visual should be rendered.
+    */
+    renderOrder: number
+    
 }
 
 declare class VoiceML {
     
+    /** @hidden */
     protected constructor()
     
 }
 
 declare namespace VoiceML {
     /**
-    * Additional parameters are used to provide additional data for NlpModels and NlpResponses. 
+    * Additional parameters are used to provide additional data for NlpModels and NlpResponses.
     */
     class AdditionalParam extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -20915,6 +23061,7 @@ declare namespace VoiceML {
     */
     class BaseNlpModel extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -20932,6 +23079,7 @@ declare namespace VoiceML {
     */
     class BaseNlpResponse extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -20942,14 +23090,14 @@ declare namespace VoiceML {
         additionalParams: VoiceML.AdditionalParam[]
         
         /**
-        * Name of the model that sent the response.  In current studio release, you can expect the result to contain either  `VOICE_ENABLED_UI` like described in {@link VoiceML.NlpIntentModel}.  If using `enableSystemCommands()`, `SYSTEM_COMMANDS` will be returned as well. 
+        * Name of the model that sent the response.  In current studio release, you can expect the result to contain either  `VOICE_ENABLED_UI` like described in {@link VoiceML.NlpIntentModel}.  If using `enableSystemCommands()`, `SYSTEM_COMMANDS` will be returned as well.
         
         * @readonly
         */
         modelName: string
         
         /**
-        * The status of the NLP response. in case of successful result, the value should be `VoiceMLModule.NlpResponsesStatusCodes.OK`, in case of failure, the value should be `VoiceMLModule.NlpResponsesStatusCodes.ERROR`. 
+        * The status of the NLP response. in case of successful result, the value should be `VoiceMLModule.NlpResponsesStatusCodes.OK`, in case of failure, the value should be `VoiceMLModule.NlpResponsesStatusCodes.ERROR`.
         
         * @readonly
         */
@@ -20961,21 +23109,22 @@ declare namespace VoiceML {
 
 declare namespace VoiceML {
     /**
-    * An NLP model used to detect keywords in the transcript of the input audio.  For example, you can have keyword detection which will trigger every time the word "red" is said, and another trigger for the word "yellow". 
+    * An NLP model used to detect keywords in the transcript of the input audio.  For example, you can have keyword detection which will trigger every time the word "red" is said, and another trigger for the word "yellow".
     */
     class KeywordModelGroup extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
-        * Array of keywords that are being sent to the ML model for detection with similar meaning. For example, putting the word "yellow" would trigger a response in the sentence "I saw a yellow bird". The keyword detection model supports slight variation in the word transcription. We recommend adding possible synonyms of the same keyword. So for example, should you want to detect "movie", you might want to consider adding "video" and possibly "feature" and "flick" as well to the list resulting in `["movie", "video", "feature","flick"]` as different people might express themselves differently.  
+        * Array of keywords that are being sent to the ML model for detection with similar meaning. For example, putting the word "yellow" would trigger a response in the sentence "I saw a yellow bird". The keyword detection model supports slight variation in the word transcription. We recommend adding possible synonyms of the same keyword. So for example, should you want to detect "movie", you might want to consider adding "video" and possibly "feature" and "flick" as well to the list resulting in `["movie", "video", "feature","flick"]` as different people might express themselves differently.
         
         * @readonly
         */
         keywords: string[]
         
         /**
-        * Name of the keyword group. 
+        * Name of the keyword group.
         
         * @readonly
         */
@@ -20987,21 +23136,22 @@ declare namespace VoiceML {
 
 declare namespace VoiceML {
     /**
-    * ListeningErrorEventArgs object returns in onListeningError callback. It contains the error code and description of the error. 
+    * ListeningErrorEventArgs object returns in onListeningError callback. It contains the error code and description of the error.
     */
     class ListeningErrorEventArgs extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
-        * Returns the description of the error. 
+        * Returns the description of the error.
         
         * @readonly
         */
         description: string
         
         /**
-        * Returns the Error code number. 
+        * Returns the Error code number.
         
         * @readonly
         */
@@ -21013,14 +23163,15 @@ declare namespace VoiceML {
 
 declare namespace VoiceML {
     /**
-    * Provides the configuration for the audio input processing output. This can either include NLP processing using the {@link VoiceML.BaseNlpModel} or directly retrieving the transcription.  `speechContext` provides the ability to further improve the transcription accuracy given an assumed context. 
+    * Provides the configuration for the audio input processing output. This can either include NLP processing using the {@link VoiceML.BaseNlpModel} or directly retrieving the transcription.  `speechContext` provides the ability to further improve the transcription accuracy given an assumed context.
     */
     class ListeningOptions extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
-        * In cases where specific words are expected from the users, the transcription accuracy of these words can be improved, by strengthening their likelihood in context. The strength is scaled `1-10` (10 being the strongest increase) the default value is `5`. 
+        * In cases where specific words are expected from the users, the transcription accuracy of these words can be improved, by strengthening their likelihood in context. The strength is scaled `1-10` (10 being the strongest increase) the default value is `5`.
         */
         addSpeechContext(phrases: string[], boost: number): void
         
@@ -21030,7 +23181,7 @@ declare namespace VoiceML {
         languageCode: string
         
         /**
-        * Options for the ML model to be used. 
+        * Options for the ML model to be used.
         */
         nlpModels: VoiceML.BaseNlpModel[]
         
@@ -21040,27 +23191,27 @@ declare namespace VoiceML {
         postProcessingActions: VoiceML.PostProcessingAction[]
         
         /**
-        * Should complete transcription returned. Such transcriptions after the user stopped speaking. This transcription is marked with `isFinalTranscription=true` in the `OnListeningUpdate`. 
+        * Should complete transcription returned. Such transcriptions after the user stopped speaking. This transcription is marked with `isFinalTranscription=true` in the `OnListeningUpdate`.
         */
         shouldReturnAsrTranscription: boolean
         
         /**
-        * Should interim transcription returned. Such transcriptions are returned while the user still speaks, however they may be less accurate, and can be changed on following transcriptions. This interim results are marked with `isFinalTranscription=false` in the `OnListeningUpdate`. 
+        * Should interim transcription returned. Such transcriptions are returned while the user still speaks, however they may be less accurate, and can be changed on following transcriptions. This interim results are marked with `isFinalTranscription=false` in the `OnListeningUpdate`.
         */
         shouldReturnInterimAsrTranscription: boolean
         
         /**
-        * Supports multiple speech contexts for increased transcription accuracy. 
+        * Supports multiple speech contexts for increased transcription accuracy.
         */
         speechContexts: VoiceML.SpeechContext[]
         
         /**
-        * An optional attribute to specify which speech recognizer ML model to use when transcribing.  When creating a new `ListeningOptions` the value of this attrbute is defaulted to `SPEECH_RECOGNIZER`.   The supported values are: `SPEECH_RECOGNIZER`. 
+        * An optional attribute to specify which speech recognizer ML model to use when transcribing.  When creating a new `ListeningOptions` the value of this attrbute is defaulted to `SPEECH_RECOGNIZER`.   The supported values are: `SPEECH_RECOGNIZER`.
         */
         speechRecognizer: string
         
         /**
-        * Creates voice command options. 
+        * Creates voice command options.
         */
         static create(): VoiceML.ListeningOptions
         
@@ -21074,15 +23225,16 @@ declare namespace VoiceML {
     */
     class ListeningUpdateEventArgs extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
-        * In case `enableSystemCommands()` function used, returns the command executed by the system. 
+        * In case `enableSystemCommands()` function used, returns the command executed by the system.
         */
         getCommandResponses(): VoiceML.NlpCommandResponse[]
         
         /**
-        * In case an NLP intent model used, returns intent response from the ML engine. 
+        * In case an NLP intent model used, returns intent response from the ML engine.
         */
         getIntentResponses(): VoiceML.NlpIntentResponse[]
         
@@ -21092,7 +23244,7 @@ declare namespace VoiceML {
         getKeywordResponses(): VoiceML.NlpKeywordResponse[]
         
         /**
-        * Returns an array of QnaResponse elements, each representing an answer to the question in the eventArgs.transcript. It has properties answer(a string with the ML's response) and answerStatusCode, which can take values 
+        * Returns an array of QnaResponse elements, each representing an answer to the question in the eventArgs.transcript. It has properties answer(a string with the ML's response) and answerStatusCode, which can take values
         */
         getQnaResponses(): VoiceML.QnaResponse[]
         
@@ -21104,7 +23256,7 @@ declare namespace VoiceML {
         isFinalTranscription: boolean
         
         /**
-        * Returns the transcription from the Automatic Speech Recognition. 
+        * Returns the transcription from the Automatic Speech Recognition.
         
         * @readonly
         */
@@ -21123,22 +23275,21 @@ declare namespace VoiceML {
     * “Take a Snap”: takes a snapshot.
     * “Start Recording”: starts a video recording if not already started.
     * "Stop Recording”: stops an ongoing video recording, if applicable.
-    
     */
     class NlpCommandResponse extends VoiceML.BaseNlpResponse {
         
+        /** @hidden */
         protected constructor()
         
         /**
-        * The classification result of the NLP command model for the sentence. For example, for the sentence "Take a snap!" with the {@link VoiceMLModule.enableSystemCommands} API enabled, the result will be a {@link VoiceML.NlpCommandResponse} holding a `take a snap` {@link VoiceML.NlpCommandResponse#command}. In addition, the following values could be returned: 
+        * The classification result of the NLP command model for the sentence. For example, for the sentence "Take a snap!" with the {@link VoiceMLModule.enableSystemCommands} API enabled, the result will be a {@link VoiceML.NlpCommandResponse} holding a `take a snap` {@link VoiceML.NlpCommandResponse#command}. In addition, the following values could be returned:
         
         * - `#SNAP_ERROR_INCONCLUSIVE`: two or more commands detected.
         * - `#SNAP_ERROR_INDECISIVE`: no command detected.
         * - `#SNAP_ERROR_NONVERBAL`: no transcribable human voice was detected.
-        * - `#SNAP_ERROR_SILENCE`: silence was detected. 
+        * - `#SNAP_ERROR_SILENCE`: silence was detected.
         
         * Anything starting with `#SNAP_ERROR_`: Errors that are not currently defined in this documentation and should be ignored.
-        
         
         * @readonly
         */
@@ -21150,16 +23301,17 @@ declare namespace VoiceML {
 
 declare namespace VoiceML {
     /**
-    * Specifies which NLP Intent model should run to classify the transcription of the input audio. NLP Intent classification meant to extract the meaning of a sentence rather than detecting certain keywords. Multiple intent models can be used on the same transcription, and will run only on complete sentences (`isFinalTranscription = True`). Supported intent models: `VOICE_ENABLED_UI`. 
+    * Specifies which NLP Intent model should run to classify the transcription of the input audio. NLP Intent classification meant to extract the meaning of a sentence rather than detecting certain keywords. Multiple intent models can be used on the same transcription, and will run only on complete sentences (`isFinalTranscription = True`). Supported intent models: `VOICE_ENABLED_UI`.
     */
     class NlpIntentModel extends VoiceML.BaseNlpModel {
         
+        /** @hidden */
         protected constructor()
         
         /**
-        * A list of the intents the `Intent ML` engine should use when classifying the sentence, for example `["back", "next"]`, in case no list provided, all possible intents of the model are used.  
+        * A list of the intents the `Intent ML` engine should use when classifying the sentence, for example `["back", "next"]`, in case no list provided, all possible intents of the model are used.
         
-        * Supported intents for `VOICE_ENABLED_UI`: `next`, `back`, `left`, `right`, `up`, `down`, `first`, `second`, `third`, `fourth`, `fifth`, `sixth`, `seventh`, `eighth`, `ninth`, `tenth`. 
+        * Supported intents for `VOICE_ENABLED_UI`: `next`, `back`, `left`, `right`, `up`, `down`, `first`, `second`, `third`, `fourth`, `fifth`, `sixth`, `seventh`, `eighth`, `ninth`, `tenth`.
         */
         possibleIntents: string[]
         
@@ -21169,20 +23321,20 @@ declare namespace VoiceML {
 
 declare namespace VoiceML {
     /**
-    * Returned when {@link NlpIntentModel} was specificed in the ListeningOptions, it contains the results of the NLP Intent model classification on the last sentence. `NlpIntentResponse` will only run on complete sentences (`isFinalTranscription = true`).  
-    
+    * Returned when {@link NlpIntentModel} was specificed in the ListeningOptions, it contains the results of the NLP Intent model classification on the last sentence. `NlpIntentResponse` will only run on complete sentences (`isFinalTranscription = true`).
     */
     class NlpIntentResponse extends VoiceML.BaseNlpResponse {
         
+        /** @hidden */
         protected constructor()
         
         /**
-        * The classification result of the NLP intent model for the sentence. For example for the sentence "show me the next item" with the model `VOICE_ENABLED_UI`, the result will be `next` for `VOICE_ENABLED_UI` the following intents are valid: `next`, `back`, `left`, `right`, `up`, `down`, `first`, `second`, `third`, `fourth`, `fifth`, `sixth`, `seventh`, `eighth`, `ninth`, `tenth`. In addition, the following values could be returned: 
+        * The classification result of the NLP intent model for the sentence. For example for the sentence "show me the next item" with the model `VOICE_ENABLED_UI`, the result will be `next` for `VOICE_ENABLED_UI` the following intents are valid: `next`, `back`, `left`, `right`, `up`, `down`, `first`, `second`, `third`, `fourth`, `fifth`, `sixth`, `seventh`, `eighth`, `ninth`, `tenth`. In addition, the following values could be returned:
         
         * `#SNAP_ERROR_INCONCLUSIVE`: two or more intents detected.
         * `#SNAP_ERROR_INDECISIVE`: no intent detected.
         * `#SNAP_ERROR_NONVERBAL`: no transcribable human voice was detected.
-        * `#SNAP_ERROR_SILENCE`: silence was detected. 
+        * `#SNAP_ERROR_SILENCE`: silence was detected.
         
         * Anything starting with `#SNAP_ERROR_`: Errors that are not currently defined in this documentation and should be ignored.
         
@@ -21200,6 +23352,7 @@ declare namespace VoiceML {
     */
     class NlpIntentsModelOptions {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -21215,19 +23368,20 @@ declare namespace VoiceML {
     /**
     * Used to detect usage of certain keywords from the input audio.
     
-    * Keyword detection (whose results will be returned in {@link VoiceML.NlpKeywordResponse}) in the {@link VoiceML.ListeningUpdateEventArgs} can happen in the mid input sentence (and in such case the the isFinalTranscription=`false`) or can happen at the end of the sentence (isFinalTranscription=`true`). Mid sentence detection have closer proximity to the time the word was spoken, but might be less accurate. 
+    * Keyword detection (whose results will be returned in {@link VoiceML.NlpKeywordResponse}) in the {@link VoiceML.ListeningUpdateEventArgs} can happen in the mid input sentence (and in such case the the isFinalTranscription=`false`) or can happen at the end of the sentence (isFinalTranscription=`true`). Mid sentence detection have closer proximity to the time the word was spoken, but might be less accurate.
     */
     class NlpKeywordModel extends VoiceML.BaseNlpModel {
         
+        /** @hidden */
         protected constructor()
         
         /**
-        * Adds a keyword group to the keywords model, the group name will be returned in NlpKeywordResponse to indicate one of the keywords in the group has been detected. Groups are used to include synonyms, or context similar words.  `addKeywordGroup("walk", ["walk", "jog", "strolls"])`. 
+        * Adds a keyword group to the keywords model, the group name will be returned in NlpKeywordResponse to indicate one of the keywords in the group has been detected. Groups are used to include synonyms, or context similar words.  `addKeywordGroup("walk", ["walk", "jog", "strolls"])`.
         */
         addKeywordGroup(name: string, keywords: string[]): void
         
         /**
-        * Holds group of keywords to be used in the ML model. 
+        * Holds group of keywords to be used in the ML model.
         
         * @readonly
         */
@@ -21243,6 +23397,7 @@ declare namespace VoiceML {
     */
     class NlpKeywordModelOptions {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -21256,14 +23411,15 @@ declare namespace VoiceML {
 
 declare namespace VoiceML {
     /**
-    * NlpKeywordResponse will be returned if KeywordModel has been supplied as an input model in the ListeningOptions.  The keyword model allows detection of keywords (or short phrases) in an input audio. 
+    * NlpKeywordResponse will be returned if KeywordModel has been supplied as an input model in the ListeningOptions.  The keyword model allows detection of keywords (or short phrases) in an input audio.
     */
     class NlpKeywordResponse extends VoiceML.BaseNlpResponse {
         
+        /** @hidden */
         protected constructor()
         
         /**
-        * The keywords detected by the NLP keyword detection model.  In addition, the following values could be returned: 
+        * The keywords detected by the NLP keyword detection model.  In addition, the following values could be returned:
         
         * `#SNAP_ERROR_INCONCLUSIVE`: two or more intents detected.
         * `#SNAP_ERROR_INDECISIVE`: no intent detected.
@@ -21282,21 +23438,22 @@ declare namespace VoiceML {
 
 declare namespace VoiceML {
     /**
-    * The NLP Response Status indicates wether the NLP was successful in parsing the sentence. 
+    * The NLP Response Status indicates whether the NLP was successful in parsing the sentence
     */
     class NlpResponseStatus extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
-        * Nlp status code coming from the ML engine. 
+        * Nlp status code coming from the ML engine.
         
         * @readonly
         */
         code: number
         
         /**
-        * Nlp status description coming from the ML engine. 
+        * Nlp status description coming from the ML engine.
         
         * @readonly
         */
@@ -21312,6 +23469,7 @@ declare namespace VoiceML {
     */
     class PostProcessingAction extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
     }
@@ -21324,6 +23482,7 @@ declare namespace VoiceML {
     */
     class PostProcessingActionResponse extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -21347,6 +23506,7 @@ declare namespace VoiceML {
 declare namespace VoiceML {
     class PostProcessingActionResponseStatus extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -21366,6 +23526,7 @@ declare namespace VoiceML {
 declare namespace VoiceML {
     class QnaAction extends VoiceML.PostProcessingAction {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -21374,7 +23535,7 @@ declare namespace VoiceML {
         context: string
         
         /**
-        * Parameter: string context. Creates a QnaAction object with a given context i.e. source text for the Dialog ML. 
+        * Parameter: string context. Creates a QnaAction object with a given context i.e. source text for the Dialog ML.
         */
         static create(context: string): VoiceML.QnaAction
         
@@ -21385,6 +23546,7 @@ declare namespace VoiceML {
 declare namespace VoiceML {
     class QnaResponse extends VoiceML.PostProcessingActionResponse {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -21411,6 +23573,7 @@ declare namespace VoiceML {
     */
     class SpeechContext extends ScriptObject {
         
+        /** @hidden */
         protected constructor()
         
         /**
@@ -21421,7 +23584,7 @@ declare namespace VoiceML {
         boost: number
         
         /**
-        * Array of keyword to enhance by the ML engine. 
+        * Array of keyword to enhance by the ML engine.
         
         * @readonly
         */
@@ -21438,10 +23601,11 @@ declare namespace VoiceML {
 */
 declare class VoiceMLModule extends Asset {
     
+    /** @hidden */
     protected constructor()
     
     /**
-    * Allows the user to provide voice commands for the VoiceML to execute on behalf of the users.  Current supported commands: "Take a Snap", "Start Recording", "Stop Recording". In case a command was detected, it will be automtically executed by the system and returned as part of the {@link VoiceML.NlpCommandResponse} in the `onListeningUpdate` callback. You can retrieve the command that was executed using the following snippet: 
+    * Allows the user to provide voice commands for the VoiceML to execute on behalf of the users.  Current supported commands: "Take a Snap", "Start Recording", "Stop Recording". In case a command was detected, it will be automtically executed by the system and returned as part of the {@link VoiceML.NlpCommandResponse} in the `onListeningUpdate` callback. You can retrieve the command that was executed using the following snippet:
     
     * ```js
     * var onUpdateListeningEventHandler = function(eventArgs) {
@@ -21450,10 +23614,10 @@ declare class VoiceMLModule extends Asset {
     
     *     for (var i = 0; i < commandResponses.length; i++) {
     *         var commandResponse = commandResponses[i];
-    *         nlpResponseText += "Command Response: " + commandResponse.modelName + "\n command: " + commandResponse.command;     
+    *         nlpResponseText += "Command Response: " + commandResponse.modelName + "\n command: " + commandResponse.command;
     *     }
     * }
-    * ``` 
+    * ```
     */
     enableSystemCommands(): void
     
@@ -21465,42 +23629,41 @@ declare class VoiceMLModule extends Asset {
     startListening(options: VoiceML.ListeningOptions): void
     
     /**
-    * Stops voice commands. 
+    * Stops voice commands.
     */
     stopListening(): void
     
     /**
-    * Registers a callback which will be called when microphone permissions are taken from the lens. `stopListening()` is implicitly called in such case. 
+    * Registers a callback which will be called when microphone permissions are taken from the lens. `stopListening()` is implicitly called in such case.
     
     * @readonly
     */
     onListeningDisabled: event0<void>
     
     /**
-    * Registers a callback which will be called when microphone permissions are granted to the Lens, the microphone is initialized, and is actively listening. The expected design pattern is to start the listening session once those permissions have been granted: 
+    * Registers a callback which will be called when microphone permissions are granted to the Lens, the microphone is initialized, and is actively listening. The expected design pattern is to start the listening session once those permissions have been granted:
     
     * ```js
     * //@input Asset.VoiceMLModule vmlModule
     * var onListeningEnabledHandler = function(){
-    *     script.vmlModule.startListening(options);  
+    *     script.vmlModule.startListening(options);
     * }
-    * script.vmlModule.onListeningEnabled.add(onListeningEnabledHandler); 
+    * script.vmlModule.onListeningEnabled.add(onListeningEnabledHandler);
     * ```
-    
     
     * @readonly
     */
     onListeningEnabled: event0<void>
     
     /**
-    * Registers a callback, which will be called in case the VoiceML module can't process the inputs. Most errors are due to network connectivity, or misconfigured NLP inputs. 
+    * Registers a callback, which will be called in case the VoiceML module can't process the inputs. Most errors are due to network connectivity, or misconfigured NLP inputs.
     
     * @readonly
     */
     onListeningError: event1<VoiceML.ListeningErrorEventArgs, void>
     
     /**
-    * Registers a callback, which will be called with interim transcription or related NLP models. 
+    * Registers a callback, which will be called with interim transcription or related NLP models.
     
     * @readonly
     */
@@ -21532,15 +23695,15 @@ declare namespace VoiceMLModule {
 
 declare namespace VoiceMLModule {
     /**
-    * Status Codes for NLP Responses. 
+    * Status Codes for NLP Responses.
     */
     enum NlpResponsesStatusCodes {
         /**
-        * Ok Status Code for NLP Responses, this indicates a successful processing of the NLP model. 
+        * Ok Status Code for NLP Responses, this indicates a successful processing of the NLP model.
         */
         OK,
         /**
-        * Error Status Code for NLP Responses, this indicates an unsuccessful processing of the NLP model. 
+        * Error Status Code for NLP Responses, this indicates an unsuccessful processing of the NLP model.
         */
         ERROR
     }
@@ -21550,6 +23713,7 @@ declare namespace VoiceMLModule {
 declare namespace VoiceMLModule {
     class SpeechRecognizer {
         
+        /** @hidden */
         protected constructor()
         
         static Default: string
@@ -21609,7 +23773,7 @@ declare enum WeatherCondition {
 }
 
 /**
-* WebPageTextureProvider is the associated texture control that can be accessed from the `texture.control` property. This allows you to call functions such as `loadUrl(“https://snap.com”)` or to pass input events to. 
+* WebPageTextureProvider is the associated texture control that can be accessed from the `texture.control` property. This allows you to call functions such as `loadUrl(“https://snap.com”)` or to pass input events to.
 
 * _Note: Most functionality will require the `onReady` event to have been called. Any calls before this event may cause an exception._
 
@@ -21621,6 +23785,7 @@ declare enum WeatherCondition {
 */
 declare class WebPageTextureProvider extends TextureProvider {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -21669,7 +23834,7 @@ declare class WebPageTextureProvider extends TextureProvider {
     reload(): void
     
     /**
-    * Set a custom user-agent for the webview. 
+    * Set a custom user-agent for the webview.
     
     * _Note: By default all webviews will have the same user-agent set by the platform. This can be used to target Spectacles specific websites._
     
@@ -21680,12 +23845,11 @@ declare class WebPageTextureProvider extends TextureProvider {
     setUserAgent(userAgent: string): void
     
     /**
-    * Request the current page loading to stop. 
+    * Request the current page loading to stop.
     
     * _Note: Has no effect if the page is already loaded._
     
     * _Note: Does not stop scripts on the webpage._
-    
     
     * @experimental
     
@@ -21694,15 +23858,14 @@ declare class WebPageTextureProvider extends TextureProvider {
     stop(): void
     
     /**
-    * Touch will allow the lens creator to pass input events from the Lens to the WebView. 
+    * Touch will allow the lens creator to pass input events from the Lens to the WebView.
     
-    * - **id:** of the touch (in the case of multi-finger, etc), for continuous interactions it is required they share the same id. 
-    * - **state:** What type of action is preformed. 
-    * - **x:** the x coordinate of the touch, in WebView space (2d). 
+    * - **id:** of the touch (in the case of multi-finger, etc), for continuous interactions it is required they share the same id.
+    * - **state:** What type of action is preformed.
+    * - **x:** the x coordinate of the touch, in WebView space (2d).
     * - **y:** the Y coordinate of the touch, in WebView space (2d).
     
-    * _Note: Using the WebView from the Asset Library will have already implemented this logic with SIK and Hand Tracking and Mobile Controller and it is not expected for creators to re-implement this handling unless they wish to provide further customization and options._ 
-    
+    * _Note: Using the WebView from the Asset Library will have already implemented this logic with SIK and Hand Tracking and Mobile Controller and it is not expected for creators to re-implement this handling unless they wish to provide further customization and options._
     
     * @experimental
     
@@ -21754,6 +23917,7 @@ declare class WebPageTextureProvider extends TextureProvider {
 */
 declare class WebSocket extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -21812,7 +23976,7 @@ declare class WebSocket extends ScriptObject {
     send(data: (Uint8Array|string)): void
     
     /**
-    * Controls how binary data is received over the connection. Currently only `blob` is supported. The `arraybuffer` type is not yet supported. 
+    * Controls how binary data is received over the connection. Currently only `blob` is supported. The `arraybuffer` type is not yet supported.
     
     * ```
     * // Create WebSocket connection.
@@ -21824,7 +23988,7 @@ declare class WebSocket extends ScriptObject {
     *     if (event.data instanceof Blob) {
     *         // Binary frame, can be retrieved as either Uint8Array or string
     *         let bytes = await event.data.bytes();
-    *         let text = await event.data.text();            
+    *         let text = await event.data.text();
     *     } else {
     *         // Text frame
     *         let text = event.data;
@@ -21876,9 +24040,9 @@ declare class WebSocket extends ScriptObject {
     *     if (event.data instanceof Blob) {
     *         // Binary frame, can be retrieved as either Uint8Array or string
     *         let bytes = await event.data.bytes();
-    *         let text = await event.data.text();    
-    *         
-    *         print("Received binary message, printing as text: " + text);        
+    *         let text = await event.data.text();
+    
+    *         print("Received binary message, printing as text: " + text);
     *     } else {
     *         // Text frame
     *         let text = event.data;
@@ -21953,6 +24117,7 @@ declare class WebSocket extends ScriptObject {
 */
 declare class WebSocketCloseEvent extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -22022,6 +24187,7 @@ declare class WebSocketCloseEvent extends ScriptObject {
 */
 declare class WebSocketEvent extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -22035,6 +24201,7 @@ declare class WebSocketEvent extends ScriptObject {
 */
 declare class WebSocketMessageEvent extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -22070,10 +24237,11 @@ declare class WebSocketMessageEvent extends ScriptObject {
 */
 declare class WebViewOptions extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
-    * Allows the ability to set various web request policies. 
+    * Allows the ability to set various web request policies.
     
     * @readonly
     
@@ -22082,14 +24250,13 @@ declare class WebViewOptions extends ScriptObject {
     requestPolicy: WebViewPolicy
     
     /**
-    * The resolution of the WebView that was requested. Units are in pixels. 
+    * The resolution of the WebView that was requested. Units are in pixels.
     
     * _Note: This resolution is unrelated to the device resolution._
     * _Note: This does not change the scale or dimensions of the RenderMeshVisual that is used to draw the WebView._
     
     * __Tip:__
     * For best results choose a resolution that best matches your expected aspect ratio and desired responsive size of web content. This can not be changed later without creating a new WebView instance.
-    
     
     * @experimental
     */
@@ -22102,24 +24269,24 @@ declare class WebViewOptions extends ScriptObject {
 
 * _Note:_
 * Partial matches are now currently supported but subdomains are.
-* `*snap.com` is not supported. 
-* `*.snap.com` is supported. 
+* `*snap.com` is not supported.
+* `*.snap.com` is supported.
 
 * _Note:_
 * `*` is not supported for complex patterns but a single `*` on its own can be used to represent "all".
 
 * _Note:_
-* `snap.com` would be the same as `*.snap.com`. 
-
+* `snap.com` would be the same as `*.snap.com`.
 
 * @experimental
 */
 declare class WebViewPolicy extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
-    * Set an allow list of websites that can be loaded. 
+    * Set an allow list of websites that can be loaded.
     
     * _Note: Default is to allow any website._
     
@@ -22127,13 +24294,12 @@ declare class WebViewPolicy extends ScriptObject {
     
     * _Note: A platform blocked website may not be overridden using this property._
     
-    
     * @experimental
     */
     allow: string[]
     
     /**
-    * Set a block list of websites that will not be loaded. 
+    * Set a block list of websites that will not be loaded.
     
     * _Note: Default is to not block any website._
     
@@ -22155,13 +24321,14 @@ declare enum WeightedMode {
 /**
 * Groups {@link Physics} objects in its subtree into an independent world simulation.
 
-* @remarks 
+* @remarks
 * All simulation occurs within a physics world, each with its own configurable settings (e.g. gravity). When a physics object is placed under a {@link WorldComponent}, it belongs to that world and will only interact with other objects in that world. By default, there exists a root-level world for the scene, but multiple worlds may be created to run independent simulations.
 
 * @see [World Component](https://developers.snap.com/lens-studio/features/physics/physics-component#physics-world)
 */
 declare class WorldComponent extends Component {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -22186,6 +24353,7 @@ declare class WorldComponent extends Component {
 */
 declare class WorldDepthTextureProvider extends TextureProvider {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -22198,10 +24366,12 @@ declare class WorldDepthTextureProvider extends TextureProvider {
 }
 
 /**
-* Holds settings for world mesh tracking in DeviceTracking component. Accessible through DeviceTracking.worldOptions.
+* Holds settings for world mesh and point cloud tracking in DeviceTracking component. Accessible through DeviceTracking.worldOptions.
+* When tracking either world meshes or point clouds, the {@link DeviceTracking} component must be set to `World` mode.
 */
 declare class WorldOptions extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -22216,6 +24386,9 @@ declare class WorldOptions extends ScriptObject {
     
     nativePlaneTrackingType: NativePlaneTrackingType
     
+    /**
+    * Enables or disables point cloud tracking.
+    */
     pointCloudEnabled: boolean
     
 }
@@ -22227,7 +24400,19 @@ declare class WorldOptions extends ScriptObject {
 */
 declare class WorldQueryHitTestResult extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
+    
+    /**
+    * The classification of the surface at the position where the ray intersects with the environment.
+    
+    * @readonly
+    
+    * @experimental
+    
+    * @wearableOnly
+    */
+    classification: SurfaceClassification
     
     /**
     * A normal of the surface at the position where the ray intersects with the environment.
@@ -22254,12 +24439,11 @@ declare class WorldQueryHitTestResult extends ScriptObject {
 
 * @see [World Query Module](https://developers.snap.com/spectacles/about-spectacles-features/apis/world-query) guide.
 
-
-
 * @wearableOnly
 */
 declare class WorldQueryModule extends Asset {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -22270,7 +24454,7 @@ declare class WorldQueryModule extends Asset {
     createHitTestSession(): HitTestSession
     
     /**
-    * Create a new HitTestSession with options. 
+    * Create a new HitTestSession with options.
     
     * @wearableOnly
     */
@@ -22283,6 +24467,7 @@ declare class WorldQueryModule extends Asset {
 */
 declare class WorldRenderObjectProvider extends MeshRenderObjectProvider {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -22321,6 +24506,7 @@ declare class WorldRenderObjectProvider extends MeshRenderObjectProvider {
 */
 declare class WorldTrackingCapabilities extends ScriptObject {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -22344,9 +24530,11 @@ declare class WorldTrackingCapabilities extends ScriptObject {
 
 /**
 * Triggered when new world tracking meshes are detected. Only available when a Device Tracking component is in the scene, and world mesh tracking is supported and enabled.
+* In addition, {@link DeviceTracking} component must be set to `World` mode to orient the Camera relative to the mesh correctly.
 */
 declare class WorldTrackingMeshesAddedEvent extends SceneEvent {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -22361,6 +24549,7 @@ declare class WorldTrackingMeshesAddedEvent extends SceneEvent {
 */
 declare class WorldTrackingMeshesRemovedEvent extends SceneEvent {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -22375,6 +24564,7 @@ declare class WorldTrackingMeshesRemovedEvent extends SceneEvent {
 */
 declare class WorldTrackingMeshesUpdatedEvent extends SceneEvent {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -22386,10 +24576,10 @@ declare class WorldTrackingMeshesUpdatedEvent extends SceneEvent {
 
 /**
 * Triggered when plane(s) are newly detected. The `worldOptions.nativePlaneTrackingType` must be set to anything other than `NativePlaneTrackingType.None`. In addition, {@link DeviceTracking} component must be set to `World` mode to orient the Camera relative to the planes correctly.
-
 */
 declare class WorldTrackingPlanesAddedEvent extends SceneEvent {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -22401,14 +24591,14 @@ declare class WorldTrackingPlanesAddedEvent extends SceneEvent {
 
 /**
 * Triggered when plane(s) are no longer detected.  This usually happens when two planes merge into one.  Planes persist when no longer seen by camera(s) and when previously detected objects move (e.g. a door is opened) to create a static scene. {@link DeviceTracking} component must be set to `World` mode to orient the Camera relative to the planes correctly.
-
 */
 declare class WorldTrackingPlanesRemovedEvent extends SceneEvent {
     
+    /** @hidden */
     protected constructor()
     
     /**
-    * Returns an array of {@link TrackedPlane} that are no longer detected. 
+    * Returns an array of {@link TrackedPlane} that are no longer detected.
     */
     getPlanes(): TrackedPlane[]
     
@@ -22416,10 +24606,10 @@ declare class WorldTrackingPlanesRemovedEvent extends SceneEvent {
 
 /**
 * Triggered when currently detected plane(s) are updated.  This usually happens when a plane grows in size. The `worldOptions.nativePlaneTrackingType` must be set to anything other than `NativePlaneTrackingType.None`. In addition, {@link DeviceTracking} component must be set to `World` mode to orient the Camera relative to the planes correctly.
-
 */
 declare class WorldTrackingPlanesUpdatedEvent extends SceneEvent {
     
+    /** @hidden */
     protected constructor()
     
     /**
@@ -22430,12 +24620,13 @@ declare class WorldTrackingPlanesUpdatedEvent extends SceneEvent {
 }
 
 /**
-* Declares permissions for your Lens project. 
+* Declares permissions for your Lens project.
 
 * @see [Permissions Overview](https://developers.snap.com/spectacles/permission-privacy/overview#list-of-permissions-types).
 */
 declare class WorldUnderstandingModule extends Asset {
     
+    /** @hidden */
     protected constructor()
     
 }
@@ -22521,12 +24712,12 @@ interface event7<T0,T1,T2,T3,T4,T5,T6,R> {
 */
 declare namespace _palette {
     /**
-    * An object containing the position of an object relative to a LocationAsset. 
+    * An object containing the position of an object relative to a LocationAsset.
     */
     let Anchor: Anchor
     
     /**
-    * Provider for animated texture resource. 
+    * Provider for animated texture resource.
     
     * @remarks
     * Can be accessed from {@link Asset | Texture.Control} on an animated texture.
@@ -22540,12 +24731,11 @@ declare namespace _palette {
     
     * @remarks
     * AnimationAssets themselves do not handle playing or orchestrating animations. This is left to the {@link AnimationPlayer} component to handle.
-    
     */
     let AnimationAsset: AnimationAsset
     
     /**
-    * Animation Clip is what an Animation Player uses to manage playback for a specific animation. It defines that animation by referencing an Animation Asset and providing start and end points, playback speed and direction, and blending information. 
+    * Animation Clip is what an Animation Player uses to manage playback for a specific animation. It defines that animation by referencing an Animation Asset and providing start and end points, playback speed and direction, and blending information.
     */
     let AnimationClip: AnimationClip
     
@@ -22557,8 +24747,8 @@ declare namespace _palette {
     /**
     * Container for one or more {@link AnimationCurve}s. Can be sampled to drive attributes (e.g. animation, vfx, code etc.)
     
-    * @remarks 
-    * When evaluating multiple values, the values are selected from left to right in order. For example, for a {@link vec3} containing `x`,`y`,`z` it will correspond to track index `0`, `1`, `2` from left to right. 
+    * @remarks
+    * When evaluating multiple values, the values are selected from left to right in order. For example, for a {@link vec3} containing `x`,`y`,`z` it will correspond to track index `0`, `1`, `2` from left to right.
     */
     let AnimationCurveTrack: AnimationCurveTrack
     
@@ -22608,13 +24798,11 @@ declare namespace _palette {
     
     /**
     * Allows the Lens to incorporate voice transcription with higher quality than the {@link VoiceMlModule} and supports a vast number of different languages.
-    
     */
     let AsrModule: AsrModule
     
     /**
     * The mode of the transcription to prioritise, between speed and accuracy.
-    
     
     * @wearableOnly
     */
@@ -22623,14 +24811,12 @@ declare namespace _palette {
     /**
     * An enum stating the status of the transcription.
     
-    
     * @wearableOnly
     */
     let AsrModule_AsrStatusCode: AsrModule.AsrStatusCode
     
     /**
     * Provides the options for the session.
-    
     
     * @wearableOnly
     */
@@ -22639,13 +24825,12 @@ declare namespace _palette {
     /**
     * Argument passed for a transcription update event.
     
-    
     * @wearableOnly
     */
     let AsrModule_TranscriptionUpdateEvent: AsrModule.TranscriptionUpdateEvent
     
     /**
-    * Base class for all assets used in the engine. Assets can be unique to Lens Studio, such as {@link VFXAsset}, or a representation of an imported asset, such as {@link Texture} for jpg, png, and other image formats. In most cases, assets are added to the scene via a {@link Component}.  
+    * Base class for all assets used in the engine. Assets can be unique to Lens Studio, such as {@link VFXAsset}, or a representation of an imported asset, such as {@link Texture} for jpg, png, and other image formats. In most cases, assets are added to the scene via a {@link Component}.
     
     * @remarks
     * For example, you might import an `.jpg` file into your project to be used in the Lens by dragging your file into the Asset Browser panel, which will create a {@link Texture} asset. Then, in the Scene Hierarchy panel, you can add a {@link SceneObject} containing the {@link Image} component (Scene Hierarchy panel > + > Image), and set the Texture field of the Image component to the newly imported asset in the Inspector panel.
@@ -22679,7 +24864,6 @@ declare namespace _palette {
     * You can assign an {@link AudioTrackAsset} to play through script, or through the Audio Component input in the Inspector panel of Lens Studio.
     
     * @see [Playing Audio](https://developers.snap.com/lens-studio/features/audio/playing-audio) guide for more information.
-    
     */
     let AudioComponent: AudioComponent
     
@@ -22695,7 +24879,6 @@ declare namespace _palette {
     * When present in the scene, it will automatically apply the selected audio effect to recordings made with the Lens.
     
     * @see [Audio Effect](https://developers.snap.com/lens-studio/features/audio/audio-effect) Guide.
-    
     */
     let AudioEffectComponent: AudioEffectComponent
     
@@ -22705,17 +24888,17 @@ declare namespace _palette {
     let AudioEffectProvider: AudioEffectProvider
     
     /**
-    * Processes input from {@link AudioComponent}s that use Spatial Audio. 
+    * Processes input from {@link AudioComponent}s that use Spatial Audio.
     
     * @remarks
-    * The Audio Listener component acts as a microphone-like device. It receives input from {@link AudioComponent}s that have Spatial Audio setting enabled and allows to calculate their relative positions to the scene object it is attached to and properly mix them. 
+    * The Audio Listener component acts as a microphone-like device. It receives input from {@link AudioComponent}s that have Spatial Audio setting enabled and allows to calculate their relative positions to the scene object it is attached to and properly mix them.
     
     * @see [Audio Listener](https://developers.snap.com/lens-studio/features/audio/audio-listener) guide
     */
     let AudioListenerComponent: AudioListenerComponent
     
     /**
-    * Provider of the Audio Output Audio Track asset. 
+    * Provider of the Audio Output Audio Track asset.
     */
     let AudioOutputProvider: AudioOutputProvider
     
@@ -22811,7 +24994,7 @@ declare namespace _palette {
     let Bitmoji3DOptions_ClothingType: Bitmoji3DOptions.ClothingType
     
     /**
-    * The custom params can be used for requesting bitmoji assets like garments. These can be set as custom params of Bitmoji3D options. 
+    * The custom params can be used for requesting bitmoji assets like garments. These can be set as custom params of Bitmoji3D options.
     */
     let Bitmoji3DOptions_CustomParams: Bitmoji3DOptions.CustomParams
     
@@ -22831,11 +25014,9 @@ declare namespace _palette {
     let Bitmoji3DResource: Bitmoji3DResource
     
     /**
-    * Provides access to functionalities related to [Bitmoji](https://developers.snap.com/lens-studio/features/bitmoji-avatar/overview) avatar. 
+    * Provides access to functionalities related to [Bitmoji](https://developers.snap.com/lens-studio/features/bitmoji-avatar/overview) avatar.
     
     * @see [Bitmoji Overview](https://developers.snap.com/lens-studio/features/bitmoji-avatar/overview) guide.
-    
-    
     */
     let BitmojiModule: BitmojiModule
     
@@ -22873,7 +25054,7 @@ declare namespace _palette {
     
     * __UUID__ ({@link Bluetooth.BluetoothGattCharacteristic.uuid}): A unique identifier that identifies the characteristic.
     
-    * Common characteristics include battery level, heart rate, temperature, and device name. 
+    * Common characteristics include battery level, heart rate, temperature, and device name.
     */
     let Bluetooth_BluetoothGattCharacteristic: Bluetooth.BluetoothGattCharacteristic
     
@@ -22884,7 +25065,6 @@ declare namespace _palette {
     
     /**
     * Bluetooth GATT Services are collections of related {@link Bluetooth.BluetoothGattCharacteristic}s representing specific functions or features of a device. For example, a heart rate sensor might have a "Heart Rate" service, which in turn has characteristics like  "Heart Rate Measurement".
-    
     */
     let Bluetooth_BluetoothGattService: Bluetooth.BluetoothGattService
     
@@ -22920,8 +25100,7 @@ declare namespace _palette {
     
     * `Disconnected` The Bluetooth device is disconnected from Spectacles.
     
-    * `Connected` The Bluetooth device is connected and bonded with Spectacles. 
-    
+    * `Connected` The Bluetooth device is connected and bonded with Spectacles.
     
     * @experimental
     
@@ -22962,7 +25141,7 @@ declare namespace _palette {
     let Bluetooth_ScanMode: Bluetooth.ScanMode
     
     /**
-    * The results of a Bluetooth scan. 
+    * The results of a Bluetooth scan.
     */
     let Bluetooth_ScanResult: Bluetooth.ScanResult
     
@@ -22979,7 +25158,7 @@ declare namespace _palette {
     /**
     * Allows Physics simulation to control SceneObject.
     
-    * @remarks 
+    * @remarks
     * Derived from {@link ColliderComponent}, attaching this to a {@link SceneObject} turns it into a dynamic rigid-body that is automatically moved by the physics simulation in response to gravity, collisions, and other forces.
     
     * @see [Physics Body](https://developers.snap.com/lens-studio/features/physics/physics-component#physics-body) guide.
@@ -22989,12 +25168,11 @@ declare namespace _palette {
     
     /**
     * Provides depth values of the tracked body encoded as D24_UNORM_S8_UINT in screen resolution. Depth is normalized between 0-1, and the stencil component is ignored. The values may be remapped from normalized units (0 to 1) to negative centimeters from the camera (-near in cm to -far in cm) using the `Depth Map` mode of the `Texture 2D Sample` node in Material Editor.
-    
     */
     let BodyDepthTextureProvider: BodyDepthTextureProvider
     
     /**
-    * Provides segmentation confidence values encoded in the `R` channel. The texture has the {@link Colorspace#RGBA} format in screen resolution, but `G`, `B`, `A` channels should be ignored. 
+    * Provides segmentation confidence values encoded in the `R` channel. The texture has the {@link Colorspace#RGBA} format in screen resolution, but `G`, `B`, `A` channels should be ignored.
     */
     let BodyInstanceSegmentationTextureProvider: BodyInstanceSegmentationTextureProvider
     
@@ -23041,7 +25219,7 @@ declare namespace _palette {
     * @remarks
     * A Camera will only render a  {@link SceneObject} if its render layer is enabled on the Camera.
     
-    * @see 
+    * @see
     * [Camera and Layers](https://developers.snap.com/lens-studio/lens-studio-workflow/scene-set-up/camera) guide.
     */
     let Camera: Camera
@@ -23104,9 +25282,9 @@ declare namespace _palette {
     let CameraFrontEvent: CameraFrontEvent
     
     /**
-    * Provides access to a specific camera on Spectacles device. 
+    * Provides access to a specific camera on Spectacles device.
     
-    * @remarks 
+    * @remarks
     * Useful for requesting a specific camera on Spectacles or requesting images from both cameras simultaneously.
     
     * @see [Camera Module](https://developers.snap.com/spectacles/about-spectacles-features/apis/camera-module) guide.
@@ -23136,13 +25314,33 @@ declare namespace _palette {
     let CameraModule_CameraRequest: CameraModule.CameraRequest
     
     /**
-    * Spectacles: ImageRequest contains the parameterization for a still image request, which is a request for a high resolution image of the user's current camera stream. 
+    * Spectacles: ImageRequest contains the parameterization for a still image request, which is a request for a high resolution image of the user's current camera stream. This object is created from the {@link CameraModule}. Currently there are no parameters that can be set for an ImageRequest.
     
     * @exposesUserData
     
     * @wearableOnly
     */
     let CameraModule_ImageRequest: CameraModule.ImageRequest
+    
+    /**
+    * Represents media selected from the device camera roll.
+    */
+    let CameraRollMedia: CameraRollMedia
+    
+    /**
+    * Enum representing the type of media selected from camera roll.
+    */
+    let CameraRollMediaType: CameraRollMediaType
+    
+    /**
+    * Provides an interface to the device’s camera roll and allows users to select multiple media.
+    */
+    let CameraRollModule: CameraRollModule
+    
+    /**
+    * Configuration options for displaying the camera roll media picker.
+    */
+    let CameraRollModule_ShowOptions: CameraRollModule.ShowOptions
     
     let CameraTextureProvider: CameraTextureProvider
     
@@ -23153,10 +25351,9 @@ declare namespace _palette {
     
     * {@link SceneObject}s with {@link ScreenTransform} can be placed on the Canvas, and the Canvas can be sized and placed anywhere in 3D space. It is like a painter’s canvas for ScreenTransforms.
     
-    * @see 
+    * @see
     * [Canvas](https://developers.snap.com/lens-studio/lens-studio-workflow/scene-set-up/2d/canvas-component) guide.
     * [Screen Transform Overview](https://developers.snap.com/lens-studio/lens-studio-workflow/scene-set-up/2d/screen-transform-overview) guide.
-    
     */
     let Canvas: Canvas
     
@@ -23186,14 +25383,9 @@ declare namespace _palette {
     let ClearColorOption: ClearColorOption
     
     /**
-    * Clears depth in the drawing order.
-    */
-    let ClearDepth: ClearDepth
-    
-    /**
     * Simulates and renders cloth visuals in a Lens.
     
-    * @remarks 
+    * @remarks
     * Handles the mesh data of cloth and prepares it for cloth simulation. Also controls all the parameters of the cloth simulator and colliders.
     
     * @see [Cloth Simulation](https://developers.snap.com/lens-studio/features/physics/cloth-simulation)
@@ -23219,7 +25411,6 @@ declare namespace _palette {
     
     /**
     * Used to configure `Cloud Storage Module` with various options. Note: if `session` scoped storage is required, this option must be provided.
-    
     */
     let CloudStorageOptions: CloudStorageOptions
     
@@ -23241,7 +25432,7 @@ declare namespace _palette {
     /**
     * Used to define the physical boundaries of an object, allowing it to interact with other objects in Physics, Cloth or Hair simulation.
     
-    * @remarks 
+    * @remarks
     * Provides a way for scene objects to detect and respond to collisions. Useful for detecting when objects overlap or contact each other, which can then be used to trigger events or effects within the Lens experience.
     
     * @see [Collision and Overlap](https://developers.snap.com/lens-studio/features/physics/collision-and-overlap).
@@ -23266,7 +25457,7 @@ declare namespace _palette {
     let CollisionExitEventArgs: CollisionExitEventArgs
     
     /**
-    * Defines the physical boundaries of an object for collision detection. 
+    * Defines the physical boundaries of an object for collision detection.
     
     * @remarks
     * It represents the shape and form of a 3D object, allowing Physics engine to determine when and how objects interact with each other within a scene.
@@ -23294,21 +25485,103 @@ declare namespace _palette {
     * Allows {@link SceneObject} to be tracked in a Connected Lens Experience.
     
     * @remarks
-    * Creates Colocated Connected Lenses experiences by enabling the creation and tracking of a shared space which can be used to place several users in the same coordinate frame. This shared space will be made available and can be tracked by any friend you invite to join your session via Snapcode. Users are expected to be located in the same room when using the colocated feature. This component needs to be attached to the camera. 
+    * Creates Colocated Connected Lenses experiences by enabling the creation and tracking of a shared space which can be used to place several users in the same coordinate frame. This shared space will be made available and can be tracked by any friend you invite to join your session via Snapcode. Users are expected to be located in the same room when using the colocated feature. This component needs to be attached to the camera.
     
     * @see [Connected Lenses Overview](https://developers.snap.com/lens-studio/features/connected-lenses/connected-lenses-overview#remote-and-colocated)
     */
     let ColocatedTrackingComponent: ColocatedTrackingComponent
     
     /**
-    * Data type used for color values.
+    * The primary interface for interacting with the commerce system within a Lens.
+    * Once built and configured using the {@link CommerceKitModule}, its methods are used to perform all key commerce
+    * operations. This includes initiating connections to the payment service, querying details about products,
+    * launching purchase flows for users, checking a user's purchase history, and acknowledging completed purchases.
+    
+    * @wearableOnly
     */
-    let Colorspace: Colorspace
+    let Commerce_Client: Commerce.Client
     
     /**
-    * The base class for all components. Components are attached to {@link SceneObject} and add various behaviors to it. 
+    * Specifies the configuration for creating a commerce client.
+    * It defines important behaviors and callback functions, such as the `onPurchasesUpdated`,
+    * which is essential for receiving real-time notifications about the status of user purchases.
     
-    * @remarks 
+    * @wearableOnly
+    */
+    let Commerce_ClientOptions: Commerce.ClientOptions
+    
+    /**
+    * Represents the price of a product in a Lens.
+    
+    * @wearableOnly
+    */
+    let Commerce_Price: Commerce.Price
+    
+    /**
+    * Contains all the essential details about an item available for purchase in a Lens.
+    * When products are queried, these objects are received, which include information like the product's unique ID,
+    * its type (e.g., a non-consumable), its display name, a description, and its price.
+    * This information is crucial for presenting products to users in a Lens's store or interface.
+    
+    * @wearableOnly
+    */
+    let Commerce_Product: Commerce.Product
+    
+    /**
+    * Defines the type of product that can be purchased in a Lens.
+    
+    * @wearableOnly
+    */
+    let Commerce_ProductType: Commerce.ProductType
+    
+    /**
+    * Represents a completed or pending transaction for a product.
+    * When a user buys something, or when their purchase history is retrieved, `Purchase` objects are received.
+    * These objects contain important details like the unique ID of the purchase, the ID of the product that was bought,
+    * when the purchase occurred, and its current state (e.g., purchased, pending, or invalidated).
+    
+    * @wearableOnly
+    */
+    let Commerce_Purchase: Commerce.Purchase
+    
+    /**
+    * Provides an immediate summary of the outcome of a purchase attempt.
+    * It indicates whether the transaction was successful, canceled by the user, or if an error occurred.
+    * This is the first place to look to understand the immediate result of a purchase flow.
+    
+    * @wearableOnly
+    */
+    let Commerce_PurchaseResult: Commerce.PurchaseResult
+    
+    /**
+    * Represents the state of a purchase in a Lens.
+    
+    * @wearableOnly
+    */
+    let Commerce_PurchaseState: Commerce.PurchaseState
+    
+    /**
+    * Defines the possible outcomes of a purchase attempt in a Lens.
+    
+    * @wearableOnly
+    */
+    let Commerce_ResponseCode: Commerce.ResponseCode
+    
+    /**
+    * The main entry point for integrating commerce functionalities into a Lens.
+    * It is typically added as an {@link Asset} in a Lens Studio project. This module provides access to the primary method
+    * for configuring and creating a {@link Client} object, which is used for all in-Lens purchase and product management
+    * needs. This module allows a Lens to interact with the commerce system, enabling features like displaying products,
+    * initiating purchases, and managing user entitlements.
+    
+    * @wearableOnly
+    */
+    let CommerceKitModule: CommerceKitModule
+    
+    /**
+    * The base class for all components. Components are attached to {@link SceneObject} and add various behaviors to it.
+    
+    * @remarks
     * For example, in the default scene, the `Camera Object` is a scene object which contains the {@link Camera} component to render the scene from the point of view of that object. You can add a {@link DeviceTracking} component onto the object, so that the {@link Transform} of that object is modified based on the device's movement.
     
     * @see [Building Lenses](https://developers.snap.com/lens-studio/overview/building-your-first-lens/built-in-ar-effects) Guide.
@@ -23358,7 +25631,7 @@ declare namespace _palette {
     let ConnectedLensModule_RealtimeStoreCreationInfo: ConnectedLensModule.RealtimeStoreCreationInfo
     
     /**
-    * Gives information about the Realtime Store delete operation. 
+    * Gives information about the Realtime Store delete operation.
     */
     let ConnectedLensModule_RealtimeStoreDeleteInfo: ConnectedLensModule.RealtimeStoreDeleteInfo
     
@@ -23398,6 +25671,11 @@ declare namespace _palette {
     let ConnectedLensSessionOptions_SessionCreationType: ConnectedLensSessionOptions.SessionCreationType
     
     /**
+    * Contains various utilities that can print out various messages in the Logger panel.
+    */
+    let console: console
+    
+    /**
     * Constraints body motion in configurable ways, for simulating physical objects such as joints and hinges.
     */
     let Constraint: Constraint
@@ -23409,17 +25687,15 @@ declare namespace _palette {
     * This component allows developers to simulate certain types of mechanical connections or joints between objects.
     
     * @see [Constrain Types](https://developers.snap.com/lens-studio/features/physics/physics-examples/physics#constraint-types) guide.
-    
     */
     let ConstraintComponent: ConstraintComponent
     
     /**
-    * Contact point between two colliding objects.  
+    * Contact point between two colliding objects.
     
     * @see {@link ColliderComponent}
     * @see {@link CollisionEnterEventArgs}
     * @see {@link CollisionExitEventArgs}
-    
     */
     let Contact: Contact
     
@@ -23429,6 +25705,16 @@ declare namespace _palette {
     let CropTextureProvider: CropTextureProvider
     
     /**
+    * The Crypto class in our system serves a similar purpose to the web standard Crypto module, providing high-quality cryptographic operations crucial for secure application development. It offers methods for generating cryptographically secure UUIDs, random bytes, and SHA hashes. This class is designed to meet the stringent security requirements of applications handling authentication and sensitive transactions, complementing our existing framework by adding enhanced security features for robust and reliable cryptographic functionality.
+    */
+    let crypto: crypto
+    
+    /**
+    * The `Crypto.subtle` read-only property returns an object which can then be used to perform low-level cryptographic operations.
+    */
+    let crypto_subtle: crypto.subtle
+    
+    /**
     * Used with {@link Pass}'s `cullMode` property.
     * Determines which faces of a surface are culled (not rendered).
     */
@@ -23436,7 +25722,6 @@ declare namespace _palette {
     
     /**
     * A component managing and tracking a group of Custom Locations with known relative transforms. The {@link Transform} of the Custom Location Group's {@link SceneObject} is updated when any child is successfully tracked.
-    
     */
     let CustomLocationGroupComponent: CustomLocationGroupComponent
     
@@ -23526,9 +25811,9 @@ declare namespace _palette {
     let DepthFrameSession: DepthFrameSession
     
     /**
-    * Provides access to a {@link DepthFrameSession} on Spectacles device. 
+    * Provides access to a {@link DepthFrameSession} on Spectacles device.
     
-    * @remarks 
+    * @remarks
     * Used for requesting {@link DepthFrameData}.
     
     * @see [Depth Module](https://developers.snap.com/spectacles/about-spectacles-features/apis/depth-module) guide.
@@ -23565,7 +25850,7 @@ declare namespace _palette {
     let DeviceInfoSystem: DeviceInfoSystem
     
     /**
-    * Used to track a real-world location in a Lens. 
+    * Used to track a real-world location in a Lens.
     
     * @see [Landmarkers](https://developers.snap.com/lens-studio/features/location-ar/guide) guide.
     * @see [Custom Location AR](https://developers.snap.com/lens-studio/features/location-ar/custom-landmarker) guide.
@@ -23590,7 +25875,6 @@ declare namespace _palette {
     * object to a position and rotation that matches the physical camera's pose in the world.
     
     * @see [Tracking Modes](https://developers.snap.com/lens-studio/features/ar-tracking/world/tracking-modes) guide for more information.
-    
     */
     let DeviceTracking: DeviceTracking
     
@@ -23612,20 +25896,20 @@ declare namespace _palette {
     /**
     * Provides access to [Question Answering Service](https://developers.snap.com/lens-studio/features/voice-ml/q&a-template-guide) powered by VoiceML.
     
-    * @remarks 
+    * @remarks
     * Allows to answer questions based on provided text.
     */
     let DialogModule: DialogModule
     
     /**
-    * An Audio Component effect that simulates sound attenuation based on the orientation of the transform relative to the {@link AudioListenerComponent}. 
+    * An Audio Component effect that simulates sound attenuation based on the orientation of the transform relative to the {@link AudioListenerComponent}.
     */
     let DirectivityEffect: DirectivityEffect
     
     let DirectMultiplayerSessionOptions: DirectMultiplayerSessionOptions
     
     /**
-    * An audio effect that simulates sound attenuation based on the distance between the Audio and the {@link AudioListenerComponent}. 
+    * An audio effect that simulates sound attenuation based on the distance between the Audio and the {@link AudioListenerComponent}.
     */
     let DistanceEffect: DistanceEffect
     
@@ -23633,6 +25917,13 @@ declare namespace _palette {
     * The domain of a {@link ShoppingModule}. You can leave this empty if you are tagging the products from the catalog dynamically, and assets are fetched and sent to the Lens.
     */
     let DomainInfo: DomainInfo
+    
+    /**
+    * Triggered when a double tap event has occured.
+    */
+    let DoubleTapEvent: DoubleTapEvent
+    
+    let DoubleTapEventArgs: DoubleTapEventArgs
     
     /**
     * Used in {@link Text}'s `dropShadowSettings` property.
@@ -23653,8 +25944,7 @@ declare namespace _palette {
     let EventRegistration: EventRegistration
     
     /**
-    * Expression names used with `FaceRenderObjectProvider.getExpressionWeightByName()`
-    * and returned by `FaceRenderObjectProvider.getExpressionNames()`.
+    * Expression names used with `FaceRenderObjectProvider.getExpressionWeightByName()` and returned by `FaceRenderObjectProvider.getExpressionNames()`.
     */
     let Expressions: Expressions
     
@@ -23672,7 +25962,7 @@ declare namespace _palette {
     * 2. On the imported audio asset, make sure `Bundled` is disabled
     * 3. Reference the audio asset somewhere in the scene (for example, `@input audioAsset: AudioTrackAsset`)
     
-    * When this module is present in a Lens, the client running the Lens (either Snapchat or Lens Studio) will automatically fetch and auto-play the licensed music track included in the Lens. 
+    * When this module is present in a Lens, the client running the Lens (either Snapchat or Lens Studio) will automatically fetch and auto-play the licensed music track included in the Lens.
     
     * This provides the benefits of:
     * - The music file is not included in the lens, leading to smaller lens size
@@ -23724,7 +26014,7 @@ declare namespace _palette {
     let FaceLostEvent: FaceLostEvent
     
     /**
-    * Maps a 2D texture to the user's face. 
+    * Maps a 2D texture to the user's face.
     
     * @remarks
     * The texture appears to be painted on user's skin and contorts with facial movements. Great for full face masks but also can be used for realistic makeup.
@@ -23782,7 +26072,7 @@ declare namespace _palette {
     let FixedCollisionMesh: FixedCollisionMesh
     
     /**
-    * Fully constrain rotation and translation.  
+    * Fully constrain rotation and translation.
     
     * @see {@link ConstraintComponent}.
     */
@@ -23813,7 +26103,6 @@ declare namespace _palette {
     
     /**
     * Asset that contains [Gaussian Splats](https://developers.snap.com/lens-studio/features/graphics/gaussian-splatting). Used with {@link GaussianSplattingVisual}.
-    
     */
     let GaussianSplattingAsset: GaussianSplattingAsset
     
@@ -23909,7 +26198,6 @@ declare namespace _palette {
     
     /**
     * Provides additional data for the tracked hand. You can figure out whether the tracked hand is the left hand by accessing the *isLeft* property [true/false], as well as the probability of this data through the  *isLeftProbability*  property [0-1].
-    
     */
     let HandSpecificData: HandSpecificData
     
@@ -23917,13 +26205,11 @@ declare namespace _palette {
     * Enables Hand Tracking 3D for the {@link ObjectTracking3D} component.
     
     * @see [3D Body and Hand Tracking](https://developers.snap.com/lens-studio/features/ar-tracking/body/object-tracking-3d) guide.
-    
     */
     let HandTracking3DAsset: HandTracking3DAsset
     
     /**
     * Triggers haptic feedback on the device. (iOS Devices only)
-    
     */
     let HapticFeedbackSystem: HapticFeedbackSystem
     
@@ -24045,9 +26331,28 @@ declare namespace _palette {
     let HorizontalOverflow: HorizontalOverflow
     
     /**
+    * Triggered when hovering state has ended on an {@link InteractionComponent}.
+    */
+    let HoverEndEvent: HoverEndEvent
+    
+    /**
+    * The arguments passed in by {@link HoverEndEvent}.
+    */
+    let HoverEndEventArgs: HoverEndEventArgs
+    
+    /**
     * Triggered when a mouse hover event occurs. Only triggered in the `Preview` panel of Lens studio. Useful when working with Spectacles, where you can simulate the use of your hand to hover over an object. Does not get triggered on mobile.
     */
     let HoverEvent: HoverEvent
+    
+    let HoverEventArgs: HoverEventArgs
+    
+    let HoverStartEvent: HoverStartEvent
+    
+    /**
+    * The arguments passed in by {@link HoverStartEvent}.
+    */
+    let HoverStartEventArgs: HoverStartEventArgs
     
     /**
     * The base class for parameter objects passed into event callbacks.
@@ -24055,7 +26360,7 @@ declare namespace _palette {
     let IEventParameters: IEventParameters
     
     /**
-    * Used to display 2D textures within a scene. 
+    * Used to display 2D textures within a scene.
     
     * @remarks
     * Commonly used with {@link ScreenTransform} for drawing images on the screen.
@@ -24074,11 +26379,6 @@ declare namespace _palette {
     let ImageFrame: ImageFrame
     
     /**
-    * Spectacles: ImageRequest contains the parameterization for a still image request, which is a request for a high resolution image of the user's current camera stream. This object is created from the {@link CameraModule}. Currently there are no parameters that can be set for an ImageRequest.
-    */
-    let ImageRequest: ImageRequest
-    
-    /**
     * Builds InputPlaceHolders for MLComponent.
     */
     let InputBuilder: InputBuilder
@@ -24090,9 +26390,9 @@ declare namespace _palette {
     let InputPlaceholder: InputPlaceholder
     
     /**
-    * Enables invoking touch interactions with a {@link BaseMeshVisual} rendered to specific {@link Camera}. 
+    * Enables invoking touch interactions with a {@link BaseMeshVisual} rendered to specific {@link Camera}.
     
-    * @remarks  
+    * @remarks
     * Sometimes touch events within lens may collide with Snapchat touch events. To avoid this use Touch Blocking.
     
     * @see [Touch And Interactions](https://developers.snap.com/lens-studio/features/scripting/touch-input) guide.
@@ -24101,14 +26401,12 @@ declare namespace _palette {
     let InteractionComponent: InteractionComponent
     
     /**
-    * Provides access to the open internet. Available only on Spectacles.
-    
+    * Provides access to the open internet. Available only on Spectacles and Camera Kit.
     */
     let InternetModule: InternetModule
     
     /**
     * Arguments used with the onInternetStatusChanged event.
-    
     */
     let InternetStatusChangedArgs: InternetStatusChangedArgs
     
@@ -24152,7 +26450,7 @@ declare namespace _palette {
     let LayerSet: LayerSet
     
     /**
-    * A leaderboard which can contain scores and information about participating users. Accessible through the `LeaderboardModule` asset. 
+    * A leaderboard which can contain scores and information about participating users. Accessible through the `LeaderboardModule` asset.
     */
     let Leaderboard: Leaderboard
     
@@ -24225,9 +26523,9 @@ declare namespace _palette {
     let LoadStatus: LoadStatus
     
     /**
-    * Asset that provides the necessary localized text for your Lens. 
+    * Asset that provides the necessary localized text for your Lens.
     
-    * @remarks 
+    * @remarks
     * The asset refers to a folder containing files for each language that you’ve translated your texts to.
     
     * The Lens will automatically use the correct localized string provided by a Localizations Asset based on the Snapchatter's device language.
@@ -24246,7 +26544,6 @@ declare namespace _palette {
     
     /**
     * Enables placing a {@link SceneObject} at a real world location provided by {@link LocationAsset} and specified relative position.
-    
     */
     let LocatedAtComponent: LocatedAtComponent
     
@@ -24257,12 +26554,11 @@ declare namespace _palette {
     
     /**
     * Provides access to location cloud storage depending upon the {@link LocationCloudStorageOptions}.
-    
     */
     let LocationCloudStorageModule: LocationCloudStorageModule
     
     /**
-    * Used to configure LocationCloudStorage module with various options. 
+    * Used to configure LocationCloudStorage module with various options.
     */
     let LocationCloudStorageOptions: LocationCloudStorageOptions
     
@@ -24274,7 +26570,6 @@ declare namespace _palette {
     /**
     * Used by {@link DeviceLocationTrackingComponent} to indicate the user's distance from the landmarker location.
     * See the [Landmarker guide](https://developers.snap.com/lens-studio/features/location-ar/guide) for more information.
-    
     */
     let LocationProximityStatus: LocationProximityStatus
     
@@ -24287,9 +26582,6 @@ declare namespace _palette {
     * The LocationService allows the user to provide their location to Lens applications if they so desire. For privacy reasons, the user is asked for permission to report location information.
     
     * > **Spectacles**: To use location services, users must be logged in and paired with their Snapchat account, and their location permission must be enabled. Users are also expected to be connected to the internet. To access the location API on Spectacles, refer to the [Spectacles Location](https://developers.snap.com/spectacles/about-spectacles-features/apis/location) documentation for examples and extra setup instructions regarding permissions.
-    
-    
-    
     */
     let LocationService: LocationService
     
@@ -24297,6 +26589,16 @@ declare namespace _palette {
     * Provides access to a location's texture--such as when working with City Scale AR.
     */
     let LocationTextureProvider: LocationTextureProvider
+    
+    /**
+    * Arguments used with the {@link InteractionComponent#onLongPressEnd} event.
+    */
+    let LongPressEndEventArgs: LongPressEndEventArgs
+    
+    /**
+    * Arguments used with the {@link InteractionComponent#onLonPressStart} event.
+    */
+    let LongPressStartEventArgs: LongPressStartEventArgs
     
     /**
     * Orients a {@link SceneObject} towards a target {@link SceneObject}.
@@ -24322,19 +26624,16 @@ declare namespace _palette {
     
     /**
     * Represents the full set of Lyrics data for tracked music. Can be accessed through {@link LyricsTracker#fullLyrics | LyricsTracker.fullLyrics} when lyrics are available.
-    
     */
     let Lyrics: Lyrics
     
     /**
     * Represents a single line of Lyrics.
-    
     */
     let LyricsLine: LyricsLine
     
     /**
     * Represents a single sync/word of a {@link LyricsLine}.
-    
     */
     let LyricsSync: LyricsSync
     
@@ -24344,8 +26643,6 @@ declare namespace _palette {
     * Note that lyrics data may not be available immediately when this class is accessed. Subscribe to {@link LyricsTracker#onLyricsAvailable | onLyricsAvailable} to be notified when lyrics data becomes available.
     
     * Also note that some music tracks may not support lyrics. In this case, {@link LyricsTracker#onLyricsAvailable | onLyricsAvailable} will not be triggered.
-    
-    
     */
     let LyricsTracker: LyricsTracker
     
@@ -24355,8 +26652,7 @@ declare namespace _palette {
     let LyricsType: LyricsType
     
     /**
-    * Namespace for Machine Learning related classes and methods.
-    * For more information, see the [Machine Learning Overview](https://developers.snap.com/lens-studio/features/snap-ml/ml-overview).
+    * Namespace for Machine Learning related classes and methods. For more information, see the [Machine Learning Overview](https://developers.snap.com/lens-studio/features/snap-ml/ml-overview).
     */
     let MachineLearning: MachineLearning
     
@@ -24472,7 +26768,7 @@ declare namespace _palette {
     * Masks out visuals and {@link InteractionComponent} touch events area within a rectangle defined by {@link ScreenTransform} component.
     
     * @remarks
-    * Any {@link RenderMeshVisual} or {@link InteractionComponent} components will be clipped within user defined 2D bounds. These 2D bounds are defined by a {@link ScreenTransform}. 
+    * Any {@link RenderMeshVisual} or {@link InteractionComponent} components will be clipped within user defined 2D bounds. These 2D bounds are defined by a {@link ScreenTransform}.
     
     * @see [Masking Component](https://developers.snap.com/lens-studio/lens-studio-workflow/scene-set-up/2d/masking-component)
     */
@@ -24496,7 +26792,7 @@ declare namespace _palette {
     /**
     * An asset that describes how visual objects should appear.
     
-    * @remarks 
+    * @remarks
     * Each Material is a collection of {@link Pass} which define the actual rendering passes.
     * Materials are used by {@link MaterialMeshVisual} for drawing meshes in the scene.
     
@@ -24569,8 +26865,17 @@ declare namespace _palette {
     let MeshTopology: MeshTopology
     
     /**
-    * Deprecated. Serves as alias for {@link BaseMeshVisual}.
+    * This class has been DEPRECATED starting in Lens Studio 2.3.
+    * The `Component.MeshVisual` typename is now an alias for [BaseMeshVisual](https://developers.snap.com/api/classes/BaseMeshVisual).
+    * When upgrading a project to Lens Studio 2.3 or higher, any instances of the MeshVisual component will be upgraded to [RenderMeshVisual](https://developers.snap.com/api/classes/RenderMeshVisual).
     
+    * This class was split into the following three classes, to better distinguish the behaviors of child classes.
+    
+    * [BaseMeshVisual](https://developers.snap.com/api/classes/BaseMeshVisual): Base class for all visual classes using meshes to render
+    
+    * [MaterialMeshVisual](https://developers.snap.com/api/classes/MaterialMeshVisual): Child class of BaseMeshVisual, gives access to the [Materials](https://developers.snap.com/api/classes/Material) used to render
+    
+    * [RenderMeshVisual](https://developers.snap.com/api/classes/RenderMeshVisual): Child class of MaterialMeshVisual, gives access to the [RenderMesh](https://developers.snap.com/api/classes/RenderMesh) used to render
     */
     let MeshVisual: MeshVisual
     
@@ -24617,7 +26922,6 @@ declare namespace _palette {
     /**
     * Defines a set of haptic feedback patterns that can be requested.
     
-    
     * @wearableOnly
     */
     let MotionController_HapticFeedback: MotionController.HapticFeedback
@@ -24632,7 +26936,6 @@ declare namespace _palette {
     /**
     * Settings for configuring a motion controller.
     
-    
     * @wearableOnly
     */
     let MotionController_MotionControllerOptions: MotionController.MotionControllerOptions
@@ -24644,9 +26947,6 @@ declare namespace _palette {
     */
     let MotionController_MotionType: MotionController.MotionType
     
-    /**
-    * Settings for configuring a motion controller.
-    */
     let MotionController_Options: MotionController.Options
     
     /**
@@ -24658,7 +26958,6 @@ declare namespace _palette {
     
     /**
     * Describes Motion Controller tracking quality state, whether the data received from the Motion Controller is accurate or not.
-    
     
     * @wearableOnly
     */
@@ -24684,7 +26983,7 @@ declare namespace _palette {
     let MouthOpenedEvent: MouthOpenedEvent
     
     /**
-    * An instance of a Connected Lens session among a group of participants who were successfully invited into the experience. 
+    * An instance of a Connected Lens session among a group of participants who were successfully invited into the experience.
     */
     let MultiplayerSession: MultiplayerSession
     
@@ -24694,7 +26993,8 @@ declare namespace _palette {
     let NamedValues: NamedValues
     
     /**
-    * Tracking type used by the {@link DeviceTracking} component to specify what type of plane to detect. 
+    * Tracking type used by the {@link DeviceTracking} component to specify what type of plane to detect.
+    * When tracking planes, the {@link DeviceTracking} component must be set to `World` mode.
     */
     let NativePlaneTrackingType: NativePlaneTrackingType
     
@@ -24718,7 +27018,7 @@ declare namespace _palette {
     let ObjectPrefab: ObjectPrefab
     
     /**
-    * Provides additional data for the tracked object. For example, with hand tracking, you can figure out whether the tracked hand is the left hand by accessing the `isLeft` property [true/false], as well as the probability of this data through the `isLeftProbability` property [0-1]. 
+    * Provides additional data for the tracked object. For example, with hand tracking, you can figure out whether the tracked hand is the left hand by accessing the `isLeft` property [true/false], as well as the probability of this data through the `isLeftProbability` property [0-1].
     */
     let ObjectSpecificData: ObjectSpecificData
     
@@ -24728,7 +27028,7 @@ declare namespace _palette {
     * @remarks
     * Moves the local {@link ScreenTransform} to match the detected image.
     
-    * @see [Object Tracking](https://developers.snap.com/lens-studio/features/ar-tracking/world/object-tracking) guide. 
+    * @see [Object Tracking](https://developers.snap.com/lens-studio/features/ar-tracking/world/object-tracking) guide.
     * @see[Hand Gestures](https://developers.snap.com/lens-studio/features/ar-tracking/hand/hand-gestures) guide.
     */
     let ObjectTracking: ObjectTracking
@@ -24766,21 +27066,18 @@ declare namespace _palette {
     
     /**
     * Triggered when the `ScriptComponent` this event is bound to is disabled.
-    
     */
     let OnDisableEvent: OnDisableEvent
     
     /**
     * Triggered when the `ScriptComponent` this event is bound to is enabled.
-    
     */
     let OnEnableEvent: OnEnableEvent
     
     /**
-    * Triggered when users tap the menu button in Palm UI. 
+    * Triggered when users tap the menu button in Palm UI.
     
     * When paused, certain behaviors like animations or script updates continue running in the background, while inputs (e.g., Hand Tracking, Mobile Controller) are disabled to allow the system overlay to take priority. Developers should manage scenarios where the Lens is paused to maintain a seamless experience.
-    
     
     * @wearableOnly
     */
@@ -24790,7 +27087,6 @@ declare namespace _palette {
     * Triggered when users tap the menu button in Palm UI during pause state.
     
     * When paused, certain behaviors like animations or script updates continue running in the background, while inputs (e.g., Hand Tracking, Mobile Controller) are disabled to allow the system overlay to take priority. Developers should manage scenarios where the Lens is resumed after pause to maintain a seamless experience.
-    
     
     * @wearableOnly
     */
@@ -24824,7 +27120,7 @@ declare namespace _palette {
     let OutputPlaceholder: OutputPlaceholder
     
     /**
-    * Exposes state generated for ColliderComponent overlap events. 
+    * Exposes state generated for ColliderComponent overlap events.
     
     * @see {@link ColliderComponent}
     * @see {@link OverlapEnterEventArgs}
@@ -24834,7 +27130,7 @@ declare namespace _palette {
     let Overlap: Overlap
     
     /**
-    * Args used for {@link ColliderComponent.onOverlapEnter}, which is triggered when the collider begins overlapping another object. Typically used for volume triggers.
+    * Args used for {@link ColliderComponent.onOverlapEnter}, which is triggered when the collider begins overlapping another object. Typically used for volume triggers
     */
     let OverlapEnterEventArgs: OverlapEnterEventArgs
     
@@ -24861,6 +27157,21 @@ declare namespace _palette {
     * @wearableOnly
     */
     let PalmTapUpArgs: PalmTapUpArgs
+    
+    /**
+    * Arguments used with the {@link InteractionComponent#onPanEnd} event.
+    */
+    let PanEndEventArgs: PanEndEventArgs
+    
+    /**
+    * Arguments used with the {@link InteractionComponent#onPanMove} event.
+    */
+    let PanMoveEventArgs: PanMoveEventArgs
+    
+    /**
+    * Arguments used with the {@link InteractionComponent#onPanStart} event.
+    */
+    let PanStartEventArgs: PanStartEventArgs
     
     /**
     * Controls how a mesh will get rendered. Each Pass acts as an interface for the shader it's associated with.
@@ -24903,9 +27214,6 @@ declare namespace _palette {
     */
     let Physics: Physics
     
-    /**
-    * Namespace containing static helper methods for {@link Constraint}.
-    */
     let Physics_Constraint: Physics.Constraint
     
     /**
@@ -24937,6 +27245,21 @@ declare namespace _palette {
     * @wearableOnly
     */
     let PinchDownArgs: PinchDownArgs
+    
+    /**
+    * Arguments used with the {@link InteractionComponent#onPinchEnd} event.
+    */
+    let PinchEndEventArgs: PinchEndEventArgs
+    
+    /**
+    * Arguments used with the {@link InteractionComponent#onPinchMove} event.
+    */
+    let PinchMoveEventArgs: PinchMoveEventArgs
+    
+    /**
+    * Arguments used with the {@link InteractionComponent#onPinchStart} event.
+    */
+    let PinchStartEventArgs: PinchStartEventArgs
     
     /**
     * The arguments of the PinchStrength event on `GestureModule`
@@ -24975,7 +27298,6 @@ declare namespace _palette {
     
     /**
     * Represents 3D locations of stationary features in the environment. The resulting cloud of points provides a sparse description of the 3D environment.
-    
     */
     let PointCloud: PointCloud
     
@@ -24997,7 +27319,7 @@ declare namespace _palette {
     let PostEffectVisual: PostEffectVisual
     
     /**
-    * Performs collision tests (such as ray casts) in one or more world. 
+    * Performs collision tests (such as ray casts) in one or more world.
     * @see {@link Physics.createGlobalProbe}
     * @see {@link Physics.createRootProbe}
     * @see {@link WorldComponent.createProbe}
@@ -25015,17 +27337,15 @@ declare namespace _palette {
     let ProceduralTextureProvider: ProceduralTextureProvider
     
     /**
-    * Declares the precise location tracking permission for your Lens project. 
+    * Declares the precise location tracking permission for your Lens project.
     
     * @see [Permissions Overview](https://developers.snap.com/spectacles/permission-privacy/overview#list-of-permissions-types).
     * @see [Location](https://developers.snap.com/spectacles/about-spectacles-features/apis/location) guide for Spectacles.
-    * @see {@link LocationService} 
+    * @see {@link LocationService}
     */
     let ProcessedLocationModule: ProcessedLocationModule
     
     let Properties: Properties
-    
-    let PropertyOnEventArgs: PropertyOnEventArgs
     
     /**
     * Overrides a property. Used with {@link MaterialMeshVisual}.
@@ -25036,9 +27356,14 @@ declare namespace _palette {
     * Base class for all resource providers. Providers are the implementation for {@link Asset}.
     
     * @remarks
-    * For example: {@link VideoTextureProvider} is the implementation for a {@link Texture} backed by a video file. 
+    * For example: {@link VideoTextureProvider} is the implementation for a {@link Texture} backed by a video file.
     */
     let Provider: Provider
+    
+    /**
+    * Texture Provider used as output from other systems, for instance SnapML.
+    */
+    let ProxyTextureProvider: ProxyTextureProvider
     
     /**
     * A quaternion, used to represent rotation.
@@ -25046,11 +27371,11 @@ declare namespace _palette {
     let quat: quat
     
     /**
-    * Declares the coarse location tracking permission for your Lens project. 
+    * Declares the coarse location tracking permission for your Lens project.
     
     * @see [Permissions Overview](https://developers.snap.com/spectacles/permission-privacy/overview#list-of-permissions-types).
     * @see [Location](https://developers.snap.com/spectacles/about-spectacles-features/apis/location) guide for Spectacles.
-    * @see {@link LocationService} 
+    * @see {@link LocationService}
     */
     let RawLocationModule: RawLocationModule
     
@@ -25078,14 +27403,13 @@ declare namespace _palette {
     * An axis aligned rectangle.
     * Used by `anchors` and `offsets` in {@link ScreenTransform} to represent screen boundaries.
     * Rect can only store finite numbers in the range Number.MIN_VALUE to Number.MAX_VALUE.
-    
     */
     let Rect: Rect
     
     /**
     * Positions {@link ScreenTransform} according to a cropped region of a texture provided by {@link CropTextureProvider}.
     
-    * @remarks 
+    * @remarks
     * Used with Hand Segmentation texture and ML face effects.
     
     * @see [Crop Textures](https://developers.snap.com/lens-studio/features/snap-ml/ml-component/crop-textures) guide.
@@ -25105,8 +27429,6 @@ declare namespace _palette {
     
     /**
     * Allows the Lens to download and integrate remote media content such as 3D GLTF assets, images, audio tracks, and video textures into Lenses.
-    
-    
     */
     let RemoteMediaModule: RemoteMediaModule
     
@@ -25146,7 +27468,6 @@ declare namespace _palette {
     
     /**
     * Provides access to Snap authorized remote services.
-    
     */
     let RemoteServiceModule: RemoteServiceModule
     
@@ -25222,7 +27543,7 @@ declare namespace _palette {
     /**
     * Texture Provider giving the camera texture that is the opposite of {@link CameraTextureProvider}. The provider will have {@link LoadStatus.Loading} until the camera feed is available. On some devices it will never be available. Use {@link DeviceInfoSystem#supportsDualCamera} to check the current device.
     
-    * For example, if the `CameraTextureProvider` is providing the rear camera feed, `ReverseCameraTextureProvider` would provide the front camera feed. 
+    * For example, if the `CameraTextureProvider` is providing the rear camera feed, `ReverseCameraTextureProvider` would provide the front camera feed.
     */
     let ReverseCameraTextureProvider: ReverseCameraTextureProvider
     
@@ -25248,10 +27569,9 @@ declare namespace _palette {
     /**
     * A proxy class that provides the access to the properties of the sampler under the hood of the passes contained in the {@link Material} asset and {@link VFXAsset} via either VFXAsset's `PassWrapper.samplers` or Material's `Pass.samplers`. Each property returns a corresponding {@link SamplerWrapper}.
     
-    * This class uses dynamic properties, meaning that its properties depend on the referenced material or vfx asset and thus not shown below. 
+    * This class uses dynamic properties, meaning that its properties depend on the referenced material or vfx asset and thus not shown below.
     
-    * In the example below, the material that is referenced in the material asset contains the `baseTex` property, which this class then provides access to. 
-    
+    * In the example below, the material that is referenced in the material asset contains the `baseTex` property, which this class then provides access to.
     */
     let SamplerWrappers: SamplerWrappers
     
@@ -25270,7 +27590,7 @@ declare namespace _palette {
     let ScanModule_Contexts: ScanModule.Contexts
     
     /**
-    * The base class for scenewide events. SceneEvents can be created using {@link ScriptComponent}'s {@link ScriptComponent#createEvent} method. 
+    * The base class for scenewide events. SceneEvents can be created using {@link ScriptComponent}'s {@link ScriptComponent#createEvent} method.
     
     * @see [Script Events](https://developers.snap.com/lens-studio/features/scripting/script-events) guide.
     */
@@ -25307,7 +27627,7 @@ declare namespace _palette {
     /**
     * Used for positioning objects in 2D screen space. Modifies the position, size, and anchoring of a rectangle relatively to a parent {@link ScreenTransform}.
     
-    * @remarks 
+    * @remarks
     * It overrides the regular {@link Transform} component on the {@link SceneObject} it's attached to.
     
     * @see [Screen Transform](https://developers.snap.com/lens-studio/lens-studio-workflow/scene-set-up/2d/screen-transform-overview) guide.
@@ -25320,11 +27640,11 @@ declare namespace _palette {
     let ScriptAsset: ScriptAsset
     
     /**
-    * Used to bind custom JavaScript or TypeScript code to specific Lens events for dynamic interactivity. 
+    * Used to bind custom JavaScript or TypeScript code to specific Lens events for dynamic interactivity.
     
     * @remarks These Script Components are attached to SceneObjects, providing the ability to modify properties and behaviors of those objects or others within the scene. Script Components expose input fields in the Inspector panel, allowing for customization of script behavior without altering code. Any script can access the ScriptComponent executing them through the variable `script`.
     
-    * @remarks 
+    * @remarks
     * @see [Scripting Overview](https://developers.snap.com/lens-studio/essential-skills/scripting/script-overview).
     * @see [Script Events Guide](https://developers.snap.com/lens-studio/features/scripting/script-events).
     */
@@ -25339,6 +27659,21 @@ declare namespace _palette {
     * Represents the Lens scene. Accessible through `global.scene`.
     */
     let ScriptScene: ScriptScene
+    
+    /**
+    * Arguments used with the {@link InteractionComponent#onScrollEnd} event.
+    */
+    let ScrollEndEventArgs: ScrollEndEventArgs
+    
+    /**
+    * Arguments used with the {@link InteractionComponent#onScroll} event.
+    */
+    let ScrollEventArgs: ScrollEventArgs
+    
+    /**
+    * Arguments used with the {@link InteractionComponent#onScrollStart} event.
+    */
+    let ScrollStartEventArgs: ScrollStartEventArgs
     
     /**
     * Segmentation model used for {@link SegmentationTextureProvider}.
@@ -25375,7 +27710,7 @@ declare namespace _palette {
     /**
     * Allows the creation of Shopping Lenses with an integrated Product Catalog.
     
-    * @remarks 
+    * @remarks
     * The ShoppingModule includes several input fields for you to define as you create your Shopping Lens. The fields include:
     
     **Domain:** name of the product line (e.g., Running Shoes).
@@ -25408,7 +27743,7 @@ declare namespace _palette {
     let SnapchatFriendUserInfo: SnapchatFriendUserInfo
     
     /**
-    * Represents a Snapchat user in order to pass to other APIs or to retrieve certain details about the user like display name. 
+    * Represents a Snapchat user in order to pass to other APIs or to retrieve certain details about the user like display name.
     */
     let SnapchatUser: SnapchatUser
     
@@ -25422,6 +27757,11 @@ declare namespace _palette {
     * For more information, see the [Marker Tracking](https://developers.snap.com/lens-studio/features/ar-tracking/world/marker-tracking) guide.
     */
     let SnapcodeMarkerProvider: SnapcodeMarkerProvider
+    
+    /**
+    * A handle to add automatic tags like mention stickers to the Snap.
+    */
+    let SnapData: SnapData
     
     /**
     * Called when the user taps on the capture button to record an image.
@@ -25443,12 +27783,54 @@ declare namespace _palette {
     */
     let SortOrder: SortOrder
     
+    /**
+    * Represents beat synchronization data for a music track.
+    */
+    let SoundSync: SoundSync
+    
+    /**
+    * Represents a single musical beat used to synchronize effects with music.
+    */
+    let SoundSyncBeat: SoundSyncBeat
+    
+    /**
+    * Tracks music beats and provides events for beat occurrences and playback state changes.
+    */
+    let SoundSyncTracker: SoundSyncTracker
+    
+    /**
+    * Provides access to the SourceMaps utilities that maps TypeScript to JavaScript.
+    */
+    let SourceMaps: SourceMaps
+    
     let SpatialAudio: SpatialAudio
     
     /**
     * @wearableOnly
     */
     let SpectaclesHandSpecificData: SpectaclesHandSpecificData
+    
+    /**
+    * SpectaclesMobileKitModule serves as the primary entry point for the Spectacles Mobile Kit, enabling interaction with
+    * a specific mobile application, such as requesting data or receiving events.
+    
+    * ⚠️ Best Practice: Only one SpectaclesMobileKitModule should be used per Lens.
+    
+    * ⚠️ Privacy Note: Using SpectaclesMobileKitModule requires the `INTERNET` permission. By default, access to sensitive
+    * data is restricted when a Lens uses internet-connected components. To enable access to both sensitive data and the
+    * internet simultaneously, certain Experimental APIs must be activated through a feature called Extended Permissions.
+    * Note that Lenses using Extended Permissions cannot be published.
+    
+    * @wearableOnly
+    */
+    let SpectaclesMobileKitModule: SpectaclesMobileKitModule
+    
+    /**
+    * Spectacles Mobile Kit session allows you to initiate the connection to peer, and send data.
+    
+    * @wearableOnly
+    */
+    let SpectaclesMobileKitSession: SpectaclesMobileKitSession
     
     /**
     * Representation the signal strength over time at various frequencies present in a particular waveform. Created by applying Fast Fourier Transform (FFT) on the overlapping segments of the audio data.
@@ -25464,16 +27846,6 @@ declare namespace _palette {
     * A sphere collision shape.
     */
     let SphereShape: SphereShape
-    
-    /**
-    * Used by {@link HairVisual} to visualize hair strands.
-    */
-    let SplineComponent: SplineComponent
-    
-    /**
-    * Represents transform data for deprecated SpriteVisual component. Use {@link ScreenTransform} in combination with {@link Image} component instead.
-    */
-    let SpriteAligner: SpriteAligner
     
     /**
     * A state used in an {@link DomainInfo} used by a {@link ShoppingModule}.
@@ -25526,7 +27898,36 @@ declare namespace _palette {
     */
     let StretchMode: StretchMode
     
+    /**
+    * A point in the {@link FaceStretchVisual} feature.
+    */
+    let StretchPoint: StretchPoint
+    
     let Studio: Studio
+    
+    /**
+    * Provides access to Supabase authentication and database capabilities.
+    
+    * @wearableOnly
+    */
+    let SupabaseModule: SupabaseModule
+    
+    /**
+    * Represents a Supabase project with configuration details.
+    
+    * @wearableOnly
+    */
+    let SupabaseProject: SupabaseProject
+    
+    /**
+    * The classification of the surface at the position where the ray intersects with the environment.
+    * This is used in {@link WorldQueryHitTestResult} to provide additional information about the surface type.
+    
+    * @experimental
+    
+    * @wearableOnly
+    */
+    let SurfaceClassification: SurfaceClassification
     
     /**
     * Used with {@link DeviceTracking#surfaceOptions} to change settings for Surface tracking mode.
@@ -25575,10 +27976,10 @@ declare namespace _palette {
     let TensorMath_ThresholdMethod: TensorMath.ThresholdMethod
     
     /**
-    * Renders 2D text with specific style and layout. 
+    * Renders 2D text with specific style and layout.
     
-    * @remarks 
-    * Supports Dynamic Text. 
+    * @remarks
+    * Supports Dynamic Text.
     
     * @see [Text](https://developers.snap.com/lens-studio/features/text/2d-text) guide.
     */
@@ -25588,7 +27989,6 @@ declare namespace _palette {
     * Renders 3D text with specific style, layout and material.
     
     * @see [3D Text](https://developers.snap.com/lens-studio/features/text/3d-text) guide.
-    
     */
     let Text3D: Text3D
     
@@ -25605,8 +28005,8 @@ declare namespace _palette {
     /**
     * Fill settings used by several text related classes.
     
-    * Used in {@link Text}'s `textFill` property, 
-    * {@link DropshadowSettings}' `fill` property, and 
+    * Used in {@link Text}'s `textFill` property,
+    * {@link DropshadowSettings}' `fill` property, and
     * {@link OutlineSettings}' `fill` property.
     */
     let TextFill: TextFill
@@ -25617,13 +28017,12 @@ declare namespace _palette {
     let TextFillMode: TextFillMode
     
     /**
-    * Declares the Input Framework (Text) permission for your Lens project. 
-    
+    * Declares the Input Framework (Text) permission for your Lens project.
     */
     let TextInputModule: TextInputModule
     
     /**
-    * Provides access to the device's input system. Accessible through `global.textInputSystem`. 
+    * Provides access to the device's input system. Accessible through `global.textInputSystem`.
     */
     let TextInputSystem: TextInputSystem
     
@@ -25666,7 +28065,7 @@ declare namespace _palette {
     let TextToSpeech_VoiceNames: TextToSpeech.VoiceNames
     
     /**
-    * Parameter returned in the `onTTSCompleteHandler` callback providing timing details for word pronunciation. 
+    * Parameter returned in the `onTTSCompleteHandler` callback providing timing details for word pronunciation.
     */
     let TextToSpeech_WordInfo: TextToSpeech.WordInfo
     
@@ -25675,7 +28074,7 @@ declare namespace _palette {
     
     * @remarks
     
-    * You can use only one `TextToSpeechModule` in a Lens. However, its methods can be called multiple times in parallel if needed. 
+    * You can use only one `TextToSpeechModule` in a Lens. However, its methods can be called multiple times in parallel if needed.
     
     * @see {@link TextToSpeech.Options}
     * @see [Text To Speech](https://developers.snap.com/lens-studio/features/voice-ml/text-to-speech) guide.
@@ -25695,7 +28094,7 @@ declare namespace _palette {
     let TextureProvider: TextureProvider
     
     /**
-    * Provides a {@link Texture} to do face tracking on for entities like {@link Head}, {@link FaceStretch}, and {@link FaceMesh}. 
+    * Provides a {@link Texture} to do face tracking on for entities like {@link Head}, {@link FaceStretch}, and {@link FaceMesh}.
     */
     let TextureTrackingScope: TextureTrackingScope
     
@@ -25842,13 +28241,12 @@ declare namespace _palette {
     let UpperBodyRenderObjectProvider: UpperBodyRenderObjectProvider
     
     /**
-    * Configures 3D Upper Body Tracking for the {@link ObjectTracking3D} component. 
+    * Configures 3D Upper Body Tracking for the {@link ObjectTracking3D} component.
     
     * @remarks
     * It is optimized to track with the face and in selfie use cases.
     
     * @see [Upper Body Tracking](https://developers.snap.com/lens-studio/features/ar-tracking/body/upper-body-tracking) guide.
-    
     */
     let UpperBodyTrackingAsset: UpperBodyTrackingAsset
     
@@ -25869,21 +28267,18 @@ declare namespace _palette {
     /**
     * A two dimensional vector.
     * Vectors can only store finite numbers in the range Number.MIN_VALUE to Number.MAX_VALUE.
-    
     */
     let vec2: vec2
     
     /**
-    * A three dimensional vector. 
+    * A three dimensional vector.
     * Vectors can only store finite numbers in the range Number.MIN_VALUE to Number.MAX_VALUE.
-    
     */
     let vec3: vec3
     
     /**
     * A four dimensional vector.
     * Vectors can only store finite numbers in the range Number.MIN_VALUE to Number.MAX_VALUE.
-    
     */
     let vec4: vec4
     
@@ -25914,7 +28309,7 @@ declare namespace _palette {
     let VerticalOverflow: VerticalOverflow
     
     /**
-    * Defines a VFX to use with {@link VFXComponent}. 
+    * Defines a VFX to use with {@link VFXComponent}.
     * @see [VFX](https://developers.snap.com/lens-studio/learning-lens-studio/graphics/particles/vfx-editor/introduction-and-concepts) guide.
     */
     let VFXAsset: VFXAsset
@@ -25923,6 +28318,16 @@ declare namespace _palette {
     * Renders {@link VFXAsset} in scene.
     */
     let VFXComponent: VFXComponent
+    
+    /**
+    * Allows you to record a new texture (i.e video), based on on another texture.
+    */
+    let VideoRecorder: VideoRecorder
+    
+    /**
+    * Configuration options for {@link VideoRecorder}.
+    */
+    let VideoRecorder_Options: VideoRecorder.Options
     
     /**
     * Describes the current status of a {@link VideoTextureProvider}.
@@ -25936,14 +28341,13 @@ declare namespace _palette {
     
     /**
     * Base class for all visual Components.
-    
     */
     let Visual: Visual
     
     let VoiceML: VoiceML
     
     /**
-    * Additional parameters are used to provide additional data for NlpModels and NlpResponses. 
+    * Additional parameters are used to provide additional data for NlpModels and NlpResponses.
     */
     let VoiceML_AdditionalParam: VoiceML.AdditionalParam
     
@@ -25960,17 +28364,17 @@ declare namespace _palette {
     let VoiceML_BaseNlpResponse: VoiceML.BaseNlpResponse
     
     /**
-    * An NLP model used to detect keywords in the transcript of the input audio.  For example, you can have keyword detection which will trigger every time the word "red" is said, and another trigger for the word "yellow". 
+    * An NLP model used to detect keywords in the transcript of the input audio.  For example, you can have keyword detection which will trigger every time the word "red" is said, and another trigger for the word "yellow".
     */
     let VoiceML_KeywordModelGroup: VoiceML.KeywordModelGroup
     
     /**
-    * ListeningErrorEventArgs object returns in onListeningError callback. It contains the error code and description of the error. 
+    * ListeningErrorEventArgs object returns in onListeningError callback. It contains the error code and description of the error.
     */
     let VoiceML_ListeningErrorEventArgs: VoiceML.ListeningErrorEventArgs
     
     /**
-    * Provides the configuration for the audio input processing output. This can either include NLP processing using the {@link VoiceML.BaseNlpModel} or directly retrieving the transcription.  `speechContext` provides the ability to further improve the transcription accuracy given an assumed context. 
+    * Provides the configuration for the audio input processing output. This can either include NLP processing using the {@link VoiceML.BaseNlpModel} or directly retrieving the transcription.  `speechContext` provides the ability to further improve the transcription accuracy given an assumed context.
     */
     let VoiceML_ListeningOptions: VoiceML.ListeningOptions
     
@@ -25987,18 +28391,16 @@ declare namespace _palette {
     * “Take a Snap”: takes a snapshot.
     * “Start Recording”: starts a video recording if not already started.
     * "Stop Recording”: stops an ongoing video recording, if applicable.
-    
     */
     let VoiceML_NlpCommandResponse: VoiceML.NlpCommandResponse
     
     /**
-    * Specifies which NLP Intent model should run to classify the transcription of the input audio. NLP Intent classification meant to extract the meaning of a sentence rather than detecting certain keywords. Multiple intent models can be used on the same transcription, and will run only on complete sentences (`isFinalTranscription = True`). Supported intent models: `VOICE_ENABLED_UI`. 
+    * Specifies which NLP Intent model should run to classify the transcription of the input audio. NLP Intent classification meant to extract the meaning of a sentence rather than detecting certain keywords. Multiple intent models can be used on the same transcription, and will run only on complete sentences (`isFinalTranscription = True`). Supported intent models: `VOICE_ENABLED_UI`.
     */
     let VoiceML_NlpIntentModel: VoiceML.NlpIntentModel
     
     /**
-    * Returned when {@link NlpIntentModel} was specificed in the ListeningOptions, it contains the results of the NLP Intent model classification on the last sentence. `NlpIntentResponse` will only run on complete sentences (`isFinalTranscription = true`).  
-    
+    * Returned when {@link NlpIntentModel} was specificed in the ListeningOptions, it contains the results of the NLP Intent model classification on the last sentence. `NlpIntentResponse` will only run on complete sentences (`isFinalTranscription = true`).
     */
     let VoiceML_NlpIntentResponse: VoiceML.NlpIntentResponse
     
@@ -26010,7 +28412,7 @@ declare namespace _palette {
     /**
     * Used to detect usage of certain keywords from the input audio.
     
-    * Keyword detection (whose results will be returned in {@link VoiceML.NlpKeywordResponse}) in the {@link VoiceML.ListeningUpdateEventArgs} can happen in the mid input sentence (and in such case the the isFinalTranscription=`false`) or can happen at the end of the sentence (isFinalTranscription=`true`). Mid sentence detection have closer proximity to the time the word was spoken, but might be less accurate. 
+    * Keyword detection (whose results will be returned in {@link VoiceML.NlpKeywordResponse}) in the {@link VoiceML.ListeningUpdateEventArgs} can happen in the mid input sentence (and in such case the the isFinalTranscription=`false`) or can happen at the end of the sentence (isFinalTranscription=`true`). Mid sentence detection have closer proximity to the time the word was spoken, but might be less accurate.
     */
     let VoiceML_NlpKeywordModel: VoiceML.NlpKeywordModel
     
@@ -26020,12 +28422,12 @@ declare namespace _palette {
     let VoiceML_NlpKeywordModelOptions: VoiceML.NlpKeywordModelOptions
     
     /**
-    * NlpKeywordResponse will be returned if KeywordModel has been supplied as an input model in the ListeningOptions.  The keyword model allows detection of keywords (or short phrases) in an input audio. 
+    * NlpKeywordResponse will be returned if KeywordModel has been supplied as an input model in the ListeningOptions.  The keyword model allows detection of keywords (or short phrases) in an input audio.
     */
     let VoiceML_NlpKeywordResponse: VoiceML.NlpKeywordResponse
     
     /**
-    * The NLP Response Status indicates wether the NLP was successful in parsing the sentence. 
+    * The NLP Response Status indicates whether the NLP was successful in parsing the sentence
     */
     let VoiceML_NlpResponseStatus: VoiceML.NlpResponseStatus
     
@@ -26060,7 +28462,7 @@ declare namespace _palette {
     let VoiceMLModule_AnswerStatusCodes: VoiceMLModule.AnswerStatusCodes
     
     /**
-    * Status Codes for NLP Responses. 
+    * Status Codes for NLP Responses.
     */
     let VoiceMLModule_NlpResponsesStatusCodes: VoiceMLModule.NlpResponsesStatusCodes
     
@@ -26072,7 +28474,7 @@ declare namespace _palette {
     let WeatherCondition: WeatherCondition
     
     /**
-    * WebPageTextureProvider is the associated texture control that can be accessed from the `texture.control` property. This allows you to call functions such as `loadUrl(“https://snap.com”)` or to pass input events to. 
+    * WebPageTextureProvider is the associated texture control that can be accessed from the `texture.control` property. This allows you to call functions such as `loadUrl(“https://snap.com”)` or to pass input events to.
     
     * _Note: Most functionality will require the `onReady` event to have been called. Any calls before this event may cause an exception._
     
@@ -26134,15 +28536,14 @@ declare namespace _palette {
     
     * _Note:_
     * Partial matches are now currently supported but subdomains are.
-    * `*snap.com` is not supported. 
-    * `*.snap.com` is supported. 
+    * `*snap.com` is not supported.
+    * `*.snap.com` is supported.
     
     * _Note:_
     * `*` is not supported for complex patterns but a single `*` on its own can be used to represent "all".
     
     * _Note:_
-    * `snap.com` would be the same as `*.snap.com`. 
-    
+    * `snap.com` would be the same as `*.snap.com`.
     
     * @experimental
     */
@@ -26153,7 +28554,7 @@ declare namespace _palette {
     /**
     * Groups {@link Physics} objects in its subtree into an independent world simulation.
     
-    * @remarks 
+    * @remarks
     * All simulation occurs within a physics world, each with its own configurable settings (e.g. gravity). When a physics object is placed under a {@link WorldComponent}, it belongs to that world and will only interact with other objects in that world. By default, there exists a root-level world for the scene, but multiple worlds may be created to run independent simulations.
     
     * @see [World Component](https://developers.snap.com/lens-studio/features/physics/physics-component#physics-world)
@@ -26166,7 +28567,8 @@ declare namespace _palette {
     let WorldDepthTextureProvider: WorldDepthTextureProvider
     
     /**
-    * Holds settings for world mesh tracking in DeviceTracking component. Accessible through DeviceTracking.worldOptions.
+    * Holds settings for world mesh and point cloud tracking in DeviceTracking component. Accessible through DeviceTracking.worldOptions.
+    * When tracking either world meshes or point clouds, the {@link DeviceTracking} component must be set to `World` mode.
     */
     let WorldOptions: WorldOptions
     
@@ -26181,8 +28583,6 @@ declare namespace _palette {
     * Provides access to various APIs which can perform hit test for real surfaces to sample the depth and normal at a certain location.
     
     * @see [World Query Module](https://developers.snap.com/spectacles/about-spectacles-features/apis/world-query) guide.
-    
-    
     
     * @wearableOnly
     */
@@ -26200,6 +28600,7 @@ declare namespace _palette {
     
     /**
     * Triggered when new world tracking meshes are detected. Only available when a Device Tracking component is in the scene, and world mesh tracking is supported and enabled.
+    * In addition, {@link DeviceTracking} component must be set to `World` mode to orient the Camera relative to the mesh correctly.
     */
     let WorldTrackingMeshesAddedEvent: WorldTrackingMeshesAddedEvent
     
@@ -26215,24 +28616,21 @@ declare namespace _palette {
     
     /**
     * Triggered when plane(s) are newly detected. The `worldOptions.nativePlaneTrackingType` must be set to anything other than `NativePlaneTrackingType.None`. In addition, {@link DeviceTracking} component must be set to `World` mode to orient the Camera relative to the planes correctly.
-    
     */
     let WorldTrackingPlanesAddedEvent: WorldTrackingPlanesAddedEvent
     
     /**
     * Triggered when plane(s) are no longer detected.  This usually happens when two planes merge into one.  Planes persist when no longer seen by camera(s) and when previously detected objects move (e.g. a door is opened) to create a static scene. {@link DeviceTracking} component must be set to `World` mode to orient the Camera relative to the planes correctly.
-    
     */
     let WorldTrackingPlanesRemovedEvent: WorldTrackingPlanesRemovedEvent
     
     /**
     * Triggered when currently detected plane(s) are updated.  This usually happens when a plane grows in size. The `worldOptions.nativePlaneTrackingType` must be set to anything other than `NativePlaneTrackingType.None`. In addition, {@link DeviceTracking} component must be set to `World` mode to orient the Camera relative to the planes correctly.
-    
     */
     let WorldTrackingPlanesUpdatedEvent: WorldTrackingPlanesUpdatedEvent
     
     /**
-    * Declares permissions for your Lens project. 
+    * Declares permissions for your Lens project.
     
     * @see [Permissions Overview](https://developers.snap.com/spectacles/permission-privacy/overview#list-of-permissions-types).
     */

@@ -4,7 +4,7 @@
   ImporterName: JavaScriptAssetImporter
   PrimaryAsset: !<reference> 7918ce25-2e83-4ad4-aa10-0f0b175ac1b8
   PackageType: NotAPackage
-  PackagePolicy: CannotBeUnpacked
+  LegacyPackagePolicy: ~
   ExtraData:
     {}
   AssetDataMap:
@@ -19,15 +19,14 @@
   SetupScript:
     code: ""
   Description: ""
-  InternalVersion: 0
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
   ComponentUid: 5b41469e-3979-4f56-a86c-e0693f506fab
   ExportUid: 00000000-0000-0000-0000-000000000000
-  CurrentVisibility: Editable
-  MaxVisibility: Editable
+  PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
+    chevronIconObj: false
     fovController: false
     geometryBackgrounds: false
     geometryCheckObjects: false
@@ -39,8 +38,13 @@
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
   DefaultScriptInputs:
-    - meshes: !<reference.RenderMesh[]>
+    - chevronIconObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      meshes: !<reference.RenderMesh[]>
         []
       iconTextures: !<reference.Texture[]>
         []

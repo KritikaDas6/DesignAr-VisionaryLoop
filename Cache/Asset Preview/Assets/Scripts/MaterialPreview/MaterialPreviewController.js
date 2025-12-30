@@ -1,3 +1,4 @@
+//@input SceneObject chevronIconObj
 //@input Asset.RenderMesh[] meshes
 //@input Asset.Texture[] iconTextures
 //@input Component.Image[] geometryBackgrounds
@@ -7,9 +8,16 @@
 //@input SceneObject rightSection
 
 let renderMeshVisual;
+let chevronIconImage = null;
 let curObjIdx;
 let previewObject;
 const ghostScale = 0.02;
+
+init();
+
+function init() {
+    chevronIconImage = script.chevronIconObj.getComponent('Component.Image');
+}
 
 function show(newObject) {
     previewObject = newObject;

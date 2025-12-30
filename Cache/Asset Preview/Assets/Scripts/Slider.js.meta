@@ -4,7 +4,7 @@
   ImporterName: JavaScriptAssetImporter
   PrimaryAsset: !<reference> 209b8c76-e430-432a-ba89-7c10472a650a
   PackageType: NotAPackage
-  PackagePolicy: CannotBeUnpacked
+  LegacyPackagePolicy: ~
   ExtraData:
     {}
   AssetDataMap:
@@ -30,14 +30,12 @@
   Description: |-
     Slider logic that allows to do it vertical/horizontal, white/colored, static/pull-out. 
     Add Slider Helper to adjust the logic on slider moving (change shaders, blendshapes or FaceStetches).
-  InternalVersion: 2
   VersionMajor: 2
   VersionMinor: 0
   VersionPatch: 0
   ComponentUid: 0006016f-d2be-52a4-0000-0000000d0ea0
   ExportUid: 0006016f-d5fb-ee66-0000-0000000d4daf
-  CurrentVisibility: Editable
-  MaxVisibility: Editable
+  PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
     camera: false
     color: true
@@ -63,6 +61,10 @@
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
   DefaultScriptInputs:
     - pointScreenTransform: !<reference.ScreenTransform> 00000000-0000-0000-0000-000000000000
       touchZone: !<reference.BaseMeshVisual> 00000000-0000-0000-0000-000000000000

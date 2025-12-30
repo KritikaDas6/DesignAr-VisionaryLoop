@@ -1,25 +1,30 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "target": "es2019",
-    "isolatedModules": true,
-    "noEmit": true,
-    "skipDefaultLibCheck": true,
-    "experimentalDecorators": true,
     "allowJs": true,
-    "lib": ["es2019"],
-    "types": [],
+    "isolatedModules": true,
+    "lib": [
+      "es2021"
+    ],
+    "module": "commonjs",
+    "noEmit": true,
     "paths": {
-      "*" : ["./Packages/*","./Cache/TypeScript/Src/Assets/*", "./Cache/TypeScript/Src/Packages/*"]
-    }
+      "*": [
+        "./Assets/*",
+        "./Packages/*",
+        "./Cache/TypeScript/Src/Packages/*"
+      ]
+    },
+    "skipDefaultLibCheck": true,
+    "target": "es2021",
+    "types": []
   },
   "exclude": [
     "node_modules/typescript/lib/lib.dom.d.ts"
   ],
   "include": [
     "./Cache/TypeScript/lib/LensifyTS/Declarations/**/*.d.ts",
-    "Assets/**/*.ts",
-    "Packages/**/*.ts",
-    "./Cache/TypeScript/Src/**/*.ts"
+    "./Assets/**/*.ts",
+    "./Packages/**/*.ts",
+    "./Cache/TypeScript/Src/Packages/**/*.ts"
   ]
 }

@@ -2,7 +2,14 @@
 //@input SceneObject leftSection
 //@input SceneObject environmentIconObj
 //@input SceneObject chevronIconObj
-//@input SceneObject[] light
+
+/*
+@typedef LightData
+@property {SceneObject} sceneObject
+@property {bool} enabled
+*/
+
+//@input LightData[] light
 //@input SceneObject[] iconBackgroundObjs
 //@input Component.Image[] environmentIconBackgrounds
 //@input SceneObject[] environmentCheckObjects
@@ -12,13 +19,13 @@
 //@input SceneObject envMapObj
 
 /*
-@typedef LightData
+@typedef EnvironmentLightData
 @property {Component.Texture} diffuseEnvMap
 @property {Component.Texture} specularEnvMap
 @property {float} exposure
 */
 
-//@input LightData[] environmentLight
+//@input EnvironmentLightData[] environmentLight
 
 let envLighSource = null;
 let environmentIconImage = null;
@@ -43,21 +50,17 @@ function init() {
 }
 
 function onIconTapped(idx) {
-    const color = iconBackgroundImages[idx].mainPass.baseColor;
-    color.w = (color.w + 1) % 2;
-    iconBackgroundImages[idx].mainPass.baseColor = color;
-    script.light[idx].enabled = color.w > 0;
+    iconBackgroundImages[idx].mainPass.Active = !iconBackgroundImages[idx].mainPass.Active
+    script.light[idx].sceneObject.enabled = iconBackgroundImages[idx].mainPass.Active
 }
 
 function reset() {
-    script.light.forEach(function(obj) {
-        obj.enabled = true;
+    script.light.forEach(function(item) {
+        item.sceneObject.enabled = item.enabled;
     });
 
-    iconBackgroundImages.forEach(function(image) {
-        const color = image.mainPass.baseColor;
-        color.w = 1;
-        image.mainPass.baseColor = color;
+    iconBackgroundImages.forEach(function(image, i) {
+        image.mainPass.Active = script.light[i].enabled;
     });
 
     resetCheckObjects();
@@ -65,15 +68,13 @@ function reset() {
 }
 
 function onEnvironmentIconTapped(idx) {
-    const mainIconColor = environmentIconImage.mainPass.baseColor;
 
     const color = script.environmentIconBackgrounds[idx].mainPass.baseColor;
     if (color.w > 0) {
         color.w = 0;
-        mainIconColor.w = 0;
+        
     } else {
         color.w = 1;
-        mainIconColor.w = 1;
 
         resetEnvironmentIcons();
     }

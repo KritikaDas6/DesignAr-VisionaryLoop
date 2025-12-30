@@ -4,7 +4,7 @@
   ImporterName: JavaScriptAssetImporter
   PrimaryAsset: !<reference> 33cfab6c-3190-4461-91e0-064986fea661
   PackageType: NotAPackage
-  PackagePolicy: CannotBeUnpacked
+  LegacyPackagePolicy: ~
   ExtraData:
     {}
   AssetDataMap:
@@ -19,17 +19,13 @@
   SetupScript:
     code: ""
   Description: ""
-  InternalVersion: 0
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
   ComponentUid: 96763a51-50ea-4b4b-89d3-ed45625a389c
   ExportUid: 00000000-0000-0000-0000-000000000000
-  CurrentVisibility: Editable
-  MaxVisibility: Editable
+  PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
-    greyBackgroundStatus: false
-    greyMaterial: false
     hintObject: false
     iconBackgroundObjects: false
     iconMaterial: false
@@ -40,11 +36,12 @@
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
   DefaultScriptInputs:
     - iconBackgroundObjects: !<reference.SceneObject[]>
-        []
-      greyMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
-      greyBackgroundStatus: !<bool[]>
         []
       iconMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
       iconTextures: !<reference.Texture[]>

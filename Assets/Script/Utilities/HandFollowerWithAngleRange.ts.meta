@@ -1,0 +1,71 @@
+- !<AssetImportMetadata/dbf80c4e-1a23-4d79-93ec-cb33b1d89013>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 796a7671-7b31-48fe-a371-3142c126ebdf
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 796a7671-7b31-48fe-a371-3142c126ebdf
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 8744d667-a3b1-418c-b904-d0d3617047c4
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/8744d667-a3b1-418c-b904-d0d3617047c4>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 22b0926c-8dcb-4e5d-9a07-57a078686d94
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    distanceToHand: false
+    handFollowObject: false
+    maxHandAngle: false
+    minHandAngle: false
+    positionOffsetX: false
+    positionOffsetY: false
+    positionOffsetZ: false
+    rotationOffsetX: false
+    rotationOffsetY: false
+    rotationOffsetZ: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - handFollowObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      distanceToHand: !<float> 5.000000
+      positionOffsetX: !<float> 0.000000
+      positionOffsetY: !<float> 0.000000
+      positionOffsetZ: !<float> 0.000000
+      rotationOffsetX: !<float> 130.000000
+      rotationOffsetY: !<float> 0.000000
+      rotationOffsetZ: !<float> 180.000000
+      minHandAngle: !<float> -20.000000
+      maxHandAngle: !<float> 20.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input SceneObject handFollowObject
+    - // @input float distanceToHand = 5
+    - // @input float positionOffsetX
+    - // @input float positionOffsetY
+    - // @input float positionOffsetZ
+    - // @input float rotationOffsetX = 130
+    - // @input float rotationOffsetY
+    - // @input float rotationOffsetZ = 180
+    - // @input float minHandAngle = -20
+    - // @input float maxHandAngle = 20

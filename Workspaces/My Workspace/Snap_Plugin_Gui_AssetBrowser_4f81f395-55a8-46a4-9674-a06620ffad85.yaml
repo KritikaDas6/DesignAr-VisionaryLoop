@@ -1,12 +1,13 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 736
+    size: 691
     values:
       - Animation
       - Animation/Hint_Rotate_Head_Left_Right.lensanim
       - Animation/Hint_Rotate_Head_Left_Right.lensanim/Hint_Rotate_Head_Left_Right
       - Animation/Hint_Rotate_Head_Left_Right.lensanim/Hint_Rotate_Head_Left_Right.png
+      - Animation/ImageMaterial.mat
       - Animation/TitleAnimation.t3d
       - Animation/TitleAnimation.t3d/ImagInk_0.png
       - Animation/TitleAnimation.t3d/TitleAnimation
@@ -53,56 +54,23 @@ CollapsedEntities:
       - LS Tween.lspkg/TweenJS/Version.ts
       - LS Tween.lspkg/TweenJS/mainGroup.ts
       - LS Tween.lspkg/package.native
-      - Material
       - Material/Button
-      - Material/Button/PlatformUI
-      - Material/Button/PlatformUI/ButtonHover.mat
-      - Material/Button/PlatformUI/ButtonIdle.mat
-      - Material/Button/PlatformUI/ButtonPinched.mat
-      - Material/Button/PlatformUI/CapsuleButtonHover.mat
-      - Material/Button/PlatformUI/CapsuleButtonIdle.mat
-      - Material/Button/PlatformUI/CapsuleButtonPinched.mat
-      - Material/Button/PlatformUI/RoundButtonGlowHover.mat
-      - Material/Button/PlatformUI/RoundButtonGlowIdle.mat
-      - Material/Button/PlatformUI/RoundButtonGlowPinched.mat
-      - Material/Button/PlatformUI/RoundButtonHover.mat
-      - Material/Button/PlatformUI/RoundButtonPinched.mat
-      - Material/Button/PlatformUI/RoundButton_Idle.mat
-      - Material/Button/PlatformUI/ScrollBackground.mat
-      - Material/Button/PlatformUI/ScrollButtonHover.mat
-      - Material/Button/PlatformUI/ScrollButtonIdle.mat
-      - Material/Button/PlatformUI/ScrollButtonPinched.mat
-      - Material/Button/PlatformUI/StateButtonToggledHover.mat
-      - Material/Button/PlatformUI/StateButtonToggledPinched.mat
-      - Material/Button/PlatformUI/ToggleButtonToggledHover.mat
-      - Material/Button/PlatformUI/ToggleButtonToggledIdle.mat
-      - Material/Button/PlatformUI/ToggleButtonToggledPinched.mat
+      - Material/Button/Basic
       - Material/Button/RoundButtonHoverYellow.mat
       - Material/Button/RoundButtonPinchedGreen.mat
       - Material/Button/RoundButton_IdleGreen.mat
       - Material/Button/RoundButton_IdleYellow.mat
-      - Material/HandMenu
-      - Material/HomeUpdate_Icon_info.mat
-      - Material/Menu Panel.mat
+      - Material/HandMenu/HandMenu_Image_Home.mat
+      - Material/HandMenu/HandMenu_Image_Lock.mat
+      - Material/HandMenu/HandMenu_Image_UnLock.mat
+      - Material/ImageGen
+      - Material/Intro
       - Material/Mic
-      - Material/Project_Hint_Rotate_Head.mat
-      - Material/SampleIllustration.mat
-      - Material/SketchRiderTrace.mat
-      - Material/Slider_Platform 2.mat
-      - Material/Slider_Platform.mat
+      - Material/Mic/ImageGen_MicOff.mat
+      - Material/Mic/ImageGen_MicOn.mat
       - Material/Steps
+      - Material/Steps/Step1mic image.mat
       - Material/Steps/Step3 illust.mat
-      - Material/TitleAnimation.mat
-      - Material/Unlit Guide
-      - Material/Unlit Guide/Unlit Guide BG Outline.mat
-      - Material/Unlit Guide/Unlit Guide pagination 1.mat
-      - Material/Unlit Guide/Unlit Guide pagination 2.mat
-      - Material/Unlit Guide/Unlit Guide pagination 3.mat
-      - Material/Unlit Guide/Unlit Guide pagination 4.mat
-      - Meshes
-      - Meshes/GuidePlane.mesh
-      - Meshes/MenuPanel.mesh
-      - Meshes/MenuPanel.prefab
       - Meshes/PlatformUI
       - Meshes/PlatformUI/PlatformCapsuleButton.mesh
       - Meshes/PlatformUI/PlatformSphereButton.mesh
@@ -110,7 +78,7 @@ CollapsedEntities:
       - Meshes/PlatformUI/RoundButtonGlow.mesh
       - Meshes/PlatformUI/ScrollBarKnobMesh.mesh
       - Meshes/PlatformUI/ScrollBarMesh.mesh
-      - Meshes/Slider.mesh
+      - Pointer
       - "Pointer/Example [REMOVE_ME]"
       - "Pointer/Example [REMOVE_ME]/Device Camera Texture [REMOVE_ME].deviceCameraTexture"
       - "Pointer/Example [REMOVE_ME]/Materials"
@@ -176,8 +144,10 @@ CollapsedEntities:
       - Remote Service Gateway.lspkg/Prefabs/RemoteServiceGatewayExamples.prefab
       - Remote Service Gateway.lspkg/README.md
       - Remote Service Gateway.lspkg/RemoteServiceGatewayCredentials.ts
+      - Remote Service Gateway.lspkg/Resources
       - Remote Service Gateway.lspkg/Resources/Audio Output.audioOutput
       - Remote Service Gateway.lspkg/Resources/Microphone Audio.micaudio
+      - Remote Service Gateway.lspkg/Resources/Visuals
       - Remote Service Gateway.lspkg/Resources/Visuals/LoadingSpinner
       - Remote Service Gateway.lspkg/Resources/Visuals/LoadingSpinner/LoadingSpinner
       - Remote Service Gateway.lspkg/Resources/Visuals/LoadingSpinner/LoadingSpinner.prefab
@@ -185,6 +155,10 @@ CollapsedEntities:
       - Remote Service Gateway.lspkg/Resources/Visuals/LoadingSpinner/LoadingSpinner/LoadingSpinner.mesh
       - Remote Service Gateway.lspkg/Resources/Visuals/LoadingSpinner/LoadingSpinner/LoadingSpinner.ss_graph
       - Remote Service Gateway.lspkg/Resources/Visuals/LoadingSpinner/LoadingSpinner/LoadingSpinner.ts
+      - Remote Service Gateway.lspkg/Resources/Visuals/Materials
+      - Remote Service Gateway.lspkg/Resources/Visuals/Materials/Image.mat
+      - Remote Service Gateway.lspkg/Resources/Visuals/Materials/Image.png
+      - Remote Service Gateway.lspkg/Resources/Visuals/Materials/SnapImage3D.mat
       - Remote Service Gateway.lspkg/Resources/Visuals/Materials/Unlit.mat
       - Remote Service Gateway.lspkg/Resources/Visuals/Materials/flat.ss_graph
       - Remote Service Gateway.lspkg/Resources/Visuals/Materials/unlit.ss_graph
@@ -193,57 +167,29 @@ CollapsedEntities:
       - Remote Service Gateway.lspkg/Utils/Promisfy.ts
       - Remote Service Gateway.lspkg/package.native
       - Scene.scene
-      - Script/ASRQueryController.ts
-      - Script/AnimationStop.ts
-      - Script/ButtonFeedBack_Modified.ts
-      - Script/ContainerFrameLocker.ts
-      - Script/DisplayMenuOnOff.ts
-      - Script/HandFollowerWithAngleRange.ts
-      - Script/MaterialTextureReplacer.ts
-      - Script/PinchButtonMulti_Modified.ts
-      - Script/PinchButton_Modified.ts
-      - Script/SliderMonotoneEditor.ts
-      - Script/SliderTransparentEditor.ts
-      - Script/SmartTether.ts
-      - Script/Snap3DInteractable.ts
-      - Script/Snap3DInteractableFactory.ts
-      - Script/VFXBurst.ts
-      - Script/VectorUtils.ts
-      - Script/WorldQueryHit.ts
+      - Script/Controllers/ButtonVisibilityController.ts
+      - Script/Controllers/GameManager.ts
+      - Script/Controllers/HandMenuController.ts
+      - Script/Controllers/ProjectionController.ts
+      - Script/Controllers/StateManager.ts
+      - Script/Controllers/UIVisibilityController.ts
+      - Script/Interaction/ContainerFrameLocker.ts
+      - Script/Interaction/PlacementController.ts
+      - Script/Interaction/ProjectionUIHandler.ts
+      - Script/Interaction/WorldQueryHit_Modified.ts
+      - Script/README.md
+      - Script/SceneHierarchy_Setup.md
+      - Script/Storage
+      - Script/UI
+      - Script/Utilities
+      - Script/Utilities/Base
+      - Script/Utilities/Logging
+      - Script/Utilities/UI
+      - Script/Utilities/UI/SliderManager.ts
       - Shader
-      - Shader/HandMenu
-      - Shader/HandMenu/Menu Panel Shader.ss_graph
-      - Shader/HandMenu/RoundButtonHoverYellow.ss_graph
-      - Shader/HandMenu/RoundButtonPinchedGreen.ss_graph
-      - Shader/HandMenu/RoundButton_IdleGreen.ss_graph
-      - Shader/HandMenu/RoundButton_IdleYellow.ss_graph
-      - Shader/HandMenu/Slider_Platform 2.ss_graph
-      - Shader/HandMenu/Slider_Platform.ss_graph
-      - Shader/ImageGen_Mic
-      - Shader/InvisiblePlane.ss_graph
+      - Shader/Buttons
+      - Shader/Icon_Image_UI
       - Shader/PlatformUI
-      - Shader/PlatformUI/ButtonHover.ss_graph
-      - Shader/PlatformUI/ButtonIdle.ss_graph
-      - Shader/PlatformUI/ButtonPinched.ss_graph
-      - Shader/PlatformUI/CapsuleButtonHover.ss_graph
-      - Shader/PlatformUI/CapsuleButtonIdle.ss_graph
-      - Shader/PlatformUI/CapsuleButtonPinched.ss_graph
-      - Shader/PlatformUI/RoundButtonGlowHover.ss_graph
-      - Shader/PlatformUI/RoundButtonGlowIdle.ss_graph
-      - Shader/PlatformUI/RoundButtonGlowPinched.ss_graph
-      - Shader/PlatformUI/RoundButtonHover.ss_graph
-      - Shader/PlatformUI/RoundButtonPinched.ss_graph
-      - Shader/PlatformUI/RoundButton_Idle.ss_graph
-      - Shader/PlatformUI/ScrollBackground.ss_graph
-      - Shader/PlatformUI/ScrollButtonHover.ss_graph
-      - Shader/PlatformUI/ScrollButtonIdle.ss_graph
-      - Shader/PlatformUI/ScrollButtonPinched.ss_graph
-      - Shader/PlatformUI/StateButtonToggledHover.ss_graph
-      - Shader/PlatformUI/StateButtonToggledPinched.ss_graph
-      - Shader/SampleIllustration.ss_graph
-      - Shader/Unlit Guide Pagination.ss_graph
-      - Shader/flat.ss_graph
-      - Shader/simple_pbr.ss_graph
       - Slider.lsc
       - Spectacles 3D Hand Hints.lspkg
       - Spectacles 3D Hand Hints.lspkg/Animation
@@ -316,10 +262,12 @@ CollapsedEntities:
       - Spectacles 3D Hand Hints.lspkg/Textures/Hands_Opacity_Gradient.png
       - Spectacles 3D Hand Hints.lspkg/package.native
       - SpectaclesInteractionKit.lspkg
+      - SpectaclesInteractionKit.lspkg/Assets
       - SpectaclesInteractionKit.lspkg/Assets/Audio
       - SpectaclesInteractionKit.lspkg/Assets/Audio/HoverAudioTrack.wav
       - SpectaclesInteractionKit.lspkg/Assets/Audio/TriggerEndAudioTrack.wav
       - SpectaclesInteractionKit.lspkg/Assets/Audio/TriggerStartAudioTrack.wav
+      - SpectaclesInteractionKit.lspkg/Assets/Materials
       - SpectaclesInteractionKit.lspkg/Assets/Materials/BaseHandVisualsMaterials
       - SpectaclesInteractionKit.lspkg/Assets/Materials/BaseHandVisualsMaterials/FingerHighlightLeft.mat
       - SpectaclesInteractionKit.lspkg/Assets/Materials/BaseHandVisualsMaterials/FingerHighlightRight.mat
@@ -327,6 +275,7 @@ CollapsedEntities:
       - SpectaclesInteractionKit.lspkg/Assets/Materials/BaseHandVisualsMaterials/HandOccluderLeft.mat
       - SpectaclesInteractionKit.lspkg/Assets/Materials/BaseHandVisualsMaterials/HandOccluderRight.mat
       - SpectaclesInteractionKit.lspkg/Assets/Materials/BitmojiMaterial.mat
+      - SpectaclesInteractionKit.lspkg/Assets/Materials/ContainerImageMaterial.mat
       - SpectaclesInteractionKit.lspkg/Assets/Materials/LogoMaterial.mat
       - SpectaclesInteractionKit.lspkg/Assets/Materials/NormalBasedTargetOutline.mat
       - SpectaclesInteractionKit.lspkg/Assets/Materials/PinchButtonDarkInactive.mat
@@ -432,6 +381,7 @@ CollapsedEntities:
       - SpectaclesInteractionKit.lspkg/Assets/Shaders/ToggleOn.ss_graph
       - SpectaclesInteractionKit.lspkg/Assets/Shaders/ToggleOnSelect.ss_graph
       - SpectaclesInteractionKit.lspkg/Assets/Shaders/simple_pbr.ss_graph
+      - SpectaclesInteractionKit.lspkg/Assets/Textures
       - SpectaclesInteractionKit.lspkg/Assets/Textures/2DBitmojiAvatar.png
       - SpectaclesInteractionKit.lspkg/Assets/Textures/Base.png
       - SpectaclesInteractionKit.lspkg/Assets/Textures/BaseHandVisualsTextures
@@ -446,11 +396,13 @@ CollapsedEntities:
       - SpectaclesInteractionKit.lspkg/Assets/Textures/BaseHandVisualsTextures/mask_outline_colored.png
       - SpectaclesInteractionKit.lspkg/Assets/Textures/MaterialParams.png
       - SpectaclesInteractionKit.lspkg/Assets/Textures/Normal.png
+      - SpectaclesInteractionKit.lspkg/Assets/Textures/PlatformUI
       - SpectaclesInteractionKit.lspkg/Assets/Textures/PlatformUI/ArrowDown.png
       - SpectaclesInteractionKit.lspkg/Assets/Textures/PlatformUI/ArrowUp.png
       - SpectaclesInteractionKit.lspkg/Assets/Textures/PlatformUI/Close.png
       - SpectaclesInteractionKit.lspkg/Assets/Textures/PlatformUI/FollowIconBlack.png
       - SpectaclesInteractionKit.lspkg/Assets/Textures/PlatformUI/FollowIconWhite.png
+      - SpectaclesInteractionKit.lspkg/Assets/Textures/PlatformUI/Image.png
       - SpectaclesInteractionKit.lspkg/Assets/Textures/PlatformUI/Mask_simple_reflection_ellipse.png
       - SpectaclesInteractionKit.lspkg/Assets/Textures/PlatformUI/SimpleIdle.jpg
       - SpectaclesInteractionKit.lspkg/Assets/Textures/PlatformUI/SimpleIdle_05.jpg
@@ -461,8 +413,11 @@ CollapsedEntities:
       - SpectaclesInteractionKit.lspkg/Assets/Textures/Rectangle-Active.png
       - SpectaclesInteractionKit.lspkg/Assets/Textures/Rectangle-Inactive.png
       - SpectaclesInteractionKit.lspkg/Assets/Textures/Rectangle.png
+      - SpectaclesInteractionKit.lspkg/Assets/Textures/SIKContainerExampleImage.jpg
       - SpectaclesInteractionKit.lspkg/Assets/Textures/SIKLogo.png
       - SpectaclesInteractionKit.lspkg/Assets/Textures/ScrollBarRectangle.png
+      - SpectaclesInteractionKit.lspkg/Components
+      - SpectaclesInteractionKit.lspkg/Components/Helpers
       - SpectaclesInteractionKit.lspkg/Components/Helpers/ButtonFeedback.ts
       - SpectaclesInteractionKit.lspkg/Components/Helpers/CapsuleMeshCustomizer.ts
       - SpectaclesInteractionKit.lspkg/Components/Helpers/InteractableAudioFeedback.ts
@@ -512,11 +467,15 @@ CollapsedEntities:
       - SpectaclesInteractionKit.lspkg/Components/Interaction/InteractorLineVisual/InteractorLineMaterial.mat
       - SpectaclesInteractionKit.lspkg/Components/Interaction/InteractorLineVisual/InteractorLineRenderer.ts
       - SpectaclesInteractionKit.lspkg/Components/Interaction/InteractorLineVisual/InteractorLineVisual.ts
+      - SpectaclesInteractionKit.lspkg/Components/UI
+      - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/ContainerFrame.ts
+      - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Materials
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Materials/FrameMaterial.mat
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Materials/FrameMaterial.ss_graph
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Materials/Ghost Material.mat
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Materials/Ghost Material.ss_graph
+      - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Materials/Image.mat
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Materials/Label.mat
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Materials/container-button.mat
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Materials/container-button.ss_graph
@@ -572,7 +531,6 @@ CollapsedEntities:
       - SpectaclesInteractionKit.lspkg/Components/UI/Slider/Slider.ts
       - SpectaclesInteractionKit.lspkg/Components/UI/ToggleButton
       - SpectaclesInteractionKit.lspkg/Components/UI/ToggleButton/ToggleButton.ts
-      - SpectaclesInteractionKit.lspkg/Core
       - SpectaclesInteractionKit.lspkg/Core/ConfigurationValidator
       - SpectaclesInteractionKit.lspkg/Core/ConfigurationValidator/ConfigurationValidator.ts
       - SpectaclesInteractionKit.lspkg/Core/HandInteractor
@@ -607,7 +565,6 @@ CollapsedEntities:
       - SpectaclesInteractionKit.lspkg/Core/Interactor/raycastAlgorithms/TimeScalarContainer.ts
       - SpectaclesInteractionKit.lspkg/Core/Interactor/raycastAlgorithms/TimedVec2Container.ts
       - SpectaclesInteractionKit.lspkg/Core/Interactor/raycastAlgorithms/TimedVec3Container.ts
-      - SpectaclesInteractionKit.lspkg/Core/LogLevelConfiguration
       - SpectaclesInteractionKit.lspkg/Core/LogLevelConfiguration/LogLevelConfiguration.ts
       - SpectaclesInteractionKit.lspkg/Core/LogLevelConfiguration/SIKLogLevelConfiguration.ts
       - SpectaclesInteractionKit.lspkg/Core/MobileInteractor
@@ -707,11 +664,7 @@ CollapsedEntities:
       - SpectaclesInteractionKit.lspkg/VersionNumber.ts
       - SpectaclesInteractionKit.lspkg/package.native
       - SpectaclesInteractionKit.lspkg/tsconfig.json
-      - Textures
-      - Textures/Bubble.png
-      - Textures/HandMenu
-      - Textures/HandMenu/HandMenu_EditGreen.png
-      - Textures/HandMenu/HandMenu_EditYellow.png
+      - Textures/HandMenu/HandMenu_Home.png
       - Textures/HandMenu/HandMenu_Lock.png
       - Textures/HandMenu/HandMenu_Unlock.png
       - Textures/HomeUpdate
@@ -725,6 +678,8 @@ CollapsedEntities:
       - Textures/Illust/Illust_empty state_grey.png
       - Textures/Illust/Illust_guideoutline.png
       - Textures/ImageGen_Mic
+      - Textures/ImageGen_Mic/ImageGen_Mic.png
+      - Textures/ImageGen_Mic/ImageGen_Mic_YW.png
       - Textures/ImageGen_TracingImage
       - Textures/ImageGen_TracingImage/SketchRider.png
       - Textures/ImageGen_TracingImage/SketchRiderTrace.png
@@ -732,10 +687,10 @@ CollapsedEntities:
       - Textures/Menu/Menu Panel Normal.png
       - Textures/Menu/Menu Panel Param.png
       - Textures/Menu/Menu Panel.png
+      - Textures/PlatformUI
       - Textures/Steps
       - Textures/Steps/Step1_Mic button.png
       - Textures/Steps/Step3 illust.png
-      - Textures/Transparent.png
       - VFX
       - VFX/TracingVFX_LeftHand.vfxgraph
       - VFX/TracingVFX_RightHand.vfxgraph

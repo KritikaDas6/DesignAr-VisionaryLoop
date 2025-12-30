@@ -1,0 +1,77 @@
+- !<AssetImportMetadata/d1b25197-1df9-4000-b016-1cfbbdd2de5e>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> b8ed78f0-e4bb-48e9-84b0-738d6e3e31b2
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> b8ed78f0-e4bb-48e9-84b0-738d6e3e31b2
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 2d7d8dbd-4f46-493f-9243-8672b4e7eb9d
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/2d7d8dbd-4f46-493f-9243-8672b4e7eb9d>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 01826b18-43b5-4354-a8f7-c7e3a58f822a
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    attachedButtons: false
+    containerFrame: false
+    distanceFromEdge: false
+    edge: false
+    edgeOffset: false
+    positionButtons: false
+    targetObject: false
+    updateEveryFrame: false
+    zOffset: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - containerFrame: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      targetObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      edge: top
+      distanceFromEdge: !<float> 2.000000
+      edgeOffset: !<float> 0.000000
+      zOffset: !<float> 0.000000
+      updateEveryFrame: false
+      attachedButtons: !<reference.SceneObject[]>
+        []
+      positionButtons: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"group_start", "label":"Container Frame"}'
+    - '// @input AssignableType containerFrame {"hint":"The ContainerFrameLocker component to attach to"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Target Object"}'
+    - '// @input SceneObject targetObject {"hint":"The object to position relative to the frame edge"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Position Settings"}'
+    - "// @input string edge = \"top\" {\"hint\":\"Which edge to attach to: 'top', 'bottom', 'left', 'right'\"}"
+    - '// @input float distanceFromEdge = 2 {"hint":"Distance from the edge in world units (cm)"}'
+    - '// @input float edgeOffset {"hint":"Offset along the edge (0 = center, positive = right/up, negative = left/down)"}'
+    - '// @input float zOffset {"hint":"Offset in Z direction (depth)"}'
+    - '// @input bool updateEveryFrame {"hint":"If true, updates position every frame (for testing - less efficient)"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Button Handling"}'
+    - '// @input SceneObject[] attachedButtons = {} {"hint":"Array of buttons attached to the ContainerFrameLocker (optional)"}'
+    - '// @input bool positionButtons {"hint":"If true, buttons will be positioned relative to the frame edge as well"}'
+    - '// @ui {"widget":"group_end"}'

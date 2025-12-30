@@ -1,0 +1,69 @@
+- !<AssetImportMetadata/300733f0-48b7-485e-a2ff-2d7fd9be76ca>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 4741c7ab-46ba-4931-b4d9-b56aeaaee831
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 4741c7ab-46ba-4931-b4d9-b56aeaaee831
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 26c2bfa8-ece8-48da-946e-26ccb1bb1540
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/26c2bfa8-ece8-48da-946e-26ccb1bb1540>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 761db970-ca38-4e13-b1fc-a59d8c03105a
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    camera: false
+    ceilingRotationZ: false
+    filterEnabled: false
+    floorRotationZ: false
+    indexToSpawn: false
+    objectsToSpawn: false
+    project: false
+    projectButtonInteractable: false
+    targetObject: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - indexToSpawn: !<float> 0.000000
+      targetObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      objectsToSpawn: !<reference.SceneObject[]>
+        []
+      filterEnabled: false
+      camera: !<reference.Camera> 00000000-0000-0000-0000-000000000000
+      floorRotationZ: !<float> 0.000000
+      ceilingRotationZ: !<float> 0.000000
+      project: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      projectButtonInteractable: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input float indexToSpawn
+    - // @input SceneObject targetObject
+    - "// @input SceneObject[] objectsToSpawn"
+    - // @input bool filterEnabled
+    - // @input Component.Camera camera
+    - '// @input float floorRotationZ {"hint":"Z rotation offset for floor surfaces (in degrees)"}'
+    - '// @input float ceilingRotationZ {"hint":"Z rotation offset for ceiling surfaces (in degrees)"}'
+    - // @input SceneObject project
+    - '// @input AssignableType projectButtonInteractable {"hint":"Project button interactable (for click handler)"}'
